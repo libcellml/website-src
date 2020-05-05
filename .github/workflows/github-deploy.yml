@@ -25,6 +25,8 @@ jobs:
         run: |
           mkdir ~/.ssh
           echo -e "${DEPLOY_SSH_KEY}" > ~/.ssh/libcellml_deploy_rsa
+          cat ~/.ssh/libcellml_deploy_rsa
+          cat ~/.ssh/libcellml_deploy_rsa.pub
           chmod 600 ~/.ssh/libcellml_deploy_rsa
           echo -e "${DEPLOY_SSH_KEY_PUB}" > ~/.ssh/libcellml_deploy_rsa.pub
           echo -e "Host github.com\n  IdentityFile ~/.ssh/libcellml_deploy_rsa" > ~/.ssh/config
