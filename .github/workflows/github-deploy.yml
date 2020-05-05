@@ -23,6 +23,7 @@ jobs:
           DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
           DEPLOY_SSH_KEY_PUB: ${{ secrets.DEPLOY_SSH_KEY_PUB }}
         run: |
+          mkdir ~/.ssh
           echo -e "${DEPLOY_SSH_KEY}" > ~/.ssh/libcellml_deploy_rsa
           echo -e "${DEPLOY_SSH_KEY_PUB}" > ~/.ssh/libcellml_deploy_rsa.pub
           echo -e "Host github.com\n  IdentityFile ~/.ssh/libcellml_deploy_rsa" > ~/.ssh/config
