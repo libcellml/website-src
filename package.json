@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "github-deploy": "node scripts/gh-pages-deploy.js"
+    "github-deploy": "node scripts/github-deploy.js"
   },
   "dependencies": {
     "@mdi/js": "^5.1.45",
@@ -30,7 +30,7 @@
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-vue": "^6.2.2",
-    "execa": "latest",
+    "execa": "^4.0.0",
     "prettier": "^1.19.1",
     "sass": "^1.19.0",
     "sass-loader": "^8.0.0",
