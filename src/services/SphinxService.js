@@ -1,7 +1,10 @@
 import axios from 'axios'
 
 const apiClient = axios.create({
-  baseURL: 'http://localhost:8080/data/sphinx',
+  baseURL:
+    process.env.NODE_ENV !== 'production'
+      ? 'http://localhost:8080/data/sphinx'
+      : 'https://libcellml.github.io/data/sphinx',
   withCredentials: false,
   headers: {
     Accept: 'text/xml',
