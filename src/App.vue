@@ -1,32 +1,153 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
-  </div>
+  <v-app id="libcellml">
+    <v-app-bar app clipped-left>
+      <!-- -->
+      <v-app-bar-nav-icon @click="onSidebarOpen" />
+      <v-row>
+        <v-col cols="1" />
+        <v-col
+          v-for="link in links"
+          :key="`${link.label}-header-link`"
+          :cols="link.label === 'Home' ? 3 : 1"
+        >
+          <v-btn text rounded :to="link.url">
+            {{ link.label }}
+          </v-btn>
+        </v-col>
+      </v-row>
+    </v-app-bar>
+    <Sidebar :routeName="$route.name" :routeParams="$route.params" />
+    <!--    <BreadCrumbs />-->
+    <!-- Sizes your content based upon application components -->
+    <v-content>
+      <!--      <Sidebar/>-->
+      <!-- Provides the application the proper gutter -->
+      <v-container
+        fluid
+        id="pageContent"
+        :style="{ backgroundImage: 'url(' + backgroundImage + ')' }"
+      >
+        <!-- If using vue-router -->
+        <transition name="slide" mode="out-in">
+          <router-view :key="$route.path" />
+        </transition>
+      </v-container>
+    </v-content>
+    <NotificationContainer />
+    <BackToTop />
+    <v-footer app>
+      <v-row justify="center" no-gutters>
+        <v-col />
+        <v-col class="text-center">
+          {{ new Date().getFullYear() }} — <strong>libCellML</strong>
+        </v-col>
+        <v-col class="text-right">Created: {{ currentDate }} </v-col>
+      </v-row>
+    </v-footer>
+  </v-app>
 </template>
 
+<script>
+import BackToTop from '@/components/BackToTop'
+import Sidebar from '@/components/Sidebar'
+import NotificationContainer from '@/components/NotificationContainer'
+// import BreadCrumbs from '@/components/BreadCrumbs'
+
+export default {
+  name: 'App',
+
+  components: {
+    // BreadCrumbs,
+    BackToTop,
+    Sidebar,
+    NotificationContainer,
+  },
+
+  data: () => ({
+    pageChange: false,
+    links: [
+      {
+        label: 'Home',
+        url: '/',
+      },
+      {
+        label: 'Download',
+        url: '/download',
+      },
+      {
+        label: 'API Docs',
+        url: '/apidocs',
+      },
+      {
+        label: 'Tutorials',
+        url: '/tutorials',
+      },
+      {
+        label: 'About',
+        url: '/about',
+      },
+    ],
+    backgroundImage: require('@/assets/logo.svg'),
+  }),
+
+  computed: {
+    currentDate: () => {
+      let d = new Date()
+      const months = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December',
+      ]
+      return d.getDate() + ' ' + months[d.getMonth()] + ' ' + d.getFullYear()
+    },
+  },
+
+  methods: {
+    onSidebarOpen() {
+      this.$store.commit('setSidebarOpen', !this.$store.getters.getSidebarOpen)
+    },
+  },
+
+  watch: {
+    $route(to, from) {
+      if (to.path !== from.path) {
+        this.pageChange = !this.pageChange
+      }
+    },
+  },
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+#pageContent {
+  background-size: 80px;
+  background-position: 12px 12px;
 }
 
-#nav {
-  padding: 30px;
+.slide-enter-active,
+.slide-leave-active {
+  transition: opacity 1s, transform 1s;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.slide-enter,
+.slide-leave-to {
+  opacity: 0;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.slide-enter {
+  transform: translateX(20px);
+}
+
+.slide-leave-to {
+  transform: translateX(-20px);
 }
 </style>

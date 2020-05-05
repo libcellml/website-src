@@ -1,0 +1,1528 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classlibcellml_1_1Issue" kind="class" language="C++" prot="public">
+    <compoundname>libcellml::Issue</compoundname>
+    <includes refid="issue_8h" local="no">issue.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classlibcellml_1_1Issue_1a547e7371f0733b89ebb99a26ae3f4a7e" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Cause</name>
+        <enumvalue id="classlibcellml_1_1Issue_1a547e7371f0733b89ebb99a26ae3f4a7ea7fc67f9f99bcdc7656908ef20801d05b" prot="public">
+          <name>COMPONENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a547e7371f0733b89ebb99a26ae3f4a7eaf877da16e0c12743466e4059018d0d98" prot="public">
+          <name>CONNECTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a547e7371f0733b89ebb99a26ae3f4a7eafd13f0fb2a51f37b5400adc084e3f006" prot="public">
+          <name>ENCAPSULATION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a547e7371f0733b89ebb99a26ae3f4a7ead9c89e6459f4fbd0b03b5bc093e87919" prot="public">
+          <name>IMPORT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a547e7371f0733b89ebb99a26ae3f4a7ea75c465717f0be6e381068e4d30fe497f" prot="public">
+          <name>MATHML</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a547e7371f0733b89ebb99a26ae3f4a7ea7a03bac2692f8d17e2cda1b0721ffd0e" prot="public">
+          <name>MODEL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a547e7371f0733b89ebb99a26ae3f4a7eab5859d8721cfdc0312b2838b9c985bc1" prot="public">
+          <name>RESET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a547e7371f0733b89ebb99a26ae3f4a7ea0db45d2a4141101bdfe48e3314cfbca3" prot="public">
+          <name>UNDEFINED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a547e7371f0733b89ebb99a26ae3f4a7ea456d42d0c8fd369eb23335d23fb3856a" prot="public">
+          <name>UNITS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a547e7371f0733b89ebb99a26ae3f4a7eae61ad9b2553a293b4a3f4d3b4fa5ab31" prot="public">
+          <name>VARIABLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a547e7371f0733b89ebb99a26ae3f4a7ea3501bb093d363810b671059b9cfed3f8" prot="public">
+          <name>XML</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a547e7371f0733b89ebb99a26ae3f4a7eab2f0af91f1ccdbaae425525f5103c2b5" prot="public">
+          <name>GENERATOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The issue Cause enum class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Enum to describe the cause of issue a given issue is. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="102" column="1" bodyfile="libcellml/issue.h" bodystart="101" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="enum" id="classlibcellml_1_1Issue_1ac8f132565a3d24626c1cec90ce5c1958" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Level</name>
+        <enumvalue id="classlibcellml_1_1Issue_1ac8f132565a3d24626c1cec90ce5c1958abb1ca97ec761fc37101737ba0aa2e7c5" prot="public">
+          <name>ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1ac8f132565a3d24626c1cec90ce5c1958a059e9861e0400dfbe05c98a841f3f96b" prot="public">
+          <name>WARNING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1ac8f132565a3d24626c1cec90ce5c1958adb79539b1acab3c29a9c86b02e0b65e2" prot="public">
+          <name>HINT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The issue Level enum class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Enum to describe the level of severity that a given issue has. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="123" column="1" bodyfile="libcellml/issue.h" bodystart="122" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="enum" id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125f" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>ReferenceRule</name>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa0db45d2a4141101bdfe48e3314cfbca3" prot="public">
+          <name>UNDEFINED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa369a2510d81bd69e44b6e26fe8685e0b" prot="public">
+          <name>DATA_REPR_IDENTIFIER_UNICODE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa7f91a79a8cbb062779c96d65eb14ce49" prot="public">
+          <name>DATA_REPR_IDENTIFIER_LATIN_ALPHANUM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa6d4921689652f229dd8ce8ab37714d9e" prot="public">
+          <name>DATA_REPR_IDENTIFIER_AT_LEAST_ONE_ALPHANUM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa1c4866492e09cdf1c89b8d24bedc0faa" prot="public">
+          <name>DATA_REPR_IDENTIFIER_BEGIN_EURO_NUM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa75c2ea27397e7f307bbeb9666443d019" prot="public">
+          <name>DATA_REPR_IDENTIFIER_IDENTICAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa7c6ba528e6e91e072adefb039ec748ef" prot="public">
+          <name>DATA_REPR_NNEG_INT_BASE10</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa6652d4256cc35935d6b398fa6e96f3bc" prot="public">
+          <name>DATA_REPR_NNEG_INT_EURO_NUM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa248bffc0e789d6d7b2a6e04440ece7b4" prot="public">
+          <name>MODEL_ELEMENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fab6b4dc1892720787c580df6ac3b99188" prot="public">
+          <name>MODEL_NAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa712ee949ac7b3354210e65e0d7f43f72" prot="public">
+          <name>MODEL_CHILD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa5cf4ceececf58028b1b8029f6bc85952" prot="public">
+          <name>MODEL_MORE_THAN_ONE_ENCAPSULATION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa5057c7f7be3292312282f2ee41951dae" prot="public">
+          <name>IMPORT_HREF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa3ffd7fc9009c4fff92b99db23a6a543c" prot="public">
+          <name>IMPORT_CHILD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125faff75e52fc77455b5f142fc1f64a0d739" prot="public">
+          <name>IMPORT_CIRCULAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa74d3cf08c828d0b00658f5090992c4fe" prot="public">
+          <name>IMPORT_UNITS_NAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa62b38a9ffc1f3c2ac12d368a056a0cd3" prot="public">
+          <name>IMPORT_UNITS_REF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa8e05ff0afb4083e36ff0bdf3204fb97c" prot="public">
+          <name>IMPORT_COMPONENT_NAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa6254a578b12dbe13fec1db676086a262" prot="public">
+          <name>IMPORT_COMPONENT_REF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa1c51ea844ce93b1f14802433e51adaba" prot="public">
+          <name>UNITS_NAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa031e56313982a50325ada2175e2a5e2e" prot="public">
+          <name>UNITS_NAME_UNIQUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa45d4bd01107a88d8eff94f3edb170632" prot="public">
+          <name>UNITS_STANDARD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fafddd12a78cb84c20afcc5649e1f80916" prot="public">
+          <name>UNITS_CHILD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa5289088b3c2bd72dbe6d73e629f95374" prot="public">
+          <name>UNIT_UNITS_REF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125faea6152b7c7fdf251879bc9abf2b09984" prot="public">
+          <name>UNIT_DIGRAPH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125facdf860555a6392309a96091cc1ba1f68" prot="public">
+          <name>UNIT_CIRCULAR_REF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fabb76dc11d97ef21784af9e474a2f6a4a" prot="public">
+          <name>UNIT_OPTIONAL_ATTRIBUTE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125facb0d604962b360a4a58c2655539f6920" prot="public">
+          <name>UNIT_PREFIX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125faff8429700d94646d5d65e65b8f72f826" prot="public">
+          <name>UNIT_MULTIPLIER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa79c32597c55af7290f83a0b93cdb51f3" prot="public">
+          <name>UNIT_EXPONENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa73bb5242dcfd72f0db37b52bfae56fac" prot="public">
+          <name>COMPONENT_NAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa5853868385b7f9bdce48e0dfb81a025f" prot="public">
+          <name>COMPONENT_CHILD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125faac36973a62ee56349610649d6c388f9a" prot="public">
+          <name>VARIABLE_NAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fac69619446f6efe82e2cc9cbdf799402a" prot="public">
+          <name>VARIABLE_UNITS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa18af33b271bf6d960ce7b330af12d703" prot="public">
+          <name>VARIABLE_INTERFACE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa8e087e10bed0759936fe5b21dc53e7d8" prot="public">
+          <name>VARIABLE_INITIAL_VALUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa5404c12c4f1ded4aab5add6c15f94349" prot="public">
+          <name>RESET_CHILD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa23117eff6415b1f7e91bc932e3e3302f" prot="public">
+          <name>RESET_ORDER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa668d0b11991647c8748d557212216b3a" prot="public">
+          <name>RESET_VARIABLE_REFERENCE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fad332c96dff3cd17c3907d282c8412f6c" prot="public">
+          <name>RESET_TEST_VARIABLE_REFERENCE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fafe97c9af176cfaae80f753c7d3b1ce07" prot="public">
+          <name>RESET_TEST_VALUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fac72ae5bb758d0551da415b6528bdedb3" prot="public">
+          <name>RESET_RESET_VALUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa06395818b5f651325947d2997db51ed1" prot="public">
+          <name>MATH_MATHML</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125faeff33591c1eea036bba0c99063488592" prot="public">
+          <name>MATH_CHILD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa4a1fad4f18ba5a573d0e0d054bda5021" prot="public">
+          <name>MATH_CI_VARIABLE_REFERENCE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa196ed946fc22ab420914cf5c69b615b6" prot="public">
+          <name>MATH_CN_UNITS_ATTRIBUTE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fab06e8bedf436d7c5ccb35533681c2520" prot="public">
+          <name>ENCAPSULATION_COMPONENT_REF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa9fd89c6efd64455dd6a8cfa0ca9b7768" prot="public">
+          <name>COMPONENT_REF_COMPONENT_ATTRIBUTE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa83469c44c5522e7778add2eb6fd51ee0" prot="public">
+          <name>COMPONENT_REF_CHILD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa558e7760131fbc09aab762a51a91c40a" prot="public">
+          <name>COMPONENT_REF_ENCAPSULATION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125faead5c58bd02a0aec181169867a4c619b" prot="public">
+          <name>CONNECTION_COMPONENT1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125faa769dd3ed9f0f49a7de7575d19485dac" prot="public">
+          <name>CONNECTION_COMPONENT2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fac53d3f791b8412ab40c79b5f3dbb1e9f" prot="public">
+          <name>CONNECTION_UNIQUE_TRANSITIVE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa19939c16647c3e85aa56a571c8637739" prot="public">
+          <name>CONNECTION_MAP_VARIABLES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa9eeefd0f8cefd62e07b0d82e80009330" prot="public">
+          <name>MAP_VARIABLES_VARIABLE1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa8a388b7c6ad527fa45710b34458b10d7" prot="public">
+          <name>MAP_VARIABLES_VARIABLE2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa94eb344828c99c068f5bffc8873170e5" prot="public">
+          <name>MAP_VARIABLES_UNIQUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa7e30330f2716896f539daa77b8cf54de" prot="public">
+          <name>MAP_VARIABLES_IDENTICAL_UNIT_REDUCTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The issue Reference enum class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Enum to describe the rule which the issue addresses. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="135" column="1" bodyfile="libcellml/issue.h" bodystart="134" bodyend="195"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlibcellml_1_1Issue_1a8984294b8e77cd0351a0a156c62ff044" prot="private" static="no" mutable="no">
+        <type>IssueImpl *</type>
+        <definition>IssueImpl* libcellml::Issue::mPimpl</definition>
+        <argsstring></argsstring>
+        <name>mPimpl</name>
+        <briefdescription>
+<para>Forward declaration for pImpl idiom. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Private member to implementation pointer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="469" column="15" bodyfile="libcellml/issue.h" bodystart="468" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1ac0d6dd8709dd91b503bdf6abbc562fae" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual libcellml::Issue::~Issue</definition>
+        <argsstring>()</argsstring>
+        <name>~Issue</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="34" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1a1aa5ccd9eec1238e4cc7aec87d96a0fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Issue::Issue</definition>
+        <argsstring>(const Issue &amp;rhs)=delete</argsstring>
+        <name>Issue</name>
+        <param>
+          <type>const <ref refid="classlibcellml_1_1Issue" kindref="compound">Issue</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="35" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1ac3f8c73a8e70b9b78d6070409466ac29" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Issue::Issue</definition>
+        <argsstring>(Issue &amp;&amp;rhs) noexcept=delete</argsstring>
+        <name>Issue</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1Issue" kindref="compound">Issue</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="36" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1a6f88f09cb4cbda103955a35829bd9549" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1Issue" kindref="compound">Issue</ref> &amp;</type>
+        <definition>Issue&amp; libcellml::Issue::operator=</definition>
+        <argsstring>(Issue rhs)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1Issue" kindref="compound">Issue</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="37" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1ade4cccffc2ba0fd9869edec809bdcb59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Issue::setDescription</definition>
+        <argsstring>(const std::string &amp;description)</argsstring>
+        <name>setDescription</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>description</declname>
+        </param>
+        <briefdescription>
+<para>Set the description for this issue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the <computeroutput>std::string</computeroutput> <computeroutput>description</computeroutput> for why this issue was raised.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>std::string</computeroutput> issue description to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="204" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1aa6a0563d2c18de3b4bae8125f7e24c03" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Issue::description</definition>
+        <argsstring>() const</argsstring>
+        <name>description</name>
+        <briefdescription>
+<para>Get the description for this issue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the <computeroutput>std::string</computeroutput> description for why this issue was raised.</para>
+<para><simplesect kind="return"><para>The <computeroutput>std::string</computeroutput> description of the issue. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="213" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1ab5bca58223bfd9c6b08331873f92b6af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Issue::setCause</definition>
+        <argsstring>(Cause cause)</argsstring>
+        <name>setCause</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1Issue_1a547e7371f0733b89ebb99a26ae3f4a7e" kindref="member">Cause</ref></type>
+          <declname>cause</declname>
+        </param>
+        <briefdescription>
+<para>Set the cause of this issue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the <computeroutput>cause</computeroutput> of this issue from the options available in <computeroutput><ref refid="classlibcellml_1_1Issue_1a547e7371f0733b89ebb99a26ae3f4a7e" kindref="member">Issue::Cause</ref></computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cause</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput><ref refid="classlibcellml_1_1Issue_1a547e7371f0733b89ebb99a26ae3f4a7e" kindref="member">Issue::Cause</ref></computeroutput> to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="223" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1a37134445e1d4e0cda02e1e77b3666f25" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1Issue_1a547e7371f0733b89ebb99a26ae3f4a7e" kindref="member">Cause</ref></type>
+        <definition>Cause libcellml::Issue::cause</definition>
+        <argsstring>() const</argsstring>
+        <name>cause</name>
+        <briefdescription>
+<para>Get the cause of this issue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the <computeroutput>cause</computeroutput> of this issue. If no cause has been set for this issue, will return <ref refid="classlibcellml_1_1Issue_1a547e7371f0733b89ebb99a26ae3f4a7ea0db45d2a4141101bdfe48e3314cfbca3" kindref="member">Cause::UNDEFINED</ref>.</para>
+<para><simplesect kind="return"><para>The <computeroutput><ref refid="classlibcellml_1_1Issue_1a547e7371f0733b89ebb99a26ae3f4a7e" kindref="member">Issue::Cause</ref></computeroutput> set for this issue. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="233" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1a3660073e486af730a482ac2a8ba2f6c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Issue::setLevel</definition>
+        <argsstring>(Level level)</argsstring>
+        <name>setLevel</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1Issue_1ac8f132565a3d24626c1cec90ce5c1958" kindref="member">Level</ref></type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+<para>Set the level of this issue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the <computeroutput>level</computeroutput> of this issue from the options available in <computeroutput><ref refid="classlibcellml_1_1Issue_1ac8f132565a3d24626c1cec90ce5c1958" kindref="member">Issue::Level</ref></computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>level</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput><ref refid="classlibcellml_1_1Issue_1ac8f132565a3d24626c1cec90ce5c1958" kindref="member">Issue::Level</ref></computeroutput> to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="243" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1a04f69c031667b3db4913ec3efec7d377" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1Issue_1ac8f132565a3d24626c1cec90ce5c1958" kindref="member">Level</ref></type>
+        <definition>Level libcellml::Issue::level</definition>
+        <argsstring>() const</argsstring>
+        <name>level</name>
+        <briefdescription>
+<para>Get the level of this issue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the <computeroutput>level</computeroutput> of this issue. If no level has been set for this issue, will return <ref refid="classlibcellml_1_1Issue_1ac8f132565a3d24626c1cec90ce5c1958abb1ca97ec761fc37101737ba0aa2e7c5" kindref="member">Level::ERROR</ref>.</para>
+<para><simplesect kind="return"><para>The <computeroutput><ref refid="classlibcellml_1_1Issue_1ac8f132565a3d24626c1cec90ce5c1958" kindref="member">Issue::Level</ref></computeroutput> set for this issue. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="253" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1a6cc04ab2519cab20ef5dbbb6e215bdcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Issue::setReferenceRule</definition>
+        <argsstring>(ReferenceRule referenceRule)</argsstring>
+        <name>setReferenceRule</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125f" kindref="member">ReferenceRule</ref></type>
+          <declname>referenceRule</declname>
+        </param>
+        <briefdescription>
+<para>Set the <computeroutput>enum</computeroutput> ReferenceRule of this issue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the <computeroutput>referenceRule</computeroutput> of this issue from the options available in the <computeroutput>ReferenceRule</computeroutput> <computeroutput>enum</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>referenceRule</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>ReferenceRule</computeroutput> to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="263" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1aebda0e12d4af026f9a3514173bbef287" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125f" kindref="member">ReferenceRule</ref></type>
+        <definition>ReferenceRule libcellml::Issue::referenceRule</definition>
+        <argsstring>() const</argsstring>
+        <name>referenceRule</name>
+        <briefdescription>
+<para>Get the <computeroutput>enum</computeroutput> ReferenceRule of this issue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the <computeroutput>enum</computeroutput> <computeroutput>ReferenceRule</computeroutput> value of this issue. If no reference rule has been set for this issue, return <ref refid="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa0db45d2a4141101bdfe48e3314cfbca3" kindref="member">ReferenceRule::UNDEFINED</ref>.</para>
+<para><simplesect kind="return"><para>The <computeroutput>ReferenceRule</computeroutput> for this issue. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="273" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1a1694c93c4f368b0d2084403e5eab143e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Issue::referenceHeading</definition>
+        <argsstring>() const</argsstring>
+        <name>referenceHeading</name>
+        <briefdescription>
+<para>Get the <computeroutput>std::string</computeroutput> heading associated with the <computeroutput>enum</computeroutput> ReferenceRule for this issue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the <computeroutput>std::string</computeroutput> libCellML Reference heading associated with the <computeroutput>enum</computeroutput> ReferenceRule for this issue. If no rule has been set for this issue, will return an empty string.</para>
+<para><simplesect kind="return"><para>The <computeroutput>std::string</computeroutput> libCellML Reference heading relevant to this issue. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="293" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1a726d3d0db0728da7c97947a0f454504f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Issue::setComponent</definition>
+        <argsstring>(const ComponentPtr &amp;component)</argsstring>
+        <name>setComponent</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref> &amp;</type>
+          <declname>component</declname>
+        </param>
+        <briefdescription>
+<para>Set the component for this component issue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the <computeroutput>component</computeroutput> that this component issue is relevant to.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>component</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the component that this component issue is relevant to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="302" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1aa90114d772155a995804da3272999f5b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref></type>
+        <definition>ComponentPtr libcellml::Issue::component</definition>
+        <argsstring>() const</argsstring>
+        <name>component</name>
+        <briefdescription>
+<para>Get the component for this issue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the component that this issue is relevant to.</para>
+<para><simplesect kind="return"><para>A pointer to the component that this issue was raised on. If no component has been set for this issue, return a <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="312" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1a7538790efd1f139b9d957dfc941dc4d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Issue::setImportSource</definition>
+        <argsstring>(const ImportSourcePtr &amp;importSource)</argsstring>
+        <name>setImportSource</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1ac2c4e6d1793d7214616c1548d8a9f502" kindref="member">ImportSourcePtr</ref> &amp;</type>
+          <declname>importSource</declname>
+        </param>
+        <briefdescription>
+<para>Set the <computeroutput>import</computeroutput> source for this issue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the <computeroutput>ImportSourcePtr</computeroutput> <computeroutput>importSource</computeroutput> object that this issue is relevant to.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>importSource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the import source that this issue is relevant to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="323" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1afa8a3810487a2d49143f2d1515a1d0f4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1ac2c4e6d1793d7214616c1548d8a9f502" kindref="member">ImportSourcePtr</ref></type>
+        <definition>ImportSourcePtr libcellml::Issue::importSource</definition>
+        <argsstring>() const</argsstring>
+        <name>importSource</name>
+        <briefdescription>
+<para>Get the import source for this issue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the <computeroutput>ImportSourcePtr</computeroutput> import source for this issue.</para>
+<para><simplesect kind="return"><para>A pointer to the import source this issue was raised on. If no import source has been set for this issue, return a <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="333" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1a4963657548500a29b3f8cb3ddad7700f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Issue::setModel</definition>
+        <argsstring>(const ModelPtr &amp;model)</argsstring>
+        <name>setModel</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref> &amp;</type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+<para>Set the <computeroutput>model</computeroutput> for this issue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the <computeroutput>model</computeroutput> that this issue is relevant to.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the model that this issue is relevant to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="342" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1a1f4f583ca6df692a194e30ec5dff40e2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref></type>
+        <definition>ModelPtr libcellml::Issue::model</definition>
+        <argsstring>() const</argsstring>
+        <name>model</name>
+        <briefdescription>
+<para>Get the model for this issue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the model that this issue is relevant to.</para>
+<para><simplesect kind="return"><para>A pointer to the model that this issue was raised on. If no model has been set for this issue, return a <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="352" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1a822adbf497d75d2a19953fcd26d29e44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Issue::setUnits</definition>
+        <argsstring>(const UnitsPtr &amp;units)</argsstring>
+        <name>setUnits</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a3259debe09f915678b203e98100ea10a" kindref="member">UnitsPtr</ref> &amp;</type>
+          <declname>units</declname>
+        </param>
+        <briefdescription>
+<para>Set the units for this issue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the <computeroutput>units</computeroutput> that this issue is relevant to.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>units</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the units this issue is relevant to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="361" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1acca270b910a7892994600843e5b4569c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a3259debe09f915678b203e98100ea10a" kindref="member">UnitsPtr</ref></type>
+        <definition>UnitsPtr libcellml::Issue::units</definition>
+        <argsstring>() const</argsstring>
+        <name>units</name>
+        <briefdescription>
+<para>Get the units for this issue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the units that this issue is relevant to.</para>
+<para><simplesect kind="return"><para>A pointer to the units that this issue was raised on. If no units has been set for this issue, return a <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="371" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1a0e9f717cd429f3648c582f0e54ce6c60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Issue::setVariable</definition>
+        <argsstring>(const VariablePtr &amp;variable)</argsstring>
+        <name>setVariable</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable</declname>
+        </param>
+        <briefdescription>
+<para>Set the variable for this issue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the <computeroutput>variable</computeroutput> that this issue is relevant to.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the variable this issue is relevant to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="380" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1a5144ffb15ea6eae9ba12391257c8b1e7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref></type>
+        <definition>VariablePtr libcellml::Issue::variable</definition>
+        <argsstring>() const</argsstring>
+        <name>variable</name>
+        <briefdescription>
+<para>Get the variable for this issue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the variable that this issue is relevant to.</para>
+<para><simplesect kind="return"><para>A pointer to the variable this variable issue was raised on. If no variable has been set for this issue, return a <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="390" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1a2105a0a8d8a02ed0373a77e8c2cddd3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Issue::setReset</definition>
+        <argsstring>(const ResetPtr &amp;reset)</argsstring>
+        <name>setReset</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a329055beefacf51332628055453f390a" kindref="member">ResetPtr</ref> &amp;</type>
+          <declname>reset</declname>
+        </param>
+        <briefdescription>
+<para>Set the reset for this issue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the <computeroutput>reset</computeroutput> that this issue is relevant to.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the reset this issue is relevant to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="399" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1ae2ada6fef847f42faeb4e22c582c1350" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a329055beefacf51332628055453f390a" kindref="member">ResetPtr</ref></type>
+        <definition>ResetPtr libcellml::Issue::reset</definition>
+        <argsstring>() const</argsstring>
+        <name>reset</name>
+        <briefdescription>
+<para>Get the reset for this issue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the reset that this issue is relevant to.</para>
+<para><simplesect kind="return"><para>A pointer to the reset this reset issue was raised on. If no reset has been set for this issue, return a <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="409" column="14"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1a93655313cece6aa2ca4522255e0c9bc4" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1ad323ac6f8bcdf4740a0209906bc33ac2" kindref="member">IssuePtr</ref></type>
+        <definition>static IssuePtr libcellml::Issue::create</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>create</name>
+        <briefdescription>
+<para>Create an <computeroutput><ref refid="classlibcellml_1_1Issue" kindref="compound">Issue</ref></computeroutput> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Factory method to create an <computeroutput><ref refid="classlibcellml_1_1Issue" kindref="compound">Issue</ref></computeroutput>. Can create a blank issue with::</para>
+<para>IssuePtr issue = <ref refid="classlibcellml_1_1Issue_1a93655313cece6aa2ca4522255e0c9bc4" kindref="member">libcellml::Issue::create()</ref>;</para>
+<para>or an issue with one of the following types as a parameter::</para>
+<para><itemizedlist>
+<listitem><para><ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">libcellml::ComponentPtr</ref></para>
+</listitem><listitem><para><ref refid="namespacelibcellml_1ac2c4e6d1793d7214616c1548d8a9f502" kindref="member">libcellml::ImportSourcePtr</ref></para>
+</listitem><listitem><para><ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">libcellml::ModelPtr</ref></para>
+</listitem><listitem><para><ref refid="namespacelibcellml_1a329055beefacf51332628055453f390a" kindref="member">libcellml::ResetPtr</ref></para>
+</listitem><listitem><para><ref refid="namespacelibcellml_1a3259debe09f915678b203e98100ea10a" kindref="member">libcellml::UnitsPtr</ref></para>
+</listitem><listitem><para><ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">libcellml::VariablePtr</ref></para>
+</listitem></itemizedlist>
+</para>
+<para>The default values for the enumerations are::</para>
+<para><itemizedlist>
+<listitem><para><ref refid="classlibcellml_1_1Issue_1a547e7371f0733b89ebb99a26ae3f4a7ea0db45d2a4141101bdfe48e3314cfbca3" kindref="member">libcellml::Issue::Cause::UNDEFINED</ref>;</para>
+</listitem><listitem><para><ref refid="classlibcellml_1_1Issue_1ac8f132565a3d24626c1cec90ce5c1958abb1ca97ec761fc37101737ba0aa2e7c5" kindref="member">libcellml::Issue::Level::ERROR</ref>;</para>
+</listitem><listitem><para><ref refid="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa0db45d2a4141101bdfe48e3314cfbca3" kindref="member">libcellml::Issue::ReferenceRule::UNDEFINED</ref>;</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="return"><para>A smart pointer to an <computeroutput><ref refid="classlibcellml_1_1Issue" kindref="compound">Issue</ref></computeroutput> object. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="64" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1a0eb9b266a5b77fff0de1fd5046f99d52" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1ad323ac6f8bcdf4740a0209906bc33ac2" kindref="member">IssuePtr</ref></type>
+        <definition>static IssuePtr libcellml::Issue::create</definition>
+        <argsstring>(const ComponentPtr &amp;component) noexcept</argsstring>
+        <name>create</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref> &amp;</type>
+          <declname>component</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="69" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1ae6ffb754b5b8b177d4bae930962139b1" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1ad323ac6f8bcdf4740a0209906bc33ac2" kindref="member">IssuePtr</ref></type>
+        <definition>static IssuePtr libcellml::Issue::create</definition>
+        <argsstring>(const ImportSourcePtr &amp;importSource) noexcept</argsstring>
+        <name>create</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1ac2c4e6d1793d7214616c1548d8a9f502" kindref="member">ImportSourcePtr</ref> &amp;</type>
+          <declname>importSource</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="74" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1aa4fa5a80d830479677cf99facb61ae04" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1ad323ac6f8bcdf4740a0209906bc33ac2" kindref="member">IssuePtr</ref></type>
+        <definition>static IssuePtr libcellml::Issue::create</definition>
+        <argsstring>(const ModelPtr &amp;model) noexcept</argsstring>
+        <name>create</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref> &amp;</type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="79" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1a9669307ed33b1457faf75e609bbc62e9" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1ad323ac6f8bcdf4740a0209906bc33ac2" kindref="member">IssuePtr</ref></type>
+        <definition>static IssuePtr libcellml::Issue::create</definition>
+        <argsstring>(const ResetPtr &amp;reset) noexcept</argsstring>
+        <name>create</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a329055beefacf51332628055453f390a" kindref="member">ResetPtr</ref> &amp;</type>
+          <declname>reset</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="84" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1ae402a1200b11935fd04b60b73ade4be8" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1ad323ac6f8bcdf4740a0209906bc33ac2" kindref="member">IssuePtr</ref></type>
+        <definition>static IssuePtr libcellml::Issue::create</definition>
+        <argsstring>(const UnitsPtr &amp;units) noexcept</argsstring>
+        <name>create</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a3259debe09f915678b203e98100ea10a" kindref="member">UnitsPtr</ref> &amp;</type>
+          <declname>units</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="89" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1a274ed1e254e83bebe68676acdbc1a5de" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1ad323ac6f8bcdf4740a0209906bc33ac2" kindref="member">IssuePtr</ref></type>
+        <definition>static IssuePtr libcellml::Issue::create</definition>
+        <argsstring>(const VariablePtr &amp;variable) noexcept</argsstring>
+        <name>create</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="94" column="21"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1ab16c28b2454fc24d4870864237226b44" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Issue::Issue</definition>
+        <argsstring>()</argsstring>
+        <name>Issue</name>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="412" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1a7d258cc0be4db30ebf8c09a838e7ee21" prot="private" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Issue::Issue</definition>
+        <argsstring>(const ComponentPtr &amp;component)</argsstring>
+        <name>Issue</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref> &amp;</type>
+          <declname>component</declname>
+        </param>
+        <briefdescription>
+<para>Constructs an <ref refid="classlibcellml_1_1Issue" kindref="compound">Issue</ref> for the component. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Convenience constructor for creating an issue for the component.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>component</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The component the issue references. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="421" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1a7b11feb3eadfe3342235d27e985bf68c" prot="private" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Issue::Issue</definition>
+        <argsstring>(const ImportSourcePtr &amp;importSource)</argsstring>
+        <name>Issue</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1ac2c4e6d1793d7214616c1548d8a9f502" kindref="member">ImportSourcePtr</ref> &amp;</type>
+          <declname>importSource</declname>
+        </param>
+        <briefdescription>
+<para>Constructs an <ref refid="classlibcellml_1_1Issue" kindref="compound">Issue</ref> for the import source. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Convenience constructor for creating an issue for the import source.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>importSource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The import source the issue references. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="430" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1a164b672dc88c3387ca064716b2c65933" prot="private" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Issue::Issue</definition>
+        <argsstring>(const ModelPtr &amp;model)</argsstring>
+        <name>Issue</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref> &amp;</type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+<para>Constructs an <ref refid="classlibcellml_1_1Issue" kindref="compound">Issue</ref> for the model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Convenience constructor for creating an issue for the model.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The model the issue references. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="439" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1a24b858b36da3dd8f94b977ae5405cf17" prot="private" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Issue::Issue</definition>
+        <argsstring>(const ResetPtr &amp;reset)</argsstring>
+        <name>Issue</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a329055beefacf51332628055453f390a" kindref="member">ResetPtr</ref> &amp;</type>
+          <declname>reset</declname>
+        </param>
+        <briefdescription>
+<para>Constructs an <ref refid="classlibcellml_1_1Issue" kindref="compound">Issue</ref> for the reset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Convenience constructor for creating an issue for the reset.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reset the issue references. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="448" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1a779400908a77cac79de8c8941fdf9eb6" prot="private" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Issue::Issue</definition>
+        <argsstring>(const UnitsPtr &amp;units)</argsstring>
+        <name>Issue</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a3259debe09f915678b203e98100ea10a" kindref="member">UnitsPtr</ref> &amp;</type>
+          <declname>units</declname>
+        </param>
+        <briefdescription>
+<para>Constructs an <ref refid="classlibcellml_1_1Issue" kindref="compound">Issue</ref> for the units. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Convenience constructor for creating an issue for the units.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>units</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The units the issue references. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="457" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1ad664c34ee6ddabb1081047f1a15edaf7" prot="private" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Issue::Issue</definition>
+        <argsstring>(const VariablePtr &amp;variable)</argsstring>
+        <name>Issue</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable</declname>
+        </param>
+        <briefdescription>
+<para>Constructs an <ref refid="classlibcellml_1_1Issue" kindref="compound">Issue</ref> for the variable. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Convenience constructor for creating an issue for the variable.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The variable the issue references. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="466" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classlibcellml_1_1Issue" kindref="compound">Issue</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Base class for issues used with logger derived classes. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>libcellml::Issue</label>
+        <link refid="classlibcellml_1_1Issue"/>
+      </node>
+    </collaborationgraph>
+    <location file="libcellml/issue.h" line="32" column="1" bodyfile="libcellml/issue.h" bodystart="31" bodyend="470"/>
+    <listofallmembers>
+      <member refid="classlibcellml_1_1Issue_1a547e7371f0733b89ebb99a26ae3f4a7e" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>Cause</name></member>
+      <member refid="classlibcellml_1_1Issue_1a37134445e1d4e0cda02e1e77b3666f25" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>cause</name></member>
+      <member refid="classlibcellml_1_1Issue_1aa90114d772155a995804da3272999f5b" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>component</name></member>
+      <member refid="classlibcellml_1_1Issue_1a93655313cece6aa2ca4522255e0c9bc4" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>create</name></member>
+      <member refid="classlibcellml_1_1Issue_1a0eb9b266a5b77fff0de1fd5046f99d52" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>create</name></member>
+      <member refid="classlibcellml_1_1Issue_1ae6ffb754b5b8b177d4bae930962139b1" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>create</name></member>
+      <member refid="classlibcellml_1_1Issue_1aa4fa5a80d830479677cf99facb61ae04" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>create</name></member>
+      <member refid="classlibcellml_1_1Issue_1a9669307ed33b1457faf75e609bbc62e9" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>create</name></member>
+      <member refid="classlibcellml_1_1Issue_1ae402a1200b11935fd04b60b73ade4be8" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>create</name></member>
+      <member refid="classlibcellml_1_1Issue_1a274ed1e254e83bebe68676acdbc1a5de" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>create</name></member>
+      <member refid="classlibcellml_1_1Issue_1aa6a0563d2c18de3b4bae8125f7e24c03" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>description</name></member>
+      <member refid="classlibcellml_1_1Issue_1afa8a3810487a2d49143f2d1515a1d0f4" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>importSource</name></member>
+      <member refid="classlibcellml_1_1Issue_1a1aa5ccd9eec1238e4cc7aec87d96a0fb" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>Issue</name></member>
+      <member refid="classlibcellml_1_1Issue_1ac3f8c73a8e70b9b78d6070409466ac29" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>Issue</name></member>
+      <member refid="classlibcellml_1_1Issue_1ab16c28b2454fc24d4870864237226b44" prot="private" virt="non-virtual"><scope>libcellml::Issue</scope><name>Issue</name></member>
+      <member refid="classlibcellml_1_1Issue_1a7d258cc0be4db30ebf8c09a838e7ee21" prot="private" virt="non-virtual"><scope>libcellml::Issue</scope><name>Issue</name></member>
+      <member refid="classlibcellml_1_1Issue_1a7b11feb3eadfe3342235d27e985bf68c" prot="private" virt="non-virtual"><scope>libcellml::Issue</scope><name>Issue</name></member>
+      <member refid="classlibcellml_1_1Issue_1a164b672dc88c3387ca064716b2c65933" prot="private" virt="non-virtual"><scope>libcellml::Issue</scope><name>Issue</name></member>
+      <member refid="classlibcellml_1_1Issue_1a24b858b36da3dd8f94b977ae5405cf17" prot="private" virt="non-virtual"><scope>libcellml::Issue</scope><name>Issue</name></member>
+      <member refid="classlibcellml_1_1Issue_1a779400908a77cac79de8c8941fdf9eb6" prot="private" virt="non-virtual"><scope>libcellml::Issue</scope><name>Issue</name></member>
+      <member refid="classlibcellml_1_1Issue_1ad664c34ee6ddabb1081047f1a15edaf7" prot="private" virt="non-virtual"><scope>libcellml::Issue</scope><name>Issue</name></member>
+      <member refid="classlibcellml_1_1Issue_1ac8f132565a3d24626c1cec90ce5c1958" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>Level</name></member>
+      <member refid="classlibcellml_1_1Issue_1a04f69c031667b3db4913ec3efec7d377" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>level</name></member>
+      <member refid="classlibcellml_1_1Issue_1a1f4f583ca6df692a194e30ec5dff40e2" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>model</name></member>
+      <member refid="classlibcellml_1_1Issue_1a8984294b8e77cd0351a0a156c62ff044" prot="private" virt="non-virtual"><scope>libcellml::Issue</scope><name>mPimpl</name></member>
+      <member refid="classlibcellml_1_1Issue_1a6f88f09cb4cbda103955a35829bd9549" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1Issue_1a1694c93c4f368b0d2084403e5eab143e" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>referenceHeading</name></member>
+      <member refid="classlibcellml_1_1Issue_1aebda0e12d4af026f9a3514173bbef287" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>referenceRule</name></member>
+      <member refid="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125f" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>ReferenceRule</name></member>
+      <member refid="classlibcellml_1_1Issue_1ae2ada6fef847f42faeb4e22c582c1350" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>reset</name></member>
+      <member refid="classlibcellml_1_1Issue_1ab5bca58223bfd9c6b08331873f92b6af" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>setCause</name></member>
+      <member refid="classlibcellml_1_1Issue_1a726d3d0db0728da7c97947a0f454504f" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>setComponent</name></member>
+      <member refid="classlibcellml_1_1Issue_1ade4cccffc2ba0fd9869edec809bdcb59" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>setDescription</name></member>
+      <member refid="classlibcellml_1_1Issue_1a7538790efd1f139b9d957dfc941dc4d2" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>setImportSource</name></member>
+      <member refid="classlibcellml_1_1Issue_1a3660073e486af730a482ac2a8ba2f6c5" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>setLevel</name></member>
+      <member refid="classlibcellml_1_1Issue_1a4963657548500a29b3f8cb3ddad7700f" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>setModel</name></member>
+      <member refid="classlibcellml_1_1Issue_1a6cc04ab2519cab20ef5dbbb6e215bdcc" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>setReferenceRule</name></member>
+      <member refid="classlibcellml_1_1Issue_1a2105a0a8d8a02ed0373a77e8c2cddd3a" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>setReset</name></member>
+      <member refid="classlibcellml_1_1Issue_1a822adbf497d75d2a19953fcd26d29e44" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>setUnits</name></member>
+      <member refid="classlibcellml_1_1Issue_1a0e9f717cd429f3648c582f0e54ce6c60" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>setVariable</name></member>
+      <member refid="classlibcellml_1_1Issue_1acca270b910a7892994600843e5b4569c" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>units</name></member>
+      <member refid="classlibcellml_1_1Issue_1a5144ffb15ea6eae9ba12391257c8b1e7" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>variable</name></member>
+      <member refid="classlibcellml_1_1Issue_1ac0d6dd8709dd91b503bdf6abbc562fae" prot="public" virt="virtual"><scope>libcellml::Issue</scope><name>~Issue</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

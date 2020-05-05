@@ -1,10 +1,17 @@
-import Vue from "vue";
-import App from "./App.vue";
-import router from "./router";
-
-Vue.config.productionTip = false;
+import Vue from 'vue'
+import App from './App.vue'
+import store from './store'
+import router from './router'
+import vuetify from './plugins/vuetify'
+// import VueHighlightJS from 'vue-highlightjs'
+import VHighlightJS from 'v-highlightjs'
+// Vue.use(VueHighlightJS)
+Vue.use(VHighlightJS)
+Vue.config.productionTip = false
 
 new Vue({
   router,
-  render: h => h(App)
-}).$mount("#app");
+  store,
+  vuetify,
+  render: h => h(App),
+}).$mount('#app')
