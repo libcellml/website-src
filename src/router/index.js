@@ -22,7 +22,7 @@ const routes = [
   },
   {
     path: '/apidocs',
-    name: 'API Docs',
+    name: 'API Documentation',
     props: true,
     beforeEnter(routeTo, routeFrom, next) {
       updateDoxygenRoute(routeTo, next)
@@ -32,7 +32,7 @@ const routes = [
   },
   {
     path: '/apidocs/:pageName',
-    name: 'API Docs Section',
+    name: 'API Documentation Section',
     props: true,
     beforeEnter(routeTo, routeFrom, next) {
       updateDoxygenRoute(routeTo, next)
