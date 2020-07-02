@@ -8,7 +8,7 @@
         <v-col
           v-for="link in links"
           :key="`${link.label}-header-link`"
-          :cols="link.label === 'Home' ? 3 : 1"
+          :cols="link.label === 'Home' ? 2 : 1"
         >
           <v-btn text rounded :to="link.url">
             {{ link.label }}
@@ -75,7 +75,7 @@ export default {
         url: '/download',
       },
       {
-        label: 'API Docs',
+        label: 'API Documentation',
         url: '/apidocs',
       },
       {
@@ -149,5 +149,9 @@ export default {
 
 .slide-leave-to {
   transform: translateX(-20px);
+}
+
+.col-1 {
+  max-width: unset;
 }
 </style>

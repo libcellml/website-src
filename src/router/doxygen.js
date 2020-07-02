@@ -9,7 +9,7 @@ const pageType = pageName => {
 }
 
 export const updateDoxygenRoute = (routeTo, next) => {
-  const mainPage = routeTo.name === 'API Docs'
+  const mainPage = routeTo.name === 'API Documentation'
   const pageName = mainPage ? 'index' : routeTo.params.pageName
   const existingData = store.state.doxygen.pages.find(
     page => page.id === pageName,
