@@ -21,8 +21,16 @@ const routes = [
       import(/* webpackChunkName: "about" */ '../views/About.vue'),
   },
   {
-    path: '/apidocs',
-    name: 'API Documentation',
+    path: '/documentation',
+    name: 'Documentation',
+    component: () =>
+      import(
+        /* webpackChunkName: "documentation" */ '../views/Documentation.vue'
+      ),
+  },
+  {
+    path: '/help/api/:version',
+    name: 'API Reference',
     props: true,
     beforeEnter(routeTo, routeFrom, next) {
       updateDoxygenRoute(routeTo, next)
@@ -31,8 +39,8 @@ const routes = [
       import(/* webpackChunkName: "doxygen" */ '../views/doxygen/Main.vue'),
   },
   {
-    path: '/apidocs/:pageName',
-    name: 'API Documentation Section',
+    path: '/help/api/:version/:pageName',
+    name: 'API Reference Section',
     props: true,
     beforeEnter(routeTo, routeFrom, next) {
       updateDoxygenRoute(routeTo, next)
@@ -43,7 +51,7 @@ const routes = [
       ),
   },
   {
-    path: '/tutorials/*',
+    path: '/help/tutorials/:version/*',
     name: 'TutorialPage',
     props: true,
     beforeEnter(routeTo, routeFrom, next) {
@@ -53,7 +61,7 @@ const routes = [
       import(/* webpackChunkName: "sphinx" */ '../views/sphinx/Main.vue'),
   },
   {
-    path: '/tutorials',
+    path: '/help/tutorials/:version',
     name: 'TutorialsIndex',
     props: true,
     beforeEnter(routeTo, routeFrom, next) {
@@ -61,6 +69,12 @@ const routes = [
     },
     component: () =>
       import(/* webpackChunkName: "sphinx" */ '../views/sphinx/Main.vue'),
+  },
+  {
+    path: '/developers',
+    name: 'Developers',
+    component: () =>
+      import(/* webpackChunkName: "developers" */ '../views/Developers.vue'),
   },
   {
     path: '/download',

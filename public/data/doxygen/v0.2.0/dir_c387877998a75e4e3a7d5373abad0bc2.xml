@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_c387877998a75e4e3a7d5373abad0bc2" kind="dir">
+    <compoundname>libcellml</compoundname>
+    <innerfile refid="component_8h">component.h</innerfile>
+    <innerfile refid="componententity_8h">componententity.h</innerfile>
+    <innerfile refid="entity_8h">entity.h</innerfile>
+    <innerfile refid="generator_8h">generator.h</innerfile>
+    <innerfile refid="generatorprofile_8h">generatorprofile.h</innerfile>
+    <innerfile refid="importedentity_8h">importedentity.h</innerfile>
+    <innerfile refid="importsource_8h">importsource.h</innerfile>
+    <innerfile refid="issue_8h">issue.h</innerfile>
+    <innerfile refid="logger_8h">logger.h</innerfile>
+    <innerfile refid="model_8h">model.h</innerfile>
+    <innerfile refid="namedentity_8h">namedentity.h</innerfile>
+    <innerfile refid="parser_8h">parser.h</innerfile>
+    <innerfile refid="printer_8h">printer.h</innerfile>
+    <innerfile refid="reset_8h">reset.h</innerfile>
+    <innerfile refid="types_8h">types.h</innerfile>
+    <innerfile refid="units_8h">units.h</innerfile>
+    <innerfile refid="validator_8h">validator.h</innerfile>
+    <innerfile refid="variable_8h">variable.h</innerfile>
+    <innerfile refid="version_8h">version.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libcellml/"/>
+  </compounddef>
+</doxygen>

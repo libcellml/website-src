@@ -1,0 +1,757 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classlibcellml_1_1Reset" kind="class" language="C++" prot="public">
+    <compoundname>libcellml::Reset</compoundname>
+    <basecompoundref refid="classlibcellml_1_1Entity" prot="public" virt="non-virtual">libcellml::Entity</basecompoundref>
+    <includes refid="reset_8h" local="no">reset.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlibcellml_1_1Reset_1a6b77c337759f647bec81fa100b8a4124" prot="private" static="no" mutable="no">
+        <type>ResetImpl *</type>
+        <definition>ResetImpl* libcellml::Reset::mPimpl</definition>
+        <argsstring></argsstring>
+        <name>mPimpl</name>
+        <briefdescription>
+<para>Forward declaration for pImpl idiom. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Private member to implementation pointer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="276" column="15" bodyfile="libcellml/reset.h" bodystart="275" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1a72f2e678ccd16c3bd93d186793c97451" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Reset::~Reset</definition>
+        <argsstring>() override</argsstring>
+        <name>~Reset</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="34" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1a1d429e3559d3756e4d851d1026445ad0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Reset::Reset</definition>
+        <argsstring>(const Reset &amp;rhs)=delete</argsstring>
+        <name>Reset</name>
+        <param>
+          <type>const <ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="35" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1a1d2b303b1008eab909d3944b57cf9184" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Reset::Reset</definition>
+        <argsstring>(Reset &amp;&amp;rhs) noexcept=delete</argsstring>
+        <name>Reset</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="36" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1a9f61391bcd9fd25764fb9fe11bf2172c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref> &amp;</type>
+        <definition>Reset&amp; libcellml::Reset::operator=</definition>
+        <argsstring>(Reset rhs)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="37" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1ac95b202d1119de42532094da072f5091" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Reset::setOrder</definition>
+        <argsstring>(int order)</argsstring>
+        <name>setOrder</name>
+        <param>
+          <type>int</type>
+          <declname>order</declname>
+        </param>
+        <briefdescription>
+<para>Set the order of this reset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the order for this reset.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>order</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The order to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="67" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1af3d236b314b9121301d42cdc9740b689" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int libcellml::Reset::order</definition>
+        <argsstring>() const</argsstring>
+        <name>order</name>
+        <briefdescription>
+<para>Get the order of this reset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the order of this reset.</para>
+<para><simplesect kind="return"><para>The order. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="76" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1a695b31aafe3732753cb3214e74eb6c3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Reset::unsetOrder</definition>
+        <argsstring>()</argsstring>
+        <name>unsetOrder</name>
+        <briefdescription>
+<para>Mark the order as unset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Marks the order value as unset . </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="83" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1a69ab2308e1b8b36f755af4296fb51b2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Reset::isOrderSet</definition>
+        <argsstring>()</argsstring>
+        <name>isOrderSet</name>
+        <briefdescription>
+<para>Test to determine whether the order is set or unset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns whether the order value is in a set state or not.</para>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if the order is set, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="92" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1a87dc0dea6029f7f2582e00c9407646dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Reset::setVariable</definition>
+        <argsstring>(const VariablePtr &amp;variable)</argsstring>
+        <name>setVariable</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable</declname>
+        </param>
+        <briefdescription>
+<para>Set the <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput> for this <computeroutput><ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref></computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput> for this <computeroutput><ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref></computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput> to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="101" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1a1c5a63e141d6cf6a32b8311b2f3f82c7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref></type>
+        <definition>VariablePtr libcellml::Reset::variable</definition>
+        <argsstring>() const</argsstring>
+        <name>variable</name>
+        <briefdescription>
+<para>Get the <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput> for this <computeroutput><ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref></computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput> of this <computeroutput><ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref></computeroutput>.</para>
+<para><simplesect kind="return"><para>The <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="110" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1a486510c5eda7918ab0e0561b5a767b0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Reset::setTestVariable</definition>
+        <argsstring>(const VariablePtr &amp;variable)</argsstring>
+        <name>setTestVariable</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable</declname>
+        </param>
+        <briefdescription>
+<para>Set the test <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput> for this <computeroutput><ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref></computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the test <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput> for this <computeroutput><ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref></computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The test <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput> to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="119" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1ab655b3dce4f55e83ded9d849b66c21cd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref></type>
+        <definition>VariablePtr libcellml::Reset::testVariable</definition>
+        <argsstring>() const</argsstring>
+        <name>testVariable</name>
+        <briefdescription>
+<para>Get the test variable for this <computeroutput><ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref></computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput> used in the test condition of this <computeroutput><ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref></computeroutput>.</para>
+<para><simplesect kind="return"><para>The <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput> used in the test condition. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="128" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1a8301d2778c5ed5d3eae7467bc19598d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Reset::appendTestValue</definition>
+        <argsstring>(const std::string &amp;math)</argsstring>
+        <name>appendTestValue</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>math</declname>
+        </param>
+        <briefdescription>
+<para>Append the argument to the test value string for this reset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Append <computeroutput>math</computeroutput> to the existing test value string for this reset.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>math</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>std::string</computeroutput> to append for this reset. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="137" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1acc1cfb4323f83df14ea72d1e29bcb687" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Reset::testValue</definition>
+        <argsstring>() const</argsstring>
+        <name>testValue</name>
+        <briefdescription>
+<para>Get the test value string for this reset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return a test value string if one has been appended for this reset. Returns an empty string if a test value has not been appended (or has been removed).</para>
+<para><simplesect kind="return"><para><computeroutput>std::string</computeroutput> test value for this reset. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="147" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1a9119ca2528c16760b96c5151035f4dfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Reset::setTestValue</definition>
+        <argsstring>(const std::string &amp;math)</argsstring>
+        <name>setTestValue</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>math</declname>
+        </param>
+        <briefdescription>
+<para>Set the test value string for this reset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the test value string for this reset. If <computeroutput>math</computeroutput> is an empty string, the test value will effectively be removed from the reset.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>math</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>std::string</computeroutput> to append for this reset. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="157" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1a8011e1815e12869c1455c9c0db1f94d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Reset::removeTestValue</definition>
+        <argsstring>()</argsstring>
+        <name>removeTestValue</name>
+        <briefdescription>
+<para>Clears the test value math for this reset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears the test value math for this reset.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Reset_1a9119ca2528c16760b96c5151035f4dfd" kindref="member">setTestValue</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="166" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1ac23016588763d2eaf3d0f859dd94d1d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Reset::setTestValueId</definition>
+        <argsstring>(const std::string &amp;id)</argsstring>
+        <name>setTestValueId</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Set an identifier to the test value for this reset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the identifier to the test value string for this reset. Setting the <computeroutput>id</computeroutput> to the empty string will effectively remove the identifier.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>std::string</computeroutput> to set for this reset&apos;s test value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="176" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1aacaf11d7d9a0d340a27fac686f882c61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Reset::removeTestValueId</definition>
+        <argsstring>()</argsstring>
+        <name>removeTestValueId</name>
+        <briefdescription>
+<para>Clears the identifier for the test value math. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears the identifier for the test value math.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Reset_1ac23016588763d2eaf3d0f859dd94d1d3" kindref="member">setTestValueId</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="185" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1a9b61c989ba870a769ebb4a8d38a528fe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Reset::testValueId</definition>
+        <argsstring>() const</argsstring>
+        <name>testValueId</name>
+        <briefdescription>
+<para>Return the identifier of the test value for this reset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the identifier of the test value for this reset.</para>
+<para><simplesect kind="return"><para><computeroutput>std::string</computeroutput> The identifier of the test value for this reset. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="194" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1af58d01f9a701b2da2775c3b99157e8da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Reset::appendResetValue</definition>
+        <argsstring>(const std::string &amp;math)</argsstring>
+        <name>appendResetValue</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>math</declname>
+        </param>
+        <briefdescription>
+<para>Append the argument to the reset value for this reset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Append <computeroutput>math</computeroutput> to the existing reset value for this reset.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>math</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>std::string</computeroutput> to append to the reset value for this reset. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="203" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1a6c61cf7eed9d26e313b77c920109ee8a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Reset::resetValue</definition>
+        <argsstring>() const</argsstring>
+        <name>resetValue</name>
+        <briefdescription>
+<para>Get the reset value string for this reset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return a math string if one has been appended for this reset. Returns an empty string if math has not been appended (or has been removed).</para>
+<para><simplesect kind="return"><para><computeroutput>std::string</computeroutput> reset value for this reset. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="213" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1a4102cb8b9ecbae5041091a818e59e3fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Reset::setResetValue</definition>
+        <argsstring>(const std::string &amp;math)</argsstring>
+        <name>setResetValue</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>math</declname>
+        </param>
+        <briefdescription>
+<para>Set the reset value math for this reset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the math to the reset value for this reset. If <computeroutput>math</computeroutput> is an empty string, reset value will effectively be removed from the reset.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>math</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>std::string</computeroutput> to append for this reset. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="223" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1ade53fd29b59ca395ac15fd99de90f374" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Reset::removeResetValue</definition>
+        <argsstring>()</argsstring>
+        <name>removeResetValue</name>
+        <briefdescription>
+<para>Clears the reset value math for this reset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears the reset value math for this reset.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Reset_1a4102cb8b9ecbae5041091a818e59e3fb" kindref="member">setResetValue</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="232" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1af2b986d3aa8890439372d91cd6627807" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Reset::setResetValueId</definition>
+        <argsstring>(const std::string &amp;id)</argsstring>
+        <name>setResetValueId</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Set an identifier to the reset value for this reset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set an identifier to the reset value for this reset.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>std::string</computeroutput> to set for this reset&apos;s reset value identifier. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="241" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1a88991729d09f401b499d104828ef88e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Reset::removeResetValueId</definition>
+        <argsstring>()</argsstring>
+        <name>removeResetValueId</name>
+        <briefdescription>
+<para>Clears the identifier for the reset value math. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears the identifier for the reset value math.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Reset_1af2b986d3aa8890439372d91cd6627807" kindref="member">setResetValueId</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="250" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1ae953bb0845d9ca468bfbae4828e2fa9c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Reset::resetValueId</definition>
+        <argsstring>() const</argsstring>
+        <name>resetValueId</name>
+        <briefdescription>
+<para>Return the identifier of the reset value for this reset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the identifier of the reset value for this reset.</para>
+<para><simplesect kind="return"><para><computeroutput>std::string</computeroutput> The identifier of the reset value for this reset. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="259" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1ad5c3c71552b8f1312fd1b1cb3d8bb2c4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a329055beefacf51332628055453f390a" kindref="member">ResetPtr</ref></type>
+        <definition>ResetPtr libcellml::Reset::clone</definition>
+        <argsstring>() const</argsstring>
+        <name>clone</name>
+        <briefdescription>
+<para>Create a clone of this reset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a full separate copy of this reset without copying the parent.</para>
+<para><simplesect kind="return"><para>a new <computeroutput>ResetPtr</computeroutput> to the cloned reset. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="269" column="14"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1aa855c3da06b0a8ca4fb4411c83c9e66c" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a329055beefacf51332628055453f390a" kindref="member">ResetPtr</ref></type>
+        <definition>static ResetPtr libcellml::Reset::create</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>create</name>
+        <briefdescription>
+<para>Create a <computeroutput><ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref></computeroutput> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Factory method to create a <computeroutput><ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref></computeroutput>. Create a blank reset with::</para>
+<para>ResetPtr reset = <ref refid="classlibcellml_1_1Reset_1aa855c3da06b0a8ca4fb4411c83c9e66c" kindref="member">libcellml::Reset::create()</ref>;</para>
+<para>or an ordered reset with order 10 with::</para>
+<para>ResetPtr reset = libcellml::Reset::create(10);</para>
+<para><simplesect kind="return"><para>A smart pointer to a <computeroutput><ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref></computeroutput> object. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="53" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1ad01158c7f221400a4916888d66b0adfa" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a329055beefacf51332628055453f390a" kindref="member">ResetPtr</ref></type>
+        <definition>static ResetPtr libcellml::Reset::create</definition>
+        <argsstring>(int order) noexcept</argsstring>
+        <name>create</name>
+        <param>
+          <type>int</type>
+          <declname>order</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="58" column="21"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1a654b14f122271a991bde49e9c074646c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Reset::Reset</definition>
+        <argsstring>()</argsstring>
+        <name>Reset</name>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="272" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Reset_1a000e9bd34ebf023dd9ccc23fadf67c11" prot="private" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Reset::Reset</definition>
+        <argsstring>(int order)</argsstring>
+        <name>Reset</name>
+        <param>
+          <type>int</type>
+          <declname>order</declname>
+        </param>
+        <briefdescription>
+<para>Constructor with int parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/reset.h" line="273" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref> class is for describing a CellML reset. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>libcellml::Reset</label>
+        <link refid="classlibcellml_1_1Reset"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>libcellml::Entity</label>
+        <link refid="classlibcellml_1_1Entity"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>libcellml::Reset</label>
+        <link refid="classlibcellml_1_1Reset"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>libcellml::Entity</label>
+        <link refid="classlibcellml_1_1Entity"/>
+      </node>
+    </collaborationgraph>
+    <location file="libcellml/reset.h" line="32" column="1" bodyfile="libcellml/reset.h" bodystart="31" bodyend="277"/>
+    <listofallmembers>
+      <member refid="classlibcellml_1_1Reset_1af58d01f9a701b2da2775c3b99157e8da" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>appendResetValue</name></member>
+      <member refid="classlibcellml_1_1Reset_1a8301d2778c5ed5d3eae7467bc19598d7" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>appendTestValue</name></member>
+      <member refid="classlibcellml_1_1Reset_1ad5c3c71552b8f1312fd1b1cb3d8bb2c4" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>clone</name></member>
+      <member refid="classlibcellml_1_1Reset_1aa855c3da06b0a8ca4fb4411c83c9e66c" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>create</name></member>
+      <member refid="classlibcellml_1_1Reset_1ad01158c7f221400a4916888d66b0adfa" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>create</name></member>
+      <member refid="classlibcellml_1_1Entity_1aaf1f5a51be3e2fcc22113b2c2428967c" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>Entity</name></member>
+      <member refid="classlibcellml_1_1Entity_1a5ccd682791b20cc0431cd3abe265f734" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>Entity</name></member>
+      <member refid="classlibcellml_1_1Entity_1a25d413f1c9f4a8cb37aa2d78d43267ba" prot="protected" virt="non-virtual"><scope>libcellml::Reset</scope><name>Entity</name></member>
+      <member refid="classlibcellml_1_1Entity_1ac8e6f0e0addd7536902c0eb301f92675" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>hasAncestor</name></member>
+      <member refid="classlibcellml_1_1Entity_1abe2d58ec4e451613e18a722d1799fc05" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>hasParent</name></member>
+      <member refid="classlibcellml_1_1Entity_1a05439119b7eeab2fc61f8aa5a86eb092" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>id</name></member>
+      <member refid="classlibcellml_1_1Reset_1a69ab2308e1b8b36f755af4296fb51b2b" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>isOrderSet</name></member>
+      <member refid="classlibcellml_1_1Reset_1a6b77c337759f647bec81fa100b8a4124" prot="private" virt="non-virtual"><scope>libcellml::Reset</scope><name>mPimpl</name></member>
+      <member refid="classlibcellml_1_1Reset_1a9f61391bcd9fd25764fb9fe11bf2172c" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1Entity_1afe4e23aec9bc2518ace3dd68495fce76" prot="public" virt="non-virtual" ambiguityscope="libcellml::Entity::"><scope>libcellml::Reset</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1Reset_1af3d236b314b9121301d42cdc9740b689" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>order</name></member>
+      <member refid="classlibcellml_1_1Entity_1ab1ed8e5a980a11d18c0c856a261b3947" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>parent</name></member>
+      <member refid="classlibcellml_1_1Entity_1aedb890f3e8ac654db92c817268425705" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>removeParent</name></member>
+      <member refid="classlibcellml_1_1Reset_1ade53fd29b59ca395ac15fd99de90f374" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>removeResetValue</name></member>
+      <member refid="classlibcellml_1_1Reset_1a88991729d09f401b499d104828ef88e1" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>removeResetValueId</name></member>
+      <member refid="classlibcellml_1_1Reset_1a8011e1815e12869c1455c9c0db1f94d8" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>removeTestValue</name></member>
+      <member refid="classlibcellml_1_1Reset_1aacaf11d7d9a0d340a27fac686f882c61" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>removeTestValueId</name></member>
+      <member refid="classlibcellml_1_1Reset_1a1d429e3559d3756e4d851d1026445ad0" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>Reset</name></member>
+      <member refid="classlibcellml_1_1Reset_1a1d2b303b1008eab909d3944b57cf9184" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>Reset</name></member>
+      <member refid="classlibcellml_1_1Reset_1a654b14f122271a991bde49e9c074646c" prot="private" virt="non-virtual"><scope>libcellml::Reset</scope><name>Reset</name></member>
+      <member refid="classlibcellml_1_1Reset_1a000e9bd34ebf023dd9ccc23fadf67c11" prot="private" virt="non-virtual"><scope>libcellml::Reset</scope><name>Reset</name></member>
+      <member refid="classlibcellml_1_1Reset_1a6c61cf7eed9d26e313b77c920109ee8a" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>resetValue</name></member>
+      <member refid="classlibcellml_1_1Reset_1ae953bb0845d9ca468bfbae4828e2fa9c" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>resetValueId</name></member>
+      <member refid="classlibcellml_1_1Entity_1a13bdf688cdf007be5abad5dc628fd4ad" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>setId</name></member>
+      <member refid="classlibcellml_1_1Reset_1ac95b202d1119de42532094da072f5091" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>setOrder</name></member>
+      <member refid="classlibcellml_1_1Entity_1aa683f2c3c965b4710ebe45ab018beeac" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>setParent</name></member>
+      <member refid="classlibcellml_1_1Reset_1a4102cb8b9ecbae5041091a818e59e3fb" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>setResetValue</name></member>
+      <member refid="classlibcellml_1_1Reset_1af2b986d3aa8890439372d91cd6627807" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>setResetValueId</name></member>
+      <member refid="classlibcellml_1_1Reset_1a9119ca2528c16760b96c5151035f4dfd" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>setTestValue</name></member>
+      <member refid="classlibcellml_1_1Reset_1ac23016588763d2eaf3d0f859dd94d1d3" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>setTestValueId</name></member>
+      <member refid="classlibcellml_1_1Reset_1a486510c5eda7918ab0e0561b5a767b0d" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>setTestVariable</name></member>
+      <member refid="classlibcellml_1_1Reset_1a87dc0dea6029f7f2582e00c9407646dc" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>setVariable</name></member>
+      <member refid="classlibcellml_1_1Reset_1acc1cfb4323f83df14ea72d1e29bcb687" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>testValue</name></member>
+      <member refid="classlibcellml_1_1Reset_1a9b61c989ba870a769ebb4a8d38a528fe" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>testValueId</name></member>
+      <member refid="classlibcellml_1_1Reset_1ab655b3dce4f55e83ded9d849b66c21cd" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>testVariable</name></member>
+      <member refid="classlibcellml_1_1Reset_1a695b31aafe3732753cb3214e74eb6c3e" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>unsetOrder</name></member>
+      <member refid="classlibcellml_1_1Reset_1a1c5a63e141d6cf6a32b8311b2f3f82c7" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>variable</name></member>
+      <member refid="classlibcellml_1_1Entity_1a5a31822cf5beedcbc6f07c118b44b85b" prot="public" virt="virtual"><scope>libcellml::Reset</scope><name>~Entity</name></member>
+      <member refid="classlibcellml_1_1Reset_1a72f2e678ccd16c3bd93d186793c97451" prot="public" virt="non-virtual"><scope>libcellml::Reset</scope><name>~Reset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

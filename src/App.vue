@@ -75,12 +75,12 @@ export default {
         url: '/download',
       },
       {
-        label: 'API Documentation',
-        url: '/apidocs',
+        label: 'Documentation',
+        url: '/documentation',
       },
       {
-        label: 'Tutorials',
-        url: '/tutorials',
+        label: 'Developers',
+        url: '/developers',
       },
       {
         label: 'About',

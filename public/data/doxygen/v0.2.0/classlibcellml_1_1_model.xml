@@ -1,0 +1,889 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classlibcellml_1_1_model" kind="class" language="C++" prot="public">
+    <compoundname>libcellml::Model</compoundname>
+    <basecompoundref refid="classlibcellml_1_1_named_entity" prot="public" virt="non-virtual">libcellml::NamedEntity</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlibcellml_1_1_model_1aa314988f2ddc9d144f5527d9491a4c4c" prot="private" static="no" mutable="no">
+        <type>ModelImpl *</type>
+        <definition>ModelImpl* libcellml::Model::mPimpl</definition>
+        <argsstring></argsstring>
+        <name>mPimpl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Forward declaration for pImpl idiom. Private member to implementation pointer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="336" column="15" bodyfile="model.h" bodystart="335" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlibcellml_1_1_model_1afacb342379c91cbdce35325f42404620" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Model::~Model</definition>
+        <argsstring>() override</argsstring>
+        <name>~Model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="10" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_model_1ad0d6354a3b1329897a5900beae9acba3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Model::Model</definition>
+        <argsstring>(const Model &amp;rhs)=delete</argsstring>
+        <name>Model</name>
+        <param>
+          <type>const <ref refid="classlibcellml_1_1_model" kindref="compound">Model</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copy constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="11" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_model_1a8130b562ed2687511f2eedfb00168039" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Model::Model</definition>
+        <argsstring>(Model &amp;&amp;rhs) noexcept=delete</argsstring>
+        <name>Model</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1_model" kindref="compound">Model</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Move constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="12" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_model_1a33bf96da5819e66eadb2846fb957ce83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1_model" kindref="compound">Model</ref> &amp;</type>
+        <definition>Model&amp; libcellml::Model::operator=</definition>
+        <argsstring>(Model rhs)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1_model" kindref="compound">Model</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assignment operator </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="13" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_model_1ae57eaca0fba3fb6ad14395ca659f33a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Model::addUnits</definition>
+        <argsstring>(const UnitsPtr &amp;units)</argsstring>
+        <name>addUnits</name>
+        <param>
+          <type>const UnitsPtr &amp;</type>
+          <declname>units</declname>
+        </param>
+        <briefdescription>
+<para>Add a child units to this model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a copy of the given units as a child units of this model.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>units</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The units to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="43" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_model_1a525cf9d149d07d4cf98ca3c5cc6ac63e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Model::removeUnits</definition>
+        <argsstring>(size_t index)</argsstring>
+        <name>removeUnits</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Remove the units at the given <computeroutput>index</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove the units from this model at the given <computeroutput>index</computeroutput>. <computeroutput>index</computeroutput> must be in the range [0, #units).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the units to remove.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the units were replaced, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="55" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_model_1a9bdd0b2ead32d3afacb8662591637866" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Model::removeUnits</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>removeUnits</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Remove the units with the given <computeroutput>name</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Remove the first units found with the given <computeroutput>name</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the units to remove.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the units were replaced, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="68" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_model_1a3109a4b45d445ddf80a792ce5331c130" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Model::removeUnits</definition>
+        <argsstring>(const UnitsPtr &amp;units)</argsstring>
+        <name>removeUnits</name>
+        <param>
+          <type>const UnitsPtr &amp;</type>
+          <declname>units</declname>
+        </param>
+        <briefdescription>
+<para>Remove the units with the given pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Remove the units with the pointer <computeroutput>units</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>units</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the units to remove.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the units were replaced, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="81" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_model_1a259f6a31db54fa1940c4b220d8fc40d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Model::removeAllUnits</definition>
+        <argsstring>()</argsstring>
+        <name>removeAllUnits</name>
+        <briefdescription>
+<para>Remove all units stored in this model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears all units that have been added to this model. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="88" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_model_1acb6314e3b306b3100912c8f35440ef8d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Model::hasUnits</definition>
+        <argsstring>(const std::string &amp;name) const</argsstring>
+        <name>hasUnits</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Tests to see if the units is within this model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Tests to see if the units with the given <computeroutput>name</computeroutput> is contained within this model. Returns <computeroutput>true</computeroutput> if the units is in the model and <computeroutput>false</computeroutput> otherwise.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the units to test for existence in this model.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the named units is in the model and <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="103" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_model_1a54befdd09b177dd94b9f17ce851ceb56" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Model::hasUnits</definition>
+        <argsstring>(const UnitsPtr &amp;units) const</argsstring>
+        <name>hasUnits</name>
+        <param>
+          <type>const UnitsPtr &amp;</type>
+          <declname>units</declname>
+        </param>
+        <briefdescription>
+<para>Tests to see if the units is within this model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Tests to see if the given <computeroutput>units</computeroutput> is contained within this model. Returns <computeroutput>true</computeroutput> if the units is in the model and <computeroutput>false</computeroutput> otherwise.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>units</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The units to test for existence in this model.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the units is in the model and <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="117" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_model_1aaa361f12facc6238fae768f0f7892181" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>UnitsPtr</type>
+        <definition>UnitsPtr libcellml::Model::units</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>units</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Get a units at the given <computeroutput>index</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a reference to a units at the given <computeroutput>index</computeroutput>. If the <computeroutput>index</computeroutput> is not valid a <computeroutput>nullptr</computeroutput> is returned, the range of valid values for the index is [0, #units).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the units to return.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the units at the given <computeroutput>index</computeroutput> on success, <computeroutput>nullptr</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="130" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_model_1aa8ae761b6e496176a29e42a43d971922" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>UnitsPtr</type>
+        <definition>UnitsPtr libcellml::Model::units</definition>
+        <argsstring>(const std::string &amp;name) const</argsstring>
+        <name>units</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Get a units with the given <computeroutput>name</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Returns a reference to a units with the given <computeroutput>name</computeroutput>. If the <computeroutput>name</computeroutput> is not valid a <computeroutput>nullptr</computeroutput> is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the units to return.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the units with the given <computeroutput>name</computeroutput> on success, <computeroutput>nullptr</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="144" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_model_1ac9d804868b33ab6e685fc9e4b41dc618" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UnitsPtr</type>
+        <definition>UnitsPtr libcellml::Model::takeUnits</definition>
+        <argsstring>(size_t index)</argsstring>
+        <name>takeUnits</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Take the units at the given <computeroutput>index</computeroutput> and return it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes the units at the given <computeroutput>index</computeroutput> position and returns it. <computeroutput>index</computeroutput> must be in the range [0, #units).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the units to take.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the units at the given <computeroutput>index</computeroutput> if the index is valid, <computeroutput>nullptr</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="156" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_model_1a7609c3fba45ff860eff9fc989ae01f83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UnitsPtr</type>
+        <definition>UnitsPtr libcellml::Model::takeUnits</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>takeUnits</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Take the units with the given <computeroutput>name</computeroutput> and return it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Takes the first occurence of the units with the given name <computeroutput>name</computeroutput> and returns it. If no units with name <computeroutput>name</computeroutput> is found then a <computeroutput>nullptr</computeroutput> is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the units to take.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the units identified with the given <computeroutput>name</computeroutput> if found, <computeroutput>nullptr</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="170" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_model_1aa526cbea5a87fe41a4c602fd0c15e40c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Model::replaceUnits</definition>
+        <argsstring>(size_t index, const UnitsPtr &amp;units)</argsstring>
+        <name>replaceUnits</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const UnitsPtr &amp;</type>
+          <declname>units</declname>
+        </param>
+        <briefdescription>
+<para>Replace a units at the given <computeroutput>index</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Replaces the units at the given <computeroutput>index</computeroutput> with <computeroutput>units</computeroutput>. <computeroutput>index</computeroutput> must be in the range [0, #units).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the units to replace. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>units</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The units to use for replacement.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the units were replaced, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="183" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_model_1ad94f8aadac6b93760bf1f9f8d2a7c81d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Model::replaceUnits</definition>
+        <argsstring>(const std::string &amp;name, const UnitsPtr &amp;units)</argsstring>
+        <name>replaceUnits</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const UnitsPtr &amp;</type>
+          <declname>units</declname>
+        </param>
+        <briefdescription>
+<para>Replace a units with the given <computeroutput>name</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Replaces the units with the given <computeroutput>name</computeroutput> with <computeroutput>units</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the units to replace. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>units</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The units to use for replacement.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the units were replaced, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="197" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_model_1ac2e76f7fff925c6f6aa387ec7e0c1549" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Model::replaceUnits</definition>
+        <argsstring>(const UnitsPtr &amp;oldUnits, const UnitsPtr &amp;newUnits)</argsstring>
+        <name>replaceUnits</name>
+        <param>
+          <type>const UnitsPtr &amp;</type>
+          <declname>oldUnits</declname>
+        </param>
+        <param>
+          <type>const UnitsPtr &amp;</type>
+          <declname>newUnits</declname>
+        </param>
+        <briefdescription>
+<para>Replace a units with another units. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Replaces one units with another.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>oldUnits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The units to be replaced. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newUnits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The units to use for replacement.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the units were replaced, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="211" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_model_1aba003d544dbecaddbf07ddda8344a457" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::Model::unitsCount</definition>
+        <argsstring>() const</argsstring>
+        <name>unitsCount</name>
+        <briefdescription>
+<para>Get the number of units in the model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of units the model contains.</para>
+<para><simplesect kind="return"><para>The number of units. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="220" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_model_1ac86338dff4e39796df67e3991a328615" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Model::linkUnits</definition>
+        <argsstring>()</argsstring>
+        <name>linkUnits</name>
+        <briefdescription>
+<para>Link the units used in this model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Traverses the model looking for <computeroutput>Units</computeroutput> attached to <computeroutput>Variables</computeroutput> that are not standard units and which are not linked to <computeroutput>Units</computeroutput> added to the model. This method will link variable units specified by name to units in the model (if they are found). Any variable units that cannot be linked to units in the model are left in an unlinked state. This means it is possible to still have unlinked <computeroutput>Units</computeroutput> in the model after calling this method.</para>
+<para>Unlinked variable units can occur when a <computeroutput>Variable&apos;s</computeroutput> units are set by name. If the <computeroutput><ref refid="classlibcellml_1_1_model" kindref="compound">Model</ref></computeroutput> to which the <computeroutput>Variable</computeroutput> belongs has <computeroutput>Units</computeroutput> defined with the same name, then that <computeroutput>Variable&apos;s</computeroutput> <computeroutput>Units</computeroutput> will not be linked to the <computeroutput><ref refid="classlibcellml_1_1_model" kindref="compound">Model</ref>&apos;s</computeroutput> <computeroutput>Units</computeroutput>. This method will link the two units (the one from the variable and the one from the model).</para>
+<para>If a <computeroutput>Variable</computeroutput> has units that are not found in the model then the units will remain unlinked. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="244" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_model_1afeb644177e2e6a3ba506660319864470" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Model::hasUnlinkedUnits</definition>
+        <argsstring>()</argsstring>
+        <name>hasUnlinkedUnits</name>
+        <briefdescription>
+<para>Test to determine if any variable units are not linked to model units. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Traverses the model to determine if any <computeroutput>Units</computeroutput> attached to variables are not <computeroutput>Units</computeroutput> attached to the model.</para>
+<para><simplesect kind="return"><para>True if any <computeroutput>Units</computeroutput> attached to variables are not linked to units in the model, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="255" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_model_1ace2367c655c6fea24e6cafc04f3fa409" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Model::hasImports</definition>
+        <argsstring>() const</argsstring>
+        <name>hasImports</name>
+        <briefdescription>
+<para>Test to determine if there are any import entities. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks the model to determine if there are any <computeroutput>Units</computeroutput> or <computeroutput>Components</computeroutput> which are imports. Returns <computeroutput>true</computeroutput> if the model has at least one <computeroutput>Units</computeroutput> or <computeroutput>Component</computeroutput> which is an imported <computeroutput>Units</computeroutput> or <computeroutput>Component</computeroutput>.</para>
+<para><simplesect kind="return"><para>True if the <computeroutput><ref refid="classlibcellml_1_1_model" kindref="compound">Model</ref></computeroutput> has a <computeroutput>Units</computeroutput> or <computeroutput>Component</computeroutput> that is an import, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="268" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_model_1aa7a1457d184ab4f5c39c5e204f657b85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Model::resolveImports</definition>
+        <argsstring>(const std::string &amp;baseFile)</argsstring>
+        <name>resolveImports</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>baseFile</declname>
+        </param>
+        <briefdescription>
+<para>Resolve all imports in this model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Resolve all <computeroutput>Component</computeroutput> and <computeroutput>Units</computeroutput> imports by loading the models from local disk through relative URLs. The <computeroutput>baseFile</computeroutput> is used to determine the full path to the source model relative to this one.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>baseFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>std::string</computeroutput> location on local disk of the source <computeroutput><ref refid="classlibcellml_1_1_model" kindref="compound">Model</ref></computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="279" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_model_1a4ca499826b7253eca79c865f6b8bf8bb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Model::hasUnresolvedImports</definition>
+        <argsstring>() const</argsstring>
+        <name>hasUnresolvedImports</name>
+        <briefdescription>
+<para>Test if this model has unresolved imports. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if this model has unresolved imports.</para>
+<para><simplesect kind="return"><para>True if the <computeroutput><ref refid="classlibcellml_1_1_model" kindref="compound">Model</ref></computeroutput> has unresolved imports and false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="288" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_model_1a1844f4c3ab78c314bcfb0028c8522a59" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>ModelPtr</type>
+        <definition>ModelPtr libcellml::Model::clone</definition>
+        <argsstring>() const</argsstring>
+        <name>clone</name>
+        <briefdescription>
+<para>Create a clone of this model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a full separate copy of this model. The component hierarchy and variable equivalence maps will also be copied from this model to the destination model.</para>
+<para><simplesect kind="return"><para>a new <computeroutput>ModelPtr</computeroutput> to the cloned model. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="299" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_model_1ae39720d5047a51b9f2ae6502e2a70a64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Model::flatten</definition>
+        <argsstring>()</argsstring>
+        <name>flatten</name>
+        <briefdescription>
+<para>Flatten this model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Instantiates all imports and removes them from this model. The result is a self-contained model requiring no external resources and having no imports.</para>
+<para>The effects of this method cannot be undone.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1_model_1a1844f4c3ab78c314bcfb0028c8522a59" kindref="member">clone</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="312" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_model_1adff8d728f64996d5bb9d744e28efac1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Model::fixVariableInterfaces</definition>
+        <argsstring>()</argsstring>
+        <name>fixVariableInterfaces</name>
+        <briefdescription>
+<para>Fix <computeroutput>Variable</computeroutput> interfaces throughout the model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Traverses the model investigating variable equivalences to set the appropriate interface type. If all equivalent variables have the correct interface type set then the method returns <computeroutput>true</computeroutput>. If the interface type of one or more equivalent variables cannot be set correctly then <computeroutput>false</computeroutput> is returned.</para>
+<para>If the interface type for a variable cannot be set correctly, it is left unchanged.</para>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if all the variable interfaces in the <computeroutput><ref refid="classlibcellml_1_1_model" kindref="compound">Model</ref></computeroutput> are correct and <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="327" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classlibcellml_1_1_model_1a99f9deb9dfa4b3fbae57dc83ff6f25c2" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>ModelPtr</type>
+        <definition>static ModelPtr libcellml::Model::create</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>create</name>
+        <briefdescription>
+<para>Create a <computeroutput><ref refid="classlibcellml_1_1_model" kindref="compound">Model</ref></computeroutput> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Factory method to create a <computeroutput><ref refid="classlibcellml_1_1_model" kindref="compound">Model</ref></computeroutput>. Create a blank model with::</para>
+<para>ModelPtr model = <ref refid="classlibcellml_1_1_model_1a99f9deb9dfa4b3fbae57dc83ff6f25c2" kindref="member">libcellml::Model::create()</ref>;</para>
+<para>or a named model with name &quot;Model&quot; with::</para>
+<para>ModelPtr model = <ref refid="classlibcellml_1_1_model_1a99f9deb9dfa4b3fbae57dc83ff6f25c2" kindref="member">libcellml::Model::create</ref>(&quot;Model&quot;);</para>
+<para><simplesect kind="return"><para>A smart pointer to a <computeroutput><ref refid="classlibcellml_1_1_model" kindref="compound">Model</ref></computeroutput> object. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="29" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_model_1ac82c833a60900daec99671c16ae1af60" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>ModelPtr</type>
+        <definition>static ModelPtr libcellml::Model::create</definition>
+        <argsstring>(const std::string &amp;name) noexcept</argsstring>
+        <name>create</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="34" column="21"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlibcellml_1_1_model_1a9903959fe09e5ac980de27bc349ca2ce" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Model::Model</definition>
+        <argsstring>()</argsstring>
+        <name>Model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="330" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_model_1acb13f38228f2087d2894a6405653e3c4" prot="private" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Model::Model</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>Model</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor with std::string parameter </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="331" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_model_1a4ceb895e818175f55049274768d9c755" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Model::doAddComponent</definition>
+        <argsstring>(const ComponentPtr &amp;component) override</argsstring>
+        <name>doAddComponent</name>
+        <param>
+          <type>const ComponentPtr &amp;</type>
+          <declname>component</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="model.h" line="333" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>libcellml::NamedEntity</label>
+        <link refid="classlibcellml_1_1_named_entity"/>
+      </node>
+      <node id="1">
+        <label>libcellml::Model</label>
+        <link refid="classlibcellml_1_1_model"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>libcellml::NamedEntity</label>
+        <link refid="classlibcellml_1_1_named_entity"/>
+      </node>
+      <node id="1">
+        <label>libcellml::Model</label>
+        <link refid="classlibcellml_1_1_model"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="model.h" line="8" column="1" bodyfile="model.h" bodystart="7" bodyend="337"/>
+    <listofallmembers>
+      <member refid="classlibcellml_1_1_model_1ae57eaca0fba3fb6ad14395ca659f33a6" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>addUnits</name></member>
+      <member refid="classlibcellml_1_1_model_1a1844f4c3ab78c314bcfb0028c8522a59" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>clone</name></member>
+      <member refid="classlibcellml_1_1_model_1a99f9deb9dfa4b3fbae57dc83ff6f25c2" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>create</name></member>
+      <member refid="classlibcellml_1_1_model_1ac82c833a60900daec99671c16ae1af60" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>create</name></member>
+      <member refid="classlibcellml_1_1_model_1a4ceb895e818175f55049274768d9c755" prot="private" virt="non-virtual"><scope>libcellml::Model</scope><name>doAddComponent</name></member>
+      <member refid="classlibcellml_1_1_model_1adff8d728f64996d5bb9d744e28efac1f" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>fixVariableInterfaces</name></member>
+      <member refid="classlibcellml_1_1_model_1ae39720d5047a51b9f2ae6502e2a70a64" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>flatten</name></member>
+      <member refid="classlibcellml_1_1_model_1ace2367c655c6fea24e6cafc04f3fa409" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>hasImports</name></member>
+      <member refid="classlibcellml_1_1_model_1acb6314e3b306b3100912c8f35440ef8d" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>hasUnits</name></member>
+      <member refid="classlibcellml_1_1_model_1a54befdd09b177dd94b9f17ce851ceb56" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>hasUnits</name></member>
+      <member refid="classlibcellml_1_1_model_1afeb644177e2e6a3ba506660319864470" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>hasUnlinkedUnits</name></member>
+      <member refid="classlibcellml_1_1_model_1a4ca499826b7253eca79c865f6b8bf8bb" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>hasUnresolvedImports</name></member>
+      <member refid="classlibcellml_1_1_model_1ac86338dff4e39796df67e3991a328615" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>linkUnits</name></member>
+      <member refid="classlibcellml_1_1_model_1ad0d6354a3b1329897a5900beae9acba3" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>Model</name></member>
+      <member refid="classlibcellml_1_1_model_1a8130b562ed2687511f2eedfb00168039" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>Model</name></member>
+      <member refid="classlibcellml_1_1_model_1a9903959fe09e5ac980de27bc349ca2ce" prot="private" virt="non-virtual"><scope>libcellml::Model</scope><name>Model</name></member>
+      <member refid="classlibcellml_1_1_model_1acb13f38228f2087d2894a6405653e3c4" prot="private" virt="non-virtual"><scope>libcellml::Model</scope><name>Model</name></member>
+      <member refid="classlibcellml_1_1_model_1aa314988f2ddc9d144f5527d9491a4c4c" prot="private" virt="non-virtual"><scope>libcellml::Model</scope><name>mPimpl</name></member>
+      <member refid="classlibcellml_1_1_named_entity_1ab643dec674588048b4532c3f2819726a" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>name</name></member>
+      <member refid="classlibcellml_1_1_named_entity_1ad1fbde6cf933f9b969e3c0a582664874" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>NamedEntity</name></member>
+      <member refid="classlibcellml_1_1_named_entity_1a5c5b4e6a20db48729ad713612f390d40" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>NamedEntity</name></member>
+      <member refid="classlibcellml_1_1_named_entity_1a88f342c4a1c70052606cfd65b2ac34ee" prot="protected" virt="non-virtual"><scope>libcellml::Model</scope><name>NamedEntity</name></member>
+      <member refid="classlibcellml_1_1_model_1a33bf96da5819e66eadb2846fb957ce83" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1_named_entity_1a51ff3c3e0a148a0cf6a05d2e6ff516ee" prot="public" virt="non-virtual" ambiguityscope="libcellml::NamedEntity::"><scope>libcellml::Model</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1_model_1a259f6a31db54fa1940c4b220d8fc40d9" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>removeAllUnits</name></member>
+      <member refid="classlibcellml_1_1_model_1a525cf9d149d07d4cf98ca3c5cc6ac63e" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>removeUnits</name></member>
+      <member refid="classlibcellml_1_1_model_1a9bdd0b2ead32d3afacb8662591637866" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>removeUnits</name></member>
+      <member refid="classlibcellml_1_1_model_1a3109a4b45d445ddf80a792ce5331c130" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>removeUnits</name></member>
+      <member refid="classlibcellml_1_1_model_1aa526cbea5a87fe41a4c602fd0c15e40c" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>replaceUnits</name></member>
+      <member refid="classlibcellml_1_1_model_1ad94f8aadac6b93760bf1f9f8d2a7c81d" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>replaceUnits</name></member>
+      <member refid="classlibcellml_1_1_model_1ac2e76f7fff925c6f6aa387ec7e0c1549" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>replaceUnits</name></member>
+      <member refid="classlibcellml_1_1_model_1aa7a1457d184ab4f5c39c5e204f657b85" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>resolveImports</name></member>
+      <member refid="classlibcellml_1_1_named_entity_1a2528924ae9b2a69d8ff3b5b9b6f31d88" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>setName</name></member>
+      <member refid="classlibcellml_1_1_model_1ac9d804868b33ab6e685fc9e4b41dc618" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>takeUnits</name></member>
+      <member refid="classlibcellml_1_1_model_1a7609c3fba45ff860eff9fc989ae01f83" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>takeUnits</name></member>
+      <member refid="classlibcellml_1_1_model_1aaa361f12facc6238fae768f0f7892181" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>units</name></member>
+      <member refid="classlibcellml_1_1_model_1aa8ae761b6e496176a29e42a43d971922" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>units</name></member>
+      <member refid="classlibcellml_1_1_model_1aba003d544dbecaddbf07ddda8344a457" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>unitsCount</name></member>
+      <member refid="classlibcellml_1_1_model_1afacb342379c91cbdce35325f42404620" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>~Model</name></member>
+      <member refid="classlibcellml_1_1_named_entity_1a10d6be107346d37bc540652d5ab9939f" prot="public" virt="non-virtual"><scope>libcellml::Model</scope><name>~NamedEntity</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
