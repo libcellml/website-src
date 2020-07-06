@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classlibcellml_1_1ImportedEntity" kind="class" language="C++" prot="public">
+    <compoundname>libcellml::ImportedEntity</compoundname>
+    <derivedcompoundref refid="classlibcellml_1_1Component" prot="public" virt="non-virtual">libcellml::Component</derivedcompoundref>
+    <derivedcompoundref refid="classlibcellml_1_1Units" prot="public" virt="non-virtual">libcellml::Units</derivedcompoundref>
+    <includes refid="importedentity_8h" local="no">importedentity.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlibcellml_1_1ImportedEntity_1af7c33db97729d11909f3cf544c30566e" prot="private" static="no" mutable="no">
+        <type>ImportedEntityImpl *</type>
+        <definition>ImportedEntityImpl* libcellml::ImportedEntity::mPimpl</definition>
+        <argsstring></argsstring>
+        <name>mPimpl</name>
+        <briefdescription>
+<para>Forward declaration for pImpl idiom. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Private member to implementation pointer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importedentity.h" line="103" column="24" bodyfile="libcellml/importedentity.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlibcellml_1_1ImportedEntity_1aa2a47a741f8e6980dbc6c84e004442fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual libcellml::ImportedEntity::~ImportedEntity</definition>
+        <argsstring>()</argsstring>
+        <name>~ImportedEntity</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importedentity.h" line="35" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ImportedEntity_1a4a489fc27bfdc0ffeda7dc13bc874ab3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::ImportedEntity::ImportedEntity</definition>
+        <argsstring>(const ImportedEntity &amp;rhs)=delete</argsstring>
+        <name>ImportedEntity</name>
+        <param>
+          <type>const <ref refid="classlibcellml_1_1ImportedEntity" kindref="compound">ImportedEntity</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importedentity.h" line="36" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ImportedEntity_1a6136c548bd3634a5b6b553d8cf97926a" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::ImportedEntity::ImportedEntity</definition>
+        <argsstring>(ImportedEntity &amp;&amp;rhs) noexcept=delete</argsstring>
+        <name>ImportedEntity</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1ImportedEntity" kindref="compound">ImportedEntity</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importedentity.h" line="37" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ImportedEntity_1ae4b8a04e162044053efaa411f67c5181" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1ImportedEntity" kindref="compound">ImportedEntity</ref> &amp;</type>
+        <definition>ImportedEntity&amp; libcellml::ImportedEntity::operator=</definition>
+        <argsstring>(ImportedEntity rhs)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1ImportedEntity" kindref="compound">ImportedEntity</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importedentity.h" line="38" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ImportedEntity_1a25f7d4abe5d3ca67c97ad341cb4853e7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::ImportedEntity::isImport</definition>
+        <argsstring>() const</argsstring>
+        <name>isImport</name>
+        <briefdescription>
+<para>Test if this entity is an imported entity. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Method to test if this entity is an imported entity. Returns <computeroutput>true</computeroutput> if the import is not the <computeroutput>nullptr</computeroutput> otherwise return <computeroutput>false</computeroutput>.</para>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if the import is not the <computeroutput>nullptr</computeroutput>, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importedentity.h" line="48" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ImportedEntity_1af9db33dab9b6151683656b9f4744188a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1ac2c4e6d1793d7214616c1548d8a9f502" kindref="member">ImportSourcePtr</ref></type>
+        <definition>ImportSourcePtr libcellml::ImportedEntity::importSource</definition>
+        <argsstring>() const</argsstring>
+        <name>importSource</name>
+        <briefdescription>
+<para>Get the import source. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the import source, if no import source is set <computeroutput>nullptr</computeroutput> is returned.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1ImportedEntity_1a0c9e48f04f3039f5538d9d86d59a479e" kindref="member">setImportSource</ref></para>
+</simplesect>
+<simplesect kind="return"><para>The shared pointer for the import source, if no import source is set returns <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importedentity.h" line="60" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ImportedEntity_1a0c9e48f04f3039f5538d9d86d59a479e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::ImportedEntity::setImportSource</definition>
+        <argsstring>(const ImportSourcePtr &amp;importSource)</argsstring>
+        <name>setImportSource</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1ac2c4e6d1793d7214616c1548d8a9f502" kindref="member">ImportSourcePtr</ref> &amp;</type>
+          <declname>importSource</declname>
+        </param>
+        <briefdescription>
+<para>Set the import source. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the import source for the imported entity. Set to <computeroutput>nullptr</computeroutput> to unset the import source.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1ImportedEntity_1af9db33dab9b6151683656b9f4744188a" kindref="member">importSource</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>importSource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The import source to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importedentity.h" line="72" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ImportedEntity_1a14451a2854699b2e31c67f0afc4d28d3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::ImportedEntity::importReference</definition>
+        <argsstring>() const</argsstring>
+        <name>importReference</name>
+        <briefdescription>
+<para>Get the import reference. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the reference to the entity in the imported model.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1ImportedEntity_1ab5e0d32cc24fced7cd19362f08e162eb" kindref="member">setImportReference</ref></para>
+</simplesect>
+<simplesect kind="return"><para>The reference to the entity in the imported model, the empty string if it is not set. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importedentity.h" line="84" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ImportedEntity_1ab5e0d32cc24fced7cd19362f08e162eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::ImportedEntity::setImportReference</definition>
+        <argsstring>(const std::string &amp;reference)</argsstring>
+        <name>setImportReference</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>reference</declname>
+        </param>
+        <briefdescription>
+<para>Set the import reference. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the import reference to an entity in the imported model. The import reference should be a <ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref> or a Unit in the import model.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1ImportedEntity_1a14451a2854699b2e31c67f0afc4d28d3" kindref="member">importReference</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reference</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the reference to refer to in the import model. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importedentity.h" line="96" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classlibcellml_1_1ImportedEntity_1a1cdb9522aea8000e43a13705aa3f2960" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::ImportedEntity::ImportedEntity</definition>
+        <argsstring>()</argsstring>
+        <name>ImportedEntity</name>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importedentity.h" line="99" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classlibcellml_1_1ImportedEntity" kindref="compound">ImportedEntity</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Base class for all importable libCellML classes. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>libcellml::ImportedEntity</label>
+        <link refid="classlibcellml_1_1ImportedEntity"/>
+      </node>
+      <node id="2">
+        <label>libcellml::Component</label>
+        <link refid="classlibcellml_1_1Component"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>libcellml::Units</label>
+        <link refid="classlibcellml_1_1Units"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>libcellml::ImportedEntity</label>
+        <link refid="classlibcellml_1_1ImportedEntity"/>
+      </node>
+    </collaborationgraph>
+    <location file="libcellml/importedentity.h" line="33" column="1" bodyfile="libcellml/importedentity.h" bodystart="32" bodyend="104"/>
+    <listofallmembers>
+      <member refid="classlibcellml_1_1ImportedEntity_1a4a489fc27bfdc0ffeda7dc13bc874ab3" prot="public" virt="non-virtual"><scope>libcellml::ImportedEntity</scope><name>ImportedEntity</name></member>
+      <member refid="classlibcellml_1_1ImportedEntity_1a6136c548bd3634a5b6b553d8cf97926a" prot="public" virt="non-virtual"><scope>libcellml::ImportedEntity</scope><name>ImportedEntity</name></member>
+      <member refid="classlibcellml_1_1ImportedEntity_1a1cdb9522aea8000e43a13705aa3f2960" prot="protected" virt="non-virtual"><scope>libcellml::ImportedEntity</scope><name>ImportedEntity</name></member>
+      <member refid="classlibcellml_1_1ImportedEntity_1a14451a2854699b2e31c67f0afc4d28d3" prot="public" virt="non-virtual"><scope>libcellml::ImportedEntity</scope><name>importReference</name></member>
+      <member refid="classlibcellml_1_1ImportedEntity_1af9db33dab9b6151683656b9f4744188a" prot="public" virt="non-virtual"><scope>libcellml::ImportedEntity</scope><name>importSource</name></member>
+      <member refid="classlibcellml_1_1ImportedEntity_1a25f7d4abe5d3ca67c97ad341cb4853e7" prot="public" virt="non-virtual"><scope>libcellml::ImportedEntity</scope><name>isImport</name></member>
+      <member refid="classlibcellml_1_1ImportedEntity_1af7c33db97729d11909f3cf544c30566e" prot="private" virt="non-virtual"><scope>libcellml::ImportedEntity</scope><name>mPimpl</name></member>
+      <member refid="classlibcellml_1_1ImportedEntity_1ae4b8a04e162044053efaa411f67c5181" prot="public" virt="non-virtual"><scope>libcellml::ImportedEntity</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1ImportedEntity_1ab5e0d32cc24fced7cd19362f08e162eb" prot="public" virt="non-virtual"><scope>libcellml::ImportedEntity</scope><name>setImportReference</name></member>
+      <member refid="classlibcellml_1_1ImportedEntity_1a0c9e48f04f3039f5538d9d86d59a479e" prot="public" virt="non-virtual"><scope>libcellml::ImportedEntity</scope><name>setImportSource</name></member>
+      <member refid="classlibcellml_1_1ImportedEntity_1aa2a47a741f8e6980dbc6c84e004442fb" prot="public" virt="virtual"><scope>libcellml::ImportedEntity</scope><name>~ImportedEntity</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1253 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classlibcellml_1_1Variable" kind="class" language="C++" prot="public">
+    <compoundname>libcellml::Variable</compoundname>
+    <basecompoundref refid="classlibcellml_1_1NamedEntity" prot="public" virt="non-virtual">libcellml::NamedEntity</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">std::enable_shared_from_this&lt; Variable &gt;</basecompoundref>
+    <includes refid="variable_8h" local="no">variable.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classlibcellml_1_1Variable_1a022c7da9f58d6cf36902d9abf70993c1" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>InterfaceType</name>
+        <enumvalue id="classlibcellml_1_1Variable_1a022c7da9f58d6cf36902d9abf70993c1ab50339a10e1de285ac99d4c3990b8693" prot="public">
+          <name>NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Variable_1a022c7da9f58d6cf36902d9abf70993c1a84c6d22cfdf3772e66b07bde636e0571" prot="public">
+          <name>PRIVATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Variable_1a022c7da9f58d6cf36902d9abf70993c1acd0c6092d6a6874f379fe4827ed1db8b" prot="public">
+          <name>PUBLIC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Variable_1a022c7da9f58d6cf36902d9abf70993c1a7838f06147e9b45d4bbcadb7bbe8de41" prot="public">
+          <name>PUBLIC_AND_PRIVATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The InterfaceType enum class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Enum describing the interface types that are available for a given variable. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="76" column="1" bodyfile="libcellml/variable.h" bodystart="75" bodyend="81"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlibcellml_1_1Variable_1ae671ba8e8be88dfe5b2d962c26de112f" prot="private" static="no" mutable="no">
+        <type>VariableImpl *</type>
+        <definition>VariableImpl* libcellml::Variable::mPimpl</definition>
+        <argsstring></argsstring>
+        <name>mPimpl</name>
+        <briefdescription>
+<para>Forward declaration for pImpl idiom. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Private member to implementation pointer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="451" column="18" bodyfile="libcellml/variable.h" bodystart="450" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1add9277954caae91a129f7f07743efdc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Variable::~Variable</definition>
+        <argsstring>() override</argsstring>
+        <name>~Variable</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="43" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1ac70628139e1ef266f4f3c601f3207310" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Variable::Variable</definition>
+        <argsstring>(const Variable &amp;rhs)=delete</argsstring>
+        <name>Variable</name>
+        <param>
+          <type>const <ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="44" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1a2cd1f133d2b3eddb92642ebda8cc4b8c" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Variable::Variable</definition>
+        <argsstring>(Variable &amp;&amp;rhs) noexcept=delete</argsstring>
+        <name>Variable</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="45" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1a1ccd32650826ff62684e8687cec3cdc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref> &amp;</type>
+        <definition>Variable&amp; libcellml::Variable::operator=</definition>
+        <argsstring>(Variable rhs)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="46" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1a2e374b03a3ef84edcdf690385db5ee49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Variable::removeAllEquivalences</definition>
+        <argsstring>()</argsstring>
+        <name>removeAllEquivalences</name>
+        <briefdescription>
+<para>Remove all equivalent variables for this variable. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears all equivalences that have been added to the equivalence set for this variable. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="229" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1a7236fdd6929d83d49caf7bed32f1f32c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref></type>
+        <definition>VariablePtr libcellml::Variable::equivalentVariable</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>equivalentVariable</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Get an equivalent variable at <computeroutput>index</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the equivalent variable at the index <computeroutput>index</computeroutput> for this variable. The index must be in the range [0, #equivalentVariables).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the variable to return.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The equivalent variable at the given index. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="241" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1a45ac4bbb818ff44be974dfff7e013104" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::Variable::equivalentVariableCount</definition>
+        <argsstring>() const</argsstring>
+        <name>equivalentVariableCount</name>
+        <briefdescription>
+<para>Get the number of equivalent variables for this variable. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of equivalent variables for this variable.</para>
+<para><simplesect kind="return"><para>the number of equivalent variables. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="250" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1ac178fa2dfca7b5e1fc27b93fd55c5124" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Variable::hasEquivalentVariable</definition>
+        <argsstring>(const VariablePtr &amp;equivalentVariable, bool considerIndirectEquivalences=false) const</argsstring>
+        <name>hasEquivalentVariable</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>equivalentVariable</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>considerIndirectEquivalences</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Test whether the argument variable is in this variable&apos;s equivalent variables. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Tests to see if the argument variable exists in the set of this variable&apos;s equivalent variables. Returns <computeroutput>true</computeroutput> if the argument variable is in this variable&apos;s equivalent variables and <computeroutput>false</computeroutput> otherwise. By default the test will <emphasis>not</emphasis> traverse the equivalent network to determine if the two variables are equivalent.</para>
+<para>If the optional parameter <computeroutput>considerIndirectEquivalences</computeroutput> is <computeroutput>true</computeroutput> then the test <emphasis>will</emphasis> consider the entire equivalence network that this variable is a part of.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>equivalentVariable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The variable to check for in this variable&apos;s equivalent variables. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>considerIndirectEquivalences</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional parameter to expand the test to the entire equivalent network of this variable.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the <computeroutput>equivalentVariable</computeroutput> is in this variable&apos;s equivalent variables set or if <computeroutput>considerIndirectEquivalences</computeroutput> is <computeroutput>true</computeroutput> then <computeroutput>true</computeroutput> if the <computeroutput>equivalentVariable</computeroutput> is in this variable&apos;s equivalence network. In all other cases <computeroutput>false</computeroutput> is returned. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="271" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1a6e6014127685be30ced6d3b356b7f2e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Variable::setUnits</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>setUnits</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Set the units by <computeroutput>name</computeroutput> for this variable. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the units for this variable by name. Set to an empty string to unset the units.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Variable_1a74a54b54170b4396d0d9a98716207f06" kindref="member">units</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classlibcellml_1_1Variable_1a0362014fd8fd1556ed5e1e2800629333" kindref="member">removeUnits</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the units to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="284" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1a70014079133509f8e47330a54a851bde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Variable::setUnits</definition>
+        <argsstring>(const UnitsPtr &amp;units)</argsstring>
+        <name>setUnits</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a3259debe09f915678b203e98100ea10a" kindref="member">UnitsPtr</ref> &amp;</type>
+          <declname>units</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the units for this variable using a <computeroutput>UnitsPtr</computeroutput>.</para>
+<para>Set the units for this variable as the name associated with the argument <computeroutput>units</computeroutput>.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Variable_1a74a54b54170b4396d0d9a98716207f06" kindref="member">units</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classlibcellml_1_1Variable_1a0362014fd8fd1556ed5e1e2800629333" kindref="member">removeUnits</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>units</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>UnitsPtr</computeroutput> to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="299" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1a74a54b54170b4396d0d9a98716207f06" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a3259debe09f915678b203e98100ea10a" kindref="member">UnitsPtr</ref></type>
+        <definition>UnitsPtr libcellml::Variable::units</definition>
+        <argsstring>() const</argsstring>
+        <name>units</name>
+        <briefdescription>
+<para>Get the name of the units for this variable. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the name of the units for this variable. If no units are set an empty <computeroutput>std::string</computeroutput> is returned.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Variable_1a6e6014127685be30ced6d3b356b7f2e2" kindref="member">setUnits</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classlibcellml_1_1Variable_1a0362014fd8fd1556ed5e1e2800629333" kindref="member">removeUnits</ref></para>
+</simplesect>
+<simplesect kind="return"><para>The <computeroutput>UnitsPtr</computeroutput> of the units for this variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="312" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1a0362014fd8fd1556ed5e1e2800629333" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Variable::removeUnits</definition>
+        <argsstring>()</argsstring>
+        <name>removeUnits</name>
+        <briefdescription>
+<para>Clear the units from this variable. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears the units from this variable. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="319" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1ae4e59cf0cda8697a5d2410cd4f10c557" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Variable::setInitialValue</definition>
+        <argsstring>(const std::string &amp;initialValue)</argsstring>
+        <name>setInitialValue</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>initialValue</declname>
+        </param>
+        <briefdescription>
+<para>Set the initial value for this variable using a string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the initial value for this variable using a string.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Variable_1a5e892445b7e00d0381387b26007372d6" kindref="member">initialValue</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>initialValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initial value to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="330" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1a006f377288c31f2892ce66cc22f73f6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Variable::setInitialValue</definition>
+        <argsstring>(double initialValue)</argsstring>
+        <name>setInitialValue</name>
+        <param>
+          <type>double</type>
+          <declname>initialValue</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the initial value for this variable using a real number.</para>
+<para>Set the initial value for this variable using a real number. The real number value will be converted to and stored as a string.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Variable_1a5e892445b7e00d0381387b26007372d6" kindref="member">initialValue</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>initialValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initial value to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="344" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1a052c5e89f0bc95338f13124eaf85fe0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Variable::setInitialValue</definition>
+        <argsstring>(const VariablePtr &amp;variable)</argsstring>
+        <name>setInitialValue</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the initial value for this variable using a variable reference.</para>
+<para>Set the initial value for this variable using a variable reference. The initial value will be set to the name of the referenced variable.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Variable_1a5e892445b7e00d0381387b26007372d6" kindref="member">initialValue</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The variable reference to use to set the initial value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="358" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1a5e892445b7e00d0381387b26007372d6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Variable::initialValue</definition>
+        <argsstring>() const</argsstring>
+        <name>initialValue</name>
+        <briefdescription>
+<para>Get the initial value for this variable. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the string corresponding to the initial value for this variable.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Variable_1ae4e59cf0cda8697a5d2410cd4f10c557" kindref="member">setInitialValue</ref></para>
+</simplesect>
+<simplesect kind="return"><para>the initial value as a <computeroutput>std::string</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="369" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1ac4f9e5d3640e6823d8811390a6b1d77f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Variable::removeInitialValue</definition>
+        <argsstring>()</argsstring>
+        <name>removeInitialValue</name>
+        <briefdescription>
+<para>Clear the initial value for this variable. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears the initial value for this variable. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="376" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1a5d856549c8e92d7b20b274c818d49c98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Variable::setInterfaceType</definition>
+        <argsstring>(const std::string &amp;interfaceType)</argsstring>
+        <name>setInterfaceType</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>interfaceType</declname>
+        </param>
+        <briefdescription>
+<para>Set the interface type for this variable. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the interface type for this variable using a string.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Variable_1ae561bf23ef4af339720cc95a2c40e21f" kindref="member">interfaceType</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>interfaceType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string interface type to set for this variable. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="387" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1a3b4a23c1e263647447fe93410cd827b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Variable::setInterfaceType</definition>
+        <argsstring>(InterfaceType interfaceType)</argsstring>
+        <name>setInterfaceType</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1Variable_1a022c7da9f58d6cf36902d9abf70993c1" kindref="member">InterfaceType</ref></type>
+          <declname>interfaceType</declname>
+        </param>
+        <briefdescription>
+<para>Set the interface type for this variable. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the interface type for this variable from the available options in the InterfaceType enum class.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Variable_1ae561bf23ef4af339720cc95a2c40e21f" kindref="member">interfaceType</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>interfaceType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The enum interface type to set for this variable.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="401" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1ae561bf23ef4af339720cc95a2c40e21f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Variable::interfaceType</definition>
+        <argsstring>() const</argsstring>
+        <name>interfaceType</name>
+        <briefdescription>
+<para>Get the interface type for this variable. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the string corresponding to the interface type for this variable.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Variable_1a5d856549c8e92d7b20b274c818d49c98" kindref="member">setInterfaceType</ref></para>
+</simplesect>
+<simplesect kind="return"><para>the interface type as a <computeroutput>std::string</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="412" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1a76cafeafaa47b45e0e81fa2739f12007" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Variable::removeInterfaceType</definition>
+        <argsstring>()</argsstring>
+        <name>removeInterfaceType</name>
+        <briefdescription>
+<para>Clear the interface type for this variable. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears the interface type for this variable. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="419" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1a0ba7a3e925d328f0cb0fae3432908120" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Variable::hasInterfaceType</definition>
+        <argsstring>(InterfaceType interfaceType) const</argsstring>
+        <name>hasInterfaceType</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1Variable_1a022c7da9f58d6cf36902d9abf70993c1" kindref="member">InterfaceType</ref></type>
+          <declname>interfaceType</declname>
+        </param>
+        <briefdescription>
+<para>Test if this variable has the given interface type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if this variable has the same interface as <computeroutput>interfaceType</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>interfaceType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The interface type to test for.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the interface type is the same as the given interface type, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="430" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1a17b0fa7d37875db9fc50c24e86c56292" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref></type>
+        <definition>VariablePtr libcellml::Variable::clone</definition>
+        <argsstring>() const</argsstring>
+        <name>clone</name>
+        <briefdescription>
+<para>Create a clone of this variable. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a full separate copy of this variable without copying the parent. Thus the cloned (returned) version of this variable will not have a parent set even if this variable does.</para>
+<para>If this variable has any equivalences these equivalences will <emphasis>not</emphasis> be cloned.</para>
+<para><simplesect kind="return"><para>a new <computeroutput>VariablePtr</computeroutput> to the cloned variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="444" column="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1a077cab2476b1f7248f24a4001a240d07" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref></type>
+        <definition>static VariablePtr libcellml::Variable::create</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>create</name>
+        <briefdescription>
+<para>Create a <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Factory method to create a <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput>. Create a blank variable with::</para>
+<para>VariablePtr variable = <ref refid="classlibcellml_1_1Variable_1a077cab2476b1f7248f24a4001a240d07" kindref="member">libcellml::Variable::create()</ref>;</para>
+<para>or a named variable with name &quot;Variable&quot; with::</para>
+<para>VariablePtr variable = <ref refid="classlibcellml_1_1Variable_1a077cab2476b1f7248f24a4001a240d07" kindref="member">libcellml::Variable::create</ref>(&quot;Variable&quot;);</para>
+<para><simplesect kind="return"><para>A smart pointer to a <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput> object. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="62" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1a803b928d54242552a209f2f9b6f4d905" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref></type>
+        <definition>static VariablePtr libcellml::Variable::create</definition>
+        <argsstring>(const std::string &amp;name) noexcept</argsstring>
+        <name>create</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="67" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1a0927c93d2abed87dd7e48ac48d3f92a3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool libcellml::Variable::addEquivalence</definition>
+        <argsstring>(const VariablePtr &amp;variable1, const VariablePtr &amp;variable2)</argsstring>
+        <name>addEquivalence</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable2</declname>
+        </param>
+        <briefdescription>
+<para>Add each argument variable to the other&apos;s equivalent variable set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a copy of <computeroutput>variable1</computeroutput> to the set of equivalent variables for <computeroutput>variable2</computeroutput> if not already present. Also add a copy of <computeroutput>variable2</computeroutput> to the set of equivalent variables for <computeroutput>variable1</computeroutput> if not already present.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Variable_1ae5b5102c3badaf6bc167ae4c30b64883" kindref="member">removeEquivalence</ref>, <ref refid="classlibcellml_1_1Variable_1a7236fdd6929d83d49caf7bed32f1f32c" kindref="member">equivalentVariable</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>variable1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The variable to copy to the equivalent variable set for <computeroutput>variable2</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>variable2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The variable to copy to the equivalent variable set for <computeroutput>variable1</computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the equivalence was added, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="99" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1a55ca8200dffe34c438b288f07feeb0b9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool libcellml::Variable::addEquivalence</definition>
+        <argsstring>(const VariablePtr &amp;variable1, const VariablePtr &amp;variable2, const std::string &amp;mappingId, const std::string &amp;connectionId=&quot;&quot;)</argsstring>
+        <name>addEquivalence</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable2</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>mappingId</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>connectionId</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Add each argument variable to the other&apos;s equivalent variable set.</para>
+<para>Add a copy of <computeroutput>variable1</computeroutput> to the set of equivalent variables for <computeroutput>variable2</computeroutput> if not already present. Also add a copy of <computeroutput>variable2</computeroutput> to the set of equivalent variables for <computeroutput>variable1</computeroutput> if not already present. Also set the mapping id of the equivalence and also optionally the connection id for the equivalence.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>variable1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The variable to copy to the equivalent variable set for <computeroutput>variable2</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>variable2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The variable to copy to the equivalent variable set for <computeroutput>variable1</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mappingId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>std::string</computeroutput> mapping id. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>connectionId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>std::string</computeroutput> connection id (optional).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the equivalence was added, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="121" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1a82a2e56171e4987ace4dfa85d5903100" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void libcellml::Variable::setEquivalenceMappingId</definition>
+        <argsstring>(const VariablePtr &amp;variable1, const VariablePtr &amp;variable2, const std::string &amp;mappingId)</argsstring>
+        <name>setEquivalenceMappingId</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable2</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>mappingId</declname>
+        </param>
+        <briefdescription>
+<para>Set the equivalent mapping id for this equivalence. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Record the given id as the mapping id for the equivalence defined with the given variables. The variables are commutative. This id appears in the &apos;map_variables&apos; element of the model when serialised.</para>
+<para>To clear an equivalence mapping id set it to the empty string. If the two variables are not equivalent the mapping id is not set.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>variable1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref> one of the equivalence. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>variable2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref> two of the equivalence. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mappingId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>std::string</computeroutput> mapping id. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="137" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1ace7de9e31a3b44a87cf69987149788b4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void libcellml::Variable::setEquivalenceConnectionId</definition>
+        <argsstring>(const VariablePtr &amp;variable1, const VariablePtr &amp;variable2, const std::string &amp;connectionId)</argsstring>
+        <name>setEquivalenceConnectionId</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable2</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>connectionId</declname>
+        </param>
+        <briefdescription>
+<para>Set the equivalent connection id for this equivalence. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Record the given id as the connection id for the equivalence defined with the given variables. The variables are commutative. This id appears in the &apos;connection&apos; element of the model when serialised.</para>
+<para>To clear an equivalence connection id set it to the empty string. If the two variables are not equivalent the connection id is not set.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>variable1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref> one of the equivalence. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>variable2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref> two of the equivalence. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>connectionId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>std::string</computeroutput> connection id. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="153" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1a3c69a44b2bee5d084a5b97f72d0b9616" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string libcellml::Variable::equivalenceMappingId</definition>
+        <argsstring>(const VariablePtr &amp;variable1, const VariablePtr &amp;variable2)</argsstring>
+        <name>equivalenceMappingId</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable2</declname>
+        </param>
+        <briefdescription>
+<para>Get the equivalent mapping id for this equivalence. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the mapping id set for the equivalence defined with the given variables. The variables are commutative. If no mapping id is set the empty string is returned.</para>
+<para>If the two variables are not equivalent the empty string is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>variable1Variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>one of the equivalence. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>variable2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref> two of the equivalence.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the <computeroutput>std::string</computeroutput> mapping id. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="168" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1af842cd7683f5040f5486540c8bc95d98" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string libcellml::Variable::equivalenceConnectionId</definition>
+        <argsstring>(const VariablePtr &amp;variable1, const VariablePtr &amp;variable2)</argsstring>
+        <name>equivalenceConnectionId</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable2</declname>
+        </param>
+        <briefdescription>
+<para>Get the equivalent connection id for this equivalence. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the connection id set for the equivalence defined with the given variables. The variables are commutative. If no connection id is set the empty string is returned.</para>
+<para>If the two variables are not equivalent the empty string is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>variable1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref> one of the equivalence. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>variable2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref> two of the equivalence. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the <computeroutput>std::string</computeroutput> connection id. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="182" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1a5046ea05d48f825910e8ce327521c39a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void libcellml::Variable::removeEquivalenceConnectionId</definition>
+        <argsstring>(const VariablePtr &amp;variable1, const VariablePtr &amp;variable2)</argsstring>
+        <name>removeEquivalenceConnectionId</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable2</declname>
+        </param>
+        <briefdescription>
+<para>Clear equivalent connection id for this equivalence. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears the equivalent connection id for the equivalence defined by the two variables passed as arguments.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>variable1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref> one of the equivalence. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>variable2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref> two of the equivalence. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="193" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1aea2635755274ec0173ed3b0ca042c8a3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void libcellml::Variable::removeEquivalenceMappingId</definition>
+        <argsstring>(const VariablePtr &amp;variable1, const VariablePtr &amp;variable2)</argsstring>
+        <name>removeEquivalenceMappingId</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable2</declname>
+        </param>
+        <briefdescription>
+<para>Clear the equivalent mapping id for this equivalence. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears the equivalent mapping id for the equivalence defined by the two variables passed as arguments.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>variable1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref> one of the equivalence. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>variable2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref> two of the equivalence. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="204" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1ae5b5102c3badaf6bc167ae4c30b64883" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool libcellml::Variable::removeEquivalence</definition>
+        <argsstring>(const VariablePtr &amp;variable1, const VariablePtr &amp;variable2)</argsstring>
+        <name>removeEquivalence</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable2</declname>
+        </param>
+        <briefdescription>
+<para>Remove each argument variable from the other&apos;s equivalent variable set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes a copy of <computeroutput>variable1</computeroutput> from the set of equivalent variables for <computeroutput>variable2</computeroutput>, if present. Also removes a copy of <computeroutput>variable2</computeroutput> from the set of equivalent variables for <computeroutput>variable1</computeroutput>, if present.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Variable_1a0927c93d2abed87dd7e48ac48d3f92a3" kindref="member">addEquivalence</ref>, <ref refid="classlibcellml_1_1Variable_1a7236fdd6929d83d49caf7bed32f1f32c" kindref="member">equivalentVariable</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>variable1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The variable to remove from the equivalent variable set of <computeroutput>variable2</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>variable2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The variable to remove from the equivalent variable set of <computeroutput>variable1</computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the equivalence was removed, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="222" column="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1a9827b3167eb2954a0197ecec5c6fbf6f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Variable::Variable</definition>
+        <argsstring>()</argsstring>
+        <name>Variable</name>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="447" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Variable_1a7855c0402aeba6111b0b9c0ca32ad5c9" prot="private" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Variable::Variable</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>Variable</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Constructor with std::string parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/variable.h" line="448" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Class for each variable in libCellML. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>libcellml::NamedEntity</label>
+        <link refid="classlibcellml_1_1NamedEntity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::enable_shared_from_this&lt; Variable &gt;</label>
+      </node>
+      <node id="3">
+        <label>libcellml::Entity</label>
+        <link refid="classlibcellml_1_1Entity"/>
+      </node>
+      <node id="1">
+        <label>libcellml::Variable</label>
+        <link refid="classlibcellml_1_1Variable"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>libcellml::NamedEntity</label>
+        <link refid="classlibcellml_1_1NamedEntity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::enable_shared_from_this&lt; Variable &gt;</label>
+      </node>
+      <node id="3">
+        <label>libcellml::Entity</label>
+        <link refid="classlibcellml_1_1Entity"/>
+      </node>
+      <node id="1">
+        <label>libcellml::Variable</label>
+        <link refid="classlibcellml_1_1Variable"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libcellml/variable.h" line="41" column="1" bodyfile="libcellml/variable.h" bodystart="36" bodyend="452"/>
+    <listofallmembers>
+      <member refid="classlibcellml_1_1Variable_1a0927c93d2abed87dd7e48ac48d3f92a3" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>addEquivalence</name></member>
+      <member refid="classlibcellml_1_1Variable_1a55ca8200dffe34c438b288f07feeb0b9" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>addEquivalence</name></member>
+      <member refid="classlibcellml_1_1Variable_1a17b0fa7d37875db9fc50c24e86c56292" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>clone</name></member>
+      <member refid="classlibcellml_1_1Variable_1a077cab2476b1f7248f24a4001a240d07" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>create</name></member>
+      <member refid="classlibcellml_1_1Variable_1a803b928d54242552a209f2f9b6f4d905" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>create</name></member>
+      <member refid="classlibcellml_1_1Entity_1aaf1f5a51be3e2fcc22113b2c2428967c" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>Entity</name></member>
+      <member refid="classlibcellml_1_1Entity_1a5ccd682791b20cc0431cd3abe265f734" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>Entity</name></member>
+      <member refid="classlibcellml_1_1Entity_1a25d413f1c9f4a8cb37aa2d78d43267ba" prot="protected" virt="non-virtual"><scope>libcellml::Variable</scope><name>Entity</name></member>
+      <member refid="classlibcellml_1_1Variable_1af842cd7683f5040f5486540c8bc95d98" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>equivalenceConnectionId</name></member>
+      <member refid="classlibcellml_1_1Variable_1a3c69a44b2bee5d084a5b97f72d0b9616" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>equivalenceMappingId</name></member>
+      <member refid="classlibcellml_1_1Variable_1a7236fdd6929d83d49caf7bed32f1f32c" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>equivalentVariable</name></member>
+      <member refid="classlibcellml_1_1Variable_1a45ac4bbb818ff44be974dfff7e013104" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>equivalentVariableCount</name></member>
+      <member refid="classlibcellml_1_1Entity_1ac8e6f0e0addd7536902c0eb301f92675" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>hasAncestor</name></member>
+      <member refid="classlibcellml_1_1Variable_1ac178fa2dfca7b5e1fc27b93fd55c5124" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>hasEquivalentVariable</name></member>
+      <member refid="classlibcellml_1_1Variable_1a0ba7a3e925d328f0cb0fae3432908120" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>hasInterfaceType</name></member>
+      <member refid="classlibcellml_1_1Entity_1abe2d58ec4e451613e18a722d1799fc05" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>hasParent</name></member>
+      <member refid="classlibcellml_1_1Entity_1a05439119b7eeab2fc61f8aa5a86eb092" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>id</name></member>
+      <member refid="classlibcellml_1_1Variable_1a5e892445b7e00d0381387b26007372d6" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>initialValue</name></member>
+      <member refid="classlibcellml_1_1Variable_1ae561bf23ef4af339720cc95a2c40e21f" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>interfaceType</name></member>
+      <member refid="classlibcellml_1_1Variable_1a022c7da9f58d6cf36902d9abf70993c1" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>InterfaceType</name></member>
+      <member refid="classlibcellml_1_1Variable_1ae671ba8e8be88dfe5b2d962c26de112f" prot="private" virt="non-virtual"><scope>libcellml::Variable</scope><name>mPimpl</name></member>
+      <member refid="classlibcellml_1_1NamedEntity_1ab643dec674588048b4532c3f2819726a" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>name</name></member>
+      <member refid="classlibcellml_1_1NamedEntity_1ad1fbde6cf933f9b969e3c0a582664874" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>NamedEntity</name></member>
+      <member refid="classlibcellml_1_1NamedEntity_1a5c5b4e6a20db48729ad713612f390d40" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>NamedEntity</name></member>
+      <member refid="classlibcellml_1_1NamedEntity_1a88f342c4a1c70052606cfd65b2ac34ee" prot="protected" virt="non-virtual"><scope>libcellml::Variable</scope><name>NamedEntity</name></member>
+      <member refid="classlibcellml_1_1Variable_1a1ccd32650826ff62684e8687cec3cdc2" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1NamedEntity_1a51ff3c3e0a148a0cf6a05d2e6ff516ee" prot="public" virt="non-virtual" ambiguityscope="libcellml::NamedEntity::"><scope>libcellml::Variable</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1Entity_1afe4e23aec9bc2518ace3dd68495fce76" prot="public" virt="non-virtual" ambiguityscope="libcellml::Entity::"><scope>libcellml::Variable</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1Entity_1ab1ed8e5a980a11d18c0c856a261b3947" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>parent</name></member>
+      <member refid="classlibcellml_1_1Variable_1a2e374b03a3ef84edcdf690385db5ee49" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>removeAllEquivalences</name></member>
+      <member refid="classlibcellml_1_1Variable_1ae5b5102c3badaf6bc167ae4c30b64883" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>removeEquivalence</name></member>
+      <member refid="classlibcellml_1_1Variable_1a5046ea05d48f825910e8ce327521c39a" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>removeEquivalenceConnectionId</name></member>
+      <member refid="classlibcellml_1_1Variable_1aea2635755274ec0173ed3b0ca042c8a3" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>removeEquivalenceMappingId</name></member>
+      <member refid="classlibcellml_1_1Variable_1ac4f9e5d3640e6823d8811390a6b1d77f" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>removeInitialValue</name></member>
+      <member refid="classlibcellml_1_1Variable_1a76cafeafaa47b45e0e81fa2739f12007" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>removeInterfaceType</name></member>
+      <member refid="classlibcellml_1_1Entity_1aedb890f3e8ac654db92c817268425705" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>removeParent</name></member>
+      <member refid="classlibcellml_1_1Variable_1a0362014fd8fd1556ed5e1e2800629333" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>removeUnits</name></member>
+      <member refid="classlibcellml_1_1Variable_1ace7de9e31a3b44a87cf69987149788b4" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>setEquivalenceConnectionId</name></member>
+      <member refid="classlibcellml_1_1Variable_1a82a2e56171e4987ace4dfa85d5903100" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>setEquivalenceMappingId</name></member>
+      <member refid="classlibcellml_1_1Entity_1a13bdf688cdf007be5abad5dc628fd4ad" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>setId</name></member>
+      <member refid="classlibcellml_1_1Variable_1ae4e59cf0cda8697a5d2410cd4f10c557" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>setInitialValue</name></member>
+      <member refid="classlibcellml_1_1Variable_1a006f377288c31f2892ce66cc22f73f6d" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>setInitialValue</name></member>
+      <member refid="classlibcellml_1_1Variable_1a052c5e89f0bc95338f13124eaf85fe0c" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>setInitialValue</name></member>
+      <member refid="classlibcellml_1_1Variable_1a5d856549c8e92d7b20b274c818d49c98" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>setInterfaceType</name></member>
+      <member refid="classlibcellml_1_1Variable_1a3b4a23c1e263647447fe93410cd827b0" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>setInterfaceType</name></member>
+      <member refid="classlibcellml_1_1NamedEntity_1a2528924ae9b2a69d8ff3b5b9b6f31d88" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>setName</name></member>
+      <member refid="classlibcellml_1_1Entity_1aa683f2c3c965b4710ebe45ab018beeac" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>setParent</name></member>
+      <member refid="classlibcellml_1_1Variable_1a6e6014127685be30ced6d3b356b7f2e2" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>setUnits</name></member>
+      <member refid="classlibcellml_1_1Variable_1a70014079133509f8e47330a54a851bde" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>setUnits</name></member>
+      <member refid="classlibcellml_1_1Variable_1a74a54b54170b4396d0d9a98716207f06" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>units</name></member>
+      <member refid="classlibcellml_1_1Variable_1ac70628139e1ef266f4f3c601f3207310" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>Variable</name></member>
+      <member refid="classlibcellml_1_1Variable_1a2cd1f133d2b3eddb92642ebda8cc4b8c" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>Variable</name></member>
+      <member refid="classlibcellml_1_1Variable_1a9827b3167eb2954a0197ecec5c6fbf6f" prot="private" virt="non-virtual"><scope>libcellml::Variable</scope><name>Variable</name></member>
+      <member refid="classlibcellml_1_1Variable_1a7855c0402aeba6111b0b9c0ca32ad5c9" prot="private" virt="non-virtual"><scope>libcellml::Variable</scope><name>Variable</name></member>
+      <member refid="classlibcellml_1_1Entity_1a5a31822cf5beedcbc6f07c118b44b85b" prot="public" virt="virtual"><scope>libcellml::Variable</scope><name>~Entity</name></member>
+      <member refid="classlibcellml_1_1NamedEntity_1a10d6be107346d37bc540652d5ab9939f" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>~NamedEntity</name></member>
+      <member refid="classlibcellml_1_1Variable_1add9277954caae91a129f7f07743efdc9" prot="public" virt="non-virtual"><scope>libcellml::Variable</scope><name>~Variable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

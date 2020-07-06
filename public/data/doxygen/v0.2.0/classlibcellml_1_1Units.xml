@@ -1,0 +1,2043 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classlibcellml_1_1Units" kind="class" language="C++" prot="public">
+    <compoundname>libcellml::Units</compoundname>
+    <basecompoundref refid="classlibcellml_1_1NamedEntity" prot="public" virt="non-virtual">libcellml::NamedEntity</basecompoundref>
+    <basecompoundref refid="classlibcellml_1_1ImportedEntity" prot="public" virt="non-virtual">libcellml::ImportedEntity</basecompoundref>
+    <includes refid="units_8h" local="no">units.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classlibcellml_1_1Units_1acf9016eebccfe85a10288a3b3051da00" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Prefix</name>
+        <enumvalue id="classlibcellml_1_1Units_1acf9016eebccfe85a10288a3b3051da00a22b5eaafe6fb938b3b2891d0f3906ad2" prot="public">
+          <name>YOTTA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1acf9016eebccfe85a10288a3b3051da00a0519b9f7263b02d9e3893bcbc303612a" prot="public">
+          <name>ZETTA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1acf9016eebccfe85a10288a3b3051da00aea4545dc0b3e4cf4d918e774c2a628fd" prot="public">
+          <name>EXA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1acf9016eebccfe85a10288a3b3051da00a715760353fbc0c6d786307ad2b49a4c1" prot="public">
+          <name>PETA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1acf9016eebccfe85a10288a3b3051da00a9618ae4ea9a9674a9d984c15dd141a3e" prot="public">
+          <name>TERA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1acf9016eebccfe85a10288a3b3051da00ac236475a2d098d9e27c22aefc4a371ee" prot="public">
+          <name>GIGA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1acf9016eebccfe85a10288a3b3051da00af589eafcf087c11af27e475bafb047fa" prot="public">
+          <name>MEGA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1acf9016eebccfe85a10288a3b3051da00a5d4e3412b9b63156d7aa43ad2002656d" prot="public">
+          <name>KILO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1acf9016eebccfe85a10288a3b3051da00a190c1d95158fa444fbdecda03df6718f" prot="public">
+          <name>HECTO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1acf9016eebccfe85a10288a3b3051da00a4c58909e3e346d760020821544e98065" prot="public">
+          <name>DECA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1acf9016eebccfe85a10288a3b3051da00a269f2327044f7e909294034f5fe0ffc7" prot="public">
+          <name>DECI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1acf9016eebccfe85a10288a3b3051da00aaa5c9d297f93dedc4deb80d745006319" prot="public">
+          <name>CENTI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1acf9016eebccfe85a10288a3b3051da00a8f06f9f0a1efa42a2ad3ec880b0a1f70" prot="public">
+          <name>MILLI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1acf9016eebccfe85a10288a3b3051da00a14cb593ad5e4233d8e92219001350821" prot="public">
+          <name>MICRO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1acf9016eebccfe85a10288a3b3051da00a10f8d0bbfdc321f233df0a2d98bdcd35" prot="public">
+          <name>NANO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1acf9016eebccfe85a10288a3b3051da00acb918ce26c8f5aca35e80022078babd7" prot="public">
+          <name>PICO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1acf9016eebccfe85a10288a3b3051da00aefe80440d7ef4bc74b95230ecb7a1104" prot="public">
+          <name>FEMTO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1acf9016eebccfe85a10288a3b3051da00aa9ab72edf6d1981e900ac1607a2ff266" prot="public">
+          <name>ATTO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1acf9016eebccfe85a10288a3b3051da00a706f4385df22b62e4c5895fafe519c03" prot="public">
+          <name>ZEPTO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1acf9016eebccfe85a10288a3b3051da00ab8ee75a6587ec02e78a2169abd890733" prot="public">
+          <name>YOCTO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The Prefix enum class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Enum describing the prefixes that are available for units. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="75" column="1" bodyfile="libcellml/units.h" bodystart="74" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="enum" id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>StandardUnit</name>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09a9eb458d6ca6ff22260e9e51b88790c61" prot="public">
+          <name>AMPERE</name>
+          <briefdescription>
+<para>Base SI unit ampere. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09a322769c382a604a77db3c2a1f8cad412" prot="public">
+          <name>BECQUEREL</name>
+          <briefdescription>
+<para>Derived SI unit becquerel. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09a1a551ee5f15c2759470d5b8336ca9875" prot="public">
+          <name>CANDELA</name>
+          <briefdescription>
+<para>Base SI unit candela. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09af90920e9f881a8b5ec473031e82aadf1" prot="public">
+          <name>COULOMB</name>
+          <briefdescription>
+<para>Derived SI unit coulomb. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09a926e302e733f127c24c9b42dd320ada3" prot="public">
+          <name>DIMENSIONLESS</name>
+          <briefdescription>
+<para>Convenience unit dimensionless. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09a3c8bc70b3a5332d0b04a6b3bf6750b78" prot="public">
+          <name>FARAD</name>
+          <briefdescription>
+<para>Derived SI unit farad. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09a6f4862a9a705c7dea77f97b43ebfb7df" prot="public">
+          <name>GRAM</name>
+          <briefdescription>
+<para>Convenience unit gram. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09a48bf014c704c9eaae100a98006a37bf7" prot="public">
+          <name>GRAY</name>
+          <briefdescription>
+<para>Derived SI unit gray. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09a450ed2e34e0bf66f0aed387cf4585341" prot="public">
+          <name>HENRY</name>
+          <briefdescription>
+<para>Derived SI unit henry. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09ac68e2571811124f759bb7bdf050a9814" prot="public">
+          <name>HERTZ</name>
+          <briefdescription>
+<para>Derived SI unit hertz. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09a55965cb2e44a4d04e5825ca8be3fd253" prot="public">
+          <name>JOULE</name>
+          <briefdescription>
+<para>Derived SI unit joule. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09a70c8e01fa745ac1a1a8e0d4fa2dd6d52" prot="public">
+          <name>KATAL</name>
+          <briefdescription>
+<para>Derived SI unit katal. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09ac0315574fefc0a9fd9295c02a2a0813f" prot="public">
+          <name>KELVIN</name>
+          <briefdescription>
+<para>Base SI unit kelvin. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09a996c00b1bbbb63ff592053227258d511" prot="public">
+          <name>KILOGRAM</name>
+          <briefdescription>
+<para>Base SI unit kilogram. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09ab1181e65a1d86e656199c10246874ac5" prot="public">
+          <name>LITRE</name>
+          <briefdescription>
+<para>Convenience unit litre. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09a901707be2dc5dfa56c98c904047f33b2" prot="public">
+          <name>LUMEN</name>
+          <briefdescription>
+<para>Derived SI unit lumen. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09aedd8153edfbf90e24bb5b1fa78d62450" prot="public">
+          <name>LUX</name>
+          <briefdescription>
+<para>Derived SI unit lux. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09a98e754b78dfe23409a3827e42e3be892" prot="public">
+          <name>METRE</name>
+          <briefdescription>
+<para>Base SI unit metre. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09a19e18628a526b3a71237c775f522193d" prot="public">
+          <name>MOLE</name>
+          <briefdescription>
+<para>Base SI unit mole. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09a543a80c769aa267bbf02f31e2d7e07e6" prot="public">
+          <name>NEWTON</name>
+          <briefdescription>
+<para>Derived SI unit newton. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09a5040f9d5c3a37f7a91b1f3587cab103b" prot="public">
+          <name>OHM</name>
+          <briefdescription>
+<para>Derived SI unit ohm. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09af80da8a4f16f14db3157cf220fe04402" prot="public">
+          <name>PASCAL</name>
+          <briefdescription>
+<para>Derived SI unit pascal. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09a04dd61a45bf5136473a3453fae3c8457" prot="public">
+          <name>RADIAN</name>
+          <briefdescription>
+<para>Derived SI unit radian. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09a2200becb80f0019c4a2ccecec350d0db" prot="public">
+          <name>SECOND</name>
+          <briefdescription>
+<para>Base SI unit second. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09a64eeced6cae6abd85f7dd2278bfa86ba" prot="public">
+          <name>SIEMENS</name>
+          <briefdescription>
+<para>Derived SI unit siemens. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09ae85cca1b2d01ce4521c09814dbc9e065" prot="public">
+          <name>SIEVERT</name>
+          <briefdescription>
+<para>Derived SI unit sievert. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09a3741ff2e31be4faed635c72d6114cf72" prot="public">
+          <name>STERADIAN</name>
+          <briefdescription>
+<para>Derived SI unit steradian. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09ab371953ebe9d2fa4b3bc5229c42c97c4" prot="public">
+          <name>TESLA</name>
+          <briefdescription>
+<para>Derived SI unit tesla. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09ad99987f942ecbf2eea5d50ebf50723e6" prot="public">
+          <name>VOLT</name>
+          <briefdescription>
+<para>Derived SI unit volt. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09ab3f66ef250236846e5e3801ada2c0061" prot="public">
+          <name>WATT</name>
+          <briefdescription>
+<para>Derived SI unit watt. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09a2b75058430d6bdf39dceea3acc5b9de2" prot="public">
+          <name>WEBER</name>
+          <briefdescription>
+<para>Derived SI unit weber. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The Standard Unit enum class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Standard units that are suitable for variable declarations or attached to bare numbers in mathematics. This list of comprises the SI base units, the SI derived units with special names and symbols, and some additional units commonly used in the types of biological models likely to be defined using CellML. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="108" column="1" bodyfile="libcellml/units.h" bodystart="107" bodyend="140"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlibcellml_1_1Units_1a28b70626b5d369dfcee86e89f2ad083e" prot="private" static="no" mutable="no">
+        <type>UnitsImpl *</type>
+        <definition>UnitsImpl* libcellml::Units::mPimpl</definition>
+        <argsstring></argsstring>
+        <name>mPimpl</name>
+        <briefdescription>
+<para>Forward declaration for pImpl idiom. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Private member to implementation pointer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="526" column="15" bodyfile="libcellml/units.h" bodystart="525" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlibcellml_1_1Units_1afc146f8dc2dd955212134244f2676120" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Units::~Units</definition>
+        <argsstring>() override</argsstring>
+        <name>~Units</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="42" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1a814e8e3ab8aac11d8e2ab3c1179c8307" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Units::Units</definition>
+        <argsstring>(const Units &amp;rhs)=delete</argsstring>
+        <name>Units</name>
+        <param>
+          <type>const <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="43" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1a3eeeca62d9998a308d4add586ce20a2f" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Units::Units</definition>
+        <argsstring>(Units &amp;&amp;rhs) noexcept=delete</argsstring>
+        <name>Units</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="44" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1a7747dde2d42a48163e67e61beac5dd2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref> &amp;</type>
+        <definition>Units&amp; libcellml::Units::operator=</definition>
+        <argsstring>(Units rhs)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="45" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1ae94131ba8bc6ef395dbf59f7a122859e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Units::isBaseUnit</definition>
+        <argsstring>() const</argsstring>
+        <name>isBaseUnit</name>
+        <briefdescription>
+<para>Test to determine if <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref> is a base unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Test to determine if <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref> is a base unit, return <computeroutput>true</computeroutput> if it is a base unit and <computeroutput>false</computeroutput> otherwise. A unit is an &quot;irreducible unit&quot; or &quot;base unit&quot; for the model by virtue of the fact that it is not derived from any other unit(s).</para>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref> is a base unit, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="152" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1a3f043b44338f8a7857772e0bf366dd4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Units::addUnit</definition>
+        <argsstring>(const std::string &amp;reference, const std::string &amp;prefix, double exponent=1.0, double multiplier=1.0, const std::string &amp;id=&quot;&quot;)</argsstring>
+        <name>addUnit</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>reference</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>prefix</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>exponent</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>multiplier</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Add a unit to this <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a unit as a child of this <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref>. This method takes optional arguments <computeroutput>exponent</computeroutput>, and <computeroutput>multiplier</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reference</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>std::string</computeroutput> units reference to add. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>prefix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string prefix for the unit. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>exponent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The exponent. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>multiplier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The multiplier. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The optional <computeroutput>std::string</computeroutput> id to set for this unit. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="166" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1a7a5a3c5e1de8ac1ba14fd8a968a82c5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Units::addUnit</definition>
+        <argsstring>(const std::string &amp;reference, Prefix prefix, double exponent=1.0, double multiplier=1.0, const std::string &amp;id=&quot;&quot;)</argsstring>
+        <name>addUnit</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>reference</declname>
+        </param>
+        <param>
+          <type><ref refid="classlibcellml_1_1Units_1acf9016eebccfe85a10288a3b3051da00" kindref="member">Prefix</ref></type>
+          <declname>prefix</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>exponent</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>multiplier</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a unit to this <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref>.</para>
+<para>Add a unit as a child of this <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref>. This method takes optional arguments <computeroutput>exponent</computeroutput>, and <computeroutput>multiplier</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reference</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>std::string</computeroutput> units reference to add. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>prefix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The prefix for the unit, one of Prefix. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>exponent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The exponent. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>multiplier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The multiplier. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The optional <computeroutput>std::string</computeroutput> id to set for this unit. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="183" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1a07b60ae393b388c305a7ad188f001b50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Units::addUnit</definition>
+        <argsstring>(const std::string &amp;reference, int prefix, double exponent, double multiplier=1.0, const std::string &amp;id=&quot;&quot;)</argsstring>
+        <name>addUnit</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>reference</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>prefix</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>exponent</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>multiplier</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a unit to this <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref>.</para>
+<para>Add a unit as a child of this <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref>. This method takes an optional argument <computeroutput>multiplier</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reference</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>std::string</computeroutput> units reference to add. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>prefix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The prefix for the unit expressed as a double. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>exponent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The exponent. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>multiplier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The multiplier. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The optional <computeroutput>std::string</computeroutput> id to set for this unit. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="200" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1a1c471ea1ba39da25203e2f0d046c0948" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Units::addUnit</definition>
+        <argsstring>(const std::string &amp;reference, double exponent, const std::string &amp;id=&quot;&quot;)</argsstring>
+        <name>addUnit</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>reference</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>exponent</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a unit to this <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref>.</para>
+<para>Add a unit as a child of this <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref>. This variant takes the <computeroutput>std::string</computeroutput> units <computeroutput>reference</computeroutput> and an <computeroutput>exponent</computeroutput> only.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reference</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>std::string</computeroutput> units reference to add. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>exponent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The exponent for the unit. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The optional <computeroutput>std::string</computeroutput> id to set for this unit. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="215" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1ab066195bbb394f508536c7c0eafc6e00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Units::addUnit</definition>
+        <argsstring>(const std::string &amp;reference)</argsstring>
+        <name>addUnit</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>reference</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a unit to this <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref>.</para>
+<para>Add a unit as a child of this <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref>, this variant specified with only a <computeroutput>std::string</computeroutput> units <computeroutput>reference</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reference</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>std::string</computeroutput> units reference to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="227" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1aee4a0383e5ed75226e324eafcedc4583" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Units::addUnit</definition>
+        <argsstring>(StandardUnit standardRef, const std::string &amp;prefix, double exponent=1.0, double multiplier=1.0, const std::string &amp;id=&quot;&quot;)</argsstring>
+        <name>addUnit</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09" kindref="member">StandardUnit</ref></type>
+          <declname>standardRef</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>prefix</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>exponent</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>multiplier</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a unit to this <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref>.</para>
+<para>Add a unit as a child of this <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref>. This method takes optional arguments <computeroutput>exponent</computeroutput>, and <computeroutput>multiplier</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>standardRef</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>StandardUnit</computeroutput> enum units reference to add. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>prefix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string prefix for the unit. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>exponent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The exponent. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>multiplier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The multiplier. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The optional <computeroutput>std::string</computeroutput> id to set for this unit. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="243" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1ab6c9028bb1863e5d89ea856c2856eb18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Units::addUnit</definition>
+        <argsstring>(StandardUnit standardRef, Prefix prefix, double exponent=1.0, double multiplier=1.0, const std::string &amp;id=&quot;&quot;)</argsstring>
+        <name>addUnit</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09" kindref="member">StandardUnit</ref></type>
+          <declname>standardRef</declname>
+        </param>
+        <param>
+          <type><ref refid="classlibcellml_1_1Units_1acf9016eebccfe85a10288a3b3051da00" kindref="member">Prefix</ref></type>
+          <declname>prefix</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>exponent</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>multiplier</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a unit to this <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref>.</para>
+<para>Add a unit as a child of this <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref>. This method takes optional arguments <computeroutput>exponent</computeroutput>, and <computeroutput>multiplier</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>standardRef</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>StandardUnit</computeroutput> enum units reference to add. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>prefix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The prefix for the unit, one of Prefix. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>exponent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The exponent. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>multiplier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The multiplier. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The optional <computeroutput>std::string</computeroutput> id to set for this unit. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="260" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1ae5fbf923cff8c633fe73fc84e7f93a8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Units::addUnit</definition>
+        <argsstring>(StandardUnit standardRef, int prefix, double exponent, double multiplier=1.0, const std::string &amp;id=&quot;&quot;)</argsstring>
+        <name>addUnit</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09" kindref="member">StandardUnit</ref></type>
+          <declname>standardRef</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>prefix</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>exponent</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>multiplier</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a unit to this <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref>.</para>
+<para>Add a unit as a child of this <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref>. This method takes an optional argument <computeroutput>multiplier</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>standardRef</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>StandardUnit</computeroutput> enum units reference to add. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>prefix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The prefix for the unit expressed as a double. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>exponent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The exponent. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>multiplier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The multiplier. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The optional <computeroutput>std::string</computeroutput> id to set for this unit. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="277" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1a5f691bb02b39a7f580c1b0edfd8d32f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Units::addUnit</definition>
+        <argsstring>(StandardUnit standardRef, double exponent, const std::string &amp;id=&quot;&quot;)</argsstring>
+        <name>addUnit</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09" kindref="member">StandardUnit</ref></type>
+          <declname>standardRef</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>exponent</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a unit to this <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref>.</para>
+<para>Add a unit as a child of this <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref>. This variant takes the <computeroutput>StandardUnit</computeroutput> enum units <computeroutput>reference</computeroutput> and an <computeroutput>exponent</computeroutput> only.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>standardRef</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>StandardUnit</computeroutput> enum units reference to add. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>exponent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The exponent for the unit. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The optional <computeroutput>std::string</computeroutput> id to set for this unit. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="292" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1a2c70f04fc393aeeaee3b27a87303cfb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Units::addUnit</definition>
+        <argsstring>(StandardUnit standardRef)</argsstring>
+        <name>addUnit</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09" kindref="member">StandardUnit</ref></type>
+          <declname>standardRef</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a unit to this <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref>.</para>
+<para>Add a unit as a child of this <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref>, this variant specified with only a <computeroutput>StandardUnit</computeroutput> enum units <computeroutput>reference</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>standardRef</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>StandardUnit</computeroutput> enum units reference to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="304" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1a6cfae83bc8eafd369a53c71226e28197" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Units::unitAttributes</definition>
+        <argsstring>(size_t index, std::string &amp;reference, std::string &amp;prefix, double &amp;exponent, double &amp;multiplier, std::string &amp;id) const</argsstring>
+        <name>unitAttributes</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>reference</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>prefix</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>exponent</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>multiplier</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Get the <computeroutput>unit</computeroutput> attributes at the given <computeroutput>index</computeroutput> of this units. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the attributes for the <computeroutput>unit</computeroutput> at the index <computeroutput>index</computeroutput> of this units. If no attributes are set, default attribute values will be returned. The index must be in the range [0, #unit).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the <computeroutput>unit</computeroutput> in this units to get attributes for. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reference</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>std::string</computeroutput> reference for this <computeroutput>unit</computeroutput>. Defaults to empty string. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>prefix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The prefix for this <computeroutput>unit</computeroutput>. Defaults to empty string. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>exponent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The exponent for this <computeroutput>unit</computeroutput>. Defaults to 1.0. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>multiplier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The multiplier for this <computeroutput>unit</computeroutput>. Defaults to 1.0. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>std::string</computeroutput> id for this <computeroutput>unit</computeroutput>. Defaults to the empty string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="320" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1abb47e8ccd02ba626711f014722774f7f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Units::unitAttributeReferenceByIndex</definition>
+        <argsstring>(size_t index)</argsstring>
+        <name>unitAttributeReferenceByIndex</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="323" column="17" bodyfile="libcellml/units.h" bodystart="323" bodyend="331"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1aaf37ed0b71b69d60791870621303067f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Units::unitAttributePrefixByIndex</definition>
+        <argsstring>(size_t index)</argsstring>
+        <name>unitAttributePrefixByIndex</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="332" column="17" bodyfile="libcellml/units.h" bodystart="332" bodyend="340"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1addae2d562bef9b1289c8dac95c067429" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double libcellml::Units::unitAttributeExponentByIndex</definition>
+        <argsstring>(size_t index)</argsstring>
+        <name>unitAttributeExponentByIndex</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="341" column="12" bodyfile="libcellml/units.h" bodystart="341" bodyend="349"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1a2b5f30109538e5e54788caec8989ce31" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double libcellml::Units::unitAttributeMultiplierByIndex</definition>
+        <argsstring>(size_t index)</argsstring>
+        <name>unitAttributeMultiplierByIndex</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="350" column="12" bodyfile="libcellml/units.h" bodystart="350" bodyend="358"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1a98570e6da12b2004cabf1d5233ce7105" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Units::unitAttributes</definition>
+        <argsstring>(const std::string &amp;reference, std::string &amp;prefix, double &amp;exponent, double &amp;multiplier, std::string &amp;id) const</argsstring>
+        <name>unitAttributes</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>reference</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>prefix</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>exponent</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>multiplier</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the <computeroutput>unit</computeroutput> attributes for the given <computeroutput>reference</computeroutput>.</para>
+<para>Get the attributes for the first <computeroutput>unit</computeroutput> that matches the reference <computeroutput>reference</computeroutput>. If no attributes are set, default attribute values will be returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reference</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>std::string</computeroutput> reference for the <computeroutput>unit</computeroutput> attributes to get. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>prefix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The prefix for this <computeroutput>unit</computeroutput>. Defaults to empty string. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>exponent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The exponent for this <computeroutput>unit</computeroutput>. Defaults to 1.0. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>multiplier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The multiplier for this <computeroutput>unit</computeroutput>. Defaults to 1.0. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>std::string</computeroutput> id for this <computeroutput>unit</computeroutput>. Defaults to the empty string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="374" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1ae5a9dfbc3c08608ca6541344f318b18d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Units::unitAttributes</definition>
+        <argsstring>(StandardUnit standardRef, std::string &amp;prefix, double &amp;exponent, double &amp;multiplier, std::string &amp;id) const</argsstring>
+        <name>unitAttributes</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09" kindref="member">StandardUnit</ref></type>
+          <declname>standardRef</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>prefix</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>exponent</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>multiplier</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the <computeroutput>unit</computeroutput> attributes for the given <computeroutput>standardRef</computeroutput>.</para>
+<para>Get the attributes for the first <computeroutput>unit</computeroutput> that matches the reference <computeroutput>standardRef</computeroutput>. If no attributes are set, default attribute values will be returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>standardRef</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>StandardUnit</computeroutput> enum unit reference attributes to get. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>prefix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The prefix for this <computeroutput>unit</computeroutput>. Defaults to empty string. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>exponent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The exponent for this <computeroutput>unit</computeroutput>. Defaults to 1.0. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>multiplier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The multiplier for this <computeroutput>unit</computeroutput>. Defaults to 1.0. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>std::string</computeroutput> id for this <computeroutput>unit</computeroutput>. Defaults to the empty string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="390" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1a1c9c8ac6e1e28a6f736f5ede77cef0b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Units::removeUnit</definition>
+        <argsstring>(size_t index)</argsstring>
+        <name>removeUnit</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Remove the unit at the given <computeroutput>index</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes the unit at the given <computeroutput>index</computeroutput> position. <computeroutput>index</computeroutput> must be in the range [0, #unit).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the unit to remove.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the units were replaced, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="402" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1ab394d45d6a1f3a2525dbb68b366b6f8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Units::removeUnit</definition>
+        <argsstring>(const std::string &amp;reference)</argsstring>
+        <name>removeUnit</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>reference</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove the unit with the given reference.</para>
+<para>Remove the first unit found that matches the <computeroutput>std::string</computeroutput> reference <computeroutput>reference</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reference</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>std::string</computeroutput> unit reference of the unit to remove.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the units were replaced, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="415" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1a7755451608399b6194256229b8973662" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Units::removeUnit</definition>
+        <argsstring>(StandardUnit standardRef)</argsstring>
+        <name>removeUnit</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09" kindref="member">StandardUnit</ref></type>
+          <declname>standardRef</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove the unit with the given reference.</para>
+<para>Remove the first unit found that matches <computeroutput>StandardUnit</computeroutput> enum reference <computeroutput>reference</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>standardRef</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>StandardUnit</computeroutput> enum unit reference of the unit to remove.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the units were replaced, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="428" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1af07482ba4161ddb1375fc9060c464d14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Units::removeAllUnits</definition>
+        <argsstring>()</argsstring>
+        <name>removeAllUnits</name>
+        <briefdescription>
+<para>Remove all units stored in this units object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears all units that have been added to this units object. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="435" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1a9d95cd6c83fb67880bb5767cc5703306" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Units::setSourceUnits</definition>
+        <argsstring>(const ImportSourcePtr &amp;importSource, const std::string &amp;name)</argsstring>
+        <name>setSourceUnits</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1ac2c4e6d1793d7214616c1548d8a9f502" kindref="member">ImportSourcePtr</ref> &amp;</type>
+          <declname>importSource</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Set the source of the units for this <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Make this <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref> an imported units by defining an import model from which to extract the named <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref> from.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>importSource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The import source from which the named <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref> originates. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref> in the imported model to use. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="446" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1a9e448209c749774e18546c785e03e34d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::Units::unitCount</definition>
+        <argsstring>() const</argsstring>
+        <name>unitCount</name>
+        <briefdescription>
+<para>Get the number of units that compose this units. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of units contained by this units object.</para>
+<para><simplesect kind="return"><para>The number of units. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="455" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1a07e14a3449ca878e2bdd622d8285ab5e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Units::requiresImports</definition>
+        <argsstring>() const</argsstring>
+        <name>requiresImports</name>
+        <briefdescription>
+<para>Check whether there are any imported child <computeroutput><ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref></computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> when these <computeroutput><ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref></computeroutput> rely on <computeroutput><ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref></computeroutput> which are imported, or <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="463" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1af798571cbd187e074f6e6a87d343709b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a3259debe09f915678b203e98100ea10a" kindref="member">UnitsPtr</ref></type>
+        <definition>UnitsPtr libcellml::Units::clone</definition>
+        <argsstring>() const</argsstring>
+        <name>clone</name>
+        <briefdescription>
+<para>Create a clone of this units. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a full separate copy of this units without copying the parent. Thus the cloned (returned) version of this units will not have a parent set even if this units does.</para>
+<para><simplesect kind="return"><para>a new <computeroutput>UnitsPtr</computeroutput> to the cloned units. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="519" column="14"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classlibcellml_1_1Units_1af27a180eae0574782368f60447a43528" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a3259debe09f915678b203e98100ea10a" kindref="member">UnitsPtr</ref></type>
+        <definition>static UnitsPtr libcellml::Units::create</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>create</name>
+        <briefdescription>
+<para>Create a <computeroutput><ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref></computeroutput> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Factory method to create a <computeroutput><ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref></computeroutput>. Create a blank units with::</para>
+<para>UnitsPtr units = <ref refid="classlibcellml_1_1Units_1af27a180eae0574782368f60447a43528" kindref="member">libcellml::Units::create()</ref>;</para>
+<para>or a named units with name &quot;Units&quot; with::</para>
+<para>UnitsPtr units = <ref refid="classlibcellml_1_1Units_1af27a180eae0574782368f60447a43528" kindref="member">libcellml::Units::create</ref>(&quot;Units&quot;);</para>
+<para><simplesect kind="return"><para>A smart pointer to a <computeroutput><ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref></computeroutput> object. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="61" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1ac8d785ee75deacf8c1f57ed9991bee58" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a3259debe09f915678b203e98100ea10a" kindref="member">UnitsPtr</ref></type>
+        <definition>static UnitsPtr libcellml::Units::create</definition>
+        <argsstring>(const std::string &amp;name) noexcept</argsstring>
+        <name>create</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="66" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1af8d21b1e69350e6ef873af66cc66033e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>static double libcellml::Units::scalingFactor</definition>
+        <argsstring>(const UnitsPtr &amp;units1, const UnitsPtr &amp;units2, bool checkCompatibility=true)</argsstring>
+        <name>scalingFactor</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a3259debe09f915678b203e98100ea10a" kindref="member">UnitsPtr</ref> &amp;</type>
+          <declname>units1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a3259debe09f915678b203e98100ea10a" kindref="member">UnitsPtr</ref> &amp;</type>
+          <declname>units2</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>checkCompatibility</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Return the scaling factor difference between two <computeroutput><ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref></computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This can be interpreted as <computeroutput>factor</computeroutput>, where units2 = factor*units1. If compatibility checking is turned on and the units are not compatible the factor returned is 0.0.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>units1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first units to compare. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>units2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second units to compare. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>checkCompatibility</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set <computeroutput>true</computeroutput> for compatibility checking, or <computeroutput>false</computeroutput> to ignore base units. The default is <computeroutput>true</computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The factor units2/units1. Where the units are incompatible and <computeroutput>checkCompatibility</computeroutput> is <computeroutput>true</computeroutput> then the factor returned is 0.0. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="479" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1a75442487f2f10d34adc608c8e1f58961" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool libcellml::Units::compatible</definition>
+        <argsstring>(const UnitsPtr &amp;units1, const UnitsPtr &amp;units2)</argsstring>
+        <name>compatible</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a3259debe09f915678b203e98100ea10a" kindref="member">UnitsPtr</ref> &amp;</type>
+          <declname>units1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a3259debe09f915678b203e98100ea10a" kindref="member">UnitsPtr</ref> &amp;</type>
+          <declname>units2</declname>
+        </param>
+        <briefdescription>
+<para>Test to determine whether two <computeroutput><ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref></computeroutput> are compatible or not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Two <computeroutput><ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref></computeroutput> are considered to be compatible if they share the same units, independently of their scaling (e.g. volt and volt are compatible as are volt and millivolt).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>units1 The first units to compare. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>units2 The second units to compare.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the two <computeroutput><ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref></computeroutput> are compatible, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="493" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1af34482d549c1c86ab12fd85e676b5371" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool libcellml::Units::equivalent</definition>
+        <argsstring>(const UnitsPtr &amp;units1, const UnitsPtr &amp;units2)</argsstring>
+        <name>equivalent</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a3259debe09f915678b203e98100ea10a" kindref="member">UnitsPtr</ref> &amp;</type>
+          <declname>units1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a3259debe09f915678b203e98100ea10a" kindref="member">UnitsPtr</ref> &amp;</type>
+          <declname>units2</declname>
+        </param>
+        <briefdescription>
+<para>Test to determine whether two <computeroutput><ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref></computeroutput> are equivalent or not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Two <computeroutput><ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref></computeroutput> are considered to be equivalent if they share the same unit base as well as a scaling factor of 1.0 (e.g. volt and volt are equivalent but volt and millivolt are not).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>units1 The first units to compare. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>units2 The second units to compare.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the two <computeroutput><ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref></computeroutput> are equivalent, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="508" column="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlibcellml_1_1Units_1adc1df676f9179770507ae8857144bb5c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Units::Units</definition>
+        <argsstring>()</argsstring>
+        <name>Units</name>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="522" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Units_1a81ce881c672e56d12f2483d84711e2b8" prot="private" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Units::Units</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>Units</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Constructor with std::string parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/units.h" line="523" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Class for <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref>. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>libcellml::ImportedEntity</label>
+        <link refid="classlibcellml_1_1ImportedEntity"/>
+      </node>
+      <node id="2">
+        <label>libcellml::NamedEntity</label>
+        <link refid="classlibcellml_1_1NamedEntity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>libcellml::Entity</label>
+        <link refid="classlibcellml_1_1Entity"/>
+      </node>
+      <node id="1">
+        <label>libcellml::Units</label>
+        <link refid="classlibcellml_1_1Units"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>libcellml::ImportedEntity</label>
+        <link refid="classlibcellml_1_1ImportedEntity"/>
+      </node>
+      <node id="2">
+        <label>libcellml::NamedEntity</label>
+        <link refid="classlibcellml_1_1NamedEntity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>libcellml::Entity</label>
+        <link refid="classlibcellml_1_1Entity"/>
+      </node>
+      <node id="1">
+        <label>libcellml::Units</label>
+        <link refid="classlibcellml_1_1Units"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libcellml/units.h" line="40" column="1" bodyfile="libcellml/units.h" bodystart="39" bodyend="527"/>
+    <listofallmembers>
+      <member refid="classlibcellml_1_1Units_1a3f043b44338f8a7857772e0bf366dd4a" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>addUnit</name></member>
+      <member refid="classlibcellml_1_1Units_1a7a5a3c5e1de8ac1ba14fd8a968a82c5c" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>addUnit</name></member>
+      <member refid="classlibcellml_1_1Units_1a07b60ae393b388c305a7ad188f001b50" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>addUnit</name></member>
+      <member refid="classlibcellml_1_1Units_1a1c471ea1ba39da25203e2f0d046c0948" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>addUnit</name></member>
+      <member refid="classlibcellml_1_1Units_1ab066195bbb394f508536c7c0eafc6e00" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>addUnit</name></member>
+      <member refid="classlibcellml_1_1Units_1aee4a0383e5ed75226e324eafcedc4583" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>addUnit</name></member>
+      <member refid="classlibcellml_1_1Units_1ab6c9028bb1863e5d89ea856c2856eb18" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>addUnit</name></member>
+      <member refid="classlibcellml_1_1Units_1ae5fbf923cff8c633fe73fc84e7f93a8d" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>addUnit</name></member>
+      <member refid="classlibcellml_1_1Units_1a5f691bb02b39a7f580c1b0edfd8d32f2" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>addUnit</name></member>
+      <member refid="classlibcellml_1_1Units_1a2c70f04fc393aeeaee3b27a87303cfb8" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>addUnit</name></member>
+      <member refid="classlibcellml_1_1Units_1af798571cbd187e074f6e6a87d343709b" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>clone</name></member>
+      <member refid="classlibcellml_1_1Units_1a75442487f2f10d34adc608c8e1f58961" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>compatible</name></member>
+      <member refid="classlibcellml_1_1Units_1af27a180eae0574782368f60447a43528" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>create</name></member>
+      <member refid="classlibcellml_1_1Units_1ac8d785ee75deacf8c1f57ed9991bee58" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>create</name></member>
+      <member refid="classlibcellml_1_1Entity_1aaf1f5a51be3e2fcc22113b2c2428967c" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>Entity</name></member>
+      <member refid="classlibcellml_1_1Entity_1a5ccd682791b20cc0431cd3abe265f734" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>Entity</name></member>
+      <member refid="classlibcellml_1_1Entity_1a25d413f1c9f4a8cb37aa2d78d43267ba" prot="protected" virt="non-virtual"><scope>libcellml::Units</scope><name>Entity</name></member>
+      <member refid="classlibcellml_1_1Units_1af34482d549c1c86ab12fd85e676b5371" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>equivalent</name></member>
+      <member refid="classlibcellml_1_1Entity_1ac8e6f0e0addd7536902c0eb301f92675" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>hasAncestor</name></member>
+      <member refid="classlibcellml_1_1Entity_1abe2d58ec4e451613e18a722d1799fc05" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>hasParent</name></member>
+      <member refid="classlibcellml_1_1Entity_1a05439119b7eeab2fc61f8aa5a86eb092" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>id</name></member>
+      <member refid="classlibcellml_1_1ImportedEntity_1a4a489fc27bfdc0ffeda7dc13bc874ab3" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>ImportedEntity</name></member>
+      <member refid="classlibcellml_1_1ImportedEntity_1a6136c548bd3634a5b6b553d8cf97926a" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>ImportedEntity</name></member>
+      <member refid="classlibcellml_1_1ImportedEntity_1a1cdb9522aea8000e43a13705aa3f2960" prot="protected" virt="non-virtual"><scope>libcellml::Units</scope><name>ImportedEntity</name></member>
+      <member refid="classlibcellml_1_1ImportedEntity_1a14451a2854699b2e31c67f0afc4d28d3" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>importReference</name></member>
+      <member refid="classlibcellml_1_1ImportedEntity_1af9db33dab9b6151683656b9f4744188a" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>importSource</name></member>
+      <member refid="classlibcellml_1_1Units_1ae94131ba8bc6ef395dbf59f7a122859e" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>isBaseUnit</name></member>
+      <member refid="classlibcellml_1_1ImportedEntity_1a25f7d4abe5d3ca67c97ad341cb4853e7" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>isImport</name></member>
+      <member refid="classlibcellml_1_1Units_1a28b70626b5d369dfcee86e89f2ad083e" prot="private" virt="non-virtual"><scope>libcellml::Units</scope><name>mPimpl</name></member>
+      <member refid="classlibcellml_1_1NamedEntity_1ab643dec674588048b4532c3f2819726a" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>name</name></member>
+      <member refid="classlibcellml_1_1NamedEntity_1ad1fbde6cf933f9b969e3c0a582664874" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>NamedEntity</name></member>
+      <member refid="classlibcellml_1_1NamedEntity_1a5c5b4e6a20db48729ad713612f390d40" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>NamedEntity</name></member>
+      <member refid="classlibcellml_1_1NamedEntity_1a88f342c4a1c70052606cfd65b2ac34ee" prot="protected" virt="non-virtual"><scope>libcellml::Units</scope><name>NamedEntity</name></member>
+      <member refid="classlibcellml_1_1Units_1a7747dde2d42a48163e67e61beac5dd2c" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1NamedEntity_1a51ff3c3e0a148a0cf6a05d2e6ff516ee" prot="public" virt="non-virtual" ambiguityscope="libcellml::NamedEntity::"><scope>libcellml::Units</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1Entity_1afe4e23aec9bc2518ace3dd68495fce76" prot="public" virt="non-virtual" ambiguityscope="libcellml::Entity::"><scope>libcellml::Units</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1ImportedEntity_1ae4b8a04e162044053efaa411f67c5181" prot="public" virt="non-virtual" ambiguityscope="libcellml::ImportedEntity::"><scope>libcellml::Units</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1Entity_1ab1ed8e5a980a11d18c0c856a261b3947" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>parent</name></member>
+      <member refid="classlibcellml_1_1Units_1acf9016eebccfe85a10288a3b3051da00" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>Prefix</name></member>
+      <member refid="classlibcellml_1_1Units_1af07482ba4161ddb1375fc9060c464d14" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>removeAllUnits</name></member>
+      <member refid="classlibcellml_1_1Entity_1aedb890f3e8ac654db92c817268425705" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>removeParent</name></member>
+      <member refid="classlibcellml_1_1Units_1a1c9c8ac6e1e28a6f736f5ede77cef0b0" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>removeUnit</name></member>
+      <member refid="classlibcellml_1_1Units_1ab394d45d6a1f3a2525dbb68b366b6f8c" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>removeUnit</name></member>
+      <member refid="classlibcellml_1_1Units_1a7755451608399b6194256229b8973662" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>removeUnit</name></member>
+      <member refid="classlibcellml_1_1Units_1a07e14a3449ca878e2bdd622d8285ab5e" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>requiresImports</name></member>
+      <member refid="classlibcellml_1_1Units_1af8d21b1e69350e6ef873af66cc66033e" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>scalingFactor</name></member>
+      <member refid="classlibcellml_1_1Entity_1a13bdf688cdf007be5abad5dc628fd4ad" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>setId</name></member>
+      <member refid="classlibcellml_1_1ImportedEntity_1ab5e0d32cc24fced7cd19362f08e162eb" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>setImportReference</name></member>
+      <member refid="classlibcellml_1_1ImportedEntity_1a0c9e48f04f3039f5538d9d86d59a479e" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>setImportSource</name></member>
+      <member refid="classlibcellml_1_1NamedEntity_1a2528924ae9b2a69d8ff3b5b9b6f31d88" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>setName</name></member>
+      <member refid="classlibcellml_1_1Entity_1aa683f2c3c965b4710ebe45ab018beeac" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>setParent</name></member>
+      <member refid="classlibcellml_1_1Units_1a9d95cd6c83fb67880bb5767cc5703306" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>setSourceUnits</name></member>
+      <member refid="classlibcellml_1_1Units_1a0d2387a42a6df513cfa55d6ee8e6bf09" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>StandardUnit</name></member>
+      <member refid="classlibcellml_1_1Units_1addae2d562bef9b1289c8dac95c067429" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>unitAttributeExponentByIndex</name></member>
+      <member refid="classlibcellml_1_1Units_1a2b5f30109538e5e54788caec8989ce31" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>unitAttributeMultiplierByIndex</name></member>
+      <member refid="classlibcellml_1_1Units_1aaf37ed0b71b69d60791870621303067f" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>unitAttributePrefixByIndex</name></member>
+      <member refid="classlibcellml_1_1Units_1abb47e8ccd02ba626711f014722774f7f" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>unitAttributeReferenceByIndex</name></member>
+      <member refid="classlibcellml_1_1Units_1a6cfae83bc8eafd369a53c71226e28197" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>unitAttributes</name></member>
+      <member refid="classlibcellml_1_1Units_1a98570e6da12b2004cabf1d5233ce7105" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>unitAttributes</name></member>
+      <member refid="classlibcellml_1_1Units_1ae5a9dfbc3c08608ca6541344f318b18d" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>unitAttributes</name></member>
+      <member refid="classlibcellml_1_1Units_1a9e448209c749774e18546c785e03e34d" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>unitCount</name></member>
+      <member refid="classlibcellml_1_1Units_1a814e8e3ab8aac11d8e2ab3c1179c8307" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>Units</name></member>
+      <member refid="classlibcellml_1_1Units_1a3eeeca62d9998a308d4add586ce20a2f" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>Units</name></member>
+      <member refid="classlibcellml_1_1Units_1adc1df676f9179770507ae8857144bb5c" prot="private" virt="non-virtual"><scope>libcellml::Units</scope><name>Units</name></member>
+      <member refid="classlibcellml_1_1Units_1a81ce881c672e56d12f2483d84711e2b8" prot="private" virt="non-virtual"><scope>libcellml::Units</scope><name>Units</name></member>
+      <member refid="classlibcellml_1_1Entity_1a5a31822cf5beedcbc6f07c118b44b85b" prot="public" virt="virtual"><scope>libcellml::Units</scope><name>~Entity</name></member>
+      <member refid="classlibcellml_1_1ImportedEntity_1aa2a47a741f8e6980dbc6c84e004442fb" prot="public" virt="virtual"><scope>libcellml::Units</scope><name>~ImportedEntity</name></member>
+      <member refid="classlibcellml_1_1NamedEntity_1a10d6be107346d37bc540652d5ab9939f" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>~NamedEntity</name></member>
+      <member refid="classlibcellml_1_1Units_1afc146f8dc2dd955212134244f2676120" prot="public" virt="non-virtual"><scope>libcellml::Units</scope><name>~Units</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classlibcellml_1_1Validator" kind="class" language="C++" prot="public">
+    <compoundname>libcellml::Validator</compoundname>
+    <basecompoundref refid="classlibcellml_1_1Logger" prot="public" virt="non-virtual">libcellml::Logger</basecompoundref>
+    <includes refid="validator_8h" local="no">validator.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlibcellml_1_1Validator_1a45c365a696f5f1077aceb6fc0071b78b" prot="private" static="no" mutable="no">
+        <type>ValidatorImpl *</type>
+        <definition>ValidatorImpl* libcellml::Validator::mPimpl</definition>
+        <argsstring></argsstring>
+        <name>mPimpl</name>
+        <briefdescription>
+<para>Forward declaration for pImpl idiom. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Private member to implementation pointer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/validator.h" line="66" column="19" bodyfile="libcellml/validator.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlibcellml_1_1Validator_1a7e51d84a858a4ec49aa05d5a7ff64280" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Validator::~Validator</definition>
+        <argsstring>() override</argsstring>
+        <name>~Validator</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/validator.h" line="35" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Validator_1aa31e9e96dd9d982391af74b2651ecbe5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Validator::Validator</definition>
+        <argsstring>(const Validator &amp;rhs)=delete</argsstring>
+        <name>Validator</name>
+        <param>
+          <type>const <ref refid="classlibcellml_1_1Validator" kindref="compound">Validator</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/validator.h" line="36" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Validator_1a465f25f024c9539e0da8d3a4a2838631" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Validator::Validator</definition>
+        <argsstring>(Validator &amp;&amp;rhs) noexcept=delete</argsstring>
+        <name>Validator</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1Validator" kindref="compound">Validator</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/validator.h" line="37" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Validator_1a6848afeb2dfa4b168d1982e21b5a0e9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1Validator" kindref="compound">Validator</ref> &amp;</type>
+        <definition>Validator&amp; libcellml::Validator::operator=</definition>
+        <argsstring>(Validator rhs)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1Validator" kindref="compound">Validator</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/validator.h" line="38" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Validator_1a6152a9a54bd3c6df66c737fa7c72b25b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Validator::validateModel</definition>
+        <argsstring>(const ModelPtr &amp;model)</argsstring>
+        <name>validateModel</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref> &amp;</type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+<para>Validate the <computeroutput>model</computeroutput> using the CellML 2.0 Specification. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Validate the given <computeroutput>model</computeroutput> and its encapsulated entities using the CellML 2.0 Specification. Any errors will be logged in the <computeroutput><ref refid="classlibcellml_1_1Validator" kindref="compound">Validator</ref></computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The model to validate. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/validator.h" line="60" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classlibcellml_1_1Validator_1a079baab053884117daef77e712223682" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a42fe206472a9c34ff14f8cdbbb7b9fd2" kindref="member">ValidatorPtr</ref></type>
+        <definition>static ValidatorPtr libcellml::Validator::create</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>create</name>
+        <briefdescription>
+<para>Create a <computeroutput><ref refid="classlibcellml_1_1Validator" kindref="compound">Validator</ref></computeroutput> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Factory method to create a <computeroutput><ref refid="classlibcellml_1_1Validator" kindref="compound">Validator</ref></computeroutput>. Create a validator with::</para>
+<para>ValidatorPtr validator = <ref refid="classlibcellml_1_1Validator_1a079baab053884117daef77e712223682" kindref="member">libcellml::Validator::create()</ref>;</para>
+<para><simplesect kind="return"><para>A smart pointer to a <computeroutput><ref refid="classlibcellml_1_1Validator" kindref="compound">Validator</ref></computeroutput> object. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/validator.h" line="50" column="25"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlibcellml_1_1Validator_1a1c55d6c3db0cd0c0efffced166733cdd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Validator::Validator</definition>
+        <argsstring>()</argsstring>
+        <name>Validator</name>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/validator.h" line="63" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classlibcellml_1_1Validator" kindref="compound">Validator</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classlibcellml_1_1Validator" kindref="compound">Validator</ref> class is for representing a CellML <ref refid="classlibcellml_1_1Validator" kindref="compound">Validator</ref>. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>libcellml::Logger</label>
+        <link refid="classlibcellml_1_1Logger"/>
+      </node>
+      <node id="1">
+        <label>libcellml::Validator</label>
+        <link refid="classlibcellml_1_1Validator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>libcellml::Logger</label>
+        <link refid="classlibcellml_1_1Logger"/>
+      </node>
+      <node id="1">
+        <label>libcellml::Validator</label>
+        <link refid="classlibcellml_1_1Validator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libcellml/validator.h" line="33" column="1" bodyfile="libcellml/validator.h" bodystart="32" bodyend="67"/>
+    <listofallmembers>
+      <member refid="classlibcellml_1_1Logger_1afb047604e88a6044b27d7f6933744565" prot="public" virt="non-virtual"><scope>libcellml::Validator</scope><name>addIssue</name></member>
+      <member refid="classlibcellml_1_1Validator_1a079baab053884117daef77e712223682" prot="public" virt="non-virtual"><scope>libcellml::Validator</scope><name>create</name></member>
+      <member refid="classlibcellml_1_1Logger_1a5a260a645de3be9ffb844ce3f7584c4f" prot="public" virt="non-virtual"><scope>libcellml::Validator</scope><name>error</name></member>
+      <member refid="classlibcellml_1_1Logger_1a6bb9f053eb4f1b743167b84bbf5e9b34" prot="public" virt="non-virtual"><scope>libcellml::Validator</scope><name>errorCount</name></member>
+      <member refid="classlibcellml_1_1Logger_1a278d9d1a65c4b56e26f3d490e4cffe6c" prot="public" virt="non-virtual"><scope>libcellml::Validator</scope><name>hint</name></member>
+      <member refid="classlibcellml_1_1Logger_1ae28a1b7b4fc758c71ddf1ddd0a9aceb6" prot="public" virt="non-virtual"><scope>libcellml::Validator</scope><name>hintCount</name></member>
+      <member refid="classlibcellml_1_1Logger_1a192650ae59ea8747feb6c4f09de6a389" prot="public" virt="non-virtual"><scope>libcellml::Validator</scope><name>issue</name></member>
+      <member refid="classlibcellml_1_1Logger_1a3c078e9502a10748ade938374faef6d9" prot="public" virt="non-virtual"><scope>libcellml::Validator</scope><name>issueCount</name></member>
+      <member refid="classlibcellml_1_1Logger_1aefeba7b186698f30222c7e4bfdc55a94" prot="public" virt="non-virtual"><scope>libcellml::Validator</scope><name>Logger</name></member>
+      <member refid="classlibcellml_1_1Logger_1a3795ed3f2bbc99ab6ffdd2620cb49e87" prot="public" virt="non-virtual"><scope>libcellml::Validator</scope><name>Logger</name></member>
+      <member refid="classlibcellml_1_1Logger_1af0d21280526fec6a2fdd6587f8fc276d" prot="protected" virt="non-virtual"><scope>libcellml::Validator</scope><name>Logger</name></member>
+      <member refid="classlibcellml_1_1Validator_1a45c365a696f5f1077aceb6fc0071b78b" prot="private" virt="non-virtual"><scope>libcellml::Validator</scope><name>mPimpl</name></member>
+      <member refid="classlibcellml_1_1Validator_1a6848afeb2dfa4b168d1982e21b5a0e9e" prot="public" virt="non-virtual"><scope>libcellml::Validator</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1Logger_1a10b7b226787510f9f3dc3f329eb416a1" prot="public" virt="non-virtual" ambiguityscope="libcellml::Logger::"><scope>libcellml::Validator</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1Logger_1af3d56e5511cd3d38e9a31f1f55758b61" prot="public" virt="non-virtual"><scope>libcellml::Validator</scope><name>removeAllIssues</name></member>
+      <member refid="classlibcellml_1_1Validator_1a6152a9a54bd3c6df66c737fa7c72b25b" prot="public" virt="non-virtual"><scope>libcellml::Validator</scope><name>validateModel</name></member>
+      <member refid="classlibcellml_1_1Validator_1aa31e9e96dd9d982391af74b2651ecbe5" prot="public" virt="non-virtual"><scope>libcellml::Validator</scope><name>Validator</name></member>
+      <member refid="classlibcellml_1_1Validator_1a465f25f024c9539e0da8d3a4a2838631" prot="public" virt="non-virtual"><scope>libcellml::Validator</scope><name>Validator</name></member>
+      <member refid="classlibcellml_1_1Validator_1a1c55d6c3db0cd0c0efffced166733cdd" prot="private" virt="non-virtual"><scope>libcellml::Validator</scope><name>Validator</name></member>
+      <member refid="classlibcellml_1_1Logger_1a610d4878881567899c6d47db5e625736" prot="public" virt="non-virtual"><scope>libcellml::Validator</scope><name>warning</name></member>
+      <member refid="classlibcellml_1_1Logger_1a6973054ad6d00d9bb6d2bfb488cdfebd" prot="public" virt="non-virtual"><scope>libcellml::Validator</scope><name>warningCount</name></member>
+      <member refid="classlibcellml_1_1Logger_1af10a83604f60870be932ac9986a49d85" prot="public" virt="virtual"><scope>libcellml::Validator</scope><name>~Logger</name></member>
+      <member refid="classlibcellml_1_1Validator_1a7e51d84a858a4ec49aa05d5a7ff64280" prot="public" virt="non-virtual"><scope>libcellml::Validator</scope><name>~Validator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
