@@ -10,7 +10,7 @@
         >
           <h2>
             Namespace:
-            <router-link :to="{ path: '/apidocs/' + namespace.refId }">{{
+            <router-link :to="{ path: `${basePath}/${namespace.refId}` }">{{
               namespace.name
             }}</router-link>
           </h2>
@@ -24,7 +24,7 @@
                 class="class-list-item"
               >
                 <router-link
-                  :to="{ path: '/apidocs/' + namespaceClass.refId }"
+                  :to="{ path: `${basePath}/${namespaceClass.refId}` }"
                   >{{ namespaceClass.name }}</router-link
                 >
               </li>
@@ -37,25 +37,20 @@
 </template>
 
 <script>
-// import { insertRoute } from '@/mixins/InsertRoute'
 
 export default {
   name: 'DoxygenMainContent',
-  // mixins: [insertRoute],
   props: {
     data: {
       type: Object,
       required: true,
     },
   },
-  // created() {
-  //   this.data.namespaces.forEach(namespace => {
-  //     // this.createAndInsertRoute(namespace.refId, 'Namespace', 'doxygen')
-  //     namespace.classes.forEach(class_ => {
-  //       // this.createAndInsertRoute(class_.refId, 'Class', 'doxygen')
-  //     })
-  //   })
-  // },
+  computed: {
+    basePath() {
+      return this.$route.fullPath
+    },
+  },
 }
 </script>
 
