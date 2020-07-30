@@ -6,7 +6,7 @@
         <h2>API Reference</h2>
         <ul>
           <li
-            v-for="(version, index) in versions"
+            v-for="(version, index) in apiVersions"
             :key="'api_reference_' + index"
           >
             <router-link :to="{ path: `help/api/${version}` }">
@@ -15,25 +15,33 @@
           </li>
         </ul>
         <h2>Tutorials</h2>
+        <ul>
+          <li
+            v-for="(version, index) in tutorialVersions"
+            :key="'api_reference_' + index"
+          >
+            <router-link :to="{ path: `help/tutorials/${version}` }">
+              <big>libCellML {{ version }} Tutorials</big>
+            </router-link>
+          </li>
+        </ul>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { getDoxygenVersions, getSphinxVersions } from '@/js/versions'
 
 export default {
   name: 'Documentation',
 
   data: () => {
-    return { versions: [] }
+    return { apiVersions: [], tutorialVersions: [] }
   },
   created() {
-    this.getVersions().then(response => {
-      this.versions = response
-    })
+    this.apiVersions = getDoxygenVersions()
+    this.tutorialVersions = getSphinxVersions()
   },
-  methods: mapActions('doxygen', ['getVersions']),
 }
 </script>

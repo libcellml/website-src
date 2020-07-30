@@ -1,10 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Home from '@/views/Home.vue'
 
 import store from '@/store'
-import { updateSphinxRoute } from '@/router/sphinx'
-import { updateDoxygenRoute } from '@/router/doxygen'
 
 Vue.use(VueRouter)
 
@@ -29,46 +27,16 @@ const routes = [
       ),
   },
   {
-    path: '/help/api/:version',
+    path: '/help/api/:version/:pageName?',
     name: 'API Reference',
-    props: true,
-    beforeEnter(routeTo, routeFrom, next) {
-      updateDoxygenRoute(routeTo, next)
-    },
     component: () =>
-      import(/* webpackChunkName: "doxygen" */ '../views/doxygen/Main.vue'),
+      import(/* webpackChunkName: "doxygen" */ '../views/HelpAPI.vue'),
   },
   {
-    path: '/help/api/:version/:pageName',
-    name: 'API Reference Section',
-    props: true,
-    beforeEnter(routeTo, routeFrom, next) {
-      updateDoxygenRoute(routeTo, next)
-    },
+    path: '/help/tutorials/:version/:pageName*',
+    name: 'Tutorials',
     component: () =>
-      import(
-        /* webpackChunkName: "dynamic" */ '../components/SkeletonComponent.vue'
-      ),
-  },
-  {
-    path: '/help/tutorials/:version/*',
-    name: 'TutorialPage',
-    props: true,
-    beforeEnter(routeTo, routeFrom, next) {
-      updateSphinxRoute(routeTo, next)
-    },
-    component: () =>
-      import(/* webpackChunkName: "sphinx" */ '../views/sphinx/Main.vue'),
-  },
-  {
-    path: '/help/tutorials/:version',
-    name: 'TutorialsIndex',
-    props: true,
-    beforeEnter(routeTo, routeFrom, next) {
-      updateSphinxRoute(routeTo, next)
-    },
-    component: () =>
-      import(/* webpackChunkName: "sphinx" */ '../views/sphinx/Main.vue'),
+      import(/* webpackChunkName: "sphinx" */ '../views/HelpTutorials.vue'),
   },
   {
     path: '/developers',

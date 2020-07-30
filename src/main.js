@@ -3,9 +3,17 @@ import App from './App.vue'
 import store from './store'
 import router from './router'
 import vuetify from './plugins/vuetify'
-import VHighlightJS from 'v-highlightjs'
 
-Vue.use(VHighlightJS)
+import DoxygenXml from 'vue-doxygen-xml'
+import SphinxXml from 'vue-sphinx-xml'
+import VueHighlightJS from 'vue-highlightjs'
+
+// import 'highlight.js/styles/xcode.css'
+
+Vue.use(DoxygenXml, { store })
+Vue.use(SphinxXml, { store })
+Vue.use(VueHighlightJS)
+
 Vue.config.productionTip = false
 
 new Vue({
