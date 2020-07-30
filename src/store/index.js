@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import * as doxygen from '@/store/modules/doxygen.js'
-import * as sphinx from '@/store/modules/sphinx.js'
 import * as notifications from '@/store/modules/notifications.js'
 
 Vue.use(Vuex)
@@ -31,5 +29,5 @@ export default new Vuex.Store({
       state.dynamicRoutes.push(value)
     },
   },
-  modules: { doxygen, sphinx, notifications },
+  modules: { notifications },
 })
