@@ -1,15 +1,44 @@
 import DoxygenService from '@/services/DoxygenService'
 import { decodeHTML } from '@/utils/utilities'
 
+const semver = require('semver')
+
+const semvercmp = (left, right) => {
+  if (semver.eq(left, right)) {
+    return 0
+  } else if (semver.lt(left, right)) {
+    return 1
+  }
+  return -1
+}
+
 export const namespaced = true
 
 export const state = {
-  pages: [],
+  pages: new Map(),
 }
 
 export const mutations = {
-  APPEND_PAGE(state, page) {
-    state.pages.push(page)
+  APPEND_PAGE(state, { version, page }) {
+    console.log('appending page', version, page)
+    if (!state.pages.has(version)) {
+      state.pages.set(version, [])
+    }
+    let pages = state.pages.get(version)
+    console.log(pages, page)
+    pages.push(page)
+    console.log(pages)
+    state.pages.set(version, pages)
+    console.log(state.pages)
+    console.log('done here.')
+  },
+  SET_VERSIONS(state, versions) {
+    console.log('setting versions')
+    console.log(versions)
+    versions.forEach(version => {
+      state.pages.set(version, [])
+    })
+    console.log(state.pages)
   },
 }
 
@@ -293,11 +322,23 @@ function parsePage(reference, pageText) {
 }
 
 export const actions = {
-  fetchPage({ dispatch, commit, getters }, page_name) {
-    return DoxygenService.getPage(page_name)
+  getVersions({ commit }) {
+    return DoxygenService.getVersions().then(response => {
+      let versions = response.data
+      commit('SET_VERSIONS', versions)
+      console.log('got versions')
+      console.log(versions)
+      versions.sort(semvercmp)
+      console.log(versions)
+      return versions
+    })
+  },
+  fetchPage({ dispatch, commit }, { version, page_name }) {
+    console.log('fetch page:', version, page_name)
+    return DoxygenService.getPage(version, page_name)
       .then(response => {
         const page = parsePage(page_name, response.data)
-        commit('APPEND_PAGE', page)
+        commit('APPEND_PAGE', { version, page })
         const notification = {
           type: 'success',
           title: 'Page successfully retrieved',
@@ -315,8 +356,9 @@ export const actions = {
         dispatch('notifications/add', notification, { root: true })
       })
   },
-  fetchDependeePages({ dispatch, commit, getters }, pageNameSource) {
-    const dependentPage = getters.getPageById(pageNameSource)
+  fetchDependeePages({ commit, getters }, { version, page_name_source }) {
+    console.log('getting involved', version, page_name_source)
+    const dependentPage = getters.getPageById(version, page_name_source)
     let pageNames = []
     if (dependentPage) {
       if (dependentPage.hasOwnProperty('baseClasses')) {
@@ -330,48 +372,49 @@ export const actions = {
 
     let promises = []
     pageNames.forEach(pageName => {
-      promises.push(DoxygenService.getPage(pageName))
+      promises.push(DoxygenService.getPage(version, pageName))
     })
     return Promise.all(promises).then(pagesReceived => {
       let i = 0
       pagesReceived.forEach(response => {
         const pageName = pageNames[i++]
         const parsedPage = parsePage(pageName, response.data)
-        commit('APPEND_PAGE', parsedPage)
+        commit('APPEND_PAGE', { version, page: parsedPage })
       })
     })
   },
 }
 
 export const getters = {
-  getPageById: state => id => {
-    return state.pages.find(page => page.id === id)
+  getPageById: state => (version, id) => {
+    console.log('page by id:', version, id, state.pages.get(version))
+    return state.pages.has(version)
+      ? state.pages.get(version).find(page => page.id === id)
+      : undefined
   },
-  getPageIdForReferenceId: state => reference => {
-    const candidatePage = state.pages.find(page =>
-      reference.startsWith(page.id),
-    )
+  getPageIdForReferenceId: state => (version, reference) => {
+    const candidatePage = state.pages
+      .get(version)
+      .find(page => reference.startsWith(page.id))
     if (candidatePage) {
       return candidatePage.id
     }
     return candidatePage
   },
-  getPageByName: state => name => {
-    return state.pages.find(page => page.name === name)
+  getPageByName: state => (version, name) => {
+    return state.pages.get(version).find(page => page.name === name)
   },
-  getPageCount: state => {
-    return state.pages.length
-  },
-  getDependeePages: (state, getters) => (id, recursive) => {
-    const originalPage = getters.getPageById(id)
+  getDependeePages: (state, getters) => (version, id, recursive) => {
+    const originalPage = getters.getPageById(version, id)
     let dependentPages = []
     if (originalPage.hasOwnProperty('baseClasses')) {
       originalPage.baseClasses.forEach(baseClass => {
         if (baseClass.refId) {
-          const dependentPage = getters.getPageById(baseClass.refId)
+          const dependentPage = getters.getPageById(version, baseClass.refId)
           dependentPages.push(dependentPage)
           if (!!recursive) {
             const dependentDependentPages = getters.getDependeePages(
+              version,
               dependentPage.id,
               true,
             )

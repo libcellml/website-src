@@ -34,7 +34,10 @@ export default {
       if (!this.isReferenceToCurrentPage()) {
         pageName = this.determinePageName()
         this.routeDescription.hash = this.determinePageLocation()
-        const existingPageWrapper = this.getPageById(pageName)
+        const existingPageWrapper = this.getPageById(
+          this.$route.params.version,
+          pageName,
+        )
         if (!existingPageWrapper) {
           this.$store.dispatch('sphinx/fetchPage', pageName)
         }

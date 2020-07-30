@@ -232,7 +232,7 @@ export default {
                   memberFunction.argsString,
                   memberFunction.returnType,
                   memberFunction.id,
-                  '/apidocs/' + dependee.id,
+                  `${route.fullPath}/${dependee.id}`,
                 ),
               )
             }
@@ -250,7 +250,8 @@ export default {
       this.listAllMembersState = !this.listAllMembersState
     },
     getDependees() {
-      return this.getDependeePages(this.data.id)
+      console.log('get dependees', this.data, this.$route)
+      return this.getDependeePages(this.$route.params.version, this.data.id)
     },
     createSimplifiedMember(
       refId,
