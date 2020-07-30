@@ -14,7 +14,10 @@ const apiClient = axios.create({
 })
 
 export default {
-  getPage(page) {
-    return apiClient.get('/' + page + '.xml')
+  getPage(version, page) {
+    return apiClient.get(`/${version}/${page}.xml`)
+  },
+  getVersions() {
+    return apiClient.get('/versions.json')
   },
 }

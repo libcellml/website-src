@@ -12,9 +12,10 @@
               :key="data.name + '_' + namespaceClassIndex"
               class="class-list-item"
             >
-              <router-link :to="{ path: '/apidocs/' + namespaceClass.refId }">{{
-                namespaceClass.name
-              }}</router-link>
+              <router-link
+                :to="{ path: `${route.fullPath}/${namespaceClass.refId}` }"
+                >{{ namespaceClass.name }}</router-link
+              >
             </li>
           </ul>
         </section>
