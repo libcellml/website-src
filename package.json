@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "github-deploy": "node scripts/github-deploy.js"
+    "github-deploy": "node scripts/github-deploy.js",
+    "update-versions": "node scripts/update-versions.js"
   },
   "dependencies": {
     "@mdi/js": "^5.1.45",
