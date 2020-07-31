@@ -1,4 +1,3 @@
-const execa = require('execa')
 const fs = require('fs')
 const semver = require('semver')
 
@@ -59,12 +58,11 @@ export const getSphinxVersions = () => {
   return ['${sphinxVersions}']
 }
 `
-      console.log(fileTemplate)
       fs.writeFile('src/js/versions.js', fileTemplate, err => {
         if (err) {
           throw err
         } else {
-          console.log('Successfully updated versions')
+          console.log('Successfully updated versions.')
         }
       })
     })
