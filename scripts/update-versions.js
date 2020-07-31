@@ -57,7 +57,6 @@ const stripOutSamePatchVersions = versions => {
           const strippedVersions = stripOutSamePatchVersions(entry.sphinx)
           sphinxVersions = semver.rsort(strippedVersions).join("', '")
         }
-
       })
       const fileTemplate = `// This file is generated do not edit!
 // To make modifications to this file change 'scripts/update-versions.js'.
