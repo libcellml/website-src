@@ -2,14 +2,6 @@ const execa = require('execa')
 const fs = require('fs')
 const semver = require('semver')
 
-// export const getDoxygenVersions = () => {
-//   return ['v0.1.0', 'v0.2.0']
-// }
-
-// export const getSphinxVersions = () => {
-//   return ['v0.1.1', 'v0.2.4', 'v0.3.2']
-// }
-
 const stripOutSamePatchVersions = versions => {
   let versionMap = new Map()
   let strippedVersions = []
@@ -33,7 +25,6 @@ const stripOutSamePatchVersions = versions => {
           reject(err)
         }
         resolve({ doxygen: files })
-        // console.log('read doxygen files!!!')
       })
     })
     const promiseSphinx = new Promise((resolve, reject) => {
@@ -42,7 +33,6 @@ const stripOutSamePatchVersions = versions => {
           reject(err)
         }
         resolve({ sphinx: files })
-        // console.log('read sphinx files!!!')
       })
     })
 
