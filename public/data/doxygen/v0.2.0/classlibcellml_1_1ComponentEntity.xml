@@ -1,0 +1,881 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classlibcellml_1_1ComponentEntity" kind="class" language="C++" prot="public">
+    <compoundname>libcellml::ComponentEntity</compoundname>
+    <basecompoundref refid="classlibcellml_1_1NamedEntity" prot="public" virt="non-virtual">libcellml::NamedEntity</basecompoundref>
+    <derivedcompoundref refid="classlibcellml_1_1Component" prot="public" virt="non-virtual">libcellml::Component</derivedcompoundref>
+    <derivedcompoundref refid="classlibcellml_1_1Model" prot="public" virt="non-virtual">libcellml::Model</derivedcompoundref>
+    <includes refid="componententity_8h" local="no">componententity.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlibcellml_1_1ComponentEntity_1a9bb2937e0ca5f47875ddbbb3c6b1ca92" prot="private" static="no" mutable="no">
+        <type>ComponentEntityImpl *</type>
+        <definition>ComponentEntityImpl* libcellml::ComponentEntity::mPimpl</definition>
+        <argsstring></argsstring>
+        <name>mPimpl</name>
+        <briefdescription>
+<para>Forward declaration for pImpl idiom. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Private member to implementation pointer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/componententity.h" line="311" column="25" bodyfile="libcellml/componententity.h" bodystart="310" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlibcellml_1_1ComponentEntity_1af8a1d66cb44978100650ce4bf6a0210b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::ComponentEntity::~ComponentEntity</definition>
+        <argsstring>() override</argsstring>
+        <name>~ComponentEntity</name>
+        <briefdescription>
+<para><ref refid="classlibcellml_1_1ComponentEntity" kindref="compound">ComponentEntity</ref> Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/componententity.h" line="34" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ComponentEntity_1aa64099956f860c66ef6def88ed46be23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::ComponentEntity::ComponentEntity</definition>
+        <argsstring>(const ComponentEntity &amp;rhs)=delete</argsstring>
+        <name>ComponentEntity</name>
+        <param>
+          <type>const <ref refid="classlibcellml_1_1ComponentEntity" kindref="compound">ComponentEntity</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/componententity.h" line="35" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ComponentEntity_1adf241e69f1f3cb2002b04f541621dc81" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::ComponentEntity::ComponentEntity</definition>
+        <argsstring>(ComponentEntity &amp;&amp;rhs) noexcept=delete</argsstring>
+        <name>ComponentEntity</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1ComponentEntity" kindref="compound">ComponentEntity</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/componententity.h" line="36" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ComponentEntity_1aee79d899f54d6e867ea2c1da57c355d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1ComponentEntity" kindref="compound">ComponentEntity</ref> &amp;</type>
+        <definition>ComponentEntity&amp; libcellml::ComponentEntity::operator=</definition>
+        <argsstring>(ComponentEntity rhs)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1ComponentEntity" kindref="compound">ComponentEntity</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/componententity.h" line="37" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ComponentEntity_1a67d368331ed3f0de22fad8e8ab130aed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::ComponentEntity::addComponent</definition>
+        <argsstring>(const ComponentPtr &amp;component)</argsstring>
+        <name>addComponent</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref> &amp;</type>
+          <declname>component</declname>
+        </param>
+        <briefdescription>
+<para>Add a child component to this component entity. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Add the given component as a child component of this component entity. If the given component doesn&apos;t have a parent then this component entity will be set as its parent. If the given component does have a parent then the given component will have this component entity set as its parent and its old parent will no longer have the given component as a child.</para>
+<para>If the addition of the given component creates a cycle of components the given component will not be added to this component entity and it will not have this component entity set as its parent. The component will keep its current parent and it will remain a child of its current parent.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>component</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The component to add.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the component was added, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/componententity.h" line="58" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ComponentEntity_1a072c8ccf3fb82e4a0ab7084bb37e02e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::ComponentEntity::removeComponent</definition>
+        <argsstring>(size_t index)</argsstring>
+        <name>removeComponent</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Remove the component at the given <computeroutput>index</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove the component with the given <computeroutput>index</computeroutput>. <computeroutput>index</computeroutput> must be in the range [0, #components).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the component to remove.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the component was removed, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/componententity.h" line="70" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ComponentEntity_1afbe4e6e72d68c88fa909c08a90d68bdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::ComponentEntity::removeComponent</definition>
+        <argsstring>(const std::string &amp;name, bool searchEncapsulated=true)</argsstring>
+        <name>removeComponent</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>searchEncapsulated</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove the component with the given <computeroutput>name</computeroutput>.</para>
+<para>Remove the first component found that matches the given <computeroutput>name</computeroutput>. If <computeroutput>searchEncapsulated</computeroutput> is <computeroutput>true</computeroutput> (default) this will also search for the named component through this component&apos;s encapsulated components.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the component to remove. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>searchEncapsulated</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Boolean flag to indicate whether we should also search encapsulated components for the component with the specified <computeroutput>name</computeroutput>. Default value is <computeroutput>true</computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the component was removed, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/componententity.h" line="87" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ComponentEntity_1af7484b56f626f4c614cad982aa79cb2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::ComponentEntity::removeComponent</definition>
+        <argsstring>(const ComponentPtr &amp;component, bool searchEncapsulated=true)</argsstring>
+        <name>removeComponent</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref> &amp;</type>
+          <declname>component</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>searchEncapsulated</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove the component with the given pointer.</para>
+<para>Remove the component with the pointer <computeroutput>component</computeroutput>. If <computeroutput>searchEncapsulated</computeroutput> is <computeroutput>true</computeroutput> (default) this will also search for the component pointer through this component&apos;s encapsulated components.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>component</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the component to remove. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>searchEncapsulated</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Boolean flag to indicate whether we should also search encapsulated components for the specified <computeroutput>component</computeroutput> pointer. Default value is <computeroutput>true</computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the component was removed, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/componententity.h" line="103" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ComponentEntity_1ae9a8e5de907fc82c2448b80c70ab7d6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::ComponentEntity::removeAllComponents</definition>
+        <argsstring>()</argsstring>
+        <name>removeAllComponents</name>
+        <briefdescription>
+<para>Remove all components stored in this component entity. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears all components that have been added to this component entity. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/componententity.h" line="110" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ComponentEntity_1aad863d65f1a3c0774b4e9bdad07e4156" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::ComponentEntity::containsComponent</definition>
+        <argsstring>(const std::string &amp;name, bool searchEncapsulated=true) const</argsstring>
+        <name>containsComponent</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>searchEncapsulated</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Tests to see if the named component is contained within this component entity. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Tests to see if the component with the given <computeroutput>name</computeroutput> is contained within this component entity. If <computeroutput>searchEncapsulated</computeroutput> is <computeroutput>true</computeroutput> (default) this will also search for the named component in this component&apos;s encapsulated components. Returns <computeroutput>true</computeroutput> if the component is in the component entity and <computeroutput>false</computeroutput> otherwise.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The component name to test for existence in this component entity. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>searchEncapsulated</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Boolean flag to indicate whether we should also search encapsulated components for the component with the specified <computeroutput>name</computeroutput>. Default value is <computeroutput>true</computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the named component is in this component entity and <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/componententity.h" line="126" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ComponentEntity_1a68436a36a65a1ab77e160810f3ae6248" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::ComponentEntity::containsComponent</definition>
+        <argsstring>(const ComponentPtr &amp;component, bool searchEncapsulated=true) const</argsstring>
+        <name>containsComponent</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref> &amp;</type>
+          <declname>component</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>searchEncapsulated</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Tests to see if the component pointer is contained within this component.</para>
+<para>Tests to see if the argument component pointer <computeroutput>component</computeroutput> is contained within this component entity. If <computeroutput>searchEncapsulated</computeroutput> is <computeroutput>true</computeroutput> (default) this will also search for the component pointer in this component&apos;s encapsulated components. Returns <computeroutput>true</computeroutput> if the component is in the component entity and <computeroutput>false</computeroutput> otherwise.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>component</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The component pointer to test for existence in this component entity. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>searchEncapsulated</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Boolean flag to indicate whether we should also search encapsulated components for the specified <computeroutput>component</computeroutput> pointer. Default value is <computeroutput>true</computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the component is in the component entity and <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/componententity.h" line="144" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ComponentEntity_1afdfd2155613501299efc923a2f507103" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref></type>
+        <definition>ComponentPtr libcellml::ComponentEntity::component</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>component</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Get a component at the given <computeroutput>index</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a reference to a component at the given <computeroutput>index</computeroutput>. <computeroutput>index</computeroutput> must be in the range [0, #components).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the <ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref> to return.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref> at the given <computeroutput>index</computeroutput> on success, <computeroutput>nullptr</computeroutput> on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/componententity.h" line="156" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ComponentEntity_1a692e7f572ff63264e8ca4ffeefb5dc2b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref></type>
+        <definition>ComponentPtr libcellml::ComponentEntity::component</definition>
+        <argsstring>(const std::string &amp;name, bool searchEncapsulated=true) const</argsstring>
+        <name>component</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>searchEncapsulated</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a component with the given <computeroutput>name</computeroutput>.</para>
+<para>Returns a component with the given <computeroutput>name</computeroutput>. If <computeroutput>searchEncapsulated</computeroutput> is <computeroutput>true</computeroutput> (default) this will also search for the named component through this component&apos;s encapsulated components. If the <computeroutput>name</computeroutput> is does not match a named component a <computeroutput>nullptr</computeroutput> is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the <ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref> to return. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>searchEncapsulated</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Boolean flag to indicate whether we should also search encapsulated components for the component with the specified <computeroutput>name</computeroutput>. Default value is <computeroutput>true</computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref> with the given <computeroutput>name</computeroutput> on success, <computeroutput>nullptr</computeroutput> on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/componententity.h" line="173" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ComponentEntity_1a4d18a854588a9b21eb1c5b861fdb6516" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref></type>
+        <definition>ComponentPtr libcellml::ComponentEntity::takeComponent</definition>
+        <argsstring>(size_t index)</argsstring>
+        <name>takeComponent</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Take the component at the given <computeroutput>index</computeroutput> and return it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes the component at the given <computeroutput>index</computeroutput> position and returns it. <computeroutput>index</computeroutput> must be in the range [0, #components).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the <ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref> to take.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref> at the given <computeroutput>index</computeroutput>, <computeroutput>nullptr</computeroutput> on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/componententity.h" line="185" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ComponentEntity_1a1ea65bf35de168786aff5c94c7236ddc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref></type>
+        <definition>ComponentPtr libcellml::ComponentEntity::takeComponent</definition>
+        <argsstring>(const std::string &amp;name, bool searchEncapsulated=true)</argsstring>
+        <name>takeComponent</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>searchEncapsulated</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Take the component with the given <computeroutput>name</computeroutput> and return it.</para>
+<para>Takes the component with the given <computeroutput>name</computeroutput> and returns it. If <computeroutput>searchEncapsulated</computeroutput> is <computeroutput>true</computeroutput> (default) this will also search for the named component through this component&apos;s encapsulated components.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the <ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref> to take. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>searchEncapsulated</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Boolean flag to indicate whether we should also search encapsulated components for the component with the specified <computeroutput>name</computeroutput>. Default value is <computeroutput>true</computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref> identified with the given <computeroutput>name</computeroutput>, <computeroutput>nullptr</computeroutput> on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/componententity.h" line="202" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ComponentEntity_1ad222685ebe509ecc4b768882857e4ba6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::ComponentEntity::replaceComponent</definition>
+        <argsstring>(size_t index, const ComponentPtr &amp;component)</argsstring>
+        <name>replaceComponent</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref> &amp;</type>
+          <declname>component</declname>
+        </param>
+        <briefdescription>
+<para>Replace a component at the given <computeroutput>index</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Replaces the component at the <computeroutput>index</computeroutput> with component <computeroutput>c</computeroutput>. <computeroutput>index</computeroutput> must be in the range [0, #components).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the <ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref> to replace. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>component</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The component to be used as a replacement.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the component was replaced, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/componententity.h" line="215" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ComponentEntity_1a1f1ea90ed988b84c2b6e23acc92292ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::ComponentEntity::replaceComponent</definition>
+        <argsstring>(const std::string &amp;name, const ComponentPtr &amp;component, bool searchEncapsulated=true)</argsstring>
+        <name>replaceComponent</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref> &amp;</type>
+          <declname>component</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>searchEncapsulated</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Replace a component with the given <computeroutput>name</computeroutput>.</para>
+<para>Replaces the component with the given <computeroutput>name</computeroutput> with <computeroutput>component</computeroutput>. If <computeroutput>searchEncapsulated</computeroutput> is <computeroutput>true</computeroutput> (default) this will also search for the named component through this component&apos;s encapsulated components. If <computeroutput>name</computeroutput> is not found in the components children then no replacement is made.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the <ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref> to replace. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>component</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref> to use for replacement. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>searchEncapsulated</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Boolean flag to indicate whether we should also search encapsulated components for the component with the specified <computeroutput>name</computeroutput>. Default value is <computeroutput>true</computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the component was replaced, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/componententity.h" line="234" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ComponentEntity_1a71b9bdf177ee99042505e32e8846dcdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::ComponentEntity::replaceComponent</definition>
+        <argsstring>(const ComponentPtr &amp;oldComponent, const ComponentPtr &amp;newComponent, bool searchEncapsulated=true)</argsstring>
+        <name>replaceComponent</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref> &amp;</type>
+          <declname>oldComponent</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref> &amp;</type>
+          <declname>newComponent</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>searchEncapsulated</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Replace the given component.</para>
+<para>Replaces the given component <computeroutput>oldComponent</computeroutput> with <computeroutput>newComponent</computeroutput>. If <computeroutput>searchEncapsulated</computeroutput> is <computeroutput>true</computeroutput> (default) this will also search for the component through this component&apos;s encapsulated components. If <computeroutput>oldComponent</computeroutput> is not found in the components children then no replacement is made.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>oldComponent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref> to replace. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newComponent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref> to use for replacement. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>searchEncapsulated</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Boolean flag to indicate whether we should also search encapsulated components for <computeroutput>oldComponent</computeroutput>. Default value is <computeroutput>true</computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the component was replaced, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/componententity.h" line="253" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ComponentEntity_1ae8aa01faf601faf5b6bd3bf2feca8414" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::ComponentEntity::componentCount</definition>
+        <argsstring>() const</argsstring>
+        <name>componentCount</name>
+        <briefdescription>
+<para>Get the number of components in the component. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of components the component contains.</para>
+<para><simplesect kind="return"><para>The number of components. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/componententity.h" line="262" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ComponentEntity_1a6e00f015eb45d96bfad052e53c4db280" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::ComponentEntity::setEncapsulationId</definition>
+        <argsstring>(const std::string &amp;id)</argsstring>
+        <name>setEncapsulationId</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Set the encapsulation Id for this entity. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The encapsulation Id is placed on the XML element for this entity. For the <computeroutput><ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref></computeroutput> class this is the &apos;encapsulation&apos; element that is the root element for the models structure. For the <computeroutput><ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref></computeroutput> class this is the &apos;component_ref&apos; element that references the component it represents in the structure.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1ComponentEntity_1ade4b563a5aaa366c6b48d91beaad8d3c" kindref="member">encapsulationId</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/componententity.h" line="277" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ComponentEntity_1ade4b563a5aaa366c6b48d91beaad8d3c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::ComponentEntity::encapsulationId</definition>
+        <argsstring>() const</argsstring>
+        <name>encapsulationId</name>
+        <briefdescription>
+<para>Get the encapsulation Id for this entity. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The encapsulation Id is placed on the XML element for this entity. For the <computeroutput><ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref></computeroutput> class this is the &apos;encapsulation&apos; element that is the root element for the models structure. For the <computeroutput><ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref></computeroutput> class this is the &apos;component_ref&apos; element that references the component it represents in the structure.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1ComponentEntity_1a6e00f015eb45d96bfad052e53c4db280" kindref="member">setEncapsulationId</ref></para>
+</simplesect>
+<simplesect kind="return"><para>The <computeroutput>std::string</computeroutput> of the encapsulation Id. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/componententity.h" line="292" column="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classlibcellml_1_1ComponentEntity_1a7b2b78965a148814ac7e17af8df11737" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool libcellml::ComponentEntity::doAddComponent</definition>
+        <argsstring>(const ComponentPtr &amp;component)</argsstring>
+        <name>doAddComponent</name>
+        <reimplementedby refid="classlibcellml_1_1Model_1a4ceb895e818175f55049274768d9c755">doAddComponent</reimplementedby>
+        <reimplementedby refid="classlibcellml_1_1Component_1afb69e5e452e94726d1e85946bc2f4db9">doAddComponent</reimplementedby>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref> &amp;</type>
+          <declname>component</declname>
+        </param>
+        <briefdescription>
+<para>Virtual add component method to be implemented by derived classes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Virtual addComponent method to allow the model and component classes to implement their own versions.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>component</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ComponentPtr to add to the list of components.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the component was added, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/componententity.h" line="305" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ComponentEntity_1ab9069d2fb053e868565a8dec5f7bc214" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::ComponentEntity::ComponentEntity</definition>
+        <argsstring>()</argsstring>
+        <name>ComponentEntity</name>
+        <briefdescription>
+<para><ref refid="classlibcellml_1_1ComponentEntity" kindref="compound">ComponentEntity</ref> Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/componententity.h" line="307" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classlibcellml_1_1ComponentEntity" kindref="compound">ComponentEntity</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The interface class for managing Components. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>libcellml::NamedEntity</label>
+        <link refid="classlibcellml_1_1NamedEntity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>libcellml::Component</label>
+        <link refid="classlibcellml_1_1Component"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>libcellml::Entity</label>
+        <link refid="classlibcellml_1_1Entity"/>
+      </node>
+      <node id="5">
+        <label>libcellml::Model</label>
+        <link refid="classlibcellml_1_1Model"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>libcellml::ComponentEntity</label>
+        <link refid="classlibcellml_1_1ComponentEntity"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>libcellml::NamedEntity</label>
+        <link refid="classlibcellml_1_1NamedEntity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>libcellml::Entity</label>
+        <link refid="classlibcellml_1_1Entity"/>
+      </node>
+      <node id="1">
+        <label>libcellml::ComponentEntity</label>
+        <link refid="classlibcellml_1_1ComponentEntity"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libcellml/componententity.h" line="32" column="1" bodyfile="libcellml/componententity.h" bodystart="31" bodyend="312"/>
+    <listofallmembers>
+      <member refid="classlibcellml_1_1ComponentEntity_1a67d368331ed3f0de22fad8e8ab130aed" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>addComponent</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1afdfd2155613501299efc923a2f507103" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>component</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1a692e7f572ff63264e8ca4ffeefb5dc2b" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>component</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1ae8aa01faf601faf5b6bd3bf2feca8414" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>componentCount</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1aa64099956f860c66ef6def88ed46be23" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>ComponentEntity</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1adf241e69f1f3cb2002b04f541621dc81" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>ComponentEntity</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1ab9069d2fb053e868565a8dec5f7bc214" prot="protected" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>ComponentEntity</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1aad863d65f1a3c0774b4e9bdad07e4156" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>containsComponent</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1a68436a36a65a1ab77e160810f3ae6248" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>containsComponent</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1a7b2b78965a148814ac7e17af8df11737" prot="protected" virt="virtual"><scope>libcellml::ComponentEntity</scope><name>doAddComponent</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1ade4b563a5aaa366c6b48d91beaad8d3c" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>encapsulationId</name></member>
+      <member refid="classlibcellml_1_1Entity_1aaf1f5a51be3e2fcc22113b2c2428967c" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>Entity</name></member>
+      <member refid="classlibcellml_1_1Entity_1a5ccd682791b20cc0431cd3abe265f734" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>Entity</name></member>
+      <member refid="classlibcellml_1_1Entity_1a25d413f1c9f4a8cb37aa2d78d43267ba" prot="protected" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>Entity</name></member>
+      <member refid="classlibcellml_1_1Entity_1ac8e6f0e0addd7536902c0eb301f92675" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>hasAncestor</name></member>
+      <member refid="classlibcellml_1_1Entity_1abe2d58ec4e451613e18a722d1799fc05" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>hasParent</name></member>
+      <member refid="classlibcellml_1_1Entity_1a05439119b7eeab2fc61f8aa5a86eb092" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>id</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1a9bb2937e0ca5f47875ddbbb3c6b1ca92" prot="private" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>mPimpl</name></member>
+      <member refid="classlibcellml_1_1NamedEntity_1ab643dec674588048b4532c3f2819726a" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>name</name></member>
+      <member refid="classlibcellml_1_1NamedEntity_1ad1fbde6cf933f9b969e3c0a582664874" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>NamedEntity</name></member>
+      <member refid="classlibcellml_1_1NamedEntity_1a5c5b4e6a20db48729ad713612f390d40" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>NamedEntity</name></member>
+      <member refid="classlibcellml_1_1NamedEntity_1a88f342c4a1c70052606cfd65b2ac34ee" prot="protected" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>NamedEntity</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1aee79d899f54d6e867ea2c1da57c355d1" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1NamedEntity_1a51ff3c3e0a148a0cf6a05d2e6ff516ee" prot="public" virt="non-virtual" ambiguityscope="libcellml::NamedEntity::"><scope>libcellml::ComponentEntity</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1Entity_1afe4e23aec9bc2518ace3dd68495fce76" prot="public" virt="non-virtual" ambiguityscope="libcellml::Entity::"><scope>libcellml::ComponentEntity</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1Entity_1ab1ed8e5a980a11d18c0c856a261b3947" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>parent</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1ae9a8e5de907fc82c2448b80c70ab7d6b" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>removeAllComponents</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1a072c8ccf3fb82e4a0ab7084bb37e02e4" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>removeComponent</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1afbe4e6e72d68c88fa909c08a90d68bdf" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>removeComponent</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1af7484b56f626f4c614cad982aa79cb2e" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>removeComponent</name></member>
+      <member refid="classlibcellml_1_1Entity_1aedb890f3e8ac654db92c817268425705" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>removeParent</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1ad222685ebe509ecc4b768882857e4ba6" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>replaceComponent</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1a1f1ea90ed988b84c2b6e23acc92292ca" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>replaceComponent</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1a71b9bdf177ee99042505e32e8846dcdc" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>replaceComponent</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1a6e00f015eb45d96bfad052e53c4db280" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>setEncapsulationId</name></member>
+      <member refid="classlibcellml_1_1Entity_1a13bdf688cdf007be5abad5dc628fd4ad" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>setId</name></member>
+      <member refid="classlibcellml_1_1NamedEntity_1a2528924ae9b2a69d8ff3b5b9b6f31d88" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>setName</name></member>
+      <member refid="classlibcellml_1_1Entity_1aa683f2c3c965b4710ebe45ab018beeac" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>setParent</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1a4d18a854588a9b21eb1c5b861fdb6516" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>takeComponent</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1a1ea65bf35de168786aff5c94c7236ddc" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>takeComponent</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1af8a1d66cb44978100650ce4bf6a0210b" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>~ComponentEntity</name></member>
+      <member refid="classlibcellml_1_1Entity_1a5a31822cf5beedcbc6f07c118b44b85b" prot="public" virt="virtual"><scope>libcellml::ComponentEntity</scope><name>~Entity</name></member>
+      <member refid="classlibcellml_1_1NamedEntity_1a10d6be107346d37bc540652d5ab9939f" prot="public" virt="non-virtual"><scope>libcellml::ComponentEntity</scope><name>~NamedEntity</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

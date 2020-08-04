@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="mainpage_8dox" kind="file" language="Markdown">
+    <compoundname>mainpage.dox</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline></codeline>
+<codeline><highlight class="normal">///<sp/><sp/>@mainpage<sp/>libCellML</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">libCellML<sp/>Code<sp/>Documentation</highlight></codeline>
+<codeline><highlight class="normal">============================</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>is<sp/>the<sp/>documentation<sp/>for<sp/>the<sp/>source<sp/>code.</highlight></codeline>
+<codeline></codeline>
+    </programlisting>
+    <location file="mainpage.dox"/>
+  </compounddef>
+</doxygen>

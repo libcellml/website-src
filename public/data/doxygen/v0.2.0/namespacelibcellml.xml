@@ -1,0 +1,321 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacelibcellml" kind="namespace" language="C++">
+    <compoundname>libcellml</compoundname>
+    <innerclass refid="classlibcellml_1_1Component" prot="public">libcellml::Component</innerclass>
+    <innerclass refid="classlibcellml_1_1ComponentEntity" prot="public">libcellml::ComponentEntity</innerclass>
+    <innerclass refid="classlibcellml_1_1Entity" prot="public">libcellml::Entity</innerclass>
+    <innerclass refid="classlibcellml_1_1Generator" prot="public">libcellml::Generator</innerclass>
+    <innerclass refid="classlibcellml_1_1GeneratorProfile" prot="public">libcellml::GeneratorProfile</innerclass>
+    <innerclass refid="classlibcellml_1_1GeneratorVariable" prot="public">libcellml::GeneratorVariable</innerclass>
+    <innerclass refid="classlibcellml_1_1ImportedEntity" prot="public">libcellml::ImportedEntity</innerclass>
+    <innerclass refid="classlibcellml_1_1ImportSource" prot="public">libcellml::ImportSource</innerclass>
+    <innerclass refid="classlibcellml_1_1Issue" prot="public">libcellml::Issue</innerclass>
+    <innerclass refid="classlibcellml_1_1Logger" prot="public">libcellml::Logger</innerclass>
+    <innerclass refid="classlibcellml_1_1Model" prot="public">libcellml::Model</innerclass>
+    <innerclass refid="classlibcellml_1_1NamedEntity" prot="public">libcellml::NamedEntity</innerclass>
+    <innerclass refid="classlibcellml_1_1Parser" prot="public">libcellml::Parser</innerclass>
+    <innerclass refid="classlibcellml_1_1Printer" prot="public">libcellml::Printer</innerclass>
+    <innerclass refid="classlibcellml_1_1Reset" prot="public">libcellml::Reset</innerclass>
+    <innerclass refid="classlibcellml_1_1Units" prot="public">libcellml::Units</innerclass>
+    <innerclass refid="classlibcellml_1_1Validator" prot="public">libcellml::Validator</innerclass>
+    <innerclass refid="classlibcellml_1_1Variable" prot="public">libcellml::Variable</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacelibcellml_1ad323ac6f8bcdf4740a0209906bc33ac2" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classlibcellml_1_1Issue" kindref="compound">Issue</ref> &gt;</type>
+        <definition>using libcellml::IssuePtr = typedef std::shared_ptr&lt;Issue&gt;</definition>
+        <argsstring></argsstring>
+        <name>IssuePtr</name>
+        <briefdescription>
+<para>Type definition for shared issue pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="25" column="1" bodyfile="libcellml/types.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacelibcellml_1a0f78fdeb24d2bd8779351c5d02c050e2" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classlibcellml_1_1Generator" kindref="compound">Generator</ref> &gt;</type>
+        <definition>using libcellml::GeneratorPtr = typedef std::shared_ptr&lt;Generator&gt;</definition>
+        <argsstring></argsstring>
+        <name>GeneratorPtr</name>
+        <briefdescription>
+<para>Type definition for shared generator pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="27" column="1" bodyfile="libcellml/types.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacelibcellml_1aea4687d4be74e5654468ad4b60b314a7" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classlibcellml_1_1GeneratorProfile" kindref="compound">GeneratorProfile</ref> &gt;</type>
+        <definition>using libcellml::GeneratorProfilePtr = typedef std::shared_ptr&lt;GeneratorProfile&gt;</definition>
+        <argsstring></argsstring>
+        <name>GeneratorProfilePtr</name>
+        <briefdescription>
+<para>Type definition for shared generator variable pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="29" column="1" bodyfile="libcellml/types.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacelibcellml_1a2e4e999390e5db069922d3cbc69987f7" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classlibcellml_1_1GeneratorVariable" kindref="compound">GeneratorVariable</ref> &gt;</type>
+        <definition>using libcellml::GeneratorVariablePtr = typedef std::shared_ptr&lt;GeneratorVariable&gt;</definition>
+        <argsstring></argsstring>
+        <name>GeneratorVariablePtr</name>
+        <briefdescription>
+<para>Type definition for shared generator variable pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="31" column="1" bodyfile="libcellml/types.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacelibcellml_1a320b3bfa04062440024ded8ba3d2aa9f" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classlibcellml_1_1Logger" kindref="compound">Logger</ref> &gt;</type>
+        <definition>using libcellml::LoggerPtr = typedef std::shared_ptr&lt;Logger&gt;</definition>
+        <argsstring></argsstring>
+        <name>LoggerPtr</name>
+        <briefdescription>
+<para>Type definition for shared parser pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="33" column="1" bodyfile="libcellml/types.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacelibcellml_1a8b173eeb9712743770c113924ca0c6a4" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classlibcellml_1_1Parser" kindref="compound">Parser</ref> &gt;</type>
+        <definition>using libcellml::ParserPtr = typedef std::shared_ptr&lt;Parser&gt;</definition>
+        <argsstring></argsstring>
+        <name>ParserPtr</name>
+        <briefdescription>
+<para>Type definition for shared parser pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="35" column="1" bodyfile="libcellml/types.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacelibcellml_1a913339cf95fb4f383b7f463c7f89b31f" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classlibcellml_1_1Printer" kindref="compound">Printer</ref> &gt;</type>
+        <definition>using libcellml::PrinterPtr = typedef std::shared_ptr&lt;Printer&gt;</definition>
+        <argsstring></argsstring>
+        <name>PrinterPtr</name>
+        <briefdescription>
+<para>Type definition for shared printer pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="37" column="1" bodyfile="libcellml/types.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacelibcellml_1a42fe206472a9c34ff14f8cdbbb7b9fd2" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classlibcellml_1_1Validator" kindref="compound">Validator</ref> &gt;</type>
+        <definition>using libcellml::ValidatorPtr = typedef std::shared_ptr&lt;Validator&gt;</definition>
+        <argsstring></argsstring>
+        <name>ValidatorPtr</name>
+        <briefdescription>
+<para>Type definition for shared validator pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="39" column="1" bodyfile="libcellml/types.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref> &gt;</type>
+        <definition>using libcellml::ComponentPtr = typedef std::shared_ptr&lt;Component&gt;</definition>
+        <argsstring></argsstring>
+        <name>ComponentPtr</name>
+        <briefdescription>
+<para>Type definition for shared component pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="43" column="1" bodyfile="libcellml/types.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacelibcellml_1a76fd91b99bca74bddbf981b015b3c390" prot="public" static="no">
+        <type>std::shared_ptr&lt; const <ref refid="classlibcellml_1_1ComponentEntity" kindref="compound">ComponentEntity</ref> &gt;</type>
+        <definition>using libcellml::ComponentEntityConstPtr = typedef std::shared_ptr&lt;const ComponentEntity&gt;</definition>
+        <argsstring></argsstring>
+        <name>ComponentEntityConstPtr</name>
+        <briefdescription>
+<para>Type definition for shared component entity const pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="45" column="1" bodyfile="libcellml/types.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacelibcellml_1adcdadd836e96c444a55fc66b1e64b121" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classlibcellml_1_1ComponentEntity" kindref="compound">ComponentEntity</ref> &gt;</type>
+        <definition>using libcellml::ComponentEntityPtr = typedef std::shared_ptr&lt;ComponentEntity&gt;</definition>
+        <argsstring></argsstring>
+        <name>ComponentEntityPtr</name>
+        <briefdescription>
+<para>Type definition for shared component entity pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="46" column="1" bodyfile="libcellml/types.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacelibcellml_1abc54532bee96378fd9caabd0d50f615e" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classlibcellml_1_1Entity" kindref="compound">Entity</ref> &gt;</type>
+        <definition>using libcellml::EntityPtr = typedef std::shared_ptr&lt;Entity&gt;</definition>
+        <argsstring></argsstring>
+        <name>EntityPtr</name>
+        <briefdescription>
+<para>Type definition for shared entity pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="48" column="1" bodyfile="libcellml/types.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacelibcellml_1a264c28a2318a5adadd83ec8036c81660" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classlibcellml_1_1ImportedEntity" kindref="compound">ImportedEntity</ref> &gt;</type>
+        <definition>using libcellml::ImportedEntityPtr = typedef std::shared_ptr&lt;ImportedEntity&gt;</definition>
+        <argsstring></argsstring>
+        <name>ImportedEntityPtr</name>
+        <briefdescription>
+<para>Type definition for shared imported entity pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="50" column="1" bodyfile="libcellml/types.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacelibcellml_1ac2c4e6d1793d7214616c1548d8a9f502" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classlibcellml_1_1ImportSource" kindref="compound">ImportSource</ref> &gt;</type>
+        <definition>using libcellml::ImportSourcePtr = typedef std::shared_ptr&lt;ImportSource&gt;</definition>
+        <argsstring></argsstring>
+        <name>ImportSourcePtr</name>
+        <briefdescription>
+<para>Type definition for shared import source pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="52" column="1" bodyfile="libcellml/types.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref> &gt;</type>
+        <definition>using libcellml::ModelPtr = typedef std::shared_ptr&lt;Model&gt;</definition>
+        <argsstring></argsstring>
+        <name>ModelPtr</name>
+        <briefdescription>
+<para>Type definition for shared model pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="54" column="1" bodyfile="libcellml/types.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacelibcellml_1a329055beefacf51332628055453f390a" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref> &gt;</type>
+        <definition>using libcellml::ResetPtr = typedef std::shared_ptr&lt;Reset&gt;</definition>
+        <argsstring></argsstring>
+        <name>ResetPtr</name>
+        <briefdescription>
+<para>Type definition for shared reset pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="56" column="1" bodyfile="libcellml/types.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacelibcellml_1a3259debe09f915678b203e98100ea10a" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref> &gt;</type>
+        <definition>using libcellml::UnitsPtr = typedef std::shared_ptr&lt;Units&gt;</definition>
+        <argsstring></argsstring>
+        <name>UnitsPtr</name>
+        <briefdescription>
+<para>Type definition for shared units pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="58" column="1" bodyfile="libcellml/types.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref> &gt;</type>
+        <definition>using libcellml::VariablePtr = typedef std::shared_ptr&lt;Variable&gt;</definition>
+        <argsstring></argsstring>
+        <name>VariablePtr</name>
+        <briefdescription>
+<para>Type definition for shared variable pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="60" column="1" bodyfile="libcellml/types.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacelibcellml_1a082eaae4b2e4fa0481ce9dea59802571" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LIBCELLML_EXPORT unsigned int</type>
+        <definition>LIBCELLML_EXPORT unsigned int libcellml::version</definition>
+        <argsstring>()</argsstring>
+        <name>version</name>
+        <briefdescription>
+<para>Get the version number. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the version of the library as a number.</para>
+<para><simplesect kind="return"><para>An unsigned int to represent the version. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/version.h" line="32" column="31" declfile="libcellml/version.h" declline="32" declcolumn="31"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacelibcellml_1a4560e84ed40058dc1b182f18044dcb72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LIBCELLML_EXPORT std::string</type>
+        <definition>LIBCELLML_EXPORT std::string libcellml::versionString</definition>
+        <argsstring>()</argsstring>
+        <name>versionString</name>
+        <briefdescription>
+<para>Get the version string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The version string is in the format x.y.z, where the &quot;.&quot;s are literal, and x,y and z represent counting numbers, in which case x is the major version, y the minor version, and z the patch level.</para>
+<para><simplesect kind="return"><para>A string to represent the version. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/version.h" line="42" column="30" declfile="libcellml/version.h" declline="42" declcolumn="30"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libcellml/component.h" line="27" column="19"/>
+  </compounddef>
+</doxygen>

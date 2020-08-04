@@ -1,0 +1,273 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classlibcellml_1_1GeneratorVariable" kind="class" language="C++" prot="public">
+    <compoundname>libcellml::GeneratorVariable</compoundname>
+    <includes refid="generator_8h" local="no">generator.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classlibcellml_1_1GeneratorVariable_1aad301521877327e7316713d12d7d9be6" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Type</name>
+        <enumvalue id="classlibcellml_1_1GeneratorVariable_1aad301521877327e7316713d12d7d9be6a0c6f145df3d38249d59e1fb900373da4" prot="public">
+          <name>VARIABLE_OF_INTEGRATION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1GeneratorVariable_1aad301521877327e7316713d12d7d9be6a2b848a8cc886d253d21a77c43cd50aae" prot="public">
+          <name>STATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1GeneratorVariable_1aad301521877327e7316713d12d7d9be6a8d6b5cada83510220f59e00ce86d4d92" prot="public">
+          <name>CONSTANT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1GeneratorVariable_1aad301521877327e7316713d12d7d9be6a2f66fc6a6849237faa1c41a1cc817a09" prot="public">
+          <name>COMPUTED_CONSTANT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1GeneratorVariable_1aad301521877327e7316713d12d7d9be6a5c5e440cc3d6aed1fada5b21a045e2fe" prot="public">
+          <name>ALGEBRAIC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="40" column="1" bodyfile="libcellml/generator.h" bodystart="39" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classlibcellml_1_1GeneratorVariable_1a366b7823e659ab78d952a7d79662a4d6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class Generator</definition>
+        <argsstring></argsstring>
+        <name>Generator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="36" column="5" bodyfile="libcellml/generator.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlibcellml_1_1GeneratorVariable_1a07cade0807a1ca544b24b286c7cb277c" prot="private" static="no" mutable="no">
+        <type>GeneratorVariableImpl *</type>
+        <definition>GeneratorVariableImpl* libcellml::GeneratorVariable::mPimpl</definition>
+        <argsstring></argsstring>
+        <name>mPimpl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="101" column="27" bodyfile="libcellml/generator.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariable_1a33e7c0a3b5144012c5f898b3db5b7f8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::GeneratorVariable::~GeneratorVariable</definition>
+        <argsstring>()</argsstring>
+        <name>~GeneratorVariable</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="48" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariable_1a9d32165d44ab11a1577f5a12b9fe4c9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::GeneratorVariable::GeneratorVariable</definition>
+        <argsstring>(const GeneratorVariable &amp;rhs)=delete</argsstring>
+        <name>GeneratorVariable</name>
+        <param>
+          <type>const <ref refid="classlibcellml_1_1GeneratorVariable" kindref="compound">GeneratorVariable</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="49" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariable_1a9ee3236af07a60078b5528e265989bd6" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::GeneratorVariable::GeneratorVariable</definition>
+        <argsstring>(GeneratorVariable &amp;&amp;rhs) noexcept=delete</argsstring>
+        <name>GeneratorVariable</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1GeneratorVariable" kindref="compound">GeneratorVariable</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="50" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariable_1a5cd55f726e120f1c2ab221c950beb01a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1GeneratorVariable" kindref="compound">GeneratorVariable</ref> &amp;</type>
+        <definition>GeneratorVariable&amp; libcellml::GeneratorVariable::operator=</definition>
+        <argsstring>(GeneratorVariable rhs)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1GeneratorVariable" kindref="compound">GeneratorVariable</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="51" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariable_1a8e25f376408736e1f1106f19b0e11575" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref></type>
+        <definition>VariablePtr libcellml::GeneratorVariable::variable</definition>
+        <argsstring>() const</argsstring>
+        <name>variable</name>
+        <briefdescription>
+<para>Get the <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput> for this <computeroutput><ref refid="classlibcellml_1_1GeneratorVariable" kindref="compound">GeneratorVariable</ref></computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput> of this <computeroutput><ref refid="classlibcellml_1_1GeneratorVariable" kindref="compound">GeneratorVariable</ref></computeroutput>.</para>
+<para><simplesect kind="return"><para>The <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="72" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariable_1adabb3709406778d83bfb52f85a3a61b1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref></type>
+        <definition>ComponentPtr libcellml::GeneratorVariable::component</definition>
+        <argsstring>() const</argsstring>
+        <name>component</name>
+        <briefdescription>
+<para>Get the <computeroutput><ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref></computeroutput> for this <computeroutput><ref refid="classlibcellml_1_1GeneratorVariable" kindref="compound">GeneratorVariable</ref></computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the <computeroutput><ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref></computeroutput> of this <computeroutput><ref refid="classlibcellml_1_1GeneratorVariable" kindref="compound">GeneratorVariable</ref></computeroutput>. It is the <computeroutput><ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref></computeroutput> in which the <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput> is first defined (in the case of the variable of integration), initialised (in the case of a constant) or actually computed (in the case of a state, computed constant or algebraic variable). It may or may not be the same <computeroutput><ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref></computeroutput> as the parent component of the <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput>.</para>
+<para><simplesect kind="return"><para>The <computeroutput><ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref></computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="86" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariable_1a5493a697d16159ff3aae0dd3d00e5fd3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1GeneratorVariable_1aad301521877327e7316713d12d7d9be6" kindref="member">GeneratorVariable::Type</ref></type>
+        <definition>GeneratorVariable::Type libcellml::GeneratorVariable::type</definition>
+        <argsstring>() const</argsstring>
+        <name>type</name>
+        <briefdescription>
+<para>Get the <computeroutput>Type</computeroutput> for this <computeroutput><ref refid="classlibcellml_1_1GeneratorVariable" kindref="compound">GeneratorVariable</ref></computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the <computeroutput>Type</computeroutput> of this <computeroutput><ref refid="classlibcellml_1_1GeneratorVariable" kindref="compound">GeneratorVariable</ref></computeroutput>.</para>
+<para><simplesect kind="return"><para>The <computeroutput>Type</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="95" column="29"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariable_1aa1063b9e9af41770d082208897f1dd4c" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a2e4e999390e5db069922d3cbc69987f7" kindref="member">GeneratorVariablePtr</ref></type>
+        <definition>static GeneratorVariablePtr libcellml::GeneratorVariable::create</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>create</name>
+        <briefdescription>
+<para>Create a <computeroutput><ref refid="classlibcellml_1_1GeneratorVariable" kindref="compound">GeneratorVariable</ref></computeroutput> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Factory method to create a <computeroutput><ref refid="classlibcellml_1_1GeneratorVariable" kindref="compound">GeneratorVariable</ref></computeroutput>. Create a generator variable with::</para>
+<para>GeneratorVariablePtr generatorVariable = <ref refid="classlibcellml_1_1GeneratorVariable_1aa1063b9e9af41770d082208897f1dd4c" kindref="member">libcellml::GeneratorVariable::create()</ref>;</para>
+<para><simplesect kind="return"><para>A smart pointer to a <computeroutput><ref refid="classlibcellml_1_1GeneratorVariable" kindref="compound">GeneratorVariable</ref></computeroutput> object. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="63" column="33"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariable_1a15f842e7e75d90db970bc7bd60222b79" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::GeneratorVariable::GeneratorVariable</definition>
+        <argsstring>()</argsstring>
+        <name>GeneratorVariable</name>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="98" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classlibcellml_1_1GeneratorVariable" kindref="compound">GeneratorVariable</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classlibcellml_1_1GeneratorVariable" kindref="compound">GeneratorVariable</ref> class is for representing a variable in the context of a CellML <ref refid="classlibcellml_1_1Generator" kindref="compound">Generator</ref>, i.e. a constant, a computed constant or an algebraic variable. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>libcellml::GeneratorVariable</label>
+        <link refid="classlibcellml_1_1GeneratorVariable"/>
+      </node>
+    </collaborationgraph>
+    <location file="libcellml/generator.h" line="35" column="1" bodyfile="libcellml/generator.h" bodystart="34" bodyend="102"/>
+    <listofallmembers>
+      <member refid="classlibcellml_1_1GeneratorVariable_1adabb3709406778d83bfb52f85a3a61b1" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariable</scope><name>component</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariable_1aa1063b9e9af41770d082208897f1dd4c" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariable</scope><name>create</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariable_1a366b7823e659ab78d952a7d79662a4d6" prot="private" virt="non-virtual"><scope>libcellml::GeneratorVariable</scope><name>Generator</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariable_1a9d32165d44ab11a1577f5a12b9fe4c9e" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariable</scope><name>GeneratorVariable</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariable_1a9ee3236af07a60078b5528e265989bd6" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariable</scope><name>GeneratorVariable</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariable_1a15f842e7e75d90db970bc7bd60222b79" prot="private" virt="non-virtual"><scope>libcellml::GeneratorVariable</scope><name>GeneratorVariable</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariable_1a07cade0807a1ca544b24b286c7cb277c" prot="private" virt="non-virtual"><scope>libcellml::GeneratorVariable</scope><name>mPimpl</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariable_1a5cd55f726e120f1c2ab221c950beb01a" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariable</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariable_1aad301521877327e7316713d12d7d9be6" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariable</scope><name>Type</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariable_1a5493a697d16159ff3aae0dd3d00e5fd3" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariable</scope><name>type</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariable_1a8e25f376408736e1f1106f19b0e11575" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariable</scope><name>variable</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariable_1a33e7c0a3b5144012c5f898b3db5b7f8c" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariable</scope><name>~GeneratorVariable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

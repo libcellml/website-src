@@ -1,0 +1,320 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classlibcellml_1_1ImportSource" kind="class" language="C++" prot="public">
+    <compoundname>libcellml::ImportSource</compoundname>
+    <basecompoundref refid="classlibcellml_1_1Entity" prot="public" virt="non-virtual">libcellml::Entity</basecompoundref>
+    <includes refid="importsource_8h" local="no">importsource.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlibcellml_1_1ImportSource_1abc8de36018fa7183c2d493e90f815cd1" prot="private" static="no" mutable="no">
+        <type>ImportSourceImpl *</type>
+        <definition>ImportSourceImpl* libcellml::ImportSource::mPimpl</definition>
+        <argsstring></argsstring>
+        <name>mPimpl</name>
+        <briefdescription>
+<para>Forward declaration for pImpl idiom. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Private member to implementation pointer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importsource.h" line="116" column="22" bodyfile="libcellml/importsource.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlibcellml_1_1ImportSource_1a21256fb5dc6658b793da0dcd53493922" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::ImportSource::~ImportSource</definition>
+        <argsstring>() override</argsstring>
+        <name>~ImportSource</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importsource.h" line="35" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ImportSource_1a867dca6a472e22044f11e7cc67865fd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::ImportSource::ImportSource</definition>
+        <argsstring>(const ImportSource &amp;rhs)=delete</argsstring>
+        <name>ImportSource</name>
+        <param>
+          <type>const <ref refid="classlibcellml_1_1ImportSource" kindref="compound">ImportSource</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importsource.h" line="36" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ImportSource_1aadc4323d0cc9ce14d48f23416d4d146e" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::ImportSource::ImportSource</definition>
+        <argsstring>(ImportSource &amp;&amp;rhs) noexcept=delete</argsstring>
+        <name>ImportSource</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1ImportSource" kindref="compound">ImportSource</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importsource.h" line="37" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ImportSource_1a14b96ea22c1362ee6f1a2874df00a532" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1ImportSource" kindref="compound">ImportSource</ref> &amp;</type>
+        <definition>ImportSource&amp; libcellml::ImportSource::operator=</definition>
+        <argsstring>(ImportSource rhs)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1ImportSource" kindref="compound">ImportSource</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importsource.h" line="38" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ImportSource_1a627356cbc3fcfc634ed09c39c3ebf319" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::ImportSource::url</definition>
+        <argsstring>() const</argsstring>
+        <name>url</name>
+        <briefdescription>
+<para>Get the source <computeroutput><ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref>&apos;s</computeroutput> URL. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the source <computeroutput><ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref>&apos;s</computeroutput> URL set in this instance. If no source <computeroutput><ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref></computeroutput> URL is set then return an empty string.</para>
+<para><simplesect kind="return"><para>The URL of the source <computeroutput><ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref></computeroutput> if set otherwise the emtpy string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importsource.h" line="60" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ImportSource_1a20e79d5983654383405264b7f95e86d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::ImportSource::setUrl</definition>
+        <argsstring>(const std::string &amp;url)</argsstring>
+        <name>setUrl</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>url</declname>
+        </param>
+        <briefdescription>
+<para>Set the source <computeroutput><ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref>&apos;s</computeroutput> URL. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the source <computeroutput><ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref>&apos;s</computeroutput> URL that this <computeroutput><ref refid="classlibcellml_1_1ImportSource" kindref="compound">ImportSource</ref></computeroutput> refers to.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source <computeroutput><ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref>&apos;s</computeroutput> URL. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importsource.h" line="69" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ImportSource_1ac40e2e964b8b9a24d576e6093112d0e3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref></type>
+        <definition>ModelPtr libcellml::ImportSource::model</definition>
+        <argsstring>() const</argsstring>
+        <name>model</name>
+        <briefdescription>
+<para>Get the <computeroutput><ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref></computeroutput> that resolves the import. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the <computeroutput><ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref></computeroutput> which has been assigned to resolve this <computeroutput><ref refid="classlibcellml_1_1ImportSource" kindref="compound">ImportSource</ref></computeroutput>. If no <computeroutput><ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref></computeroutput> has been assigned then return the <computeroutput>nullptr</computeroutput>.</para>
+<para><simplesect kind="return"><para>The <computeroutput><ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref></computeroutput> used to resolve this <computeroutput><ref refid="classlibcellml_1_1ImportSource" kindref="compound">ImportSource</ref></computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importsource.h" line="79" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ImportSource_1aad56f5f97bcea60dbc5b5e11584a21ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::ImportSource::setModel</definition>
+        <argsstring>(const ModelPtr &amp;model)</argsstring>
+        <name>setModel</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref> &amp;</type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+<para>Provide the <computeroutput><ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref></computeroutput> used to resolve this import. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Uses the provided <computeroutput><ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref></computeroutput> to resolve this <computeroutput><ref refid="classlibcellml_1_1ImportSource" kindref="compound">ImportSource</ref></computeroutput>, which should correspond to the <computeroutput><ref refid="classlibcellml_1_1ImportSource" kindref="compound">ImportSource</ref></computeroutput> identified by this import.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput><ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref></computeroutput> to use in resolving this <computeroutput><ref refid="classlibcellml_1_1ImportSource" kindref="compound">ImportSource</ref></computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importsource.h" line="89" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ImportSource_1afb499960db9128dfe610698bbc6d5f3e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::ImportSource::hasModel</definition>
+        <argsstring>() const</argsstring>
+        <name>hasModel</name>
+        <briefdescription>
+<para>Test if this <computeroutput><ref refid="classlibcellml_1_1ImportSource" kindref="compound">ImportSource</ref></computeroutput> is resolved. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Method to test if this <computeroutput><ref refid="classlibcellml_1_1ImportSource" kindref="compound">ImportSource</ref></computeroutput> has been resolved, i.e. the source <computeroutput><ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref></computeroutput> has been assigned. Returns <computeroutput>true</computeroutput> if the <computeroutput><ref refid="classlibcellml_1_1ImportSource" kindref="compound">ImportSource</ref></computeroutput> is resolved otherwise returns <computeroutput>false</computeroutput>.</para>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if the <computeroutput><ref refid="classlibcellml_1_1ImportSource" kindref="compound">ImportSource</ref></computeroutput> has been resolved, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importsource.h" line="100" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ImportSource_1a0b4eafeede3dd1cae6ded17a440f05f5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1ac2c4e6d1793d7214616c1548d8a9f502" kindref="member">ImportSourcePtr</ref></type>
+        <definition>ImportSourcePtr libcellml::ImportSource::clone</definition>
+        <argsstring>() const</argsstring>
+        <name>clone</name>
+        <briefdescription>
+<para>Create a clone of this import source. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a full separate copy of this import source without copying the parent.</para>
+<para><simplesect kind="return"><para>a new <computeroutput>ImportSourcePtr</computeroutput> to the cloned import source. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importsource.h" line="110" column="21"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classlibcellml_1_1ImportSource_1a9f0901504cdca1697ef0af59736f19e8" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1ac2c4e6d1793d7214616c1548d8a9f502" kindref="member">ImportSourcePtr</ref></type>
+        <definition>static ImportSourcePtr libcellml::ImportSource::create</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>create</name>
+        <briefdescription>
+<para>Create a <computeroutput><ref refid="classlibcellml_1_1ImportSource" kindref="compound">ImportSource</ref></computeroutput> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Factory method to create an <computeroutput><ref refid="classlibcellml_1_1ImportSource" kindref="compound">ImportSource</ref></computeroutput>. Create an import source with::</para>
+<para>ImportSourcePtr importSource = <ref refid="classlibcellml_1_1ImportSource_1a9f0901504cdca1697ef0af59736f19e8" kindref="member">libcellml::ImportSource::create()</ref>;</para>
+<para><simplesect kind="return"><para>A smart pointer to an <computeroutput><ref refid="classlibcellml_1_1ImportSource" kindref="compound">ImportSource</ref></computeroutput> object. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importsource.h" line="50" column="28"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlibcellml_1_1ImportSource_1a017f6e1e5223f6f347e8942c4321a3d5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::ImportSource::ImportSource</definition>
+        <argsstring>()</argsstring>
+        <name>ImportSource</name>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importsource.h" line="113" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classlibcellml_1_1ImportSource" kindref="compound">ImportSource</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The import source class is for defining a location at which a CellML model is expected to be obtainable (the <computeroutput>source</computeroutput>). The import source also acts as a handle to indicate that imported entities originate from the same instance of that imported source. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>libcellml::Entity</label>
+        <link refid="classlibcellml_1_1Entity"/>
+      </node>
+      <node id="1">
+        <label>libcellml::ImportSource</label>
+        <link refid="classlibcellml_1_1ImportSource"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>libcellml::Entity</label>
+        <link refid="classlibcellml_1_1Entity"/>
+      </node>
+      <node id="1">
+        <label>libcellml::ImportSource</label>
+        <link refid="classlibcellml_1_1ImportSource"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libcellml/importsource.h" line="33" column="1" bodyfile="libcellml/importsource.h" bodystart="32" bodyend="117"/>
+    <listofallmembers>
+      <member refid="classlibcellml_1_1ImportSource_1a0b4eafeede3dd1cae6ded17a440f05f5" prot="public" virt="non-virtual"><scope>libcellml::ImportSource</scope><name>clone</name></member>
+      <member refid="classlibcellml_1_1ImportSource_1a9f0901504cdca1697ef0af59736f19e8" prot="public" virt="non-virtual"><scope>libcellml::ImportSource</scope><name>create</name></member>
+      <member refid="classlibcellml_1_1Entity_1aaf1f5a51be3e2fcc22113b2c2428967c" prot="public" virt="non-virtual"><scope>libcellml::ImportSource</scope><name>Entity</name></member>
+      <member refid="classlibcellml_1_1Entity_1a5ccd682791b20cc0431cd3abe265f734" prot="public" virt="non-virtual"><scope>libcellml::ImportSource</scope><name>Entity</name></member>
+      <member refid="classlibcellml_1_1Entity_1a25d413f1c9f4a8cb37aa2d78d43267ba" prot="protected" virt="non-virtual"><scope>libcellml::ImportSource</scope><name>Entity</name></member>
+      <member refid="classlibcellml_1_1Entity_1ac8e6f0e0addd7536902c0eb301f92675" prot="public" virt="non-virtual"><scope>libcellml::ImportSource</scope><name>hasAncestor</name></member>
+      <member refid="classlibcellml_1_1ImportSource_1afb499960db9128dfe610698bbc6d5f3e" prot="public" virt="non-virtual"><scope>libcellml::ImportSource</scope><name>hasModel</name></member>
+      <member refid="classlibcellml_1_1Entity_1abe2d58ec4e451613e18a722d1799fc05" prot="public" virt="non-virtual"><scope>libcellml::ImportSource</scope><name>hasParent</name></member>
+      <member refid="classlibcellml_1_1Entity_1a05439119b7eeab2fc61f8aa5a86eb092" prot="public" virt="non-virtual"><scope>libcellml::ImportSource</scope><name>id</name></member>
+      <member refid="classlibcellml_1_1ImportSource_1a867dca6a472e22044f11e7cc67865fd5" prot="public" virt="non-virtual"><scope>libcellml::ImportSource</scope><name>ImportSource</name></member>
+      <member refid="classlibcellml_1_1ImportSource_1aadc4323d0cc9ce14d48f23416d4d146e" prot="public" virt="non-virtual"><scope>libcellml::ImportSource</scope><name>ImportSource</name></member>
+      <member refid="classlibcellml_1_1ImportSource_1a017f6e1e5223f6f347e8942c4321a3d5" prot="private" virt="non-virtual"><scope>libcellml::ImportSource</scope><name>ImportSource</name></member>
+      <member refid="classlibcellml_1_1ImportSource_1ac40e2e964b8b9a24d576e6093112d0e3" prot="public" virt="non-virtual"><scope>libcellml::ImportSource</scope><name>model</name></member>
+      <member refid="classlibcellml_1_1ImportSource_1abc8de36018fa7183c2d493e90f815cd1" prot="private" virt="non-virtual"><scope>libcellml::ImportSource</scope><name>mPimpl</name></member>
+      <member refid="classlibcellml_1_1ImportSource_1a14b96ea22c1362ee6f1a2874df00a532" prot="public" virt="non-virtual"><scope>libcellml::ImportSource</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1Entity_1afe4e23aec9bc2518ace3dd68495fce76" prot="public" virt="non-virtual" ambiguityscope="libcellml::Entity::"><scope>libcellml::ImportSource</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1Entity_1ab1ed8e5a980a11d18c0c856a261b3947" prot="public" virt="non-virtual"><scope>libcellml::ImportSource</scope><name>parent</name></member>
+      <member refid="classlibcellml_1_1Entity_1aedb890f3e8ac654db92c817268425705" prot="public" virt="non-virtual"><scope>libcellml::ImportSource</scope><name>removeParent</name></member>
+      <member refid="classlibcellml_1_1Entity_1a13bdf688cdf007be5abad5dc628fd4ad" prot="public" virt="non-virtual"><scope>libcellml::ImportSource</scope><name>setId</name></member>
+      <member refid="classlibcellml_1_1ImportSource_1aad56f5f97bcea60dbc5b5e11584a21ec" prot="public" virt="non-virtual"><scope>libcellml::ImportSource</scope><name>setModel</name></member>
+      <member refid="classlibcellml_1_1Entity_1aa683f2c3c965b4710ebe45ab018beeac" prot="public" virt="non-virtual"><scope>libcellml::ImportSource</scope><name>setParent</name></member>
+      <member refid="classlibcellml_1_1ImportSource_1a20e79d5983654383405264b7f95e86d6" prot="public" virt="non-virtual"><scope>libcellml::ImportSource</scope><name>setUrl</name></member>
+      <member refid="classlibcellml_1_1ImportSource_1a627356cbc3fcfc634ed09c39c3ebf319" prot="public" virt="non-virtual"><scope>libcellml::ImportSource</scope><name>url</name></member>
+      <member refid="classlibcellml_1_1Entity_1a5a31822cf5beedcbc6f07c118b44b85b" prot="public" virt="virtual"><scope>libcellml::ImportSource</scope><name>~Entity</name></member>
+      <member refid="classlibcellml_1_1ImportSource_1a21256fb5dc6658b793da0dcd53493922" prot="public" virt="non-virtual"><scope>libcellml::ImportSource</scope><name>~ImportSource</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

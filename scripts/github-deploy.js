@@ -5,7 +5,12 @@ const fs = require('fs')
   try {
     const gitBranch = 'dist'
     await execa('git', ['checkout', '--orphan', gitBranch])
-    await execa('git', ['remote', 'add', 'deploy', 'git@github.com:libcellml/libcellml.github.io.git'])
+    await execa('git', [
+      'remote',
+      'add',
+      'deploy',
+      'git@github.com:libcellml/libcellml.github.io.git',
+    ])
     console.log('Building...')
     await execa('npm', ['run', 'build'])
     // Understand if it's dist or build folder

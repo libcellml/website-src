@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classlibcellml_1_1_named_entity" kind="class" language="C++" prot="public">
+    <compoundname>libcellml::NamedEntity</compoundname>
+    <derivedcompoundref refid="classlibcellml_1_1_model" prot="public" virt="non-virtual">libcellml::Model</derivedcompoundref>
+    <includes refid="namedentity_8h" local="no">namedentity.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlibcellml_1_1_named_entity_1aedeab9d1961fb28cd3cc17184a63b045" prot="private" static="no" mutable="no">
+        <type>NamedEntityImpl *</type>
+        <definition>NamedEntityImpl* libcellml::NamedEntity::mPimpl</definition>
+        <argsstring></argsstring>
+        <name>mPimpl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Forward declaration for pImpl idiom. Private member to implementation pointer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="namedentity.h" line="40" column="21" bodyfile="namedentity.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlibcellml_1_1_named_entity_1a10d6be107346d37bc540652d5ab9939f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::NamedEntity::~NamedEntity</definition>
+        <argsstring>() override</argsstring>
+        <name>~NamedEntity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="namedentity.h" line="11" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_named_entity_1ad1fbde6cf933f9b969e3c0a582664874" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::NamedEntity::NamedEntity</definition>
+        <argsstring>(const NamedEntity &amp;rhs)=delete</argsstring>
+        <name>NamedEntity</name>
+        <param>
+          <type>const <ref refid="classlibcellml_1_1_named_entity" kindref="compound">NamedEntity</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copy constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="namedentity.h" line="12" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_named_entity_1a5c5b4e6a20db48729ad713612f390d40" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::NamedEntity::NamedEntity</definition>
+        <argsstring>(NamedEntity &amp;&amp;rhs) noexcept=delete</argsstring>
+        <name>NamedEntity</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1_named_entity" kindref="compound">NamedEntity</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Move constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="namedentity.h" line="13" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_named_entity_1a51ff3c3e0a148a0cf6a05d2e6ff516ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1_named_entity" kindref="compound">NamedEntity</ref> &amp;</type>
+        <definition>NamedEntity&amp; libcellml::NamedEntity::operator=</definition>
+        <argsstring>(NamedEntity rhs)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1_named_entity" kindref="compound">NamedEntity</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assignment operator </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="namedentity.h" line="14" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_named_entity_1a2528924ae9b2a69d8ff3b5b9b6f31d88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::NamedEntity::setName</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>setName</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Set the name for the Entity. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method sets the name parameter of the Entity. It does not check the validity of the name.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string to represent the name. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="namedentity.h" line="24" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1_named_entity_1ab643dec674588048b4532c3f2819726a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::NamedEntity::name</definition>
+        <argsstring>() const</argsstring>
+        <name>name</name>
+        <briefdescription>
+<para>Get the name of the Entity. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the name of the Entity as a string.</para>
+<para><simplesect kind="return"><para><computeroutput>std::string</computeroutput> representation of the Entity name. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="namedentity.h" line="33" column="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classlibcellml_1_1_named_entity_1a88f342c4a1c70052606cfd65b2ac34ee" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::NamedEntity::NamedEntity</definition>
+        <argsstring>()</argsstring>
+        <name>NamedEntity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="namedentity.h" line="36" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classlibcellml_1_1_named_entity" kindref="compound">NamedEntity</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Base class for all nameable libCellML classes. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>libcellml::NamedEntity</label>
+        <link refid="classlibcellml_1_1_named_entity"/>
+      </node>
+      <node id="2">
+        <label>libcellml::Model</label>
+        <link refid="classlibcellml_1_1_model"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="namedentity.h" line="9" column="1" bodyfile="namedentity.h" bodystart="8" bodyend="41"/>
+    <listofallmembers>
+      <member refid="classlibcellml_1_1_named_entity_1aedeab9d1961fb28cd3cc17184a63b045" prot="private" virt="non-virtual"><scope>libcellml::NamedEntity</scope><name>mPimpl</name></member>
+      <member refid="classlibcellml_1_1_named_entity_1ab643dec674588048b4532c3f2819726a" prot="public" virt="non-virtual"><scope>libcellml::NamedEntity</scope><name>name</name></member>
+      <member refid="classlibcellml_1_1_named_entity_1ad1fbde6cf933f9b969e3c0a582664874" prot="public" virt="non-virtual"><scope>libcellml::NamedEntity</scope><name>NamedEntity</name></member>
+      <member refid="classlibcellml_1_1_named_entity_1a5c5b4e6a20db48729ad713612f390d40" prot="public" virt="non-virtual"><scope>libcellml::NamedEntity</scope><name>NamedEntity</name></member>
+      <member refid="classlibcellml_1_1_named_entity_1a88f342c4a1c70052606cfd65b2ac34ee" prot="protected" virt="non-virtual"><scope>libcellml::NamedEntity</scope><name>NamedEntity</name></member>
+      <member refid="classlibcellml_1_1_named_entity_1a51ff3c3e0a148a0cf6a05d2e6ff516ee" prot="public" virt="non-virtual"><scope>libcellml::NamedEntity</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1_named_entity_1a2528924ae9b2a69d8ff3b5b9b6f31d88" prot="public" virt="non-virtual"><scope>libcellml::NamedEntity</scope><name>setName</name></member>
+      <member refid="classlibcellml_1_1_named_entity_1a10d6be107346d37bc540652d5ab9939f" prot="public" virt="non-virtual"><scope>libcellml::NamedEntity</scope><name>~NamedEntity</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

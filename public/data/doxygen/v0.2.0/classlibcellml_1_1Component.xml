@@ -1,0 +1,1086 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classlibcellml_1_1Component" kind="class" language="C++" prot="public">
+    <compoundname>libcellml::Component</compoundname>
+    <basecompoundref refid="classlibcellml_1_1ComponentEntity" prot="public" virt="non-virtual">libcellml::ComponentEntity</basecompoundref>
+    <basecompoundref refid="classlibcellml_1_1ImportedEntity" prot="public" virt="non-virtual">libcellml::ImportedEntity</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">std::enable_shared_from_this&lt; Component &gt;</basecompoundref>
+    <includes refid="component_8h" local="no">component.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlibcellml_1_1Component_1af3bb990602195fa233523d59a34f6cce" prot="private" static="no" mutable="no">
+        <type>ComponentImpl *</type>
+        <definition>ComponentImpl* libcellml::Component::mPimpl</definition>
+        <argsstring></argsstring>
+        <name>mPimpl</name>
+        <briefdescription>
+<para>Forward declaration for pImpl idiom. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Private member to implementation pointer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="396" column="19" bodyfile="libcellml/component.h" bodystart="395" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlibcellml_1_1Component_1ac8a2d4834ed789fb2d8d02e584dcf1cf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Component::~Component</definition>
+        <argsstring>() override</argsstring>
+        <name>~Component</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="41" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1a9b5cf8abd088543ea2dc4783a870e199" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Component::Component</definition>
+        <argsstring>(const Component &amp;rhs)=delete</argsstring>
+        <name>Component</name>
+        <param>
+          <type>const <ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="42" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1a25369a12baeca7649e21ddd4ea2f80ab" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Component::Component</definition>
+        <argsstring>(Component &amp;&amp;rhs) noexcept=delete</argsstring>
+        <name>Component</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="43" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1a7eea39ed028b022af03d0c94c0214f18" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref> &amp;</type>
+        <definition>Component&amp; libcellml::Component::operator=</definition>
+        <argsstring>(Component rhs)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="44" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1a3a1c7df2ade1ad96fb0f59feed8febe0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Component::Component</definition>
+        <argsstring>()</argsstring>
+        <name>Component</name>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="390" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1a2b43a67c31eef65f66f4bcc28830c985" prot="private" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Component::Component</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>Component</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Constructor named. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="391" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1afb69e5e452e94726d1e85946bc2f4db9" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Component::doAddComponent</definition>
+        <argsstring>(const ComponentPtr &amp;component) override</argsstring>
+        <name>doAddComponent</name>
+        <reimplements refid="classlibcellml_1_1ComponentEntity_1a7b2b78965a148814ac7e17af8df11737">doAddComponent</reimplements>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref> &amp;</type>
+          <declname>component</declname>
+        </param>
+        <briefdescription>
+<para>Virtual method for implementing addComponent,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="393" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classlibcellml_1_1Component_1aa6b9cebf417cee451871b5360ad9f0b2" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref></type>
+        <definition>static ComponentPtr libcellml::Component::create</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>create</name>
+        <briefdescription>
+<para>Create a <computeroutput><ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref></computeroutput> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Factory method to create a <computeroutput><ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref></computeroutput>. Create a blank component with::</para>
+<para><programlisting><codeline><highlight class="normal">ComponentPtr<sp/>component<sp/>=<sp/>libcellml::Component::create();</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>A smart pointer to a <computeroutput><ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref></computeroutput> object. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="58" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1a5210d09d5ec0d3316f587d969f54f6ae" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref></type>
+        <definition>static ComponentPtr libcellml::Component::create</definition>
+        <argsstring>(const std::string &amp;name) noexcept</argsstring>
+        <name>create</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Create a <computeroutput><ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref></computeroutput> object with a name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Factory method to create a <computeroutput><ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref></computeroutput> with a name. Create a named component with name &quot;Component&quot; with:</para>
+<para><programlisting><codeline><highlight class="normal">ComponentPtr<sp/>component<sp/>=<sp/>libcellml::Component::create(&quot;Component&quot;);</highlight></codeline>
+</programlisting></para>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the component.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A smart pointer to a <computeroutput><ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref></computeroutput> object. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="76" column="25"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlibcellml_1_1Component_1ad20e56339c8ad16ae5bd180cc5a0cb70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Component::setSourceComponent</definition>
+        <argsstring>(const ImportSourcePtr &amp;importSource, const std::string &amp;name)</argsstring>
+        <name>setSourceComponent</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1ac2c4e6d1793d7214616c1548d8a9f502" kindref="member">ImportSourcePtr</ref> &amp;</type>
+          <declname>importSource</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Set the source component for this component. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Make this component an imported component by defining an import model from which to extract the named component from.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>importSource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The import source from which the named component originates. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the component in the imported model to use. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="87" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1af13290bd95fb2c58d1e3b370c079a759" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Component::appendMath</definition>
+        <argsstring>(const std::string &amp;math)</argsstring>
+        <name>appendMath</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>math</declname>
+        </param>
+        <briefdescription>
+<para>Appends the argument to the math string for this component. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Appends <computeroutput>math</computeroutput> to the existing math string for this component.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>math</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>std::string</computeroutput> to append for this component. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="96" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1a064ee760f923578a9e17760b66b20866" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Component::math</definition>
+        <argsstring>() const</argsstring>
+        <name>math</name>
+        <briefdescription>
+<para>Get the math string for this component. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a math string if one has been appended for this component. Returns an empty string if math has not been appended (or has been removed).</para>
+<para><simplesect kind="return"><para><computeroutput>std::string</computeroutput> math for this component. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="106" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1a800e1cfdb4c48a97065b04c79fb715e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Component::setMath</definition>
+        <argsstring>(const std::string &amp;math)</argsstring>
+        <name>setMath</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>math</declname>
+        </param>
+        <briefdescription>
+<para>Set the math string for this component. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the math string for this component. If <computeroutput>math</computeroutput> is an empty string, math will be removed from the component.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>math</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>std::string</computeroutput> to append for this component. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="116" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1ab15e0eec3ac9caeb7d66a7b13368ae39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Component::removeMath</definition>
+        <argsstring>()</argsstring>
+        <name>removeMath</name>
+        <briefdescription>
+<para>Clear the math from this component. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears the math string from this component. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="123" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1a76e7f4449c73882e7dd916fcc19541fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Component::addVariable</definition>
+        <argsstring>(const VariablePtr &amp;variable)</argsstring>
+        <name>addVariable</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable</declname>
+        </param>
+        <briefdescription>
+<para>Add a variable by reference as part of this component. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a variable by reference as part of the given component.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Component_1a989bb4c49c55a4c1accfb73cfa1c9df9" kindref="member">removeVariable</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The variable to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="134" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1a989bb4c49c55a4c1accfb73cfa1c9df9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Component::removeVariable</definition>
+        <argsstring>(size_t index)</argsstring>
+        <name>removeVariable</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Remove the variable at the given <computeroutput>index</computeroutput> from this component. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove the variable at the given index from this component. If the index is not valid <computeroutput>false</computeroutput> is returned, the valid range for the index is [0, #variables). If the variable to be removed is in a connection (is equivalent to another variable), this component will not be serialised in the connection.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Component_1a76e7f4449c73882e7dd916fcc19541fc" kindref="member">addVariable</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the variable to remove.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the variable was removed, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="152" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1acaf037cf6062bb852898a92b35076973" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Component::removeVariable</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>removeVariable</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Remove the variable with the given <computeroutput>name</computeroutput> from this component. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove the variable with the given name from this component. If the named variable to be removed is in a connection (is equivalent to another variable), this component will not be serialised in the connection.</para>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Component_1a76e7f4449c73882e7dd916fcc19541fc" kindref="member">addVariable</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the variable to remove.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the variable was removed, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="169" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1aef2958e6e0df7166ffb445a1be120753" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Component::removeVariable</definition>
+        <argsstring>(const VariablePtr &amp;variable)</argsstring>
+        <name>removeVariable</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable</declname>
+        </param>
+        <briefdescription>
+<para>Remove the variable by the given <computeroutput>variable</computeroutput> pointer from this component. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove the variable with the given pointer from this component. If the <computeroutput>variable</computeroutput> to be removed is in a connection (is equivalent to another variable), this component will not be serialised in the connection.</para>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Component_1a76e7f4449c73882e7dd916fcc19541fc" kindref="member">addVariable</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the variable to remove.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the variable was removed, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="186" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1a618379f33e21d82e762500925ca05b86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Component::removeAllVariables</definition>
+        <argsstring>()</argsstring>
+        <name>removeAllVariables</name>
+        <briefdescription>
+<para>Remove all variables stored in this component. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears all variables that have been added to this component. If any of the variables to be removed are in connections (are equivalent to other variables), this component will not be serialised in the connection. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="195" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1a5e3dc4881b3e48ce0f5844a36d82d251" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref></type>
+        <definition>VariablePtr libcellml::Component::variable</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>variable</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Get a variable at index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a reference to a variable at the index <computeroutput>index</computeroutput> for this component. If the index is not valid a <computeroutput>nullptr</computeroutput> is returned, the valid range for the index is [0, #variables).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the variable to return.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the variable at the given index on success, <computeroutput>nullptr</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="208" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1a66ce434e4820e34dbde2a55a4581faa3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref></type>
+        <definition>VariablePtr libcellml::Component::variable</definition>
+        <argsstring>(const std::string &amp;name) const</argsstring>
+        <name>variable</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Get a variable with the given name <computeroutput>name</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a reference to a variable with the name <computeroutput>name</computeroutput> for this component. If the name is not found a <computeroutput>nullptr</computeroutput> is returned.</para>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the variable to return.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the <ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref> with the given name on success, <computeroutput>nullptr</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="222" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1a5838ef003e1e65d7724ee6c67f23caaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref></type>
+        <definition>VariablePtr libcellml::Component::takeVariable</definition>
+        <argsstring>(size_t index)</argsstring>
+        <name>takeVariable</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Take a variable at index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove the variable at the given index from this component and returns a reference to a variable at the index <computeroutput>index</computeroutput> for this component. If the index is not valid a <computeroutput>nullptr</computeroutput> is returned, the valid range for the index is [0, #variables).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the variable to return.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the variable at the given index on success, <computeroutput>nullptr</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="236" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1ad1934bd9e7adc52551e3974c9047a044" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref></type>
+        <definition>VariablePtr libcellml::Component::takeVariable</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>takeVariable</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Take a variable with the given name <computeroutput>name</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove the variable with the given name from this component and returns a reference to a variable with the name <computeroutput>name</computeroutput> for this component. If the name is not found a <computeroutput>nullptr</computeroutput> is returned.</para>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the variable to return.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the <ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref> with the given name on success, <computeroutput>nullptr</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="251" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1afb153352dcc65d43a1d56c6cae6bab11" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::Component::variableCount</definition>
+        <argsstring>() const</argsstring>
+        <name>variableCount</name>
+        <briefdescription>
+<para>Get the number of variables in the component. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of variables the component directly contains.</para>
+<para><simplesect kind="return"><para>the number of variables. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="260" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1ae0f9e81c0b9549987b295256b3484de2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Component::hasVariable</definition>
+        <argsstring>(const VariablePtr &amp;variable) const</argsstring>
+        <name>hasVariable</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable</declname>
+        </param>
+        <briefdescription>
+<para>Test whether the argument <computeroutput>variable</computeroutput> is in this component. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Tests whether the argument <computeroutput>variable</computeroutput> exists in the set of this component&apos;s variables. Returns <computeroutput>true</computeroutput> if the <computeroutput>variable</computeroutput> is in this component&apos;s variables and <computeroutput>false</computeroutput> otherwise.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The variable to check for in this component.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the <computeroutput>variable</computeroutput> is in this component and <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="273" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1adcf04395861454768839f6ba862ee1e4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Component::hasVariable</definition>
+        <argsstring>(const std::string &amp;name) const</argsstring>
+        <name>hasVariable</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Test whether the variable named <computeroutput>name</computeroutput> is in this component. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Tests whether a variable with the argument <computeroutput>name</computeroutput> exists in the set of this component&apos;s variables. Returns <computeroutput>true</computeroutput> if the named variable is in this component&apos;s variables and <computeroutput>false</computeroutput> otherwise.</para>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the variable to check for in this component.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if a variable named <computeroutput>name</computeroutput> is in this component and <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="289" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1a73cac4c9be1a8980a81acbfcb362d125" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Component::addReset</definition>
+        <argsstring>(const ResetPtr &amp;reset)</argsstring>
+        <name>addReset</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a329055beefacf51332628055453f390a" kindref="member">ResetPtr</ref> &amp;</type>
+          <declname>reset</declname>
+        </param>
+        <briefdescription>
+<para>Add a reset by reference as part of this component. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a reset by reference as part of the given component.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Component_1a20771bbf17ab4e74606fe56f6eca74b8" kindref="member">removeReset</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reset to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="300" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1a20771bbf17ab4e74606fe56f6eca74b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Component::removeReset</definition>
+        <argsstring>(size_t index)</argsstring>
+        <name>removeReset</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Remove the reset at the given <computeroutput>index</computeroutput> from this component. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove the reset at the given index from this component. If the index is not valid <computeroutput>false</computeroutput> is returned, the valid range for the index is [0, #resets).</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Component_1a73cac4c9be1a8980a81acbfcb362d125" kindref="member">addReset</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the reset to remove.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the reset was removed, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="315" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1a5e49f48ccc5c15545c09ec04e4d98436" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Component::removeReset</definition>
+        <argsstring>(const ResetPtr &amp;reset)</argsstring>
+        <name>removeReset</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a329055beefacf51332628055453f390a" kindref="member">ResetPtr</ref> &amp;</type>
+          <declname>reset</declname>
+        </param>
+        <briefdescription>
+<para>Remove the reset by the given <computeroutput>reset</computeroutput> pointer from this component. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove the reset with the given pointer from this component.</para>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Component_1a73cac4c9be1a8980a81acbfcb362d125" kindref="member">addReset</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the reset to remove.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the reset was removed, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="330" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1aeca03c08a943ddbb8a656677d1aa9a27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Component::removeAllResets</definition>
+        <argsstring>()</argsstring>
+        <name>removeAllResets</name>
+        <briefdescription>
+<para>Remove all resets stored in this component. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears all resets that have been added to this component. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="337" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1a09f7c625a50cf720db35a66006b443e6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a329055beefacf51332628055453f390a" kindref="member">ResetPtr</ref></type>
+        <definition>ResetPtr libcellml::Component::reset</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>reset</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Get a reset at index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a reference to a reset at the index <computeroutput>index</computeroutput> for this component. If the index is not valid a <computeroutput>nullptr</computeroutput> is returned, the valid range for the index is [0, #resets).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the reset to return.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the reset at the given index on success, <computeroutput>nullptr</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="350" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1a9ab101373433eeb2dc5848467c471b3d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::Component::resetCount</definition>
+        <argsstring>() const</argsstring>
+        <name>resetCount</name>
+        <briefdescription>
+<para>Get the number of resets in the component. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of resets the component contains.</para>
+<para><simplesect kind="return"><para>the number of resets. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="359" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1aa3a70fe5da5389ca606bb6708e961f5e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Component::hasReset</definition>
+        <argsstring>(const ResetPtr &amp;reset) const</argsstring>
+        <name>hasReset</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a329055beefacf51332628055453f390a" kindref="member">ResetPtr</ref> &amp;</type>
+          <declname>reset</declname>
+        </param>
+        <briefdescription>
+<para>Test whether the argument <computeroutput>reset</computeroutput> is in this component. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Tests whether the argument <computeroutput>reset</computeroutput> exists in the set of this component&apos;s resets. Returns <computeroutput>true</computeroutput> if the <computeroutput>reset</computeroutput> is in this component&apos;s resets and <computeroutput>false</computeroutput> otherwise.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reset to check for in this component.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the <computeroutput>reset</computeroutput> is in this component and <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="372" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1a4d455aa6d11d31879c7c09e1fae5b1ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a329055beefacf51332628055453f390a" kindref="member">ResetPtr</ref></type>
+        <definition>ResetPtr libcellml::Component::takeReset</definition>
+        <argsstring>(size_t index)</argsstring>
+        <name>takeReset</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="374" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Component_1a3cbf152ccd2f2011880ef0b523cbab11" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref></type>
+        <definition>ComponentPtr libcellml::Component::clone</definition>
+        <argsstring>() const</argsstring>
+        <name>clone</name>
+        <briefdescription>
+<para>Create a clone of this component. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a full separate copy of this component without copying the parent. Thus the cloned (returned) version of this component will not have a parent set even if this component does. Any and all child components will also be cloned recreating the full component hierarchy that this component is the root of.</para>
+<para><simplesect kind="return"><para>a new <computeroutput>ComponentPtr</computeroutput> to the cloned component. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/component.h" line="387" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref> class is for representing a CellML <ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref>. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5">
+        <label>libcellml::ImportedEntity</label>
+        <link refid="classlibcellml_1_1ImportedEntity"/>
+      </node>
+      <node id="3">
+        <label>libcellml::NamedEntity</label>
+        <link refid="classlibcellml_1_1NamedEntity"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>libcellml::Component</label>
+        <link refid="classlibcellml_1_1Component"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>libcellml::Entity</label>
+        <link refid="classlibcellml_1_1Entity"/>
+      </node>
+      <node id="6">
+        <label>std::enable_shared_from_this&lt; Component &gt;</label>
+      </node>
+      <node id="2">
+        <label>libcellml::ComponentEntity</label>
+        <link refid="classlibcellml_1_1ComponentEntity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5">
+        <label>libcellml::ImportedEntity</label>
+        <link refid="classlibcellml_1_1ImportedEntity"/>
+      </node>
+      <node id="3">
+        <label>libcellml::NamedEntity</label>
+        <link refid="classlibcellml_1_1NamedEntity"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>libcellml::Component</label>
+        <link refid="classlibcellml_1_1Component"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>libcellml::Entity</label>
+        <link refid="classlibcellml_1_1Entity"/>
+      </node>
+      <node id="6">
+        <label>std::enable_shared_from_this&lt; Component &gt;</label>
+      </node>
+      <node id="2">
+        <label>libcellml::ComponentEntity</label>
+        <link refid="classlibcellml_1_1ComponentEntity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libcellml/component.h" line="39" column="1" bodyfile="libcellml/component.h" bodystart="34" bodyend="397"/>
+    <listofallmembers>
+      <member refid="classlibcellml_1_1ComponentEntity_1a67d368331ed3f0de22fad8e8ab130aed" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>addComponent</name></member>
+      <member refid="classlibcellml_1_1Component_1a73cac4c9be1a8980a81acbfcb362d125" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>addReset</name></member>
+      <member refid="classlibcellml_1_1Component_1a76e7f4449c73882e7dd916fcc19541fc" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>addVariable</name></member>
+      <member refid="classlibcellml_1_1Component_1af13290bd95fb2c58d1e3b370c079a759" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>appendMath</name></member>
+      <member refid="classlibcellml_1_1Component_1a3cbf152ccd2f2011880ef0b523cbab11" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>clone</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1afdfd2155613501299efc923a2f507103" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>component</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1a692e7f572ff63264e8ca4ffeefb5dc2b" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>component</name></member>
+      <member refid="classlibcellml_1_1Component_1a9b5cf8abd088543ea2dc4783a870e199" prot="private" virt="non-virtual"><scope>libcellml::Component</scope><name>Component</name></member>
+      <member refid="classlibcellml_1_1Component_1a25369a12baeca7649e21ddd4ea2f80ab" prot="private" virt="non-virtual"><scope>libcellml::Component</scope><name>Component</name></member>
+      <member refid="classlibcellml_1_1Component_1a3a1c7df2ade1ad96fb0f59feed8febe0" prot="private" virt="non-virtual"><scope>libcellml::Component</scope><name>Component</name></member>
+      <member refid="classlibcellml_1_1Component_1a2b43a67c31eef65f66f4bcc28830c985" prot="private" virt="non-virtual"><scope>libcellml::Component</scope><name>Component</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1ae8aa01faf601faf5b6bd3bf2feca8414" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>componentCount</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1aa64099956f860c66ef6def88ed46be23" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>ComponentEntity</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1adf241e69f1f3cb2002b04f541621dc81" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>ComponentEntity</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1ab9069d2fb053e868565a8dec5f7bc214" prot="protected" virt="non-virtual"><scope>libcellml::Component</scope><name>ComponentEntity</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1aad863d65f1a3c0774b4e9bdad07e4156" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>containsComponent</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1a68436a36a65a1ab77e160810f3ae6248" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>containsComponent</name></member>
+      <member refid="classlibcellml_1_1Component_1aa6b9cebf417cee451871b5360ad9f0b2" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>create</name></member>
+      <member refid="classlibcellml_1_1Component_1a5210d09d5ec0d3316f587d969f54f6ae" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>create</name></member>
+      <member refid="classlibcellml_1_1Component_1afb69e5e452e94726d1e85946bc2f4db9" prot="private" virt="virtual"><scope>libcellml::Component</scope><name>doAddComponent</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1ade4b563a5aaa366c6b48d91beaad8d3c" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>encapsulationId</name></member>
+      <member refid="classlibcellml_1_1Entity_1aaf1f5a51be3e2fcc22113b2c2428967c" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>Entity</name></member>
+      <member refid="classlibcellml_1_1Entity_1a5ccd682791b20cc0431cd3abe265f734" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>Entity</name></member>
+      <member refid="classlibcellml_1_1Entity_1a25d413f1c9f4a8cb37aa2d78d43267ba" prot="protected" virt="non-virtual"><scope>libcellml::Component</scope><name>Entity</name></member>
+      <member refid="classlibcellml_1_1Entity_1ac8e6f0e0addd7536902c0eb301f92675" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>hasAncestor</name></member>
+      <member refid="classlibcellml_1_1Entity_1abe2d58ec4e451613e18a722d1799fc05" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>hasParent</name></member>
+      <member refid="classlibcellml_1_1Component_1aa3a70fe5da5389ca606bb6708e961f5e" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>hasReset</name></member>
+      <member refid="classlibcellml_1_1Component_1ae0f9e81c0b9549987b295256b3484de2" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>hasVariable</name></member>
+      <member refid="classlibcellml_1_1Component_1adcf04395861454768839f6ba862ee1e4" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>hasVariable</name></member>
+      <member refid="classlibcellml_1_1Entity_1a05439119b7eeab2fc61f8aa5a86eb092" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>id</name></member>
+      <member refid="classlibcellml_1_1ImportedEntity_1a4a489fc27bfdc0ffeda7dc13bc874ab3" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>ImportedEntity</name></member>
+      <member refid="classlibcellml_1_1ImportedEntity_1a6136c548bd3634a5b6b553d8cf97926a" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>ImportedEntity</name></member>
+      <member refid="classlibcellml_1_1ImportedEntity_1a1cdb9522aea8000e43a13705aa3f2960" prot="protected" virt="non-virtual"><scope>libcellml::Component</scope><name>ImportedEntity</name></member>
+      <member refid="classlibcellml_1_1ImportedEntity_1a14451a2854699b2e31c67f0afc4d28d3" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>importReference</name></member>
+      <member refid="classlibcellml_1_1ImportedEntity_1af9db33dab9b6151683656b9f4744188a" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>importSource</name></member>
+      <member refid="classlibcellml_1_1ImportedEntity_1a25f7d4abe5d3ca67c97ad341cb4853e7" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>isImport</name></member>
+      <member refid="classlibcellml_1_1Component_1a064ee760f923578a9e17760b66b20866" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>math</name></member>
+      <member refid="classlibcellml_1_1Component_1af3bb990602195fa233523d59a34f6cce" prot="private" virt="non-virtual"><scope>libcellml::Component</scope><name>mPimpl</name></member>
+      <member refid="classlibcellml_1_1NamedEntity_1ab643dec674588048b4532c3f2819726a" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>name</name></member>
+      <member refid="classlibcellml_1_1NamedEntity_1ad1fbde6cf933f9b969e3c0a582664874" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>NamedEntity</name></member>
+      <member refid="classlibcellml_1_1NamedEntity_1a5c5b4e6a20db48729ad713612f390d40" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>NamedEntity</name></member>
+      <member refid="classlibcellml_1_1NamedEntity_1a88f342c4a1c70052606cfd65b2ac34ee" prot="protected" virt="non-virtual"><scope>libcellml::Component</scope><name>NamedEntity</name></member>
+      <member refid="classlibcellml_1_1Component_1a7eea39ed028b022af03d0c94c0214f18" prot="private" virt="non-virtual"><scope>libcellml::Component</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1aee79d899f54d6e867ea2c1da57c355d1" prot="public" virt="non-virtual" ambiguityscope="libcellml::ComponentEntity::"><scope>libcellml::Component</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1NamedEntity_1a51ff3c3e0a148a0cf6a05d2e6ff516ee" prot="public" virt="non-virtual" ambiguityscope="libcellml::NamedEntity::"><scope>libcellml::Component</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1Entity_1afe4e23aec9bc2518ace3dd68495fce76" prot="public" virt="non-virtual" ambiguityscope="libcellml::Entity::"><scope>libcellml::Component</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1ImportedEntity_1ae4b8a04e162044053efaa411f67c5181" prot="public" virt="non-virtual" ambiguityscope="libcellml::ImportedEntity::"><scope>libcellml::Component</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1Entity_1ab1ed8e5a980a11d18c0c856a261b3947" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>parent</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1ae9a8e5de907fc82c2448b80c70ab7d6b" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>removeAllComponents</name></member>
+      <member refid="classlibcellml_1_1Component_1aeca03c08a943ddbb8a656677d1aa9a27" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>removeAllResets</name></member>
+      <member refid="classlibcellml_1_1Component_1a618379f33e21d82e762500925ca05b86" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>removeAllVariables</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1a072c8ccf3fb82e4a0ab7084bb37e02e4" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>removeComponent</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1afbe4e6e72d68c88fa909c08a90d68bdf" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>removeComponent</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1af7484b56f626f4c614cad982aa79cb2e" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>removeComponent</name></member>
+      <member refid="classlibcellml_1_1Component_1ab15e0eec3ac9caeb7d66a7b13368ae39" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>removeMath</name></member>
+      <member refid="classlibcellml_1_1Entity_1aedb890f3e8ac654db92c817268425705" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>removeParent</name></member>
+      <member refid="classlibcellml_1_1Component_1a20771bbf17ab4e74606fe56f6eca74b8" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>removeReset</name></member>
+      <member refid="classlibcellml_1_1Component_1a5e49f48ccc5c15545c09ec04e4d98436" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>removeReset</name></member>
+      <member refid="classlibcellml_1_1Component_1a989bb4c49c55a4c1accfb73cfa1c9df9" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>removeVariable</name></member>
+      <member refid="classlibcellml_1_1Component_1acaf037cf6062bb852898a92b35076973" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>removeVariable</name></member>
+      <member refid="classlibcellml_1_1Component_1aef2958e6e0df7166ffb445a1be120753" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>removeVariable</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1ad222685ebe509ecc4b768882857e4ba6" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>replaceComponent</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1a1f1ea90ed988b84c2b6e23acc92292ca" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>replaceComponent</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1a71b9bdf177ee99042505e32e8846dcdc" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>replaceComponent</name></member>
+      <member refid="classlibcellml_1_1Component_1a09f7c625a50cf720db35a66006b443e6" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>reset</name></member>
+      <member refid="classlibcellml_1_1Component_1a9ab101373433eeb2dc5848467c471b3d" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>resetCount</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1a6e00f015eb45d96bfad052e53c4db280" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>setEncapsulationId</name></member>
+      <member refid="classlibcellml_1_1Entity_1a13bdf688cdf007be5abad5dc628fd4ad" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>setId</name></member>
+      <member refid="classlibcellml_1_1ImportedEntity_1ab5e0d32cc24fced7cd19362f08e162eb" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>setImportReference</name></member>
+      <member refid="classlibcellml_1_1ImportedEntity_1a0c9e48f04f3039f5538d9d86d59a479e" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>setImportSource</name></member>
+      <member refid="classlibcellml_1_1Component_1a800e1cfdb4c48a97065b04c79fb715e4" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>setMath</name></member>
+      <member refid="classlibcellml_1_1NamedEntity_1a2528924ae9b2a69d8ff3b5b9b6f31d88" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>setName</name></member>
+      <member refid="classlibcellml_1_1Entity_1aa683f2c3c965b4710ebe45ab018beeac" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>setParent</name></member>
+      <member refid="classlibcellml_1_1Component_1ad20e56339c8ad16ae5bd180cc5a0cb70" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>setSourceComponent</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1a4d18a854588a9b21eb1c5b861fdb6516" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>takeComponent</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1a1ea65bf35de168786aff5c94c7236ddc" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>takeComponent</name></member>
+      <member refid="classlibcellml_1_1Component_1a4d455aa6d11d31879c7c09e1fae5b1ad" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>takeReset</name></member>
+      <member refid="classlibcellml_1_1Component_1a5838ef003e1e65d7724ee6c67f23caaa" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>takeVariable</name></member>
+      <member refid="classlibcellml_1_1Component_1ad1934bd9e7adc52551e3974c9047a044" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>takeVariable</name></member>
+      <member refid="classlibcellml_1_1Component_1a5e3dc4881b3e48ce0f5844a36d82d251" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>variable</name></member>
+      <member refid="classlibcellml_1_1Component_1a66ce434e4820e34dbde2a55a4581faa3" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>variable</name></member>
+      <member refid="classlibcellml_1_1Component_1afb153352dcc65d43a1d56c6cae6bab11" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>variableCount</name></member>
+      <member refid="classlibcellml_1_1Component_1ac8a2d4834ed789fb2d8d02e584dcf1cf" prot="private" virt="non-virtual"><scope>libcellml::Component</scope><name>~Component</name></member>
+      <member refid="classlibcellml_1_1ComponentEntity_1af8a1d66cb44978100650ce4bf6a0210b" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>~ComponentEntity</name></member>
+      <member refid="classlibcellml_1_1Entity_1a5a31822cf5beedcbc6f07c118b44b85b" prot="public" virt="virtual"><scope>libcellml::Component</scope><name>~Entity</name></member>
+      <member refid="classlibcellml_1_1ImportedEntity_1aa2a47a741f8e6980dbc6c84e004442fb" prot="public" virt="virtual"><scope>libcellml::Component</scope><name>~ImportedEntity</name></member>
+      <member refid="classlibcellml_1_1NamedEntity_1a10d6be107346d37bc540652d5ab9939f" prot="public" virt="non-virtual"><scope>libcellml::Component</scope><name>~NamedEntity</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
