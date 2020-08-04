@@ -9,11 +9,7 @@
               <li v-for="(heading, index) in pageHeadings" :key="'h1_' + index">
                 <router-link
                   v-if="heading.id"
-                  :to="{
-                    name: routeName,
-                    hash: '#' + heading.id,
-                    params: routeParams,
-                  }"
+                  :to="`${$route.path}#${heading.id}`"
                 >
                   {{
                     heading.el.innerText || heading.el.textContent
@@ -38,8 +34,6 @@
 export default {
   name: 'Sidebar',
 
-  props: ['routeName', 'routeParams'],
-
   data() {
     return {
       pageHeadings: [],
@@ -55,16 +49,38 @@ export default {
         this.$store.commit('setSidebarOpen', newValue)
       },
     },
+    pageChanged() {
+      return this.$store.state.pageContentChanged
+    },
+    // pageHeadings() {
+    //   if (this.$store.state.pageChanged) {
+    //     // Page changed so find headings again.
+    //   }
+    //   console.log('finding headings ...')
+    //   return this.findHeadings()
+    // },
     havePageHeadings() {
       return this.pageHeadings.length
     },
   },
 
   watch: {
-    routeName: function() {
-      this.updateHeadings()
+    pageChanged() {
+      setTimeout(() => {
+        this.pageHeadings = this.findHeadings()
+      }, this.$store.getters.getTransitionDelay)
     },
   },
+
+  // watch: {
+  //   $route: {
+  //     handler: function() {
+  //       console.log('update my headings!!!')
+  //       this.updateHeadings()
+  //     },
+  //     immediate: true,
+  //   },
+  // },
 
   methods: {
     getHeadings(element, level) {
@@ -79,27 +95,27 @@ export default {
       }
       return id
     },
-    updateHeadings() {
+    findHeadings() {
       const headingInitial = 2
       //   const headingDepth = 2
-      const transitionDelay = 1100
       let headingTree = []
-      setTimeout(() => {
-        let el = document.querySelector('#pageContent')
-        if (el) {
-          let headings = this.getHeadings(el, headingInitial)
-          headings.forEach(heading => {
-            let subHeadings = this.getHeadings(heading, headingInitial + 1)
-            const treeEntry = {
-              el: heading,
-              id: this.getHeaderLinkId(heading),
-              children: subHeadings,
-            }
-            headingTree.push(treeEntry)
-          })
-        }
-        this.pageHeadings = headingTree
-      }, transitionDelay)
+      // setTimeout(() => {
+      let el = document.querySelector('#pageContent')
+      if (el) {
+        let headings = this.getHeadings(el, headingInitial)
+        headings.forEach(heading => {
+          let subHeadings = this.getHeadings(heading, headingInitial + 1)
+          const treeEntry = {
+            el: heading,
+            id: this.getHeaderLinkId(heading),
+            children: subHeadings,
+          }
+          headingTree.push(treeEntry)
+        })
+      }
+      return headingTree
+      // this.pageHeadings = headingTree
+      // }, this.$store.getters.getTransitionDelay)
     },
   },
 }

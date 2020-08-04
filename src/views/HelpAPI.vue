@@ -1,22 +1,33 @@
 <template>
-  <div class="api-reference">
-    <v-container>
-      <v-row>
-        <v-col>
-          <doxygen-xml :baseURL="`/data/doxygen/${$route.params.version}`" />
-        </v-col>
-      </v-row>
-    </v-container>
-  </div>
+  <v-container>
+    <v-row>
+      <v-col>
+        <h1>API Reference</h1>
+        <ul>
+          <li
+            v-for="(version, index) in apiVersions"
+            :key="'api_reference_' + index"
+          >
+            <router-link :to="{ path: `/help/api/${version}` }">
+              <big>libCellML {{ version }} API Documentation</big>
+            </router-link>
+          </li>
+        </ul>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
-import { DoxygenXml } from 'vue-doxygen-xml'
+import { getDoxygenVersions } from '@/js/versions'
 
 export default {
-  name: 'APIReference',
-  components: {
-    DoxygenXml,
+  name: 'HelpAPI',
+  data: () => {
+    return { apiVersions: [] }
+  },
+  created() {
+    this.apiVersions = getDoxygenVersions()
   },
 }
 </script>
