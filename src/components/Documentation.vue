@@ -3,7 +3,7 @@
     <v-row>
       <v-col>
         <h1>Documentation</h1>
-        <h2>API Reference</h2>
+        <h2 id="api_reference">API Reference</h2>
         <ul>
           <li
             v-for="(version, index) in apiVersions"
@@ -14,7 +14,7 @@
             </router-link>
           </li>
         </ul>
-        <h2>Tutorials</h2>
+        <h2 id="tutorials">Tutorials</h2>
         <ul>
           <li
             v-for="(version, index) in tutorialVersions"

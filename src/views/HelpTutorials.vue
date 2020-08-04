@@ -1,25 +1,33 @@
 <template>
-  <div class="tutorials">
-    <v-container>
-      <v-row>
-        <v-col>
-          <sphinx-page
-            :baseURL="`/data/sphinx/${$route.params.version}`"
-            indexFileName="tutorials_index"
-          />
-        </v-col>
-      </v-row>
-    </v-container>
-  </div>
+  <v-container>
+    <v-row>
+      <v-col>
+        <h1>Tutorials</h1>
+        <ul>
+          <li
+            v-for="(version, index) in tutorialVersions"
+            :key="'api_reference_' + index"
+          >
+            <router-link :to="{ path: `/help/tutorials/${version}` }">
+              <big>libCellML {{ version }} Tutorials</big>
+            </router-link>
+          </li>
+        </ul>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
-import { SphinxPage } from 'vue-sphinx-xml'
+import { getSphinxVersions } from '@/js/versions'
 
 export default {
-  name: 'Tutorials',
-  components: {
-    SphinxPage,
+  name: 'HelpTutorials',
+  data: () => {
+    return { tutorialVersions: [] }
+  },
+  created() {
+    this.tutorialVersions = getSphinxVersions()
   },
 }
 </script>

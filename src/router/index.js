@@ -28,15 +28,31 @@ const routes = [
   },
   {
     path: '/help/api/:version/:pageName?',
-    name: 'API Reference',
+    name: 'APIReferencePage',
+    component: () =>
+      import(/* webpackChunkName: "doxygen" */ '../views/HelpAPIPage.vue'),
+  },
+  {
+    path: '/help/api',
+    name: 'APIReference',
     component: () =>
       import(/* webpackChunkName: "doxygen" */ '../views/HelpAPI.vue'),
   },
   {
     path: '/help/tutorials/:version/:pageName*',
+    name: 'TutorialsPage',
+    component: () =>
+      import(/* webpackChunkName: "sphinx" */ '../views/HelpTutorialsPage.vue'),
+  },
+  {
+    path: '/help/tutorials',
     name: 'Tutorials',
     component: () =>
       import(/* webpackChunkName: "sphinx" */ '../views/HelpTutorials.vue'),
+  },
+  {
+    path: '/help',
+    redirect: { name: 'Documentation' },
   },
   {
     path: '/developers',
@@ -64,6 +80,10 @@ const routes = [
         /* webpackChunkName: "networkIssue" */ '../views/NetworkIssue.vue'
       ),
   },
+  {
+    path: '*',
+    redirect: { name: '404', params: { resource: 'page' } },
+  },
 ]
 
 const createRouter = () => {
@@ -83,7 +103,7 @@ const createRouter = () => {
               })
             }
             resolve(value)
-          }, 1100) // This number has to be higher than my page transition
+          }, store.getters.getTransitionDelay)
         })
       } else if (to.hash) {
         return window.scrollTo({
@@ -99,29 +119,70 @@ const createRouter = () => {
 
 const router = createRouter()
 
-const appendCatchAll = () => {
-  router.addRoutes([
+router.beforeEach((to, from, next) => {
+  let items = [
     {
-      path: '*',
-      redirect: { name: '404', params: { resource: 'page' } },
+      text: 'home',
+      disabled: false,
+      href: '/',
     },
-  ])
-}
+  ]
+  if (to.name === 'Home') {
+    items[0].disabled = true
+  } else if (
+    to.name === '404' ||
+    to.name === 'About' ||
+    to.name === 'Developers' ||
+    to.name === 'Download' ||
+    to.name === 'Documentation'
+  ) {
+    items.push({
+      text: to.name,
+      disabled: true,
+      href: to.path,
+    })
+  } else if (
+    to.name === 'TutorialsPage' ||
+    to.name === 'Tutorials' ||
+    to.name === 'APIReferencePage' ||
+    to.name === 'APIReference'
+  ) {
+    let toPath = to.path
+    let appendFileName = ''
+    if (to.params.pageName && to.params.pageName.indexOf('/') !== -1) {
+      appendFileName = to.params.pageName
+      toPath = toPath.replace(to.params.pageName, '')
+    }
+    const pathParts = toPath.split('/')
+    let builtPath = ''
+    pathParts.forEach(part => {
+      if (part) {
+        builtPath += `/${part}`
+        items.push({
+          text: part,
+          disabled: false,
+          href: builtPath,
+        })
+      }
+    })
+    if (appendFileName) {
+      items.push({
+        text: appendFileName,
+        disabled: true,
+        href: builtPath,
+      })
+    }
+    items[items.length - 1].disabled = true
+  }
 
-appendCatchAll()
+  store.commit('setBreadcrumbs', items)
+  next()
+})
 
-const resetRouter = () => {
-  const newRouter = createRouter()
-  router.matcher = newRouter.matcher // the relevant part
-  router.options.routes = routes
-}
-
-export const insertNewRoute = route => {
-  store.commit('addRoute', route)
-  resetRouter()
-  const dynamicRoutes = store.getters.getDynamicRoutes
-  router.addRoutes(dynamicRoutes)
-  appendCatchAll()
-}
+router.afterEach((to, from) => {
+  if (to.name !== from.name) {
+    store.commit('togglePageContentChanged')
+  }
+})
 
 export default router
