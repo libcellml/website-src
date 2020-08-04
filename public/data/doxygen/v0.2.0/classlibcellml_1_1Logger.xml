@@ -1,0 +1,415 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classlibcellml_1_1Logger" kind="class" language="C++" prot="public">
+    <compoundname>libcellml::Logger</compoundname>
+    <derivedcompoundref refid="classlibcellml_1_1Generator" prot="public" virt="non-virtual">libcellml::Generator</derivedcompoundref>
+    <derivedcompoundref refid="classlibcellml_1_1Parser" prot="public" virt="non-virtual">libcellml::Parser</derivedcompoundref>
+    <derivedcompoundref refid="classlibcellml_1_1Printer" prot="public" virt="non-virtual">libcellml::Printer</derivedcompoundref>
+    <derivedcompoundref refid="classlibcellml_1_1Validator" prot="public" virt="non-virtual">libcellml::Validator</derivedcompoundref>
+    <includes refid="logger_8h" local="no">logger.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlibcellml_1_1Logger_1ad1fccd14afca732e2c82b788b9af8635" prot="private" static="no" mutable="no">
+        <type>LoggerImpl *</type>
+        <definition>LoggerImpl* libcellml::Logger::mPimpl</definition>
+        <argsstring></argsstring>
+        <name>mPimpl</name>
+        <briefdescription>
+<para>Forward declaration for pImpl idiom. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Private member to implementation pointer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/logger.h" line="150" column="16" bodyfile="libcellml/logger.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlibcellml_1_1Logger_1af10a83604f60870be932ac9986a49d85" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual libcellml::Logger::~Logger</definition>
+        <argsstring>()</argsstring>
+        <name>~Logger</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/logger.h" line="36" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Logger_1aefeba7b186698f30222c7e4bfdc55a94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Logger::Logger</definition>
+        <argsstring>(const Logger &amp;rhs)=delete</argsstring>
+        <name>Logger</name>
+        <param>
+          <type>const <ref refid="classlibcellml_1_1Logger" kindref="compound">Logger</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/logger.h" line="37" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Logger_1a3795ed3f2bbc99ab6ffdd2620cb49e87" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Logger::Logger</definition>
+        <argsstring>(Logger &amp;&amp;rhs) noexcept=delete</argsstring>
+        <name>Logger</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1Logger" kindref="compound">Logger</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/logger.h" line="38" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Logger_1a10b7b226787510f9f3dc3f329eb416a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1Logger" kindref="compound">Logger</ref> &amp;</type>
+        <definition>Logger&amp; libcellml::Logger::operator=</definition>
+        <argsstring>(Logger rhs)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classlibcellml_1_1Logger" kindref="compound">Logger</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/logger.h" line="39" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Logger_1af3d56e5511cd3d38e9a31f1f55758b61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Logger::removeAllIssues</definition>
+        <argsstring>()</argsstring>
+        <name>removeAllIssues</name>
+        <briefdescription>
+<para>Clear the issues from the logger. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clear the issues from the logger. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/logger.h" line="46" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Logger_1afb047604e88a6044b27d7f6933744565" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Logger::addIssue</definition>
+        <argsstring>(const IssuePtr &amp;issue)</argsstring>
+        <name>addIssue</name>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1ad323ac6f8bcdf4740a0209906bc33ac2" kindref="member">IssuePtr</ref> &amp;</type>
+          <declname>issue</declname>
+        </param>
+        <briefdescription>
+<para>Add an issue to the logger. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds the argument <computeroutput>issue</computeroutput> to this logger.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>issue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>IssuePtr</computeroutput> to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/logger.h" line="55" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Logger_1a3c078e9502a10748ade938374faef6d9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::Logger::issueCount</definition>
+        <argsstring>() const</argsstring>
+        <name>issueCount</name>
+        <briefdescription>
+<para>Get the number of issues. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the number of issues of any level currently stored in the logger.</para>
+<para><simplesect kind="return"><para>The number of issues. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/logger.h" line="64" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Logger_1a192650ae59ea8747feb6c4f09de6a389" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1ad323ac6f8bcdf4740a0209906bc33ac2" kindref="member">IssuePtr</ref></type>
+        <definition>IssuePtr libcellml::Logger::issue</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>issue</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Get issue of any level at the specified <computeroutput>index</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns an issue at the <computeroutput>index</computeroutput>. If the <computeroutput>index</computeroutput> is not valid a <computeroutput>nullptr</computeroutput> is returned, the valid range for the <computeroutput>index</computeroutput> is [0, #issues).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the issue to return.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the issue at the given index on success, <computeroutput>nullptr</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/logger.h" line="77" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Logger_1a6bb9f053eb4f1b743167b84bbf5e9b34" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::Logger::errorCount</definition>
+        <argsstring>() const</argsstring>
+        <name>errorCount</name>
+        <briefdescription>
+<para>Get the number of issues with level of ERROR. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the number of errors currently stored in the logger.</para>
+<para><simplesect kind="return"><para>The number of errors. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/logger.h" line="86" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Logger_1a5a260a645de3be9ffb844ce3f7584c4f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1ad323ac6f8bcdf4740a0209906bc33ac2" kindref="member">IssuePtr</ref></type>
+        <definition>IssuePtr libcellml::Logger::error</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>error</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Get issue of level ERROR at the specified <computeroutput>index</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns an error at the <computeroutput>index</computeroutput>. If the <computeroutput>index</computeroutput> is not valid a <computeroutput>nullptr</computeroutput> is returned, the valid range for the <computeroutput>index</computeroutput> is [0, #errors).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the error to return.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the error at the given index on success, <computeroutput>nullptr</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/logger.h" line="99" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Logger_1a6973054ad6d00d9bb6d2bfb488cdfebd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::Logger::warningCount</definition>
+        <argsstring>() const</argsstring>
+        <name>warningCount</name>
+        <briefdescription>
+<para>Get the number of issues with level of WARNING. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the number of warnings currently stored in the logger.</para>
+<para><simplesect kind="return"><para>The number of warnings. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/logger.h" line="108" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Logger_1a610d4878881567899c6d47db5e625736" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1ad323ac6f8bcdf4740a0209906bc33ac2" kindref="member">IssuePtr</ref></type>
+        <definition>IssuePtr libcellml::Logger::warning</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>warning</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Get issue of level WARNING at the specified <computeroutput>index</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a warning at the <computeroutput>index</computeroutput>. If the <computeroutput>index</computeroutput> is not valid a <computeroutput>nullptr</computeroutput> is returned, the valid range for the <computeroutput>index</computeroutput> is [0, #warnings).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the warning to return.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the warning at the given index on success, <computeroutput>nullptr</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/logger.h" line="121" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Logger_1ae28a1b7b4fc758c71ddf1ddd0a9aceb6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::Logger::hintCount</definition>
+        <argsstring>() const</argsstring>
+        <name>hintCount</name>
+        <briefdescription>
+<para>Get the number of issues with level of HINT. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the number of hints currently stored in the logger.</para>
+<para><simplesect kind="return"><para>The number of hints. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/logger.h" line="130" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Logger_1a278d9d1a65c4b56e26f3d490e4cffe6c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1ad323ac6f8bcdf4740a0209906bc33ac2" kindref="member">IssuePtr</ref></type>
+        <definition>IssuePtr libcellml::Logger::hint</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>hint</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Get issue of level HINT at the specified <computeroutput>index</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a hint at the <computeroutput>index</computeroutput>. If the <computeroutput>index</computeroutput> is not valid a <computeroutput>nullptr</computeroutput> is returned, the valid range for the <computeroutput>index</computeroutput> is [0, #hints).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the hint to return.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the hint at the given index on success, <computeroutput>nullptr</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/logger.h" line="143" column="14"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classlibcellml_1_1Logger_1af0d21280526fec6a2fdd6587f8fc276d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Logger::Logger</definition>
+        <argsstring>()</argsstring>
+        <name>Logger</name>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/logger.h" line="146" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classlibcellml_1_1Logger" kindref="compound">Logger</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Base class for all serialisable libCellML classes. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>libcellml::Parser</label>
+        <link refid="classlibcellml_1_1Parser"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>libcellml::Printer</label>
+        <link refid="classlibcellml_1_1Printer"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>libcellml::Logger</label>
+        <link refid="classlibcellml_1_1Logger"/>
+      </node>
+      <node id="2">
+        <label>libcellml::Generator</label>
+        <link refid="classlibcellml_1_1Generator"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>libcellml::Validator</label>
+        <link refid="classlibcellml_1_1Validator"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>libcellml::Logger</label>
+        <link refid="classlibcellml_1_1Logger"/>
+      </node>
+    </collaborationgraph>
+    <location file="libcellml/logger.h" line="34" column="1" bodyfile="libcellml/logger.h" bodystart="33" bodyend="151"/>
+    <listofallmembers>
+      <member refid="classlibcellml_1_1Logger_1afb047604e88a6044b27d7f6933744565" prot="public" virt="non-virtual"><scope>libcellml::Logger</scope><name>addIssue</name></member>
+      <member refid="classlibcellml_1_1Logger_1a5a260a645de3be9ffb844ce3f7584c4f" prot="public" virt="non-virtual"><scope>libcellml::Logger</scope><name>error</name></member>
+      <member refid="classlibcellml_1_1Logger_1a6bb9f053eb4f1b743167b84bbf5e9b34" prot="public" virt="non-virtual"><scope>libcellml::Logger</scope><name>errorCount</name></member>
+      <member refid="classlibcellml_1_1Logger_1a278d9d1a65c4b56e26f3d490e4cffe6c" prot="public" virt="non-virtual"><scope>libcellml::Logger</scope><name>hint</name></member>
+      <member refid="classlibcellml_1_1Logger_1ae28a1b7b4fc758c71ddf1ddd0a9aceb6" prot="public" virt="non-virtual"><scope>libcellml::Logger</scope><name>hintCount</name></member>
+      <member refid="classlibcellml_1_1Logger_1a192650ae59ea8747feb6c4f09de6a389" prot="public" virt="non-virtual"><scope>libcellml::Logger</scope><name>issue</name></member>
+      <member refid="classlibcellml_1_1Logger_1a3c078e9502a10748ade938374faef6d9" prot="public" virt="non-virtual"><scope>libcellml::Logger</scope><name>issueCount</name></member>
+      <member refid="classlibcellml_1_1Logger_1aefeba7b186698f30222c7e4bfdc55a94" prot="public" virt="non-virtual"><scope>libcellml::Logger</scope><name>Logger</name></member>
+      <member refid="classlibcellml_1_1Logger_1a3795ed3f2bbc99ab6ffdd2620cb49e87" prot="public" virt="non-virtual"><scope>libcellml::Logger</scope><name>Logger</name></member>
+      <member refid="classlibcellml_1_1Logger_1af0d21280526fec6a2fdd6587f8fc276d" prot="protected" virt="non-virtual"><scope>libcellml::Logger</scope><name>Logger</name></member>
+      <member refid="classlibcellml_1_1Logger_1ad1fccd14afca732e2c82b788b9af8635" prot="private" virt="non-virtual"><scope>libcellml::Logger</scope><name>mPimpl</name></member>
+      <member refid="classlibcellml_1_1Logger_1a10b7b226787510f9f3dc3f329eb416a1" prot="public" virt="non-virtual"><scope>libcellml::Logger</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1Logger_1af3d56e5511cd3d38e9a31f1f55758b61" prot="public" virt="non-virtual"><scope>libcellml::Logger</scope><name>removeAllIssues</name></member>
+      <member refid="classlibcellml_1_1Logger_1a610d4878881567899c6d47db5e625736" prot="public" virt="non-virtual"><scope>libcellml::Logger</scope><name>warning</name></member>
+      <member refid="classlibcellml_1_1Logger_1a6973054ad6d00d9bb6d2bfb488cdfebd" prot="public" virt="non-virtual"><scope>libcellml::Logger</scope><name>warningCount</name></member>
+      <member refid="classlibcellml_1_1Logger_1af10a83604f60870be932ac9986a49d85" prot="public" virt="virtual"><scope>libcellml::Logger</scope><name>~Logger</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
