@@ -8,7 +8,7 @@
             v-for="(version, index) in tutorialVersions"
             :key="'api_reference_' + index"
           >
-            <router-link :to="{ path: `/help/tutorials/${version}` }">
+            <router-link :to="{ path: `/documentation/tutorials/${version}` }">
               <big>libCellML {{ version }} Tutorials</big>
             </router-link>
           </li>

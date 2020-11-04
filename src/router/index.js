@@ -27,32 +27,28 @@ const routes = [
       ),
   },
   {
-    path: '/help/api/:version/:pageName?',
+    path: '/documentation/api/:version/:pageName?',
     name: 'APIReferencePage',
     component: () =>
       import(/* webpackChunkName: "doxygen" */ '../views/HelpAPIPage.vue'),
   },
   {
-    path: '/help/api',
+    path: '/documentation/api',
     name: 'APIReference',
     component: () =>
       import(/* webpackChunkName: "doxygen" */ '../views/HelpAPI.vue'),
   },
   {
-    path: '/help/tutorials/:version/:pageName*',
+    path: '/documentation/tutorials/:version/:pageName*',
     name: 'TutorialsPage',
     component: () =>
       import(/* webpackChunkName: "sphinx" */ '../views/HelpTutorialsPage.vue'),
   },
   {
-    path: '/help/tutorials',
+    path: '/documentation/tutorials',
     name: 'Tutorials',
     component: () =>
       import(/* webpackChunkName: "sphinx" */ '../views/HelpTutorials.vue'),
-  },
-  {
-    path: '/help',
-    redirect: { name: 'Documentation' },
   },
   {
     path: '/developers',
