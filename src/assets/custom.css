@@ -37,3 +37,11 @@ dl[name="simplesect"], dl[name="parameterlist"] {
     margin-left: 15px;
     margin-top:5px;
 }
+
+/* Table of public function names in index should be monospaced. */
+section[id^="classlibcellml"]
+ > section[id^="public_"]
+ > table {
+    color: black;
+    font-family: monospace;
+}
