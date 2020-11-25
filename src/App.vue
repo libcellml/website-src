@@ -1,10 +1,9 @@
 <template>
   <v-app id="libcellml">
     <v-app-bar app clipped-left>
-      <!-- -->
-      <v-app-bar-nav-icon @click="onSidebarOpen" />
+      <img src="./assets/logo.svg" width="40" height="40"/>
+      <v-app-bar-nav-icon @click="onSidebarOpen" /> 
       <v-row>
-        <v-col cols="1" />
         <v-col
           v-for="link in links"
           :key="`${link.label}-header-link`"
@@ -38,11 +37,7 @@
           </v-breadcrumbs-item>
         </template>
       </v-breadcrumbs>
-      <!-- KRM <v-container
-        fluid
-        id="pageContent"
-        :style="{ backgroundImage: 'url(' + backgroundImage + ')' }"
-      > -->
+
       <v-container fluid id="pageContent">
         <!-- If using vue-router -->
         <transition name="slide" mode="out-in">
@@ -164,7 +159,6 @@ export default {
         url: '/about',
       },
     ],
-    // backgroundImage: require('@/assets/logo.svg'), // KRM
     window: {
       width: 0,
       height: 0,
