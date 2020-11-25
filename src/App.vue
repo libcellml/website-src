@@ -1,8 +1,8 @@
 <template>
   <v-app id="libcellml">
     <v-app-bar app clipped-left>
-      <img src="./assets/logo.svg" width="40" height="40"/>
-      <v-app-bar-nav-icon @click="onSidebarOpen" /> 
+      <img src="./assets/logo.svg" width="40" height="40" />
+      <v-app-bar-nav-icon @click="onSidebarOpen" />
       <v-row>
         <v-col
           v-for="link in links"
@@ -185,6 +185,7 @@ export default {
       return d.getDate() + ' ' + months[d.getMonth()] + ' ' + d.getFullYear()
     },
     breadcrumbs() {
+      // KRM reverse order so that higher level links are truncated first, rather than local ones
       return this.$store.state.breadcrumbs
     },
   },
@@ -212,7 +213,6 @@ export default {
 </script>
 
 <style>
-
 #pageContent {
   background-size: 80px;
   background-position: 12px 12px;
