@@ -3,7 +3,7 @@
     <v-container>
       <v-row>
         <v-col>
-          <div class="absolute-box">
+          <div class="version-box">
             <version-combo-box
               :versions="availableVersions"
             ></version-combo-box>
@@ -45,12 +45,20 @@ export default {
 </script>
 
 <style scoped>
-.tutorials {
+.api-reference {
+  position: relative;
+}
+.version-box > * {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+/* .tutorials {
   position: relative;
 }
 
 .absolute-box {
   position: absolute;
   top: 0;
-}
+} */
 </style>

@@ -212,9 +212,6 @@ export default {
 </script>
 
 <style>
-.breadcrumbs {
-  padding: 3px 0 !important;
-}
 
 #pageContent {
   background-size: 80px;
