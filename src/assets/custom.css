@@ -1,6 +1,6 @@
 /* Remove box and shadow from code.  The font and colour is plenty! */
 .v-application code {
-    background-color: #ffffff;
+    background: none;
     border: none;
     border-radius: 0;
     box-shadow: none;
@@ -89,13 +89,21 @@ section {
 
 /* Remove indents on smaller screens. */
 @media only screen and (max-width: 31rem) {
-    
     .function > * {
         margin-left: 0.2rem;
     }
-
     dl[name="simplesect"], dl[name="parameterlist"] {
         margin-left: 0;
     }
-
 }
+
+pre {
+    background-color: #fafafa;
+    border-radius: 3px;
+}
+
+
+
+
+
+
