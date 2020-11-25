@@ -10,12 +10,13 @@
           :key="`${link.label}-header-link`"
           :cols="link.label === 'Home' ? 2 : 1"
         >
-          <v-btn text rounded :to="link.url">
+          <v-btn text :to="link.url">
             {{ link.label }}
           </v-btn>
         </v-col>
       </v-row>
     </v-app-bar>
+
     <sidebar app></sidebar>
     <!--    <BreadCrumbs />-->
     <!-- Sizes your content based upon application components -->
@@ -37,11 +38,12 @@
           </v-breadcrumbs-item>
         </template>
       </v-breadcrumbs>
-      <v-container
+      <!-- KRM <v-container
         fluid
         id="pageContent"
         :style="{ backgroundImage: 'url(' + backgroundImage + ')' }"
-      >
+      > -->
+      <v-container fluid id="pageContent">
         <!-- If using vue-router -->
         <transition name="slide" mode="out-in">
           <router-view :key="$route.path" />
@@ -56,7 +58,7 @@
         <v-col class="text-center">
           {{ new Date().getFullYear() }} — <strong>libCellML</strong>
         </v-col>
-        <v-col class="text-right">Created: {{ currentDate }} </v-col>
+        <v-col class="text-right">Created: {{ currentDate }}</v-col>
       </v-row>
     </v-footer>
   </v-app>
@@ -130,6 +132,14 @@ export default {
     NotificationContainer,
   },
 
+  created() {
+    window.addEventListener('resize', this.handleResize)
+    this.handleResize()
+  },
+  destroyed() {
+    window.removeEventListener('resize', this.handleResize)
+  },
+
   data: () => ({
     pageChange: false,
     links: [
@@ -154,7 +164,11 @@ export default {
         url: '/about',
       },
     ],
-    backgroundImage: require('@/assets/logo.svg'),
+    // backgroundImage: require('@/assets/logo.svg'), // KRM
+    window: {
+      width: 0,
+      height: 0,
+    },
   }),
 
   computed: {
@@ -184,6 +198,12 @@ export default {
   methods: {
     onSidebarOpen() {
       this.$store.commit('setSidebarOpen', !this.$store.getters.getSidebarOpen)
+    },
+
+    // KRM
+    handleResize() {
+      this.window.width = window.innerWidth
+      this.window.height = window.innerHeight
     },
   },
 
