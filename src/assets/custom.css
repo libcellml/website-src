@@ -64,8 +64,13 @@ section {
     padding-top: 1rem;
 }
 
-/* Move the heading and version selector off the logo so it can be read. */
-
+/* Move breadcrumbs down a little ... */
+.breadcrumbs {
+    margin-top: 0.3rem;
+    white-space: nowrap;
+    display: block;
+    padding: 0px;
+}
 
 /*  At present the menu width at 100% jumps to two lines when window width is less than 848px.  
     Assume base rem = 16px -> 53rem */
