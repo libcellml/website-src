@@ -18,8 +18,8 @@
               </li>
             </ul>
           </template>
-          <br>
-          
+          <br />
+
           <template v-if="havePageHeadings">
             <h4>On this page</h4>
             <ul>
@@ -30,7 +30,8 @@
               >
                 <router-link
                   v-if="heading.id"
-                  :to="`${$route.path}#${heading.id}`">
+                  :to="`${$route.path}#${heading.id}`"
+                >
                   {{ heading.el.innerText || heading.el.textContent }}
                 </router-link>
                 <template v-else>
@@ -39,7 +40,6 @@
               </li>
             </ul>
           </template>
-
         </v-col>
       </v-row>
     </v-container>
@@ -153,7 +153,7 @@ export default {
       let el = document.querySelector('#pageContent')
       if (el) {
         let headings = this.getHeadings(el, headingInitial)
-        headings.forEach((heading) => {
+        headings.forEach(heading => {
           let subHeadings = this.getHeadings(heading, headingInitial + 1)
           const treeEntry = {
             el: heading,

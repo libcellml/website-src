@@ -1,7 +1,13 @@
 <template>
   <v-container class="version-container" fill-height fluid>
-    <v-row class="version-row" align="center" justify="start" >
-      <v-col align="left" justify="left" xs="4" sm="2" class="version-select-col">
+    <v-row class="version-row" align="center" justify="start">
+      <v-col
+        align="left"
+        justify="left"
+        xs="4"
+        sm="2"
+        class="version-select-col"
+      >
         <basic-select
           class="version-combo-box"
           :options="versions"
@@ -10,9 +16,16 @@
         ></basic-select>
       </v-col>
       <template v-if="!latest">
-        <v-col align="left" justify="center" xs="8" sm="10" class="version-warning-col">
+        <v-col
+          align="left"
+          justify="center"
+          xs="8"
+          sm="10"
+          class="version-warning-col"
+        >
           <span class="version-warning"
-            >This is not the latest documentation. <router-link :to="latestFullPath">
+            >This is not the latest documentation.
+            <router-link :to="latestFullPath">
               Click here to see the latest release
             </router-link>
             or use the version selector on the left.
@@ -86,10 +99,10 @@ export default {
 </script>
 
 <style>
-.version-row {
+/* .version-row {
   align: center;
   justify: center;
-}
+} */
 
 .version-warning-col {
   margin: 0;
