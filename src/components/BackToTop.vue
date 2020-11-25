@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row>
-      <v-col class="text-right">
+      <v-col>
         <v-btn
           v-scroll="onScroll"
           v-show="fab"
