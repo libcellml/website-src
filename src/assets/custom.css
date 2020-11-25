@@ -69,7 +69,10 @@ section {
     margin-top: 0.3rem;
     white-space: nowrap;
     display: block;
-    padding: 0px;
+}
+
+.v-breadcrumbs {
+    padding: 0;
 }
 
 /*  At present the menu width at 100% jumps to two lines when window width is less than 848px.  

@@ -12,11 +12,10 @@
       <template v-if="!latest">
         <v-col align="left" justify="center" xs="8" sm="10" class="version-warning-col">
           <span class="version-warning"
-            >This documention is for an old version of libCellML. Please
-            <router-link :to="latestFullPath">
-              click here to see the latest release
+            >This is not the latest documentation. <router-link :to="latestFullPath">
+              Click here to see the latest release
             </router-link>
-            .
+            or use the version selector on the left.
           </span>
         </v-col>
       </template>
