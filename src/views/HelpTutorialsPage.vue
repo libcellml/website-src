@@ -3,6 +3,14 @@
     <v-container>
       <v-row>
         <v-col>
+          <div class="container toggle">
+            <div class="container header">CLICK ME!</div>
+            <div class="container infospec">
+              HIDE ME ... blah blah balh
+              <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            </div>
+          </div>
+
           <div class="version-box">
             <version-combo-box
               :versions="availableVersions"
@@ -39,6 +47,19 @@ export default {
   methods: {
     updated() {
       this.$store.commit('togglePageContentChanged')
+      this.addClickHandler()
+    },
+    addClickHandler: function () {
+      var headers = this.$el.querySelectorAll('.container.header')
+      headers.forEach((x) => {
+        x.addEventListener('click', function () {
+          var contents = x.nextElementSibling
+          if (contents != null) {
+            contents.style.display =
+              contents.style.display === 'none' ? 'block' : 'none'
+          }
+        })
+      })
     },
   },
 }
@@ -53,12 +74,4 @@ export default {
   margin: 0;
   padding: 0;
 }
-/* .tutorials {
-  position: relative;
-}
-
-.absolute-box {
-  position: absolute;
-  top: 0;
-} */
 </style>
