@@ -97,13 +97,77 @@ section {
     }
 }
 
+/* Code block background colour. */
 pre {
     background-color: #fafafa;
     border-radius: 3px;
 }
 
+/* Formatting from the tutorials readthedocs site. */
+.dothis {
+    border-left: 5px solid rgb(174, 189, 145);
+    background:rgb(242, 249, 227);
+    padding: 3px 3px 5px 8px;
+    margin-top:20px;
+    margin-bottom:20px;
+    line-height: 24px;
+    font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+}
+
+.dothis > p {
+    margin-bottom: 0;
+}
+
+.nb {
+    border-left: 5px solid sandybrown;
+    background:rgb(255, 243, 206);
+    padding: 3px 3px 5px 8px;
+    margin-top:20px;
+    margin-bottom:20px;
+    line-height: 24px;
+    font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+}
+
+.nb > p, ul, ol, dl {
+    margin-bottom:0;
+    padding: 5px;
+}
+
+/* Toggles for showing/hiding code. */
+.toggle > * {
+    display: none;
+}
+
+.toggle .header {
+    display: block;
+    clear: both;
+    color: darkslategray;
+    text-align: right;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.toggle .header p:after {
+    content: " +";
+}
+
+.toggle .header.open p:after {
+    content: " -";
+}
 
 
+/* TODO collapse nicely ... */
+.infospec {
+    /* border-top: 1px solid #b9c6dd; */
+    background: #e1eaf0;
+    color: #444444;
+    padding: 10px;
 
+    margin-top: 0;
+    margin-bottom: 15px;
+    margin-left: 0;
+    margin-right: 0;
 
-
+    line-height: 24px;
+    font-family: "Lato", "proxima-nova", "Helvetica Neue", "Arial", sans-serif;
+}
