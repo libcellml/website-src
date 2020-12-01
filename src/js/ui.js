@@ -1,7 +1,4 @@
 export default {
-  hideContentUntilFormatted: function () {
-    alert('hello!')
-  },
 
   // KRM
   moveTabNames: function () {
@@ -32,7 +29,6 @@ export default {
         firstPanel.classList.add('active')
         menu.querySelector('#g' + groupIndex + 't0').classList.add('active')
       }
-
     })
   },
 
@@ -40,6 +36,7 @@ export default {
     // Event capture for the "toggle" class:
     let headers = document.querySelectorAll('.container .header')
     headers.forEach((x) => {
+      x.classList.add('inactive')
       x.addEventListener('click', function () {
         let contents = x.nextElementSibling
         // alert('clicked!')
@@ -48,6 +45,8 @@ export default {
           contents.style.display =
             contents.style.display !== 'block' ? 'block' : 'none'
         }
+        x.classList.toggle('active')
+        x.classList.toggle('inactive')
       })
     })
   },
@@ -75,6 +74,4 @@ export default {
       })
     })
   },
-
-
 }
