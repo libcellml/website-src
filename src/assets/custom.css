@@ -1,3 +1,8 @@
+/* Make max width for page content. */
+/* #pageContent {
+    max-width: 900px;
+} */
+
 /* Remove box and shadow from code.  The font and colour is plenty! */
 .v-application code {
     background: none;
@@ -38,7 +43,6 @@ TODO: Find where the extra space is being added after the trailing ") " and move
 }
 
 /* Indenting the "see also", "parameters" and "return" blocks on wide screens. */
-
 dl[name="simplesect"], dl[name="parameterlist"] {
     margin-left: 1rem;
     margin-top: 0.3rem;
@@ -103,6 +107,11 @@ pre {
     border-radius: 3px;
 }
 
+/* Shortlist class. */
+.shortlist > ul > li > p {
+    margin-bottom: 2px;
+}
+
 /* Formatting from the tutorials readthedocs site. */
 .dothis {
     border-left: 5px solid rgb(174, 189, 145);
@@ -136,15 +145,20 @@ pre {
 /* Toggles for showing/hiding code. */
 .toggle > * {
     display: none;
-}
+} 
 
 .toggle .header {
     display: block;
     clear: both;
-    color: darkslategray;
+    color: #444444;
     text-align: right;
     margin-top: 0;
     margin-bottom: 15px;
+}
+
+.toggle > pre {
+    background-color: #eeeeee;
+    white-space: nowrap;
 }
 
 .toggle .header p:after {
@@ -155,6 +169,79 @@ pre {
     content: " -";
 }
 
+.tab2menu {
+    position: relative;
+    height: 45px;
+    border-bottom: solid #cccccc 1px;
+}
+
+.tab2spacer {
+    /* position:relative; */
+    display: block;
+
+}
+
+.tab2name {
+    float: left;
+    width: auto;
+    /* min-width: 100px; */
+    height: 20px;
+    color: #444444;
+    /* background-color: #efefef; */
+    border: solid #cccccc 1px;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 45px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.tab2name.active {
+    background-color: white;
+    font-weight: 700;
+    color: #bd4147;
+    border-bottom: solid white 3px;
+}
+
+.tab2name.inactive {
+    background-color: whitesmoke;
+    font-weight: 400;
+    color: #444444;
+    border-bottom: solid #cccccc 1px;
+}
+
+.tab2.active > .tab2name {
+    font-weight: 700;
+    color: #bd4147;
+}
+
+.tab2.inactive > .tab2name {
+    font-weight: 400;
+    color: #444444;
+}
+
+.tab2content {
+    display: none;
+    background: none;
+}
+
+.tab2.active > .tab2content {
+    display: block;
+    /* padding: 5px;
+    margin: 5px; */
+}
+
+.tab2.inactive > .tab2content {
+    display: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tab2 * {
+    margin: 0 !important;
+    /* padding: 0 !important; */
+}
 
 /* TODO collapse nicely ... */
 .infospec {
@@ -171,3 +258,4 @@ pre {
     line-height: 24px;
     font-family: "Lato", "proxima-nova", "Helvetica Neue", "Arial", sans-serif;
 }
+
