@@ -116,6 +116,9 @@ import BackToTop from '@/components/BackToTop'
 import Sidebar from '@/components/Sidebar'
 import NotificationContainer from '@/components/NotificationContainer'
 
+// KRM
+import ui from '@/js/ui'
+
 // import BreadCrumbs from '@/components/BreadCrumbs'
 
 export default {
@@ -138,13 +141,6 @@ export default {
   },
 
   mounted() {
-    document.onreadystatechange = () => {
-      if (document.readyState == 'complete') {
-        this.addClickHandlerToggles()
-        this.moveTabNames()
-        this.addClickHandlerTabs()
-      }
-    }
   },
 
   data: () => ({
@@ -212,118 +208,6 @@ export default {
       this.window.width = window.innerWidth
       this.window.height = window.innerHeight
     },
-
-    // KRM
-    moveTabNames() {
-      let tabGroups = this.$el.querySelectorAll('.container .tabs2')
-      tabGroups.forEach((group, groupIndex) => {
-        group.id = 'g' + groupIndex
-
-        let menu = document.createElement('div')
-        menu.classList.add('tab2menu')
-        menu.id = 'g' + groupIndex + 'menu'
-
-        let firstPanel = group.firstElementChild
-        firstPanel.insertAdjacentElement('beforebegin', menu)
-
-        group.querySelectorAll('.tab2').forEach((t, tabIndex) => {
-          t.id = 'g' + groupIndex + 't' + tabIndex + 'tab'
-
-          let tabName = t.querySelector('.tab2name')
-          tabName.id = 'g' + groupIndex + 't' + tabIndex
-
-          menu.appendChild(tabName)
-        })
-
-        let menuSpacer = document.createElement('div')
-        menuSpacer.classList.add('tab2spacer')
-
-        firstPanel.classList.add('active')
-        menu.querySelector('#g'+groupIndex+'t0').classList.add('active')
-
-      })
-    },
-
-    addClickHandlerToggles() {
-      // Event capture for the "toggle" class:
-      let headers = this.$el.querySelectorAll('.container .header')
-      headers.forEach((x) => {
-        x.addEventListener('click', function () {
-          let contents = x.nextElementSibling
-          alert('clicked!')
-          if (contents != null) {
-            alert(contents.style.display)
-            contents.style.display =
-              contents.style.display !== 'block' ? 'block' : 'none'
-          }
-        })
-      })
-    },
-
-    addClickHandlerTabs() {
-      let tabNames = this.$el.querySelectorAll('.tab2name')
-      tabNames.forEach((tabName) => {
-        tabName.addEventListener('click', function () {
-
-          // Turn other tabs off.
-          let group = tabName.parentElement.parentElement
-          group.querySelectorAll('.tab2').forEach((tab) => {
-            tab.classList.remove('active')
-            tab.classList.add('inactive')
-          })
-          group.querySelectorAll('.tab2name').forEach((tab) => {
-            tab.classList.remove('active')
-            tab.classList.add('inactive')
-          })
-          // Turn this tab on.
-          let current = group.querySelector('#' + tabName.id + 'tab')
-          current.classList.add('active')
-          current.classList.remove('inactive')
-          tabName.classList.add('active')
-          tabName.classList.remove('inactive')
-        })
-      })
-    },
-
-    // KRM works when the tabs aren't moved.
-    // addClickHandler() {
-    //   // Event capture for the "toggle" class:
-    //   let headers = this.$el.querySelectorAll('.container .header')
-    //   headers.forEach((x) => {
-    //     x.addEventListener('click', function () {
-    //       let contents = x.nextElementSibling
-    //       alert('clicked!')
-    //       if (contents != null) {
-    //         alert(contents.style.display)
-    //         contents.style.display =
-    //           contents.style.display !== 'block' ? 'block' : 'none'
-    //       }
-    //     })
-    //   })
-
-    //   // Event capture for the "tab" class:
-    //   let tabNames = this.$el.querySelectorAll('.container .tab2name')
-    //   tabNames.forEach((x) => {
-    //     x.addEventListener('click', function () {
-
-    //       // Turn off all blocks in this group.
-    //       let t = x.parentElement.parentElement.firstElementChild
-    //       while (t) {
-    //         // let c = t.querySelector('.container .tab2content')
-    //         // c.classList.remove('active')
-    //         // c.classList.add('inactive')
-
-    //         t.classList.remove('active')
-    //         t.classList.add('inactive')
-    //         t = t.nextElementSibling
-    //       }
-
-    //       // Turns on the content
-    //         x.parentElement.classList.remove('inactive')
-    //         x.parentElement.classList.add('active')
-    //     })
-    //   })
-    // },
   },
 
   watch: {
@@ -344,7 +228,8 @@ export default {
 
 .slide-enter-active,
 .slide-leave-active {
-  transition: opacity 1s, transform 1s;
+  /* transition: opacity 1s, transform 1s; KRM used to be 1s for each */
+  transition: opacity 0.25s, transform 0.25s;
 }
 
 .slide-enter,
