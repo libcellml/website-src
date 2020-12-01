@@ -166,8 +166,8 @@ pre {
     clear: both;
     color: #444444;
     text-align: right;
-    margin-top: 0;
-    margin-bottom: 15px;
+    margin-top: 5px;
+    margin-bottom: 0;
 }
 
 .toggle > pre {
@@ -178,6 +178,7 @@ pre {
 .toggle .header.active p {
     font-weight: 700;
     color: #bd4147;
+    margin-bottom:0;
 }
 
 .toggle .header.active p::after {
