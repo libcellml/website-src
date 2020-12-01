@@ -188,6 +188,7 @@ pre {
 .toggle .header.inactive p {
     font-weight: 400;
     color: #444444;
+    margin-bottom:0;
 }
 
 .toggle .header.inactive p::after {
