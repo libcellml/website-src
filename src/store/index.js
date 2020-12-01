@@ -9,7 +9,7 @@ export default new Vuex.Store({
   state: {
     sidebarOpen: null,
     dynamicRoutes: [],
-    transitionDelay: 1100, // This number has to be higher than my page transition
+    transitionDelay: 300, // This number has to be higher than my page transition
     pageContentChanged: false,
     breadcrumbs: [],
   },

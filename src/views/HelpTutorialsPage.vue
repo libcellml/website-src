@@ -25,20 +25,31 @@ import VersionComboBox from '@/components/VersionComboBox'
 
 import { getSphinxVersions } from '@/js/versions'
 
+import ui from '@/js/ui'
+
 export default {
   name: 'TutorialsPage',
   components: {
     SphinxPage,
     VersionComboBox,
   },
+
   computed: {
     availableVersions() {
       return getSphinxVersions()
     },
   },
+
   methods: {
     updated() {
       this.$store.commit('togglePageContentChanged')
+
+      // KRM include these on any page where the injected XML might contain tabs or toggle blocks.
+      setTimeout(function () {
+        ui.moveTabNames()
+        ui.addClickHandlerTabs()
+        ui.addClickHandlerToggles()
+      }, this.$store.getters.getTransitionDelay)
     },
   },
 }
