@@ -4,8 +4,10 @@
     float: left;
 }
 
-a {
+.v-application a {
     text-decoration: none;
+    color: #4e0202;
+    /* font-weight:500; */
 }
 
 a:hover {
@@ -24,6 +26,20 @@ a:hover {
 
 .v-application code::before, .v-application code::after {
     display:none;
+}
+
+code.plaintext {
+    background-color: #444444;
+    color: whitesmoke;
+    overflow: scroll;
+    border-radius: 3px;
+    width: 100%;
+}
+
+code.xref {
+    font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+    color: #4e0202;
+    font-weight: 500;
 }
 
 /* Indent the function contents so it's easier to distinguish from the names.
@@ -123,14 +139,23 @@ pre {
 
 /* Formatting from the tutorials readthedocs site. */
 .dothis {
+    padding: .1rem 1.5rem;
+    border-left-width: .5rem;
+    border-left-style: solid;
+    margin: 1rem 0;
+
+    background-color:#fbfff6;
+    border-color: rgb(80, 121, 0);
+    color: #22440b;
+
     /* border-left: 5px solid rgb(174, 189, 145); */
-    border-left: 5px solid #1fbe7c;
-    background:#f0fff9;
+    /* border-left: 5px solid #1fbe7c; */
+    /* background:#f0fff9; */
     /* background-color: #efefef; */
-    padding: 3px 3px 5px 8px;
+    /* padding: 3px 3px 5px 8px;
     margin-top:20px;
     margin-bottom:20px;
-    line-height: 24px;
+    line-height: 24px; */
     font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
 }
 
@@ -142,13 +167,23 @@ pre {
     /* border-left: 5px solid rgb(137, 153, 192);
     background: #e1eaf0; */
 
-    border-left: 5px solid #1f76be;
-    background:#ecf6ff;
+    padding: .1rem 1.5rem;
+    border-left-width: .5rem;
+    border-left-style: solid;
+    margin: 1rem 0;
+
+    background-color:#f3f5f7;
+    border-color: #1f76be;
+    color: #0f3555;
+
+    /* border-left: 5px solid #1f76be; */
+    /* background:#ecf6ff; */
+    /* background: ; */
     
-    padding: 3px 3px 5px 8px;
+    /* padding: 3px 3px 5px 8px;
     margin-top:20px;
     margin-bottom:20px;
-    line-height: 24px;
+    line-height: 24px; */
     font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
 }
 
@@ -166,11 +201,22 @@ pre {
 }
 
 .nb {
+
+    padding: .1rem 1.5rem;
+    border-left-width: .5rem;
+    border-left-style: solid;
+    margin: 1rem 0;
+
+    background-color: rgba(255,229,100,.3);
+    border-color: #e7c000;
+    color: #6b5900;
+
+/*     
     border-left: 5px solid sandybrown;
-    background:rgb(255, 243, 206);
-    padding: 3px 3px 5px 8px;
+    background:rgb(255, 243, 206); */
+    /* padding: 3px 3px 5px 8px;
     margin-top:20px;
-    margin-bottom:20px;
+    margin-bottom:20px; */
     line-height: 24px;
     font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
 }
@@ -317,6 +363,7 @@ pre {
     font-family: "Lato", "proxima-nova", "Helvetica Neue", "Arial", sans-serif;
 }
 
-.useful {
-
+/* Turn off the Contents blocks on pages as they're in the sidebar. */
+.topic.contents {
+    display: none;
 }
