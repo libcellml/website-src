@@ -4,6 +4,14 @@
     float: left;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
 /* Remove box and shadow from code.  The font and colour is plenty! */
 .v-application code {
     background: none;
