@@ -246,7 +246,7 @@ pre {
     padding: 0;
 } 
 
-.toggle .header {
+.toggle .header, .toggle .header-left {
     display: block;
     clear: both;
     color: #444444;
@@ -255,28 +255,35 @@ pre {
     margin-bottom: 0;
 }
 
+.toggle .header-left {
+    text-align: left;
+}
+
 .toggle > pre {
     background-color: #eeeeee;
     white-space: nowrap;
 }
 
-.toggle .header.active p {
+.toggle .header.active p, .toggle .header-left.active p {
     font-weight: 700;
     color: #bd4147;
     margin-bottom:0;
 }
 
-.toggle .header.active p::after {
+.toggle .header.active p::after,
+.toggle .header-left.active p::after {
     content: " -"
 }
 
-.toggle .header.inactive p {
+.toggle .header.inactive p,
+.toggle .header-left.inactive p  {
     font-weight: 400;
     color: #444444;
     margin-bottom:0;
 }
 
-.toggle .header.inactive p::after {
+.toggle .header.inactive p::after,
+.toggle .header-left.inactive p::after {
     content: " +"
 }
 

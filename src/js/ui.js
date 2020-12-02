@@ -34,8 +34,10 @@ export default {
 
   addClickHandlerToggles: function () {
     // Event capture for the "toggle" class:
-    let headers = document.querySelectorAll('.container .header')
+    let headers = document.querySelectorAll('.header, .header-left') 
+    // let headers = document.querySelectorAll('.toggle.header')
     headers.forEach((x) => {
+
       x.classList.add('inactive')
       x.addEventListener('click', function () {
         let contents = x.nextElementSibling
