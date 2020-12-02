@@ -8,7 +8,7 @@ import DoxygenXml from 'vue-doxygen-xml'
 import SphinxXml from 'vue-sphinx-xml'
 import VueHighlightJS from 'vue-highlightjs'
 
-// import 'highlight.js/styles/xcode.css'
+import 'highlight.js/styles/xcode.css'
 
 // KRM
 import './assets/custom.css'
