@@ -115,8 +115,10 @@ pre {
 
 /* Formatting from the tutorials readthedocs site. */
 .dothis {
-    border-left: 5px solid rgb(174, 189, 145);
-    background:rgb(242, 249, 227);
+    /* border-left: 5px solid rgb(174, 189, 145); */
+    border-left: 5px solid #1fbe7c;
+    background:#f0fff9;
+    /* background-color: #efefef; */
     padding: 3px 3px 5px 8px;
     margin-top:20px;
     margin-bottom:20px;
@@ -126,6 +128,33 @@ pre {
 
 .dothis > p {
     margin-bottom: 0;
+}
+
+.useful {
+    /* border-left: 5px solid rgb(137, 153, 192);
+    background: #e1eaf0; */
+
+    border-left: 5px solid #1f76be;
+    background:#ecf6ff;
+    
+    padding: 3px 3px 5px 8px;
+    margin-top:20px;
+    margin-bottom:20px;
+    line-height: 24px;
+    font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+}
+
+.useful > p {
+    margin-bottom: 0;
+}
+
+.useful > p > a {
+    color: #1f76be;
+    font-weight: 700;
+}
+
+.useful > ul > li > p {
+    margin-bottom: 2px;
 }
 
 .nb {
@@ -156,9 +185,11 @@ pre {
 /* Toggles for showing/hiding code. */
 .toggle {
     padding: 0;
+    margin-bottom: 5px;
 }
 .toggle > * {
     display: none;
+    padding: 0;
 } 
 
 .toggle .header {
@@ -278,3 +309,6 @@ pre {
     font-family: "Lato", "proxima-nova", "Helvetica Neue", "Arial", sans-serif;
 }
 
+.useful {
+
+}
