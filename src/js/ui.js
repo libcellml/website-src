@@ -82,6 +82,9 @@ export default {
   },
 
   processSphinxTabs: function () {
+    // KRM not really a fan of this.  It does processing that should be done in 
+    // the XML translation step, rather than here.  Also depends on all containers having
+    // a class until PR #2 is merged. 
     let tabBlocks = document.querySelectorAll(".sphinx-tabs")
     tabBlocks.forEach((tabBlock) => {
       // Each tab is wrapped in an un-classed container.  Give each one the class: sphinx-tab-wrapper.
