@@ -27,28 +27,32 @@ export default {
         menuSpacer.classList.add('tab2spacer')
 
         firstPanel.classList.add('active')
+        firstPanel.classList.remove('inactive')
         menu.querySelector('#g' + groupIndex + 't0').classList.add('active')
+        
       }
     })
   },
 
   addClickHandlerToggles: function () {
     // Event capture for the "toggle" class:
-    let headers = document.querySelectorAll('.header, .header-left') 
+    let headers = document.querySelectorAll('header, .header-left')
     // let headers = document.querySelectorAll('.toggle.header')
-    headers.forEach((x) => {
+    headers.forEach(header => {
 
-      x.classList.add('inactive')
-      x.addEventListener('click', function () {
-        let contents = x.nextElementSibling
-        // alert('clicked!')
-        if (contents != null) {
-          // alert(contents.style.display)
+      header.classList.add('inactive')
+
+      header.addEventListener('click', function () {
+
+        let contents = header.nextElementSibling
+        while(contents !== null) {
           contents.style.display =
             contents.style.display !== 'block' ? 'block' : 'none'
+          contents = contents.nextElementSibling
         }
-        x.classList.toggle('active')
-        x.classList.toggle('inactive')
+
+        header.classList.toggle('active')
+        header.classList.toggle('inactive')
       })
     })
   },
@@ -76,4 +80,41 @@ export default {
       })
     })
   },
+
+  processSphinxTabs: function () {
+    let tabBlocks = document.querySelectorAll(".sphinx-tabs")
+    tabBlocks.forEach((tabBlock) => {
+      // Each tab is wrapped in an un-classed container.  Give each one the class: sphinx-tab-wrapper.
+      tabBlock.classList.add('tabs2')
+
+      let tab = tabBlock.firstElementChild
+      while (tab !== null) {
+
+        // Children becomes tab2 wrapper
+        tab.classList.add('tab2')
+        tab.classList.add('inactive')
+
+        // Each tab has a header in the class "item", turn it into a tab2name
+        let name = tab.querySelector('.item')
+        name.classList.add('tab2name')
+        name.classList.remove('item')
+
+        // Move its contents 
+        let itemChild = name.firstChild
+        name.innerHTML = itemChild.innerHTML
+
+        tab = tab.nextElementSibling
+      }
+
+      tabBlock.classList.add('tabs2')
+      tabBlock.classList.remove('sphinx-tabs')
+
+    })
+
+    let tabs = document.querySelectorAll('.sphinx-tab')
+    tabs.forEach(tab => {
+      tab.classList = ''
+      tab.classList.add('tab2content')
+    })
+  }
 }
