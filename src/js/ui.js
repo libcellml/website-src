@@ -1,38 +1,38 @@
 export default {
 
   // KRM
-  moveTabNames: function () {
-    let tabGroups = document.querySelectorAll('.container .tabs2')
-    tabGroups.forEach((group, groupIndex) => {
-      group.id = 'g' + groupIndex
+  // moveTabNames: function () {
+  //   let tabGroups = document.querySelectorAll('.container .tabs2')
+  //   tabGroups.forEach((group, groupIndex) => {
+  //     group.id = 'g' + groupIndex
 
-      if (!group.querySelector('.tab2menu')) {
-        let menu = document.createElement('div')
-        menu.classList.add('tab2menu')
-        menu.id = 'g' + groupIndex + 'menu'
+  //     if (!group.querySelector('.tab2menu')) {
+  //       let menu = document.createElement('div')
+  //       menu.classList.add('tab2menu')
+  //       menu.id = 'g' + groupIndex + 'menu'
 
-        let firstPanel = group.firstElementChild
-        firstPanel.insertAdjacentElement('beforebegin', menu)
+  //       let firstPanel = group.firstElementChild
+  //       firstPanel.insertAdjacentElement('beforebegin', menu)
 
-        group.querySelectorAll('.tab2').forEach((t, tabIndex) => {
-          t.id = 'g' + groupIndex + 't' + tabIndex + 'tab'
+  //       group.querySelectorAll('.tab2').forEach((t, tabIndex) => {
+  //         t.id = 'g' + groupIndex + 't' + tabIndex + 'tab'
 
-          let tabName = t.querySelector('.tab2name')
-          tabName.id = 'g' + groupIndex + 't' + tabIndex
+  //         let tabName = t.querySelector('.tab2name')
+  //         tabName.id = 'g' + groupIndex + 't' + tabIndex
 
-          menu.appendChild(tabName)
-        })
+  //         menu.appendChild(tabName)
+  //       })
 
-        let menuSpacer = document.createElement('div')
-        menuSpacer.classList.add('tab2spacer')
+  //       let menuSpacer = document.createElement('div')
+  //       menuSpacer.classList.add('tab2spacer')
 
-        firstPanel.classList.add('active')
-        firstPanel.classList.remove('inactive')
-        menu.querySelector('#g' + groupIndex + 't0').classList.add('active')
+  //       firstPanel.classList.add('active')
+  //       firstPanel.classList.remove('inactive')
+  //       menu.querySelector('#g' + groupIndex + 't0').classList.add('active')
 
-      }
-    })
-  },
+  //     }
+  //   })
+  // },
 
   addClickHandlerToggles: function () {
     // Event capture for the "toggle" class:
@@ -82,15 +82,20 @@ export default {
   },
 
   processSphinxTabs: function () {
+    // KRM: Not such a fan of this.  Processing should be done in getting 
+    // this into XML format, not in the browser!
+    // NB: Segfaults will come if <container> blocks have no classes.  Need
+    // to globally search and replace with <container classes="dummy">
+
     // <container classes="sphinx-tabs"> ----> turns into tabs2
     // .... add tab2menu div ... 
-    //   <container>   -------------------->   turns into tab2? or remove?
+    //   <container>   -------------------->   turns into tab2
     //     <container classes="item"> -------> turns into tab2name, moved into menu
     //         <container>  ------------------> deleted
     //             <paragraph>C++</paragraph> -------> copied up one level
     //         </container>
     //     </container>
-    //     <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-Qysr active"> ---> becomes tab2
+    //     <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-Qysr active"> ---> becomes tab2content
     //     </container>
     //     <literal_block/>
 
@@ -156,44 +161,4 @@ export default {
     })
 
   },
-
-  processSphinxTabs2: function () {
-    // KRM not really a fan of this.  It does processing that should be done in 
-    // the XML translation step, rather than here.  Also depends on all containers having
-    // a class until PR #2 is merged. 
-    let tabBlocks = document.querySelectorAll(".sphinx-tabs")
-    tabBlocks.forEach((tabBlock) => {
-      // Each tab is wrapped in an un-classed container.  Give each one the class: sphinx-tab-wrapper.
-      tabBlock.classList.add('tabs2')
-
-      let tab = tabBlock.firstElementChild
-      while (tab !== null) {
-
-        // Children becomes tab2 wrapper
-        tab.classList.add('tab2')
-        tab.classList.add('inactive')
-
-        // Each tab has a header in the class "item", turn it into a tab2name
-        let name = tab.querySelector('.item')
-        name.classList.add('tab2name')
-        name.classList.remove('item')
-
-        // Move its contents 
-        let itemChild = name.firstChild
-        name.innerHTML = itemChild.innerHTML
-
-        tab = tab.nextElementSibling
-      }
-
-      tabBlock.classList.add('tabs2')
-      tabBlock.classList.remove('sphinx-tabs')
-
-    })
-
-    let tabs = document.querySelectorAll('.sphinx-tab')
-    tabs.forEach(tab => {
-      tab.classList = ''
-      tab.classList.add('tab2content')
-    })
-  }
 }
