@@ -16,8 +16,11 @@
         <p>
           The library is intended to be lightweight and focused purely in dealing with CellML models. 
           In achieving this, some of the convenience methods/objects that we might expect will not be part of libCellML. 
-          If you have feature requests or questions please see **TODO**
+          If you have feature requests or questions please see **TODO** mailing lists?
         </p>
+
+        <h3>Citing libCellML</h3>
+        <p>**TODO**</p>
 
         <h3>Contributors</h3>
         <p>
