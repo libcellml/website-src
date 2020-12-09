@@ -20,7 +20,12 @@
         </p>
 
         <h3>Citing libCellML</h3>
-        <p>**TODO**</p>
+        <p>Until we have a formal paper to cite, please link to the official libCellML website <a target="_blank" href="http://www.libcellml.org">www.libcellml.org</a> and reference the CellML 2.0 paper below:</p>
+        <p style="padding-left:20px;">
+          Michael Clerx, Michael T. Cooling, Jonathan Cooper, Alan Garny, Keri Moyle, David P. Nickerson, Poul M. F. Nielsen, and Hugh Sorby (2020), "CellML 2.0", <i>Journal of Integrative Bioinformatics</i>, <b>17</b>:2-3
+          <br/>
+          <b>DOI:</b> <a href="https://doi.org/10.1515/jib-2020-0021">https://doi.org/10.1515/jib-2020-0021</a>
+        </p>
 
         <h3>Contributors</h3>
         <p>
