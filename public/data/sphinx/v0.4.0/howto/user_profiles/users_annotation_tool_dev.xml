@@ -60,9 +60,9 @@
             <paragraph>The first step in any annotation process is to open the model to be annotated.
                 Here we use the <literal classes="code">Parser</literal> class to read the file, and deserialise the CellML into a <literal classes="code">Model</literal> object.</paragraph>
             <container classes="sphinx-tabs">
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>C++ snippet</paragraph>
                         </container>
                     </container>
@@ -81,9 +81,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>Python snippet</paragraph>
                         </container>
                     </container>
@@ -103,9 +103,9 @@
             <paragraph>The <literal classes="code">Annotator</literal> class is fundamentally different from other libCellML classes in that it used ID strings (as opposed to names or indices) to retrieve and manipulate items.
                 It can be used to retrieve the ID string and item type to which it pertains, using the <emphasis>dictionary</emphasis> function.</paragraph>
             <container classes="sphinx-tabs">
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>C++ snippet</paragraph>
                         </container>
                     </container>
@@ -125,9 +125,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>Python snippet</paragraph>
                         </container>
                     </container>
@@ -176,9 +176,9 @@
             <paragraph>When you know the type of item which is assigned a certain ID, it is straightforward to fetch that item from the <literal classes="code">Annotator</literal> using any of the type-specific functions, as shown below.
                 A null pointer will be returned if the item does not have the type requested, or if its ID does not exist in the model.</paragraph>
             <container classes="sphinx-tabs">
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>C++ snippet</paragraph>
                         </container>
                     </container>
@@ -219,9 +219,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>Python snippet</paragraph>
                         </container>
                     </container>
@@ -270,9 +270,9 @@
                 This returns two pieces of information: the first is the appropriate <literal classes="code">CellMLElements</literal> enum value for the type, and the second is the item itself cast into the <reference internal="False" refuri="https://en.cppreference.com/w/cpp/utility/any">std::any type</reference> (in C++).
                 In Python, the returned item requires no further transformation.</paragraph>
             <container classes="sphinx-tabs">
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>C++ snippet</paragraph>
                         </container>
                     </container>
@@ -346,9 +346,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>Python snippet</paragraph>
                         </container>
                     </container>
@@ -383,9 +383,9 @@
                 From here, the items can be assigned an automatically generated ID string which is guaranteed to be unique within the model scope.
                 Of course, you can also set the id of these items manually too if you’d rather.</paragraph>
             <container classes="sphinx-tabs">
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>C++ snippet</paragraph>
                         </container>
                     </container>
@@ -435,9 +435,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>Python snippet</paragraph>
                         </container>
                     </container>
@@ -501,9 +501,9 @@ After fixing all duplicates there are 0 duplicated ids in the model.</literal_bl
                 The example below shows how calling the <emphasis>assignIds</emphasis> function for the <literal classes="code">CellmlElementType COMPONENT</literal> type fills in the missing ID from <literal classes="code">component2</literal> without changing the IDs of the other components.
                 Finally, IDs for every item in a model can be set with the <emphasis>assignAllIds</emphasis> function, and cleared from every item using the <emphasis>clearAllIds</emphasis> function.</paragraph>
             <container classes="sphinx-tabs">
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>C++ snippet</paragraph>
                         </container>
                     </container>
@@ -546,9 +546,9 @@ After fixing all duplicates there are 0 duplicated ids in the model.</literal_bl
 </literal_block>
                     </container>
                 </container>
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>Python snippet</paragraph>
                         </container>
                     </container>

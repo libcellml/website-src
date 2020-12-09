@@ -136,9 +136,9 @@
             </block_quote>
             <paragraph>We can see this results of this classification process in the generated code returned by a call to the <literal classes="code">implementationCode</literal> function of the <literal classes="code">Generator</literal>.</paragraph>
             <container classes="sphinx-tabs">
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -161,9 +161,9 @@ const VariableInfoWithType VARIABLE_INFO[] = {
     {"d", "dimensionless", "shark_fish_interaction", COMPUTED_CONSTANT}
 };</literal_block>
                 </container>
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>Python</paragraph>
                         </container>
                     </container>

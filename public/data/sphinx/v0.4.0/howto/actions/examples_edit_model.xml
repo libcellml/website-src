@@ -15,28 +15,41 @@
             </list_item>
             <list_item>
                 <paragraph>A set of <emphasis>collections</emphasis> which this - the parent item - curates.
-                    For example, the collection of <literal classes="code">Variable</literal> items owned by a parent <literal classes="code">Component</literal>.</paragraph>
+                    For example, the collection of <literal classes="code">Variable</literal> items owned by a parent <literal classes="code">Component</literal>.
+                </paragraph>
             </list_item>
         </bullet_list>
         <topic classes="contents local" ids="contents" names="contents">
             <bullet_list>
                 <list_item>
-                    <paragraph><reference ids="id1" refid="about-editing">About editing</reference></paragraph>
+                    <paragraph>
+                        <reference ids="id1" refid="about-editing">About editing</reference>
+                    </paragraph>
                     <bullet_list>
                         <list_item>
-                            <paragraph><reference ids="id2" refid="editing-attributes">Editing attributes</reference></paragraph>
+                            <paragraph>
+                                <reference ids="id2" refid="editing-attributes">Editing attributes</reference>
+                            </paragraph>
                         </list_item>
                         <list_item>
-                            <paragraph><reference ids="id3" refid="editing-collections">Editing collections</reference></paragraph>
+                            <paragraph>
+                                <reference ids="id3" refid="editing-collections">Editing collections</reference>
+                            </paragraph>
                         </list_item>
                         <list_item>
-                            <paragraph><reference ids="id4" refid="editing-special-relationships">Editing special relationships</reference></paragraph>
+                            <paragraph>
+                                <reference ids="id4" refid="editing-special-relationships">Editing special relationships</reference>
+                            </paragraph>
                             <bullet_list>
                                 <list_item>
-                                    <paragraph><reference ids="id5" refid="editing-variable-equivalences">Editing variable equivalences</reference></paragraph>
+                                    <paragraph>
+                                        <reference ids="id5" refid="editing-variable-equivalences">Editing variable equivalences</reference>
+                                    </paragraph>
                                 </list_item>
                                 <list_item>
-                                    <paragraph><reference ids="id6" refid="editing-an-encapsulation-hierarchy">Editing an encapsulation hierarchy</reference></paragraph>
+                                    <paragraph>
+                                        <reference ids="id6" refid="editing-an-encapsulation-hierarchy">Editing an encapsulation hierarchy</reference>
+                                    </paragraph>
                                 </list_item>
                             </bullet_list>
                         </list_item>
@@ -50,42 +63,42 @@
                 <title refid="id2">Editing attributes</title>
                 <paragraph>For any item type, each attribute <literal classes="code">xyz</literal> may be edited using the general <literal classes="code">setXyz</literal> function, whose arguments vary depending on the attribute.
                     Note that this is distinct from editing collections of items, which is discussed below.</paragraph>
-                <comment xml:space="preserve">Some example snippets are shown below:
-include :: ../snippets/snippet_edit_names.rst  **TODO**
-include :: ../snippets/snippet_edit_mathml.rst</comment>
             </section>
             <section ids="editing-collections" names="editing\ collections">
                 <title refid="id3">Editing collections</title>
-                <paragraph>General families of functions are available for editing collections, but take the form of <literal classes="code">addXyz</literal> and <literal classes="code">removeXyz</literal>, <literal classes="code">takeXyz</literal> and <literal classes="code">replaceXyz</literal>, as explained in <reference internal="True" refuri="understand_collections#examples-understand-collections"><inline classes="std std-ref">Understanding collections</inline></reference>.</paragraph>
-                <paragraph>Some example snippets are shown below:</paragraph>
-                <target refid="snippet-add-thing"></target>
-                <container classes="toggle" ids="snippet-add-thing" names="snippet_add_thing">
-                    <container classes="header-left">
-                        <paragraph>Add a thing to a collection</paragraph>
-                    </container>
-                    <paragraph>When you add an item to a collection, you also set its parent.
+                <paragraph>General families of functions are available for editing collections, but take the form of <literal classes="code">addXyz</literal> and <literal classes="code">removeXyz</literal>,                    <literal classes="code">takeXyz</literal> and <literal classes="code">replaceXyz</literal>, as explained in <reference internal="True" refuri="understand_collections#examples-understand-collections">
+                    <inline classes="std std-ref">Understanding collections</inline>
+                </reference>.
+            </paragraph>
+            <paragraph>Some example snippets are shown below:</paragraph>
+            <target refid="snippet-add-thing"></target>
+            <container classes="toggle" ids="snippet-add-thing" names="snippet_add_thing">
+                <container classes="header-left">
+                    <paragraph>Add a thing to a collection</paragraph>
+                </container>
+                <paragraph>When you add an item to a collection, you also set its parent.
                         Effectively, adding an item which is already a member of one collection to another collection actually <emphasis>moves</emphasis> it from the first to the second.
                         This means that:</paragraph>
-                    <bullet_list bullet="-">
-                        <list_item>
-                            <paragraph>the item’s parent will be the second collection parent;</paragraph>
-                        </list_item>
-                        <list_item>
-                            <paragraph>the first collection will not contain the item any more; and</paragraph>
-                        </list_item>
-                        <list_item>
-                            <paragraph>the second collection will contain the item.</paragraph>
-                        </list_item>
-                    </bullet_list>
-                    <container classes="sphinx-tabs">
-                        <container>
-                            <container classes="item">
-                                <container>
-                                    <paragraph>C++</paragraph>
-                                </container>
+                <bullet_list bullet="-">
+                    <list_item>
+                        <paragraph>the item’s parent will be the second collection parent;</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>the first collection will not contain the item any more; and</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>the second collection will contain the item.</paragraph>
+                    </list_item>
+                </bullet_list>
+                <container classes="sphinx-tabs">
+                    <container classes="dummy">
+                        <container classes="item">
+                            <container classes="dummy">
+                                <paragraph>C++</paragraph>
                             </container>
-                            <container classes="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-0 active">
-                                <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/kmoy001/libcellml/libcellml-tutorials/howto/code/add_things/addThings.cpp" xml:space="preserve">
+                        </container>
+                        <container classes="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-0 active">
+                            <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/kmoy001/libcellml/libcellml-tutorials/howto/code/add_things/addThings.cpp" xml:space="preserve">
 #include &lt;iostream&gt;
 #include &lt;libcellml&gt;
 
@@ -123,17 +136,17 @@ int main()
     // - myComponent-&gt;variableCount() == 0.
     std::cout &lt;&lt; "hello world!"&lt;&lt;std::endl;
 }
-</literal_block>
+                            </literal_block>
+                        </container>
+                    </container>
+                    <container classes="dummy">
+                        <container classes="item">
+                            <container classes="dummy">
+                                <paragraph>Python</paragraph>
                             </container>
                         </container>
-                        <container>
-                            <container classes="item">
-                                <container>
-                                    <paragraph>Python</paragraph>
-                                </container>
-                            </container>
-                            <container classes="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-1">
-                                <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/kmoy001/libcellml/libcellml-tutorials/howto/code/add_things/addThings.py" xml:space="preserve">from libcellml import Component, Variable
+                        <container classes="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-1">
+                            <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/kmoy001/libcellml/libcellml-tutorials/howto/code/add_things/addThings.py" xml:space="preserve">from libcellml import Component, Variable
 
 if __name__ == '__main__':
 
@@ -175,28 +188,28 @@ if __name__ == '__main__':
     assert(my_other_component.variable(0) == my_variable)
     assert(my_variable.parent() == my_other_component)
     assert(my_component.variableCount() == 0)
-</literal_block>
-                            </container>
+                            </literal_block>
                         </container>
                     </container>
                 </container>
-                <target refid="snippet-remove-thing"></target>
-                <container classes="toggle" ids="snippet-remove-thing" names="snippet_remove_thing">
-                    <container classes="header-left">
-                        <paragraph>Remove a thing from a collection</paragraph>
-                    </container>
-                    <paragraph>This example demonstrates the addition and removal of items from a collection.
+            </container>
+            <target refid="snippet-remove-thing"></target>
+            <container classes="toggle" ids="snippet-remove-thing" names="snippet_remove_thing">
+                <container classes="header-left">
+                    <paragraph>Remove a thing from a collection</paragraph>
+                </container>
+                <paragraph>This example demonstrates the addition and removal of items from a collection.
                         Note that while removal of items from a collection can be done by pointer symbol, by name, and by index, adding them is only possible via pointer.</paragraph>
-                    <container classes="sphinx-tabs">
-                        <container>
-                            <container classes="item">
-                                <container>
-                                    <paragraph>C++</paragraph>
-                                </container>
+                <container classes="sphinx-tabs">
+                    <container classes="dummy">
+                        <container classes="item">
+                            <container classes="dummy">
+                                <paragraph>C++</paragraph>
                             </container>
-                            <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-Qysr active">
-                            </container>
-                            <literal_block force="False" highlight_args="{}" language="c++" linenos="False" xml:space="preserve">// Setup. Create four variables and a component.
+                        </container>
+                        <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-Qysr active">
+                        </container>
+                        <literal_block force="False" highlight_args="{}" language="c++" linenos="False" xml:space="preserve">// Setup. Create four variables and a component.
 auto variable1 = libcellml::Variable::create("variable1");
 auto variable2 = libcellml::Variable::create("variable2");
 auto variable3 = libcellml::Variable::create("variable3");
@@ -249,78 +262,78 @@ assert(success == false);
 //  - Removing a null pointer.
 success = component-&gt;removeVariable(nullptr);
 assert(success == false);</literal_block>
-                        </container>
-                        <container>
-                            <container classes="item">
-                                <container>
-                                    <paragraph>Python</paragraph>
-                                </container>
+                    </container>
+                    <container classes="dummy">
+                        <container classes="item">
+                            <container classes="dummy">
+                                <paragraph>Python</paragraph>
                             </container>
-                            <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-UHl0aG9u">
-                            </container>
-                            <literal_block force="False" highlight_args="{}" language="py" linenos="False" xml:space="preserve"># TODO</literal_block>
                         </container>
+                        <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-UHl0aG9u">
+                        </container>
+                        <literal_block force="False" highlight_args="{}" language="py" linenos="False" xml:space="preserve"># TODO</literal_block>
                     </container>
                 </container>
-                <target refid="snippet-take-thing"></target>
-                <container classes="toggle" ids="snippet-take-thing" names="snippet_take_thing">
-                    <container classes="header-left">
-                        <paragraph>Take a thing from a collection</paragraph>
-                    </container>
+            </container>
+            <target refid="snippet-take-thing"></target>
+            <container classes="toggle" ids="snippet-take-thing" names="snippet_take_thing">
+                <container classes="header-left">
+                    <paragraph>Take a thing from a collection</paragraph>
                 </container>
-                <target refid="snippet-replace-thing"></target>
-                <container classes="toggle" ids="snippet-replace-thing" names="snippet_replace_thing">
-                    <container classes="header-left">
-                        <paragraph>Replace a thing within a collection</paragraph>
-                    </container>
+            </container>
+            <target refid="snippet-replace-thing"></target>
+            <container classes="toggle" ids="snippet-replace-thing" names="snippet_replace_thing">
+                <container classes="header-left">
+                    <paragraph>Replace a thing within a collection</paragraph>
                 </container>
-            </section>
-            <section ids="editing-special-relationships" names="editing\ special\ relationships">
-                <title refid="id4">Editing special relationships</title>
-                <paragraph>Some parts of the CellML model require different treatment to those listed above; connections between equivalent variables, for example.</paragraph>
-                <section ids="editing-variable-equivalences" names="editing\ variable\ equivalences">
-                    <title refid="id5">Editing variable equivalences</title>
-                    <paragraph>In the situation of equivalent variable collections there is no clear “ownership” of the equivalence as an attribute of any one variable, and neither is there a central parent item with curation ability over the set of variables.
+            </container>
+        </section>
+        <section ids="editing-special-relationships" names="editing\ special\ relationships">
+            <title refid="id4">Editing special relationships</title>
+            <paragraph>Some parts of the CellML model require different treatment to those listed above; connections between equivalent variables, for example.</paragraph>
+            <section ids="editing-variable-equivalences" names="editing\ variable\ equivalences">
+                <title refid="id5">Editing variable equivalences</title>
+                <paragraph>In the situation of equivalent variable collections there is no clear “ownership” of the equivalence as an attribute of any one variable, and neither is there a central parent item with curation ability over the set of variables.
                         A different approach is required.</paragraph>
-                    <paragraph>Adding and removing variable equivalence is accomplished using the <literal classes="code">addEquivalence</literal> and <literal classes="code">removeEquivalence</literal> functions as shown below.
+                <paragraph>Adding and removing variable equivalence is accomplished using the <literal classes="code">addEquivalence</literal> and <literal classes="code">removeEquivalence</literal> functions as shown below.
                         These functions take arguments of the variable pointers to connect or dissociate, and return a boolean value indicating whether the operation was successful.
                         The success of the <literal classes="code">addEquivalence</literal> function depends on:</paragraph>
+                <bullet_list bullet="-">
+                    <list_item>
+                        <paragraph>the variable pointers being non-null;</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>the two variables having parent components;</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>there being no previously existing connection between the two variables already.</paragraph>
+                    </list_item>
+                </bullet_list>
+                <paragraph>Creating a <emphasis>valid</emphasis> connection also depends on the two variables having compatible units, appropriate interface types, and being in components which are accessible to one another (parent-child or sibling relationship).</paragraph>
+                <paragraph>The success of the <literal classes="code">removeEquivalence</literal> function depends on:</paragraph>
+                <block_quote>
                     <bullet_list bullet="-">
                         <list_item>
-                            <paragraph>the variable pointers being non-null;</paragraph>
+                            <paragraph>the variable pointer arguments being non-null; and</paragraph>
                         </list_item>
                         <list_item>
-                            <paragraph>the two variables having parent components;</paragraph>
-                        </list_item>
-                        <list_item>
-                            <paragraph>there being no previously existing connection between the two variables already.</paragraph>
+                            <paragraph>there being an existing connection between the two variables.</paragraph>
                         </list_item>
                     </bullet_list>
-                    <paragraph>Creating a <emphasis>valid</emphasis> connection also depends on the two variables having compatible units, appropriate interface types, and being in components which are accessible to one another (parent-child or sibling relationship).</paragraph>
-                    <paragraph>The success of the <literal classes="code">removeEquivalence</literal> function depends on:</paragraph>
-                    <block_quote>
-                        <bullet_list bullet="-">
-                            <list_item>
-                                <paragraph>the variable pointer arguments being non-null; and</paragraph>
-                            </list_item>
-                            <list_item>
-                                <paragraph>there being an existing connection between the two variables.</paragraph>
-                            </list_item>
-                        </bullet_list>
-                    </block_quote>
-                    <paragraph>Note that the <literal classes="code">removeEquivalence</literal> function will only remove an equivalence which was previously set using the <literal classes="code">addEquivalence</literal> function; it does not remove any indirect connections via third-party variables between the two.</paragraph>
-                    <paragraph>An additional <literal classes="code">removeAllEquivalences</literal> function will completely remove the variable from any connected set.</paragraph>
-                    <paragraph>Please see the <reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Variable">API Variable</reference> page for details of these functions.</paragraph>
-                    <container classes="sphinx-tabs">
-                        <container>
-                            <container classes="item">
-                                <container>
-                                    <paragraph>C++</paragraph>
-                                </container>
+                </block_quote>
+                <paragraph>Note that the <literal classes="code">removeEquivalence</literal> function will only remove an equivalence which was previously set using the <literal classes="code">addEquivalence</literal> function; it does not remove any indirect connections via third-party variables between the two.</paragraph>
+                <paragraph>An additional <literal classes="code">removeAllEquivalences</literal> function will completely remove the variable from any connected set.</paragraph>
+                <paragraph>Please see the <reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Variable">API Variable</reference> page for details of these functions.</paragraph>
+                <container classes="sphinx-tabs">
+                    <container classes="dummy">
+                        <container classes="item">
+                            <container classes="dummy">
+                                <paragraph>C++</paragraph>
                             </container>
-                            <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-Qysr active">
-                            </container>
-                            <literal_block force="False" highlight_args="{}" language="c++" linenos="False" xml:space="preserve">// Assuming that variables A and B are in different components, and that those components are
+                        </container>
+                        <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-Qysr active">
+                        </container>
+                        <literal_block force="False" highlight_args="{}" language="c++" linenos="False" xml:space="preserve">// Assuming that variables A and B are in different components, and that those components are
 // available for connection with one another (parent-child, or sibling relationship).
 
 // Add variables A and B to the same equivalent variable set.
@@ -328,16 +341,16 @@ auto isAconnectedToB = libcellml::Variable::addEquivalence(A, B);
 
 // Remove a pre-existing equivalence between variables C and D.
 auto isCdisconnectedFromD = libcellml::Variable::removeEquivalence(C, D);</literal_block>
+                    </container>
+                    <container classes="dummy">
+                        <container classes="item">
+                            <container classes="dummy">
+                                <paragraph>Python</paragraph>
+                            </container>
                         </container>
-                        <container>
-                            <container classes="item">
-                                <container>
-                                    <paragraph>Python</paragraph>
-                                </container>
-                            </container>
-                            <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-UHl0aG9u">
-                            </container>
-                            <literal_block force="False" highlight_args="{}" language="py" linenos="False" xml:space="preserve"># Assuming that variables A and B are in different components, and that those components are
+                        <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-UHl0aG9u">
+                        </container>
+                        <literal_block force="False" highlight_args="{}" language="py" linenos="False" xml:space="preserve"># Assuming that variables A and B are in different components, and that those components are
 # available for connection with one another (parent-child, or sibling relationship).
 
 # Add variables A and B to the same equivalent variable set.
@@ -345,30 +358,30 @@ isAconnectedToB = Variable.addEquivalence(A, B)
 
 # Remove a pre-existing equivalence between variables C and D.
 isCdisconnectedFromD = Variable.removeEquivalence(C, D)</literal_block>
-                        </container>
                     </container>
-                    <paragraph>There are some gotchas to be explained.
+                </container>
+                <paragraph>There are some gotchas to be explained.
                         A variable can belong to only one set of equivalent variables; by having more than one equivalent variable, the variable itself merges the two sets of variables into one.
                         Consider this example.
-                        Variable <literal classes="code">fruit</literal> is equivalent to variables <literal classes="code">apple</literal>, <literal classes="code">pear</literal>, and <literal classes="code">peach</literal>.
-                        Another variable <literal classes="code">vegetable</literal> is equivalent to variables <literal classes="code">tomato</literal>, <literal classes="code">celery</literal>, and <literal classes="code">spinach</literal>.
+                        Variable <literal classes="code">fruit</literal> is equivalent to variables <literal classes="code">apple</literal>,                    <literal classes="code">pear</literal>, and <literal classes="code">peach</literal>.
+                        Another variable <literal classes="code">vegetable</literal> is equivalent to variables <literal classes="code">tomato</literal>,                    <literal classes="code">celery</literal>, and <literal classes="code">spinach</literal>.
                         At this time, there are two sets of equivalent variables: all of the fruit are equivalent to one another, and all of the vegetables are equivalent to one another.
-                        Adding a variable <literal classes="code">produce</literal> with an equivalence to <literal classes="code">fruit</literal> and to <literal classes="code">vegetable</literal> effectively merges the two sets, so that now the variable <literal classes="code">peach</literal> is equivalent to <literal classes="code">spinach</literal>.</paragraph>
-                    <comment xml:space="preserve">**TODO** Need better examples and use cases here once the API issue #619 is clarified.</comment>
+                        Adding a variable <literal classes="code">produce</literal> with an equivalence to <literal classes="code">fruit</literal> and to <literal classes="code">vegetable</literal> effectively merges the two sets, so that now the variable <literal classes="code">peach</literal> is equivalent to <literal classes="code">spinach</literal>.
+                </paragraph>
                 </section>
-                <section ids="editing-an-encapsulation-hierarchy" names="editing\ an\ encapsulation\ hierarchy">
-                    <title refid="id6">Editing an encapsulation hierarchy</title>
-                    <paragraph>Components may be added to a model or another component to create an encapsulation hierarchy, but there are a few things to watch out for in this situation.
+            <section ids="editing-an-encapsulation-hierarchy" names="editing\ an\ encapsulation\ hierarchy">
+                <title refid="id6">Editing an encapsulation hierarchy</title>
+                <paragraph>Components may be added to a model or another component to create an encapsulation hierarchy, but there are a few things to watch out for in this situation.
                         Components must belong to only one parent, so when adding a component from one location in the encapsulation to another, it is removed from the original parent.</paragraph>
-                    <paragraph>This is shown in the code snippet below.</paragraph>
-                    <target refid="snippet-edit-encapsulation1"></target>
-                    <container classes="toggle" ids="snippet-edit-encapsulation1" names="snippet_edit_encapsulation1">
-                        <container classes="header-left">
-                            <paragraph>Edit encapsulation structure of a model</paragraph>
-                        </container>
-                        <paragraph>This example shows how the component <literal classes="code">tomatoes</literal> which was orininally a child of the <literal classes="code">vegetables</literal> component, could be moved to become a child of the <literal classes="code">fruit</literal> component instead.
+                <paragraph>This is shown in the code snippet below.</paragraph>
+                <target refid="snippet-edit-encapsulation1"></target>
+                <container classes="toggle" ids="snippet-edit-encapsulation1" names="snippet_edit_encapsulation1">
+                    <container classes="header-left">
+                        <paragraph>Edit encapsulation structure of a model</paragraph>
+                    </container>
+                    <paragraph>This example shows how the component <literal classes="code">tomatoes</literal> which was orininally a child of the <literal classes="code">vegetables</literal> component, could be moved to become a child of the <literal classes="code">fruit</literal> component instead.
                             When run, this snippet will give the output:</paragraph>
-                        <literal_block force="False" highlight_args="{}" language="text" linenos="False" xml:space="preserve">Model 'quickstart_editEncapsulation' has 2 components
+                    <literal_block force="False" highlight_args="{}" language="text" linenos="False" xml:space="preserve">Model 'quickstart_editEncapsulation' has 2 components
   - Component 'fruit' has 0 child components
   - Component 'vegetables' has 1 child components
       - Component 'tomatoes' has 0 child components
@@ -377,16 +390,16 @@ Model 'quickstart_editEncapsulation' has 2 components
   - Component 'fruit' has 1 child components
       - Component 'tomatoes' has 0 child components
   - Component 'vegetables' has 0 child components</literal_block>
-                        <container classes="sphinx-tabs">
-                            <container>
-                                <container classes="item">
-                                    <container>
-                                        <paragraph>C++</paragraph>
-                                    </container>
+                    <container classes="sphinx-tabs">
+                        <container classes="dummy">
+                            <container classes="item">
+                                <container classes="dummy">
+                                    <paragraph>C++</paragraph>
                                 </container>
-                                <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-Qysr active">
-                                </container>
-                                <literal_block force="False" highlight_args="{}" language="c++" linenos="False" xml:space="preserve">#include &lt;fstream&gt;
+                            </container>
+                            <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-Qysr active">
+                            </container>
+                            <literal_block force="False" highlight_args="{}" language="c++" linenos="False" xml:space="preserve">#include &lt;fstream&gt;
 #include &lt;sstream&gt;
 #include &lt;libcellml&gt;
 #include "../../utilities/utilities.h"
@@ -415,16 +428,16 @@ int main()
 
     printEncapsulationStructureToTerminal(model);
 }</literal_block>
+                        </container>
+                        <container classes="dummy">
+                            <container classes="item">
+                                <container classes="dummy">
+                                    <paragraph>Python</paragraph>
+                                </container>
                             </container>
-                            <container>
-                                <container classes="item">
-                                    <container>
-                                        <paragraph>Python</paragraph>
-                                    </container>
-                                </container>
-                                <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-UHl0aG9u">
-                                </container>
-                                <literal_block force="False" highlight_args="{}" language="py" linenos="False" xml:space="preserve">from libcellml import Parser
+                            <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-UHl0aG9u">
+                            </container>
+                            <literal_block force="False" highlight_args="{}" language="py" linenos="False" xml:space="preserve">from libcellml import Parser
 from utilities import print_encapsulation_structure_to_terminal
 
 if __name__ == "__main__":
@@ -450,11 +463,11 @@ if __name__ == "__main__":
     # Print the structure and check that the components have
     # been transferred as expected.
     print_encapsulation_structure_to_terminal(model)</literal_block>
-                            </container>
                         </container>
                     </container>
-                </section>
+                </container>
             </section>
         </section>
     </section>
+</section>
 </document>

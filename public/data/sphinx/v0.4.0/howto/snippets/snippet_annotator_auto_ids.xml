@@ -11,9 +11,9 @@
             Ids are not intended to be interacted with by humans; they are there as a placeholder or location specifier so that other (more human-friendly) documentation can be added to the right objects.
             With this in mind, it’s possible to automate the creation of unique ids for a single item, a set of items of the same type (eg: all the <literal classes="code">Component</literal> items), or for every annotatable item in a CellML model.</paragraph>
         <container classes="sphinx-tabs">
-            <container>
+            <container classes="dummy">
                 <container classes="item">
-                    <container>
+                    <container classes="dummy">
                         <paragraph>C++</paragraph>
                     </container>
                 </container>
@@ -59,9 +59,9 @@ annotator-&gt;assignId(myComponentRef);
 // ... OR submit both the Type enum and the item as separate arguments.
 annotator-&gt;assignId(libcellml::Annotator::Type::COMPONENT_REF, model-&gt;component(0));</literal_block>
             </container>
-            <container>
+            <container classes="dummy">
                 <container classes="item">
-                    <container>
+                    <container classes="dummy">
                         <paragraph>Python</paragraph>
                     </container>
                 </container>

@@ -65,9 +65,9 @@
             <paragraph>For each of the tutorials, there is template code provided for you to get started.
                 If you’d rather see the completed code instead of working through the tasks yourself, simply rename the completed files so that they match the skeleton file names (that is, remove the <literal classes="code">_completed</literal> from their names).</paragraph>
             <container classes="sphinx-tabs">
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -85,9 +85,9 @@ make -j</literal_block>
 -----------------------------------------------</literal_block>
                     </container>
                 </container>
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>Python</paragraph>
                         </container>
                     </container>
@@ -225,9 +225,9 @@ The model id is: tutorial_1_model_id_is_here</literal_block>
             <paragraph>The <literal classes="code">Model</literal> itself stores two kinds of objects: a set of <literal classes="code">Units</literal> objects, and a set of <literal classes="code">Component</literal> objects.
                 There are generic <literal classes="code">somethingCount()</literal> functions which will return the number of <literal classes="code">Something</literal> items within that object:</paragraph>
             <container classes="sphinx-tabs">
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -235,9 +235,9 @@ The model id is: tutorial_1_model_id_is_here</literal_block>
                     </container>
                     <literal_block force="False" highlight_args="{}" language="cpp" linenos="False" xml:space="preserve">auto numberOfComponents = myFirstModel-&gt;componentCount();</literal_block>
                 </container>
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>Python</paragraph>
                         </container>
                     </container>
@@ -255,9 +255,9 @@ The model id is: tutorial_1_model_id_is_here</literal_block>
                 The indices start at <literal classes="code">0</literal>.</paragraph>
             <paragraph>Each <literal classes="code">Component</literal> itself (or later, <literal classes="code">Units</literal> or <literal classes="code">Variable</literal>) is retrieved from its parent item as a pointer (that is, a <literal classes="code">ComponentPtr</literal> type) using the same idiom as the names and ids:</paragraph>
             <container classes="sphinx-tabs">
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -266,9 +266,9 @@ The model id is: tutorial_1_model_id_is_here</literal_block>
                     <literal_block force="False" highlight_args="{}" language="cpp" linenos="False" xml:space="preserve">// Retrieve the 33rd component from myFirstModel.  Note the indexing from zero.
 auto thirtyThirdComponent = myFirstModel-&gt;component(32);</literal_block>
                 </container>
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>Python</paragraph>
                         </container>
                     </container>
@@ -455,9 +455,9 @@ thirty_third_component = my_first_model.component(32)</literal_block>
                 </bullet_list>
             </container>
             <container classes="sphinx-tabs">
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -466,9 +466,9 @@ thirty_third_component = my_first_model.component(32)</literal_block>
                     <literal_block force="False" highlight_args="{}" language="cpp" linenos="False" xml:space="preserve">auto printer = libcellml::Printer::create();
 std::string serialisedModelString = printer-&gt;printModel(myFirstModel);</literal_block>
                 </container>
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>Python</paragraph>
                         </container>
                     </container>

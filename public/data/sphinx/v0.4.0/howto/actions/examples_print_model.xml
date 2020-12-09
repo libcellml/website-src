@@ -9,9 +9,9 @@
             It accepts an existing <literal classes="code">ModelPtr</literal> and creates a <literal classes="code">string</literal> which can be written to a file.
             As with the <literal classes="code">Parser</literal> and the <literal classes="code">Validator</literal>, the <literal classes="code">Printer</literal> also records a collection of <literal classes="code">Issue</literal> items which can be accessed as shown below.</paragraph>
         <container classes="sphinx-tabs">
-            <container>
+            <container classes="dummy">
                 <container classes="item">
-                    <container>
+                    <container classes="dummy">
                         <paragraph>C++</paragraph>
                     </container>
                 </container>
@@ -32,9 +32,9 @@ std::ofstream outFile(outFileName);
 outFile &lt;&lt; serialisedModelString;
 outFile.close();</literal_block>
             </container>
-            <container>
+            <container classes="dummy">
                 <container classes="item">
-                    <container>
+                    <container classes="dummy">
                         <paragraph>Python</paragraph>
                     </container>
                 </container>

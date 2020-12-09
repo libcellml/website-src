@@ -12,9 +12,9 @@
             Existing <literal classes="code">id</literal> attributes are unchanged by this process, and by default it is turned off.</paragraph>
         <paragraph>The automatic ids adhere to the <reference internal="False" refuri="https://cellml-specification.readthedocs.io/en/latest/reference/formal_and_informative/specA2.html#xml-id-attributes">XML standard for id attributes</reference>, and take the form of a 6-digit hexadecimal number, beginning with a letter.</paragraph>
         <container classes="sphinx-tabs">
-            <container>
+            <container classes="dummy">
                 <container classes="item">
-                    <container>
+                    <container classes="dummy">
                         <paragraph>C++</paragraph>
                     </container>
                 </container>
@@ -31,9 +31,9 @@ auto outString = printer-&gt;printModel(model, true);
 
 // The outString will have the same model contents, but with id attributes set throughout.</literal_block>
             </container>
-            <container>
+            <container classes="dummy">
                 <container classes="item">
-                    <container>
+                    <container classes="dummy">
                         <paragraph>Python</paragraph>
                     </container>
                 </container>

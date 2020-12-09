@@ -65,9 +65,9 @@
             <paragraph>The first step is to parse and instantiate a model from a CellML file.
                 Here we use the <literal classes="code">Parser</literal> class to read the file, and deserialise the CellML into a <literal classes="code">Model</literal> object.</paragraph>
             <container classes="sphinx-tabs">
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -91,9 +91,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>Python</paragraph>
                         </container>
                     </container>
@@ -114,9 +114,9 @@
                 Passing the model and a base directory location will enable the <literal classes="code">Importer</literal> to resolve any imports required by the model, and add those dependencies to the importer’s internal library.
                 Since the <literal classes="code">Importer</literal> class contains a logger, we can check that the process has completed properly by printing any issues inside the importer to the terminal.</paragraph>
             <container classes="sphinx-tabs">
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -168,9 +168,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>Python</paragraph>
                         </container>
                     </container>
@@ -200,9 +200,9 @@
                 In order to retain the import structure but be able to use the diagnostic tools, we can create a flattened copy of the model for testing.
                 This can be used to identify mistakes in the original version of the model.</paragraph>
             <container classes="sphinx-tabs">
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -261,9 +261,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>Python</paragraph>
                         </container>
                     </container>
@@ -332,9 +332,9 @@ The analyser found 4 issues.
             <paragraph>The issues reported by the <literal classes="code">Validator</literal> and <literal classes="code">Analyser</literal> items in the previous step have been hidden from the original model, as they exist somewhere in its hierarchy of imported items.
                 We can make use of the library of import dependencies which is stored in the <literal classes="code">Importer</literal> class to locate the specific models in which the issues occurred, and repair them.</paragraph>
             <container classes="sphinx-tabs">
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -368,9 +368,9 @@ The analyser found 4 issues.
 </literal_block>
                     </container>
                 </container>
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>Python</paragraph>
                         </container>
                     </container>
@@ -418,9 +418,9 @@ The validator found 2 issues in resources/importExample3.cellml
                     The <literal classes="code">Importer</literal> checks its own library first before opening and parsing external files, so once we’ve fixed the error in the library’s model, re-flattening the original model uses the fixed version too.</paragraph>
             </container>
             <container classes="sphinx-tabs">
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -457,9 +457,9 @@ The validator found 2 issues in resources/importExample3.cellml
 </literal_block>
                     </container>
                 </container>
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>Python</paragraph>
                         </container>
                     </container>
@@ -497,9 +497,9 @@ The validator found 2 issues in resources/importExample3.cellml
             <paragraph>This step repeats the two previous steps but uses the <literal classes="code">Analyser</literal> class instead of the <literal classes="code">Validator</literal> class to report on issues.
                 We can then fix the issues found in the same way, by accessing the library’s version of the imported model and repairing the problem there.</paragraph>
             <container classes="sphinx-tabs">
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -559,9 +559,9 @@ The validator found 2 issues in resources/importExample3.cellml
 </literal_block>
                     </container>
                 </container>
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>Python</paragraph>
                         </container>
                     </container>
@@ -633,9 +633,9 @@ The validator found 2 issues in resources/importExample3.cellml
                     You will need to create two nested directories: <literal classes="code">repaired/resources</literal> within your working directory before continuing.</paragraph>
             </container>
             <container classes="sphinx-tabs">
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -672,9 +672,9 @@ The validator found 2 issues in resources/importExample3.cellml
 </literal_block>
                     </container>
                 </container>
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>Python</paragraph>
                         </container>
                     </container>

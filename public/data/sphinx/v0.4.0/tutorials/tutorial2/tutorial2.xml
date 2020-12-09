@@ -83,9 +83,9 @@
             <paragraph>The instructions here build and test the skeleton code.
                 If you’d rather not work through the tutorial yourself and want to skip to the completed version, please rename the files removing the <literal classes="code">_complete</literal> from their names.</paragraph>
             <container classes="sphinx-tabs">
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -101,9 +101,9 @@ TUTORIAL 2: ERROR CHECKING AND VALIDATION
 -----------------------------------------------</literal_block>
                     </container>
                 </container>
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>Python</paragraph>
                         </container>
                     </container>
@@ -195,9 +195,9 @@ COMPONENTS: 1 components
             <paragraph>The validator can also help you as you create and edit models by pointing out what’s missing or incorrect as you go.
                 This is really easy:</paragraph>
             <container classes="sphinx-tabs">
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -206,9 +206,9 @@ COMPONENTS: 1 components
                     <literal_block force="False" highlight_args="{}" language="cpp" linenos="False" xml:space="preserve">auto validator = libcellml::Validator::create();
 validator-&gt;validateModel(yourModelHere);</literal_block>
                 </container>
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>Python</paragraph>
                         </container>
                     </container>
@@ -305,9 +305,9 @@ validator.validateModel(your_model_here)</literal_block>
                 Again following the same retrieval idiom as in Tutorial 1 for items in sets, we can access the issues using an index:</paragraph>
             <container classes="sphinx-tabs">
                 <literal_block force="False" highlight_args="{}" language="c++" linenos="False" xml:space="preserve">auto theFifteenthIssue = validator-&gt;issue(14);</literal_block>
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>Python</paragraph>
                         </container>
                     </container>
@@ -806,9 +806,9 @@ Validator issue[4]:
             <paragraph>For this next issue we’re going to show how to use the generic <literal classes="code">item()</literal> function on an issue.
                 This differs between C++ and Python so please refer to the appropriate tab for information.</paragraph>
             <container classes="sphinx-tabs">
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -832,9 +832,9 @@ assert(myFirstIssue-&gt;cellmlElementType() == libcellml::CellmlElementType::VAR
 auto myVariable = std::any_cast&lt;libcellml::VariablePtr&gt;(anyItem);</literal_block>
                     </container>
                 </container>
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>Python</paragraph>
                         </container>
                     </container>

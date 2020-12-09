@@ -15,29 +15,13 @@
             </container>
             <container classes="sphinx-tabs">
                 <container classes="a b"> 
-                    <container classes="item">
+                    <container classes="item"> 
                         <container classes="a b">
                             <paragraph>C++ snippet</paragraph>
                         </container>
                     </container>
                     <container classes="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-0 active">
-                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/kmoy001/libcellml/libcellml-tutorials/howto/code/simulation_tool_dev/simulationToolDev.cpp" xml:space="preserve">    // Parse a CellML file into a model.
-
-    // Read the file containing the CellML model into a string.
-    std::string inFileName = "simulationExample.cellml";
-    std::ifstream inFile(inFileName);
-    std::stringstream inFileContents;
-    inFileContents &lt;&lt; inFile.rdbuf();
-
-    std::cout &lt;&lt; "Opening the CellML file" &lt;&lt; std::endl;
-
-    // Create a libCellML Parser, and use it to parse the fileContents
-    // string and convert it into a CellML Model structure.
-    auto parser = libcellml::Parser::create();
-    auto model = parser-&gt;parseModel(inFileContents.str());
-    printIssues(parser);
-
-                        </literal_block>
+                        <paragraph>My content goes here!</paragraph>
                         <paragraph>Full context: <download_reference filename="6446c8b6fec8120c0fc7c0dc30ffdc04/simulationToolDev.cpp" refdoc="howto/actions/parse_model" refdomain="" refexplicit="True" reftarget="../code/simulation_tool_dev/simulationToolDev.cpp" reftype="download" refwarn="False">
                             <literal classes="xref download">example_simulationToolDev.cpp</literal>
                         </download_reference>

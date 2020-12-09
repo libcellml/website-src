@@ -754,9 +754,9 @@ Issue [1] is an ERROR:
             <paragraph>Some basic units have been defined and built into libCellML, others you can define by combining the built-in ones using scaling factors and exponents, or you can define your own from scratch if need be.
                 Please read the <reference internal="True" refuri="../../tutorial3/tutorial3#aside-units"><inline classes="std std-ref">Understanding units</inline></reference> page for more detailed information, but for now let’s look at a simple example that defines a <literal classes="code">Units</literal> item representing millivolts.</paragraph>
             <container classes="sphinx-tabs">
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -772,9 +772,9 @@ mV-&gt;addUnit("volt", -3);       // reference unit, prefix as an integer
 // OR
 mV-&gt;addUnit("volt", 1.0, 1, 0.001);  // reference unit, prefix, exponent, multiplier</literal_block>
                 </container>
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>Python</paragraph>
                         </container>
                     </container>
@@ -1085,9 +1085,9 @@ Issue [2] is an ERROR:
                 There is more information about interacting with collections of items on the <reference internal="True" refuri="../../../howto/actions/understand_collections#examples-understand-collections"><inline classes="std std-ref">Understanding collections of items</inline></reference> page.</paragraph>
             <paragraph>Two particularly useful idioms are shown below.</paragraph>
             <container classes="sphinx-tabs">
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -1102,9 +1102,9 @@ auto grandson = model-&gt;component("grandfather")-&gt;component("daddy")-&gt;co
 // Short-cut to retrieve the component with the given name from anywhere in the encapsulation hierarchy:
 auto granddaughter = model-&gt;component("granddaughter", true);</literal_block>
                 </container>
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>Python</paragraph>
                         </container>
                     </container>

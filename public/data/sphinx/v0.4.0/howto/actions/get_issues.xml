@@ -220,8 +220,5 @@ print(get_issue_cause_from_enum(issue.cellmlElementType()))
 # Retrieve and print the level - a libcellml.Issue.LEVEL enum - for the issue.
 print(get_issue_level_from_enum(issue.level()))</literal_block>
         </container>
-        <comment xml:space="preserve">Useful snippets for dealing with issues</comment>
-        <comment xml:space="preserve">=======================================</comment>
-        <comment xml:space="preserve">**TODO**</comment>
     </section>
 </document>
