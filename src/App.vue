@@ -1,21 +1,21 @@
 <template>
   <v-app id="libcellml">
     <v-app-bar app clipped-left>
-      <!-- -->
+      <img src="./assets/logo.svg" width="40" height="40" />
       <v-app-bar-nav-icon @click="onSidebarOpen" />
       <v-row>
-        <v-col cols="1" />
         <v-col
           v-for="link in links"
           :key="`${link.label}-header-link`"
           :cols="link.label === 'Home' ? 2 : 1"
         >
-          <v-btn text rounded :to="link.url">
+          <v-btn text :to="link.url">
             {{ link.label }}
           </v-btn>
         </v-col>
       </v-row>
     </v-app-bar>
+
     <sidebar app></sidebar>
     <!--    <BreadCrumbs />-->
     <!-- Sizes your content based upon application components -->
@@ -37,11 +37,8 @@
           </v-breadcrumbs-item>
         </template>
       </v-breadcrumbs>
-      <v-container
-        fluid
-        id="pageContent"
-        :style="{ backgroundImage: 'url(' + backgroundImage + ')' }"
-      >
+
+      <v-container fluid id="pageContent">
         <!-- If using vue-router -->
         <transition name="slide" mode="out-in">
           <router-view :key="$route.path" />
@@ -52,11 +49,13 @@
     <BackToTop />
     <v-footer app>
       <v-row justify="center" no-gutters>
-        <v-col />
-        <v-col class="text-center">
-          {{ new Date().getFullYear() }} — <strong>libCellML</strong>
+        <v-col/>
+        <v-col class="text-center" >
+            <p id="footer-copyright">Copyright &#169; 2020 libCellML</p>
+       </v-col>
+        <v-col class="text-right">
+          <p id="footer-ack"><router-link to="about">Acknowledgements</router-link></p>
         </v-col>
-        <v-col class="text-right">Created: {{ currentDate }} </v-col>
       </v-row>
     </v-footer>
   </v-app>
@@ -118,6 +117,10 @@
 import BackToTop from '@/components/BackToTop'
 import Sidebar from '@/components/Sidebar'
 import NotificationContainer from '@/components/NotificationContainer'
+
+// KRM
+import ui from '@/js/ui'
+
 // import BreadCrumbs from '@/components/BreadCrumbs'
 
 export default {
@@ -128,6 +131,18 @@ export default {
     BackToTop,
     Sidebar,
     NotificationContainer,
+  },
+
+  created() {
+    window.addEventListener('resize', this.handleResize)
+    this.handleResize()
+  },
+
+  destroyed() {
+    window.removeEventListener('resize', this.handleResize)
+  },
+
+  mounted() {
   },
 
   data: () => ({
@@ -154,29 +169,15 @@ export default {
         url: '/about',
       },
     ],
-    backgroundImage: require('@/assets/logo.svg'),
+    window: {
+      width: 0,
+      height: 0,
+    },
   }),
 
   computed: {
-    currentDate: () => {
-      let d = new Date()
-      const months = [
-        'January',
-        'February',
-        'March',
-        'April',
-        'May',
-        'June',
-        'July',
-        'August',
-        'September',
-        'October',
-        'November',
-        'December',
-      ]
-      return d.getDate() + ' ' + months[d.getMonth()] + ' ' + d.getFullYear()
-    },
     breadcrumbs() {
+      // KRM TODO Remove last item from breadcrumbs as we don't need it.
       return this.$store.state.breadcrumbs
     },
   },
@@ -184,6 +185,12 @@ export default {
   methods: {
     onSidebarOpen() {
       this.$store.commit('setSidebarOpen', !this.$store.getters.getSidebarOpen)
+    },
+
+    // KRM
+    handleResize() {
+      this.window.width = window.innerWidth
+      this.window.height = window.innerHeight
     },
   },
 
@@ -198,10 +205,6 @@ export default {
 </script>
 
 <style>
-.breadcrumbs {
-  padding: 3px 0 !important;
-}
-
 #pageContent {
   background-size: 80px;
   background-position: 12px 12px;
@@ -209,7 +212,8 @@ export default {
 
 .slide-enter-active,
 .slide-leave-active {
-  transition: opacity 1s, transform 1s;
+  /* transition: opacity 1s, transform 1s; KRM used to be 1s for each */
+  transition: opacity 0.25s, transform 0.25s;
 }
 
 .slide-enter,

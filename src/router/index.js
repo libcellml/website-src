@@ -170,8 +170,8 @@ router.beforeEach((to, from, next) => {
     }
     items[items.length - 1].disabled = true
   }
-
-  store.commit('setBreadcrumbs', items)
+  // KRM reversing order of breadcrumbs so that we can truncate the list on the left hand side.
+  store.commit('setBreadcrumbs', items.slice().reverse())
   next()
 })
 

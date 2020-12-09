@@ -3,7 +3,7 @@
     <v-container>
       <v-row>
         <v-col>
-          <div class="absolute-box">
+          <div class="version-box">
             <version-combo-box
               :versions="availableVersions"
             ></version-combo-box>
@@ -25,32 +25,43 @@ import VersionComboBox from '@/components/VersionComboBox'
 
 import { getSphinxVersions } from '@/js/versions'
 
+import ui from '@/js/ui'
+
 export default {
   name: 'TutorialsPage',
   components: {
     SphinxPage,
     VersionComboBox,
   },
+
   computed: {
     availableVersions() {
       return getSphinxVersions()
     },
   },
+
   methods: {
     updated() {
       this.$store.commit('togglePageContentChanged')
+
+      // KRM include these on any page where the injected XML might contain tabs or toggle blocks.
+      setTimeout(function () {
+        ui.processSphinxTabs()
+        ui.addClickHandlerTabs()
+        ui.addClickHandlerToggles()
+      }, this.$store.getters.getTransitionDelay)
     },
   },
 }
 </script>
 
 <style scoped>
-.tutorials {
+.api-reference {
   position: relative;
 }
-
-.absolute-box {
-  position: absolute;
-  top: 0;
+.version-box > * {
+  position: relative;
+  margin: 0;
+  padding: 0;
 }
 </style>
