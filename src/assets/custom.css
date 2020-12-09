@@ -226,21 +226,13 @@ pre {
     padding: 5px;
 }
 
-/* .active {
-    font-weight: 700;
-    color: #bd4147;
-}
-
-.inactive {
-    font-weight: 400;
-    color: #444444;
-} */
-
 /* Toggles for showing/hiding code. */
 .toggle {
-    padding: 0;
+    padding: 0 0 0 8px;
     margin-bottom: 5px;
+    border-left: solid #e6d1d1 5px;
 }
+
 .toggle > * {
     display: none;
     padding: 0;
