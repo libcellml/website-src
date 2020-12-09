@@ -49,11 +49,13 @@
     <BackToTop />
     <v-footer app>
       <v-row justify="center" no-gutters>
-        <v-col />
-        <v-col class="text-center">
-          {{ new Date().getFullYear() }} — <strong>libCellML</strong>
+        <v-col/>
+        <v-col class="text-center" >
+            <p id="footer-copyright">Copyright &#169; 2020 libCellML</p>
+       </v-col>
+        <v-col class="text-right">
+          <p id="footer-ack"><router-link to="about">Acknowledgements</router-link></p>
         </v-col>
-        <v-col class="text-right">Created: {{ currentDate }}</v-col>
       </v-row>
     </v-footer>
   </v-app>
@@ -174,24 +176,6 @@ export default {
   }),
 
   computed: {
-    currentDate: () => {
-      let d = new Date()
-      const months = [
-        'January',
-        'February',
-        'March',
-        'April',
-        'May',
-        'June',
-        'July',
-        'August',
-        'September',
-        'October',
-        'November',
-        'December',
-      ]
-      return d.getDate() + ' ' + months[d.getMonth()] + ' ' + d.getFullYear()
-    },
     breadcrumbs() {
       // KRM TODO Remove last item from breadcrumbs as we don't need it.
       return this.$store.state.breadcrumbs

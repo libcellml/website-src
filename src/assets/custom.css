@@ -1,3 +1,16 @@
+/* 
+ Bright red 
+
+
+*/
+
+:root {
+    --bright-red: #bd4147;
+    --deep-red: #4e0202;
+    --text-colour: #444444;
+    --link-colour: #9e9e9e;
+}
+
 /* Make max width for page content. */
 #pageContent {
     max-width: 900px;
@@ -9,12 +22,13 @@
 }
 
 .v-application a {
+    color: --var(link-colour);
     text-decoration: none;
     font-weight:500;
 }
 
 .v-application a:hover {
-    color: #bd4147 !important;
+    color: var(--bright-red) !important;
 }
 
 /* Remove box and shadow from code.  The font and colour is plenty! */
@@ -32,7 +46,7 @@
 }
 
 code.plaintext {
-    background-color: #444444;
+    background-color: var(--text-colour);
     color: whitesmoke;
     overflow: scroll;
     border-radius: 3px;
@@ -41,7 +55,7 @@ code.plaintext {
 
 code.xref {
     font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
-    color: #4e0202;
+    color: var(--deep-red);
     font-weight: 500;
 }
 
@@ -58,7 +72,7 @@ code.xref {
     padding-top: 1rem;
     margin-left: 0;
     margin-bottom: 0.3rem;
-    color: #bd4147;
+    color: var(--bright-red);
 }
 
 /* Ensures a consistent look through the function heading.
@@ -244,7 +258,7 @@ pre {
 .toggle .header, .toggle .header-left {
     display: block;
     clear: both;
-    color: #444444;
+    color: var(--text-colour);
     text-align: right;
     margin-top: 5px;
     margin-bottom: 0;
@@ -261,7 +275,7 @@ pre {
 
 .toggle .header.active p, .toggle .header-left.active p {
     font-weight: 700;
-    color: #bd4147;
+    color: var(--bright-red);
     margin-bottom:0;
 }
 
@@ -273,7 +287,7 @@ pre {
 .toggle .header.inactive p,
 .toggle .header-left.inactive p  {
     font-weight: 400;
-    color: #444444;
+    color: var(--text-colour);
     margin-bottom:0;
 }
 
@@ -296,7 +310,7 @@ pre {
     float: left;
     width: auto;
     height: 20px;
-    color: #444444;
+    color: var(--text-colour);
     border: solid #cccccc 1px;
     border-radius: 10px;
     border-bottom-left-radius: 0;
@@ -309,25 +323,25 @@ pre {
 .tab2name.active {
     background-color: white;
     font-weight: 700;
-    color: #bd4147;
+    color: var(--bright-red);
     border-bottom: solid white 3px;
 }
 
 .tab2name.inactive {
     background-color: whitesmoke;
     font-weight: 400;
-    color: #444444;
+    color: var(--text-colour);
     border-bottom: solid #cccccc 1px;
 }
 
 .tab2.active > .tab2name {
     font-weight: 700;
-    color: #bd4147;
+    color: var(--bright-red);
 }
 
 .tab2.inactive > .tab2name {
     font-weight: 400;
-    color: #444444;
+    color: var(--text-colour);
 }
 
 .tab2content {
@@ -353,7 +367,7 @@ pre {
 .infospec {
     /* border-top: 1px solid #b9c6dd; */
     background: #e1eaf0;
-    color: #444444;
+    color: var(--text-colour);
     padding: 10px;
 
     margin-top: 0;
@@ -400,4 +414,10 @@ pre {
     .image-box img {
        max-width: 100%;
     }
+}
+
+#footer-copyright, #footer-ack {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    color: var(--link-colour);
 }
