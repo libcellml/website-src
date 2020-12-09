@@ -9,9 +9,9 @@
         </container>
         <paragraph>Items with a unique id can be retrieved using the <literal classes="code">item("uniqueId")</literal> function, items whose ids are not unique must be retrieved with the <literal classes="code">items("duplicatedId")</literal> function instead.</paragraph>
         <container classes="sphinx-tabs">
-            <container>
+            <container classes="dummy">
                 <container classes="item">
-                    <container>
+                    <container classes="dummy">
                         <paragraph>C++</paragraph>
                     </container>
                 </container>
@@ -28,9 +28,9 @@ auto duplicatedIdItems = annotator-&gt;items("duplicatedId");
 // attribute is an Annotator::Type enum, and the second is an std::any cast
 // of the item.</literal_block>
             </container>
-            <container>
+            <container classes="dummy">
                 <container classes="item">
-                    <container>
+                    <container classes="dummy">
                         <paragraph>Python</paragraph>
                     </container>
                 </container>

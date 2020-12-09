@@ -977,7 +977,7 @@ Issue [3] is an ERROR:
             <paragraph>We will import only the “gateEquations” component and set it to be a child of the nGateEquations component.
                 This means we can introduce the voltage dependence for the alpha and beta, and using a specified initial value for the gate’s status.
                 Note that the variable “n” in the nGateEquations is equivalent to the generic gate’s variable “X”.</paragraph>
-            <comment xml:space="preserve">container::shortlist</comment>
+            
             <paragraph>Imports require three things:</paragraph>
             <block_quote>
                 <bullet_list bullet="-">

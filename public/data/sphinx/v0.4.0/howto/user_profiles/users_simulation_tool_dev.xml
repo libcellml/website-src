@@ -54,9 +54,9 @@
                 Note that both the <literal classes="code">Parser</literal> class and its opposite number, the <literal classes="code">Printer</literal> class, deal with strings rather than files.
                 You’ll need to read the file into a string, and then use the string as input to the <literal classes="code">Parser</literal> item.</paragraph>
             <container classes="sphinx-tabs">
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>C++ snippet</paragraph>
                         </container>
                     </container>
@@ -80,9 +80,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>Python snippet</paragraph>
                         </container>
                     </container>
@@ -109,9 +109,9 @@
                 The process of resolving the imports (telling libCellML where to look for these ingredients) and flattening the model (creating instances of the ingredients and removing the dependency) is necessary before code generation can happen.</paragraph>
             <paragraph>The <literal classes="code">Importer</literal> class supports all functionality to do with imports, and contains its own logger which can be used to report anything that might have gone wrong.</paragraph>
             <container classes="sphinx-tabs">
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>C++ snippet</paragraph>
                         </container>
                     </container>
@@ -140,9 +140,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>Python snippet</paragraph>
                         </container>
                     </container>
@@ -178,9 +178,9 @@
             <paragraph>The <literal classes="code">Validator</literal> is the equivalent of a spelling checker: it can check that each item in a model has all of the information it needs, but it can’t check whether it means what you intend it to.
                 Thus even if a model is valid, it could still be the equivalent of correctly-spelled nonsense.</paragraph>
             <container classes="sphinx-tabs">
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>C++ snippet</paragraph>
                         </container>
                     </container>
@@ -196,9 +196,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>Python snippet</paragraph>
                         </container>
                     </container>
@@ -241,9 +241,9 @@
                 </list_item>
             </enumerated_list>
             <container classes="sphinx-tabs">
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>C++ snippet</paragraph>
                         </container>
                     </container>
@@ -256,9 +256,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>Python snippet</paragraph>
                         </container>
                     </container>

@@ -29,7 +29,7 @@ export default {
         firstPanel.classList.add('active')
         firstPanel.classList.remove('inactive')
         menu.querySelector('#g' + groupIndex + 't0').classList.add('active')
-        
+
       }
     })
   },
@@ -45,7 +45,7 @@ export default {
       header.addEventListener('click', function () {
 
         let contents = header.nextElementSibling
-        while(contents !== null) {
+        while (contents !== null) {
           contents.style.display =
             contents.style.display !== 'block' ? 'block' : 'none'
           contents = contents.nextElementSibling
@@ -82,6 +82,82 @@ export default {
   },
 
   processSphinxTabs: function () {
+    // <container classes="sphinx-tabs"> ----> turns into tabs2
+    // .... add tab2menu div ... 
+    //   <container>   -------------------->   turns into tab2? or remove?
+    //     <container classes="item"> -------> turns into tab2name, moved into menu
+    //         <container>  ------------------> deleted
+    //             <paragraph>C++</paragraph> -------> copied up one level
+    //         </container>
+    //     </container>
+    //     <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-Qysr active"> ---> becomes tab2
+    //     </container>
+    //     <literal_block/>
+
+    let tabGroups = document.querySelectorAll('.sphinx-tabs')
+
+    tabGroups.forEach((group, groupIndex) => {
+      if (!group.querySelector('.tab2menu')) {
+
+        // Make a menu if one doesn't exist
+        let menu = document.createElement('div')
+        menu.classList.add('tab2menu')
+        menu.id = 'g' + groupIndex + 'menu'
+
+        let firstPanel = group.firstElementChild
+        
+        // Iterate through children and give each the tab2 class
+        let tabIndex = 0;
+        let tab = group.firstElementChild
+        while (tab !== null) {
+
+          // Children become tab2
+          tab.classList.add('tab2')
+          tab.classList.add('inactive')
+          tab.id = 'g'+ groupIndex + 't' + tabIndex + 'tab'
+
+          // Each tab has a header in the class "item", turn it into a tab2name
+          let name = tab.querySelector('.container .item')
+          
+          name.classList.add('tab2name')
+          name.classList.remove('item')
+          name.id = 'g'+ groupIndex + 't' + tabIndex
+
+          // Move its contents up one level
+          let itemChild = name.firstChild
+          name.innerHTML = itemChild.innerHTML
+
+          // Each tab has a container including type sphinx-tab.  Set its id to 
+          // match the name div's id.
+          let content = tab.querySelector('.sphinx-tab')
+          content.classList = ['tab2content']
+
+          // Move the name to the menu
+          menu.appendChild(name)
+
+          tab = tab.nextElementSibling
+          tabIndex = tabIndex + 1
+        }
+
+        let menuSpacer = document.createElement('div')
+        menuSpacer.classList.add('tab2spacer')
+        menu.appendChild(menuSpacer)
+
+        firstPanel.classList.add('active')
+        firstPanel.classList.remove('inactive')
+        menu.querySelector('#g' + groupIndex + 't0').classList.add('active')
+
+        firstPanel.insertAdjacentElement('beforebegin', menu)
+      }
+    })
+
+    tabGroups.forEach(group => {
+      group.classList = 'tabs2'
+    })
+
+  },
+
+  processSphinxTabs2: function () {
     // KRM not really a fan of this.  It does processing that should be done in 
     // the XML translation step, rather than here.  Also depends on all containers having
     // a class until PR #2 is merged. 

@@ -82,9 +82,9 @@
                     <paragraph>Show code examples</paragraph>
                 </container>
                 <container classes="sphinx-tabs">
-                    <container>
+                    <container classes="dummy">
                         <container classes="item">
-                            <container>
+                            <container classes="dummy">
                                 <paragraph>C++</paragraph>
                             </container>
                         </container>
@@ -117,9 +117,9 @@ auto iAmABooleanNotAComponent = model-&gt;removeComponent(0); // Remove either b
 // the model's collection will no longer contain the component AND the entire contents of that component
 // will be permanently deleted.</literal_block>
                     </container>
-                    <container>
+                    <container classes="dummy">
                         <container classes="item">
-                            <container>
+                            <container classes="dummy">
                                 <paragraph>Python</paragraph>
                             </container>
                         </container>

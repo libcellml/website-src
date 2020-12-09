@@ -8,9 +8,9 @@
             <paragraph>Initialise variables</paragraph>
         </container>
         <container classes="sphinx-tabs">
-            <container>
+            <container classes="dummy">
                 <container classes="item">
-                    <container>
+                    <container classes="dummy">
                         <paragraph>C++ snippet</paragraph>
                     </container>
                 </container>
@@ -25,9 +25,9 @@
                     <paragraph>Full context: <download_reference filename="a7dbe8fe8475e1fe24e8555329aec747/solveGeneratedModel.cpp" refdoc="howto/code_snippets/snippet_initialise_solver" refdomain="" refexplicit="True" reftarget="../code/solver/solveGeneratedModel.cpp" reftype="download" refwarn="False"><literal classes="xref download">example_solveGeneratedModel.cpp</literal></download_reference></paragraph>
                 </container>
             </container>
-            <container>
+            <container classes="dummy">
                 <container classes="item">
-                    <container>
+                    <container classes="dummy">
                         <paragraph>Python snippet</paragraph>
                     </container>
                 </container>

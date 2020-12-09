@@ -226,7 +226,7 @@ pre {
     padding: 5px;
 }
 
-.active {
+/* .active {
     font-weight: 700;
     color: #bd4147;
 }
@@ -234,7 +234,7 @@ pre {
 .inactive {
     font-weight: 400;
     color: #444444;
-}
+} */
 
 /* Toggles for showing/hiding code. */
 .toggle {

@@ -10,9 +10,9 @@
         <paragraph>This example demonstrates the addition and removal of items from a collection.
             Note that while removal of items from a collection can be done by pointer symbol, by name, and by index, adding them is only possible via pointer.</paragraph>
         <container classes="sphinx-tabs">
-            <container>
+            <container classes="dummy">
                 <container classes="item">
-                    <container>
+                    <container classes="dummy">
                         <paragraph>C++</paragraph>
                     </container>
                 </container>
@@ -72,9 +72,9 @@ assert(success == false);
 success = component-&gt;removeVariable(nullptr);
 assert(success == false);</literal_block>
             </container>
-            <container>
+            <container classes="dummy">
                 <container classes="item">
-                    <container>
+                    <container classes="dummy">
                         <paragraph>Python</paragraph>
                     </container>
                 </container>

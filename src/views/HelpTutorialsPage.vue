@@ -46,7 +46,7 @@ export default {
 
       // KRM include these on any page where the injected XML might contain tabs or toggle blocks.
       setTimeout(function () {
-        ui.moveTabNames()
+        ui.processSphinxTabs()
         ui.addClickHandlerTabs()
         ui.addClickHandlerToggles()
       }, this.$store.getters.getTransitionDelay)

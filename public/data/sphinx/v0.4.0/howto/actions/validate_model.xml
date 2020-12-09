@@ -13,9 +13,9 @@
                 <paragraph>Validate a model against the CellML specification</paragraph>
             </container>
             <container classes="sphinx-tabs">
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>C++ snippet</paragraph>
                         </container>
                     </container>
@@ -32,9 +32,9 @@
                         <paragraph>Full context: <download_reference filename="6446c8b6fec8120c0fc7c0dc30ffdc04/simulationToolDev.cpp" refdoc="howto/actions/validate_model" refdomain="" refexplicit="True" reftarget="../code/simulation_tool_dev/simulationToolDev.cpp" reftype="download" refwarn="False"><literal classes="xref download">example_simulationToolDev.cpp</literal></download_reference></paragraph>
                     </container>
                 </container>
-                <container>
+                <container classes="dummy">
                     <container classes="item">
-                        <container>
+                        <container classes="dummy">
                             <paragraph>Python snippet</paragraph>
                         </container>
                     </container>

@@ -10,9 +10,9 @@
         <paragraph>There are two places that need a reference to <literal classes="code">Units</literal> items.
             The first is the set of <literal classes="code">Variable</literal> items stored in the <literal classes="code">Component</literal>: the units name for each of these is accessible in the <literal classes="code">name()</literal> attribute of its <literal classes="code">units()</literal> item.</paragraph>
         <container classes="sphinx-tabs">
-            <container>
+            <container classes="dummy">
                 <container classes="item">
-                    <container>
+                    <container classes="dummy">
                         <paragraph>C++</paragraph>
                     </container>
                 </container>
@@ -64,9 +64,9 @@ for (const auto &amp;name : unitsNames) {
     std::cout &lt;&lt; "  - " &lt;&lt; name &lt;&lt; std::endl;
 }</literal_block>
             </container>
-            <container>
+            <container classes="dummy">
                 <container classes="item">
-                    <container>
+                    <container classes="dummy">
                         <paragraph>Python</paragraph>
                     </container>
                 </container>
