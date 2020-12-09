@@ -3,26 +3,42 @@
     <v-container>
       <v-row>
         <v-col>
-          <h4>On this page</h4>
+          <!-- KRM: Menu will only be shown here at small screen sizes -->
+          <template v-if="collapseMenu">
+            <h4>Menu</h4>
+            <ul id="example-1">
+              <li
+                v-for="link in links"
+                :key="link.label"
+                style="list-style-type: none"
+              >
+                <router-link :to="link.url">
+                  {{ link.label }}
+                </router-link>
+              </li>
+            </ul>
+          </template>
+          <br />
+
           <template v-if="havePageHeadings">
+            <h4>On this page</h4>
             <ul>
-              <li v-for="(heading, index) in pageHeadings" :key="'h1_' + index">
+              <li
+                v-for="(heading, index) in pageHeadings"
+                :key="'h1_' + index"
+                style="list-style-type: none"
+              >
                 <router-link
                   v-if="heading.id"
                   :to="`${$route.path}#${heading.id}`"
                 >
-                  {{
-                    heading.el.innerText || heading.el.textContent
-                  }}</router-link
-                >
-                <template v-else>{{
-                  heading.el.innerText || heading.el.textContent
-                }}</template>
+                  {{ heading.el.innerText || heading.el.textContent }}
+                </router-link>
+                <template v-else>
+                  {{ heading.el.innerText || heading.el.textContent }}
+                </template>
               </li>
             </ul>
-          </template>
-          <template v-else>
-            <span>Some default sidebar content.</span>
           </template>
         </v-col>
       </v-row>
@@ -34,9 +50,40 @@
 export default {
   name: 'Sidebar',
 
+  created() {
+    window.addEventListener('resize', this.handleResize)
+    this.handleResize()
+  },
+  destroyed() {
+    window.removeEventListener('resize', this.handleResize)
+  },
+
   data() {
     return {
       pageHeadings: [],
+      width: 0,
+      links: [
+        {
+          label: 'Home',
+          url: '/',
+        },
+        {
+          label: 'Download',
+          url: '/download',
+        },
+        {
+          label: 'Documentation',
+          url: '/documentation',
+        },
+        {
+          label: 'Developers',
+          url: '/developers',
+        },
+        {
+          label: 'About',
+          url: '/about',
+        },
+      ],
     }
   },
 
@@ -61,6 +108,9 @@ export default {
     // },
     havePageHeadings() {
       return this.pageHeadings.length
+    },
+    collapseMenu() {
+      return this.width < 850
     },
   },
 
@@ -116,6 +166,11 @@ export default {
       return headingTree
       // this.pageHeadings = headingTree
       // }, this.$store.getters.getTransitionDelay)
+    },
+
+    // KRM
+    handleResize() {
+      this.width = window.innerWidth
     },
   },
 }

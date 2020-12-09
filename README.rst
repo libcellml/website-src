@@ -36,7 +36,7 @@ Lints and fixes files
  npm run lint
 
 
-Customize configuration
+Customise configuration
 -----------------------
 
 See `Configuration Reference <https://cli.vuejs.org/config/>`_.
