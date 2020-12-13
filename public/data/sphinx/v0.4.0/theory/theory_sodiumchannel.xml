@@ -123,7 +123,7 @@
         <section ids="simulation-and-results" names="simulation\ and\ results">
             <title refid="id5">Simulation and results</title>
             <paragraph>The behaviour of the sodium channel was simulated using the
-                <reference internal="True" refuri="../tutorials/solver/solver#solver"><inline classes="std std-ref">simple solver</inline></reference> provided to run the code generated
+                <reference internal="True" refuri="../tutorials/solver/index#solver"><inline classes="std std-ref">simple solver</inline></reference> provided to run the code generated
                 in <inline classes="xref std std-ref">Tutorial 7</inline>.  Three voltage-step experiments
                 were run with voltage conditions of
                 (a) -85mV to -20mV, (b) -85mV to 0mV and (c) -85mV to +20mV.

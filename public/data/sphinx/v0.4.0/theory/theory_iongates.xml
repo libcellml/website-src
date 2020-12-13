@@ -9,7 +9,7 @@
         <paragraph>This chapter describes a generic ion channel, and provides a foundation for
             later chapters where specific channels of sodium and potassium are described.
             The theory here is the basis for the practical modelling tutorial in
-            <reference internal="True" refuri="../tutorials/tutorial5/tutorial5#tutorial5"><inline classes="std std-ref">Tutorial 5</inline></reference>.</paragraph>
+            <reference internal="True" refuri="../tutorials/tutorial5/index#tutorial5"><inline classes="std std-ref">Tutorial 5</inline></reference>.</paragraph>
         <topic classes="contents local" ids="contents" names="contents">
             <bullet_list>
                 <list_item>
@@ -183,7 +183,7 @@
         <section ids="simulation-and-results" names="simulation\ and\ results">
             <title refid="id14">Simulation and results</title>
             <paragraph>The formulation of a model for the generic ion channel described here is the
-                focus of <reference internal="True" refuri="../tutorials/tutorial5/tutorial5#tutorial5"><inline classes="std std-ref">Tutorial 5</inline></reference>.  The results shown here come from that
+                focus of <reference internal="True" refuri="../tutorials/tutorial5/index#tutorial5"><inline classes="std std-ref">Tutorial 5</inline></reference>.  The results shown here come from that
                 model, where parameters representing <math>\gamma = 4</math>
                 gates transitioning from the closed to the open state at a membrane
                 voltage <math>V = 0</math>, and opening and closing rate constants of

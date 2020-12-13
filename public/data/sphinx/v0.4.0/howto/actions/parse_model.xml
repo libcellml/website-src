@@ -14,9 +14,9 @@
                 <paragraph>Parse a model from a CellML file</paragraph>
             </container>
             <container classes="sphinx-tabs">
-                <container classes="a b">
+                <container classes="dummy">
                     <container classes="item">
-                        <container classes="a b">
+                        <container classes="dummy">
                             <paragraph>C++ snippet</paragraph>
                         </container>
                     </container>
@@ -37,21 +37,18 @@
     auto model = parser-&gt;parseModel(inFileContents.str());
     printIssues(parser);
 
-                        </literal_block>
-                        <paragraph>Full context: <download_reference filename="6446c8b6fec8120c0fc7c0dc30ffdc04/simulationToolDev.cpp" refdoc="howto/actions/parse_model" refdomain="" refexplicit="True" reftarget="../code/simulation_tool_dev/simulationToolDev.cpp" reftype="download" refwarn="False">
-                            <literal classes="xref download">example_simulationToolDev.cpp</literal>
-                        </download_reference>
-                    </paragraph>
-                </container>
-            </container>
-            <container classes="a b">
-                <container classes="item">
-                    <container classes="a b">
-                        <paragraph>Python snippet</paragraph>
+</literal_block>
+                        <paragraph>Full context: <download_reference filename="6446c8b6fec8120c0fc7c0dc30ffdc04/simulationToolDev.cpp" refdoc="howto/actions/parse_model" refdomain="" refexplicit="True" reftarget="../code/simulation_tool_dev/simulationToolDev.cpp" reftype="download" refwarn="False"><literal classes="xref download">example_simulationToolDev.cpp</literal></download_reference></paragraph>
                     </container>
                 </container>
-                <container classes="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-1">
-                    <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/kmoy001/libcellml/libcellml-tutorials/howto/code/simulation_tool_dev/simulationToolDev.py" xml:space="preserve">    # Parse the model from a CellML file.
+                <container classes="dummy">
+                    <container classes="item">
+                        <container classes="dummy">
+                            <paragraph>Python snippet</paragraph>
+                        </container>
+                    </container>
+                    <container classes="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-1">
+                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/kmoy001/libcellml/libcellml-tutorials/howto/code/simulation_tool_dev/simulationToolDev.py" xml:space="preserve">    # Parse the model from a CellML file.
 
     # Create a libCellML Parser, and use it to parse the fileContents
     # string and convert it into a CellML Model structure.
@@ -60,14 +57,11 @@
     model = parser.parseModel(read_file.read())
     print_issues_to_terminal(parser)
 
-                    </literal_block>
-                    <paragraph>Full context: <download_reference filename="0aa479c739e25e77890e20f1b26b4b3b/simulationToolDev.py" refdoc="howto/actions/parse_model" refdomain="" refexplicit="True" reftarget="../code/simulation_tool_dev/simulationToolDev.py" reftype="download" refwarn="False">
-                        <literal classes="xref download">example_simulationToolDev.py</literal>
-                    </download_reference>
-                </paragraph>
+</literal_block>
+                        <paragraph>Full context: <download_reference filename="0aa479c739e25e77890e20f1b26b4b3b/simulationToolDev.py" refdoc="howto/actions/parse_model" refdomain="" refexplicit="True" reftarget="../code/simulation_tool_dev/simulationToolDev.py" reftype="download" refwarn="False"><literal classes="xref download">example_simulationToolDev.py</literal></download_reference></paragraph>
+                    </container>
+                </container>
             </container>
         </container>
-    </container>
-</container>
-</section>
+    </section>
 </document>

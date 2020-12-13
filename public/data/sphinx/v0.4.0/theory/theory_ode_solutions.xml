@@ -54,7 +54,7 @@
             <section ids="interpretation-in-code-mathml-generated-c-generated-python" names="interpretation\ in\ code:\ mathml,\ generated\ c,\ generated\ python">
                 <title>Interpretation in code: MathML, generated C, generated Python</title>
                 <paragraph>The <literal classes="code">Generator</literal> interprets your CellML model into a structure which can easily be passed to a numerical integrator.
-                    Consider the file created by completing <reference internal="True" refuri="../tutorials/tutorial3/tutorial3#tutorial3"><inline classes="std std-ref">Tutorial 3</inline></reference> to model a coupled system of first-order ODEs.
+                    Consider the file created by completing <reference internal="True" refuri="../tutorials/tutorial3/index#tutorial3"><inline classes="std std-ref">Tutorial 3</inline></reference> to model a coupled system of first-order ODEs.
                     The governing equations - that is, gradient of each variable as a function of all the others - were specified in the MathML block within the CellML as:</paragraph>
                 <literal_block force="False" highlight_args="{}" language="xml" linenos="False" xml:space="preserve">&lt;!-- Gradient function for variable "y_s" based on the current shark and fish populations. --&gt;
 &lt;apply&gt;&lt;eq/&gt;
