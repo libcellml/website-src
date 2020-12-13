@@ -4,6 +4,7 @@ import Home from '@/views/Home.vue'
 
 import store from '@/store'
 
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -40,6 +41,7 @@ const routes = [
   },
   {
     path: '/documentation/tutorials/:version/:pageName*',
+    // path: '/documentation/tutorials/:pageName*',
     name: 'TutorialsPage',
     component: () =>
       import(/* webpackChunkName: "sphinx" */ '../views/HelpTutorialsPage.vue'),
@@ -82,6 +84,9 @@ const routes = [
   },
 ]
 
+const skipPaths = [
+  // '/v0.4.0/howto/actions',
+]
 const createRouter = () => {
   return new VueRouter({
     mode: 'history',
@@ -115,6 +120,7 @@ const createRouter = () => {
 
 const router = createRouter()
 
+// Breadcrumb calculation KRM
 router.beforeEach((to, from, next) => {
   let items = [
     {
@@ -123,6 +129,7 @@ router.beforeEach((to, from, next) => {
       href: '/',
     },
   ]
+
   if (to.name === 'Home') {
     items[0].disabled = true
   } else if (
@@ -138,9 +145,7 @@ router.beforeEach((to, from, next) => {
       href: to.path,
     })
   } else if (
-    to.name === 'TutorialsPage' ||
-    to.name === 'Tutorials' ||
-    to.name === 'APIReferencePage' ||
+    to.name === 'APIReferencePage' || 
     to.name === 'APIReference'
   ) {
     let toPath = to.path
@@ -170,8 +175,30 @@ router.beforeEach((to, from, next) => {
     }
     items[items.length - 1].disabled = true
   }
+  else if (to.name === 'TutorialsPage' || to.name === 'Tutorials') {
+    let basePath = '/documentation/tutorials/'
+    let path = to.path.replace(basePath, '')
+    let pages = path.split('/')
+    let lastLink = ''
+
+    pages.forEach(page => {
+      if (page && page != "index") {
+        lastLink = lastLink + page + '/'
+        // Remove page items from the list if they're in directories that don't have an index file
+        if (!skipPaths.includes(lastLink)) {
+          items.push({
+            text: page.replaceAll('_', ' '),
+            disabled: false,
+            href: basePath + lastLink + 'index',
+          })
+        }
+      }
+    })
+  }
+
   // KRM reversing order of breadcrumbs so that we can truncate the list on the left hand side.
   store.commit('setBreadcrumbs', items.slice().reverse())
+
   next()
 })
 
