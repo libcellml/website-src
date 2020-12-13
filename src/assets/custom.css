@@ -245,9 +245,9 @@ pre {
 
 /* Toggles for showing/hiding code. */
 .toggle {
-    padding: 0 0 0 8px;
     margin-bottom: 5px;
     border-left: solid #e6d1d1 5px;
+    padding: 0 0 0 8px;
 }
 
 .toggle > * {
@@ -259,9 +259,12 @@ pre {
     display: block;
     clear: both;
     color: var(--text-colour);
-    text-align: right;
     margin-top: 5px;
     margin-bottom: 0;
+}
+
+.toggle .header {
+    text-align: right;
 }
 
 .toggle .header-left {
@@ -390,6 +393,7 @@ pre {
 }
 .image-box * {
     justify-content: center;
+    align-items: center;
 }
 .image-box img {
     padding: 5px;
