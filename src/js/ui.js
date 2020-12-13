@@ -59,7 +59,7 @@ export default {
 
   addClickHandlerTabs: function () {
     let tabNames = document.querySelectorAll('.tab2name')
-    tabNames.forEach((tabName) => {
+    tabNames.forEach(tabName => {
       tabName.addEventListener('click', function () {
         // Turn other tabs off.
         let group = tabName.parentElement.parentElement
@@ -84,14 +84,14 @@ export default {
   processSphinxTabs: function () {
     // KRM: Not such a fan of this.  Processing should be done in getting 
     // this into XML format, not in the browser!
-    // NB: Segfaults will come if <container> blocks have no classes.  Need
+    // NB: Segfaults will come if <container classes="dummy"> blocks have no classes.  Need
     // to globally search and replace with <container classes="dummy">
 
     // <container classes="sphinx-tabs"> ----> turns into tabs2
     // .... add tab2menu div ... 
-    //   <container>   -------------------->   turns into tab2
+    //   <container classes="dummy">   -------------------->   turns into tab2
     //     <container classes="item"> -------> turns into tab2name, moved into menu
-    //         <container>  ------------------> deleted
+    //         <container classes="dummy">  ------------------> deleted
     //             <paragraph>C++</paragraph> -------> copied up one level
     //         </container>
     //     </container>
@@ -119,11 +119,11 @@ export default {
           // Children become tab2
           tab.classList.add('tab2')
           tab.classList.add('inactive')
-          tab.id = 'g'+ groupIndex + 't' + tabIndex + 'tab'
+          tab.id = 'g'+ groupIndex + 't' + tabIndex + 'tab' 
 
           // Each tab has a header in the class "item", turn it into a tab2name
           let name = tab.querySelector('.container .item')
-          
+
           name.classList.add('tab2name')
           name.classList.remove('item')
           name.id = 'g'+ groupIndex + 't' + tabIndex
@@ -132,7 +132,7 @@ export default {
           let itemChild = name.firstChild
           name.innerHTML = itemChild.innerHTML
 
-          // Each tab has a container including type sphinx-tab.  Set its id to 
+          // Each tab has a container including type sphinx-tab.  Set its id to
           // match the name div's id.
           let content = tab.querySelector('.sphinx-tab')
           content.classList = ['tab2content']
@@ -159,6 +159,5 @@ export default {
     tabGroups.forEach(group => {
       group.classList = 'tabs2'
     })
-
   },
 }

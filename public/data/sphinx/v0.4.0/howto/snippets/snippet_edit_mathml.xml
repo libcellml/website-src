@@ -9,7 +9,7 @@
         </container>
         <paragraph>MathML is stored as a single string within a component.
             Retrieving it is simple enough using the <literal classes="code">math()</literal> function, but any manipulation (change units used, changing variable names, adding additional relationships, etc) are a little more complicated.</paragraph>
-        
+        <comment xml:space="preserve"></comment>
         <block_quote>
             <paragraph>TODO: Need more examples of useful mathml manipulation. Variable names? Need to remove whitespace first?</paragraph>
         </block_quote>
