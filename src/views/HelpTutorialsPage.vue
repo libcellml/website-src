@@ -10,7 +10,7 @@
           </div>
           <sphinx-page
             :baseURL="`/data/sphinx/${$route.params.version}`"
-            indexFileName="tutorials_index"
+            indexFileName="index"
             @updated="updated"
           ></sphinx-page>
         </v-col>
