@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '@/views/Home.vue'
 
 import store from '@/store'
+import { mdiSortReverseVariant } from '@mdi/js'
 
 
 Vue.use(VueRouter)
@@ -80,12 +81,15 @@ const routes = [
   },
   {
     path: '*',
-    redirect: { name: '404', params: { resource: 'page' } },
+    redirect: {
+      name: '404',
+      params: { resource: 'page' },
+    },
   },
 ]
 
 const skipPaths = [
-  // '/v0.4.0/howto/actions',
+  // KRM Placeholder for views to skip in the breadcrumbs
 ]
 const createRouter = () => {
   return new VueRouter({
@@ -120,8 +124,10 @@ const createRouter = () => {
 
 const router = createRouter()
 
-// Breadcrumb calculation KRM
+
 router.beforeEach((to, from, next) => {
+
+  // KRM Breadcrumb calculation
   let items = [
     {
       text: 'home',
@@ -129,7 +135,6 @@ router.beforeEach((to, from, next) => {
       href: '/',
     },
   ]
-
   if (to.name === 'Home') {
     items[0].disabled = true
   } else if (
@@ -145,7 +150,7 @@ router.beforeEach((to, from, next) => {
       href: to.path,
     })
   } else if (
-    to.name === 'APIReferencePage' || 
+    to.name === 'APIReferencePage' ||
     to.name === 'APIReference'
   ) {
     let toPath = to.path
@@ -195,9 +200,9 @@ router.beforeEach((to, from, next) => {
       }
     })
   }
-
   // KRM reversing order of breadcrumbs so that we can truncate the list on the left hand side.
   store.commit('setBreadcrumbs', items.slice().reverse())
+  store.commit('updateLastURL', to.path)
 
   next()
 })
