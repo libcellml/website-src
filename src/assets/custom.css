@@ -119,10 +119,11 @@ section {
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: left;
+
 }
 
 .v-breadcrumbs {
-    padding: 0;
+    padding: 0 10px 0 0;
 }
 
 /*  At present the menu width at 100% jumps to two lines when window width is less than 848px.  
