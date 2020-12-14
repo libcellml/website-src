@@ -91,6 +91,11 @@ const routes = [
 const skipPaths = [
   // KRM Placeholder for views to skip in the breadcrumbs
 ]
+
+const skipTitles = [
+  // KRM strings to remove from breadcrumb titles
+  'classlibcellml_1_1',
+]
 const createRouter = () => {
   return new VueRouter({
     mode: 'history',
@@ -150,36 +155,33 @@ router.beforeEach((to, from, next) => {
       href: to.path,
     })
   } else if (
-    to.name === 'APIReferencePage' ||
-    to.name === 'APIReference'
-  ) {
-    let toPath = to.path
-    let appendFileName = ''
-    if (to.params.pageName && to.params.pageName.indexOf('/') !== -1) {
-      appendFileName = to.params.pageName
-      toPath = toPath.replace(to.params.pageName, '')
-    }
-    const pathParts = toPath.split('/')
-    let builtPath = ''
-    pathParts.forEach(part => {
-      if (part) {
-        builtPath += `/${part}`
+    to.name === 'APIReferencePage'
+    || to.name === 'APIReference') {
+    let basePath = '/documentation/api/'
+    let path = to.path.replace(basePath, '')
+    let pages = path.split('/')
+    let lastLink = ''
+
+    pages.forEach(page => {
+      if (page) {
+        lastLink = lastLink + page + '/'
+
+        let bookmarkText = page
+        skipTitles.forEach(title => {
+          bookmarkText = bookmarkText.replaceAll(title, '')
+        })
+        bookmarkText.replaceAll('_', ' ')
+
         items.push({
-          text: part,
+          text: bookmarkText,
           disabled: false,
-          href: builtPath,
+          href: basePath + lastLink,
         })
       }
     })
-    if (appendFileName) {
-      items.push({
-        text: appendFileName,
-        disabled: true,
-        href: builtPath,
-      })
-    }
-    items[items.length - 1].disabled = true
   }
+
+  // KRM
   else if (to.name === 'TutorialsPage' || to.name === 'Tutorials') {
     let basePath = '/documentation/tutorials/'
     let path = to.path.replace(basePath, '')
