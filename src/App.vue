@@ -118,16 +118,12 @@ import BackToTop from '@/components/BackToTop'
 import Sidebar from '@/components/Sidebar'
 import NotificationContainer from '@/components/NotificationContainer'
 
-// KRM
 import ui from '@/js/ui'
-
-// import BreadCrumbs from '@/components/BreadCrumbs'
 
 export default {
   name: 'App',
 
   components: {
-    // BreadCrumbs,
     BackToTop,
     Sidebar,
     NotificationContainer,
@@ -177,7 +173,6 @@ export default {
 
   computed: {
     breadcrumbs() {
-      // KRM TODO Remove last item from breadcrumbs as we don't need it.
       return this.$store.state.breadcrumbs
     },
   },
@@ -192,6 +187,7 @@ export default {
       this.window.width = window.innerWidth
       this.window.height = window.innerHeight
     },
+
   },
 
   watch: {

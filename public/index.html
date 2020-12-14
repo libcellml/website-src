@@ -19,13 +19,15 @@
       href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/styles/default.min.css"
     />
     <script>
-      ;(function() {
-        const redirect = sessionStorage.redirect
-        delete sessionStorage.redirect
-        if (redirect && redirect !== location.href) {
-          history.replaceState(null, null, redirect)
-        }
-      })()
+      // KRM remove this to allow the back button to be used on the 404 page?
+      // ;(function() {
+      //   const redirect = sessionStorage.redirect
+      //   delete sessionStorage.redirect
+      //   
+      //   if (redirect && redirect !== location.href) {
+      //     history.replaceState(null, null, redirect) 
+      //   }
+      // })()
     </script>
 <script
 type="text/javascript"
