@@ -89,7 +89,7 @@ const routes = [
 ]
 
 const skipPaths = [
-  // KRM Placeholder for views to skip in the breadcrumbs
+  // KRM views to skip in the breadcrumbs
 ]
 
 const skipTitles = [
@@ -157,25 +157,32 @@ router.beforeEach((to, from, next) => {
   } else if (
     to.name === 'APIReferencePage'
     || to.name === 'APIReference') {
-    let basePath = '/documentation/api/'
-    let path = to.path.replace(basePath, '')
+    // let basePath = '/documentation/api/'
+    // let path = to.path.replace(basePath, '')
+
+    let basePath = '/'
+    let path = to.path
+
     let pages = path.split('/')
     let lastLink = ''
 
     pages.forEach(page => {
       if (page) {
-        lastLink = lastLink + page + '/'
+        lastLink = lastLink + '/' + page 
 
         let bookmarkText = page
         skipTitles.forEach(title => {
           bookmarkText = bookmarkText.replaceAll(title, '')
         })
         bookmarkText.replaceAll('_', ' ')
+        let href = basePath + lastLink
+
+        href = href.replaceAll('//', '/')
 
         items.push({
           text: bookmarkText,
           disabled: false,
-          href: basePath + lastLink,
+          href: href,
         })
       }
     })
@@ -183,14 +190,18 @@ router.beforeEach((to, from, next) => {
 
   // KRM
   else if (to.name === 'TutorialsPage' || to.name === 'Tutorials') {
-    let basePath = '/documentation/tutorials/'
-    let path = to.path.replace(basePath, '')
+    // let basePath = '/documentation/tutorials/'
+    // let path = to.path.replace(basePath, '')
+
+    let basePath = '/'
+    let path = to.path
+
     let pages = path.split('/')
     let lastLink = ''
 
     pages.forEach(page => {
       if (page && page != "index") {
-        lastLink = lastLink + page + '/'
+        lastLink = lastLink + '/' + page 
         // Remove page items from the list if they're in directories that don't have an index file
         if (!skipPaths.includes(lastLink)) {
           items.push({
