@@ -1,39 +1,5 @@
 export default {
 
-  // KRM
-  // moveTabNames: function () {
-  //   let tabGroups = document.querySelectorAll('.container .tabs2')
-  //   tabGroups.forEach((group, groupIndex) => {
-  //     group.id = 'g' + groupIndex
-
-  //     if (!group.querySelector('.tab2menu')) {
-  //       let menu = document.createElement('div')
-  //       menu.classList.add('tab2menu')
-  //       menu.id = 'g' + groupIndex + 'menu'
-
-  //       let firstPanel = group.firstElementChild
-  //       firstPanel.insertAdjacentElement('beforebegin', menu)
-
-  //       group.querySelectorAll('.tab2').forEach((t, tabIndex) => {
-  //         t.id = 'g' + groupIndex + 't' + tabIndex + 'tab'
-
-  //         let tabName = t.querySelector('.tab2name')
-  //         tabName.id = 'g' + groupIndex + 't' + tabIndex
-
-  //         menu.appendChild(tabName)
-  //       })
-
-  //       let menuSpacer = document.createElement('div')
-  //       menuSpacer.classList.add('tab2spacer')
-
-  //       firstPanel.classList.add('active')
-  //       firstPanel.classList.remove('inactive')
-  //       menu.querySelector('#g' + groupIndex + 't0').classList.add('active')
-
-  //     }
-  //   })
-  // },
-
   addClickHandlerToggles: function () {
     // Event capture for the "toggle" class:
     let headers = document.querySelectorAll('header, .header-left')
