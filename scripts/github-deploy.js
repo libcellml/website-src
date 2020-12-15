@@ -5,12 +5,14 @@ const fs = require('fs')
   try {
     let targetGitBranch = 'main'
     let deployRepo = 'git@github.com:libcellml/libcellml.github.io.git'
+    let cname = 'www.libcellml.org'
     let readmeTitle =
       'Production version of libCellML website\n=======================================\n\n'
     if (process.argv[2] === 'staging') {
       console.log('Staging run.')
       targetGitBranch = 'gh-pages'
       deployRepo = 'git@github.com:libcellml/staging.git'
+      cname = 'staging.libcellml.org'
       readmeTitle =
         'Staging version of libCellML website\n====================================\n\n'
     } else {
@@ -30,6 +32,8 @@ const fs = require('fs')
     // Write out README.rst
     const content = `${readmeTitle}Do **not** make changes to this repository. It is generated from a source repository. See the source repository https://github.com/libcellml/website-src for instructions on how to build and deploy this website.`
     await fs.promises.writeFile(`${folderName}/README.rst`, content)
+    // Write out CNAME
+    await fs.promises.writeFile(`${folderName}/CNAME`, cname)
     await execa('git', ['--work-tree', folderName, 'add', '--all'])
     await execa('git', [
       '--work-tree',
