@@ -3,13 +3,13 @@ const fs = require('fs')
 
 ;(async () => {
   try {
-    let targetBranch = 'main'
+    let targetGitBranch = 'main'
     let deployRepo = 'git@github.com:libcellml/libcellml.github.io.git'
     let readmeTitle =
       'Production version of libCellML website\n=======================================\n\n'
     if (process.argv[2] === 'staging') {
       console.log('Staging run.')
-      targetBranch = 'gh-pages'
+      targetGitBranch = 'gh-pages'
       deployRepo = 'git@github.com:libcellml/staging.git'
       readmeTitle =
         'Staging version of libCellML website\n====================================\n\n'
@@ -17,39 +17,37 @@ const fs = require('fs')
       console.log('Production run.')
     }
 
-    const folderName = 'dist'
-    await execa('mkdir', [folderName])
-    await execa('echo', [
-      readmeTitle,
-      `Do **not** make changes to this repository. It is generated from a source repository. See the source repository https://github.com/libcellml/website-src for instructions on how to build and deploy this website.`,
-      '>>',
-      `${folderName}/README.rst`,
-    ])
-    process.exit(10)
-    const gitBranch = 'dist'
-    await execa('git', ['checkout', '--orphan', gitBranch])
+    const result = await execa('git', ['branch', '--show-current'])
+    const currentGitBranch = result.stdout
+
+    const workingGitBranch = 'dist'
+    await execa('git', ['checkout', '--orphan', workingGitBranch])
     await execa('git', ['remote', 'add', 'deploy', deployRepo])
     console.log('Building ...')
     await execa('npm', ['run', 'build'])
     // Understand if it's dist or build folder
     const folderName = fs.existsSync('dist') ? 'dist' : 'build'
     // Write out README.rst
-    await execa('echo', [
-      readmeTitle,
-      `Do **not** make changes to this repository. It is generated from a source repository. See the source repository https://github.com/libcellml/website-src for instructions on how to build and deploy this website.`,
-      '>>',
-      `${folderName}/README.rst`,
-    ])
+    const content = `${readmeTitle}Do **not** make changes to this repository. It is generated from a source repository. See the source repository https://github.com/libcellml/website-src for instructions on how to build and deploy this website.`
+    await fs.promises.writeFile(`${folderName}/README.rst`, content)
     await execa('git', ['--work-tree', folderName, 'add', '--all'])
-    await execa('git', ['--work-tree', folderName, 'commit', '-m', gitBranch])
+    await execa('git', [
+      '--work-tree',
+      folderName,
+      'commit',
+      '-m',
+      workingGitBranch,
+    ])
     console.log('Building ... success.')
-    console.log(`Pushing to deploy/${targetBranch} ...`)
-    await execa('git', ['push', 'deploy', `HEAD:${targetBranch}`, '--force'])
+    console.log(`Pushing to deploy/${targetGitBranch} ...`)
+    await execa('git', ['push', 'deploy', `HEAD:${targetGitBranch}`, '--force'])
+    console.log(`Pushing to deploy/${targetGitBranch} ... success.`)
+    console.log('Cleaning up ...')
     await execa('rm', ['-r', folderName])
-    await execa('git', ['checkout', '-f', 'main'])
-    await execa('git', ['branch', '-D', gitBranch])
+    await execa('git', ['checkout', '-f', currentGitBranch])
+    await execa('git', ['branch', '-D', workingGitBranch])
     await execa('git', ['remote', 'rm', 'deploy'])
-    console.log(`Pushing to deploy/${targetBranch} ... success.`)
+    console.log('Cleaning up ... success.')
     console.log('Successfully deployed!')
   } catch (e) {
     console.log(e.message)
