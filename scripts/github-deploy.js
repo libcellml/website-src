@@ -17,6 +17,15 @@ const fs = require('fs')
       console.log('Production run.')
     }
 
+    const folderName = 'dist'
+    await execa('mkdir', [folderName])
+    await execa('echo', [
+      readmeTitle,
+      `Do **not** make changes to this repository. It is generated from a source repository. See the source repository https://github.com/libcellml/website-src for instructions on how to build and deploy this website.`,
+      '>>',
+      `${folderName}/README.rst`,
+    ])
+    process.exit(10)
     const gitBranch = 'dist'
     await execa('git', ['checkout', '--orphan', gitBranch])
     await execa('git', ['remote', 'add', 'deploy', deployRepo])
@@ -27,9 +36,7 @@ const fs = require('fs')
     // Write out README.rst
     await execa('echo', [
       readmeTitle,
-      'Do **not** make changes to this repository.',
-      'It is generated from a source repository.',
-      'See the source repository https://github.com/libcellml/website-src for instructions on how to build and deploy this website.',
+      `Do **not** make changes to this repository. It is generated from a source repository. See the source repository https://github.com/libcellml/website-src for instructions on how to build and deploy this website.`,
       '>>',
       `${folderName}/README.rst`,
     ])
