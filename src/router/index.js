@@ -157,27 +157,21 @@ router.beforeEach((to, from, next) => {
   } else if (
     to.name === 'APIReferencePage'
     || to.name === 'APIReference') {
-    // let basePath = '/documentation/api/'
-    // let path = to.path.replace(basePath, '')
 
-    let basePath = '/'
     let path = to.path
-
     let pages = path.split('/')
-    let lastLink = ''
+    let lastLink = '/'
 
     pages.forEach(page => {
       if (page) {
-        lastLink = lastLink + '/' + page 
+        lastLink = lastLink + page + '/'
 
         let bookmarkText = page
         skipTitles.forEach(title => {
           bookmarkText = bookmarkText.replaceAll(title, '')
         })
         bookmarkText.replaceAll('_', ' ')
-        let href = basePath + lastLink
-
-        // href = href.replaceAll('//', '/')
+        let href = lastLink.slice(0,-1)
 
         items.push({
           text: bookmarkText,
@@ -190,16 +184,15 @@ router.beforeEach((to, from, next) => {
 
   // KRM
   else if (to.name === 'TutorialsPage' || to.name === 'Tutorials') {
-    // let basePath = '/documentation/tutorials/'
-    // let path = to.path.replace(basePath, '')
+
     let path = to.path
     let pages = path.split('/')
-    let lastLink = ''
+    let lastLink = '/'
 
     pages.forEach(page => {
       if (page && page != "index") {
-        lastLink = lastLink + '/' + page 
-        let href = lastLink + '/index'
+        lastLink = lastLink + page + '/'
+        let href = lastLink + 'index'
         // Remove page items from the list if they're in directories that don't have an index file
         if (!skipPaths.includes(lastLink)) {
           items.push({
