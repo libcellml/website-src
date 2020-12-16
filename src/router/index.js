@@ -158,25 +158,36 @@ router.beforeEach((to, from, next) => {
     to.name === 'APIReferencePage'
     || to.name === 'APIReference') {
 
-    let path = to.path
+    let lastLink = '/documentation/api'
+    let path = to.path.replaceAll(lastLink, '')
     let pages = path.split('/')
-    let lastLink = '/'
+
+    // Add hard links to the documentation pages for the root of the breadcrumbs
+    items.push({
+      text: 'Documentation',
+      disabled: false,
+      href: '/documentation'
+    })
+    items.push({
+      text: 'API',
+      disabled: false,
+      href: '/documentation/api'
+    })
 
     pages.forEach(page => {
       if (page) {
-        lastLink = lastLink + page + '/'
+        lastLink = lastLink + '/' + page
 
         let bookmarkText = page
         skipTitles.forEach(title => {
           bookmarkText = bookmarkText.replaceAll(title, '')
         })
         bookmarkText.replaceAll('_', ' ')
-        let href = lastLink.slice(0,-1)
 
         items.push({
           text: bookmarkText,
           disabled: false,
-          href: href,
+          href: lastLink,
         })
       }
     })
@@ -185,14 +196,26 @@ router.beforeEach((to, from, next) => {
   // KRM
   else if (to.name === 'TutorialsPage' || to.name === 'Tutorials') {
 
-    let path = to.path
+    let lastLink = '/documentation/tutorials'
+    let path = to.path.replaceAll(lastLink, '')
     let pages = path.split('/')
-    let lastLink = '/'
+
+    // Add hard links to the documentation pages for the root of the breadcrumbs
+    items.push({
+      text: 'Documentation',
+      disabled: false,
+      href: '/documentation'
+    })
+    items.push({
+      text: 'Tutorials',
+      disabled: false,
+      href: '/documentation/tutorials/'
+    })
 
     pages.forEach(page => {
       if (page && page != "index") {
-        lastLink = lastLink + page + '/'
-        let href = lastLink + 'index'
+        lastLink = lastLink + '/' + page
+        let href = lastLink + '/index'
         // Remove page items from the list if they're in directories that don't have an index file
         if (!skipPaths.includes(lastLink)) {
           items.push({
