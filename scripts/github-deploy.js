@@ -5,7 +5,7 @@ const fs = require('fs')
   try {
     let targetGitBranch = 'main'
     let deployRepo = 'git@github.com:libcellml/libcellml.github.io.git'
-    let cname = 'www.libcellml.org'
+    let cname = 'libcellml.org'
     let readmeTitle =
       'Production version of libCellML website\n=======================================\n\n'
     if (process.argv[2] === 'staging') {
