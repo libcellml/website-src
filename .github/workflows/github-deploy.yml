@@ -2,7 +2,8 @@ name: Deploy to github pages
 on:
   push:
     branches:
-      - [production, staging]
+      - production
+      - staging
 jobs:
   github-deploy:
     name: Deploying website
