@@ -19,7 +19,7 @@
     <sidebar app></sidebar>
     <!--    <BreadCrumbs />-->
     <!-- Sizes your content based upon application components -->
-    <v-content>
+    <v-main>
       <!--      <Sidebar/>-->
       <!-- Provides the application the proper gutter -->
       <v-breadcrumbs app :items="breadcrumbs" class="breadcrumbs">
@@ -44,7 +44,7 @@
           <router-view :key="$route.path" />
         </transition>
       </v-container>
-    </v-content>
+    </v-main>
     <NotificationContainer />
     <BackToTop />
     <v-footer app>
