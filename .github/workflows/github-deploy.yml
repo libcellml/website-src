@@ -2,21 +2,21 @@ name: Deploy to github pages
 on:
   push:
     branches:
-      - main
+      - [production, staging]
 jobs:
   github-deploy:
-    name: Deploying to github.io
+    name: Deploying website
     runs-on: ubuntu-latest
     steps:
       - name: Setup Node.js for use with actions
-        uses: actions/setup-node@v1.1.0
+        uses: actions/setup-node@v1.4.4
         with:
-          version:  12.x
+          version: 12.x
 
       - name: Checkout branch
         uses: actions/checkout@v2
 
-      - name: Setup access to libcellml.github.io
+      - name: Setup access to libcellml organisation
         run: |
           mkdir ~/.ssh
           echo "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/libcellml_deploy_rsa
@@ -28,7 +28,14 @@ jobs:
       - name: Clean install dependencies
         run: npm ci
 
-      - name: Run deploy script
+      - name: Run production deploy script
+        if: github.ref == 'refs/heads/production'
         run: |
           git config user.name hsorby && git config user.email h.sorby@auckland.ac.nz
           npm run github-deploy
+
+      - name: Run staging deploy script
+        if: github.ref == 'refs/heads/staging'
+        run: |
+          git config user.name hsorby && git config user.email h.sorby@auckland.ac.nz
+          npm run github-deploy -- staging
