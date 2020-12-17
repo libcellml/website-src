@@ -2,47 +2,21 @@
   <v-container>
     <v-row>
       <v-col>
-        <h1>Documentation</h1>
-        <router-link :to="{ path: 'help/api' }"
-          ><h2 id="api_reference">API Reference</h2></router-link
-        >
-        <ul>
-          <li
-            v-for="(version, index) in apiVersions"
-            :key="'api_reference_' + index"
-          >
-            <router-link :to="{ path: `help/api/${version}` }">
-              <big>libCellML {{ version }} API Documentation</big>
-            </router-link>
-          </li>
-        </ul>
-        <router-link :to="{ path: 'help/tutorials' }"
-          ><h2 id="tutorials">Tutorials</h2></router-link
-        >
-        <ul>
-          <li
-            v-for="(version, index) in tutorialVersions"
-            :key="'api_reference_' + index"
-          >
-            <router-link :to="{ path: `help/tutorials/${version}` }">
-              <big>libCellML {{ version }} Tutorials</big>
-            </router-link>
-          </li>
-        </ul>
+        <DocumentationContent />
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
-// import Documentation from '@/components/Documentation.vue'
+import DocumentationContent from '@/components/DocumentationContent.vue'
 import { getDoxygenVersions, getSphinxVersions } from '@/js/versions'
 
 export default {
   name: 'DocumentationPage',
-  // components: {
-  //   Documentation,
-  // },
+  components: {
+    DocumentationContent,
+  },
   data: () => {
     return { apiVersions: [], tutorialVersions: [] }
   },
@@ -52,3 +26,8 @@ export default {
   },
 }
 </script>
+<style scoped>
+ul > li {
+  list-style-type: none;
+}
+</style>
