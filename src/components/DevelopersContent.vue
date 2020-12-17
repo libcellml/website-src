@@ -3,6 +3,7 @@
     <v-row>
       <v-col>
         <h1>Developers</h1>
+        <p>TODO: Information for developers goes here :) </p>
       </v-col>
     </v-row>
   </v-container>
@@ -10,7 +11,7 @@
 
 <script>
 export default {
-  name: 'Developers',
+  name: 'DevelopersContent',
 
   data: () => ({}),
 }

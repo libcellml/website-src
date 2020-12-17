@@ -6,16 +6,27 @@
 
 :root {
     --bright-red: #bd4147;
+    --mid-red: #862e32;
     --deep-red: #4e0202;
     --text-colour: #444444;
     --link-colour: #888888;
-    --terminal-color: #dddddd;
+    --pale-grey:#dddddd;
+
+
+    --terminal-colour: var(--pale-grey);
 }
 
 /* Make max width for page content. */
 #pageContent {
     max-width: 900px;
     float: left;
+}
+
+h1 {
+    color: var(--mid-red);
+    margin-bottom: 0.5em;
+    border-bottom: solid 1px var(--terminal-colour);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .v-application {
