@@ -49,12 +49,14 @@
     <BackToTop />
     <v-footer app>
       <v-row justify="center" no-gutters>
-        <v-col/>
-        <v-col class="text-center" >
-            <p id="footer-copyright">Copyright &#169; 2020 libCellML</p>
-       </v-col>
+        <v-col />
+        <v-col class="text-center">
+          <p id="footer-copyright">Copyright &#169; 2020 libCellML</p>
+        </v-col>
         <v-col class="text-right">
-          <p id="footer-ack"><router-link to="about">Acknowledgements</router-link></p>
+          <p id="footer-ack">
+            <router-link to="about">Acknowledgements</router-link>
+          </p>
         </v-col>
       </v-row>
     </v-footer>
@@ -62,58 +64,6 @@
 </template>
 
 <script>
-// <div id="app">
-//   <v-app id="inspire">
-//     <v-navigation-drawer
-//       fixed
-//       v-model="drawer"
-//       app
-//     >
-//       <v-list dense>
-//         <v-list-tile @click="">
-//           <v-list-tile-action>
-//             <v-icon>home</v-icon>
-//           </v-list-tile-action>
-//           <v-list-tile-content>
-//             <v-list-tile-title>Home</v-list-tile-title>
-//           </v-list-tile-content>
-//         </v-list-tile>
-//         <v-list-tile @click="">
-//           <v-list-tile-action>
-//             <v-icon>contact_mail</v-icon>
-//           </v-list-tile-action>
-//           <v-list-tile-content>
-//             <v-list-tile-title>Contact</v-list-tile-title>
-//           </v-list-tile-content>
-//         </v-list-tile>
-//       </v-list>
-//     </v-navigation-drawer>
-//     <v-toolbar color="indigo" dark fixed app>
-//       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-//       <v-toolbar-title>Application</v-toolbar-title>
-//     </v-toolbar>
-//     <v-content>
-//       <v-container fluid fill-height>
-//         <v-layout
-//           justify-center
-//           align-center
-//         >
-//           <v-flex text-xs-center>
-//             <v-tooltip left>
-//               <v-btn icon large :href="source" target="_blank" slot="activator">
-//                 <v-icon large>code</v-icon>
-//               </v-btn>
-//               <span>Source</span>
-//             </v-tooltip>
-//           </v-flex>
-//         </v-layout>
-//       </v-container>
-//     </v-content>
-//     <v-footer color="indigo" app inset>
-//       <span class="white--text">&copy; 2017</span>
-//     </v-footer>
-//   </v-app>
-// </div>
 import BackToTop from '@/components/BackToTop'
 import Sidebar from '@/components/Sidebar'
 import NotificationContainer from '@/components/NotificationContainer'
@@ -138,8 +88,7 @@ export default {
     window.removeEventListener('resize', this.handleResize)
   },
 
-  mounted() {
-  },
+  mounted() {},
 
   data: () => ({
     pageChange: false,
@@ -150,19 +99,19 @@ export default {
       },
       {
         label: 'Download',
-        url: '/download',
+        url: '/#download',
       },
       {
         label: 'Documentation',
-        url: '/documentation',
+        url: '/#documentation',
       },
       {
         label: 'Developers',
-        url: '/developers',
+        url: '/#developers',
       },
       {
         label: 'About',
-        url: '/about',
+        url: '/#about',
       },
     ],
     window: {
@@ -181,13 +130,10 @@ export default {
     onSidebarOpen() {
       this.$store.commit('setSidebarOpen', !this.$store.getters.getSidebarOpen)
     },
-
-    // KRM
     handleResize() {
       this.window.width = window.innerWidth
       this.window.height = window.innerHeight
     },
-
   },
 
   watch: {

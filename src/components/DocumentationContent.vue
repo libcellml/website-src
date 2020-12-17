@@ -10,7 +10,7 @@
             :key="'api_reference_' + index"
           >
             <router-link :to="{ path: `documentation/api/${version}` }">
-              <big>libCellML {{ version }} API Documentation</big>
+              libCellML {{ version }} API Documentation
             </router-link>
           </li>
         </ul>
@@ -21,7 +21,7 @@
             :key="'api_reference_' + index"
           >
             <router-link :to="{ path: `documentation/tutorials/${version}` }">
-              <big>libCellML {{ version }} Tutorials</big>
+              libCellML {{ version }} Tutorials
             </router-link>
           </li>
         </ul>
@@ -34,7 +34,7 @@
 import { getDoxygenVersions, getSphinxVersions } from '@/js/versions'
 
 export default {
-  name: 'Documentation',
+  name: 'DocumentationContent',
 
   data: () => {
     return { apiVersions: [], tutorialVersions: [] }
