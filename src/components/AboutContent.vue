@@ -85,7 +85,7 @@
 
 <script>
 export default {
-  name: 'AboutInfo',
+  name: 'AboutContent',
 }
 </script>
 
