@@ -3,11 +3,7 @@
     <v-container>
       <v-row>
         <v-col>
-          <div class="version-box">
-            <version-combo-box
-              :versions="availableVersions"
-            ></version-combo-box>
-          </div>
+          <BreadCrumbs />
           <doxygen-xml
             :baseURL="`/data/doxygen/${$route.params.version}`"
             @updated="updated"
@@ -20,19 +16,13 @@
 
 <script>
 import { DoxygenXml } from 'vue-doxygen-xml'
-import VersionComboBox from '@/components/VersionComboBox'
-import { getDoxygenVersions } from '@/js/versions'
+import BreadCrumbs from '@/components/BreadCrumbs'
 
 export default {
   name: 'APIPage',
   components: {
     DoxygenXml,
-    VersionComboBox,
-  },
-  computed: {
-    availableVersions() {
-      return getDoxygenVersions()
-    },
+    BreadCrumbs,
   },
   methods: {
     updated() {

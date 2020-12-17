@@ -1,7 +1,10 @@
 <template>
+
   <v-container>
     <v-row>
       <v-col>
+        <BreadCrumbs />
+        
         <h1>API Reference</h1>
         <ul>
           <li
@@ -21,8 +24,13 @@
 <script>
 import { getDoxygenVersions } from '@/js/versions'
 
+import BreadCrumbs from '../components/BreadCrumbs'
+
 export default {
   name: 'HelpAPI',
+  components: {
+    BreadCrumbs,
+  },
   data: () => {
     return { apiVersions: [] }
   },

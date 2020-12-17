@@ -32,6 +32,9 @@ export default new Vuex.Store({
     },
     getLastURL: state => {
       return state.lastURL[1]
+    },
+    getBreadcrumbs: state => {
+      return state.breadcrumbs
     }
   },
   mutations: {
