@@ -1,20 +1,39 @@
 <template>
-  <div>
-    <basic-select
-      class="version-combo-box"
-      :options="versions"
-      :value="version"
-      @input="setSelected"
-    ></basic-select
-    ><template v-if="!latest"
-      ><span class="version-warning"
-        >This documents an old version of libCellML.
-        <router-link :to="latestFullPath"
-          >Click here to see the latest release</router-link
-        >. Or, select a version from the drop-down menu to the left.</span
-      ></template
-    >
-  </div>
+  <v-container class="version-container" fill-height fluid>
+    <v-row class="version-row" align="center" justify="start">
+      <v-col
+        align="left"
+        justify="left"
+        xs="4"
+        sm="2"
+        class="version-select-col"
+      >
+        <basic-select
+          class="version-combo-box"
+          :options="versions"
+          :value="version"
+          @input="setSelected"
+        ></basic-select>
+      </v-col>
+      <template v-if="!latest">
+        <v-col
+          align="left"
+          justify="center"
+          xs="8"
+          sm="10"
+          class="version-warning-col"
+        >
+          <span class="version-warning"
+            >This is not the latest documentation.
+            <router-link :to="latestFullPath">
+              Click here to see the latest release
+            </router-link>
+            or use the version selector on the left.
+          </span>
+        </v-col>
+      </template>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
@@ -80,11 +99,15 @@ export default {
 </script>
 
 <style>
-.version-combo-box {
-  display: inline-flex;
-}
-.version-warning {
-  margin-left: 1em;
+/* .version-row {
+  align: center;
+  justify: center;
+} */
+
+.version-warning-col {
+  margin: 0;
+  align-items: center;
+  padding: 5px 0px 5px 10px;
   background-color: lightgoldenrodyellow;
 }
 </style>

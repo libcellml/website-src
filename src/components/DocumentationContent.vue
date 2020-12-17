@@ -1,0 +1,47 @@
+<template>
+  <v-container>
+    <v-row>
+      <v-col>
+        <h1>Documentation</h1>
+        <h2 id="api_reference">API Reference</h2>
+        <ul>
+          <li
+            v-for="(version, index) in apiVersions"
+            :key="'api_reference_' + index"
+          >
+            <router-link :to="{ path: `documentation/api/${version}` }">
+              libCellML {{ version }} API Documentation
+            </router-link>
+          </li>
+        </ul>
+        <h2 id="tutorials">Tutorials</h2>
+        <ul>
+          <li
+            v-for="(version, index) in tutorialVersions"
+            :key="'api_reference_' + index"
+          >
+            <router-link :to="{ path: `documentation/tutorials/${version}` }">
+              libCellML {{ version }} Tutorials
+            </router-link>
+          </li>
+        </ul>
+      </v-col>
+    </v-row>
+  </v-container>
+</template>
+
+<script>
+import { getDoxygenVersions, getSphinxVersions } from '@/js/versions'
+
+export default {
+  name: 'DocumentationContent',
+
+  data: () => {
+    return { apiVersions: [], tutorialVersions: [] }
+  },
+  created() {
+    this.apiVersions = getDoxygenVersions()
+    this.tutorialVersions = getSphinxVersions()
+  },
+}
+</script>

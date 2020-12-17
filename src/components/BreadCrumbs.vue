@@ -1,42 +1,31 @@
 <template>
   <div class="breadcrumbs" id="breadcrumbs">
-    <v-breadcrumbs :items="items">
-      <template v-slot:divider>
-        <v-icon>mdi-forward</v-icon>
-      </template>
-    </v-breadcrumbs>
-
-    <v-breadcrumbs :items="items">
-      <template v-slot:divider>
-        <v-icon>mdi-chevron-right</v-icon>
-      </template>
-    </v-breadcrumbs>
+    <v-container>
+      <v-row>
+        <v-breadcrumbs :items="breadcrumbs">
+          <template v-slot:divider>
+            <v-icon>mdi-chevron-right</v-icon>
+          </template>
+        </v-breadcrumbs>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'BreadCrumbs',
   data: () => ({
-    items: [
-      {
-        text: 'Dashboard',
-        disabled: false,
-        href: 'breadcrumbs_dashboard',
-      },
-      {
-        text: 'Link 1',
-        disabled: false,
-        href: 'breadcrumbs_link_1',
-      },
-      {
-        text: 'Link 2',
-        disabled: true,
-        href: 'breadcrumbs_link_2',
-      },
-    ],
+    items: [],
   }),
+  computed: {
+    breadcrumbs() {
+      return this.$store.state.breadcrumbs
+    },
+  },
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>
