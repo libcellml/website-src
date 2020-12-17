@@ -45,7 +45,7 @@ export function calculateBreadcrumbs(to) {
         items.push({
             text: 'Documentation',
             disabled: false,
-            href: '/documentation'
+            href: '/#documentation'
         })
         items.push({
             text: 'API',
@@ -83,7 +83,7 @@ export function calculateBreadcrumbs(to) {
         items.push({
             text: 'Documentation',
             disabled: false,
-            href: '/documentation'
+            href: '/#documentation'
         })
         items.push({
             text: 'Tutorials',

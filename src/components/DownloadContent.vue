@@ -21,6 +21,8 @@
               <v-btn outlined disabled>Javascript bytecode</v-btn>
             </v-col>
           </v-row>
+
+          <p>TODO: Need to write about dependencies and latest versions here too. </p>
         </div>
       </v-col>
     </v-row>
