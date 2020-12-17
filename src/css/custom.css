@@ -135,6 +135,11 @@ section {
     text-transform: uppercase;
 }
 
+.breadcrumbs * {
+    margin: 0;
+    padding: 0;
+}
+
 .v-breadcrumbs {
     padding: 0 10px 0 0;
 }
