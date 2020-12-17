@@ -132,6 +132,7 @@ router.beforeEach((to, from, next) => {
 router.afterEach((to, from) => {
   if (to.name !== from.name) {
     store.commit('togglePageContentChanged')
+
   }
 })
 

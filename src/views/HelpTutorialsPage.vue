@@ -3,11 +3,7 @@
     <v-container>
       <v-row>
         <v-col>
-          <div class="version-box">
-            <version-combo-box
-              :versions="availableVersions"
-            ></version-combo-box>
-          </div>
+          <BreadCrumbs />
           <sphinx-page
             :baseURL="`/data/sphinx/${$route.params.version}`"
             indexFileName="index"
@@ -21,9 +17,7 @@
 
 <script>
 import { SphinxPage } from 'vue-sphinx-xml'
-import VersionComboBox from '@/components/VersionComboBox'
-
-import { getSphinxVersions } from '@/js/versions'
+import BreadCrumbs from '@/components/BreadCrumbs'
 
 import ui from '@/js/ui'
 
@@ -31,13 +25,7 @@ export default {
   name: 'TutorialsPage',
   components: {
     SphinxPage,
-    VersionComboBox,
-  },
-
-  computed: {
-    availableVersions() {
-      return getSphinxVersions()
-    },
+    BreadCrumbs,
   },
 
   methods: {
@@ -45,6 +33,7 @@ export default {
       this.$store.commit('togglePageContentChanged')
 
       // KRM include these on any page where the injected XML might contain tabs or toggle blocks.
+      // Workaround only until sphinx tabs and toggles cann be handled outside the browser properly.
       setTimeout(function () {
         ui.processSphinxTabs()
         ui.addClickHandlerTabs()
