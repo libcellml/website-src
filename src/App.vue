@@ -15,30 +15,30 @@
         </v-col>
       </v-row>
     </v-app-bar>
-
+    <!--      <Sidebar/>-->
+    <!-- Provides the application the proper gutter -->
     <sidebar app></sidebar>
-    <!--    <BreadCrumbs />-->
+
     <!-- Sizes your content based upon application components -->
     <v-main>
-      <!--      <Sidebar/>-->
-      <!-- Provides the application the proper gutter -->
-      <v-breadcrumbs app :items="breadcrumbs" class="breadcrumbs">
-        <template v-slot:divider>
-          <v-icon>mdi-chevron-right</v-icon>
-        </template>
-        <template v-slot:item="{ item }">
-          <v-breadcrumbs-item :href="item.href" :disabled="item.disabled">
-            <template v-if="item.text === 'home'">
-              <v-icon size="1.5em">mdi-home</v-icon>
-            </template>
-            <template v-else>
-              {{ item.text.toUpperCase() }}
-            </template>
-          </v-breadcrumbs-item>
-        </template>
-      </v-breadcrumbs>
-
       <v-container fluid id="pageContent">
+        <!--    <BreadCrumbs />-->
+        <v-breadcrumbs app :items="breadcrumbs" class="breadcrumbs">
+          <template v-slot:divider>
+            <v-icon>mdi-chevron-right</v-icon>
+          </template>
+          <template v-slot:item="{ item }">
+            <v-breadcrumbs-item :href="item.href" :disabled="item.disabled">
+              <template v-if="item.text === 'home'">
+                <v-icon size="1.5em">mdi-home</v-icon>
+              </template>
+              <template v-else>
+                {{ item.text.toUpperCase() }}
+              </template>
+            </v-breadcrumbs-item>
+          </template>
+        </v-breadcrumbs>
+
         <!-- If using vue-router -->
         <transition name="slide" mode="out-in">
           <router-view :key="$route.path" />

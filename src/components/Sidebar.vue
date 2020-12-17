@@ -69,19 +69,19 @@ export default {
         },
         {
           label: 'Download',
-          url: '/download',
+          url: '/#download',
         },
         {
           label: 'Documentation',
-          url: '/documentation',
+          url: '/#documentation',
         },
         {
           label: 'Developers',
-          url: '/developers',
+          url: '/#developers',
         },
         {
           label: 'About',
-          url: '/about',
+          url: '/#about',
         },
       ],
     }
