@@ -13,7 +13,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'BreadCrumbs',
   data: () => ({
@@ -26,6 +25,4 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-</style>
+<style scoped></style>
