@@ -122,7 +122,6 @@ const createRouter = () => {
 const router = createRouter()
 
 router.beforeEach((to, from, next) => {
-
   store.commit('setBreadcrumbs', calculateBreadcrumbs(to))
   store.commit('updateLastURL', to.path)
 
@@ -132,7 +131,6 @@ router.beforeEach((to, from, next) => {
 router.afterEach((to, from) => {
   if (to.name !== from.name) {
     store.commit('togglePageContentChanged')
-
   }
 })
 
