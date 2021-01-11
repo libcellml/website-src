@@ -16,6 +16,7 @@ export function calculateBreadcrumbs(to) {
       text: 'home',
       disabled: false,
       href: '/',
+      type: 'block'
     },
   ]
   if (to.name === 'Home') {
@@ -31,8 +32,10 @@ export function calculateBreadcrumbs(to) {
       text: to.name,
       disabled: true,
       href: to.path,
+      type: 'block'
     })
-  } else if (to.name === 'APIReferencePage' || to.name === 'APIReference') {
+  }
+  else if (to.name === 'APIReferencePage') {
     let lastLink = '/documentation/api'
     let path = to.path.replaceAll(lastLink, '')
     let pages = path.split('/')
@@ -42,12 +45,23 @@ export function calculateBreadcrumbs(to) {
       text: 'Documentation',
       disabled: false,
       href: '/#documentation',
+      type: 'block'
     })
     items.push({
       text: 'API',
       disabled: false,
       href: '/documentation/api',
+      type: 'block'
     })
+    // This takes care of versioning.
+    items.push({
+      text: pages[0],
+      disabled: false,
+      href: '',
+      type: 'versions'
+    })
+
+    pages = pages.slice(2)
 
     pages.forEach(page => {
       if (page) {
@@ -79,12 +93,25 @@ export function calculateBreadcrumbs(to) {
       text: 'Documentation',
       disabled: false,
       href: '/#documentation',
+      type: 'block'
     })
     items.push({
       text: 'Tutorials',
       disabled: false,
       href: '/documentation/tutorials/',
+      type: 'block'
     })
+
+    // This takes care of versioning.
+    items.push({
+      text: pages[0],
+      disabled: false,
+      href: '',
+      type: 'versions'
+    })
+
+    pages = pages.slice(2)
+
 
     pages.forEach(page => {
       if (page && page != 'index') {

@@ -3,7 +3,9 @@
     <v-container>
       <v-row>
         <v-col>
-          <BreadCrumbs />
+          <BreadCrumbs v-bind:versionChoices="getVersions()" 
+          :currentVersion="`${$route.params.version}`" 
+          :versionType="'tutorials'" />
           <sphinx-page
             :baseURL="`/data/sphinx/${$route.params.version}`"
             indexFileName="index"
@@ -18,6 +20,7 @@
 <script>
 import { SphinxPage } from 'vue-sphinx-xml'
 import BreadCrumbs from '@/components/BreadCrumbs'
+import { getSphinxVersions } from '../js/versions'
 
 import ui from '@/js/ui'
 
@@ -29,6 +32,9 @@ export default {
   },
 
   methods: {
+    getVersions() {
+      return getSphinxVersions()
+    },
     updated() {
       this.$store.commit('togglePageContentChanged')
 
