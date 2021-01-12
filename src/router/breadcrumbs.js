@@ -61,7 +61,7 @@ export function calculateBreadcrumbs(to) {
       href: '',
       type: 'versions',
     })
-
+    lastLink = lastLink + '/' + pages[1]
     pages = pages.slice(2)
     pages.forEach(page => {
       if (page) {
@@ -111,8 +111,9 @@ export function calculateBreadcrumbs(to) {
       type: 'versions',
     })
 
-    pages = pages.slice(2)
+    lastLink = lastLink + '/' + pages[1]
 
+    pages = pages.slice(2)
     pages.forEach(page => {
       if (page && page != 'index') {
         lastLink = lastLink + '/' + page
