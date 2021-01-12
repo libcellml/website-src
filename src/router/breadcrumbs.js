@@ -16,9 +16,10 @@ export function calculateBreadcrumbs(to) {
       text: 'home',
       disabled: false,
       href: '/',
-      type: 'block'
+      type: 'block',
     },
   ]
+
   if (to.name === 'Home') {
     items[0].disabled = true
   } else if (
@@ -32,7 +33,7 @@ export function calculateBreadcrumbs(to) {
       text: to.name,
       disabled: true,
       href: to.path,
-      type: 'block'
+      type: 'block',
     })
   }
   else if (to.name === 'APIReferencePage') {
@@ -45,24 +46,23 @@ export function calculateBreadcrumbs(to) {
       text: 'Documentation',
       disabled: false,
       href: '/#documentation',
-      type: 'block'
+      type: 'block',
     })
     items.push({
       text: 'API',
       disabled: false,
-      href: '/documentation/api',
-      type: 'block'
+      href: '/documentation/api/' + pages[1],
+      type: 'block',
     })
     // This takes care of versioning.
     items.push({
-      text: pages[0],
+      text: pages[1],
       disabled: false,
       href: '',
-      type: 'versions'
+      type: 'versions',
     })
 
     pages = pages.slice(2)
-
     pages.forEach(page => {
       if (page) {
         lastLink = lastLink + '/' + page
@@ -81,8 +81,6 @@ export function calculateBreadcrumbs(to) {
       }
     })
   }
-
-  // KRM
   else if (to.name === 'TutorialsPage' || to.name === 'Tutorials') {
     let lastLink = '/documentation/tutorials'
     let path = to.path.replaceAll(lastLink, '')
@@ -93,25 +91,27 @@ export function calculateBreadcrumbs(to) {
       text: 'Documentation',
       disabled: false,
       href: '/#documentation',
-      type: 'block'
+      type: 'block',
     })
+    // The aim of this link is to direct the user to whatever version of the intro page that
+    // they're currently seeing.
     items.push({
       text: 'Tutorials',
       disabled: false,
-      href: '/documentation/tutorials/',
-      type: 'block'
+      href: '/documentation/tutorials/' + pages[1],
+      type: 'block',
     })
 
-    // This takes care of versioning.
+    // This takes care of versioning: the 'versions' type will make a dropdown menu from
+    // the breadcrumbs (cf. the 'block' type elsewhere).
     items.push({
-      text: pages[0],
+      text: pages[1],
       disabled: false,
       href: '',
-      type: 'versions'
+      type: 'versions',
     })
 
     pages = pages.slice(2)
-
 
     pages.forEach(page => {
       if (page && page != 'index') {

@@ -42,14 +42,20 @@ export default {
     VersionDropdown,
   },
   props: {
-    currentVersion: String,
+    currentVersion: {
+      type: String,
+      default: '',
+    },
     versionChoices: {
       type: Array,
       default: () => {
         return []
       },
     },
-    versionType: String,
+    versionType: {
+      type: String,
+      default: '',
+    },
   },
   data: () => ({
     items: [],
