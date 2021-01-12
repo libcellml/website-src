@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row id="breadcrumb-dropdown">
-      <v-col @click="expandDropdown"
+      <v-col @click="expandDropdown" class="breadcrumb-dropdown"
         >{{ currentVersion }}
       </v-col>
     </v-row>
@@ -9,6 +9,7 @@
       <router-link
         v-for="(version, index) in versionChoices"
         :key="'version_index_' + index"
+        :id="'version_' + version"
         :to="{ path: `/documentation/${versionType}/${version}` }"
       >
         {{ version }}
@@ -27,7 +28,7 @@ export default {
   props: {
     currentVersion: {
       type: String,
-      default: 'latest',
+      default: '',
     },
     versionChoices: {
       type: Array,
@@ -40,6 +41,7 @@ export default {
       default: '',
     },
   },
+
   methods: {
     expandDropdown() {
       let menu = document.getElementById('breadcrumb-dropdown')
@@ -49,7 +51,6 @@ export default {
           menu.nextSibling.classList = ['hide-options']
         }
       })
-
       this.$el.lastElementChild.classList = ['show-options']
     },
   },
@@ -59,6 +60,7 @@ export default {
 <style>
 .breadcrumb-dropdown {
   position: relative;
+  color: var(--link-colour);
 }
 
 .hide-options {
