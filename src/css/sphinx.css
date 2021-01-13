@@ -1,0 +1,273 @@
+/* 
+ Styles to be used on pages generated from Sphinx.
+*/
+@import "./general.css";
+
+/* Extra padding under the breadcrumbs for the sphinx pages.*/
+#breadcrumbs {
+    padding-bottom: 5px;
+}
+
+.v-application a {
+    color: var(--link-colour) !important;
+    text-decoration: none;
+    font-weight:500;
+}
+
+.v-application a:hover {
+    color: var(--bright-red) !important;
+}
+
+pre {
+    background-color: var(--very-pale-grey);
+}
+
+pre > code.plaintext {
+    padding: 10px;
+}
+
+/* Inline literal code blocks in the Sphinx-based files. */
+.theme--light.v-application code.code {
+    background:none;
+    font-size: 95%;
+}
+
+.v-application code::before, .v-application code::after {
+    display:none;
+}
+
+code.plaintext {
+    background-color: var(--terminal-color);
+    color: var(--text-color);
+    overflow: scroll;
+    border-radius: 3px;
+    width: 100%;
+}
+
+code.xref {
+    font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+    color: var(--deep-red);
+    font-weight: 500;
+}
+
+
+/* Shortlist class. */
+.shortlist > ul > li > p {
+    margin-bottom: 2px;
+}
+
+/* Formatting from the tutorials readthedocs site. */
+.dothis {
+    padding: .1rem 1.5rem;
+    border-left-width: .5rem;
+    border-left-style: solid;
+    margin: 1rem 0;
+
+    background-color:#fbfff6;
+    border-color: rgb(80, 121, 0);
+    color: #22440b;
+    font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+}
+
+.dothis > p {
+    margin-bottom: 0;
+}
+
+.useful {
+    padding: .5rem 1.5rem;
+    border-left-width: .5rem;
+    border-left-style: solid;
+    margin: 1rem 0;
+
+    background-color:#f3f5f7;
+    border-color: #1f76be;
+    color: #0f3555;
+
+    font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+}
+
+.useful > p {
+    margin-bottom: 0;
+}
+
+.useful > p > a {
+    color: #1f76be;
+    font-weight: 700;
+}
+
+.useful > ul > li > p {
+    margin-bottom: 2px;
+}
+
+.nb {
+
+    padding: .1rem 1.5rem;
+    border-left-width: .5rem;
+    border-left-style: solid;
+    margin: 1rem 0;
+
+    background-color: rgba(255,229,100,.3);
+    border-color: #e7c000;
+    color: #6b5900;
+
+/*     
+    border-left: 5px solid sandybrown;
+    background:rgb(255, 243, 206); */
+    /* padding: 3px 3px 5px 8px;
+    margin-top:20px;
+    margin-bottom:20px; */
+    line-height: 24px;
+    font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+}
+
+.nb > p, ul, ol, dl {
+    margin-bottom:0;
+    padding: 5px;
+}
+
+/* Toggles for showing/hiding code. */
+.toggle {
+    margin: 5px 0 5px 0;
+    /* border-left: solid #e6d1d1 5px; */
+    /* border: solid #dadada 1px;
+    background-color: #dadada;
+    border-radius: 5px; */
+    padding: 8px;
+}
+
+.toggle > * {
+    display: none;
+    padding: 0;
+} 
+
+.toggle .header, .toggle .header-left {
+    display: block;
+    clear: both;
+    color: var(--text-colour);
+}
+
+.toggle .header {
+    text-align: right;
+}
+
+.toggle .header-left {
+    text-align: left;
+}
+
+.toggle > pre {
+    /* background-color: var(--terminal-colour); */
+    padding-top: 10px;
+}
+
+.toggle .header.active p, .toggle .header-left.active p {
+    font-weight: 700;
+    color: var(--bright-red);
+    margin-bottom:3px;
+}
+
+.toggle .header.active p::after,
+.toggle .header-left.active p::after {
+    content: " -"
+}
+
+.toggle .header.inactive p,
+.toggle .header-left.inactive p  {
+    font-weight: 500;
+    color: var(--link-colour);
+    margin-bottom:0;
+}
+
+.toggle .header.inactive p::after,
+.toggle .header-left.inactive p::after {
+    content: " +"
+}
+
+.tab2menu {
+    position: relative;
+    height: 45px;
+    border-bottom: solid var(--border-colour) 1px;
+}
+
+.tab2spacer {
+    display: block;
+}
+
+.tab2name {
+    float: left;
+    width: auto;
+    height: 20px;
+    color: var(--text-colour);
+    border: solid var(--border-colour) 1px;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 45px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.tab2name.active {
+    background-color: white;
+    font-weight: 700;
+    color: var(--bright-red);
+    border-bottom: solid white 3px;
+}
+
+.tab2name.inactive {
+    font-weight: 400;
+    color: var(--text-colour);
+    border-bottom: solid var(--border-colour) 1px;
+}
+
+.tab2 * {
+    overflow: scroll;
+}
+
+.tab2 .active > .tab2name {
+    font-weight: 700;
+    color: var(--bright-red);
+}
+
+.tab2 .inactive > .tab2name {
+    font-weight: 400;
+    color: var(--text-colour);
+}
+
+.tab2.active {
+    display: inline-block;
+    border-left: var(--border-colour) solid 1px;
+    /* border-top: none; */
+    margin-bottom: 10px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+}
+
+.tab2.inactive {
+    display: none;
+}
+
+.active > pre > code {
+    padding: 10px;
+    padding-right: 0;
+}
+
+/* Turns off old divs that have been emptied with JS */
+.code-tab {
+    display: none;
+}
+
+/* TODO collapse nicely ... */
+.infospec {
+    /* border-top: 1px solid #b9c6dd; */
+    background: #e1eaf0;
+    color: var(--text-colour);
+    padding: 10px;
+
+    margin-top: 0;
+    margin-bottom: 15px;
+    margin-left: 0;
+    margin-right: 0;
+
+    line-height: 24px;
+    font-family: "fakt-web", "Lato", "proxima-nova", "Helvetica Neue", "Arial", sans-serif;
+}

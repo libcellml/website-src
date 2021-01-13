@@ -1,0 +1,109 @@
+/* 
+ General styles for the whole site.
+*/
+
+:root {
+    --bright-red: #bd4147;
+    --mid-red: #862e32;
+    --deep-red: #4e0202;
+    --text-colour: #333333;
+    --link-colour: #666666;
+    --pale-grey:#dddddd;
+    --very-pale-grey: #efefef;
+    --warning-background: rgb(251, 239, 239);
+    --warning-text: var(--deep-red);
+
+    --terminal-colour: var(--pale-grey) !important;
+    --border-colour: var(--pale-grey);
+    --code-colour: var(--mid-red);
+}
+
+/* Make max width for page content. */
+#pageContent {
+    max-width: 900px;
+    float: left;
+    padding-top: 0;
+}
+
+h1 {
+    color: var(--mid-red);
+    margin-bottom: 0.5em;
+    border-bottom: solid 1px var(--terminal-colour);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.v-application {
+    font-family: "Lato", "proxima-nova", "Helvetica Neue", "Arial", sans-serif;
+}
+
+/* Turn off the Contents blocks on pages as they're in the sidebar. */
+.topic.contents {
+    display: none;
+}
+
+/* Move breadcrumbs down a little ... */
+.breadcrumbs {
+    margin-top: 0.3rem;
+    white-space: nowrap;
+    display: block;
+    direction: rtl; /* This is so that it will collapse from the left on small screens */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* text-transform: uppercase; */
+}
+
+.breadcrumbs * {
+    margin: 0;
+    padding: 0;
+}
+
+.v-breadcrumbs {
+    padding: 0 10px 0 0;
+    flex-wrap: nowrap;
+}
+
+.theme--light.v-application code {
+    background: none;
+}
+
+.v-application code {
+    font-size: 100%;
+    color: var(--code-colour);
+    padding: 0;
+}
+
+code.xref {
+    font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+    color: var(--deep-red);
+    font-weight: 500;
+}
+
+
+
+.image-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+.image-box * {
+    justify-content: center;
+    align-items: center;
+}
+.image-box img {
+    padding: 5px;
+    max-width: 250px;
+    /* max-width: 100%; */
+}
+
+@media only screen and (max-width: 300px) {
+    .image-box img {
+       max-width: 100%;
+    }
+}
+
+#footer-copyright, #footer-ack {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    color: var(--link-colour);
+}
+
+
