@@ -3,6 +3,11 @@
 */
 @import "./general.css";
 
+/* Extra padding under the breadcrumbs for the sphinx pages.*/
+#breadcrumbs {
+    padding-bottom: 5px;
+}
+
 .v-application a {
     color: var(--link-colour) !important;
     text-decoration: none;
