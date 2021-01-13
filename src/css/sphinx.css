@@ -61,15 +61,6 @@ code.xref {
     background-color:#fbfff6;
     border-color: rgb(80, 121, 0);
     color: #22440b;
-
-    /* border-left: 5px solid rgb(174, 189, 145); */
-    /* border-left: 5px solid #1fbe7c; */
-    /* background:#f0fff9; */
-    /* background-color: #efefef; */
-    /* padding: 3px 3px 5px 8px;
-    margin-top:20px;
-    margin-bottom:20px;
-    line-height: 24px; */
     font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
 }
 
@@ -159,8 +150,8 @@ code.xref {
 }
 
 .toggle > pre {
-    background-color: #eeeeee;
-    /* white-space: nowrap; */
+    /* background-color: var(--terminal-colour); */
+    padding-top: 10px;
 }
 
 .toggle .header.active p, .toggle .header-left.active p {
@@ -218,14 +209,12 @@ code.xref {
 }
 
 .tab2name.inactive {
-    /* background-color: whitesmoke; */
     font-weight: 400;
     color: var(--text-colour);
     border-bottom: solid var(--border-colour) 1px;
 }
 
 .tab2 * {
-    background-color: var(--very-pale-grey);
     overflow: scroll;
 }
 
@@ -257,6 +246,7 @@ code.xref {
     padding-right: 0;
 }
 
+/* Turns off old divs that have been emptied with JS */
 .code-tab {
     display: none;
 }
