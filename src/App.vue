@@ -3,7 +3,7 @@
     <v-app-bar app clipped-left>
       <img src="./assets/logo.svg" width="40" height="40" />
       <v-app-bar-nav-icon @click="onSidebarOpen" />
-      <v-row>
+      <v-row id="topMenuBar">
         <v-col
           v-for="link in links"
           :key="`${link.label}-header-link`"
