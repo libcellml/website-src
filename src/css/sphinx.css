@@ -1,42 +1,10 @@
 /* 
- Bright red 
-
-
+ Styles to be used on pages generated from Sphinx.
 */
-
-:root {
-    --bright-red: #bd4147;
-    --mid-red: #862e32;
-    --deep-red: #4e0202;
-    --text-colour: #444444;
-    --link-colour: #888888;
-    --pale-grey:#dddddd;
-    --warning-background: lightgoldenrodyellow;
-    --warning-text: var(--deep-red);
-
-    --terminal-colour: var(--pale-grey);
-}
-
-/* Make max width for page content. */
-#pageContent {
-    max-width: 900px;
-    float: left;
-    padding-top: 0;
-}
-
-h1 {
-    color: var(--mid-red);
-    margin-bottom: 0.5em;
-    border-bottom: solid 1px var(--terminal-colour);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.v-application {
-    font-family: "Lato", "proxima-nova", "Helvetica Neue", "Arial", sans-serif;
-}
+@import "./general.css";
 
 .v-application a {
-    color: --var(link-colour);
+    color: var(--link-colour) !important;
     text-decoration: none;
     font-weight:500;
 }
@@ -45,16 +13,18 @@ h1 {
     color: var(--bright-red) !important;
 }
 
-/* Remove box and shadow from code.  The font and colour is plenty! */
-.v-application code {
-    background: none;
-    border: none;
-    border-radius: 5px;
-    box-shadow: none;
-    font-size: 100%;
-    font-weight: normal;
-    padding:10px;
-    margin-bottom: 5px;
+pre {
+    background-color: var(--very-pale-grey);
+}
+
+pre > code.plaintext {
+    padding: 10px;
+}
+
+/* Inline literal code blocks in the Sphinx-based files. */
+.theme--light.v-application code.code {
+    background:none;
+    font-size: 95%;
 }
 
 .v-application code::before, .v-application code::after {
@@ -75,101 +45,6 @@ code.xref {
     font-weight: 500;
 }
 
-/* Indent the function contents so it's easier to distinguish from the names.
-   Default: Desktop screen width. */
-.function > * {
-    margin-left: 1rem;
-}
-
-/* Format the function definitions. */
-.function > dt:first-of-type {
-    font-family: monospace;
-    font-weight: 700;
-    padding-top: 1rem;
-    margin-left: 0;
-    margin-bottom: 0.3rem;
-    color: var(--bright-red);
-}
-
-/* Ensures a consistent look through the function heading.
-TODO: Find where the extra space is being added after the trailing ") " and move it to before ... 
-*/
-.function > dt:first-of-type > * {
-    font-family: monospace;
-    font-weight: 700;
-    font-size: 110%;
-}
-
-/* Indenting the "see also", "parameters" and "return" blocks on wide screens. */
-dl[name="simplesect"], dl[name="parameterlist"] {
-    margin-left: 1rem;
-    margin-top: 0.3rem;
-}
-
-/* Table of public function names in index should be monospaced. */
-section[id^="classlibcellml"]
-> section[id^="public_"]
-> table {
-    color: black;
-    font-family: monospace;
-}
-
-/* Tables of enum values should be monospaced. */
-.enum > table > tr > td:first-child {
-    font-family: monospace;
-    text-align: right;
-    padding-right: 0.8rem;
-}
-
-/* Spacing out the sections better. */
-section {
-    padding-top: 1rem;
-}
-
-/* Move breadcrumbs down a little ... */
-.breadcrumbs {
-    margin-top: 0.3rem;
-    white-space: nowrap;
-    display: block;
-    direction: rtl; /* This is so that it will collapse from the left on small screens */
-    overflow: hidden;
-    text-overflow: ellipsis;
-    /* text-transform: uppercase; */
-}
-
-.breadcrumbs * {
-    margin: 0;
-    padding: 0;
-}
-
-.v-breadcrumbs {
-    padding: 0 10px 0 0;
-    flex-wrap: nowrap;
-}
-
-/*  At present the menu width at 100% jumps to two lines when window width is less than 848px.  
-    Assume base rem = 16px -> 53rem */
-@media only screen and (max-width: 53rem) {
-    header > div[class="v-toolbar__content"] > div[class="row"] {
-        display: none;
-    }
-}
-
-/* Remove indents on smaller screens. */
-@media only screen and (max-width: 31rem) {
-    .function > * {
-        margin-left: 0.2rem;
-    }
-    dl[name="simplesect"], dl[name="parameterlist"] {
-        margin-left: 0;
-    }
-}
-
-/* Code block background colour. */
-pre {
-    background-color: #fafafa;
-    border-radius: 3px;
-}
 
 /* Shortlist class. */
 .shortlist > ul > li > p {
@@ -203,7 +78,6 @@ pre {
 }
 
 .useful {
-
     padding: .5rem 1.5rem;
     border-left-width: .5rem;
     border-left-style: solid;
@@ -315,7 +189,7 @@ pre {
 .tab2menu {
     position: relative;
     height: 45px;
-    border-bottom: solid #cccccc 1px;
+    border-bottom: solid var(--border-colour) 1px;
 }
 
 .tab2spacer {
@@ -327,7 +201,7 @@ pre {
     width: auto;
     height: 20px;
     color: var(--text-colour);
-    border: solid #cccccc 1px;
+    border: solid var(--border-colour) 1px;
     border-radius: 10px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
@@ -344,10 +218,15 @@ pre {
 }
 
 .tab2name.inactive {
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
     font-weight: 400;
     color: var(--text-colour);
-    border-bottom: solid #cccccc 1px;
+    border-bottom: solid var(--border-colour) 1px;
+}
+
+.tab2 * {
+    background-color: var(--very-pale-grey);
+    overflow: scroll;
 }
 
 .tab2 .active > .tab2name {
@@ -360,18 +239,26 @@ pre {
     color: var(--text-colour);
 }
 
-.tab2.active * {
+.tab2.active {
     display: inline-block;
+    border-left: var(--border-colour) solid 1px;
+    /* border-top: none; */
+    margin-bottom: 10px;
+    padding-bottom: 0px;
+    padding-right: 0px;
 }
 
-.tab2.inactive * {
+.tab2.inactive {
     display: none;
-    padding: 0;
-    margin: 0;
 }
 
-.tab2 * {
-    margin: 0 !important;
+.active > pre > code {
+    padding: 10px;
+    padding-right: 0;
+}
+
+.code-tab {
+    display: none;
 }
 
 /* TODO collapse nicely ... */
@@ -388,35 +275,4 @@ pre {
 
     line-height: 24px;
     font-family: "fakt-web", "Lato", "proxima-nova", "Helvetica Neue", "Arial", sans-serif;
-}
-
-/* Turn off the Contents blocks on pages as they're in the sidebar. */
-.topic.contents {
-    display: none;
-}
-
-.image-box {
-    display: flex;
-    flex-wrap: wrap;
-}
-.image-box * {
-    justify-content: center;
-    align-items: center;
-}
-.image-box img {
-    padding: 5px;
-    max-width: 250px;
-    /* max-width: 100%; */
-}
-
-@media only screen and (max-width: 300px) {
-    .image-box img {
-       max-width: 100%;
-    }
-}
-
-#footer-copyright, #footer-ack {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    color: var(--link-colour);
 }

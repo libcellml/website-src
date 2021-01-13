@@ -49,3 +49,4 @@ export default {
   padding: 0;
 }
 </style>
+<style src="../css/doxygen.css"></style>
