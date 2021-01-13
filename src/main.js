@@ -11,7 +11,7 @@ import VueHighlightJS from 'vue-highlightjs'
 import 'highlight.js/styles/xcode.css'
 
 // KRM
-import './css/custom.css'
+import './css/general.css'
 
 Vue.use(DoxygenXml, { store })
 Vue.use(SphinxXml, { store })
