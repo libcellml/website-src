@@ -100,10 +100,14 @@ code.xref {
     }
 }
 
+@media only screen and (max-width:850px){
+    #topMenuBar {
+        display: none;
+    }
+}
+
 #footer-copyright, #footer-ack {
     margin-bottom: 0;
     padding-bottom: 0;
     color: var(--link-colour);
 }
-
-
