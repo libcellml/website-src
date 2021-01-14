@@ -129,6 +129,7 @@ export default {
 }
 </script>
 
+<style src="./css/general.css"></style>
 <style>
 #pageContent {
   background-size: 80px;
