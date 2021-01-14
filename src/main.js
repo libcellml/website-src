@@ -7,15 +7,15 @@ import vuetify from './plugins/vuetify'
 import DoxygenXml from 'vue-doxygen-xml'
 import SphinxXml from 'vue-sphinx-xml'
 import VueHighlightJS from 'vue-highlightjs'
+import VueMathjax from 'vue-mathjax'
 
 import 'highlight.js/styles/xcode.css'
-
-// KRM
 import './css/general.css'
 
 Vue.use(DoxygenXml, { store })
 Vue.use(SphinxXml, { store })
 Vue.use(VueHighlightJS)
+Vue.use(VueMathjax)
 
 Vue.config.productionTip = false
 
