@@ -85,12 +85,13 @@ export default {
   },
 }
 </script>
+
 <style scoped>
 .old-version {
   color: var(--link-colour);
   background-color: var(--warning-background);
-  padding: 5px 15px 5px 10px;
-  border-radius: 10px;
+  padding: 0.3rem 1rem 0.3rem 0.6rem;
+  border-radius: 0.2em;
   font-weight: 500;
 }
 </style>
