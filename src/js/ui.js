@@ -1,12 +1,12 @@
 export default {
-  addClickHandlerToggles: function() {
+  addClickHandlerToggles: function () {
     // Event capture for the "toggle" class:
     let headers = document.querySelectorAll('.header, .header-left')
 
     headers.forEach(header => {
       header.classList.add('inactive')
 
-      header.addEventListener('click', function() {
+      header.addEventListener('click', function () {
         let contents = header.nextElementSibling
         while (contents !== null) {
           contents.style.display =
@@ -20,10 +20,10 @@ export default {
     })
   },
 
-  addClickHandlerTabs: function() {
+  addClickHandlerTabs: function () {
     let tabNames = document.querySelectorAll('.tab2name')
     tabNames.forEach(tabName => {
-      tabName.addEventListener('click', function() {
+      tabName.addEventListener('click', function () {
         // Turn other tabs off.
         let group = tabName.parentElement.parentElement
         group.querySelectorAll('.tab2').forEach((tab) => {
@@ -48,7 +48,7 @@ export default {
     })
   },
 
-  processSphinxTabs: function() {
+  processSphinxTabs: function () {
     // KRM: Not a fan of this.  Processing should be done in getting
     // this into XML format, not in the browser!
 
@@ -126,4 +126,21 @@ export default {
       group.classList = 'tabs2'
     })
   },
+
+  goToSignature: function (hash) {
+    // Scrolls to the first item of class 'sig-name' with content matching the hash.
+    let id = hash.replace('#','')
+    let items = document.querySelectorAll('.sig-name')
+    let sigNameItems = Array.prototype.filter.call(items, function (item) {
+      return item.textContent.trim() === id
+    })
+    if(sigNameItems.length == 0) {
+      return
+    }
+    let bookmark = sigNameItems[0].closest('.function')
+    if (bookmark !== null) {
+      window.scrollTo({ top: bookmark.offsetTop, behavior: 'smooth' })
+    }
+  }
+
 }
