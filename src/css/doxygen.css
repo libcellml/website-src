@@ -6,7 +6,7 @@
 .v-application a {
     color: var(--link-colour) !important;
     text-decoration: none;
-    font-weight:500;
+    font-weight: 500;
 }
 
 .v-application a:hover {
@@ -17,12 +17,12 @@
 .v-application pre {
     background: none;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.3rem;
     box-shadow: none;
     font-size: 100%;
     font-weight: normal;
-    padding-left: 0.8em;
-    margin-bottom: 5px;
+    padding-left: 0.8rem;
+    margin-bottom: 0.3rem;
 }
 
 .v-application code::before, .v-application code::after {
