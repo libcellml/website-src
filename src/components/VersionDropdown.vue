@@ -75,10 +75,11 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .breadcrumb-dropdown {
   position: relative;
   color: var(--link-colour);
+  padding-left: 0.49em;
 }
 
 .hide-options {
@@ -92,15 +93,22 @@ export default {
   background-color: white;
   z-index: 1;
   padding: 0.8em 1em;
-  margin-right: -1em;
-  border: solid 1px var(--pale-grey);
-  box-shadow: var(--pale-grey);
+  border: solid 0.1em var(--border-colour);
+  border-top: none;
+  border-bottom-left-radius: 0.3em;
+  border-bottom-right-radius: 0.3em;
 }
 
 .old-version {
-  background-color: var(--warning-background);
-  padding: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+    background-color: var(--warning-background);
+}
+
+#breadcrumb-id {
+    font-weight: 500;
+    padding: 0.3rem 1rem 0.3rem 0.6rem;
+    border-radius: 0.2em;
+    border-top-right-radius: 0; 
+    border-top-left-radius: 0;
+    padding-left: 0.59em;
 }
 </style>

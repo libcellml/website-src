@@ -99,18 +99,18 @@ export default {
     pageChanged() {
       return this.$store.state.pageContentChanged
     },
-    // pageHeadings() {
-    //   if (this.$store.state.pageChanged) {
-    //     // Page changed so find headings again.
-    //   }
-    //   console.log('finding headings ...')
-    //   return this.findHeadings()
-    // },
     havePageHeadings() {
       return this.pageHeadings.length
     },
     collapseMenu() {
-      return this.width < 850
+      // Retrieve the current font size in the menu div:
+      let menuBar = document.getElementById('topMenuBar')
+      if (menuBar !== null) {
+        let style = window.getComputedStyle(menuBar, null).getPropertyValue('font-size')
+        let fontSize = parseFloat(style)
+        return this.width < fontSize*54.5 // Equivalent to 54.5em
+      }
+      return true
     },
   },
 
@@ -121,16 +121,6 @@ export default {
       }, this.$store.getters.getTransitionDelay)
     },
   },
-
-  // watch: {
-  //   $route: {
-  //     handler: function() {
-  //       console.log('update my headings!!!')
-  //       this.updateHeadings()
-  //     },
-  //     immediate: true,
-  //   },
-  // },
 
   methods: {
     getHeadings(element, level) {
@@ -147,13 +137,11 @@ export default {
     },
     findHeadings() {
       const headingInitial = 2
-      //   const headingDepth = 2
       let headingTree = []
-      // setTimeout(() => {
       let el = document.querySelector('#pageContent')
       if (el) {
         let headings = this.getHeadings(el, headingInitial)
-        headings.forEach(heading => {
+        headings.forEach((heading) => {
           let subHeadings = this.getHeadings(heading, headingInitial + 1)
           const treeEntry = {
             el: heading,
@@ -164,11 +152,8 @@ export default {
         })
       }
       return headingTree
-      // this.pageHeadings = headingTree
-      // }, this.$store.getters.getTransitionDelay)
     },
 
-    // KRM
     handleResize() {
       this.width = window.innerWidth
     },
