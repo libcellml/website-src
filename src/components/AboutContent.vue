@@ -22,7 +22,7 @@
           >
           and reference the CellML 2.0 paper below:
         </p>
-        <p style="padding-left: 20px">
+        <p style="padding-left: 1.5em;">
           Michael Clerx, Michael T. Cooling, Jonathan Cooper, Alan Garny, Keri
           Moyle, David P. Nickerson, Poul M. F. Nielsen, and Hugh Sorby (2020),
           "CellML 2.0", <i>Journal of Integrative Bioinformatics</i>,
