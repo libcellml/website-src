@@ -127,12 +127,11 @@ export default {
     })
   },
 
-  goToSignature: function (hash) {
+  goToSignature: function (sigName) {
     // Scrolls to the first item of class 'sig-name' with content matching the hash.
-    let id = hash.replace('#','')
     let items = document.querySelectorAll('.sig-name')
     let sigNameItems = Array.prototype.filter.call(items, function (item) {
-      return item.textContent.trim() === id
+      return item.textContent.trim() === sigName
     })
     if(sigNameItems.length == 0) {
       return
