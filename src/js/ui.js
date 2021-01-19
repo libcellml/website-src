@@ -128,7 +128,7 @@ export default {
   },
 
   goToSignature: function (sigName) {
-    // Scrolls to the first instance on an item with the CSS class sig-name (from Doxygen) matching the given sigName.
+    // Scrolls to the first instance of an item with the CSS class sig-name (from Doxygen) with content matching the given sigName.
     let items = document.querySelectorAll('.sig-name')
     let sigNameItems = Array.prototype.filter.call(items, function (item) {
       return item.textContent.trim() === sigName
