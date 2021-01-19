@@ -4,7 +4,7 @@ import Home from '@/views/Home.vue'
 
 import store from '@/store'
 
-import { calculateBreadcrumbs, calculateSphinxVersion, calculateDoxygenVersion } from './breadcrumbs'
+import { calculateBreadcrumbs } from './breadcrumbs'
 import { getDoxygenVersions, getSphinxVersions } from '../js/versions'
 
 Vue.use(VueRouter)
@@ -40,7 +40,7 @@ const routes = [
     redirect: to => {
       // Defaults to latest version, if not specified.
       return '/documentation/api/' + getDoxygenVersions()[0]
-    }
+    },
   },
   {
     path: '/documentation/tutorials/:version/:pageName*',
@@ -60,7 +60,7 @@ const routes = [
     redirect: to => {
       // Defaults to latest version, if not specified.
       return '/documentation/tutorials/' + getSphinxVersions()[0]
-    }
+    },
   },
   {
     path: '/developers',
@@ -103,24 +103,30 @@ const createRouter = () => {
     base: process.env.BASE_URL,
     routes,
     scrollBehavior(to, from, savedPosition) {
-      if (to.path !== from.path) {
+      if (to.path !== from.path && to.hash) {
         return new Promise((resolve, reject) => {
           setTimeout(() => {
             let value = { x: 0, y: 0 }
-            if (to.hash) {
+            let location = document.querySelector(to.hash)
+            if (location) {
               value = window.scrollTo({
-                top: document.querySelector(to.hash).offsetTop,
+                top: location.offsetTop,
                 behavior: 'smooth',
               })
             }
             resolve(value)
           }, store.getters.getTransitionDelay)
         })
-      } else if (to.hash) {
-        return window.scrollTo({
-          top: document.querySelector(to.hash).offsetTop,
-          behavior: 'smooth',
-        })
+      }
+      else if (to.hash) {
+        let location = document.querySelector(to.hash)
+        if (location) {
+          return window.scrollTo({
+            top: location.offsetTop,
+            behavior: 'smooth',
+          })
+        }
+        return { x: 0, y: 0 }
       } else {
         return { x: 0, y: 0 }
       }
