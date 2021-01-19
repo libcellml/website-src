@@ -32,13 +32,17 @@ export default {
   },
   mounted() {
     setTimeout(function () {
-      ui.goToSignature(window.location.hash)
+      let urlParams = new URLSearchParams(window.location.search)
+      let fName = urlParams.get('fName')
+      ui.goToSignature(fName)
     }, this.$store.getters.getTransitionDelay)
   },
   watch: {
     $route() {
       setTimeout(function () {
-        ui.goToSignature(window.location.hash)
+        let urlParams = new URLSearchParams(window.location.search)
+        let fName = urlParams.get('fName')
+        ui.goToSignature(fName)
       }, this.$store.getters.getTransitionDelay)
     },
   },
