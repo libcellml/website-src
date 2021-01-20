@@ -1897,7 +1897,7 @@ Issue [0] is an ERROR:
     #         index order or using a while loop so that child items are not skipped as the indices change.
 </literal_block>
             </container>
-            <container classes="gotcha">
+            <container classes="nb">
                 <paragraph><strong>GOTCHA:</strong> Note that when an item is added to a new parent, it is automatically removed from its original parent.
                     Iterating through a set of children is best done in descending index order or using a while loop so that child items are not skipped as the indices change.</paragraph>
             </container>

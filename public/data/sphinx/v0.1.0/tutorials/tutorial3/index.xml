@@ -155,7 +155,7 @@
             <paragraph>Now for the real bit.
                 In order to actually model anything, we need to include the mathematical equations which represent the physical situation of interest.
                 As you saw in <reference internal="True" refuri="../tutorial2/index#tutorial2"><inline classes="std std-ref">Tutorial 2</inline></reference>, the maths and the <literal classes="code">Variable</literal> items which it references live inside a parent <literal classes="code">Component</literal> item.</paragraph>
-            <container classes="gotcha">
+            <container classes="nb">
                 <paragraph>At this point it should be noted that the <emphasis>order</emphasis> in which you add your components, or models, or variables (or anything) is not important to the final product, but it <emphasis>can</emphasis> affect how quickly you’re able to find and fix bugs along the way.
                     In these tutorials, we have suggested that you add the mathematics first and use a <literal classes="code">Validator</literal> to notify you of the
                     outstanding items, but you can really do this in any order you choose.</paragraph>
@@ -172,7 +172,7 @@
             <paragraph>In order to use this in our model we need to write it as a MathML2 string.
                 The basic structure for these is described in the <reference internal="False" refuri="https://www.w3.org/TR/MathML2/chapter4.html#id.4.2.1.3">W3 resource pages regarding MathML2</reference>.</paragraph>
             <paragraph>It’s highly unlikely that you - the user - will actually be required to write MathML2 code directly, so this part of the tutorial is more about understanding what’s going on under the hood than practising fundamentally necessary skills.</paragraph>
-            <container classes="gotcha">
+            <container classes="nb">
                 <paragraph><strong>Note</strong> that libCellML will <strong>only</strong> accept MathML2 markup, even though later versions (3 and 4) are now available.</paragraph>
             </container>
             <paragraph>Looking at the top equation first, the MathML2 representation of <math>c = a - 2.0</math> is:</paragraph>
@@ -479,7 +479,7 @@
 
 </literal_block>
             </container>
-            <container classes="gotcha">
+            <container classes="nb">
                 <paragraph>Note that the order in which strings are added might be important, as they are stored as a single concatenated string.
                     However, the order in which complete MathML equations occur in the overall MathML string is not important.</paragraph>
             </container>
@@ -1120,7 +1120,7 @@ per_ms-&gt;addUnit(ms, -1.0);</literal_block>
 </literal_block>
             </container>
             <paragraph>The final two steps are to associate each variable with its appropriate units, and to include the units in the model.</paragraph>
-            <container classes="gotcha">
+            <container classes="nb">
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>When you add different sub-unit parts into a <literal classes="code">Units</literal> item, the function is <literal classes="code">addUnit</literal> (singular), and it takes as argument the <emphasis>name</emphasis> of the sub-unit as a string (eg: <literal classes="code">"second"</literal> used above).</paragraph>
@@ -1166,7 +1166,7 @@ per_ms-&gt;addUnit(ms, -1.0);</literal_block>
 
 </literal_block>
             </container>
-            <container classes="gotcha">
+            <container classes="nb">
                 <paragraph><strong>Gotcha!</strong> When you specify the <literal classes="code">Units</literal> for a <literal classes="code">Variable</literal> using its name then you may need to call the model’s <literal classes="code">linkUnits</literal> function before validating the model.
                     If you see errors related to missing units which do in fact exist, this indicates that a call to the <literal classes="code">linkUnits</literal> function is needed.</paragraph>
             </container>
