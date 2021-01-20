@@ -45,7 +45,7 @@ export default {
   },
   mounted() {
     if (
-      (this.$props.versionType === 'tutorials' &&
+      (this.$props.versionType === 'guides' &&
         this.$props.currentVersion !== getSphinxVersions()[0]) ||
       (this.$props.versionType === 'api' &&
         this.$props.currentVersion !== getDoxygenVersions()[0])

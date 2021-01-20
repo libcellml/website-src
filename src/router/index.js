@@ -28,6 +28,12 @@ const routes = [
       return '/documentation/api/' + getDoxygenVersions()[0]
     }
   },
+  // {
+  //   path: '/documentation/guides/:version/:sections/:pageName+',
+  //   name: 'TutorialsSectionPage',
+  //   component: () =>
+  //     import(/* webpackChunkName: "doxygen" */ '../views/HelpTutorialsPage.vue'),
+  // },
   {
     path: '/documentation/guides/:version/:pageName*',
     name: 'TutorialsPage',

@@ -5,7 +5,7 @@
           <BreadCrumbs
             v-bind:versionChoices="getVersions()"
             :currentVersion="`${$route.params.version}`"
-            :versionType="'tutorials'"
+            :versionType="'guides'"
           />
 
           <h1>versionPath = {{ versionPath }}</h1>
@@ -13,7 +13,7 @@
           <SphinxPage
             :baseURL="`/data/sphinx/${this.$route.params.version}`"
             :version="`${$route.params.version}`"
-
+            indexFileName="index"
             @updated="updated"
           />
         </v-col>
