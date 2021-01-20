@@ -16,20 +16,6 @@ const routes = [
     component: Home,
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () =>
-      import(/* webpackChunkName: "about" */ '../views/About.vue'),
-  },
-  {
-    path: '/documentation',
-    name: 'Documentation',
-    component: () =>
-      import(
-        /* webpackChunkName: "documentation" */ '../views/Documentation.vue'
-      ),
-  },
-  {
     path: '/documentation/api/:version/:pageName?',
     name: 'APIReferencePage',
     component: () =>
@@ -43,36 +29,23 @@ const routes = [
     }
   },
   {
-    path: '/documentation/tutorials/:version/:pageName*',
-    // path: '/documentation/tutorials/:pageName*',
+    path: '/documentation/guides/:version/:pageName*',
     name: 'TutorialsPage',
     component: () =>
-      import(/* webpackChunkName: "sphinx" */ '../views/HelpTutorialsPage.vue'),
+      import(/* webpackChunkName: "doxygen" */ '../views/HelpTutorialsPage.vue'),
   },
   {
-    path: '/documentation/tutorials/:version',
-    name: 'Tutorials',
+    path: '/documentation/guides/:version',
+    name: 'TutorialsHome',
     component: () =>
       import(/* webpackChunkName: "sphinx" */ '../views/HelpTutorials.vue'),
   },
   {
-    path: '/documentation/tutorials',
+    path: '/documentation/guides',
     redirect: to => {
       // Defaults to latest version, if not specified.
-      return '/documentation/tutorials/' + getSphinxVersions()[0]
+      return '/documentation/guides/' + getSphinxVersions()[0]
     }
-  },
-  {
-    path: '/developers',
-    name: 'Developers',
-    component: () =>
-      import(/* webpackChunkName: "developers" */ '../views/Developers.vue'),
-  },
-  {
-    path: '/download',
-    name: 'Download',
-    component: () =>
-      import(/* webpackChunkName: "download" */ '../views/Download.vue'),
   },
   {
     path: '/404',
@@ -88,13 +61,13 @@ const routes = [
         /* webpackChunkName: "networkIssue" */ '../views/NetworkIssue.vue'
       ),
   },
-  {
-    path: '*',
-    redirect: {
-      name: '404',
-      params: { resource: 'page' },
-    },
-  },
+  // {
+  //   path: '*',
+  //   redirect: {
+  //     name: '404',
+  //     params: { resource: 'page' },
+  //   },
+  // },
 ]
 
 const createRouter = () => {
@@ -102,6 +75,7 @@ const createRouter = () => {
     mode: 'history',
     base: process.env.BASE_URL,
     routes,
+
     scrollBehavior(to, from, savedPosition) {
       if (to.path !== from.path) {
         return new Promise((resolve, reject) => {
@@ -125,6 +99,7 @@ const createRouter = () => {
         return { x: 0, y: 0 }
       }
     },
+
   })
 }
 
