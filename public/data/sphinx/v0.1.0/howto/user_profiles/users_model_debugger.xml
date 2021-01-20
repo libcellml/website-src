@@ -293,7 +293,7 @@
                     </container>
                 </container>
             </container>
-            <container classes="gotcha">
+            <container classes="nb">
                 <paragraph>In some situations both the <literal classes="code">Validator</literal> and <literal classes="code">Analyser</literal> classes may encounter errors that mean they’re unable to continue processing the model.
                     For this reason, you may need several iterations of checking and fixing before all of the issues are addressed.</paragraph>
             </container>

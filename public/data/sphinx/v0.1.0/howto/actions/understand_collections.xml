@@ -58,7 +58,7 @@
                 <paragraph>Remove a thing</paragraph>
             </container>
             <paragraph>To remove an item from the collection and detach its parent without returning a pointer to that item, use the <literal classes="code">removeThing</literal> functions.</paragraph>
-            <container classes="gotcha">
+            <container classes="nb">
                 <paragraph>Because the collections are stored as a group of smart pointers, if no references exist to the item then its contents will also be deleted.
                     If other references do exist, the parent pointer will be detached, but they won’t otherwise be affected.</paragraph>
             </container>
@@ -165,7 +165,7 @@ i_am_a_bool_not_a_component = model.removeComponent(0) # Remove either by index,
                 In addition, the <literal classes="code">replaceComponent</literal> takes an optional boolean argument indicating whether to search the encapsulated children for the item, if specified by name.
                 By default this is set to <literal classes="code">true</literal>.
                 For more information about replacement, please see the API documentation for <reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Model">Model</reference> and <reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Component">Component</reference> items directly.</paragraph>
-            <container classes="gotcha">
+            <container classes="nb">
                 <paragraph>Note that these <strong>only</strong> operate on collections of items.  That is:
                     - the collections of <literal classes="code">Units</literal>, <literal classes="code">Component</literal> and <literal classes="code">ImportSource</literal> items in a parent <literal classes="code">Model</literal>;
                     - the encapsulated child <literal classes="code">Component</literal>, <literal classes="code">Reset</literal> or <literal classes="code">Variable</literal> items in a parent <literal classes="code">Component</literal>;
