@@ -33,8 +33,8 @@
               </v-breadcrumbs-item>
             </template>
 
-            <!-- Normal item, no dropdown: -->
-            <template v-else>
+            <!-- Normal item, no dropdown, formed from named page: -->
+            <template v-else-if="item.type=== 'pageFromName'">
               <v-breadcrumbs-item
                 :exact="true"
                 :to="{ name: item.name, hash: item.hash, params: item.params }"
@@ -46,6 +46,17 @@
                 <template v-else>
                   {{ item.text }}
                 </template>
+              </v-breadcrumbs-item>
+            </template>
+
+            <!-- Normal item, no dropdown, formed from path to page: -->
+            <template v-else>
+              <v-breadcrumbs-item
+                :exact="true"
+                :to="{ path: item.path }"
+                :disabled="false"
+              >
+                {{ item.text }}
               </v-breadcrumbs-item>
             </template>
           </template>
@@ -89,7 +100,7 @@ export default {
       return this.$store.state.breadcrumbs
     },
     latest() {
-      if (this.$props.versionType === 'tutorials') {
+      if (this.$props.versionType === 'guides') {
         return getSphinxVersions()[0]
       }
       return getDoxygenVersions()[0]
