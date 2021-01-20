@@ -1,8 +1,8 @@
 <template>
   <v-container>
-    <v-row id="breadcrumb-id">
-      <v-col @click="expandDropdown" class="breadcrumb-dropdown"
-        >{{ currentVersion }}&nbsp;<v-icon>mdi-chevron-down</v-icon>
+    <v-row id="dropdown-id">
+      <v-col @click="expandDropdown" class="breadcrumb-dropdown">
+        <v-icon size="1.1em">mdi-chevron-down</v-icon>
       </v-col>
     </v-row>
     <v-row class="hide-options">
@@ -14,7 +14,7 @@
       >
         {{ version }}
         <template v-if="version === currentVersion">
-          <v-icon>mdi-check</v-icon>
+          <v-icon size="1em">mdi-check</v-icon>
         </template>
         <br />
       </router-link>
@@ -50,14 +50,14 @@ export default {
       (this.$props.versionType === 'api' &&
         this.$props.currentVersion !== getDoxygenVersions()[0])
     ) {
-      let b = document.getElementById('breadcrumb-id')
+      let b = document.getElementById('dropdown-id')
       b.classList = ['old-version']
     }
   },
 
   methods: {
     expandDropdown() {
-      let menu = document.getElementById('breadcrumb-id')
+      let menu = document.getElementById('dropdown-id')
       document.addEventListener('click', function (event) {
         var isClickInside = menu.contains(event.target)
         if (!isClickInside) {
@@ -79,7 +79,7 @@ export default {
 .breadcrumb-dropdown {
   position: relative;
   color: var(--link-colour);
-  padding-left: 0.49em;
+  font-size: normal;
 }
 
 .hide-options {
@@ -103,12 +103,12 @@ export default {
     background-color: var(--warning-background);
 }
 
-#breadcrumb-id {
+#dropdown-id {
     font-weight: 500;
-    padding: 0.3rem 1rem 0.3rem 0.6rem;
     border-radius: 0.2em;
     border-top-right-radius: 0; 
     border-top-left-radius: 0;
-    padding-left: 0.59em;
+    padding: 0 0.1em;
+    margin: 0 0.1em;
 }
 </style>
