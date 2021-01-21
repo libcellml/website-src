@@ -6,7 +6,7 @@
           <BreadCrumbs v-bind:versionChoices="getVersions()" 
           :currentVersion="`${$route.params.version}`" 
           :versionType="'guides'" />
-          
+
           <SphinxPage
             :baseURL="`/data/sphinx/${$route.params.version}`"
             indexFileName="index"

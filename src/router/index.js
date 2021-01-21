@@ -28,23 +28,11 @@ const routes = [
       return '/documentation/api/' + getDoxygenVersions()[0]
     },
   },
-  // {
-  //   path: '/documentation/guides/:version/:sections/:pageName+',
-  //   name: 'TutorialsSectionPage',
-  //   component: () =>
-  //     import(/* webpackChunkName: "doxygen" */ '../views/HelpTutorialsPage.vue'),
-  // },
   {
     path: '/documentation/guides/:version/:pageName*',
     name: 'TutorialsPage',
     component: () =>
-      import(/* webpackChunkName: "doxygen" */ '../views/HelpTutorialsPage.vue'),
-  },
-  {
-    path: '/documentation/guides/:version',
-    name: 'TutorialsHome',
-    component: () =>
-      import(/* webpackChunkName: "sphinx" */ '../views/HelpTutorials.vue'),
+      import(/* webpackChunkName: "sphinx" */ '../views/HelpTutorialsPage.vue'),
   },
   {
     path: '/documentation/guides',
@@ -67,13 +55,13 @@ const routes = [
         /* webpackChunkName: "networkIssue" */ '../views/NetworkIssue.vue'
       ),
   },
-  // {
-  //   path: '*',
-  //   redirect: {
-  //     name: '404',
-  //     params: { resource: 'page' },
-  //   },
-  // },
+  {
+    path: '*',
+    redirect: {
+      name: '404',
+      params: { resource: 'page' },
+    },
+  },
 ]
 
 const createRouter = () => {
