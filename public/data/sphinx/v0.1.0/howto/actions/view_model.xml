@@ -85,7 +85,7 @@ my_test_varible = my_reset-&gt;testVariable()</literal_block>
                 <title refid="id3">View collections owned by an item</title>
                 <paragraph>In order to access items within a collection use the same general format as above, but with an indicator (name or index) of the child item to be retrieved from the collection.
                     In other words, get the child item of type <literal classes="code">xyz</literal> using the camelCase function <literal classes="code">xyx(myIndex)</literal> or <literal classes="code">xyz(myName)</literal>.</paragraph>
-                <container classes="gotcha">
+                <container classes="nb">
                     <paragraph>Before accessing a collection item using an index, you can use the <literal classes="code">xyzCount()</literal> function to return the number of items in the collection.</paragraph>
                 </container>
                 <paragraph>The following example shows how all variables in a component can be listed.</paragraph>

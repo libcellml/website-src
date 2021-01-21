@@ -1,33 +1,68 @@
 <template>
-  <v-container>
-    <v-row>
-      <v-col>
-        <h1>Tutorials</h1>
-        <ul>
-          <li
-            v-for="(version, index) in tutorialVersions"
-            :key="'api_reference_' + index"
-          >
-            <router-link :to="{ path: `/documentation/tutorials/${version}` }">
-              <big>libCellML {{ version }} Tutorials</big>
-            </router-link>
-          </li>
-        </ul>
-      </v-col>
-    </v-row>
-  </v-container>
+    <v-container>
+      <v-row>
+        <v-col>
+          <BreadCrumbs
+            v-bind:versionChoices="getVersions()"
+            :currentVersion="`${$route.params.version}`"
+            :versionType="'guides'"
+          />
+          <SphinxPage
+            :baseURL="`/data/sphinx/${this.$route.params.version}`"
+            :version="`${$route.params.version}`"
+            @updated="updated"
+          />
+        </v-col>
+      </v-row>
+    </v-container>
 </template>
 
 <script>
-import { getSphinxVersions } from '@/js/versions'
+import { SphinxPage } from 'vue-sphinx-xml'
+import BreadCrumbs from '@/components/BreadCrumbs'
+import { getSphinxVersions } from '../js/versions'
+
+import ui from '@/js/ui'
 
 export default {
-  name: 'HelpTutorials',
-  data: () => {
-    return { tutorialVersions: [] }
+  name: 'TutorialsHome',
+  components: {
+    SphinxPage,
+    BreadCrumbs,
   },
-  created() {
-    this.tutorialVersions = getSphinxVersions()
+  computed: {
+    versionPath() {
+      return this.$route.params.version
+    },
+  },
+
+  methods: {
+    getVersions() {
+      return getSphinxVersions()
+    },
+    updated() {
+      this.$store.commit('togglePageContentChanged')
+
+      // KRM include these on any page where the injected XML might contain tabs or toggle blocks.
+      // Workaround only until sphinx tabs and toggles cann be handled outside the browser properly.
+      setTimeout(function () {
+        ui.processSphinxTabs()
+        ui.addClickHandlerTabs()
+        ui.addClickHandlerToggles()
+      }, this.$store.getters.getTransitionDelay)
+    },
   },
 }
 </script>
+
+<style scoped>
+.api-reference {
+  position: relative;
+}
+.version-box > * {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+</style>
+<style src="../css/sphinx.css"></style>

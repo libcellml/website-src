@@ -10,12 +10,20 @@
     --link-colour: #666666;
     --pale-grey:#dddddd;
     --very-pale-grey: #efefef;
+
+    --transparent-grey: rgba(27,31,35,.05);
+    --deep-blue: #476582;
+
     --warning-background: rgb(251, 239, 239);
     --warning-text: var(--deep-red);
+
 
     --terminal-colour: var(--pale-grey) !important;
     --border-colour: var(--pale-grey);
     --code-colour: var(--mid-red);
+
+    --text-font: "Lato", "proxima-nova", "Helvetica Neue", "Arial", sans-serif;
+    --code-font: "Lato", "proxima-nova", "Helvetica Neue", "Arial", sans-serif;
 }
 
 /* Make max width for page content. */
@@ -33,7 +41,7 @@ h1 {
 }
 
 .v-application {
-    font-family: "Lato", "proxima-nova", "Helvetica Neue", "Arial", sans-serif;
+    font-family: var(--text-font);
 }
 
 /* Turn off the Contents blocks on pages as they're in the sidebar. */
@@ -60,6 +68,9 @@ h1 {
     padding: 0 0.5em 0 0;
     flex-wrap: nowrap;
 }
+.v-breadcrumbs li {
+    font-size: 0.9rem;
+}
 
 .theme--light.v-application code {
     background: none;
@@ -72,7 +83,7 @@ h1 {
 }
 
 code.xref {
-    font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+    font-family: var(--text-font);
     color: var(--deep-red);
     font-weight: 500;
 }
