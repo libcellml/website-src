@@ -99,11 +99,23 @@ const createRouter = () => {
         return { x: 0, y: 0 }
       }
     },
-
   })
 }
 
 const router = createRouter()
+
+router.beforeResolve((to, from, next) => {
+  // Check for occurrences of 'latest' in the version field, and update
+  console.log("before resolve:")
+  console.log(to)
+  if(to.params.version === 'latest' && to.name === 'APIReferencePage') {
+    to.params.version = getDoxygenVersions()[0]
+  }
+  if(to.params.version === 'latest' && to.name === 'TutorialsPage') {
+    to.params.version = getSphinxVersions()[0]
+  }
+  next()
+})
 
 router.beforeEach((to, from, next) => {
   store.commit('setBreadcrumbs', calculateBreadcrumbs(to))
