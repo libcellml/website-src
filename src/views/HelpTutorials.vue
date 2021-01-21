@@ -7,13 +7,9 @@
             :currentVersion="`${$route.params.version}`"
             :versionType="'guides'"
           />
-
-          <h1>versionPath = {{ versionPath }}</h1>
-
           <SphinxPage
             :baseURL="`/data/sphinx/${this.$route.params.version}`"
             :version="`${$route.params.version}`"
-            indexFileName="index"
             @updated="updated"
           />
         </v-col>
@@ -36,7 +32,6 @@ export default {
   },
   computed: {
     versionPath() {
-      // alert(this.$route.params.version)
       return this.$route.params.version
     },
   },
