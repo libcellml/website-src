@@ -14,14 +14,14 @@
             </router-link>
           </li>
         </ul>
-        <h2 id="tutorials">Tutorials</h2>
+        <h2 id="user_guide">User Guides</h2>
         <ul>
           <li
             v-for="(version, index) in tutorialVersions"
-            :key="'api_reference_' + index"
+            :key="'guide_' + index"
           >
-            <router-link :to="{ path: `documentation/tutorials/${version}` }">
-              libCellML {{ version }} Tutorials
+            <router-link :to="{ path: `documentation/guides/${version}` }">
+              libCellML User Guide {{ version }} 
             </router-link>
           </li>
         </ul>

@@ -34,7 +34,7 @@
       <v-row justify="center" no-gutters>
         <v-col />
         <v-col class="text-center">
-          <p id="footer-copyright">Copyright &#169; 2020 libCellML</p>
+          <p id="footer-copyright">Copyright &#169; 2021 libCellML</p>
         </v-col>
         <v-col class="text-right">
           <p id="footer-ack">
@@ -103,11 +103,11 @@ export default {
     },
   }),
 
-  computed: {
-    breadcrumbs() {
-      return this.$store.state.breadcrumbs
-    },
-  },
+  // computed: {
+  //   breadcrumbs() {
+  //     return this.$store.state.breadcrumbs
+  //   },
+  // },
 
   methods: {
     onSidebarOpen() {

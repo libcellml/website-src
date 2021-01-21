@@ -16,20 +16,6 @@ const routes = [
     component: Home,
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () =>
-      import(/* webpackChunkName: "about" */ '../views/About.vue'),
-  },
-  {
-    path: '/documentation',
-    name: 'Documentation',
-    component: () =>
-      import(
-        /* webpackChunkName: "documentation" */ '../views/Documentation.vue'
-      ),
-  },
-  {
     path: '/documentation/api/:version/:pageName?',
     name: 'APIReferencePage',
     component: () =>
@@ -43,36 +29,17 @@ const routes = [
     },
   },
   {
-    path: '/documentation/tutorials/:version/:pageName*',
-    // path: '/documentation/tutorials/:pageName*',
+    path: '/documentation/guides/:version/:pageName*',
     name: 'TutorialsPage',
     component: () =>
       import(/* webpackChunkName: "sphinx" */ '../views/HelpTutorialsPage.vue'),
   },
   {
-    path: '/documentation/tutorials/:version',
-    name: 'Tutorials',
-    component: () =>
-      import(/* webpackChunkName: "sphinx" */ '../views/HelpTutorials.vue'),
-  },
-  {
-    path: '/documentation/tutorials',
+    path: '/documentation/guides',
     redirect: to => {
       // Defaults to latest version, if not specified.
-      return '/documentation/tutorials/' + getSphinxVersions()[0]
-    },
-  },
-  {
-    path: '/developers',
-    name: 'Developers',
-    component: () =>
-      import(/* webpackChunkName: "developers" */ '../views/Developers.vue'),
-  },
-  {
-    path: '/download',
-    name: 'Download',
-    component: () =>
-      import(/* webpackChunkName: "download" */ '../views/Download.vue'),
+      return '/documentation/guides/' + getSphinxVersions()[0]
+    }
   },
   {
     path: '/404',
@@ -102,6 +69,7 @@ const createRouter = () => {
     mode: 'history',
     base: process.env.BASE_URL,
     routes,
+
     scrollBehavior(to, from, savedPosition) {
       if (to.path !== from.path && to.hash) {
         return new Promise((resolve, reject) => {
@@ -131,6 +99,7 @@ const createRouter = () => {
         return { x: 0, y: 0 }
       }
     },
+
   })
 }
 

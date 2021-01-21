@@ -46,7 +46,7 @@
                     The general CMake command is below.</paragraph>
             </container>
             <literal_block force="False" highlight_args="{}" language="text" linenos="False" xml:space="preserve">cmake -DINPUT=/path/to/your/files/baseFileName .</literal_block>
-            <container classes="gotcha">
+            <container classes="nb">
                 <paragraph>Note that the fullstop in the cmake command sets both the source and binary directories to the solver directory.
                     This is because even though your generated files are elsewhere, the solver code and CMakeLists.txt file are in <emphasis>this</emphasis> directory.</paragraph>
             </container>
