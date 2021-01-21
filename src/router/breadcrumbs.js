@@ -1,3 +1,5 @@
+import { getSphinxVersions, getDoxygenVersions } from "../js/versions"
+
 const skipPaths = [
   // KRM views to skip in the breadcrumbs
 ]
@@ -38,6 +40,9 @@ const hardRoutes = {
 }
 
 function convertToReadableText(bookmarkText) {
+  skipTitles.forEach(title => {
+    bookmarkText = bookmarkText.replaceAll(title, '')
+  })
   bookmarkText = bookmarkText.replaceAll('_', ' ')
   bookmarkText = bookmarkText.replace(/([A-Z])/g, ' $1') // Insert space before capital letter
   bookmarkText = bookmarkText.replace(/([0-9])/g, ' $1') // Insert space before number
@@ -73,16 +78,19 @@ export function calculateBreadcrumbs(to) {
     let lastLink = '/documentation/api'
     let path = to.path.replaceAll(lastLink, '')
     let pages = path.split('/')
+    let version = pages.length > 1 ? pages[1] : null
 
     // Version selector block, clicking v1.2.3 takes you to class list page
-    routes.push({
-      text: pages[1], // Current version
-      name: 'APIReferencePage',
-      disabled: false,
-      hash: '',
-      type: 'versionSelector',
-    })
-    lastLink = lastLink + '/' + pages[1]
+    if (version) {
+      routes.push({
+        text: version === 'latest' ? getDoxygenVersions()[0] : version,
+        name: 'APIReferencePage',
+        disabled: false,
+        hash: '',
+        type: 'versionSelector',
+      })
+      lastLink = lastLink + '/' + pages[1]
+    }
 
     pages = pages.slice(2)
 
@@ -90,16 +98,8 @@ export function calculateBreadcrumbs(to) {
       if (page) {
         lastLink = lastLink + '/' + page
 
-        let bookmarkText = page
-        skipTitles.forEach(title => {
-          bookmarkText = bookmarkText.replaceAll(title, '')
-        })
-        bookmarkText = bookmarkText.replaceAll('_', ' ')
-        bookmarkText = bookmarkText.replace(/([A-Z])/g, ' $1') // Insert space before capital letter
-        bookmarkText = bookmarkText.slice(1) // Removing leading space
-
         routes.push({
-          text: bookmarkText.toUpperCase(),
+          text: convertToReadableText(page).toUpperCase(),
           disabled: false,
           name: 'APIReferencePage',
           hash: '',
@@ -121,9 +121,9 @@ export function calculateBreadcrumbs(to) {
     let version = pages.length > 1 ? pages[1] : null
 
     // Version selector.
-    if(version) {
+    if (version) {
       routes.push({
-        text: version,
+        text: version === 'latest' ? getSphinxVersions()[0] : version,
         name: 'TutorialsPage',
         disabled: false,
         hash: '',
@@ -137,13 +137,13 @@ export function calculateBreadcrumbs(to) {
     let index = 2
     let page = pages[index]
     lastLink += '/' + page
-    while(page && page !== 'index') {
+    while (page && page !== 'index') {
       routes.push({
         text: convertToReadableText(page).toUpperCase(),
         name: 'TutorialsPage',
         disabled: false,
         hash: '',
-        path: lastLink + (index === pages.length-1 ? '' : '/index'),
+        path: lastLink + (index === pages.length - 1 ? '' : '/index'),
         type: 'pageFromPath',
       })
       index += 1
