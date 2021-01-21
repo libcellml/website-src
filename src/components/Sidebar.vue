@@ -3,10 +3,10 @@
     <v-container>
       <v-row>
         <v-col>
-          <!-- KRM: Menu will only be shown here at small screen sizes -->
-          <template v-if="collapseMenu">
+          <!-- KRM: Menu list will only be included in sidebar on small screen sizes -->
+          <template v-if="menuInSidebar">
             <h4>Menu</h4>
-            <ul id="example-1">
+            <ul id="sidebarMenu">
               <li
                 v-for="link in links"
                 :key="link.label"
@@ -54,12 +54,18 @@ export default {
     window.addEventListener('resize', this.handleResize)
     this.handleResize()
   },
+  mounted() {
+    setTimeout(() => {
+        this.menuInSidebar = this.calculateMenu()
+      }, this.$store.getters.getTransitionDelay)
+  },
   destroyed() {
     window.removeEventListener('resize', this.handleResize)
   },
 
   data() {
     return {
+      menuInSidebar: false,
       pageHeadings: [],
       width: 0,
       links: [
@@ -102,16 +108,6 @@ export default {
     havePageHeadings() {
       return this.pageHeadings.length
     },
-    collapseMenu() {
-      // Retrieve the current font size in the menu div:
-      let menuBar = document.getElementById('topMenuBar')
-      if (menuBar !== null) {
-        let style = window.getComputedStyle(menuBar, null).getPropertyValue('font-size')
-        let fontSize = parseFloat(style)
-        return this.width < fontSize*54.5 // Equivalent to 54.5em
-      }
-      return true
-    },
   },
 
   watch: {
@@ -153,9 +149,20 @@ export default {
       }
       return headingTree
     },
-
+    calculateMenu() {
+      let menuBar = document.getElementById('topMenuBar')
+      if (menuBar !== null) {
+        let style = window
+          .getComputedStyle(menuBar, null)
+          .getPropertyValue('font-size')
+        let fontSize = parseFloat(style)
+        return this.width < fontSize * 54.5 // Equivalent to 54.5em
+      }
+      return true
+    },
     handleResize() {
       this.width = window.innerWidth
+      this.menuInSidebar = this.calculateMenu()
     },
   },
 }
