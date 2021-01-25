@@ -13,9 +13,9 @@
             The second part is an <literal classes="code">std::any</literal> type object, which can be cast into the correct type.
             This is demonstrated below.</paragraph>
         <container classes="sphinx-tabs">
-            <container classes="dummy">
+            <container>
                 <container classes="item">
-                    <container classes="dummy">
+                    <container>
                         <paragraph>C++</paragraph>
                     </container>
                 </container>
@@ -88,9 +88,9 @@ catch(const std::bad_any_cast&amp; e) {
     std::cout &lt;&lt; e.what() &lt;&lt; std::endl;
 }</literal_block>
             </container>
-            <container classes="dummy">
+            <container>
                 <container classes="item">
-                    <container classes="dummy">
+                    <container>
                         <paragraph>Python</paragraph>
                     </container>
                 </container>

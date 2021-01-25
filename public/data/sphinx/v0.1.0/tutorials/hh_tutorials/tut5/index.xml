@@ -87,9 +87,9 @@
             <paragraph>The first step in interacting with the output from the code generation is including the generated files in the project.
                 There are necessarily big differences between C++ and Python for this tutorial!</paragraph>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++ instructions</paragraph>
                         </container>
                     </container>
@@ -132,9 +132,9 @@
                         </container>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python instructions</paragraph>
                         </container>
                     </container>
@@ -333,9 +333,9 @@
         <section ids="step-3-access-the-functions-in-the-generated-files" names="step\ 3:\ access\ the\ functions\ in\ the\ generated\ files">
             <title refid="id3">Step 3: Access the functions in the generated files</title>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -368,9 +368,9 @@
                         </bullet_list>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python</paragraph>
                         </container>
                     </container>

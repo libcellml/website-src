@@ -522,7 +522,7 @@ Issue 8: Variable 'V' in component 'sodiumChannel' has units of '' and an equiva
                 </list_item>
             </enumerated_list>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Units">Units class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Units">Units class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>unitAttributes</paragraph>
@@ -643,13 +643,13 @@ Issue 8: Variable 'V' in component 'sodiumChannel' has units of '' and an equiva
                 <paragraph><strong>3.f</strong> Revalidate the model and confirm that the errors have gone.</paragraph>
             </container>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Model">Model class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Model">Model class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>component(“componentName”, true) will search for the component’s name in the whole of the encapsulation hierarchy.</paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Component">Component class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Component">Component class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>addComponent</paragraph>
@@ -742,7 +742,7 @@ Issue 8: Variable 'V' in component 'sodiumChannel' has units of '' and an equiva
                     If they’re in your working directory, enter an empty string.</paragraph>
             </container>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Importer">Importer class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Importer">Importer class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>create</paragraph>
@@ -801,7 +801,7 @@ Issue [0] is an ERROR:
             <paragraph>Fix the issues reported by the importer.
                 This needs to be an iterative process because as more files become available to the importer, the content of those files needs to be checked too.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Component">Component class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Component">Component class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>setImportReference</paragraph>
@@ -904,7 +904,7 @@ Issue [0] is an ERROR:
             <paragraph>At this stage we’ve validated the local model, and we’ve used the <literal classes="code">Importer</literal> class to retrieve all of its import dependencies.
                 These dependencies are stored in the importer’s library, and have not yet been validated or analysed.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Importer">Importer class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Importer">Importer class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>libraryCount returns the number of stored models;</paragraph>
@@ -961,7 +961,7 @@ Recorded 0 issues!</literal_block>
                 To limit ourselves to only those models which are still relevant as the import dependencies of our repaired model, we can iterate through our model’s <literal classes="code">ImportSource</literal> items instead.
                 As soon as the model’s imports have been resolved, all these will point to instantiated models within the importer.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Model">Model class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Model">Model class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>importSourceCount</paragraph>
@@ -970,7 +970,7 @@ Recorded 0 issues!</literal_block>
                         <paragraph>importSource</paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1ImportSource">ImportSource class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1ImportSource">ImportSource class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>model</paragraph>
@@ -1037,7 +1037,7 @@ Import source [1]:
                 The way around this is to use the <literal classes="code">Importer</literal> class to create a flat (ie: import-free) version of the same model.
                 If the flat model meets the analyser’s checks, then the importing version will too.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Analyser">Analyser class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Analyser">Analyser class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>analyseModel</paragraph>
@@ -1146,7 +1146,7 @@ Issue [2] is an ERROR:
                 It’s still valid CellML though!
                 In this example, the real problem is that these two variables are talking about the same thing, but haven’t been connected to one another yet.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Variable">Variable class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Variable">Variable class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>addEquivalence</paragraph>

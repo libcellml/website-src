@@ -61,9 +61,9 @@
                 To start with, the program only reads and interprets command line arguments; the size and number of timesteps to simulate.
                 This is done using a simple function, as below.</paragraph>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -97,9 +97,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python</paragraph>
                         </container>
                     </container>
@@ -126,9 +126,9 @@
             </container>
             <paragraph>Once the function exists, we can call it from the main function to process the command line arguments.</paragraph>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -150,9 +150,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python</paragraph>
                         </container>
                     </container>
@@ -187,9 +187,9 @@
                 This file and the corresponding interface <literal classes="code">.h</literal> file are copied by CMake to two files named <literal classes="code">modelToSolve.cpp</literal> and <literal classes="code">modelToSolve.h</literal> respectively.
                 This step is required so that within the solver code we can <literal classes="code">#include</literal> a known file name.</paragraph>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C building and linking</paragraph>
                         </container>
                     </container>
@@ -223,9 +223,9 @@
                         <paragraph>Note that the combined program is now available with the prefix <literal classes="code">solve_</literal> before the base file name you provided with the <literal classes="code">-DINPUT</literal> argument, and can be run using the instructions given in the printout above.</paragraph>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python</paragraph>
                         </container>
                     </container>
@@ -267,9 +267,9 @@
                 </list_item>
             </bullet_list>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -293,9 +293,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python</paragraph>
                         </container>
                     </container>
@@ -334,9 +334,9 @@
                 </list_item>
             </bullet_list>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -352,9 +352,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python</paragraph>
                         </container>
                     </container>
@@ -393,9 +393,9 @@
                 This means that you only need to call the <emphasis>compute variables</emphasis> function when you’re saving the output from a step; it does not need to be called for intermediate timesteps.</paragraph>
             <paragraph>Before we begin iterating, the values of all variables are calculated.</paragraph>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -409,9 +409,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python</paragraph>
                         </container>
                     </container>
@@ -447,9 +447,9 @@
             <paragraph>If you have an alternative way to save your solution, you can skip this step.
                 Here we create a simple text-delimited file into which the solution can be written at each timestep.</paragraph>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -493,9 +493,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python</paragraph>
                         </container>
                     </container>
@@ -525,9 +525,9 @@
             <paragraph>Finally we iterate through the timesteps, calculating the state variables, and updating the rates each step.
                 The solution values and calculated variables are written to the output file.</paragraph>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -564,9 +564,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python</paragraph>
                         </container>
                     </container>

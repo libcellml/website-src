@@ -102,7 +102,7 @@
         <section ids="step-1-set-up-the-model" names="step\ 1:\ set\ up\ the\ model">
             <title refid="id2">Step 1: Set up the model</title>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Model">Model class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Model">Model class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>create</paragraph>
@@ -114,7 +114,7 @@
                         <paragraph>addComponent</paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Component">Component class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Component">Component class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>create</paragraph>
@@ -275,7 +275,7 @@
             <math_block docname="tutorials/hh_tutorials/tut1/index" label="True" nowrap="False" number="True" xml:space="preserve">\frac{dX}{dt} = \alpha_{X}\left( 1 - X \right) - \beta_{X}.X</math_block>
             <paragraph>If you’re happy to write your own MathML2 string then please go ahead, but if you’d rather not you can use the code provided under the code toggles further down the page.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Component">Component class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Component">Component class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>setMath</paragraph>
@@ -409,7 +409,7 @@ COMPONENTS: 1 components
             <title refid="id4">Step 3: Validate the model</title>
             <paragraph>Once the mathematics has been added to the component, and the component to the model, we can make use of the diagnostic messages within the <literal classes="code">Validator</literal> class to tell us what else needs to be done.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Validator">Validator class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Validator">Validator class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>create</paragraph>
@@ -424,7 +424,7 @@ COMPONENTS: 1 components
                         <paragraph>issue</paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Issue">Issue class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Issue">Issue class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>description</paragraph>
@@ -592,7 +592,7 @@ Issue [5] is an ERROR:
             <paragraph>The issues reported by the validator are related to the MathML string that we entered in Step 2 requiring variables which don’t yet exist.
                 These must be created, named, and added to their parent component.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Variable">Variable class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Variable">Variable class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>create</paragraph>
@@ -604,7 +604,7 @@ Issue [5] is an ERROR:
                         <paragraph>setUnits</paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Component">Component class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Component">Component class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>addVariable</paragraph>
@@ -716,7 +716,7 @@ Issue [1] is an ERROR:
                 </bullet_list>
             </container>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Units">Units class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Units">Units class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>create</paragraph>
@@ -731,13 +731,13 @@ Issue [1] is an ERROR:
                         <paragraph>name</paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Model">Model class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Model">Model class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>addUnits</paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Variable">Variable class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Variable">Variable class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>setUnits</paragraph>
@@ -754,9 +754,9 @@ Issue [1] is an ERROR:
             <paragraph>Some basic units have been defined and built into libCellML, others you can define by combining the built-in ones using scaling factors and exponents, or you can define your own from scratch if need be.
                 Please read the <reference internal="True" refuri="../../tutorial3/index#aside-units"><inline classes="std std-ref">Understanding units</inline></reference> page for more detailed information, but for now let’s look at a simple example that defines a <literal classes="code">Units</literal> item representing millivolts.</paragraph>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -772,9 +772,9 @@ mV-&gt;addUnit("volt", -3);       // reference unit, prefix as an integer
 // OR
 mV-&gt;addUnit("volt", 1.0, 1, 0.001);  // reference unit, prefix, exponent, multiplier</literal_block>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python</paragraph>
                         </container>
                     </container>
@@ -912,7 +912,7 @@ COMPONENTS: 1 components
         <section ids="step-6-analyse-the-mathematical-construction-of-the-model" names="step\ 6:\ analyse\ the\ mathematical\ construction\ of\ the\ model">
             <title refid="id7">Step 6: Analyse the mathematical construction of the model</title>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Analyser">Analyser class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Analyser">Analyser class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>create</paragraph>
@@ -1004,7 +1004,7 @@ Issue [2] is an ERROR:
                     Name it “gateParameters”, and add it to the top-level gate component as a sibling of the gateEquations component.</paragraph>
             </container>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Variable">Variable class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Variable">Variable class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>setInitialValue</paragraph>
@@ -1013,13 +1013,13 @@ Issue [2] is an ERROR:
                         <paragraph>addEquivalence</paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Component">Component class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Component">Component class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>variable</paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Model">Model class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Model">Model class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>component</paragraph>
@@ -1085,9 +1085,9 @@ Issue [2] is an ERROR:
                 There is more information about interacting with collections of items on the <reference internal="True" refuri="../../../howto/actions/understand_collections#understand-collections"><inline classes="std std-ref">Understanding collections of items</inline></reference> page.</paragraph>
             <paragraph>Two particularly useful idioms are shown below.</paragraph>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -1102,9 +1102,9 @@ auto grandson = model-&gt;component("grandfather")-&gt;component("daddy")-&gt;co
 // Short-cut to retrieve the component with the given name from anywhere in the encapsulation hierarchy:
 auto granddaughter = model-&gt;component("granddaughter", true);</literal_block>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python</paragraph>
                         </container>
                     </container>
@@ -1163,13 +1163,13 @@ Issue [0] is an ERROR:
     stored item type: VARIABLE
 ... etc ...</literal_block>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Model">Model class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Model">Model class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>fixVariableInterfaces</paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Variable">Variable class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Variable">Variable class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>setInterfaceType</paragraph>

@@ -66,7 +66,7 @@
                 arranging a given distribution of microstates of a system and
                 <math>k_{B}</math> is Boltzmann’s constant <footnote_reference auto="1" docname="theory/theory_iongates" ids="id1" refid="id5">1</footnote_reference>. The driving force for ion
                 movement is the dispersal of energy into a more probable distribution
-                (see <number_reference internal="True" refid="distribution-microstates" title="Fig. %s"><inline classes="std std-numref">Fig. 3</inline></number_reference> ; cf. the second law of
+                (see <literal classes="xref std std-numref">distribution_microstates</literal> ; cf. the second law of
                 thermodynamics <footnote_reference auto="1" docname="theory/theory_iongates" ids="id2" refid="id6">2</footnote_reference>).</paragraph>
             <paragraph>The energy change <math>\Delta q</math> associated with this change of
                 entropy <math>\Delta S</math> at temperature <math>T</math> is
@@ -96,7 +96,7 @@
             <title refid="id12">Electrical theory</title>
             <paragraph>Every positively charged ion that crosses the membrane raises the
                 potential difference and produces an electrostatic driving force that
-                opposes the entropic force (see <number_reference internal="True" refid="ocr-tut-bal-force" title="Fig. %s"><inline classes="std std-numref">Fig. 4</inline></number_reference>). To move an
+                opposes the entropic force (see <literal classes="xref std std-numref">ocr_tut_bal_force</literal>). To move an
                 electron of
                 charge <math>e</math> (<math>\approx 1.6\times 10^{-19}\text{  }(C)</math>) through a
                 voltage
@@ -136,7 +136,7 @@
                 Nernst potential for that ion:</paragraph>
             <math_block docname="theory/theory_iongates" label="True" nowrap="False" number="True" xml:space="preserve">{\overset{\overline{}}{i}}_{Y}\mathbf{=}{\overset{\overline{}}{g}}_{Y}\left( V - E_{Y} \right)</math_block>
             <paragraph>This defines a linear current-voltage relation (“Ohm’s law”) as shown in
-                <number_reference internal="True" refid="ion-gates-theory" title="Fig. %s(a)"><inline classes="std std-numref">Fig. 5(a)</inline></number_reference>. The specific characteristics of a channel’s
+                <literal classes="xref std std-numref">Fig. %s(a)</literal>. The specific characteristics of a channel’s
                 behaviour depend on how its gates modify the open channel conductance.</paragraph>
             <figure align="center" ids="ion-gates-theory" names="ion_gates_theory">
                 <image alt="Open channel linear IV" candidates="{'*': 'theory/images/ion_gates_theory.png'}" uri="theory/images/ion_gates_theory.png" width="12cm"></image>
@@ -151,7 +151,7 @@
                 If the fraction of gates that are open is <math>y</math>, the fraction of gates
                 that are closed is <math>1-y</math>, and a first order ODE can be used to describe
                 the transition between the two states
-                (see <number_reference internal="True" refid="ion-gates-theory" title="Fig. %s(b)"><inline classes="std std-numref">Fig. 5(b)</inline></number_reference>).</paragraph>
+                (see <literal classes="xref std std-numref">Fig. %s(b)</literal>).</paragraph>
             <math_block docname="theory/theory_iongates" label="True" nowrap="False" number="True" xml:space="preserve">\frac{dy}{dt} = \alpha_{y}\left( 1 - y \right) - \beta_{y}.y</math_block>
             <paragraph>where <math>\alpha_{y}</math>is the opening rate and <math>\beta_{y}</math> is
                 the closing rate.</paragraph>
@@ -161,9 +161,9 @@
             <math_block docname="theory/theory_iongates" label="True" nowrap="False" number="True" xml:space="preserve">A = y\left( 0 \right) - \frac{\alpha_{y}}{\alpha_{y} + \beta_{y}}</math_block>
             <paragraph>as in the previous example and, with <math>y\left( 0 \right) = 0</math> (i.e.
                 all gates initially shut), the solution looks like
-                <number_reference internal="True" refid="gate-behaviour" title="Fig. %s(a)"><inline classes="std std-numref">Fig. 6(a)</inline></number_reference>.  The experimental data obtained
+                <literal classes="xref std std-numref">Fig. %s(a)</literal>.  The experimental data obtained
                 by Hodgkin and Huxley for the squid axon indicated that the initial current
-                flow began more slowly, as in <number_reference internal="True" refid="gate-behaviour" title="Fig. %s(b)"><inline classes="std std-numref">Fig. 6(b)</inline></number_reference>.</paragraph>
+                flow began more slowly, as in <literal classes="xref std std-numref">Fig. %s(b)</literal>.</paragraph>
             <figure align="center" ids="gate-behaviour" names="gate_behaviour" width="50%">
                 <image alt="Transient gate behaviour" candidates="{'*': 'theory/images/transient_beh_gates.png'}" uri="theory/images/transient_beh_gates.png"></image>
                 <caption>Transient behaviour for one gate (left) and γ gates in series (right). Note
@@ -190,7 +190,7 @@
                 <math>\alpha_{y} = 1</math> ms<superscript>-1</superscript> and <math>\beta_{y} = 2</math>
                 ms<superscript>-1</superscript>.</paragraph>
             <paragraph>The modelled behaviour of a single gate is shown by the green line in
-                <number_reference internal="True" refid="ion-gate-status" title="Fig. %s"><inline classes="std std-numref">Fig. 7</inline></number_reference>, and the resulting channel current for four
+                <literal classes="xref std std-numref">ion_gate_status</literal>, and the resulting channel current for four
                 gates in series by the blue line. Note the slow start to the current trace
                 in comparison with the single gate transient <math>y\left( t \right)</math>, as
                 observed experimentally by Hodgkin and Huxley.</paragraph>

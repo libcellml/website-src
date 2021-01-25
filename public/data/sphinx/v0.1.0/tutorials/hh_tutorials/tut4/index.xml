@@ -339,13 +339,13 @@ COMPONENTS: 2 components
                 This is done using a <literal classes="code">GeneratorProfile</literal> to specify a dictionary of mathematical operations.
                 Two profiles are already defined; for C++ and for Python.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1GeneratorProfile">GeneratorProfile class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1GeneratorProfile">GeneratorProfile class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>create</paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Generator">Generator class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Generator">Generator class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>create</paragraph>
@@ -408,13 +408,13 @@ COMPONENTS: 2 components
             </container>
             <paragraph>Instead of submitting a <literal classes="code">Model</literal> item (as we do for all other classes), the <literal classes="code">Generator</literal> class will work from something which has already been processed by the <literal classes="code">Analyser</literal> class: an <literal classes="code">AnalyserModel</literal> object.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1GeneratorProfile">Analyser class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1GeneratorProfile">Analyser class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>model</paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Generator">Generator class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Generator">Generator class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>setModel</paragraph>
@@ -426,7 +426,7 @@ COMPONENTS: 2 components
                         <paragraph>interfaceCode</paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1GeneratorProfile">GeneratorProfile class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1GeneratorProfile">GeneratorProfile class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>setInterfaceFileNameString</paragraph>

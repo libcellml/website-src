@@ -78,9 +78,9 @@ include :: ../snippets/snippet_edit_mathml.rst</comment>
                         </list_item>
                     </bullet_list>
                     <container classes="sphinx-tabs">
-                        <container classes="dummy">
+                        <container>
                             <container classes="item">
-                                <container classes="dummy">
+                                <container>
                                     <paragraph>C++</paragraph>
                                 </container>
                             </container>
@@ -126,9 +126,9 @@ int main()
 </literal_block>
                             </container>
                         </container>
-                        <container classes="dummy">
+                        <container>
                             <container classes="item">
-                                <container classes="dummy">
+                                <container>
                                     <paragraph>Python</paragraph>
                                 </container>
                             </container>
@@ -188,9 +188,9 @@ if __name__ == '__main__':
                     <paragraph>This example demonstrates the addition and removal of items from a collection.
                         Note that while removal of items from a collection can be done by pointer symbol, by name, and by index, adding them is only possible via pointer.</paragraph>
                     <container classes="sphinx-tabs">
-                        <container classes="dummy">
+                        <container>
                             <container classes="item">
-                                <container classes="dummy">
+                                <container>
                                     <paragraph>C++</paragraph>
                                 </container>
                             </container>
@@ -250,9 +250,9 @@ assert(success == false);
 success = component-&gt;removeVariable(nullptr);
 assert(success == false);</literal_block>
                         </container>
-                        <container classes="dummy">
+                        <container>
                             <container classes="item">
-                                <container classes="dummy">
+                                <container>
                                     <paragraph>Python</paragraph>
                                 </container>
                             </container>
@@ -310,11 +310,11 @@ assert(success == false);</literal_block>
                     </block_quote>
                     <paragraph>Note that the <literal classes="code">removeEquivalence</literal> function will only remove an equivalence which was previously set using the <literal classes="code">addEquivalence</literal> function; it does not remove any indirect connections via third-party variables between the two.</paragraph>
                     <paragraph>An additional <literal classes="code">removeAllEquivalences</literal> function will completely remove the variable from any connected set.</paragraph>
-                    <paragraph>Please see the <reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Variable">API Variable</reference> page for details of these functions.</paragraph>
+                    <paragraph>Please see the <reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Variable">API Variable</reference> page for details of these functions.</paragraph>
                     <container classes="sphinx-tabs">
-                        <container classes="dummy">
+                        <container>
                             <container classes="item">
-                                <container classes="dummy">
+                                <container>
                                     <paragraph>C++</paragraph>
                                 </container>
                             </container>
@@ -329,9 +329,9 @@ auto isAconnectedToB = libcellml::Variable::addEquivalence(A, B);
 // Remove a pre-existing equivalence between variables C and D.
 auto isCdisconnectedFromD = libcellml::Variable::removeEquivalence(C, D);</literal_block>
                         </container>
-                        <container classes="dummy">
+                        <container>
                             <container classes="item">
-                                <container classes="dummy">
+                                <container>
                                     <paragraph>Python</paragraph>
                                 </container>
                             </container>
@@ -377,9 +377,9 @@ Model 'quickstart_editEncapsulation' has 2 components
       - Component 'tomatoes' has 0 child components
   - Component 'vegetables' has 0 child components</literal_block>
                         <container classes="sphinx-tabs">
-                            <container classes="dummy">
+                            <container>
                                 <container classes="item">
-                                    <container classes="dummy">
+                                    <container>
                                         <paragraph>C++</paragraph>
                                     </container>
                                 </container>
@@ -415,9 +415,9 @@ int main()
     printEncapsulationStructureToTerminal(model);
 }</literal_block>
                             </container>
-                            <container classes="dummy">
+                            <container>
                                 <container classes="item">
-                                    <container classes="dummy">
+                                    <container>
                                         <paragraph>Python</paragraph>
                                     </container>
                                 </container>

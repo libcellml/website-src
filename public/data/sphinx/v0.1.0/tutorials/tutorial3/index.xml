@@ -411,7 +411,7 @@
 </literal_block>
             </container>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Component">Component class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Component">Component class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>setMath</paragraph>
@@ -542,7 +542,7 @@ Issue 2 is an ERROR:
         <section ids="step-2-create-the-variables" names="step\ 2:\ create\ the\ variables">
             <title>Step 2: Create the variables</title>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Variable">Variable class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Variable">Variable class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>create</paragraph>
@@ -551,7 +551,7 @@ Issue 2 is an ERROR:
                         <paragraph>setName</paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Component">Component class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Component">Component class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>addVariable</paragraph>
@@ -750,11 +750,11 @@ Issue 0 is an ERROR:
                         </list_item>
                     </bullet_list>
                     <paragraph>The overloaded argument option list is shown below for each language.
-                        Please check the <reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Units">API Units documentation</reference> for details.</paragraph>
+                        Please check the <reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Units">API Units documentation</reference> for details.</paragraph>
                     <container classes="sphinx-tabs">
-                        <container classes="dummy">
+                        <container>
                             <container classes="item">
-                                <container classes="dummy">
+                                <container>
                                     <paragraph>C++</paragraph>
                                 </container>
                             </container>
@@ -773,9 +773,9 @@ void addUnit(const std::string &amp;reference, double exponent, const std::strin
 
 void addUnit(const std::string &amp;reference);</literal_block>
                         </container>
-                        <container classes="dummy">
+                        <container>
                             <container classes="item">
-                                <container classes="dummy">
+                                <container>
                                     <paragraph>Python</paragraph>
                                 </container>
                             </container>
@@ -790,9 +790,9 @@ addUnit(reference)</literal_block>
                     <paragraph>To create a <literal classes="code">Units</literal> item you need will follow the same basic steps as other entities: declare it, name it, define it, and then add it in.
                         For example:</paragraph>
                     <container classes="sphinx-tabs">
-                        <container classes="dummy">
+                        <container>
                             <container classes="item">
-                                <container classes="dummy">
+                                <container>
                                     <paragraph>C++</paragraph>
                                 </container>
                             </container>
@@ -808,9 +808,9 @@ ms-&gt;addUnit("second", 1.0, -3);  // reference unit, multiplier, exponent
 // OR
 ms-&gt;addUnit("second", 1.0, 0, 0.001);  // reference unit, multiplier, exponent</literal_block>
                         </container>
-                        <container classes="dummy">
+                        <container>
                             <container classes="item">
-                                <container classes="dummy">
+                                <container>
                                     <paragraph>Python</paragraph>
                                 </container>
                             </container>
@@ -832,9 +832,9 @@ ms.addUnit("second", 1, 1.0, 0.01)     # reference unit, prefix, exponent, multi
                     <paragraph>Units can be defined based on one another as well.
                         For example, after defining our <literal classes="code">millisecond</literal> units, we could then use this definition to define the <literal classes="code">per_millisecond</literal> units by simply including it with an exponent of -1:</paragraph>
                     <container classes="sphinx-tabs">
-                        <container classes="dummy">
+                        <container>
                             <container classes="item">
-                                <container classes="dummy">
+                                <container>
                                     <paragraph>C++</paragraph>
                                 </container>
                             </container>
@@ -843,9 +843,9 @@ ms.addUnit("second", 1, 1.0, 0.01)     # reference unit, prefix, exponent, multi
                             <literal_block force="False" highlight_args="{}" language="cpp" linenos="False" xml:space="preserve">// Define a per_millisecond unit based on millisecond^-1:
 per_ms-&gt;addUnit(ms, -1.0);</literal_block>
                         </container>
-                        <container classes="dummy">
+                        <container>
                             <container classes="item">
-                                <container classes="dummy">
+                                <container>
                                     <paragraph>Python</paragraph>
                                 </container>
                             </container>
@@ -862,9 +862,9 @@ per_ms.addUnit(ms, -1.0)  # reference unit, exponent</literal_block>
                         While this is not common in purely physical models (all of the seven physical attributes are already included), for times when you’re modelling something non-physical (such as our numbers of sharks or fishes), you’re able to define your own.
                         Here’s an example.</paragraph>
                     <container classes="sphinx-tabs">
-                        <container classes="dummy">
+                        <container>
                             <container classes="item">
-                                <container classes="dummy">
+                                <container>
                                     <paragraph>C++</paragraph>
                                 </container>
                             </container>
@@ -880,9 +880,9 @@ auto uBanana = libcellml::Units::create("banana");
 auto uBunchOfBananas = libcellml::Units::create("bunch_of_bananas");
 u2-&gt;addUnit("banana", 5.0);  // include bananas^5 in the bunch_of_bananas unit</literal_block>
                         </container>
-                        <container classes="dummy">
+                        <container>
                             <container classes="item">
-                                <container classes="dummy">
+                                <container>
                                     <paragraph>Python</paragraph>
                                 </container>
                             </container>
@@ -903,7 +903,7 @@ uBunchOfBananas.addUnit("banana", 5.0)  # include bananas^5 in the bunch_of_bana
                 </container>
             </container>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Units">Units class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Units">Units class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>create</paragraph>
@@ -915,7 +915,7 @@ uBunchOfBananas.addUnit("banana", 5.0)  # include bananas^5 in the bunch_of_bana
                         <paragraph>addUnit (note singular)</paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Model">Model class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Model">Model class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>addUnits (note plural)</paragraph>
@@ -924,7 +924,7 @@ uBunchOfBananas.addUnit("banana", 5.0)  # include bananas^5 in the bunch_of_bana
                         <paragraph>linkUnits</paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Variable">Variable class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Variable">Variable class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>setUnits (note plural)</paragraph>
@@ -934,9 +934,9 @@ uBunchOfBananas.addUnit("banana", 5.0)  # include bananas^5 in the bunch_of_bana
             <paragraph>To create a <literal classes="code">Units</literal> item you need will follow the same basic steps as other entities: declare it, name it, define it, and then add it in.
                 For example:</paragraph>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -952,9 +952,9 @@ ms-&gt;addUnit("second", 1.0, -3);  reference unit, prefix, exponent
 // OR
 ms-&gt;addUnit("second", 1.0, 0, 0.001);  reference unit, prefix, exponent, multiplier</literal_block>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python</paragraph>
                         </container>
                     </container>
@@ -1285,7 +1285,7 @@ Issue 0 is an ERROR:
             <paragraph>The <literal classes="code">Analyser</literal> class checks that the underlying mathematical model represented by the entire combination of variables, components, and mathematics, makes sense.
                 The <literal classes="code">Validator</literal> checks your “spelling” and syntax, and the <literal classes="code">Analyser</literal> checks for the ability to find a solution.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Analyser">Analyser class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Analyser">Analyser class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>create</paragraph>
@@ -1425,7 +1425,7 @@ Issue 0 is an ERROR:
                 </list_item>
             </bullet_list>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Generator">Generator class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Generator">Generator class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>create</paragraph>
@@ -1443,7 +1443,7 @@ Issue 0 is an ERROR:
                         <paragraph>implementationCode</paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1GeneratorProfile">GeneratorProfile class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1GeneratorProfile">GeneratorProfile class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>create</paragraph>
