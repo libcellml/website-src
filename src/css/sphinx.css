@@ -8,6 +8,8 @@
     padding-bottom: 0.3em;
 }
 
+
+
 .v-application a {
     color: var(--link-colour) !important;
     text-decoration: none;
@@ -22,21 +24,22 @@ pre {
     background-color: var(--very-pale-grey);
 }
 
-pre > code.plaintext {
+/* pre > code.plaintext {
     padding: 0.6em;
-}
+} */
 
 /* Inline literal code blocks in the Sphinx-based files. */
 .theme--light.v-application code.code {
     color: var(--deep-blue);
-    padding: .25rem .5rem;
+    padding: 0.1rem 0.3rem 0.2rem 0.3rem;
     margin: 0;
     font-size: .95em;
     font-weight: 500;
     background-color: var(--transparent-grey);
-    border-radius: 3px;
+    border-radius: 5px;
     font-family: var(--code-font);
 }
+
 
 .v-application code::before, .v-application code::after {
     display: none;
@@ -50,12 +53,24 @@ code.plaintext {
     width: 100%;
 }
 
+code.hljs {
+    padding: 1em;
+}
+
 code.xref {
     font-family: var(--text-font);
     color: var(--deep-red);
     font-weight: 500;
 }
 
+/* Padding for code blocks outside of the text */
+pre > code {
+    padding: 1em;
+}
+
+.hljs {
+    padding: 1em;
+}
 
 /* Shortlist class. */
 .shortlist > ul > li > p {

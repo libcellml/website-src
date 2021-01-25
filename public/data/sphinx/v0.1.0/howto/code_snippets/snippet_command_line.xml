@@ -8,9 +8,9 @@
             <paragraph>Retrieve command line parameters</paragraph>
         </container>
         <container classes="sphinx-tabs">
-            <container classes="dummy">
+            <container>
                 <container classes="item">
-                    <container classes="dummy">
+                    <container>
                         <paragraph>C++ snippet</paragraph>
                     </container>
                 </container>
@@ -45,9 +45,9 @@
                     <paragraph>Full context: <download_reference filename="a7dbe8fe8475e1fe24e8555329aec747/solveGeneratedModel.cpp" refdoc="howto/code_snippets/snippet_command_line" refdomain="" refexplicit="True" reftarget="../code/solver/solveGeneratedModel.cpp" reftype="download" refwarn="False"><literal classes="xref download">example_solveGeneratedModel.cpp</literal></download_reference></paragraph>
                 </container>
             </container>
-            <container classes="dummy">
+            <container>
                 <container classes="item">
-                    <container classes="dummy">
+                    <container>
                         <paragraph>Python snippet</paragraph>
                     </container>
                 </container>

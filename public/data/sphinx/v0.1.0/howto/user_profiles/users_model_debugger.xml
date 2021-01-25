@@ -54,9 +54,9 @@
             <paragraph>Here we use the <literal classes="code">Parser</literal> class to read the file, and deserialise the CellML into a <literal classes="code">Model</literal> object.
                 The CellML file used in this example makes use of imports, so we need to have the main file (debugAnalysisExample.cellml) as well as the file which it imports (debugAnalysisExampleImport.cellml).</paragraph>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++ snippet</paragraph>
                         </container>
                     </container>
@@ -74,9 +74,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python snippet</paragraph>
                         </container>
                     </container>
@@ -95,11 +95,11 @@
             <title refid="id2">Resolve the imports and flatten the model</title>
             <paragraph>At present the <literal classes="code">Analyser</literal> class ignores the contents of imported items.
                 This example shows a model which has imports, so we need to resolve these and flatten the model before any analysis can happen.
-                For detailed information on debugging models with imports, please see the <inline classes="xref std std-ref">Import debugging</inline> examples.</paragraph>
+                For detailed information on debugging models with imports, please see the <reference internal="True" refuri="users_import_debugger#users-import-debugger"><inline classes="std std-ref">Import debugging</inline></reference> examples.</paragraph>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++ snippet</paragraph>
                         </container>
                     </container>
@@ -123,9 +123,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python snippet</paragraph>
                         </container>
                     </container>
@@ -155,9 +155,9 @@
             <paragraph>The <literal classes="code">Validator</literal> class process is like a spelling checker: it will check the syntax of the model ahead of analysing its mathematical formulation in the <literal classes="code">Analyser</literal> later.
                 Here we create a validator, use it to check the model, and retrieve the descriptions of any issues it found.</paragraph>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++ snippet</paragraph>
                         </container>
                     </container>
@@ -176,9 +176,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python snippet</paragraph>
                         </container>
                     </container>
@@ -199,9 +199,9 @@
             </container>
             <paragraph>The validation issues raised can be used to fix any “spelling” problems with the model.</paragraph>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++ snippet</paragraph>
                         </container>
                     </container>
@@ -221,9 +221,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python snippet</paragraph>
                         </container>
                     </container>
@@ -251,9 +251,9 @@
                 It will check for errors of logic or mathematical definition in the model formulation, and also make sure that all of the information which a solver needs is available.
                 The <literal classes="code">Analyser</literal> works in the same way as the other service classes: we create an instance, pass a model for checking, and then retrieve any issues it may have found.</paragraph>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++ snippet</paragraph>
                         </container>
                     </container>
@@ -272,9 +272,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python snippet</paragraph>
                         </container>
                     </container>
@@ -298,9 +298,9 @@
                     For this reason, you may need several iterations of checking and fixing before all of the issues are addressed.</paragraph>
             </container>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++ snippet</paragraph>
                         </container>
                     </container>
@@ -359,9 +359,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python snippet</paragraph>
                         </container>
                     </container>
@@ -423,9 +423,9 @@
             <paragraph>Finally, we can serialised the repaired model for output to a CellML file using the <literal classes="code">Printer</literal> class.
                 Note that this prints the flattened model, so will not contain the import dependencies of the original one.</paragraph>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++ snippet</paragraph>
                         </container>
                     </container>
@@ -443,9 +443,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python snippet</paragraph>
                         </container>
                     </container>

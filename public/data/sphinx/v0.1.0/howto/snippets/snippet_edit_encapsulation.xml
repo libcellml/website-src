@@ -19,9 +19,9 @@ Model 'quickstart_editEncapsulation' has 2 components
       - Component 'tomatoes' has 0 child components
   - Component 'vegetables' has 0 child components</literal_block>
         <container classes="sphinx-tabs">
-            <container classes="dummy">
+            <container>
                 <container classes="item">
-                    <container classes="dummy">
+                    <container>
                         <paragraph>C++</paragraph>
                     </container>
                 </container>
@@ -57,9 +57,9 @@ int main()
     printEncapsulationStructureToTerminal(model);
 }</literal_block>
             </container>
-            <container classes="dummy">
+            <container>
                 <container classes="item">
-                    <container classes="dummy">
+                    <container>
                         <paragraph>Python</paragraph>
                     </container>
                 </container>

@@ -22,9 +22,9 @@
             </list_item>
         </bullet_list>
         <container classes="sphinx-tabs">
-            <container classes="dummy">
+            <container>
                 <container classes="item">
-                    <container classes="dummy">
+                    <container>
                         <paragraph>C++</paragraph>
                     </container>
                 </container>
@@ -70,9 +70,9 @@ int main()
 </literal_block>
                 </container>
             </container>
-            <container classes="dummy">
+            <container>
                 <container classes="item">
-                    <container classes="dummy">
+                    <container>
                         <paragraph>Python</paragraph>
                     </container>
                 </container>

@@ -14,9 +14,9 @@
             <paragraph>TODO: Need more examples of useful mathml manipulation. Variable names? Need to remove whitespace first?</paragraph>
         </block_quote>
         <container classes="sphinx-tabs">
-            <container classes="dummy">
+            <container>
                 <container classes="item">
-                    <container classes="dummy">
+                    <container>
                         <paragraph>C++</paragraph>
                     </container>
                 </container>
@@ -42,9 +42,9 @@
     std::cout &lt;&lt; "Switched units '" &lt;&lt; in &lt;&lt; "' for units '" &lt;&lt; out &lt;&lt; "'" &lt;&lt; std::endl;
 }</literal_block>
             </container>
-            <container classes="dummy">
+            <container>
                 <container classes="item">
-                    <container classes="dummy">
+                    <container>
                         <paragraph>Python</paragraph>
                     </container>
                 </container>

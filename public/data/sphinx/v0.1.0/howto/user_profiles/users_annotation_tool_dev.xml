@@ -11,58 +11,37 @@
             In the <literal classes="code">Annotator</literal>, the ID string is used instead.
             Because an item of any type could have an ID attribute, there is no way of knowing what kind of will be returned.
             The class makes use of casting to and from the (C++ only) <reference internal="False" refuri="https://en.cppreference.com/w/cpp/utility/any">std::any type</reference> to handle this uncertainty.</paragraph>
-        <paragraph><strong>Contents</strong></paragraph>
-        <topic classes="contents local" ids="contents" names="contents">
-            <bullet_list>
-                <list_item>
-                    <paragraph><reference ids="id1" refid="parse-an-existing-cellml-model">Parse an existing CellML model</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id2" refid="use-an-annotator-to-investigate-the-model">Use an annotator to investigate the model</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id3" refid="retrieve-items-by-id-known-type">Retrieve items by id (known type)</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id4" refid="retrieve-items-by-id-unknown-type">Retrieve items by id (unknown type)</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id5" refid="handle-duplicated-id-attributes">Handle duplicated ID attributes</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id6" refid="automatically-assign-unique-ids-in-bulk">Automatically assign unique IDs in bulk</reference></paragraph>
-                </list_item>
-            </bullet_list>
-        </topic>
-        <line_block>
-            <line><strong>C++ resources</strong></line>
+        <container classes="lineblocks">
             <line_block>
-                <line>├ <download_reference filename="61b55b25a3aa0bf359ae2b69dcce7f5a/CMakeLists.txt" refdoc="howto/user_profiles/users_annotation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/annotation_tool_dev/CMakeLists.txt" reftype="download" refwarn="False"><literal classes="xref download">CMakeLists.txt</literal></download_reference></line>
-                <line>├ <download_reference filename="6b67da2fbfc46841482035367c333f90/annotationToolDev.cpp" refdoc="howto/user_profiles/users_annotation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/annotation_tool_dev/annotationToolDev.cpp" reftype="download" refwarn="False"><literal classes="xref download">annotationToolDev.cpp</literal></download_reference></line>
-                <line>└ resources/</line>
+                <line><strong>C++ resources</strong></line>
                 <line_block>
-                    <line>└ <download_reference filename="d52db739781576a602600793f15a5c67/annotationExample.cellml" refdoc="howto/user_profiles/users_annotation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/annotation_tool_dev/annotationExample.cellml" reftype="download" refwarn="False"><literal classes="xref download">annotationExample.cellml</literal></download_reference></line>
+                    <line>├ <download_reference filename="61b55b25a3aa0bf359ae2b69dcce7f5a/CMakeLists.txt" refdoc="howto/user_profiles/users_annotation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/annotation_tool_dev/CMakeLists.txt" reftype="download" refwarn="False"><literal classes="xref download">CMakeLists.txt</literal></download_reference></line>
+                    <line>├ <download_reference filename="6b67da2fbfc46841482035367c333f90/annotationToolDev.cpp" refdoc="howto/user_profiles/users_annotation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/annotation_tool_dev/annotationToolDev.cpp" reftype="download" refwarn="False"><literal classes="xref download">annotationToolDev.cpp</literal></download_reference></line>
+                    <line>└ resources/</line>
+                    <line_block>
+                        <line>└ <download_reference filename="d52db739781576a602600793f15a5c67/annotationExample.cellml" refdoc="howto/user_profiles/users_annotation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/annotation_tool_dev/annotationExample.cellml" reftype="download" refwarn="False"><literal classes="xref download">annotationExample.cellml</literal></download_reference></line>
+                    </line_block>
                 </line_block>
             </line_block>
-        </line_block>
-        <line_block>
-            <line><strong>Python resources</strong></line>
             <line_block>
-                <line>├ <download_reference filename="9dc110dc198bcd3d887e60d6cb882e58/annotationToolDev.py" refdoc="howto/user_profiles/users_annotation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/annotation_tool_dev/annotationToolDev.py" reftype="download" refwarn="False"><literal classes="xref download">annotationToolDev.py</literal></download_reference></line>
-                <line>└ resources/</line>
+                <line><strong>Python resources</strong></line>
                 <line_block>
-                    <line>└ <download_reference filename="d52db739781576a602600793f15a5c67/annotationExample.cellml" refdoc="howto/user_profiles/users_annotation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/annotation_tool_dev/annotationExample.cellml" reftype="download" refwarn="False"><literal classes="xref download">annotationExample.cellml</literal></download_reference></line>
+                    <line>├ <download_reference filename="9dc110dc198bcd3d887e60d6cb882e58/annotationToolDev.py" refdoc="howto/user_profiles/users_annotation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/annotation_tool_dev/annotationToolDev.py" reftype="download" refwarn="False"><literal classes="xref download">annotationToolDev.py</literal></download_reference></line>
+                    <line>└ resources/</line>
+                    <line_block>
+                        <line>└ <download_reference filename="d52db739781576a602600793f15a5c67/annotationExample.cellml" refdoc="howto/user_profiles/users_annotation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/annotation_tool_dev/annotationExample.cellml" reftype="download" refwarn="False"><literal classes="xref download">annotationExample.cellml</literal></download_reference></line>
+                    </line_block>
                 </line_block>
             </line_block>
-        </line_block>
+        </container>
         <section ids="parse-an-existing-cellml-model" names="parse\ an\ existing\ cellml\ model">
-            <title refid="id1">Parse an existing CellML model</title>
+            <title>Parse an existing CellML model</title>
             <paragraph>The first step in any annotation process is to open the model to be annotated.
                 Here we use the <literal classes="code">Parser</literal> class to read the file, and deserialise the CellML into a <literal classes="code">Model</literal> object.</paragraph>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++ snippet</paragraph>
                         </container>
                     </container>
@@ -81,9 +60,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python snippet</paragraph>
                         </container>
                     </container>
@@ -99,13 +78,13 @@
             </container>
         </section>
         <section ids="use-an-annotator-to-investigate-the-model" names="use\ an\ annotator\ to\ investigate\ the\ model">
-            <title refid="id2">Use an annotator to investigate the model</title>
+            <title>Use an annotator to investigate the model</title>
             <paragraph>The <literal classes="code">Annotator</literal> class is fundamentally different from other libCellML classes in that it used ID strings (as opposed to names or indices) to retrieve and manipulate items.
                 It can be used to retrieve the ID string and item type to which it pertains, using the <emphasis>dictionary</emphasis> function.</paragraph>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++ snippet</paragraph>
                         </container>
                     </container>
@@ -125,9 +104,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python snippet</paragraph>
                         </container>
                     </container>
@@ -172,13 +151,13 @@
             </container>
         </section>
         <section ids="retrieve-items-by-id-known-type" names="retrieve\ items\ by\ id\ (known\ type)">
-            <title refid="id3">Retrieve items by id (known type)</title>
+            <title>Retrieve items by id (known type)</title>
             <paragraph>When you know the type of item which is assigned a certain ID, it is straightforward to fetch that item from the <literal classes="code">Annotator</literal> using any of the type-specific functions, as shown below.
                 A null pointer will be returned if the item does not have the type requested, or if its ID does not exist in the model.</paragraph>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++ snippet</paragraph>
                         </container>
                     </container>
@@ -219,9 +198,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python snippet</paragraph>
                         </container>
                     </container>
@@ -265,14 +244,14 @@
             </container>
         </section>
         <section ids="retrieve-items-by-id-unknown-type" names="retrieve\ items\ by\ id\ (unknown\ type)">
-            <title refid="id4">Retrieve items by id (unknown type)</title>
+            <title>Retrieve items by id (unknown type)</title>
             <paragraph>It’s more likely that you won’t know the type of item to which a given ID relates, so will need to use the generic <emphasis>item</emphasis> function to retrieve it.
                 This returns two pieces of information: the first is the appropriate <literal classes="code">CellMLElements</literal> enum value for the type, and the second is the item itself cast into the <reference internal="False" refuri="https://en.cppreference.com/w/cpp/utility/any">std::any type</reference> (in C++).
                 In Python, the returned item requires no further transformation.</paragraph>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++ snippet</paragraph>
                         </container>
                     </container>
@@ -346,9 +325,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python snippet</paragraph>
                         </container>
                     </container>
@@ -376,16 +355,16 @@
             </container>
         </section>
         <section ids="handle-duplicated-id-attributes" names="handle\ duplicated\ id\ attributes">
-            <title refid="id5">Handle duplicated ID attributes</title>
+            <title>Handle duplicated ID attributes</title>
             <paragraph>Duplicated IDs in any XML document are not permitted, and CellML is no different.
                 There are several tools to support users in removing duplicates from their models.
                 The code snippet below uses the annotator to return a set of ID strings which have been duplicated within the model scope, and then uses the collective and generic function <emphasis>items</emphasis> to return all of them.
                 From here, the items can be assigned an automatically generated ID string which is guaranteed to be unique within the model scope.
                 Of course, you can also set the id of these items manually too if you’d rather.</paragraph>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++ snippet</paragraph>
                         </container>
                     </container>
@@ -435,9 +414,9 @@
 </literal_block>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python snippet</paragraph>
                         </container>
                     </container>
@@ -496,14 +475,14 @@ After fixing all duplicates there are 0 duplicated ids in the model.</literal_bl
             </container>
         </section>
         <section ids="automatically-assign-unique-ids-in-bulk" names="automatically\ assign\ unique\ ids\ in\ bulk">
-            <title refid="id6">Automatically assign unique IDs in bulk</title>
+            <title>Automatically assign unique IDs in bulk</title>
             <paragraph>In addition to using the automatic ID generation on individual items as shown above, you can also use it for all items of a certain type.
                 The example below shows how calling the <emphasis>assignIds</emphasis> function for the <literal classes="code">CellmlElementType COMPONENT</literal> type fills in the missing ID from <literal classes="code">component2</literal> without changing the IDs of the other components.
                 Finally, IDs for every item in a model can be set with the <emphasis>assignAllIds</emphasis> function, and cleared from every item using the <emphasis>clearAllIds</emphasis> function.</paragraph>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++ snippet</paragraph>
                         </container>
                     </container>
@@ -546,9 +525,9 @@ After fixing all duplicates there are 0 duplicated ids in the model.</literal_bl
 </literal_block>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python snippet</paragraph>
                         </container>
                     </container>

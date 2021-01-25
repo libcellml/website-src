@@ -13,9 +13,9 @@
             This process will replace any previously stored model with the new one, as well as clearing all ids from the given model.
             Alternatively, if a model is already stored in the annotator instance, the ids of that stored model can be cleared by calling the <title_reference>clearAllIds()</title_reference> function without arguments.</paragraph>
         <container classes="sphinx-tabs">
-            <container classes="dummy">
+            <container>
                 <container classes="item">
-                    <container classes="dummy">
+                    <container>
                         <paragraph>C++</paragraph>
                     </container>
                 </container>
@@ -38,9 +38,9 @@ annotator-&gt;clearAllIds(model1);  // This will clear ids in model1,
 annotator-&gt;buildModelIndex(model2);
 annotator-&gt;clearAllIds();  // This will clear ids in model2, the model stored in the annotator.</literal_block>
             </container>
-            <container classes="dummy">
+            <container>
                 <container classes="item">
-                    <container classes="dummy">
+                    <container>
                         <paragraph>Python</paragraph>
                     </container>
                 </container>
