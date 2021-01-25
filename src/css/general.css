@@ -8,6 +8,7 @@
     --deep-red: #4e0202;
     --text-colour: #333333;
     --link-colour: #666666;
+    /* --link-colour: var(--deep-red); */
     --pale-grey:#dddddd;
     --very-pale-grey: #efefef;
 
@@ -46,6 +47,20 @@ h3 {
 
 .v-application {
     font-family: var(--text-font);
+}
+
+.v-application a {
+    color: var(--link-colour);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.v-application a.router-link-active {
+    color: var(--deep-red);
+}
+
+.v-application a:hover {
+    color: var(--bright-red) !important;
 }
 
 /* Turn off the Contents blocks on pages as they're in the sidebar. */
