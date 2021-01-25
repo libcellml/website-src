@@ -20,10 +20,13 @@
                     <paragraph><reference ids="id3" refid="validate-model">Validate model</reference></paragraph>
                 </list_item>
                 <list_item>
-                    <paragraph><reference ids="id4" refid="generate-code">Generate code</reference></paragraph>
+                    <paragraph><reference ids="id4" refid="analyse-model">Analyse model</reference></paragraph>
                 </list_item>
                 <list_item>
-                    <paragraph><reference ids="id5" refid="use-the-generated-code-to-simulate-the-model">Use the generated code to simulate the model</reference></paragraph>
+                    <paragraph><reference ids="id5" refid="generate-code">Generate code</reference></paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph><reference ids="id6" refid="use-the-generated-code-to-simulate-the-model">Use the generated code to simulate the model</reference></paragraph>
                 </list_item>
             </bullet_list>
         </topic>
@@ -53,11 +56,12 @@
             <paragraph>The following code will read a file called <literal classes="code">simulationExample.cellml</literal> and deserialise its contents into a <literal classes="code">Model</literal> instance.
                 Note that both the <literal classes="code">Parser</literal> class and its opposite number, the <literal classes="code">Printer</literal> class, deal with strings rather than files.
                 You’ll need to read the file into a string, and then use the string as input to the <literal classes="code">Parser</literal> item.</paragraph>
-            <container classes="sphinx-tabs">
-                <container classes="dummy">
+            <target refid="snippet-parser-parse-file"></target>
+            <container classes="sphinx-tabs" ids="snippet-parser-parse-file" names="snippet_parser_parse_file">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
-                            <paragraph>C++ snippet</paragraph>
+                        <container>
+                            <paragraph>C++</paragraph>
                         </container>
                     </container>
                     <container classes="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-0 active">
@@ -78,12 +82,13 @@
     printIssues(parser);
 
 </literal_block>
+                        <paragraph>Full context: <download_reference filename="1a96c1f0e6f53dae07a6c0a6b32f1036/simulationToolDev.cpp" refdoc="howto/user_profiles/users_simulation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/simulation_tool_dev/simulationToolDev.cpp" reftype="download" refwarn="False"><literal classes="xref download">example_simulationToolDev.cpp</literal></download_reference></paragraph>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
-                            <paragraph>Python snippet</paragraph>
+                        <container>
+                            <paragraph>Python</paragraph>
                         </container>
                     </container>
                     <container classes="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-1">
@@ -97,6 +102,7 @@
     print_issues_to_terminal(parser)
 
 </literal_block>
+                        <paragraph>Full context: <download_reference filename="5b3c7b36f7aedccc4adc246da4ad5d15/simulationToolDev.py" refdoc="howto/user_profiles/users_simulation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/simulation_tool_dev/simulationToolDev.py" reftype="download" refwarn="False"><literal classes="xref download">example_simulationToolDev.py</literal></download_reference></paragraph>
                     </container>
                 </container>
             </container>
@@ -108,11 +114,12 @@
                 While models which contain import dependencies are perfectly valid, they cannot be used to generate runnable code.
                 The process of resolving the imports (telling libCellML where to look for these ingredients) and flattening the model (creating instances of the ingredients and removing the dependency) is necessary before code generation can happen.</paragraph>
             <paragraph>The <literal classes="code">Importer</literal> class supports all functionality to do with imports, and contains its own logger which can be used to report anything that might have gone wrong.</paragraph>
-            <container classes="sphinx-tabs">
-                <container classes="dummy">
+            <target refid="snippet-importer-resolve"></target>
+            <container classes="sphinx-tabs" ids="snippet-importer-resolve" names="snippet_importer_resolve">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
-                            <paragraph>C++ snippet</paragraph>
+                        <container>
+                            <paragraph>C++</paragraph>
                         </container>
                     </container>
                     <container classes="ui bottom attached sphinx-tab tab segment sphinx-data-tab-1-0 active">
@@ -131,19 +138,20 @@
         printImportDependencies(model);
 
         // Retrieve a "flattened" (ie: import-free) model from the importer,
-        // and use it to over-write the current model.cd 
+        // and use it to over-write the current model.
         model = importer-&gt;flattenModel(model);
 
         printImportDependencies(model);
     }
 
 </literal_block>
+                        <paragraph>Full context: <download_reference filename="1a96c1f0e6f53dae07a6c0a6b32f1036/simulationToolDev.cpp" refdoc="howto/user_profiles/users_simulation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/simulation_tool_dev/simulationToolDev.cpp" reftype="download" refwarn="False"><literal classes="xref download">example_simulationToolDev.cpp</literal></download_reference></paragraph>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
-                            <paragraph>Python snippet</paragraph>
+                        <container>
+                            <paragraph>Python</paragraph>
                         </container>
                     </container>
                     <container classes="ui bottom attached sphinx-tab tab segment sphinx-data-tab-1-1">
@@ -169,6 +177,7 @@
     }
 
 </literal_block>
+                        <paragraph>Full context: <download_reference filename="5b3c7b36f7aedccc4adc246da4ad5d15/simulationToolDev.py" refdoc="howto/user_profiles/users_simulation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/simulation_tool_dev/simulationToolDev.py" reftype="download" refwarn="False"><literal classes="xref download">example_simulationToolDev.py</literal></download_reference></paragraph>
                     </container>
                 </container>
             </container>
@@ -177,11 +186,12 @@
             <title refid="id3">Validate model</title>
             <paragraph>The <literal classes="code">Validator</literal> is the equivalent of a spelling checker: it can check that each item in a model has all of the information it needs, but it can’t check whether it means what you intend it to.
                 Thus even if a model is valid, it could still be the equivalent of correctly-spelled nonsense.</paragraph>
-            <container classes="sphinx-tabs">
-                <container classes="dummy">
+            <target refid="snippet-validate-model"></target>
+            <container classes="sphinx-tabs" ids="snippet-validate-model" names="snippet_validate_model">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
-                            <paragraph>C++ snippet</paragraph>
+                        <container>
+                            <paragraph>C++</paragraph>
                         </container>
                     </container>
                     <container classes="ui bottom attached sphinx-tab tab segment sphinx-data-tab-2-0 active">
@@ -194,12 +204,13 @@
     printIssues(validator);
 
 </literal_block>
+                        <paragraph>Full context: <download_reference filename="1a96c1f0e6f53dae07a6c0a6b32f1036/simulationToolDev.cpp" refdoc="howto/user_profiles/users_simulation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/simulation_tool_dev/simulationToolDev.cpp" reftype="download" refwarn="False"><literal classes="xref download">example_simulationToolDev.cpp</literal></download_reference></paragraph>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
-                            <paragraph>Python snippet</paragraph>
+                        <container>
+                            <paragraph>Python</paragraph>
                         </container>
                     </container>
                     <container classes="ui bottom attached sphinx-tab tab segment sphinx-data-tab-2-1">
@@ -211,6 +222,7 @@
     print_issues_to_terminal(validator)
 
 </literal_block>
+                        <paragraph>Full context: <download_reference filename="5b3c7b36f7aedccc4adc246da4ad5d15/simulationToolDev.py" refdoc="howto/user_profiles/users_simulation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/simulation_tool_dev/simulationToolDev.py" reftype="download" refwarn="False"><literal classes="xref download">example_simulationToolDev.py</literal></download_reference></paragraph>
                     </container>
                 </container>
             </container>
@@ -218,8 +230,60 @@
                 A model can be said to be valid - that is, conforming to the <reference internal="False" refuri="https://cellml-specification.readthedocs.io/en/latest/">CellML normative specification</reference> - if the validator’s logger contains no issues with a level of <literal classes="code">ERROR</literal>.</paragraph>
             <paragraph>For more information on how to use any of the classes which record issues, please see the <reference internal="True" refuri="../actions/get_issues#actions-get-issues"><inline classes="std std-ref">Get Issues</inline></reference> section.</paragraph>
         </section>
+        <section ids="analyse-model" names="analyse\ model">
+            <title refid="id4">Analyse model</title>
+            <paragraph>Before code can be generated from this model, its mathematics must be checked.
+                The <literal classes="code">Validator</literal> checks that the syntax of the model is correct; the <literal classes="code">Analyser</literal> checks that the maths is sensible, and that all the required information is available.
+                There are three steps to model analysis:</paragraph>
+            <enumerated_list enumtype="arabic" prefix="" suffix=".">
+                <list_item>
+                    <paragraph>Create an <literal classes="code">Analyser</literal> item and submit the model for analysis.</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>Address any issues reported (see the <reference internal="True" refuri="../actions/get_issues#actions-get-issues"><inline classes="std std-ref">Get Issues</inline></reference> section for details).</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>Use the <literal classes="code">AnalyserModel</literal> item that’s constructed as input to the <literal classes="code">Generator</literal> (see next section).</paragraph>
+                </list_item>
+            </enumerated_list>
+            <target refid="snippet-analyser-analyse"></target>
+            <container classes="sphinx-tabs" ids="snippet-analyser-analyse" names="snippet_analyser_analyse">
+                <container>
+                    <container classes="item">
+                        <container>
+                            <paragraph>C++</paragraph>
+                        </container>
+                    </container>
+                    <container classes="ui bottom attached sphinx-tab tab segment sphinx-data-tab-3-0 active">
+                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/kmoy001/libcellml/libcellml-tutorials/howto/code/simulation_tool_dev/simulationToolDev.cpp" xml:space="preserve">    // Analyse the model: check for mathematical and modelling errors.
+    auto analyser = libcellml::Analyser::create();
+    analyser-&gt;analyseModel(model);
+    printIssues(analyser);
+
+</literal_block>
+                        <paragraph>Full context: <download_reference filename="1a96c1f0e6f53dae07a6c0a6b32f1036/simulationToolDev.cpp" refdoc="howto/user_profiles/users_simulation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/simulation_tool_dev/simulationToolDev.cpp" reftype="download" refwarn="False"><literal classes="xref download">example_simulationToolDev.cpp</literal></download_reference></paragraph>
+                    </container>
+                </container>
+                <container>
+                    <container classes="item">
+                        <container>
+                            <paragraph>Python</paragraph>
+                        </container>
+                    </container>
+                    <container classes="ui bottom attached sphinx-tab tab segment sphinx-data-tab-3-1">
+                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/kmoy001/libcellml/libcellml-tutorials/howto/code/simulation_tool_dev/simulationToolDev.py" xml:space="preserve">    # Analyse a model: check for mathematical and modelling errors.
+    analyser = Analyser()
+    analyser.analyseModel(model)
+    print_issues_to_terminal(analyser)
+
+</literal_block>
+                        <paragraph>Full context: <download_reference filename="5b3c7b36f7aedccc4adc246da4ad5d15/simulationToolDev.py" refdoc="howto/user_profiles/users_simulation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/simulation_tool_dev/simulationToolDev.py" reftype="download" refwarn="False"><literal classes="xref download">example_simulationToolDev.py</literal></download_reference></paragraph>
+                    </container>
+                </container>
+            </container>
+        </section>
         <section ids="generate-code" names="generate\ code">
-            <title refid="id4">Generate code</title>
+            <title refid="id5">Generate code</title>
             <paragraph>Code generation is the process of representing the CellML model in another language format.
                 At the time of writing, two profiles are available: C (default) and Python.
                 There are four steps to code generation:</paragraph>
@@ -229,7 +293,7 @@
                         (The default profile is C).</paragraph>
                 </list_item>
                 <list_item>
-                    <paragraph>Pass a model to the generator for processing.</paragraph>
+                    <paragraph>Pass the <literal classes="code">AnalyserModel</literal> output from the <literal classes="code">Analyser</literal> to the <literal classes="code">Generator</literal> for processing.</paragraph>
                 </list_item>
                 <list_item>
                     <paragraph>Retrieve the generated implementation code.
@@ -240,41 +304,91 @@
                         This is the contents of the <literal classes="code">*.h</literal> file, and is not required for the Python profile.</paragraph>
                 </list_item>
             </enumerated_list>
-            <container classes="sphinx-tabs">
-                <container classes="dummy">
+            <target refid="snippet-generator-generate-and-output"></target>
+            <container classes="sphinx-tabs" ids="snippet-generator-generate-and-output" names="snippet_generator_generate_and_output">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++ snippet</paragraph>
                         </container>
                     </container>
-                    <container classes="ui bottom attached sphinx-tab tab segment sphinx-data-tab-3-0 active">
-                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/kmoy001/libcellml/libcellml-tutorials/howto/code/simulation_tool_dev/simulationToolDev.cpp" xml:space="preserve">    // Analyse the model: check for mathematical and modelling errors.
-    auto analyser = libcellml::Analyser::create();
-    analyser-&gt;analyseModel(model);
-    printIssues(analyser);
+                    <container classes="ui bottom attached sphinx-tab tab segment sphinx-data-tab-4-0 active">
+                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/kmoy001/libcellml/libcellml-tutorials/howto/code/simulation_tool_dev/simulationToolDev.cpp" xml:space="preserve">    // Generate runnable code in other language formats for this model.
+
+    // Create a Generator instance.  Note that by default this uses the C language profile.
+    auto generator = libcellml::Generator::create();
+
+    // Pass the generator the model for processing.
+    generator-&gt;setModel(analyser-&gt;model());
+    printIssues(generator);
 
 </literal_block>
+                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/kmoy001/libcellml/libcellml-tutorials/howto/code/simulation_tool_dev/simulationToolDev.cpp" xml:space="preserve">    // Retrieve and write the interface code (*.h) and implementation code (*.c) to files.
+    std::ofstream outFile("sineComparisonExample.h");
+    outFile &lt;&lt; generator-&gt;interfaceCode();
+    outFile.close();
+
+    outFile.open("sineComparisonExample.c");
+    outFile &lt;&lt; generator-&gt;implementationCode();
+    outFile.close();
+
+    // If required, change the generator profile to Python.
+    auto profile = libcellml::GeneratorProfile::create(libcellml::GeneratorProfile::Profile::PYTHON);
+    generator-&gt;setProfile(profile);
+
+    // Retrieve and write the implementation code (*.py) to a file.
+    outFile.open("sineComparisonExample.py");
+    outFile &lt;&lt; generator-&gt;implementationCode();
+    outFile.close();
+
+</literal_block>
+                        <paragraph>Full context: <download_reference filename="1a96c1f0e6f53dae07a6c0a6b32f1036/simulationToolDev.cpp" refdoc="howto/user_profiles/users_simulation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/simulation_tool_dev/simulationToolDev.cpp" reftype="download" refwarn="False"><literal classes="xref download">example_simulationToolDev.cpp</literal></download_reference></paragraph>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python snippet</paragraph>
                         </container>
                     </container>
-                    <container classes="ui bottom attached sphinx-tab tab segment sphinx-data-tab-3-1">
-                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/kmoy001/libcellml/libcellml-tutorials/howto/code/simulation_tool_dev/simulationToolDev.py" xml:space="preserve">    # Analyse a model: check for mathematical and modelling errors.
-    analyser = Analyser()
-    analyser.analyseModel(model)
-    print_issues_to_terminal(analyser)
+                    <container classes="ui bottom attached sphinx-tab tab segment sphinx-data-tab-4-1">
+                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/kmoy001/libcellml/libcellml-tutorials/howto/code/simulation_tool_dev/simulationToolDev.py" xml:space="preserve">    # Generate runnable code in other language formats for this model.
+
+    # Create a Generator instance.  Note that by default this is the C language.
+    generator = Generator()
+
+    # Pass the generator the analysed model for processing.
+    generator.processModel(analyser.model())
+    print_issues_to_terminal(generator)
 
 </literal_block>
+                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/kmoy001/libcellml/libcellml-tutorials/howto/code/simulation_tool_dev/simulationToolDev.py" xml:space="preserve">    # Retrieve and write the interface code (*.h) and implementation code (*.cpp) to files.
+    write_file = open("sineComparisonExample.h", "w")
+    write_file.write(generator.interfaceCode())
+    write_file.close()
+
+    write_file = open("sineComparisonExample.cpp", "w")
+    write_file.write(generator.implementationCode())
+    write_file.close()
+
+    # If required, change the generator profile to Python and reprocess the model.
+    profile = GeneratorProfile(GeneratorProfile.Profile.PYTHON)
+    generator.setProfile(profile)
+    generator.processModel(model)
+
+    # Retrieve and write the implementation code (*.py) to a file.
+    write_file = open("sineComparisonExample.py", "w")
+    write_file.write(generator.implementationCode())
+    write_file.close()
+
+</literal_block>
+                        <paragraph>Full context: <download_reference filename="5b3c7b36f7aedccc4adc246da4ad5d15/simulationToolDev.py" refdoc="howto/user_profiles/users_simulation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/simulation_tool_dev/simulationToolDev.py" reftype="download" refwarn="False"><literal classes="xref download">example_simulationToolDev.py</literal></download_reference></paragraph>
                     </container>
                 </container>
             </container>
         </section>
         <section ids="use-the-generated-code-to-simulate-the-model" names="use\ the\ generated\ code\ to\ simulate\ the\ model">
-            <title refid="id5">Use the generated code to simulate the model</title>
+            <title refid="id6">Use the generated code to simulate the model</title>
             <paragraph>Instructions for a simple solver to solve the model can be found on the <reference internal="True" refuri="users_solver#users-solver"><inline classes="std std-ref">Simulation tool developer: Solver</inline></reference> page.</paragraph>
         </section>
     </section>

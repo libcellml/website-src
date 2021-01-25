@@ -38,9 +38,9 @@
                     <paragraph>Build a solver using generated code</paragraph>
                 </container>
                 <container classes="sphinx-tabs">
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>C++ snippet</paragraph>
                             </container>
                         </container>
@@ -94,9 +94,9 @@ message("")
 </literal_block>
                         </container>
                     </container>
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>Python snippet</paragraph>
                             </container>
                         </container>
@@ -134,9 +134,9 @@ message("")
                     <paragraph>Retrieve command line parameters</paragraph>
                 </container>
                 <container classes="sphinx-tabs">
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>C++ snippet</paragraph>
                             </container>
                         </container>
@@ -171,9 +171,9 @@ message("")
                             <paragraph>Full context: <download_reference filename="e41c673a94724b3cb8689dc9781a0b7b/solveGeneratedModel.cpp" refdoc="howto/actions/solve_model" refdomain="" refexplicit="True" reftarget="../code/solver/solveGeneratedModel.cpp" reftype="download" refwarn="False"><literal classes="xref download">example_solveGeneratedModel.cpp</literal></download_reference></paragraph>
                         </container>
                     </container>
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>Python snippet</paragraph>
                             </container>
                         </container>
@@ -234,9 +234,9 @@ message("")
                     <paragraph>Retrieve model parameters</paragraph>
                 </container>
                 <container classes="sphinx-tabs">
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>C++ snippet</paragraph>
                             </container>
                         </container>
@@ -261,9 +261,9 @@ message("")
                             <paragraph>Full context: <download_reference filename="e41c673a94724b3cb8689dc9781a0b7b/solveGeneratedModel.cpp" refdoc="howto/actions/solve_model" refdomain="" refexplicit="True" reftarget="../code/solver/solveGeneratedModel.cpp" reftype="download" refwarn="False"><literal classes="xref download">example_solveGeneratedModel.cpp</literal></download_reference></paragraph>
                         </container>
                     </container>
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>Python snippet</paragraph>
                             </container>
                         </container>
@@ -301,9 +301,9 @@ message("")
                     <paragraph>Allocate solution arrays</paragraph>
                 </container>
                 <container classes="sphinx-tabs">
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>C++ snippet</paragraph>
                             </container>
                         </container>
@@ -320,9 +320,9 @@ message("")
                             <paragraph>Full context: <download_reference filename="e41c673a94724b3cb8689dc9781a0b7b/solveGeneratedModel.cpp" refdoc="howto/actions/solve_model" refdomain="" refexplicit="True" reftarget="../code/solver/solveGeneratedModel.cpp" reftype="download" refwarn="False"><literal classes="xref download">example_solveGeneratedModel.cpp</literal></download_reference></paragraph>
                         </container>
                     </container>
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>Python snippet</paragraph>
                             </container>
                         </container>
@@ -356,9 +356,9 @@ message("")
                     <paragraph>Initialise variables</paragraph>
                 </container>
                 <container classes="sphinx-tabs">
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>C++ snippet</paragraph>
                             </container>
                         </container>
@@ -373,9 +373,9 @@ message("")
                             <paragraph>Full context: <download_reference filename="e41c673a94724b3cb8689dc9781a0b7b/solveGeneratedModel.cpp" refdoc="howto/actions/solve_model" refdomain="" refexplicit="True" reftarget="../code/solver/solveGeneratedModel.cpp" reftype="download" refwarn="False"><literal classes="xref download">example_solveGeneratedModel.cpp</literal></download_reference></paragraph>
                         </container>
                     </container>
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>Python snippet</paragraph>
                             </container>
                         </container>
@@ -418,9 +418,9 @@ message("")
                     <paragraph>Prepare for output</paragraph>
                 </container>
                 <container classes="sphinx-tabs">
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>C++ snippet</paragraph>
                             </container>
                         </container>
@@ -465,9 +465,9 @@ message("")
                             <paragraph>Full context: <download_reference filename="e41c673a94724b3cb8689dc9781a0b7b/solveGeneratedModel.cpp" refdoc="howto/actions/solve_model" refdomain="" refexplicit="True" reftarget="../code/solver/solveGeneratedModel.cpp" reftype="download" refwarn="False"><literal classes="xref download">example_solveGeneratedModel.cpp</literal></download_reference></paragraph>
                         </container>
                     </container>
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>Python snippet</paragraph>
                             </container>
                         </container>
@@ -506,9 +506,9 @@ message("")
                     <paragraph>Perform the integration and output</paragraph>
                 </container>
                 <container classes="sphinx-tabs">
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>C++ snippet</paragraph>
                             </container>
                         </container>
@@ -546,9 +546,9 @@ message("")
                             <paragraph>Full context: <download_reference filename="e41c673a94724b3cb8689dc9781a0b7b/solveGeneratedModel.cpp" refdoc="howto/actions/solve_model" refdomain="" refexplicit="True" reftarget="../code/solver/solveGeneratedModel.cpp" reftype="download" refwarn="False"><literal classes="xref download">example_solveGeneratedModel.cpp</literal></download_reference></paragraph>
                         </container>
                     </container>
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>Python snippet</paragraph>
                             </container>
                         </container>

@@ -16,108 +16,101 @@
         <topic classes="contents local" ids="contents" names="contents">
             <bullet_list>
                 <list_item>
-                    <paragraph><reference ids="id1" refid="about-the-annotation-tools">About the annotation tools</reference></paragraph>
+                    <paragraph><reference ids="id1" refid="annotation-tools-for-entity-items">Annotation tools for entity items</reference></paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph><reference ids="id2" refid="annotation-tools-for-other-item-types">Annotation tools for other item types</reference></paragraph>
                     <bullet_list>
                         <list_item>
-                            <paragraph><reference ids="id2" refid="annotation-tools-for-entity-items">Annotation tools for entity items</reference></paragraph>
+                            <paragraph><reference ids="id3" refid="connections-and-variable-equivalence">Connections and variable equivalence</reference></paragraph>
                         </list_item>
                         <list_item>
-                            <paragraph><reference ids="id3" refid="annotation-tools-for-other-item-types">Annotation tools for other item types</reference></paragraph>
-                            <bullet_list>
-                                <list_item>
-                                    <paragraph><reference ids="id4" refid="connections-and-variable-equivalence">Connections and variable equivalence</reference></paragraph>
-                                </list_item>
-                                <list_item>
-                                    <paragraph><reference ids="id5" refid="encapsulation-and-component-references">Encapsulation and component references</reference></paragraph>
-                                </list_item>
-                                <list_item>
-                                    <paragraph><reference ids="id6" refid="unit-item-children-reset-value-test-value-item-children">Unit item children; reset_value, test_value item children</reference></paragraph>
-                                </list_item>
-                            </bullet_list>
+                            <paragraph><reference ids="id4" refid="encapsulation-and-component-references">Encapsulation and component references</reference></paragraph>
                         </list_item>
                         <list_item>
-                            <paragraph><reference ids="id7" refid="annotator-type-and-returned-types">Annotator <literal>Type</literal> and returned types</reference></paragraph>
+                            <paragraph><reference ids="id5" refid="unit-item-children-reset-value-test-value-item-children">Unit item children; reset_value, test_value item children</reference></paragraph>
                         </list_item>
                     </bullet_list>
                 </list_item>
                 <list_item>
-                    <paragraph><reference ids="id8" refid="useful-snippets-for-annotation">Useful snippets for annotation</reference></paragraph>
+                    <paragraph><reference ids="id6" refid="annotator-type-and-returned-types">Annotator <literal>Type</literal> and returned types</reference></paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph><reference ids="id7" refid="useful-snippets-for-annotation">Useful snippets for annotation</reference></paragraph>
                 </list_item>
             </bullet_list>
         </topic>
-        <section ids="about-the-annotation-tools" names="about\ the\ annotation\ tools">
-            <title refid="id1">About the annotation tools</title>
-            <section ids="annotation-tools-for-entity-items" names="annotation\ tools\ for\ entity\ items">
-                <title refid="id2">Annotation tools for entity items</title>
-                <paragraph>Entity item types are:</paragraph>
-                <bullet_list bullet="-">
-                    <list_item>
-                        <paragraph><literal classes="code">Model</literal> items;</paragraph>
-                    </list_item>
-                    <list_item>
-                        <paragraph><literal classes="code">Component</literal> items;</paragraph>
-                    </list_item>
-                    <list_item>
-                        <paragraph><literal classes="code">Variable</literal> items;</paragraph>
-                    </list_item>
-                    <list_item>
-                        <paragraph><literal classes="code">Units</literal> items;</paragraph>
-                    </list_item>
-                    <list_item>
-                        <paragraph><literal classes="code">Reset</literal> items; and</paragraph>
-                    </list_item>
-                    <list_item>
-                        <paragraph><literal classes="code">ImportSource</literal> items.</paragraph>
-                    </list_item>
-                </bullet_list>
-                <paragraph>The <literal classes="code">id</literal> attribute for each of these entity types can be retrieved using the <literal classes="code">id()</literal> function for the object, or set through its <literal classes="code">setId()</literal> function.</paragraph>
-                <container classes="sphinx-tabs">
-                    <container classes="dummy">
-                        <container classes="item">
-                            <container classes="dummy">
-                                <paragraph>C++</paragraph>
-                            </container>
+        <section ids="annotation-tools-for-entity-items" names="annotation\ tools\ for\ entity\ items">
+            <title refid="id1">Annotation tools for entity items</title>
+            <paragraph>Entity item types are:</paragraph>
+            <bullet_list bullet="-">
+                <list_item>
+                    <paragraph><literal classes="code">Model</literal> items;</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph><literal classes="code">Component</literal> items;</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph><literal classes="code">Variable</literal> items;</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph><literal classes="code">Units</literal> items;</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph><literal classes="code">Reset</literal> items; and</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph><literal classes="code">ImportSource</literal> items.</paragraph>
+                </list_item>
+            </bullet_list>
+            <paragraph>The <literal classes="code">id</literal> attribute for each of these entity types can be retrieved using the <literal classes="code">id()</literal> function for the object, or set through its <literal classes="code">setId()</literal> function.</paragraph>
+            <container classes="sphinx-tabs">
+                <container>
+                    <container classes="item">
+                        <container>
+                            <paragraph>C++</paragraph>
                         </container>
-                        <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-Qysr active">
-                        </container>
-                        <literal_block force="False" highlight_args="{}" language="c++" linenos="False" xml:space="preserve">// Set the ID attribute for a Model item.
+                    </container>
+                    <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-Qysr active">
+                    </container>
+                    <literal_block force="False" highlight_args="{}" language="c++" linenos="False" xml:space="preserve">// Set the ID attribute for a Model item.
 model-&gt;setId("myModelId");
 
 // Retrieve the ID attribute from a Model item.
 std::string myModelIdString = model-&gt;id();</literal_block>
+                </container>
+                <container>
+                    <container classes="item">
+                        <container>
+                            <paragraph>Python</paragraph>
+                        </container>
                     </container>
-                    <container classes="dummy">
-                        <container classes="item">
-                            <container classes="dummy">
-                                <paragraph>Python</paragraph>
-                            </container>
-                        </container>
-                        <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-UHl0aG9u">
-                        </container>
-                        <literal_block force="False" highlight_args="{}" language="py" linenos="False" xml:space="preserve"># Set the ID attribute for a Model item.
+                    <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-UHl0aG9u">
+                    </container>
+                    <literal_block force="False" highlight_args="{}" language="py" linenos="False" xml:space="preserve"># Set the ID attribute for a Model item.
 model.setId("myModelId")
 
 # Retrieve the ID attribute from a Model item.
 my_model_id_string = model.id()</literal_block>
-                    </container>
                 </container>
-            </section>
-            <section ids="annotation-tools-for-other-item-types" names="annotation\ tools\ for\ other\ item\ types">
-                <title refid="id3">Annotation tools for other item types</title>
-                <section ids="connections-and-variable-equivalence" names="connections\ and\ variable\ equivalence">
-                    <title refid="id4">Connections and variable equivalence</title>
-                    <paragraph>Items which specify the relationship between two entities (such as connections between components, and mappings between variables) are accessed and identified by the pair of entities.
-                        Consider the simple example shown below.</paragraph>
-                    <literal_block force="False" highlight_args="{}" language="text" linenos="False" xml:space="preserve">model:
+            </container>
+        </section>
+        <section ids="annotation-tools-for-other-item-types" names="annotation\ tools\ for\ other\ item\ types">
+            <title refid="id2">Annotation tools for other item types</title>
+            <section ids="connections-and-variable-equivalence" names="connections\ and\ variable\ equivalence">
+                <title refid="id3">Connections and variable equivalence</title>
+                <paragraph>Items which specify the relationship between two entities (such as connections between components, and mappings between variables) are accessed and identified by the pair of entities.
+                    Consider the simple example shown below.</paragraph>
+                <literal_block force="False" highlight_args="{}" language="text" linenos="False" xml:space="preserve">model:
   ├─ component: name = "c1", id = "c1id"
   │   └ variable: name = "v1", id = "v1id" &lt;╴╴╴┐
   └─ component: name = "c2", id = "c2id"     equivalent variables
       └ variable: name = "v2", id = "v2id" &lt;╴╴╴┘</literal_block>
-                    <container classes="toggle">
-                        <container classes="header">
-                            <paragraph>Show CellML syntax</paragraph>
-                        </container>
-                        <literal_block force="False" highlight_args="{}" language="xml" linenos="False" xml:space="preserve">&lt;model&gt;
+                <container classes="toggle">
+                    <container classes="header">
+                        <paragraph>Show CellML syntax</paragraph>
+                    </container>
+                    <literal_block force="False" highlight_args="{}" language="xml" linenos="False" xml:space="preserve">&lt;model&gt;
   &lt;component name="c1" id="c1id"&gt;
     &lt;variable name="v1" id="v1id" /&gt;
   &lt;/component&gt;
@@ -130,17 +123,17 @@ my_model_id_string = model.id()</literal_block>
     &lt;map_variables variable1="v1" variable2="v2" id="v1v2id" /&gt;
   &lt;/connection&gt;
 &lt;/model&gt;</literal_block>
-                    </container>
-                    <container classes="sphinx-tabs">
-                        <container classes="dummy">
-                            <container classes="item">
-                                <container classes="dummy">
-                                    <paragraph>C++</paragraph>
-                                </container>
+                </container>
+                <container classes="sphinx-tabs">
+                    <container>
+                        <container classes="item">
+                            <container>
+                                <paragraph>C++</paragraph>
                             </container>
-                            <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-Qysr active">
-                            </container>
-                            <literal_block force="False" highlight_args="{}" language="c++" linenos="False" xml:space="preserve">// Set the ID of the mapping between variables v1 and v2.
+                        </container>
+                        <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-Qysr active">
+                        </container>
+                        <literal_block force="False" highlight_args="{}" language="c++" linenos="False" xml:space="preserve">// Set the ID of the mapping between variables v1 and v2.
 Variable::setEquivalentVariableId(v1, v2, "v1v2Id");
 
 // Get the ID of the mapping between variables v1 and v2. Note that
@@ -159,16 +152,16 @@ Variable::setConnectionId(v1, v2, "c1c2id");
 // go both ways, so the ID is the same whichever order the variables
 // are specified.
 std::string c1c2IdString = Variable::connectionId(v1, v2);</literal_block>
+                    </container>
+                    <container>
+                        <container classes="item">
+                            <container>
+                                <paragraph>Python</paragraph>
+                            </container>
                         </container>
-                        <container classes="dummy">
-                            <container classes="item">
-                                <container classes="dummy">
-                                    <paragraph>Python</paragraph>
-                                </container>
-                            </container>
-                            <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-UHl0aG9u">
-                            </container>
-                            <literal_block force="False" highlight_args="{}" language="py" linenos="False" xml:space="preserve"># Set the ID of the mapping between variables v1 and v2.
+                        <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-UHl0aG9u">
+                        </container>
+                        <literal_block force="False" highlight_args="{}" language="py" linenos="False" xml:space="preserve"># Set the ID of the mapping between variables v1 and v2.
 Variable.setEquivalentVariableId(v1, v2, "v1v2Id")
 
 # Get the ID of the mapping between variables v1 and v2.
@@ -187,23 +180,23 @@ Variable.setConnectionId(v1, v2, "c1c2id")
 # Note that equivalences and connections go both ways, so
 # the ID is the same whichever order the variables are specified.
 c1c2IdString = Variable.connectionId(v1, v2)</literal_block>
-                        </container>
                     </container>
-                </section>
-                <section ids="encapsulation-and-component-references" names="encapsulation\ and\ component\ references">
-                    <title refid="id5">Encapsulation and component references</title>
-                    <paragraph>The model’s encapsulation and the component references which it contains may have ID attributes too.
-                        These are accessed through the <literal classes="code">encapsulationId()</literal> functions, as shown below.</paragraph>
-                    <literal_block force="False" highlight_args="{}" language="text" linenos="False" xml:space="preserve">model:
+                </container>
+            </section>
+            <section ids="encapsulation-and-component-references" names="encapsulation\ and\ component\ references">
+                <title refid="id4">Encapsulation and component references</title>
+                <paragraph>The model’s encapsulation and the component references which it contains may have ID attributes too.
+                    These are accessed through the <literal classes="code">encapsulationId()</literal> functions, as shown below.</paragraph>
+                <literal_block force="False" highlight_args="{}" language="text" linenos="False" xml:space="preserve">model:
   └ encapsulation:
       └ component: grandparent
           └ component: parent
               └ component: child</literal_block>
-                    <container classes="toggle">
-                        <container classes="header">
-                            <paragraph>Show CellML syntax</paragraph>
-                        </container>
-                        <literal_block force="False" highlight_args="{}" language="xml" linenos="False" xml:space="preserve">&lt;model&gt;
+                <container classes="toggle">
+                    <container classes="header">
+                        <paragraph>Show CellML syntax</paragraph>
+                    </container>
+                    <literal_block force="False" highlight_args="{}" language="xml" linenos="False" xml:space="preserve">&lt;model&gt;
   &lt;component name="grandparent" id="grandparentComponentId" /&gt;
   &lt;component name="parent" id="parentComponentId" /&gt;
   &lt;component name="child" id="childComponentId" /&gt;
@@ -218,67 +211,67 @@ c1c2IdString = Variable.connectionId(v1, v2)</literal_block>
     &lt;/component_ref&gt;
   &lt;/encapsulation&gt;
 &lt;/model&gt;</literal_block>
-                    </container>
-                    <paragraph>There is only one encapsulation in a model, and its <literal classes="code">id</literal> attribute is accessed using the very simple functions from the model instance.
-                        The position of each component within that encapsulation structure is referenced using the same functions, but on the component instance instead.</paragraph>
-                    <container classes="sphinx-tabs">
-                        <container classes="dummy">
-                            <container classes="item">
-                                <container classes="dummy">
-                                    <paragraph>C++</paragraph>
-                                </container>
+                </container>
+                <paragraph>There is only one encapsulation in a model, and its <literal classes="code">id</literal> attribute is accessed using the very simple functions from the model instance.
+                    The position of each component within that encapsulation structure is referenced using the same functions, but on the component instance instead.</paragraph>
+                <container classes="sphinx-tabs">
+                    <container>
+                        <container classes="item">
+                            <container>
+                                <paragraph>C++</paragraph>
                             </container>
-                            <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-Qysr active">
-                            </container>
-                            <literal_block force="False" highlight_args="{}" language="c++" linenos="False" xml:space="preserve">// Set the encapsulation ID.
+                        </container>
+                        <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-Qysr active">
+                        </container>
+                        <literal_block force="False" highlight_args="{}" language="c++" linenos="False" xml:space="preserve">// Set the encapsulation ID.
 model-&gt;setEncapsulationId("encapsId");
 grandparentComponent-&gt;setEncapsulationId("grandparentEncapsId");
 
 // Get the encapsulation ID.
 std::string modelEncapsulationId = model-&gt;encapsulationId();
 std::string grandparentEncapsulationId = grandparentComponent-&gt;encapsulationId();</literal_block>
+                    </container>
+                    <container>
+                        <container classes="item">
+                            <container>
+                                <paragraph>Python</paragraph>
+                            </container>
                         </container>
-                        <container classes="dummy">
-                            <container classes="item">
-                                <container classes="dummy">
-                                    <paragraph>Python</paragraph>
-                                </container>
-                            </container>
-                            <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-UHl0aG9u">
-                            </container>
-                            <literal_block force="False" highlight_args="{}" language="py" linenos="False" xml:space="preserve"># Set the encapsulation ID.
+                        <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-UHl0aG9u">
+                        </container>
+                        <literal_block force="False" highlight_args="{}" language="py" linenos="False" xml:space="preserve"># Set the encapsulation ID.
 model.setEncapsulationId("encapsId")
 grandparent_component.setEncapsulationId("grandparentEncapsId")
 
 # Get the encapsulation ID.
 model_encapsulation_id = model.encapsulationId()
 grandparent_encapsulation_id = grandparent_component.encapsulationId()</literal_block>
-                        </container>
                     </container>
-                </section>
-                <section ids="unit-item-children-reset-value-test-value-item-children" names="unit\ item\ children;\ reset_value,\ test_value\ item\ children">
-                    <title refid="id6">Unit item children; reset_value, test_value item children</title>
-                    <paragraph>Some items are most readily accessed through their entity-type parents, these being:</paragraph>
-                    <bullet_list bullet="-">
-                        <list_item>
-                            <paragraph><literal classes="code">unit</literal> items, a collection of which defines a <literal classes="code">Units</literal> item; and</paragraph>
-                        </list_item>
-                        <list_item>
-                            <paragraph><literal classes="code">test_value</literal> and <literal classes="code">reset_value</literal> children of <literal classes="code">Reset</literal> items.</paragraph>
-                        </list_item>
-                    </bullet_list>
-                    <paragraph>Unit children of <literal classes="code">Units</literal> items can be accessed either through the streamlined ID-only functions <literal classes="code">unitId(index)</literal> and <literal classes="code">setUnitId(index)</literal>, or through the <literal classes="code">unitAttributes</literal> family of functions.
-                        Note that there are several overloads of the arguments for this function; please see the complete documentation on the <reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Units">Units functions API page</reference>.</paragraph>
-                    <container classes="sphinx-tabs">
-                        <container classes="dummy">
-                            <container classes="item">
-                                <container classes="dummy">
-                                    <paragraph>C++</paragraph>
-                                </container>
+                </container>
+            </section>
+            <section ids="unit-item-children-reset-value-test-value-item-children" names="unit\ item\ children;\ reset_value,\ test_value\ item\ children">
+                <title refid="id5">Unit item children; reset_value, test_value item children</title>
+                <paragraph>Some items are most readily accessed through their entity-type parents, these being:</paragraph>
+                <bullet_list bullet="-">
+                    <list_item>
+                        <paragraph><literal classes="code">unit</literal> items, a collection of which defines a <literal classes="code">Units</literal> item; and</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph><literal classes="code">test_value</literal> and <literal classes="code">reset_value</literal> children of <literal classes="code">Reset</literal> items.</paragraph>
+                    </list_item>
+                </bullet_list>
+                <paragraph>Unit children of <literal classes="code">Units</literal> items can be accessed either through the streamlined ID-only functions <literal classes="code">unitId(index)</literal> and <literal classes="code">setUnitId(index)</literal>, or through the <literal classes="code">unitAttributes</literal> family of functions.
+                    Note that there are several overloads of the arguments for this function; please see the complete documentation on the <reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Units">Units functions API page</reference>.</paragraph>
+                <container classes="sphinx-tabs">
+                    <container>
+                        <container classes="item">
+                            <container>
+                                <paragraph>C++</paragraph>
                             </container>
-                            <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-Qysr active">
-                            </container>
-                            <literal_block force="False" highlight_args="{}" language="c++" linenos="False" xml:space="preserve">// Create a Units item representing millimetre^3 per second.
+                        </container>
+                        <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-Qysr active">
+                        </container>
+                        <literal_block force="False" highlight_args="{}" language="c++" linenos="False" xml:space="preserve">// Create a Units item representing millimetre^3 per second.
 auto mm3PerSecond = libcellml::Units::create("mm3PerSecond");
 
 // Add the per second part with the ID "perSecondUnitId".
@@ -301,16 +294,16 @@ double unitExponent;
 double unitMultiplier;
 std::string unitId;
 mm3PerSecond-&gt;unitAttributes(0, unitReference, unitPrefix, unitExponent, unitMultiplier, unitId);</literal_block>
+                    </container>
+                    <container>
+                        <container classes="item">
+                            <container>
+                                <paragraph>Python</paragraph>
+                            </container>
                         </container>
-                        <container classes="dummy">
-                            <container classes="item">
-                                <container classes="dummy">
-                                    <paragraph>Python</paragraph>
-                                </container>
-                            </container>
-                            <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-UHl0aG9u">
-                            </container>
-                            <literal_block force="False" highlight_args="{}" language="py" linenos="False" xml:space="preserve"># Create a Units item representing millimetre^3 per second.
+                        <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-UHl0aG9u">
+                        </container>
+                        <literal_block force="False" highlight_args="{}" language="py" linenos="False" xml:space="preserve"># Create a Units item representing millimetre^3 per second.
 mm3_per_second = Units.create("mm3PerSecond")
 
 # Add the per second part with the ID "perSecondUnitId".
@@ -328,147 +321,146 @@ mm3_per_second.setUnitId(1, "millimetreCubedUnitId")
 
 # Retrieve the unit attributes for the second (index = 0) unit item, including the ID attribute:
 mm3PerSecond.unitAttributes(0, unitReference, unitPrefix, unitExponent, unitMultiplier, unitId)</literal_block>
-                        </container>
                     </container>
-                </section>
-            </section>
-            <section ids="annotator-type-and-returned-types" names="annotator\ type\ and\ returned\ types">
-                <title refid="id7">Annotator <literal>Type</literal> and returned types</title>
-                <table align="default">
-                    <tgroup cols="2">
-                        <colspec colwidth="19"></colspec>
-                        <colspec colwidth="101"></colspec>
-                        <tbody>
-                            <row>
-                                <entry>
-                                    <paragraph>enumeration value</paragraph>
-                                </entry>
-                                <entry>
-                                    <paragraph>Object type in the “any” container.</paragraph>
-                                </entry>
-                            </row>
-                            <row>
-                                <entry>
-                                    <paragraph>COMPONENT</paragraph>
-                                </entry>
-                                <entry>
-                                    <paragraph>Pointer to a <literal classes="code">Component</literal> with the given <literal classes="code">id</literal>.</paragraph>
-                                </entry>
-                            </row>
-                            <row>
-                                <entry>
-                                    <paragraph>COMPONENT_REF</paragraph>
-                                </entry>
-                                <entry>
-                                    <paragraph>Pointer to a <literal classes="code">Component</literal>, whose encapsulation <literal classes="code">component_ref</literal> has the given <literal classes="code">id</literal>.</paragraph>
-                                </entry>
-                            </row>
-                            <row>
-                                <entry>
-                                    <paragraph>CONNECTION</paragraph>
-                                </entry>
-                                <entry>
-                                    <paragraph><literal classes="code">VariablePair</literal> containing pointers to two <literal classes="code">Variable</literal> items which span the connection.</paragraph>
-                                </entry>
-                            </row>
-                            <row>
-                                <entry>
-                                    <paragraph>ENCAPSULATION</paragraph>
-                                </entry>
-                                <entry>
-                                    <paragraph>Pointer to the <literal classes="code">Model</literal> item with the given <literal classes="code">id</literal>.</paragraph>
-                                </entry>
-                            </row>
-                            <row>
-                                <entry>
-                                    <paragraph>IMPORT</paragraph>
-                                </entry>
-                                <entry>
-                                    <paragraph>Pointer to an <literal classes="code">ImportSource</literal> item with the given <literal classes="code">id</literal>.</paragraph>
-                                </entry>
-                            </row>
-                            <row>
-                                <entry>
-                                    <paragraph>ISSUE</paragraph>
-                                </entry>
-                                <entry>
-                                    <paragraph>Pointer to an <literal classes="code">Issue</literal> item, created when something has gone wrong.</paragraph>
-                                </entry>
-                            </row>
-                            <row>
-                                <entry>
-                                    <paragraph>MAP_VARIABLES</paragraph>
-                                </entry>
-                                <entry>
-                                    <paragraph><literal classes="code">VariablePair</literal> containing the two <literal classes="code">Variable</literal> items connected by a variable
-                                        equivalence with the given <literal classes="code">id</literal>.</paragraph>
-                                </entry>
-                            </row>
-                            <row>
-                                <entry>
-                                    <paragraph>MODEL</paragraph>
-                                </entry>
-                                <entry>
-                                    <paragraph>Pointer to the <literal classes="code">Model</literal> item with the given <literal classes="code">id</literal>.</paragraph>
-                                </entry>
-                            </row>
-                            <row>
-                                <entry>
-                                    <paragraph>RESET</paragraph>
-                                </entry>
-                                <entry>
-                                    <paragraph>Pointer to the <literal classes="code">Reset</literal> item with the given <literal classes="code">id</literal>.</paragraph>
-                                </entry>
-                            </row>
-                            <row>
-                                <entry>
-                                    <paragraph>RESET_VALUE</paragraph>
-                                </entry>
-                                <entry>
-                                    <paragraph>Pointer to the parent <literal classes="code">Reset</literal> item containing a reset value with the given <literal classes="code">id</literal>.</paragraph>
-                                </entry>
-                            </row>
-                            <row>
-                                <entry>
-                                    <paragraph>TEST_VALUE</paragraph>
-                                </entry>
-                                <entry>
-                                    <paragraph>Pointer to the parent <literal classes="code">Reset</literal> item containing a test value with the given <literal classes="code">id</literal>.</paragraph>
-                                </entry>
-                            </row>
-                            <row>
-                                <entry>
-                                    <paragraph>UNIT</paragraph>
-                                </entry>
-                                <entry>
-                                    <paragraph><literal classes="code">Unit</literal> pair, when the first attribute is a <literal classes="code">Units</literal> pointer to the parent of
-                                        the unit with the given <literal classes="code">id</literal>, and the second attribute is the index within the
-                                        <literal classes="code">Units</literal> item at which the unit can be found.</paragraph>
-                                </entry>
-                            </row>
-                            <row>
-                                <entry>
-                                    <paragraph>UNITS</paragraph>
-                                </entry>
-                                <entry>
-                                    <paragraph>Pointer to a <literal classes="code">Units</literal> item with the given <literal classes="code">id</literal>.</paragraph>
-                                </entry>
-                            </row>
-                            <row>
-                                <entry>
-                                    <paragraph>VARIABLE</paragraph>
-                                </entry>
-                                <entry>
-                                    <paragraph>Pointer to a <literal classes="code">Variable</literal> item with the given <literal classes="code">id</literal>.</paragraph>
-                                </entry>
-                            </row>
-                        </tbody>
-                    </tgroup>
-                </table>
+                </container>
             </section>
         </section>
+        <section ids="annotator-type-and-returned-types" names="annotator\ type\ and\ returned\ types">
+            <title refid="id6">Annotator <literal>Type</literal> and returned types</title>
+            <table align="default">
+                <tgroup cols="2">
+                    <colspec colwidth="19"></colspec>
+                    <colspec colwidth="101"></colspec>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <paragraph>enumeration value</paragraph>
+                            </entry>
+                            <entry>
+                                <paragraph>Object type in the “any” container.</paragraph>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <paragraph>COMPONENT</paragraph>
+                            </entry>
+                            <entry>
+                                <paragraph>Pointer to a <literal classes="code">Component</literal> with the given <literal classes="code">id</literal>.</paragraph>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <paragraph>COMPONENT_REF</paragraph>
+                            </entry>
+                            <entry>
+                                <paragraph>Pointer to a <literal classes="code">Component</literal>, whose encapsulation <literal classes="code">component_ref</literal> has the given <literal classes="code">id</literal>.</paragraph>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <paragraph>CONNECTION</paragraph>
+                            </entry>
+                            <entry>
+                                <paragraph><literal classes="code">VariablePair</literal> containing pointers to two <literal classes="code">Variable</literal> items which span the connection.</paragraph>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <paragraph>ENCAPSULATION</paragraph>
+                            </entry>
+                            <entry>
+                                <paragraph>Pointer to the <literal classes="code">Model</literal> item with the given <literal classes="code">id</literal>.</paragraph>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <paragraph>IMPORT</paragraph>
+                            </entry>
+                            <entry>
+                                <paragraph>Pointer to an <literal classes="code">ImportSource</literal> item with the given <literal classes="code">id</literal>.</paragraph>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <paragraph>ISSUE</paragraph>
+                            </entry>
+                            <entry>
+                                <paragraph>Pointer to an <literal classes="code">Issue</literal> item, created when something has gone wrong.</paragraph>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <paragraph>MAP_VARIABLES</paragraph>
+                            </entry>
+                            <entry>
+                                <paragraph><literal classes="code">VariablePair</literal> containing the two <literal classes="code">Variable</literal> items connected by a variable
+                                    equivalence with the given <literal classes="code">id</literal>.</paragraph>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <paragraph>MODEL</paragraph>
+                            </entry>
+                            <entry>
+                                <paragraph>Pointer to the <literal classes="code">Model</literal> item with the given <literal classes="code">id</literal>.</paragraph>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <paragraph>RESET</paragraph>
+                            </entry>
+                            <entry>
+                                <paragraph>Pointer to the <literal classes="code">Reset</literal> item with the given <literal classes="code">id</literal>.</paragraph>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <paragraph>RESET_VALUE</paragraph>
+                            </entry>
+                            <entry>
+                                <paragraph>Pointer to the parent <literal classes="code">Reset</literal> item containing a reset value with the given <literal classes="code">id</literal>.</paragraph>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <paragraph>TEST_VALUE</paragraph>
+                            </entry>
+                            <entry>
+                                <paragraph>Pointer to the parent <literal classes="code">Reset</literal> item containing a test value with the given <literal classes="code">id</literal>.</paragraph>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <paragraph>UNIT</paragraph>
+                            </entry>
+                            <entry>
+                                <paragraph><literal classes="code">Unit</literal> pair, when the first attribute is a <literal classes="code">Units</literal> pointer to the parent of
+                                    the unit with the given <literal classes="code">id</literal>, and the second attribute is the index within the
+                                    <literal classes="code">Units</literal> item at which the unit can be found.</paragraph>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <paragraph>UNITS</paragraph>
+                            </entry>
+                            <entry>
+                                <paragraph>Pointer to a <literal classes="code">Units</literal> item with the given <literal classes="code">id</literal>.</paragraph>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <paragraph>VARIABLE</paragraph>
+                            </entry>
+                            <entry>
+                                <paragraph>Pointer to a <literal classes="code">Variable</literal> item with the given <literal classes="code">id</literal>.</paragraph>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
         <section ids="useful-snippets-for-annotation" names="useful\ snippets\ for\ annotation">
-            <title refid="id8">Useful snippets for annotation</title>
+            <title refid="id7">Useful snippets for annotation</title>
             <target refid="snippet-annotator-auto-ids"></target>
             <container classes="toggle" ids="snippet-annotator-auto-ids" names="snippet_annotator_auto_ids">
                 <container classes="header-left">
@@ -478,9 +470,9 @@ mm3PerSecond.unitAttributes(0, unitReference, unitPrefix, unitExponent, unitMult
                     Ids are not intended to be interacted with by humans; they are there as a placeholder or location specifier so that other (more human-friendly) documentation can be added to the right objects.
                     With this in mind, it’s possible to automate the creation of unique ids for a single item, a set of items of the same type (eg: all the <literal classes="code">Component</literal> items), or for every annotatable item in a CellML model.</paragraph>
                 <container classes="sphinx-tabs">
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>C++</paragraph>
                             </container>
                         </container>
@@ -526,9 +518,9 @@ annotator-&gt;assignId(myComponentRef);
 // ... OR submit both the Type enum and the item as separate arguments.
 annotator-&gt;assignId(libcellml::Annotator::Type::COMPONENT_REF, model-&gt;component(0));</literal_block>
                     </container>
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>Python</paragraph>
                             </container>
                         </container>
@@ -582,9 +574,9 @@ annotator.assignId(Annotator.Type.COMPONENT_REF, model.component(0))</literal_bl
                     This process will replace any previously stored model with the new one, as well as clearing all ids from the given model.
                     Alternatively, if a model is already stored in the annotator instance, the ids of that stored model can be cleared by calling the <title_reference>clearAllIds()</title_reference> function without arguments.</paragraph>
                 <container classes="sphinx-tabs">
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>C++</paragraph>
                             </container>
                         </container>
@@ -607,9 +599,9 @@ annotator-&gt;clearAllIds(model1);  // This will clear ids in model1,
 annotator-&gt;buildModelIndex(model2);
 annotator-&gt;clearAllIds();  // This will clear ids in model2, the model stored in the annotator.</literal_block>
                     </container>
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>Python</paragraph>
                             </container>
                         </container>
@@ -643,9 +635,9 @@ annotator.clearAllIds()  # This will clear ids in model2, the model stored in th
                     Where the known type is an entity type, a pointer to the item is returned.
                     Where the type is a non-entity type, pointers to significant related items are returned, as discussed earlier.</paragraph>
                 <container classes="sphinx-tabs">
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>C++</paragraph>
                             </container>
                         </container>
@@ -712,9 +704,9 @@ auto myResetValue = myResetValueParent-&gt;reset_value();
 // An encapsulation item is returned as a pointer to its parent model.
 auto myEncapsulatedModel = annotator-&gt;encapsulation("myEncapsulationId");</literal_block>
                     </container>
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>Python</paragraph>
                             </container>
                         </container>
@@ -787,9 +779,9 @@ my_encapsulated_model = annotator.encapsulation("myEncapsulationId")</literal_bl
                     The second part is an <literal classes="code">std::any</literal> type object, which can be cast into the correct type.
                     This is demonstrated below.</paragraph>
                 <container classes="sphinx-tabs">
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>C++</paragraph>
                             </container>
                         </container>
@@ -862,9 +854,9 @@ catch(const std::bad_any_cast&amp; e) {
     std::cout &lt;&lt; e.what() &lt;&lt; std::endl;
 }</literal_block>
                     </container>
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>Python</paragraph>
                             </container>
                         </container>
@@ -881,9 +873,9 @@ catch(const std::bad_any_cast&amp; e) {
                 </container>
                 <paragraph>The <literal classes="code">Annotator</literal> functionality can be used to report id strings which have been duplicated within a model’s scope, as well as to return all items associated with a duplicated id string.</paragraph>
                 <container classes="sphinx-tabs">
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>C++</paragraph>
                             </container>
                         </container>
@@ -919,9 +911,9 @@ auto duplicateIdList = annotator-&gt;duplicateIds();
 // Now duplicateIdList is a vector of strings of the ids which are duplicated.
 // In this example it will contain "duplicateId", and "anotherDuplicateId".</literal_block>
                     </container>
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>Python</paragraph>
                             </container>
                         </container>
@@ -966,9 +958,9 @@ duplicateIdList = annotator.duplicateIds()
                 </container>
                 <paragraph>Items with a unique id can be retrieved using the <literal classes="code">item("uniqueId")</literal> function, items whose ids are not unique must be retrieved with the <literal classes="code">items("duplicatedId")</literal> function instead.</paragraph>
                 <container classes="sphinx-tabs">
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>C++</paragraph>
                             </container>
                         </container>
@@ -985,9 +977,9 @@ auto duplicatedIdItems = annotator-&gt;items("duplicatedId");
 // attribute is an Annotator::Type enum, and the second is an std::any cast
 // of the item.</literal_block>
                     </container>
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>Python</paragraph>
                             </container>
                         </container>

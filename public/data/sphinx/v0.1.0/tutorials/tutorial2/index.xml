@@ -83,9 +83,9 @@
             <paragraph>The instructions here build and test the skeleton code.
                 If you’d rather not work through the tutorial yourself and want to skip to the completed version, please rename the files removing the <literal classes="code">_complete</literal> from their names.</paragraph>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -101,9 +101,9 @@ TUTORIAL 2: ERROR CHECKING AND VALIDATION
 -----------------------------------------------</literal_block>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python</paragraph>
                         </container>
                     </container>
@@ -121,7 +121,7 @@ TUTORIAL 2: ERROR CHECKING AND VALIDATION
         <section ids="step-1-parse-a-cellml-file-into-a-model" names="step\ 1:\ parse\ a\ cellml\ file\ into\ a\ model">
             <title>Step 1: Parse a CellML file into a model</title>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Parser">Parser class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Parser">Parser class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>create</paragraph>
@@ -182,7 +182,7 @@ COMPONENTS: 1 components
                 You can think of the validation being the spell-checker for your model.
                 It doesn’t judge the meaning of <emphasis>what</emphasis> you’ve written, just the nitty-gritty of <emphasis>how</emphasis> you’ve written it.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Validator">Validator class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Validator">Validator class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>create</paragraph>
@@ -195,9 +195,9 @@ COMPONENTS: 1 components
             <paragraph>The validator can also help you as you create and edit models by pointing out what’s missing or incorrect as you go.
                 This is really easy:</paragraph>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -206,9 +206,9 @@ COMPONENTS: 1 components
                     <literal_block force="False" highlight_args="{}" language="cpp" linenos="False" xml:space="preserve">auto validator = libcellml::Validator::create();
 validator-&gt;validateModel(yourModelHere);</literal_block>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python</paragraph>
                         </container>
                     </container>
@@ -226,7 +226,7 @@ validator.validateModel(your_model_here)</literal_block>
             <paragraph>When you’ve created a <literal classes="code">Validator</literal> object and called it to check a model, a record of any issues is stored inside the validator.
                 To figure out what’s going on, you need to retrieve the pointers to these <literal classes="code">Issue</literal> objects.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Validator">Validator class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Validator">Validator class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>issueCount</paragraph>
@@ -305,9 +305,9 @@ validator.validateModel(your_model_here)</literal_block>
                 Again following the same retrieval idiom as in Tutorial 1 for items in sets, we can access the issues using an index:</paragraph>
             <container classes="sphinx-tabs">
                 <literal_block force="False" highlight_args="{}" language="c++" linenos="False" xml:space="preserve">auto theFifteenthIssue = validator-&gt;issue(14);</literal_block>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python</paragraph>
                         </container>
                     </container>
@@ -317,7 +317,7 @@ validator.validateModel(your_model_here)</literal_block>
                 </container>
             </container>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Issue">Issue class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Issue">Issue class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>description</paragraph>
@@ -515,7 +515,7 @@ Validator issue[4]:
                 A useful feature of the <literal classes="code">Issue</literal> items is as well as the textual information (which is more valuable to a <emphasis>reader</emphasis>), we also have a pointer to the item itself (which is more valuable to a <emphasis>programmer</emphasis> or user).
                 This section will work through the issues reported by the validator, and demonstrate different ways of accessing and repairing each of the problems.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Issue">Issue class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Issue">Issue class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>item</paragraph>
@@ -527,7 +527,7 @@ Validator issue[4]:
                         <paragraph>math</paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Variable">Variable class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Variable">Variable class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>setName</paragraph>
@@ -539,7 +539,7 @@ Validator issue[4]:
                         <paragraph>setInitialValue</paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Model">Model class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Model">Model class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>component(name, True) Retrieving a component by its name with the optional second argument true will search the entire   component tree for the component name.</paragraph>
@@ -806,9 +806,9 @@ Validator issue[4]:
             <paragraph>For this next issue we’re going to show how to use the generic <literal classes="code">item()</literal> function on an issue.
                 This differs between C++ and Python so please refer to the appropriate tab for information.</paragraph>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -832,9 +832,9 @@ assert(myFirstIssue-&gt;cellmlElementType() == libcellml::CellmlElementType::VAR
 auto myVariable = std::any_cast&lt;libcellml::VariablePtr&gt;(anyItem);</literal_block>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python</paragraph>
                         </container>
                     </container>

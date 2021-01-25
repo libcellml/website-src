@@ -8,9 +8,9 @@
             <paragraph>Analyse a model</paragraph>
         </container>
         <container classes="sphinx-tabs">
-            <container classes="dummy">
+            <container>
                 <container classes="item">
-                    <container classes="dummy">
+                    <container>
                         <paragraph>C++ snippet</paragraph>
                     </container>
                 </container>
@@ -21,12 +21,22 @@
     printIssues(analyser);
 
 </literal_block>
+                    <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/kmoy001/libcellml/libcellml-tutorials/howto/code/simulation_tool_dev/simulationToolDev.cpp" xml:space="preserve">    // Generate runnable code in other language formats for this model.
+
+    // Create a Generator instance.  Note that by default this uses the C language profile.
+    auto generator = libcellml::Generator::create();
+
+    // Pass the generator the model for processing.
+    generator-&gt;setModel(analyser-&gt;model());
+    printIssues(generator);
+
+</literal_block>
                     <paragraph>Full context: <download_reference filename="351eceb70ca63151b24007a40add72da/simulationToolDev.cpp" refdoc="howto/code_snippets/snippet_analyse_model" refdomain="" refexplicit="True" reftarget="../code/simulation_tool_dev/simulationToolDev.cpp" reftype="download" refwarn="False"><literal classes="xref download">example_simulationToolDev.cpp</literal></download_reference></paragraph>
                 </container>
             </container>
-            <container classes="dummy">
+            <container>
                 <container classes="item">
-                    <container classes="dummy">
+                    <container>
                         <paragraph>Python snippet</paragraph>
                     </container>
                 </container>
@@ -35,6 +45,16 @@
     analyser = Analyser()
     analyser.analyseModel(model)
     print_issues_to_terminal(analyser)
+
+</literal_block>
+                    <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/kmoy001/libcellml/libcellml-tutorials/howto/code/simulation_tool_dev/simulationToolDev.py" xml:space="preserve">    # Generate runnable code in other language formats for this model.
+
+    # Create a Generator instance.  Note that by default this is the C language.
+    generator = Generator()
+
+    # Pass the generator the analysed model for processing.
+    generator.processModel(analyser.model())
+    print_issues_to_terminal(generator)
 
 </literal_block>
                     <paragraph>Full context: <download_reference filename="7078eec6e1c166f4e95382f70a04ae71/simulationToolDev.py" refdoc="howto/code_snippets/snippet_analyse_model" refdomain="" refexplicit="True" reftarget="../code/simulation_tool_dev/simulationToolDev.py" reftype="download" refwarn="False"><literal classes="xref download">example_simulationToolDev.py</literal></download_reference></paragraph>
