@@ -9,9 +9,9 @@
         </container>
         <paragraph>The <literal classes="code">Annotator</literal> functionality can be used to report id strings which have been duplicated within a model’s scope, as well as to return all items associated with a duplicated id string.</paragraph>
         <container classes="sphinx-tabs">
-            <container classes="dummy">
+            <container>
                 <container classes="item">
-                    <container classes="dummy">
+                    <container>
                         <paragraph>C++</paragraph>
                     </container>
                 </container>
@@ -47,9 +47,9 @@ auto duplicateIdList = annotator-&gt;duplicateIds();
 // Now duplicateIdList is a vector of strings of the ids which are duplicated.
 // In this example it will contain "duplicateId", and "anotherDuplicateId".</literal_block>
             </container>
-            <container classes="dummy">
+            <container>
                 <container classes="item">
-                    <container classes="dummy">
+                    <container>
                         <paragraph>Python</paragraph>
                     </container>
                 </container>

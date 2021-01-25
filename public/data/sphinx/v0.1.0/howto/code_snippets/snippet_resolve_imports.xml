@@ -8,9 +8,9 @@
             <paragraph>Resolve imports in a model</paragraph>
         </container>
         <container classes="sphinx-tabs">
-            <container classes="dummy">
+            <container>
                 <container classes="item">
-                    <container classes="dummy">
+                    <container>
                         <paragraph>C++ snippet</paragraph>
                     </container>
                 </container>
@@ -30,7 +30,7 @@
         printImportDependencies(model);
 
         // Retrieve a "flattened" (ie: import-free) model from the importer,
-        // and use it to over-write the current model.cd 
+        // and use it to over-write the current model.
         model = importer-&gt;flattenModel(model);
 
         printImportDependencies(model);
@@ -40,9 +40,9 @@
                     <paragraph>Full context: <download_reference filename="351eceb70ca63151b24007a40add72da/simulationToolDev.cpp" refdoc="howto/code_snippets/snippet_resolve_imports" refdomain="" refexplicit="True" reftarget="../code/simulation_tool_dev/simulationToolDev.cpp" reftype="download" refwarn="False"><literal classes="xref download">example_simulationToolDev.cpp</literal></download_reference></paragraph>
                 </container>
             </container>
-            <container classes="dummy">
+            <container>
                 <container classes="item">
-                    <container classes="dummy">
+                    <container>
                         <paragraph>Python snippet</paragraph>
                     </container>
                 </container>

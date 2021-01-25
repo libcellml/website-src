@@ -31,9 +31,9 @@
                 <paragraph>Generate code from a model</paragraph>
             </container>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++ snippet</paragraph>
                         </container>
                     </container>
@@ -45,8 +45,10 @@
 
     // Pass the generator the model for processing.
     generator-&gt;setModel(analyser-&gt;model());
+    printIssues(generator);
 
-    // Retrieve and write the interface code (*.h) and implementation code (*.c) to files.
+</literal_block>
+                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/kmoy001/libcellml/libcellml-tutorials/howto/code/simulation_tool_dev/simulationToolDev.cpp" xml:space="preserve">    // Retrieve and write the interface code (*.h) and implementation code (*.c) to files.
     std::ofstream outFile("sineComparisonExample.h");
     outFile &lt;&lt; generator-&gt;interfaceCode();
     outFile.close();
@@ -68,9 +70,9 @@
                         <paragraph>Full context: <download_reference filename="6446c8b6fec8120c0fc7c0dc30ffdc04/simulationToolDev.cpp" refdoc="howto/actions/generate_code" refdomain="" refexplicit="True" reftarget="../code/simulation_tool_dev/simulationToolDev.cpp" reftype="download" refwarn="False"><literal classes="xref download">example_simulationToolDev.cpp</literal></download_reference></paragraph>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python snippet</paragraph>
                         </container>
                     </container>
@@ -84,7 +86,8 @@
     generator.processModel(analyser.model())
     print_issues_to_terminal(generator)
 
-    # Retrieve and write the interface code (*.h) and implementation code (*.cpp) to files.
+</literal_block>
+                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/kmoy001/libcellml/libcellml-tutorials/howto/code/simulation_tool_dev/simulationToolDev.py" xml:space="preserve">    # Retrieve and write the interface code (*.h) and implementation code (*.cpp) to files.
     write_file = open("sineComparisonExample.h", "w")
     write_file.write(generator.interfaceCode())
     write_file.close()

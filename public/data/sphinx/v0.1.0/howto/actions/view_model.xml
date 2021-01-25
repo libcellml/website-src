@@ -44,9 +44,9 @@
       │   └─ TestValue item
       │
       ├─ Math item
-      ╎
+      │
       └─ Child Component item(s)
-           ╎
+           │
            └─ Grandchild Component item(s)</literal_block>
             <paragraph>Within the structure each item has two parts:</paragraph>
             <bullet_list bullet="-">
@@ -90,9 +90,9 @@ my_test_varible = my_reset-&gt;testVariable()</literal_block>
                 </container>
                 <paragraph>The following example shows how all variables in a component can be listed.</paragraph>
                 <container classes="sphinx-tabs">
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>C++</paragraph>
                             </container>
                         </container>
@@ -119,9 +119,9 @@ auto myMissingVariable = myComponent-&gt;variable("nameThatDoesntExist");
 // This will cause a segfault as myMissingVariable is null:
 auto myMissingName = myMissingVariable-&gt;name();</literal_block>
                     </container>
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>Python</paragraph>
                             </container>
                         </container>
@@ -185,9 +185,9 @@ my_missing_name = my_missing_variable.name()</literal_block>
                 <paragraph>In libCellML, the encapsulation structure is embedded in the ownership of the components, so that one component can be a parent of another.
                     This can be confusing if the simple <literal classes="code">componentCount()</literal> function on a model is called naively, as shown below.</paragraph>
                 <container classes="sphinx-tabs">
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>C++</paragraph>
                             </container>
                         </container>
@@ -201,9 +201,9 @@ auto grandfatherHasTwoKids = grandfather-&gt;componentCount(); // returns 2
 auto uncleHasNoKids = grandfather-&gt;component(0)-&gt;componentCount();          // returns 0
 auto motherHasTwoKids = grandfather-&gt;component("Mother")-&gt;componentCount(); // returns 2</literal_block>
                     </container>
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>Python</paragraph>
                             </container>
                         </container>
@@ -231,9 +231,9 @@ mother_has_two_kids = grandfather.component("Mother").componentCount() # returns
                 <paragraph>There are two places that need a reference to <literal classes="code">Units</literal> items.
                     The first is the set of <literal classes="code">Variable</literal> items stored in the <literal classes="code">Component</literal>: the units name for each of these is accessible in the <literal classes="code">name()</literal> attribute of its <literal classes="code">units()</literal> item.</paragraph>
                 <container classes="sphinx-tabs">
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>C++</paragraph>
                             </container>
                         </container>
@@ -285,9 +285,9 @@ for (const auto &amp;name : unitsNames) {
     std::cout &lt;&lt; "  - " &lt;&lt; name &lt;&lt; std::endl;
 }</literal_block>
                     </container>
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>Python</paragraph>
                             </container>
                         </container>
@@ -337,9 +337,9 @@ for name in units_names:
                     <paragraph>TODO: Need more examples of useful mathml manipulation. Variable names? Need to remove whitespace first?</paragraph>
                 </block_quote>
                 <container classes="sphinx-tabs">
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>C++</paragraph>
                             </container>
                         </container>
@@ -365,9 +365,9 @@ for name in units_names:
     std::cout &lt;&lt; "Switched units '" &lt;&lt; in &lt;&lt; "' for units '" &lt;&lt; out &lt;&lt; "'" &lt;&lt; std::endl;
 }</literal_block>
                     </container>
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>Python</paragraph>
                             </container>
                         </container>
@@ -397,9 +397,9 @@ return new_maths</literal_block>
                 <paragraph>Because components may be nested to any depth within an encapsulation hierarchy, we need to use recursive functions to be sure of reaching the bottom level.
                     The examples below define two functions - one to initiate the recursion, and one to carry it out.</paragraph>
                 <container classes="sphinx-tabs">
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>C++</paragraph>
                             </container>
                         </container>
@@ -429,9 +429,9 @@ void printEncapsulationStructureToTerminal(libcellml::ModelPtr &amp;model)
       }
   }</literal_block>
                     </container>
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>Python</paragraph>
                             </container>
                         </container>
@@ -510,9 +510,9 @@ def print_component_only_to_terminal(component, spacer):
  - variable 'B' [dimensionless] in component 'componentB'
  - variable 'C' [dimensionless] in component 'componentC'</literal_block>
                 <container classes="sphinx-tabs">
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>C++</paragraph>
                             </container>
                         </container>
@@ -586,9 +586,9 @@ void listEquivalentVariables(const libcellml::VariablePtr &amp;variable,
     }
 }</literal_block>
                     </container>
-                    <container classes="dummy">
+                    <container>
                         <container classes="item">
-                            <container classes="dummy">
+                            <container>
                                 <paragraph>Python</paragraph>
                             </container>
                         </container>

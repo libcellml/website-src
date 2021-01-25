@@ -145,7 +145,7 @@
         <section ids="step-2-retrieve-an-item-with-a-unique-id" names="step\ 2:\ retrieve\ an\ item\ with\ a\ unique\ id">
             <title>Step 2: Retrieve an item with a unique id</title>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Annotator">Annotator class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Annotator">Annotator class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>create</paragraph>
@@ -273,7 +273,7 @@
         <section ids="step-3-retrieve-items-whose-id-are-not-unique" names="step\ 3:\ retrieve\ items\ whose\ id\ are\ not\ unique">
             <title>Step 3: Retrieve items whose id are not unique</title>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Annotator">Annotator class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Annotator">Annotator class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>items</paragraph>
@@ -431,7 +431,7 @@ Issue [0] is a WARNING:
             <paragraph>Now we know that there is only one item in the model with id “polo”, and we also know that it has type <literal classes="code">UNIT</literal>.
                 In circumstances where you know the type of the item with the id you’re fetching ahead of time, you can retrieve it without the need to cast using the direct functions according to type: these are listed below.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Annotator">Annotator class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Annotator">Annotator class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>component</paragraph>
@@ -473,7 +473,7 @@ Issue [0] is a WARNING:
                         <paragraph>variable</paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Unit">Unit class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Unit">Unit class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>units</paragraph>
@@ -522,7 +522,7 @@ Issue [0] is a WARNING:
             <title>Step 4: Discover items whose ids are unknown</title>
             <paragraph>Now that we’ve found Marco and fixed the duplicates of Polo, we’d like to know what other ids are being used in this model.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Annotator">Annotator class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Annotator">Annotator class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>ids</paragraph>
@@ -621,7 +621,7 @@ Issue [0] is a WARNING:
             <title>Step 5: Trace provenance of imported items</title>
             <paragraph>The final step is to make sure that imported items can have their annotations tracked back to their sources too.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Importer">Importer class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Importer">Importer class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>create</paragraph>
@@ -630,7 +630,7 @@ Issue [0] is a WARNING:
                         <paragraph>resolveImports</paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1ImportedEntity">ImportedEntity class</reference> (applies to both the <literal classes="code">Units</literal> and the <literal classes="code">Component</literal> class)</paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1ImportedEntity">ImportedEntity class</reference> (applies to both the <literal classes="code">Units</literal> and the <literal classes="code">Component</literal> class)</paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>isImport</paragraph>
@@ -642,7 +642,7 @@ Issue [0] is a WARNING:
                         <paragraph>importSource</paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1ImportSource">ImportSource class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1ImportSource">ImportSource class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>model</paragraph>
@@ -846,7 +846,7 @@ After automatic assignment the components have ids:
     - "b4da5d"</literal_block>
             <paragraph>Finally, we decide that it’s too cold for swimming, and want to nuke all the ids and go home.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Annotator">Annotator class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Annotator">Annotator class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>clearAllIds</paragraph>

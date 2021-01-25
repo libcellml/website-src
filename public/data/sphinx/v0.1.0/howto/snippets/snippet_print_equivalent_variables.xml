@@ -49,9 +49,9 @@
  - variable 'B' [dimensionless] in component 'componentB'
  - variable 'C' [dimensionless] in component 'componentC'</literal_block>
         <container classes="sphinx-tabs">
-            <container classes="dummy">
+            <container>
                 <container classes="item">
-                    <container classes="dummy">
+                    <container>
                         <paragraph>C++</paragraph>
                     </container>
                 </container>
@@ -125,9 +125,9 @@ void listEquivalentVariables(const libcellml::VariablePtr &amp;variable,
     }
 }</literal_block>
             </container>
-            <container classes="dummy">
+            <container>
                 <container classes="item">
-                    <container classes="dummy">
+                    <container>
                         <paragraph>Python</paragraph>
                     </container>
                 </container>

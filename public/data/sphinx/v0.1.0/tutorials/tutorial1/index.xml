@@ -65,9 +65,9 @@
             <paragraph>For each of the tutorials, there is template code provided for you to get started.
                 If you’d rather see the completed code instead of working through the tasks yourself, simply rename the completed files so that they match the skeleton file names (that is, remove the <literal classes="code">_completed</literal> from their names).</paragraph>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -85,9 +85,9 @@ make -j</literal_block>
 -----------------------------------------------</literal_block>
                     </container>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python</paragraph>
                         </container>
                     </container>
@@ -114,7 +114,7 @@ python3 tutorial1.py</literal_block>
                 <emphasis>deserialised</emphasis> into the internal <literal classes="code">Model</literal> format.
                 The hard work of this transformation is done by the <literal classes="code">Parser</literal> object which will take a raw CellML string which represents a model and return its corresponding <literal classes="code">Model</literal> item.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Parser">Parser class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Parser">Parser class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>create</paragraph>
@@ -179,7 +179,7 @@ python3 tutorial1.py</literal_block>
             <paragraph>Now that we have a model, let’s see what’s inside it.
                 All retrieval functions - where you want to read something about any item - are callable from simple functions naming the thing you want.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Model">Model class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Model">Model class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>name</paragraph>
@@ -194,7 +194,7 @@ python3 tutorial1.py</literal_block>
                         <paragraph>unitsCount</paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Component">Component class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Component">Component class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>name</paragraph>
@@ -206,7 +206,7 @@ python3 tutorial1.py</literal_block>
                         <paragraph>variableCount</paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Variable">Variable class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Variable">Variable class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>name</paragraph>
@@ -225,9 +225,9 @@ The model id is: tutorial_1_model_id_is_here</literal_block>
             <paragraph>The <literal classes="code">Model</literal> itself stores two kinds of objects: a set of <literal classes="code">Units</literal> objects, and a set of <literal classes="code">Component</literal> objects.
                 There are generic <literal classes="code">somethingCount()</literal> functions which will return the number of <literal classes="code">Something</literal> items within that object:</paragraph>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -235,9 +235,9 @@ The model id is: tutorial_1_model_id_is_here</literal_block>
                     </container>
                     <literal_block force="False" highlight_args="{}" language="cpp" linenos="False" xml:space="preserve">auto numberOfComponents = myFirstModel-&gt;componentCount();</literal_block>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python</paragraph>
                         </container>
                     </container>
@@ -255,9 +255,9 @@ The model id is: tutorial_1_model_id_is_here</literal_block>
                 The indices start at <literal classes="code">0</literal>.</paragraph>
             <paragraph>Each <literal classes="code">Component</literal> itself (or later, <literal classes="code">Units</literal> or <literal classes="code">Variable</literal>) is retrieved from its parent item as a pointer (that is, a <literal classes="code">ComponentPtr</literal> type) using the same idiom as the names and ids:</paragraph>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -266,9 +266,9 @@ The model id is: tutorial_1_model_id_is_here</literal_block>
                     <literal_block force="False" highlight_args="{}" language="cpp" linenos="False" xml:space="preserve">// Retrieve the 33rd component from myFirstModel.  Note the indexing from zero.
 auto thirtyThirdComponent = myFirstModel-&gt;component(32);</literal_block>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python</paragraph>
                         </container>
                     </container>
@@ -444,7 +444,7 @@ thirty_third_component = my_first_model.component(32)</literal_block>
             <paragraph>Now that you’ve seen how to <emphasis>deserialise</emphasis> a CellML file into a model using the <literal classes="code">Parser</literal>, it’s time to go in the other direction.
                 This reverse operation is handled by the <literal classes="code">Printer</literal>, which will transform a model into a string for output to a file.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://libcellml.github.io/help/api/v0.2.0/classlibcellml_1_1Printer">Printer class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Printer">Printer class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph>create</paragraph>
@@ -455,9 +455,9 @@ thirty_third_component = my_first_model.component(32)</literal_block>
                 </bullet_list>
             </container>
             <container classes="sphinx-tabs">
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>C++</paragraph>
                         </container>
                     </container>
@@ -466,9 +466,9 @@ thirty_third_component = my_first_model.component(32)</literal_block>
                     <literal_block force="False" highlight_args="{}" language="cpp" linenos="False" xml:space="preserve">auto printer = libcellml::Printer::create();
 std::string serialisedModelString = printer-&gt;printModel(myFirstModel);</literal_block>
                 </container>
-                <container classes="dummy">
+                <container>
                     <container classes="item">
-                        <container classes="dummy">
+                        <container>
                             <paragraph>Python</paragraph>
                         </container>
                     </container>

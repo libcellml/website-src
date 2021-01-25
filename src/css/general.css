@@ -40,6 +40,10 @@ h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+h3 {
+    margin-top: 1em;
+}
+
 .v-application {
     font-family: var(--text-font);
 }
@@ -79,7 +83,7 @@ h1 {
 .v-application code {
     font-size: 100%;
     color: var(--code-colour);
-    padding: 0;
+    /* padding: 0; */
 }
 
 code.xref {
