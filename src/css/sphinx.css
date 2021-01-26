@@ -93,10 +93,10 @@ pre > code {
     border-left-style: solid;
     margin: 1rem 0;
 
-    background-color:#fbfff6;
-    border-color: rgb(80, 121, 0);
-    color: #22440b;
-    font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+    background-color: var(--dothis-background-color);
+    border-color: var(--dothis-border-color);
+    color: var(--dothis-color);
+    font-family: var(--text-font);
 }
 
 .dothis > p {
@@ -107,26 +107,40 @@ pre > code {
     padding: .5rem 1.5rem;
     border-left-width: .5rem;
     border-left-style: solid;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
 
-    background-color:#f3f5f7;
-    border-color: #1f76be;
-    color: #0f3555;
-
-    font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+    background-color: var(--useful-background-color);
+    border-color: var(--useful-border-color);
+    color: var(--useful-color);
+    font-family: var(--text-font);
 }
 
+.useful::before {
+    content: "Useful functions";
+    font-weight: 700;
+    font-size: large;
+    color: var(--useful-color);
+}
+
+.useful > * {
+    margin-left: 2rem;
+}
+.useful a {
+    color: var(--useful-link-color) !important;
+}
+
+/* Useful container main text */
 .useful > p {
     margin-bottom: 0;
+    margin-top: 0.5em;
 }
-
-.useful > p > a {
-    color: #1f76be;
-    font-weight: 700;
+/* Useful container list indents */
+.useful > ul {
+    margin-left: 3rem;
 }
-
 .useful > ul > li > p {
-    margin-bottom: 0.15em;
+    margin-bottom: 0.1em;
+    font-family: var(--mono-font);
 }
 
 .nb {
@@ -135,11 +149,11 @@ pre > code {
     border-left-style: solid;
     margin: 1rem 0;
 
-    background-color: rgba(255,229,100,.3);
-    border-color: #e7c000;
-    color: #6b5900;
+    background-color: var(--nb-background-color);
+    border-color: var(--nb-border-color);
+    color: var(--nb-color);
     line-height: 1.5em;
-    font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+    font-family: var(--text-font);
 }
 
 .nb > p, ul, ol, dl {

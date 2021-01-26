@@ -80,7 +80,7 @@
                 </list_item>
             </bullet_list>
             <paragraph>The overloaded argument option list is shown below for each language.
-                Please check the <reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Units">API Units documentation</reference> for details.</paragraph>
+                Please check the <reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Units?fName=addUnit">API Units documentation</reference> for details.</paragraph>
             <container classes="sphinx-tabs">
                 <container>
                     <container classes="item">
