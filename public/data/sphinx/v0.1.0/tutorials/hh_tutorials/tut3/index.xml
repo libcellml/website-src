@@ -1281,10 +1281,10 @@ Issue [1] is an ERROR:
             <container classes="useful">
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>C++: printEquivalentVariableSet with the variable argument</paragraph>
+                        <paragraph>C++: <literal classes="code">printEquivalentVariableSet</literal> with the variable argument</paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>Python: print_equivalent_variable_set with the variable argument</paragraph>
+                        <paragraph>Python: <literal classes="code">print_equivalent_variable_set</literal> with the variable argument</paragraph>
                     </list_item>
                 </bullet_list>
             </container>

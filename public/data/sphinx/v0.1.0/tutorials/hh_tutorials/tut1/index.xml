@@ -500,19 +500,19 @@ COMPONENTS: 1 components
                     <paragraph><strong>C++</strong></paragraph>
                     <bullet_list bullet="-">
                         <list_item>
-                            <paragraph>getIssueLevelFromEnum; and</paragraph>
+                            <paragraph><literal classes="code">getIssueLevelFromEnum</literal> ; and</paragraph>
                         </list_item>
                         <list_item>
-                            <paragraph>getCellmlElementTypeFromEnum.</paragraph>
+                            <paragraph><literal classes="code">getCellmlElementTypeFromEnum</literal> .</paragraph>
                         </list_item>
                     </bullet_list>
                     <paragraph><strong>Python</strong></paragraph>
                     <bullet_list bullet="-">
                         <list_item>
-                            <paragraph>get_issue_level_from_enum; and</paragraph>
+                            <paragraph><literal classes="code">get_issue_level_from_enum</literal> ; and</paragraph>
                         </list_item>
                         <list_item>
-                            <paragraph>get_cellml_element_type_from_enum.</paragraph>
+                            <paragraph><literal classes="code">get_cellml_element_type_from_enum</literal> .</paragraph>
                         </list_item>
                     </bullet_list>
                 </container>
@@ -649,10 +649,10 @@ Issue [5] is an ERROR:
                 <paragraph>Helper functions for retrieving and printing any issues from any of the logger classes:</paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>printIssues (C++)</paragraph>
+                        <paragraph><literal classes="code">printIssues</literal> (C++)</paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>print_issues (Python)</paragraph>
+                        <paragraph><literal classes="code">print_issues</literal> (Python)</paragraph>
                     </list_item>
                 </bullet_list>
             </container>
