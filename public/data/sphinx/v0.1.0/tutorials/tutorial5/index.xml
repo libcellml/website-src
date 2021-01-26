@@ -145,31 +145,31 @@
         <section ids="step-2-retrieve-an-item-with-a-unique-id" names="step\ 2:\ retrieve\ an\ item\ with\ a\ unique\ id">
             <title>Step 2: Retrieve an item with a unique id</title>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Annotator">Annotator class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator">Annotator class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>create</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator?fName=create">create</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>setModel</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator?fName=setModel">setModel</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>item</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator?fName=item">item</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>issueCount</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator?fName=issueCount">issueCount</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>issue</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator?fName=issue">issue</reference></paragraph>
                     </list_item>
                 </bullet_list>
                 <paragraph>Tutorial functions</paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>C++: getCellmlElementTypeFromEnum will return a string version of the CellmlElementType enumeration</paragraph>
+                        <paragraph>C++: <literal classes="code">getCellmlElementTypeFromEnum</literal> will return a string version of the <literal classes="code">CellmlElementType</literal> enumeration</paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>Python: get_cellml_element_type_from_enum</paragraph>
+                        <paragraph>Python: <literal classes="code">get_cellml_element_type_from_enum</literal></paragraph>
                     </list_item>
                 </bullet_list>
             </container>
@@ -273,16 +273,16 @@
         <section ids="step-3-retrieve-items-whose-id-are-not-unique" names="step\ 3:\ retrieve\ items\ whose\ id\ are\ not\ unique">
             <title>Step 3: Retrieve items whose id are not unique</title>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Annotator">Annotator class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator">Annotator class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>items</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator?fName=items">items</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>isUnique</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator?fName=isUnique">isUnique</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>assignId</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator?fName=assignId">assignId</reference></paragraph>
                     </list_item>
                 </bullet_list>
             </container>
@@ -431,55 +431,55 @@ Issue [0] is a WARNING:
             <paragraph>Now we know that there is only one item in the model with id “polo”, and we also know that it has type <literal classes="code">UNIT</literal>.
                 In circumstances where you know the type of the item with the id you’re fetching ahead of time, you can retrieve it without the need to cast using the direct functions according to type: these are listed below.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Annotator">Annotator class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator">Annotator class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>component</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator?fName=component">component</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>componentRef</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator?fName=componentRef">componentRef</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>connection</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator?fName=connection">connection</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>encapsulation</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator?fName=encapsulation">encapsulation</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>import</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator?fName=import">import</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>mapVariables</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator?fName=mapVariables">mapVariables</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>model</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator?fName=model">model</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>reset</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator?fName=reset">reset</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>resetValue</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator?fName=resetValue">resetValue</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>testValue</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator?fName=testValue">testValue</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>unit</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator?fName=unit">unit</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>units</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator?fName=units">units</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>variable</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator?fName=variable">variable</reference></paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Unit">Unit class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Unit">Unit class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>units</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Unit?fName=units">units</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>index</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Unit?fName=index">index</reference></paragraph>
                     </list_item>
                 </bullet_list>
             </container>
@@ -522,16 +522,16 @@ Issue [0] is a WARNING:
             <title>Step 4: Discover items whose ids are unknown</title>
             <paragraph>Now that we’ve found Marco and fixed the duplicates of Polo, we’d like to know what other ids are being used in this model.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Annotator">Annotator class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator">Annotator class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>ids</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator?fName=ids">ids</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>duplicateIds</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator?fName=duplicateIds">duplicateIds</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>itemCount</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator?fName=itemCount">itemCount</reference></paragraph>
                     </list_item>
                 </bullet_list>
             </container>
@@ -621,34 +621,34 @@ Issue [0] is a WARNING:
             <title>Step 5: Trace provenance of imported items</title>
             <paragraph>The final step is to make sure that imported items can have their annotations tracked back to their sources too.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Importer">Importer class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Importer">Importer class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>create</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Importer?fName=create">create</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>resolveImports</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Importer?fName=resolveImports">resolveImports</reference></paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1ImportedEntity">ImportedEntity class</reference> (applies to both the <literal classes="code">Units</literal> and the <literal classes="code">Component</literal> class)</paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1ImportedEntity">ImportedEntity class</reference> (applies to both the <literal classes="code">Units</literal> and the <literal classes="code">Component</literal> class)</paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>isImport</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1ImportedEntity?fName=isImport">isImport</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>importReference</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1ImportedEntity?fName=importReference">importReference</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>importSource</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1ImportedEntity?fName=importSource">importSource</reference></paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1ImportSource">ImportSource class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1ImportSource">ImportSource class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>model</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1ImportSource?fName=model">model</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>url</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1ImportSource?fName=url">url</reference></paragraph>
                     </list_item>
                 </bullet_list>
             </container>
@@ -846,13 +846,13 @@ After automatic assignment the components have ids:
     - "b4da5d"</literal_block>
             <paragraph>Finally, we decide that it’s too cold for swimming, and want to nuke all the ids and go home.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Annotator">Annotator class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator">Annotator class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>clearAllIds</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator?fName=clearAllIds">clearAllIds</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>assignAllIds</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Annotator?fName=clearAllIds">assignAllIds</reference></paragraph>
                     </list_item>
                 </bullet_list>
             </container>

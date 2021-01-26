@@ -310,7 +310,7 @@ assert(success == false);</literal_block>
                     </block_quote>
                     <paragraph>Note that the <literal classes="code">removeEquivalence</literal> function will only remove an equivalence which was previously set using the <literal classes="code">addEquivalence</literal> function; it does not remove any indirect connections via third-party variables between the two.</paragraph>
                     <paragraph>An additional <literal classes="code">removeAllEquivalences</literal> function will completely remove the variable from any connected set.</paragraph>
-                    <paragraph>Please see the <reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Variable">API Variable</reference> page for details of these functions.</paragraph>
+                    <paragraph>Please see the <reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Variable">API Variable</reference> page for details of these functions.</paragraph>
                     <container classes="sphinx-tabs">
                         <container>
                             <container classes="item">
