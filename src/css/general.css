@@ -34,10 +34,8 @@
     --border-colour: var(--pale-grey);
     --code-colour: var(--mid-red);
 
-
-
     --text-font: "Lato", "proxima-nova", "Helvetica Neue", "Arial", sans-serif;
-    --code-font: "Lato", "proxima-nova", "Helvetica Neue", "Arial", sans-serif;
+    --code-font: monospace;
     --mono-font: monospace;
 }
 

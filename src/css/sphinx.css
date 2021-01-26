@@ -125,6 +125,9 @@ pre > code {
 .useful > * {
     margin-left: 2rem;
 }
+.useful a {
+    color: var(--useful-link-color) !important;
+}
 
 /* Useful container main text */
 .useful > p {
@@ -135,12 +138,9 @@ pre > code {
 .useful > ul {
     margin-left: 3rem;
 }
-/* Useful container lists of links */
-.useful li a {
-    color: var(--useful-link-color) !important;
-}
 .useful > ul > li > p {
     margin-bottom: 0.1em;
+    font-family: var(--mono-font);
 }
 
 .nb {
