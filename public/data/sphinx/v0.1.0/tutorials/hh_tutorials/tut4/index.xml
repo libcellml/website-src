@@ -339,19 +339,19 @@ COMPONENTS: 2 components
                 This is done using a <literal classes="code">GeneratorProfile</literal> to specify a dictionary of mathematical operations.
                 Two profiles are already defined; for C++ and for Python.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1GeneratorProfile">GeneratorProfile class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1GeneratorProfile">GeneratorProfile class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>create</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1GeneratorProfile?fName=create">create</reference></paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Generator">Generator class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Generator">Generator class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>create</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Generator?fName=create">create</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>setProfile</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Generator?fName=setProfile">setProfile</reference></paragraph>
                     </list_item>
                 </bullet_list>
             </container>
@@ -408,28 +408,28 @@ COMPONENTS: 2 components
             </container>
             <paragraph>Instead of submitting a <literal classes="code">Model</literal> item (as we do for all other classes), the <literal classes="code">Generator</literal> class will work from something which has already been processed by the <literal classes="code">Analyser</literal> class: an <literal classes="code">AnalyserModel</literal> object.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1GeneratorProfile">Analyser class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Analyser">Analyser class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>model</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Analyser?fName=model">model</reference></paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Generator">Generator class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Generator">Generator class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>setModel</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Generator?fName=setModel">setModel</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>implementationCode</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Generator?fName=implementationCode">implementationCode</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>interfaceCode</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Generator?fName=interfaceCode">interfaceCode</reference></paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1GeneratorProfile">GeneratorProfile class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1GeneratorProfile">GeneratorProfile class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>setInterfaceFileNameString</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1GeneratorProfile?fName=setInterfaceFileNameString">setInterfaceFileNameString</reference></paragraph>
                     </list_item>
                 </bullet_list>
             </container>

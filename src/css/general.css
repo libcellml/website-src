@@ -14,6 +14,19 @@
     --transparent-grey: rgba(27,31,35,.05);
     --deep-blue: #476582;
 
+    --dothis-background-color:#fbfff6;
+    --dothis-border-color: rgb(80, 121, 0);
+    --dothis-color: #22440b;
+
+    --useful-background-color:#f3f5f7;
+    --useful-border-color: #144b79;
+    --useful-color:  #144b79; /*#0f3555;*/
+    --useful-link-color: #1f76be;
+
+    --nb-background-color: rgba(255,229,100,.3);
+    --nb-border-color: #e7c000;
+    --nb-color: #6b5900;
+
     --warning-background: rgb(251, 239, 239);
     --warning-text: var(--deep-red);
 
@@ -21,8 +34,11 @@
     --border-colour: var(--pale-grey);
     --code-colour: var(--mid-red);
 
+
+
     --text-font: "Lato", "proxima-nova", "Helvetica Neue", "Arial", sans-serif;
     --code-font: "Lato", "proxima-nova", "Helvetica Neue", "Arial", sans-serif;
+    --mono-font: monospace;
 }
 
 /* Make max width for page content. */

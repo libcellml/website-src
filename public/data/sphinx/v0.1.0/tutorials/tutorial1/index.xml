@@ -114,13 +114,13 @@ python3 tutorial1.py</literal_block>
                 <emphasis>deserialised</emphasis> into the internal <literal classes="code">Model</literal> format.
                 The hard work of this transformation is done by the <literal classes="code">Parser</literal> object which will take a raw CellML string which represents a model and return its corresponding <literal classes="code">Model</literal> item.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Parser">Parser class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Parser">Parser class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>create</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Parser?fName=create">create</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>parseModel</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Parser?fName=parseModel">parseModel</reference></paragraph>
                     </list_item>
                 </bullet_list>
             </container>
@@ -179,40 +179,40 @@ python3 tutorial1.py</literal_block>
             <paragraph>Now that we have a model, let’s see what’s inside it.
                 All retrieval functions - where you want to read something about any item - are callable from simple functions naming the thing you want.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Model">Model class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Model">Model class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>name</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Model?fName=name">name</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>id</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Model?fName=id">id</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>componentCount</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Model?fName=componentCount">componentCount</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>unitsCount</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Model?fName=unitsCount">unitsCount</reference></paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Component">Component class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Component">Component class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>name</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Component?fName=name">name</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>id</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Component?fName=id">id</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>variableCount</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Component?fName=variableCount">variableCount</reference></paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Variable">Variable class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Variable">Variable class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>name</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Variable?fName=name">name</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>id</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Variable?fName=id">id</reference></paragraph>
                     </list_item>
                 </bullet_list>
             </container>
@@ -444,13 +444,13 @@ thirty_third_component = my_first_model.component(32)</literal_block>
             <paragraph>Now that you’ve seen how to <emphasis>deserialise</emphasis> a CellML file into a model using the <literal classes="code">Parser</literal>, it’s time to go in the other direction.
                 This reverse operation is handled by the <literal classes="code">Printer</literal>, which will transform a model into a string for output to a file.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Printer">Printer class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Printer">Printer class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>create</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Printer?fName=create">create</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>printModel</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Printer?fName=printModel">printModel</reference></paragraph>
                     </list_item>
                 </bullet_list>
             </container>

@@ -121,13 +121,13 @@ TUTORIAL 2: ERROR CHECKING AND VALIDATION
         <section ids="step-1-parse-a-cellml-file-into-a-model" names="step\ 1:\ parse\ a\ cellml\ file\ into\ a\ model">
             <title>Step 1: Parse a CellML file into a model</title>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Parser">Parser class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Parser">Parser class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>create</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Parser?fName=create">create</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>parseModel</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Parser?fName=parseModel">parseModel</reference></paragraph>
                     </list_item>
                 </bullet_list>
                 <paragraph>Utility functions (C++)</paragraph>
@@ -182,13 +182,13 @@ COMPONENTS: 1 components
                 You can think of the validation being the spell-checker for your model.
                 It doesn’t judge the meaning of <emphasis>what</emphasis> you’ve written, just the nitty-gritty of <emphasis>how</emphasis> you’ve written it.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Validator">Validator class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Validator">Validator class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>create</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Validator?fName=create">create</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>validateModel</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Validator?fName=validateModel">validateModel</reference></paragraph>
                     </list_item>
                 </bullet_list>
             </container>
@@ -226,37 +226,37 @@ validator.validateModel(your_model_here)</literal_block>
             <paragraph>When you’ve created a <literal classes="code">Validator</literal> object and called it to check a model, a record of any issues is stored inside the validator.
                 To figure out what’s going on, you need to retrieve the pointers to these <literal classes="code">Issue</literal> objects.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Validator">Validator class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Validator">Validator class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>issueCount</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1issueCount &lt;Validator?fName=&gt;issueCount">issueCount &lt;Validator?fName=&gt;issueCount</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>issue</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Validator?fName=issue">issue</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>errorCount</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Validator?fName=errorCount">errorCount</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>error</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Validator?fName=error">error</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>warningCount</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Validator?fName=warningCount">warningCount</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>warning</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Validator?fName=warning">warning</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>hintCount</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Validator?fName=hintCount">hintCount</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>hint</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Validator?fName=hint">hint</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>messageCount</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Validator?fName=messageCount">messageCount</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>message</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Validator?fName=message">message</reference></paragraph>
                     </list_item>
                 </bullet_list>
             </container>
@@ -317,22 +317,22 @@ validator.validateModel(your_model_here)</literal_block>
                 </container>
             </container>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Issue">Issue class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Issue">Issue class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>description</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Issue?fName=description">description</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>url</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Issue?fName=url">url</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>referenceHeading</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Issue?fName=referenceHeading">referenceHeading</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>cellmlElementType</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Issue?fName=cellmlElementType">cellmlElementType</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>cellmlElement</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Issue?fName=cellmlElement">cellmlElement</reference></paragraph>
                     </list_item>
                 </bullet_list>
                 <paragraph>Utility functions (C++)</paragraph>
@@ -357,74 +357,74 @@ validator.validateModel(your_model_here)</literal_block>
             <paragraph>Inside an <literal classes="code">Issue</literal> structure are three fields which are really useful.
                 These are the <literal classes="code">description</literal> (which does what you’d think) and the <literal classes="code">referenceHeading</literal>, which points you to the section in the CellML2.0 specification document for reference, and a <literal classes="code">url</literal> with links to a relevant website for more information.</paragraph>
             <paragraph>Each issue also has a level indicator, one of:</paragraph>
-            <block_quote>
+            <container classes="shortlist">
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>ERROR,</paragraph>
+                        <paragraph><literal classes="code">ERROR</literal>,</paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>WARNING,</paragraph>
+                        <paragraph><literal classes="code">WARNING</literal>,</paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>HINT, and</paragraph>
+                        <paragraph><literal classes="code">HINT</literal>, and</paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>MESSAGE.</paragraph>
+                        <paragraph><literal classes="code">MESSAGE</literal>.</paragraph>
                     </list_item>
                 </bullet_list>
-            </block_quote>
+            </container>
             <paragraph>As well as storing text-based information, the issue also keeps track of which item has the problem.
                 This can be accessed using the <literal classes="code">item</literal> function, and has a type given by the enumeration in <literal classes="code">cellmlElementType</literal> function.
                 The <literal classes="code">CellmlElementType</literal> enumeration contains:</paragraph>
-            <block_quote>
+            <container classes="shortlist">
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>COMPONENT,</paragraph>
+                        <paragraph><literal classes="code">COMPONENT</literal> ,</paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>COMPONENT_REF,</paragraph>
+                        <paragraph><literal classes="code">COMPONENT_REF</literal> ,</paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>CONNECTION,</paragraph>
+                        <paragraph><literal classes="code">CONNECTION</literal> ,</paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>ENCAPSULATION,</paragraph>
+                        <paragraph><literal classes="code">ENCAPSULATION</literal> ,</paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>IMPORT,</paragraph>
+                        <paragraph><literal classes="code">IMPORT</literal> ,</paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>MAP_VARIABLES,</paragraph>
+                        <paragraph><literal classes="code">MAP_VARIABLES</literal> ,</paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>MATH,</paragraph>
+                        <paragraph><literal classes="code">MATH</literal> ,</paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>MODEL,</paragraph>
+                        <paragraph><literal classes="code">MODEL</literal> ,</paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>RESET,</paragraph>
+                        <paragraph><literal classes="code">RESET</literal> ,</paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>RESET_VALUE,</paragraph>
+                        <paragraph><literal classes="code">RESET_VALUE</literal> ,</paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>TEST_VALUE,</paragraph>
+                        <paragraph><literal classes="code">TEST_VALUE</literal> ,</paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>UNDEFINED,</paragraph>
+                        <paragraph><literal classes="code">UNDEFINED</literal> ,</paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>UNIT,</paragraph>
+                        <paragraph><literal classes="code">UNIT</literal> ,</paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>UNITS, and</paragraph>
+                        <paragraph><literal classes="code">UNITS</literal> , and</paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>VARIABLE.</paragraph>
+                        <paragraph><literal classes="code">VARIABLE</literal> .</paragraph>
                     </list_item>
                 </bullet_list>
-            </block_quote>
+            </container>
             <paragraph>Two utility functions have been provided which will convert the enums for error level or element type into a string for printing.</paragraph>
             <container classes="dothis">
                 <paragraph><strong>2.c</strong> Create a loop (to the number of issues found in 2.c) to retrieve each issue pointer.
@@ -515,34 +515,34 @@ Validator issue[4]:
                 A useful feature of the <literal classes="code">Issue</literal> items is as well as the textual information (which is more valuable to a <emphasis>reader</emphasis>), we also have a pointer to the item itself (which is more valuable to a <emphasis>programmer</emphasis> or user).
                 This section will work through the issues reported by the validator, and demonstrate different ways of accessing and repairing each of the problems.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Issue">Issue class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Issue">Issue class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>item</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Issue?fName=item">item</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>variable</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Issue?fName=variable">variable</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>math</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Issue?fName=math">math</reference></paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Variable">Variable class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Variable">Variable class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>setName</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Variable?fName=setName">setName</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>setUnits</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Variable?fName=setUnits">setUnits</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>setInitialValue</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Variable?fName=setInitialValue">setInitialValue</reference></paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Model">Model class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Model">Model class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>component(name, True) Retrieving a component by its name with the optional second argument true will search the entire   component tree for the component name.</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Model?fName=component">component(name, True)</reference> Retrieving a component by its name with the optional second argument true will search the entire component tree for the component name.</paragraph>
                     </list_item>
                 </bullet_list>
             </container>

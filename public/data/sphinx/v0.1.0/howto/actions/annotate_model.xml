@@ -261,7 +261,7 @@ grandparent_encapsulation_id = grandparent_component.encapsulationId()</literal_
                     </list_item>
                 </bullet_list>
                 <paragraph>Unit children of <literal classes="code">Units</literal> items can be accessed either through the streamlined ID-only functions <literal classes="code">unitId(index)</literal> and <literal classes="code">setUnitId(index)</literal>, or through the <literal classes="code">unitAttributes</literal> family of functions.
-                    Note that there are several overloads of the arguments for this function; please see the complete documentation on the <reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Units">Units functions API page</reference>.</paragraph>
+                    Note that there are several overloads of the arguments for this function; please see the complete documentation on the <reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Units?fName=addUnit">Units functions API page</reference>.</paragraph>
                 <container classes="sphinx-tabs">
                     <container>
                         <container classes="item">

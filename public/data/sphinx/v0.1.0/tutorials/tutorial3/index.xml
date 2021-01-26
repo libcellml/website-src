@@ -411,27 +411,27 @@
 </literal_block>
             </container>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Component">Component class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Component">Component class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>setMath</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Component?fName=setMath">setMath</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>appendMath</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Component?fName=appendMath">appendMath</reference></paragraph>
                     </list_item>
                 </bullet_list>
                 <paragraph>Utility functions (C++)</paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>printIssues will write information on any issues from a given Logger to the terminal.
-                            Logger classes include the <literal classes="code">Validator</literal>, <literal classes="code">Analyser</literal>, and <literal classes="code">Parser</literal>.</paragraph>
+                        <paragraph><literal classes="code">printIssues</literal> will write information on any issues from a given <literal classes="code">Logger</literal> to the terminal.
+                            <literal classes="code">Logger</literal> classes include the <literal classes="code">Validator</literal>, <literal classes="code">Analyser</literal>, and <literal classes="code">Parser</literal>.</paragraph>
                     </list_item>
                 </bullet_list>
                 <paragraph>Utility functions (Python)</paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>print_issues will write information on any issues from a given Logger to the terminal.
-                            Logger classes include the <literal classes="code">Validator</literal>, <literal classes="code">Analyser</literal>, and <literal classes="code">Parser</literal>.</paragraph>
+                        <paragraph><literal classes="code">print_issues</literal> will write information on any issues from a given <literal classes="code">Logger</literal> to the terminal.
+                            <literal classes="code">Logger</literal> classes include the <literal classes="code">Validator</literal>, <literal classes="code">Analyser</literal>, and <literal classes="code">Parser</literal>.</paragraph>
                     </list_item>
                 </bullet_list>
             </container>
@@ -542,19 +542,19 @@ Issue 2 is an ERROR:
         <section ids="step-2-create-the-variables" names="step\ 2:\ create\ the\ variables">
             <title>Step 2: Create the variables</title>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Variable">Variable class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Variable">Variable class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>create</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Variable?fName=create">create</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>setName</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Variable?fName=setName">setName</reference></paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Component">Component class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Component">Component class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>addVariable</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Component?fName=addVariable">addVariable</reference></paragraph>
                     </list_item>
                 </bullet_list>
             </container>
@@ -667,31 +667,31 @@ Issue 0 is an ERROR:
                 Some common units have been defined and built into libCellML, others you can define by combining the built-in ones using scaling factors and exponents, or you can define your own from scratch if need be.
                 You can read more about units on the <reference internal="True" refuri="../../asides/index#aside-units"><inline classes="std std-ref">Understanding units</inline></reference> page.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Units">Units class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Units">Units class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>create</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Units?fName=create">create</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>setName</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Units?fName=setName">setName</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>addUnit (note singular)</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Units?fName=addUnit">addUnit</reference> (note singular)</paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Model">Model class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Model">Model class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>addUnits (note plural)</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Model?fName=addUnits">addUnits</reference> (note plural)</paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>linkUnits</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Model?fName=linkUnits">linkUnits</reference></paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Variable">Variable class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Variable">Variable class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>setUnits (note plural)</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Variable?fName=setUnits">setUnits</reference> (note plural)</paragraph>
                     </list_item>
                 </bullet_list>
             </container>
@@ -1049,16 +1049,16 @@ Issue 0 is an ERROR:
             <paragraph>The <literal classes="code">Analyser</literal> class checks that the underlying mathematical model represented by the entire combination of variables, components, and mathematics, makes sense.
                 The <literal classes="code">Validator</literal> checks your “spelling” and syntax, and the <literal classes="code">Analyser</literal> checks for the ability to find a solution.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Analyser">Analyser class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Analyser">Analyser class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>create</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Analyser?fName=create">create</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>analyseModel</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Analyser?fName=analyseModel">analyseModel</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>model</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Analyser?fName=model">model</reference></paragraph>
                     </list_item>
                 </bullet_list>
             </container>
@@ -1189,31 +1189,31 @@ Issue 0 is an ERROR:
                 </list_item>
             </bullet_list>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Generator">Generator class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Generator">Generator class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>create</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Generator?fName=create">create</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>profile</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Generator?fName=profile">profile</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>setModel</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Generator?fName=setModel">setModel</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>interfaceCode</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Generator?fName=interfaceCode">interfaceCode</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>implementationCode</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Generator?fName=implementationCode">implementationCode</reference></paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1GeneratorProfile">GeneratorProfile class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1GeneratorProfile">GeneratorProfile class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>create</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1GeneratorProfile?fName=create">create</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>setInterfaceFileNameString</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1GeneratorProfile?fName=setInterfaceFileNameString">setInterfaceFileNameString</reference></paragraph>
                     </list_item>
                 </bullet_list>
                 <paragraph>The GeneratorProfile class contains an enum indicating the language of profile to set.
