@@ -243,12 +243,38 @@ uBunchOfBananas.addUnit("banana", 5.0)  # include bananas^5 in the bunch_of_bana
                 Some of these variables will, well, <emphasis>vary</emphasis> in value, but others might not.
                 This note is to help you understand the different ways in which <literal classes="code">variable</literal> elements are assigned value, and what it means to your whole model’s interpretation.</paragraph>
             <paragraph>There are six ways to assign a value to a <literal classes="code">variable</literal> element:</paragraph>
-            <section ids="in-the-math-blocks-to-a-number" names="in\ the\ math\ blocks,\ to\ a\ number">
-                <title>In the math blocks, to a number</title>
+            <section ids="assign-to-a-number-in-a-math-block" names="1.\ assign\ to\ a\ number\ in\ a\ math\ block">
+                <title>1. Assign to a number in a math block</title>
                 <paragraph>These are classed as “eternal truths”, and are statements which are held to be true throughout the entirety of the simulation.
                     If you use a <literal classes="code">math</literal> block statement to assign value to a <literal classes="code">variable</literal> element using a hard-coded numerical value, then that value can <strong>never</strong> be changed.
                     Any attempt to change it will make the model over-defined.
                     In the example below, <literal classes="code">A</literal> is a constant with value 1 for the entire simulation.</paragraph>
+                <container classes="sphinx-tabs">
+                    <container>
+                        <container classes="item">
+                            <container>
+                                <paragraph>C++</paragraph>
+                            </container>
+                        </container>
+                        <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-Qysr active">
+                        </container>
+                        <literal_block force="False" highlight_args="{}" language="c++" linenos="False" xml:space="preserve">// Setting A = 1 using a math block:
+std::string myMathString = "&lt;math&gt;&lt;apply&gt;&lt;eq/&gt;&lt;ci&gt;A&lt;/ci&gt;&lt;cn cellml:units=\"dimensionless\"&gt;1&lt;/ci&gt;&lt;/apply&gt;&lt;/math&gt;";
+myComponent-&gt;appendMath(myMathString);</literal_block>
+                    </container>
+                    <container>
+                        <container classes="item">
+                            <container>
+                                <paragraph>Python</paragraph>
+                            </container>
+                        </container>
+                        <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-UHl0aG9u">
+                        </container>
+                        <literal_block force="False" highlight_args="{}" language="python" linenos="False" xml:space="preserve"># Setting A = 1 using a math block:
+my_math_string = '&lt;math&gt;&lt;apply&gt;&lt;eq/&gt;&lt;ci&gt;A&lt;/ci&gt;&lt;cn cellml:units="dimensionless"&gt;1&lt;/ci&gt;&lt;/apply&gt;&lt;/math&gt;'
+my_component.appendMath(my_math_string)</literal_block>
+                    </container>
+                </container>
                 <container classes="toggle">
                     <container classes="header">
                         <paragraph>Show CellML</paragraph>
@@ -261,21 +287,79 @@ uBunchOfBananas.addUnit("banana", 5.0)  # include bananas^5 in the bunch_of_bana
 &lt;/math&gt;</literal_block>
                 </container>
             </section>
-            <section ids="in-the-math-block-to-another-variable-or-expression" names="in\ the\ math\ block,\ to\ another\ variable\ or\ expression">
-                <title>In the math block, to another variable or expression</title>
+            <section ids="assign-to-another-variable-or-expression-in-a-math-block" names="2.\ assign\ to\ another\ variable\ or\ expression\ in\ a\ math\ block">
+                <title>2. Assign to another variable or expression in a math block</title>
                 <paragraph>As above, these are classed as “eternal truths”, but of course the actual value held by the variables may change as the expression is evaluated at different times.
                     The <literal classes="code">math</literal> statements are not <emphasis>assignments</emphasis> (as you’d expect in a programming language), but rather <emphasis>equations</emphasis> (as you’d expect in mathematics).
                     This means that writing <math>B = C</math> is equivalent to writing <math>C = B</math>, just as it is in normal mathematics, and can be read “The value of B is always the same as the value of C”.
                     Compare that to the assignment statement we’re familiar with in programming, <literal classes="code">B := C</literal> (“set the value of B to be the current value of C”) which is <emphasis>not</emphasis> the same as <literal classes="code">C := B</literal> (“set the value of C to be the current value of B”).
                     Of course <math>B = C</math> is perhaps the simplest equation possible, and yours will be a lot more complicated than this!</paragraph>
+                <container classes="sphinx-tabs">
+                    <container>
+                        <container classes="item">
+                            <container>
+                                <paragraph>C++</paragraph>
+                            </container>
+                        </container>
+                        <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-Qysr active">
+                        </container>
+                        <literal_block force="False" highlight_args="{}" language="c++" linenos="False" xml:space="preserve">// Setting B = C using a math block:
+std::string myMathString = "&lt;math&gt;&lt;apply&gt;&lt;eq/&gt;&lt;ci&gt;B&lt;/ci&gt;&lt;ci&gt;C&lt;/ci&gt;&lt;/apply&gt;&lt;/math&gt;";
+myComponent-&gt;appendMath(myMathString);</literal_block>
+                    </container>
+                    <container>
+                        <container classes="item">
+                            <container>
+                                <paragraph>Python</paragraph>
+                            </container>
+                        </container>
+                        <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-UHl0aG9u">
+                        </container>
+                        <literal_block force="False" highlight_args="{}" language="python" linenos="False" xml:space="preserve"># Setting B = C using a math block:
+my_math_string = '&lt;math&gt;&lt;apply&gt;&lt;eq/&gt;&lt;ci&gt;B&lt;/ci&gt;&lt;ci&gt;C&lt;/ci&gt;&lt;/apply&gt;&lt;/math&gt;'
+my_component.appendMath(my_math_string)</literal_block>
+                    </container>
+                </container>
             </section>
-            <section ids="in-the-initial-value-attribute" names="in\ the\ initial_value\ attribute">
-                <title>In the initial_value attribute</title>
+            <section ids="assign-as-an-initial-value-attribute" names="3.\ assign\ as\ an\ initial\ value\ attribute">
+                <title>3. Assign as an initial value attribute</title>
                 <paragraph>The term “initial value” might lead you to believe that the <literal classes="code">initial_value</literal> attributes are only used for variables of integration.
                     In reality, <emphasis>any</emphasis> variable which will have a non-constant value during the simulation <emphasis>may</emphasis> be set using this attribute.
                     This includes values which are changed by resets, or by solving a differential or algebraic equation.
                     The only situation where you don’t need to set a variable’s value like this is where the variable is defined by evaluation of a <literal classes="code">math</literal> block statement.
                     In that situation, having an initial value specified as well as a maths definition will make the model over-defined.</paragraph>
+                <container classes="sphinx-tabs">
+                    <container>
+                        <container classes="item">
+                            <container>
+                                <paragraph>C++</paragraph>
+                            </container>
+                        </container>
+                        <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-Qysr active">
+                        </container>
+                        <literal_block force="False" highlight_args="{}" language="c++" linenos="False" xml:space="preserve">// Setting the initial value of B:
+myComponent-&gt;variable("B")-&gt;setInitialValue(1);
+
+// Setting B = C using a math block:
+std::string myMathString = "&lt;math&gt;&lt;apply&gt;&lt;eq/&gt;&lt;ci&gt;B&lt;/ci&gt;&lt;ci&gt;C&lt;/ci&gt;&lt;/apply&gt;&lt;/math&gt;";
+myComponent-&gt;appendMath(myMathString);</literal_block>
+                    </container>
+                    <container>
+                        <container classes="item">
+                            <container>
+                                <paragraph>Python</paragraph>
+                            </container>
+                        </container>
+                        <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-UHl0aG9u">
+                        </container>
+                        <literal_block force="False" highlight_args="{}" language="python" linenos="False" xml:space="preserve"># Setting the initial value of B:
+my_component-&gt;variable('B')-&gt;setInitialValue(1)
+
+# Setting B = C using a math block:
+my_math_string = '&lt;math&gt;&lt;apply&gt;&lt;eq/&gt;&lt;ci&gt;B&lt;/ci&gt;&lt;ci&gt;C&lt;/ci&gt;&lt;/apply&gt;&lt;/math&gt;'
+my_component.appendMath(my_math_string)</literal_block>
+                    </container>
+                </container>
                 <container classes="toggle">
                     <container classes="header">
                         <paragraph>Show CellML</paragraph>
@@ -304,10 +388,58 @@ uBunchOfBananas.addUnit("banana", 5.0)  # include bananas^5 in the bunch_of_bana
 &lt;/math&gt;</literal_block>
                 </container>
             </section>
-            <section ids="by-solving-a-differential-equation" names="by\ solving\ a\ differential\ equation">
-                <title>By solving a differential equation</title>
+            <section ids="assign-by-solving-a-differential-equation" names="4.\ assign\ by\ solving\ a\ differential\ equation">
+                <title>4. Assign by solving a differential equation</title>
                 <paragraph>This is similar to point 2 above, in that the variable’s definition is contained within a mathematical statement.
                     The difference is that when a <literal classes="code">variable</literal> element is a state variable (ie: the numerator of a differential equation), it <emphasis>must</emphasis> have a value which is specified (either locally or somewhere in its equivalent variable set) by an <literal classes="code">initial_value</literal> attribute.</paragraph>
+                <container classes="sphinx-tabs">
+                    <container>
+                        <container classes="item">
+                            <container>
+                                <paragraph>C++</paragraph>
+                            </container>
+                        </container>
+                        <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-Qysr active">
+                        </container>
+                        <literal_block force="False" highlight_args="{}" language="c++" linenos="False" xml:space="preserve">// Setting the initial value of E:
+myComponent-&gt;variable("E")-&gt;setInitialValue(3);
+
+// Solving for E using a differential equation:
+std::string myDifferentialEquation = "&lt;math&gt;\n"
+  "  &lt;apply&gt;&lt;eq/&gt;\n"
+  "    &lt;diff&gt;\n"
+  "      &lt;ci&gt;E&lt;/ci&gt;\n"
+  "      &lt;bvar&gt;t&lt;/bvar&gt;\n"
+  "    &lt;/diff&gt;\n"
+  "    &lt;cn cellml:units=\"dimensionless\"&gt;1&lt;/cn&gt;\n"
+  "  &lt;/apply&gt;\n"
+  "&lt;/math&gt;";
+myComponent-&gt;appendMath(myDifferentialEquation);</literal_block>
+                    </container>
+                    <container>
+                        <container classes="item">
+                            <container>
+                                <paragraph>Python</paragraph>
+                            </container>
+                        </container>
+                        <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-UHl0aG9u">
+                        </container>
+                        <literal_block force="False" highlight_args="{}" language="python" linenos="False" xml:space="preserve"># Setting the initial value of E:
+my_component-&gt;variable('E')-&gt;setInitialValue(3)
+
+# Solving for E using a differential equation:
+my_differential_equation = '&lt;math&gt;\n'
+  '  &lt;apply&gt;&lt;eq/&gt;\n'
+  '    &lt;diff&gt;\n'
+  '      &lt;ci&gt;E&lt;/ci&gt;\n'
+  '      &lt;bvar&gt;t&lt;/bvar&gt;\n'
+  '    &lt;/diff&gt;\n'
+  '    &lt;cn cellml:units="dimensionless"&gt;1&lt;/cn&gt;\n'
+  '  &lt;/apply&gt;\n'
+  '&lt;/math&gt;'
+my_component.appendMath(my_math_string)</literal_block>
+                    </container>
+                </container>
                 <container classes="toggle">
                     <container classes="header">
                         <paragraph>Show CellML</paragraph>
@@ -326,8 +458,8 @@ uBunchOfBananas.addUnit("banana", 5.0)  # include bananas^5 in the bunch_of_bana
 &lt;/math&gt;</literal_block>
                 </container>
             </section>
-            <section ids="by-applying-a-reset" names="by\ applying\ a\ reset">
-                <title>By applying a reset</title>
+            <section ids="assign-by-applying-a-reset" names="5.\ assign\ by\ applying\ a\ reset">
+                <title>5. Assign by applying a reset</title>
                 <paragraph>Resets allow a variable to have prescribed discontinuity in value at some stage in the simulation process.
                     This means that the value of the variable must be allowed to change (that is, it must not appear in a statement like in point 1 above).
                     In contrast to the mathematical <emphasis>equations</emphasis> defined inside <literal classes="code">math</literal> elements, the MathML statements within a reset’s <literal classes="code">reset_value</literal> block is an <emphasis>assignment</emphasis>.
@@ -335,8 +467,8 @@ uBunchOfBananas.addUnit("banana", 5.0)  # include bananas^5 in the bunch_of_bana
                     This means that even though the reset variable’s value can’t be defined as a constant (as in point 1), it could still be part of an equation (as in point 2).
                     It must not be a variable of integration (as in point 4) or a base variable (as in point 6).</paragraph>
             </section>
-            <section ids="by-being-a-variable-of-integration" names="by\ being\ a\ variable\ of\ integration">
-                <title>By being a variable of integration</title>
+            <section ids="assign-as-a-variable-of-integration" names="6.\ assign\ as\ a\ variable\ of\ integration">
+                <title>6. Assign as a variable of integration</title>
                 <paragraph>These don’t need to be given a value inside CellML as their value will be set during the simulation.</paragraph>
             </section>
         </section>
