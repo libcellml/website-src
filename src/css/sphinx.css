@@ -8,16 +8,25 @@
     padding-bottom: 0.3em;
 }
 
-
-
-.v-application a {
-    color: var(--link-colour) !important;
-    text-decoration: none;
-    font-weight: 500;
+.container .heading2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 1em;
+    padding: 0;
 }
 
-.v-application a:hover {
-    color: var(--bright-red) !important;
+.container .heading3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 1em;
+    padding: 0;
+}
+
+.container .heading4 {
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-top: 1em;
+    padding: 0;
 }
 
 pre {
@@ -276,4 +285,11 @@ pre > code {
 
     line-height: 1.5em;
     font-family: "fakt-web", "Lato", "proxima-nova", "Helvetica Neue", "Arial", sans-serif;
+}
+
+/* Anything specified in the Sphinx documents in a container with the type 'quicklinks' shouldn't
+   be displayed.  It's intended to provide customisable links in the sidebar. 
+*/
+.quicklinks {
+    display: none;
 }

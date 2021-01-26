@@ -120,7 +120,7 @@ for h in range(0, generator.hintCount()):
                 <paragraph>A description: a brief statement about the problem and how it might be fixed;</paragraph>
             </list_item>
             <list_item>
-                <paragraph>A reference heading: a chapter number pertaining to the formal <reference internal="False" refuri="https://cellml-specification.readthedocs.io/en/latest/CellML 2.0 Specification">CellML 2.0 Specification</reference> document, for issues related to formatting and specification;</paragraph>
+                <paragraph>A reference heading: a chapter number pertaining to the formal <reference internal="False" refuri="https://cellml-specification.readthedocs.io/en/latest/">CellML 2.0 Specification</reference> document, for issues related to formatting and specification;</paragraph>
             </list_item>
             <list_item>
                 <paragraph>A URL: a web address at which more detailed information and examples pertaining to the issue are available;</paragraph>
