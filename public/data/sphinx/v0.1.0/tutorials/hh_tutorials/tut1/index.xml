@@ -102,28 +102,28 @@
         <section ids="step-1-set-up-the-model" names="step\ 1:\ set\ up\ the\ model">
             <title refid="id2">Step 1: Set up the model</title>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Model">Model class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Model">Model class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>create</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Model?fName=create">create</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>setName</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Model?fName=setName">setName</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>addComponent</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Model?fName=addComponent">addComponent</reference></paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Component">Component class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Component">Component class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>create</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Component?fName=create">create</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>setName</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Component?fName=setName">setName</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>addComponent</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Component?fName=addComponent">addComponent</reference></paragraph>
                     </list_item>
                 </bullet_list>
             </container>
@@ -275,16 +275,16 @@
             <math_block docname="tutorials/hh_tutorials/tut1/index" label="True" nowrap="False" number="True" xml:space="preserve">\frac{dX}{dt} = \alpha_{X}\left( 1 - X \right) - \beta_{X}.X</math_block>
             <paragraph>If you’re happy to write your own MathML2 string then please go ahead, but if you’d rather not you can use the code provided under the code toggles further down the page.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Component">Component class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Component">Component class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>setMath</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Component?fName=setMath">setMath</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>appendMath</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Component?fName=appendMath">appendMath</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>math</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Component?fName=math">math</reference></paragraph>
                     </list_item>
                 </bullet_list>
             </container>
@@ -409,37 +409,37 @@ COMPONENTS: 1 components
             <title refid="id4">Step 3: Validate the model</title>
             <paragraph>Once the mathematics has been added to the component, and the component to the model, we can make use of the diagnostic messages within the <literal classes="code">Validator</literal> class to tell us what else needs to be done.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Validator">Validator class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Validator">Validator class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>create</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Validator?fName=create">create</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>validateModel</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Validator?fName=validateModel">validateModel</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>issueCount</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Validator?fName=issueCount">issueCount</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>issue</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Validator?fName=issue">issue</reference></paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Issue">Issue class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Issue">Issue class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>description</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Issue?fName=description">description</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>url</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Issue?fName=url">url</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>referenceHeading</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Issue?fName=referenceHeading">referenceHeading</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>level</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Issue?fName=level">level</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>itemType</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Issue?fName=itemType">itemType</reference></paragraph>
                     </list_item>
                 </bullet_list>
             </container>
@@ -592,22 +592,22 @@ Issue [5] is an ERROR:
             <paragraph>The issues reported by the validator are related to the MathML string that we entered in Step 2 requiring variables which don’t yet exist.
                 These must be created, named, and added to their parent component.</paragraph>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Variable">Variable class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Variable">Variable class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>create</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Variable?fName=create">create</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>setName</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Variable?fName=setName">setName</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>setUnits</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Variable?fName=setUnits">setUnits</reference></paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Component">Component class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Component">Component class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>addVariable</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Component?fName=addVariable">addVariable</reference></paragraph>
                     </list_item>
                 </bullet_list>
             </container>
@@ -716,34 +716,34 @@ Issue [1] is an ERROR:
                 </bullet_list>
             </container>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Units">Units class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Units">Units class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>create</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Units?fName=create">create</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>setName</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Units?fName=setName">setName</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>addUnit</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Units?fName=addUnit">addUnit</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>name</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Units?fName=name">name</reference></paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Model">Model class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Model">Model class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>addUnits</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Model?fName=addUnits">addUnits</reference></paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Variable">Variable class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Variable">Variable class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>setUnits</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Variable?fName=setUnits">setUnits</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>units</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Variable?fName=units">units</reference></paragraph>
                     </list_item>
                 </bullet_list>
             </container>
@@ -912,19 +912,19 @@ COMPONENTS: 1 components
         <section ids="step-6-analyse-the-mathematical-construction-of-the-model" names="step\ 6:\ analyse\ the\ mathematical\ construction\ of\ the\ model">
             <title refid="id7">Step 6: Analyse the mathematical construction of the model</title>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Analyser">Analyser class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Analyser">Analyser class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>create</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Analyser?fName=create">create</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>analyseModel</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Analyser?fName=analyseModel">analyseModel</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>issueCount</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Analyser?fName=issueCount">issueCount</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>issue</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Analyser?fName=issue">issue</reference></paragraph>
                     </list_item>
                 </bullet_list>
             </container>
@@ -1004,25 +1004,25 @@ Issue [2] is an ERROR:
                     Name it “gateParameters”, and add it to the top-level gate component as a sibling of the gateEquations component.</paragraph>
             </container>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Variable">Variable class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Variable">Variable class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>setInitialValue</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Variable?fName=setInitialValue">setInitialValue</reference></paragraph>
                     </list_item>
                     <list_item>
-                        <paragraph>addEquivalence</paragraph>
-                    </list_item>
-                </bullet_list>
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Component">Component class</reference></paragraph>
-                <bullet_list bullet="-">
-                    <list_item>
-                        <paragraph>variable</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Variable?fName=addEquivalence">addEquivalence</reference></paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Model">Model class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Component">Component class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>component</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Component?fName=variable">variable</reference></paragraph>
+                    </list_item>
+                </bullet_list>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Model">Model class</reference></paragraph>
+                <bullet_list bullet="-">
+                    <list_item>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Model?fName=component">component</reference></paragraph>
                     </list_item>
                 </bullet_list>
             </container>
@@ -1163,16 +1163,16 @@ Issue [0] is an ERROR:
     stored item type: VARIABLE
 ... etc ...</literal_block>
             <container classes="useful">
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Model">Model class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Model">Model class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>fixVariableInterfaces</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Model?fName=fixVariableInterfaces">fixVariableInterfaces</reference></paragraph>
                     </list_item>
                 </bullet_list>
-                <paragraph><reference internal="False" refuri="https://staging.libcellml.org/documentation/api/latest/classlibcellml_1_1Variable">Variable class</reference></paragraph>
+                <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Variable">Variable class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph>setInterfaceType</paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Variable?fName=setInterfaceType">setInterfaceType</reference></paragraph>
                     </list_item>
                 </bullet_list>
             </container>
