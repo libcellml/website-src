@@ -171,6 +171,7 @@ export default {
       }
       return headingTree
     },
+
     findQuickLinks() {
       let qs = document.getElementsByClassName('quicklinks')
       let quickLinks = []
@@ -181,7 +182,6 @@ export default {
             label: link.textContent,
             url: link.getAttribute('href'),
           })
-          quickLinks.push(link)
         })
       })
       console.log(quickLinks)
