@@ -286,3 +286,10 @@ pre > code {
     line-height: 1.5em;
     font-family: "fakt-web", "Lato", "proxima-nova", "Helvetica Neue", "Arial", sans-serif;
 }
+
+/* Anything specified in the Sphinx documents in a container with the type 'quicklinks' shouldn't
+   be displayed.  It's intended to provide customisable links in the sidebar. 
+*/
+.quicklinks {
+    display: none;
+}

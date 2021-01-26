@@ -13,6 +13,7 @@ export default new Vuex.Store({
     pageContentChanged: false,
     breadcrumbs: [],
     lastURL: ['', '', ''],
+    quickLinks: [],
   },
   getters: {
     getSidebarOpen: state => {
@@ -36,6 +37,9 @@ export default new Vuex.Store({
     getBreadcrumbs: state => {
       return state.breadcrumbs
     },
+    getQuickLinks: state => {
+      return state.quickLinks
+    },
   },
   mutations: {
     setSidebarOpen: (state, value) => {
@@ -54,6 +58,9 @@ export default new Vuex.Store({
       state.lastURL[0] = state.lastURL[1]
       state.lastURL[1] = state.lastURL[2]
       state.lastURL[2] = value
+    },
+    setQuickLinks: (state, value) => {
+      state.quickLinks = value
     },
   },
   modules: { notifications },

@@ -8,7 +8,6 @@
     --deep-red: #4e0202;
     --text-colour: #333333;
     --link-colour: #666666;
-    /* --link-colour: var(--deep-red); */
     --pale-grey:#dddddd;
     --very-pale-grey: #efefef;
 
@@ -17,7 +16,6 @@
 
     --warning-background: rgb(251, 239, 239);
     --warning-text: var(--deep-red);
-
 
     --terminal-colour: var(--pale-grey) !important;
     --border-colour: var(--pale-grey);
@@ -41,6 +39,13 @@ h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+h2 {
+    color:#333333;
+    margin-bottom: 0.5em;
+    border-bottom: solid 0.05rem var(--terminal-colour);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 h3 {
     margin-top: 1em;
 }
@@ -50,7 +55,7 @@ h3 {
 }
 
 .v-application a {
-    color: var(--link-colour);
+    color: var(--link-colour) !important;
     text-decoration: none;
     font-weight: 500;
 }
