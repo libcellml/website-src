@@ -128,55 +128,57 @@ for h in range(0, generator.hintCount()):
             <list_item>
                 <paragraph>A cause: an <literal classes="code">enum</literal> which reports the type of item responsible for the issue.
                     This is one of the enums:</paragraph>
-                <bullet_list bullet="-">
-                    <list_item>
-                        <paragraph><literal classes="code">COMPONENT</literal>,</paragraph>
-                    </list_item>
-                    <list_item>
-                        <paragraph><literal classes="code">CONNECTION</literal>,</paragraph>
-                    </list_item>
-                    <list_item>
-                        <paragraph><literal classes="code">ENCAPSULATION</literal>,</paragraph>
-                    </list_item>
-                    <list_item>
-                        <paragraph><literal classes="code">IMPORT</literal>,</paragraph>
-                    </list_item>
-                    <list_item>
-                        <paragraph><literal classes="code">MAP_VARIABLES</literal>,</paragraph>
-                    </list_item>
-                    <list_item>
-                        <paragraph><literal classes="code">MATHML</literal>,</paragraph>
-                    </list_item>
-                    <list_item>
-                        <paragraph><literal classes="code">MODEL</literal>,</paragraph>
-                    </list_item>
-                    <list_item>
-                        <paragraph><literal classes="code">RESET</literal>,</paragraph>
-                    </list_item>
-                    <list_item>
-                        <paragraph><literal classes="code">RESET_VALUE</literal>,</paragraph>
-                    </list_item>
-                    <list_item>
-                        <paragraph><literal classes="code">TEST_VALUE</literal>,</paragraph>
-                    </list_item>
-                    <list_item>
-                        <paragraph><literal classes="code">UNDEFINED</literal>,</paragraph>
-                    </list_item>
-                    <list_item>
-                        <paragraph><literal classes="code">UNIT</literal>,</paragraph>
-                    </list_item>
-                    <list_item>
-                        <paragraph><literal classes="code">UNITS</literal>,</paragraph>
-                    </list_item>
-                    <list_item>
-                        <paragraph><literal classes="code">VARIABLE</literal>, and</paragraph>
-                    </list_item>
-                    <list_item>
-                        <paragraph><literal classes="code">XML</literal>.</paragraph>
-                    </list_item>
-                </bullet_list>
             </list_item>
         </bullet_list>
+        <container classes="shortlist">
+            <bullet_list bullet="-">
+                <list_item>
+                    <paragraph><literal classes="code">COMPONENT</literal>,</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph><literal classes="code">CONNECTION</literal>,</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph><literal classes="code">ENCAPSULATION</literal>,</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph><literal classes="code">IMPORT</literal>,</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph><literal classes="code">MAP_VARIABLES</literal>,</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph><literal classes="code">MATHML</literal>,</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph><literal classes="code">MODEL</literal>,</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph><literal classes="code">RESET</literal>,</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph><literal classes="code">RESET_VALUE</literal>,</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph><literal classes="code">TEST_VALUE</literal>,</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph><literal classes="code">UNDEFINED</literal>,</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph><literal classes="code">UNIT</literal>,</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph><literal classes="code">UNITS</literal>,</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph><literal classes="code">VARIABLE</literal>, and</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph><literal classes="code">XML</literal>.</paragraph>
+                </list_item>
+            </bullet_list>
+        </container>
         <container classes="toggle">
             <container classes="header">
                 <paragraph>See C++ examples</paragraph>
