@@ -20,6 +20,21 @@
           </template>
           <br />
 
+          <template v-if="hasQuickLinks">
+            <h4>Quick links</h4>
+            <ul id="sidebarMenu">
+              <li
+                v-for="link in quickLinks"
+                :key="link.label"
+                style="list-style-type: none"
+              >
+                <router-link :to="link.url">
+                  {{ link.label }}
+                </router-link>
+              </li>
+            </ul>
+          </template>
+
           <template v-if="havePageHeadings">
             <h4>On this page</h4>
             <ul>
@@ -40,6 +55,7 @@
               </li>
             </ul>
           </template>
+
         </v-col>
       </v-row>
     </v-container>
@@ -58,6 +74,7 @@ export default {
     setTimeout(() => {
         this.menuInSidebar = this.calculateMenu()
       }, this.$store.getters.getTransitionDelay)
+
   },
   destroyed() {
     window.removeEventListener('resize', this.handleResize)
@@ -67,6 +84,7 @@ export default {
     return {
       menuInSidebar: false,
       pageHeadings: [],
+      quickLinks: [],
       width: 0,
       links: [
         {
@@ -108,12 +126,16 @@ export default {
     havePageHeadings() {
       return this.pageHeadings.length
     },
+    hasQuickLinks() {
+      return this.quickLinks.length
+    }
   },
 
   watch: {
     pageChanged() {
       setTimeout(() => {
         this.pageHeadings = this.findHeadings()
+        this.quickLinks = this.findQuickLinks()
       }, this.$store.getters.getTransitionDelay)
     },
   },
@@ -149,6 +171,23 @@ export default {
       }
       return headingTree
     },
+
+    findQuickLinks() {
+      let qs = document.getElementsByClassName('quicklinks')
+      let quickLinks = []
+      qs.forEach(q => {
+        let links = q.getElementsByTagName('a')
+        links.forEach(link => {
+          quickLinks.push({
+            label: link.textContent,
+            url: link.getAttribute('href'),
+          })
+        })
+      })
+      console.log(quickLinks)
+      return quickLinks
+    },
+
     calculateMenu() {
       let menuBar = document.getElementById('topMenuBar')
       if (menuBar !== null) {

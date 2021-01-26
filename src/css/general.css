@@ -17,7 +17,6 @@
     --warning-background: rgb(251, 239, 239);
     --warning-text: var(--deep-red);
 
-
     --terminal-colour: var(--pale-grey) !important;
     --border-colour: var(--pale-grey);
     --code-colour: var(--mid-red);
@@ -40,12 +39,33 @@ h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+h2 {
+    color:#333333;
+    margin-bottom: 0.5em;
+    border-bottom: solid 0.05rem var(--terminal-colour);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 h3 {
     margin-top: 1em;
 }
 
 .v-application {
     font-family: var(--text-font);
+}
+
+.v-application a {
+    color: var(--link-colour) !important;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.v-application a.router-link-active {
+    color: var(--deep-red);
+}
+
+.v-application a:hover {
+    color: var(--bright-red) !important;
 }
 
 /* Turn off the Contents blocks on pages as they're in the sidebar. */

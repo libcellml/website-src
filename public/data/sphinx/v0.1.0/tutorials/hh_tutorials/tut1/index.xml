@@ -752,7 +752,7 @@ Issue [1] is an ERROR:
                     These will represent units of milliseconds and per millisecond respectively.</paragraph>
             </container>
             <paragraph>Some basic units have been defined and built into libCellML, others you can define by combining the built-in ones using scaling factors and exponents, or you can define your own from scratch if need be.
-                Please read the <reference internal="True" refuri="../../tutorial3/index#aside-units"><inline classes="std std-ref">Understanding units</inline></reference> page for more detailed information, but for now let’s look at a simple example that defines a <literal classes="code">Units</literal> item representing millivolts.</paragraph>
+                Please read the <reference internal="True" refuri="../../../asides/index#aside-units"><inline classes="std std-ref">Understanding units</inline></reference> page for more detailed information, but for now let’s look at a simple example that defines a <literal classes="code">Units</literal> item representing millivolts.</paragraph>
             <container classes="sphinx-tabs">
                 <container>
                     <container classes="item">
