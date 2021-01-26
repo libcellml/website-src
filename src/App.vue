@@ -17,7 +17,7 @@
     </v-app-bar>
     <!--      <Sidebar/>-->
     <!-- Provides the application the proper gutter -->
-    <sidebar app></sidebar>
+    <Sidebar app />
 
     <!-- Sizes your content based upon application components -->
     <v-main>
@@ -50,8 +50,6 @@
 import BackToTop from '@/components/BackToTop'
 import Sidebar from '@/components/Sidebar'
 import NotificationContainer from '@/components/NotificationContainer'
-
-import ui from '@/js/ui'
 
 export default {
   name: 'App',
@@ -102,12 +100,6 @@ export default {
       height: 0,
     },
   }),
-
-  // computed: {
-  //   breadcrumbs() {
-  //     return this.$store.state.breadcrumbs
-  //   },
-  // },
 
   methods: {
     onSidebarOpen() {

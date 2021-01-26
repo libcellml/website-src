@@ -31,5 +31,13 @@
                     Note that this also contains informative sections, CellML code examples, and thoughts about the structure of CellML models.</paragraph>
             </list_item>
         </bullet_list>
+        <container classes="quicklinks">
+            <paragraph><reference internal="True" refuri="installation/index#installation"><inline classes="std std-ref">Installation and setup</inline></reference>
+                <reference internal="True" refuri="tutorials/index#tutorials-index"><inline classes="std std-ref">Tutorials</inline></reference>
+                <reference internal="True" refuri="howto/index#howto"><inline classes="std std-ref">How-to guide</inline></reference>
+                <reference internal="True" refuri="howto/common_users#common-users"><inline classes="std std-ref">Common scenarios</inline></reference>
+                <reference internal="True" refuri="asides/index#asides"><inline classes="std std-ref">Notes on CellML structure</inline></reference>
+                <reference internal="False" refuri="https://cellml-specification.readthedocs.io/en/latest/CellML 2.0 Normative Specification">CellML 2.0 Normative Specification</reference></paragraph>
+        </container>
     </section>
 </document>
