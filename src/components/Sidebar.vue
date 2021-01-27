@@ -184,7 +184,6 @@ export default {
           })
         })
       })
-      console.log(quickLinks)
       return quickLinks
     },
 
