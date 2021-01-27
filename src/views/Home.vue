@@ -10,10 +10,8 @@
           <DownloadLink />
         </v-col>
         <v-col cols="12" id="documentation">
-          <DocumentationContent />
-        </v-col>
-        <v-col cols="12" id="developers">
-          <DevelopersContent />
+          <DocumentationSummary />
+          <DocumentationLink />
         </v-col>
         <v-col cols="12" id="about">
           <AboutContent />
@@ -25,20 +23,20 @@
 
 <script>
 import AboutContent from '@/components/AboutContent'
-import DevelopersContent from '@/components/DevelopersContent'
 import DownloadSummary from '@/components/DownloadSummary'
 import DownloadLink from '@/components/DownloadLink'
-import DocumentationContent from '@/components/DocumentationContent'
+import DocumentationSummary from '@/components/DocumentationSummary'
+import DocumentationLink from '@/components/DocumentationLink'
 import IntroContent from '@/components/IntroContent'
 
 export default {
   name: 'Home',
   components: {
     AboutContent,
-    DevelopersContent,
     DownloadSummary,
     DownloadLink,
-    DocumentationContent,
+    DocumentationSummary,
+    DocumentationLink,
     IntroContent,
   },
 }
