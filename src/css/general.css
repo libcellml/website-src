@@ -13,6 +13,7 @@
 
     --transparent-grey: rgba(27,31,35,.05);
     --deep-blue: #476582;
+    --deep-blue-grey: #2d4046c7;
 
     --dothis-background-color:#fbfff6;
     --dothis-border-color: rgb(80, 121, 0);
@@ -157,3 +158,4 @@ code.xref {
     padding-bottom: 0;
     color: var(--link-colour);
 }
+
