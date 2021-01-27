@@ -4,14 +4,11 @@ const fs = require('fs')
 ;(async () => {
   try {
     let targetGitBranch = 'main'
-    let deployRepo = 'git@github.com:libcellml/libcellml.github.io.git'
     let cname = 'libcellml.org'
     let readmeTitle =
       'Production version of libCellML website\n=======================================\n\n'
     if (process.argv[2] === 'staging') {
       console.log('Staging run.')
-      targetGitBranch = 'gh-pages'
-      deployRepo = 'git@github.com:libcellml/staging.git'
       cname = 'staging.libcellml.org'
       readmeTitle =
         'Staging version of libCellML website\n====================================\n\n'
@@ -19,6 +16,7 @@ const fs = require('fs')
       console.log('Production run.')
     }
 
+    const deployRepo = `git@github.com:libcellml/${cname}.git`
     const result = await execa('git', ['branch', '--show-current'])
     const currentGitBranch = result.stdout
 
