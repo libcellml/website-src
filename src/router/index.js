@@ -16,6 +16,12 @@ const routes = [
     component: Home,
   },
   {
+    path: '/download',
+    name: 'Downloads',
+    component: () =>
+    import('../views/Download.vue'),
+  },
+  {
     path: '/documentation/api/:version/:pageName?',
     name: 'APIReferencePage',
     component: () =>

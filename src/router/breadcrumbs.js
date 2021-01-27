@@ -36,7 +36,7 @@ const hardRoutes = {
     disabled: false,
     hash: '#user_guide',
     type: 'pageFromName'
-  }
+  },
 }
 
 function convertToReadableText(bookmarkText) {
@@ -59,10 +59,11 @@ export function calculateBreadcrumbs(to) {
   if (
     to.name === '404' ||
     to.name === 'About' ||
-    to.name === 'Developers' ||
-    to.name === 'Download' ||
-    to.name === 'Documentation' ||
-    to.name === 'API'
+    to.name === 'DownloadSummary' ||
+    to.name === 'DocumentationSummary' ||
+    to.name === 'DocumentationAPI' ||
+    to.name === 'DocumentationUserGuides' ||
+    to.name === 'DocumentationDevelopers'
   ) {
     routes.push({
       text: to.name.toUpperCase(),
@@ -150,6 +151,14 @@ export function calculateBreadcrumbs(to) {
       page = index < pages.length ? pages[index] : null
       lastLink += '/' + page
     }
+  }
+  else {
+    routes.push({
+      text: to.name.toUpperCase(),
+      name: to.name,
+      disabled: false,
+      hash: ''
+    })
   }
   console.log(routes)
   return routes.reverse()
