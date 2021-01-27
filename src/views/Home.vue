@@ -40,5 +40,3 @@ export default {
   },
 }
 </script>
-
-<style src="../css/general.css"></style>
