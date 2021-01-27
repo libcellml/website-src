@@ -1,16 +1,22 @@
 <template>
   <div class="download">
-    <DownloadContent />
+    <BreadCrumbs />
+    <DownloadSummary />
+    <DownloadComplete />
   </div>
 </template>
 
 <script>
-import DownloadContent from '../components/DownloadContent'
+import DownloadSummary from '@/components/DownloadSummary'
+import DownloadComplete from '@/components/DownloadComplete'
+import BreadCrumbs from '@/components/BreadCrumbs'
 
 export default {
   name: 'Download',
   components: {
-    DownloadContent,
+    DownloadSummary,
+    DownloadComplete,
+    BreadCrumbs,
   },
 }
 </script>
