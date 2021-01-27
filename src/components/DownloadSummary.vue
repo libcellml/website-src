@@ -6,48 +6,50 @@
         <v-col class="col-12 col-md-3">
           <v-tooltip bottom>
             <template v-slot:activator="{ on }">
-              <v-btn block :class="'download-button'" v-on="on">
+              <v-btn block :class="'big-button'" v-on="on">
                 <v-icon color="white" x-large>mdi-microsoft-windows</v-icon>
+                <br />
+                Windows
               </v-btn>
             </template>
-            <span
-              >Launch installer for the latest version for Microsoft
-              Windows</span
-            >
+            <span>Launch installer for Microsoft Windows</span>
           </v-tooltip>
         </v-col>
         <v-col class="col-12 col-md-3">
           <v-tooltip bottom>
             <template v-slot:activator="{ on }">
-              <v-btn block :class="'download-button'" v-on="on">
+              <v-btn block :class="'big-button'" v-on="on">
                 <v-icon color="white" x-large>mdi-linux</v-icon>
+                <br />
+                Linux
               </v-btn>
             </template>
-            <span>Launch installer for the latest version for Linux</span>
+            <span>Launch installer for Linux</span>
           </v-tooltip>
         </v-col>
         <v-col class="col-12 col-md-3">
           <v-tooltip bottom>
             <template v-slot:activator="{ on }">
-              <v-btn block :class="'download-button'" v-on="on">
+              <v-btn block :class="'big-button'" v-on="on">
                 <v-icon color="white" x-large>mdi-apple</v-icon>
+                <br />
+                macOS
               </v-btn>
             </template>
-            <span>Launch installer for the latest version for MacOS</span>
+            <span>Launch installer for MacOS</span>
           </v-tooltip>
         </v-col>
 
         <v-col class="col-12 col-md-3">
           <v-tooltip bottom>
             <template v-slot:activator="{ on }">
-              <v-btn block :class="'download-button'" v-on="on">
+              <v-btn block :class="'big-button'" v-on="on">
+                <IconWA/>
+                <br/>
                 Web assembly
               </v-btn>
             </template>
-            <span
-              >Launch installer for the latest version of web assembly
-              code</span
-            >
+            <span>Launch installer for WebAssembly</span>
           </v-tooltip>
         </v-col>
       </v-row>
@@ -67,8 +69,12 @@
 </template>
 
 <script>
+import IconWA from '@/assets/IconWA' 
 export default {
   name: 'DownloadSummary',
+  components: {
+    IconWA
+  }
 }
 </script>
 
@@ -77,13 +83,15 @@ v-col {
   align-content: center;
 }
 
-button.download-button {
+/* .documentation-button {
   background-color: var(--deep-blue-grey) !important;
-  color: white;
+  color: white !important;
   min-height: 6rem;
+  text-align: center;
 }
 
-button.download-button:hover {
+.documentation-button:hover {
   background-color: var(--deep-red) !important;
-}
+  color: white !important;
+} */
 </style>

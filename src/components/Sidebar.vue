@@ -100,10 +100,6 @@ export default {
           url: '/#documentation',
         },
         {
-          label: 'Developers',
-          url: '/#developers',
-        },
-        {
           label: 'About',
           url: '/#about',
         },
@@ -184,7 +180,6 @@ export default {
           })
         })
       })
-      console.log(quickLinks)
       return quickLinks
     },
 

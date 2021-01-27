@@ -159,3 +159,20 @@ code.xref {
     color: var(--link-colour);
 }
 
+.big-button {
+    background-color: var(--deep-blue-grey) !important;
+    color: white !important;
+    min-height: 6rem;
+    text-align: center;
+}
+  
+.big-button:hover {
+    background-color: var(--deep-red) !important;
+    color: white !important;
+}
+
+.big-button .v-btn__content {
+    display: block !important;
+    line-height: 2em;
+    color: white;
+}
