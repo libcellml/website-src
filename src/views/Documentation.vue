@@ -4,8 +4,8 @@
       <v-row>
         <v-col>
           <BreadCrumbs />
-          <h1>libCellML Documentation and Guides</h1>
-          <DocumentationComplete />
+          <h1>Archived Documentation and Guides</h1>
+          <DocumentationArchive />
         </v-col>
       </v-row>
     </v-container>
@@ -13,14 +13,14 @@
 </template>
 
 <script>
-import DocumentationComplete from '@/components/DocumentationComplete.vue'
+import DocumentationArchive from '@/components/DocumentationArchive.vue'
 import { getDoxygenVersions, getSphinxVersions } from '@/js/versions'
 import BreadCrumbs from '@/components/BreadCrumbs'
 
 export default {
   name: 'DocumentationPage',
   components: {
-    DocumentationComplete,
+    DocumentationArchive,
     BreadCrumbs,
   },
   data: () => {
@@ -33,7 +33,4 @@ export default {
 }
 </script>
 <style scoped>
-ul > li {
-  list-style-type: none;
-}
 </style>

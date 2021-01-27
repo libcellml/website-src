@@ -4,7 +4,7 @@
       <h1>Documentation</h1>
       <v-row>
         <v-col class="col-12 col-md-4">
-          <v-btn block :class="'documentation-button'">
+          <v-btn block :class="'big-button'" to="/documentation/api">
             <!-- <v-icon color="white" x-large>mdi-content-copy</v-icon> -->
             <v-icon color="white" x-large>mdi-book-open-page-variant</v-icon
             ><br />
@@ -13,7 +13,7 @@
         </v-col>
 
         <v-col class="col-12 col-md-4">
-          <v-btn block :class="'documentation-button'">
+          <v-btn block :class="'big-button'" to="/documentation/guides">
             <!-- <v-icon color="white" x-large>mdi-book-open-page-variant</v-icon> -->
             <!-- <v-icon color="white" x-large>mdi-teach</v-icon> -->
             <!-- <v-icon color="white" x-large>mdi-school</v-icon> -->
@@ -25,7 +25,7 @@
         </v-col>
 
         <v-col class="col-12 col-md-4">
-          <v-btn block :class="'documentation-button'">
+          <v-btn block :class="'big-button'">
             <!-- <v-icon color="white" x-large>mdi-account</v-icon> -->
             <!-- <v-icon color="white" x-large>mdi-wrench</v-icon> -->
             <v-icon color="white" x-large>mdi-cogs</v-icon>
@@ -50,13 +50,15 @@ v-col {
   align-content: center;
 }
 
-button.documentation-button {
+/* .big-button {
   background-color: var(--deep-blue-grey) !important;
-  color: white;
+  color: white !important;
   min-height: 6rem;
+  text-align: center;
 }
 
-button.documentation-button:hover {
+.big-button:hover {
   background-color: var(--deep-red) !important;
-}
+  color: white !important;
+} */
 </style>
