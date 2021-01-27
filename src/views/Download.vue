@@ -1,8 +1,14 @@
 <template>
   <div class="download">
-    <BreadCrumbs />
-    <DownloadSummary />
-    <DownloadComplete />
+    <v-container>
+      <v-row>
+        <v-col>
+          <BreadCrumbs />
+          <DownloadSummary />
+          <DownloadComplete />
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 

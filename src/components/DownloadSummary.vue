@@ -10,10 +10,13 @@
                 <v-icon color="white" x-large>mdi-microsoft-windows</v-icon>
               </v-btn>
             </template>
-            <span>Launch installer for the latest version for Microsoft Windows</span>
+            <span
+              >Launch installer for the latest version for Microsoft
+              Windows</span
+            >
           </v-tooltip>
         </v-col>
-                <v-col class="col-12 col-md-3">
+        <v-col class="col-12 col-md-3">
           <v-tooltip bottom>
             <template v-slot:activator="{ on }">
               <v-btn block :class="'download-button'" v-on="on">
@@ -41,7 +44,10 @@
                 Web assembly
               </v-btn>
             </template>
-            <span>Launch installer for the latest version of web assembly code</span>
+            <span
+              >Launch installer for the latest version of web assembly
+              code</span
+            >
           </v-tooltip>
         </v-col>
       </v-row>
@@ -52,7 +58,8 @@
           require a couple of libraries. If you use the installers, then all
           package requirements are included in them. If you are building outside
           of the installers, you will need to check that you have them on your
-          computer. 
+          computer. A complete list of historical versions and operating system
+          options is shown below.
         </v-col>
       </v-row>
     </div>
@@ -60,7 +67,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'DownloadSummary',
 }
