@@ -145,3 +145,7 @@ code.xref {
     color: var(--link-colour);
 }
 
+.v-btn__content {
+    display: block !important;
+    line-height: 2em;
+}

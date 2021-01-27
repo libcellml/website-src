@@ -4,46 +4,35 @@
       <h1>Documentation</h1>
       <v-row>
         <v-col class="col-12 col-md-4">
-          <v-tooltip bottom>
-            <template v-slot:activator="{ on }">
-              <v-btn block :class="'documentation-button'" v-on="on">
-                <v-icon color="white" x-large>mdi-animation</v-icon>
-                <v-icon color="white" x-large
-                  >mdi-book-open-page-variant</v-icon
-                >
-              </v-btn>
-            </template>
-            <span>See the latest API documentation</span>
-          </v-tooltip>
+          <v-btn block :class="'documentation-button'">
+            <!-- <v-icon color="white" x-large>mdi-content-copy</v-icon> -->
+            <v-icon color="white" x-large>mdi-book-open-page-variant</v-icon
+            ><br />
+            API Documentation
+          </v-btn>
         </v-col>
 
         <v-col class="col-12 col-md-4">
-          <v-tooltip bottom>
-            <template v-slot:activator="{ on }">
-              <v-btn block :class="'documentation-button'" v-on="on">
-                <v-icon color="white" x-large
-                  >mdi-book-open-page-variant</v-icon
-                >
-                <v-icon color="white" x-large>mdi-school</v-icon>
-                <v-icon color="white" x-large>mdi-account-question</v-icon>
-              </v-btn>
-            </template>
-            <span>See the latest users' guides</span>
-          </v-tooltip>
+          <v-btn block :class="'documentation-button'">
+            <!-- <v-icon color="white" x-large>mdi-book-open-page-variant</v-icon> -->
+            <!-- <v-icon color="white" x-large>mdi-teach</v-icon> -->
+            <!-- <v-icon color="white" x-large>mdi-school</v-icon> -->
+            <v-icon color="white" x-large>mdi-account-group</v-icon>
+            <!-- <v-icon color="white" x-large>mdi-account-question</v-icon> -->
+            <br />
+            Users' Guides
+          </v-btn>
         </v-col>
 
         <v-col class="col-12 col-md-4">
-          <v-tooltip bottom>
-            <template v-slot:activator="{ on }">
-              <v-btn block :class="'documentation-button'" v-on="on">
-                <v-icon color="white" x-large>mdi-account-edit</v-icon>
-                <v-icon color="white" x-large>mdi-wrench</v-icon>
-                <v-icon color="white" x-large>mdi-cogs</v-icon>
-                <v-icon color="white" x-large>mdi-git</v-icon>
-              </v-btn>
-            </template>
-            <span>See the latest developers' guides</span>
-          </v-tooltip>
+          <v-btn block :class="'documentation-button'">
+            <!-- <v-icon color="white" x-large>mdi-account</v-icon> -->
+            <!-- <v-icon color="white" x-large>mdi-wrench</v-icon> -->
+            <v-icon color="white" x-large>mdi-cogs</v-icon>
+            <!-- <v-icon color="white" x-large>mdi-git</v-icon> -->
+            <br />
+            Developers' Guides
+          </v-btn>
         </v-col>
       </v-row>
     </div>
