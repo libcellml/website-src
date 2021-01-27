@@ -100,10 +100,6 @@ export default {
           url: '/#documentation',
         },
         {
-          label: 'Developers',
-          url: '/#developers',
-        },
-        {
           label: 'About',
           url: '/#about',
         },
