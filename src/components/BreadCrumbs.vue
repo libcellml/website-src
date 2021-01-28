@@ -68,7 +68,7 @@
 
 <script>
 import VersionDropdown from './VersionDropdown'
-import { getDoxygenVersions, getSphinxVersions } from '../js/versions'
+import { getDoxygenVersions, getSphinxVersions, getDevelopersVersions } from '../js/versions'
 
 export default {
   name: 'BreadCrumbs',
@@ -107,6 +107,9 @@ export default {
     latest() {
       if (this.$props.versionType === 'guides') {
         return getSphinxVersions()[0]
+      }
+      else if(this.$props.versionType === 'developers') {
+        return getDevelopersVersions()[0]
       }
       return getDoxygenVersions()[0]
     },

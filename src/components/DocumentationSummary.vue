@@ -25,7 +25,7 @@
         </v-col>
 
         <v-col class="col-12 col-md-4">
-          <v-btn block :class="'big-button'">
+          <v-btn block :class="'big-button'" to="/documentation/developers">
             <!-- <v-icon color="white" x-large>mdi-account</v-icon> -->
             <!-- <v-icon color="white" x-large>mdi-wrench</v-icon> -->
             <v-icon color="white" x-large>mdi-cogs</v-icon>
@@ -49,16 +49,4 @@ export default {
 v-col {
   align-content: center;
 }
-
-/* .big-button {
-  background-color: var(--deep-blue-grey) !important;
-  color: white !important;
-  min-height: 6rem;
-  text-align: center;
-}
-
-.big-button:hover {
-  background-color: var(--deep-red) !important;
-  color: white !important;
-} */
 </style>
