@@ -5,7 +5,7 @@ import Home from '@/views/Home.vue'
 import store from '@/store'
 
 import { calculateBreadcrumbs } from './breadcrumbs'
-import { getDoxygenVersions, getSphinxVersions } from '../js/versions'
+import { getDoxygenVersions, getSphinxVersions, getDevelopersVersions } from '../js/versions'
 
 Vue.use(VueRouter)
 
@@ -51,6 +51,19 @@ const routes = [
     redirect: to => {
       // Defaults to latest version, if not specified.
       return '/documentation/guides/' + getSphinxVersions()[0]
+    }
+  },
+  {
+    path: '/documentation/developers/:version/:pageName*',
+    name: 'Developers',
+    component: () =>
+      import(/* webpackChunkName: "sphinx" */ '../views/Developers.vue'),
+  },
+  {
+    path: '/documentation/developers',
+    redirect: to => {
+      // Defaults to latest version, if not specified.
+      return '/documentation/developers/' + getDevelopersVersions()[0]
     }
   },
   {

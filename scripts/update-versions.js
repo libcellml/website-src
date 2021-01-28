@@ -34,10 +34,19 @@ const stripOutSamePatchVersions = versions => {
         resolve({ sphinx: files })
       })
     })
+    const promiseDevelopers = new Promise((resolve, reject) => {
+      fs.readdir('public/data/developers', (err, files) => {
+        if (err) {
+          reject(err)
+        }
+        resolve({ developers: files })
+      })
+    })
 
-    Promise.all([promiseDoxygen, promiseSphinx]).then(values => {
+    Promise.all([promiseDoxygen, promiseSphinx, promiseDevelopers]).then(values => {
       let doxygenVersions = []
       let sphinxVersions = []
+      let developersVersions = []
       values.forEach(entry => {
         if (entry.doxygen) {
           const strippedVersions = stripOutSamePatchVersions(entry.doxygen)
@@ -45,6 +54,9 @@ const stripOutSamePatchVersions = versions => {
         } else if (entry.sphinx) {
           const strippedVersions = stripOutSamePatchVersions(entry.sphinx)
           sphinxVersions = semver.rsort(strippedVersions).join("', '")
+        } else if (entry.developers) {
+        const strippedVersions = stripOutSamePatchVersions(entry.developers)
+        developersVersions = semver.rsort(strippedVersions).join("', '")
         }
       })
       const fileTemplate = `// This file is generated do not edit!
@@ -56,6 +68,10 @@ export const getDoxygenVersions = () => {
 
 export const getSphinxVersions = () => {
   return ['${sphinxVersions}']
+}
+
+export const getDevelopersVersions = () => {
+  return ['${developersVersions}']
 }
 `
       fs.writeFile('src/js/versions.js', fileTemplate, err => {
