@@ -1,4 +1,4 @@
-import { getSphinxVersions, getDoxygenVersions } from "../js/versions"
+import { getSphinxVersions, getDoxygenVersions, getDevelopersVersions } from "../js/versions"
 
 const skipPaths = [
   // KRM views to skip in the breadcrumbs
@@ -35,6 +35,13 @@ const hardRoutes = {
     name: 'Home',
     disabled: false,
     hash: '#user_guide',
+    type: 'pageFromName'
+  },
+  'developers': {
+    text: 'DEVELOPERS',
+    name: 'Home',
+    disabled: false,
+    hash: '#developers',
     type: 'pageFromName'
   },
 }
@@ -142,6 +149,48 @@ export function calculateBreadcrumbs(to) {
       routes.push({
         text: convertToReadableText(page).toUpperCase(),
         name: 'TutorialsPage',
+        disabled: false,
+        hash: '',
+        path: lastLink + (index === pages.length - 1 ? '' : '/index'),
+        type: 'pageFromPath',
+      })
+      index += 1
+      page = index < pages.length ? pages[index] : null
+      lastLink += '/' + page
+    }
+  }
+  else if (to.name === 'Developers') {
+
+    routes.push(hardRoutes.documentation)
+    routes.push(hardRoutes.developers)
+
+    let lastLink = '/documentation/developers'
+    let path = to.path.replaceAll(lastLink, '')
+    let pages = path.split('/')
+
+    let version = pages.length > 1 ? pages[1] : null
+
+    // Version selector.
+    if (version) {
+      routes.push({
+        text: version === 'latest' ? getDevelopersVersions()[0] : version,
+        name: 'Developers',
+        disabled: false,
+        hash: '',
+        type: 'versionSelector',
+      })
+    }
+
+    lastLink += '/' + version
+
+    // Any other pages
+    let index = 2
+    let page = pages[index]
+    lastLink += '/' + page
+    while (page && page !== 'index') {
+      routes.push({
+        text: convertToReadableText(page).toUpperCase(),
+        name: 'Developers',
         disabled: false,
         hash: '',
         path: lastLink + (index === pages.length - 1 ? '' : '/index'),
