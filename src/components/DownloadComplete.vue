@@ -42,9 +42,6 @@
 <script>
 export default {
   name: 'DownloadComplete',
-  created() {
-    alert(this.$route.path)
-  }
 }
 </script>
 

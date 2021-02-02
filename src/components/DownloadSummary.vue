@@ -55,7 +55,7 @@
       </v-row>
       <v-row>
         <v-col>
-          <h3>Dependecies and requirements</h3>
+          <h3>Dependencies and requirements</h3>
           libCellML is intended to be lightweight and transportable, but does
           require a couple of libraries. If you use the installers, then all
           package requirements are included in them. If you are building outside
