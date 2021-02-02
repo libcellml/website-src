@@ -49,14 +49,26 @@
           <br />
           Developers' Guides
         </v-btn>
-        <div><br />TODO Stuff goes here</div>
+        <div>
+          <br />
+          <ul>
+            <li
+              v-for="(version, index) in devVersions"
+              :key="'guide_' + index"
+            >
+              <router-link :to="{ path: `documentation/developers/${version}` }">
+                Developers' Guides {{ version }}
+              </router-link>
+            </li>
+          </ul>
+        </div>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
-import { getDoxygenVersions, getSphinxVersions } from '@/js/versions'
+import { getDoxygenVersions, getSphinxVersions, getDevelopersVersions } from '@/js/versions'
 
 export default {
   name: 'DocumentationArchive',
@@ -67,6 +79,7 @@ export default {
   created() {
     this.apiVersions = getDoxygenVersions()
     this.tutorialVersions = getSphinxVersions()
+    this.devVersions = getDevelopersVersions()
   },
 }
 </script>

@@ -23,7 +23,7 @@ const routes = [
   },
   {
     path: '/download',
-    name: 'Downloads',
+    name: 'Download',
     component: () =>
     import('../views/Download.vue'),
   },
@@ -131,8 +131,6 @@ const router = createRouter()
 
 router.beforeResolve((to, from, next) => {
   // Check for occurrences of 'latest' in the version field, and update
-  console.log("before resolve:")
-  console.log(to)
   if(to.params.version === 'latest' && to.name === 'APIReferencePage') {
     to.params.version = getDoxygenVersions()[0]
   }

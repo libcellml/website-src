@@ -6,8 +6,6 @@
     --bright-red: #bd4147;
     --mid-red: #862e32;
     --deep-red: #4e0202;
-    --text-colour: #333333;
-    --link-colour: #666666;
     --pale-grey:#dddddd;
     --very-pale-grey: #efefef;
 
@@ -28,6 +26,9 @@
     --nb-border-color: #e7c000;
     --nb-color: #6b5900;
 
+    --text-colour: #333333;
+    --link-colour: #777777;
+
     --warning-background: rgb(251, 239, 239);
     --warning-text: var(--deep-red);
 
@@ -36,6 +37,7 @@
     --code-colour: var(--mid-red);
 
     --text-font: "Lato", "proxima-nova", "Helvetica Neue", "Arial", sans-serif;
+    --heading-font: Verdana, Geneva, Tahoma, sans-serif;
     --code-font: monospace;
     --mono-font: monospace;
 }

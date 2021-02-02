@@ -307,3 +307,25 @@ pre > code {
 .quicklinks {
     display: none;
 }
+
+/*
+    Styling for the Glossary from the developers' documentation.  Note that the 
+    alternate terms are not displayed, only the first is used as the header.
+    If you want a different alias to be displayed, be sure to define it first in 
+    the list in the rst/xml document.
+*/
+dl.glossary > dt > dt {
+    display: none;
+}
+
+dl.glossary > dt > dt:first-child {
+    display: inherit;
+    font-weight: 500;
+    padding-left: 0;
+    font-style: normal;
+    color: var(--mid-red);
+}
+
+dl.glossary > dt > dd {
+    padding-left: 1em;
+}
