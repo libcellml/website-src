@@ -13,6 +13,6 @@
             With your request to David include the output of this command:</paragraph>
         <literal_block force="False" language="default" linenos="False" xml:space="preserve">htpasswd -n &lt;your-chosen-username&gt;</literal_block>
         <paragraph>The website <reference refuri="http://www.htaccesstools.com/htpasswd-generator/">http://www.htaccesstools.com/htpasswd-generator/</reference> can be used if you do not have access to the htpasswd application.</paragraph>
-        <paragraph>When your request has been dealt with, you will be able to login to <reference internal="False" refuri="http://autotest.bioeng.auckland.ac.nz/libcellml-buildbot/builders">libCellML Buildbot</reference> and submit code for testing.</paragraph>
+        <paragraph>When your request has been dealt with, you will be able to login to <reference internal="False" refuri="https://autotest.bioeng.auckland.ac.nz/buildbot/libcellml/#/builders">libCellML Buildbot</reference> and submit code for testing.</paragraph>
     </section>
 </document>

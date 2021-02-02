@@ -4,80 +4,10 @@
 <document source="/Users/kmoy001/libcellml/libcellml-src/docs/dev_setup.rst">
     <target refid="dev-setup"></target>
     <section ids="development-setup dev-setup" names="development\ setup dev_setup">
-        <title refid="id3">Development Setup</title>
+        <title>Development Setup</title>
         <paragraph>This section describes how someone wanting to contribute to the libCellML project should set up their <emphasis>working copy</emphasis> for developing libCellML.</paragraph>
-        <topic classes="contents" ids="contents" names="contents">
-            <title>Contents</title>
-            <bullet_list>
-                <list_item>
-                    <paragraph><reference ids="id3" refid="development-setup">Development Setup</reference></paragraph>
-                    <bullet_list>
-                        <list_item>
-                            <paragraph><reference ids="id4" refid="overview">Overview</reference></paragraph>
-                        </list_item>
-                        <list_item>
-                            <paragraph><reference ids="id5" refid="pre-requisite-acquisition">Pre-requisite acquisition</reference></paragraph>
-                            <bullet_list>
-                                <list_item>
-                                    <paragraph><reference ids="id6" refid="git">Git</reference></paragraph>
-                                </list_item>
-                                <list_item>
-                                    <paragraph><reference ids="id7" refid="cmake">CMake</reference></paragraph>
-                                </list_item>
-                                <list_item>
-                                    <paragraph><reference ids="id8" refid="toolchain">Toolchain</reference></paragraph>
-                                    <bullet_list>
-                                        <list_item>
-                                            <paragraph><reference ids="id9" refid="windows">Windows</reference></paragraph>
-                                        </list_item>
-                                        <list_item>
-                                            <paragraph><reference ids="id10" refid="linux">Linux</reference></paragraph>
-                                        </list_item>
-                                        <list_item>
-                                            <paragraph><reference ids="id11" refid="macos">MacOS</reference></paragraph>
-                                        </list_item>
-                                    </bullet_list>
-                                </list_item>
-                                <list_item>
-                                    <paragraph><reference ids="id12" refid="libxml2">LibXml2</reference></paragraph>
-                                </list_item>
-                                <list_item>
-                                    <paragraph><reference ids="id13" refid="doxygen">Doxygen</reference></paragraph>
-                                </list_item>
-                                <list_item>
-                                    <paragraph><reference ids="id14" refid="python-optional">Python (optional)</reference></paragraph>
-                                </list_item>
-                                <list_item>
-                                    <paragraph><reference ids="id15" refid="swig-for-python-bindings-optional">SWIG for Python bindings (optional)</reference></paragraph>
-                                </list_item>
-                                <list_item>
-                                    <paragraph><reference ids="id16" refid="sphinx-for-python-documentation-optional">Sphinx for Python documentation (optional)</reference></paragraph>
-                                </list_item>
-                            </bullet_list>
-                        </list_item>
-                        <list_item>
-                            <paragraph><reference ids="id17" refid="setting-up-the-codebase">Setting up the codebase</reference></paragraph>
-                            <bullet_list>
-                                <list_item>
-                                    <paragraph><reference ids="id18" refid="forking-your-own-copy">Forking your own copy</reference></paragraph>
-                                </list_item>
-                                <list_item>
-                                    <paragraph><reference ids="id19" refid="clone">Clone</reference></paragraph>
-                                </list_item>
-                                <list_item>
-                                    <paragraph><reference ids="id20" refid="set-git-remotes">Set Git remotes</reference></paragraph>
-                                </list_item>
-                            </bullet_list>
-                        </list_item>
-                        <list_item>
-                            <paragraph><reference ids="id21" refid="finally">Finally</reference></paragraph>
-                        </list_item>
-                    </bullet_list>
-                </list_item>
-            </bullet_list>
-        </topic>
         <section ids="overview" names="overview">
-            <title refid="id4">Overview</title>
+            <title>Overview</title>
             <paragraph>The libCellML codebase is hosted on <reference internal="False" refuri="https://github.com/">Github</reference> and therefore <reference internal="False" refuri="https://git-scm.com/">Git</reference> is used to track changes. Before you begin, you will need to have a few pre-requisites satisfied:</paragraph>
             <enumerated_list enumtype="arabic" prefix="" suffix=".">
                 <list_item>
@@ -113,11 +43,11 @@
             </enumerated_list>
         </section>
         <section ids="pre-requisite-acquisition" names="pre-requisite\ acquisition">
-            <title refid="id5">Pre-requisite acquisition</title>
+            <title>Pre-requisite acquisition</title>
             <paragraph>In this section, we cover the retrieval and installation of pre-requisites.</paragraph>
             <target refid="dev-setup-git"></target>
             <section ids="git dev-setup-git" names="git dev_setup_git">
-                <title refid="id6">Git</title>
+                <title>Git</title>
                 <paragraph>Creating a <reference internal="False" refuri="https://github.com/">Github</reference> user account is straightforward and can be done on the <reference internal="False" refuri="https://github.com//join">Github sign-up page</reference>.
                     Installing a Git client is particular to each operating system and some pointers are offered below:</paragraph>
                 <bullet_list bullet="-">
@@ -138,7 +68,7 @@
                 <target refid="dev-setup-cmake"></target>
             </section>
             <section ids="cmake dev-setup-cmake" names="cmake dev_setup_cmake">
-                <title refid="id7">CMake</title>
+                <title>CMake</title>
                 <paragraph><reference internal="False" refuri="https://cmake.org/">CMake</reference> is the cross-platform family of tools designed to build, test and package software.
                     CMake is used to control the software compilation process using simple platform and compiler independent configuration files, and to generate native makefiles and workspaces that can be used in the compiler environment of your choice.
                     Note that CMake version 3.2 or later is required to configure libCellML.</paragraph>
@@ -159,7 +89,7 @@
                 <target refid="dev-setup-toolchain"></target>
             </section>
             <section ids="toolchain dev-setup-toolchain" names="toolchain dev_setup_toolchain">
-                <title refid="id8">Toolchain</title>
+                <title>Toolchain</title>
                 <paragraph>The toolchain specifies the compiler that we will use to build libCellML.
                     Toolchains are highly dependent on the operating system.
                     When we test libCellML, we currently use:</paragraph>
@@ -177,7 +107,7 @@
                 <paragraph>We recommend using these compilers on these systems, but feel free to use a different toolchain.</paragraph>
                 <paragraph>The following sub-sections provide guidance on how to install the recommended toolchain on the major operating systems that libCellML supports.</paragraph>
                 <section ids="windows" names="windows">
-                    <title refid="id9">Windows</title>
+                    <title>Windows</title>
                     <paragraph>Visual Studio is available to download from <reference internal="False" refuri="https://visualstudio.microsoft.com/downloads/">the MSVS download page</reference>.
                         We currently test with Visual Studio 2015 (version 14), but later versions are known to work.
                         The <emphasis>Community</emphasis> edition is more than sufficient for the needs of libCellML.
@@ -185,17 +115,17 @@
                         This component (and its requirements) is sufficient for building libCellML.</paragraph>
                 </section>
                 <section ids="linux" names="linux">
-                    <title refid="id10">Linux</title>
+                    <title>Linux</title>
                     <paragraph>(todo)</paragraph>
                 </section>
                 <section ids="macos" names="macos">
-                    <title refid="id11">MacOS</title>
+                    <title>MacOS</title>
                     <paragraph>(todo)</paragraph>
                     <target refid="dev-setup-libxml2"></target>
                 </section>
             </section>
             <section ids="libxml2 dev-setup-libxml2" names="libxml2 dev_setup_libxml2">
-                <title refid="id12">LibXml2</title>
+                <title>LibXml2</title>
                 <paragraph><reference internal="False" refuri="http://xmlsoft.org/">LibXml2</reference> is a parser and toolkit for manipulating XML files and text.
                     It’s important to use a 64-bit version of the library as the 32-bit is not compatible with libCellML.</paragraph>
                 <bullet_list bullet="-">
@@ -214,7 +144,7 @@
                 <target refid="dev-setup-doxygen"></target>
             </section>
             <section ids="doxygen dev-setup-doxygen" names="doxygen dev_setup_doxygen">
-                <title refid="id13">Doxygen</title>
+                <title>Doxygen</title>
                 <paragraph><reference internal="False" refuri="http://www.doxygen.nl/">Doxygen</reference> is software which assembles documentation files directly from annotated source code, including the generation of inheritance and dependency tree diagrams for classes.
                     In order for libCellML to build its documentation you will need to have Doxygen and its dependencies installed.
                     Note that this does not affect your use of the libCellML library itself.</paragraph>
@@ -224,7 +154,7 @@
                 <target refid="dev-setup-python"></target>
             </section>
             <section ids="python-optional dev-setup-python" names="python\ (optional) dev_setup_python">
-                <title refid="id14">Python (optional)</title>
+                <title>Python (optional)</title>
                 <paragraph><reference internal="False" refuri="https://www.python.org/">Python</reference> is an open-source language which is syntactically easier to read than other higher-level languages.
                     It is commonly used as a scripting language for experimentation, and is included here to allow libCellML to be accessed from Python-based programs.
                     Note that creation of Python bindings is optional, and can be enabled/disabled at configuration time - there will be instructions for this on the <reference internal="True" refuri="dev_building#dev-building"><inline classes="std std-ref">Building LibCellML</inline></reference> page.</paragraph>
@@ -242,7 +172,7 @@
                 <target refid="dev-setup-swig"></target>
             </section>
             <section ids="swig-for-python-bindings-optional dev-setup-swig" names="swig\ for\ python\ bindings\ (optional) dev_setup_swig">
-                <title refid="id15">SWIG for Python bindings (optional)</title>
+                <title>SWIG for Python bindings (optional)</title>
                 <paragraph><reference internal="False" refuri="http://swig.org">SWIG</reference> is a tool which acts as a translator between code written in C++ and other languages, including <reference internal="False" refuri="https://www.python.org/">Python</reference>.
                     Here SWIG is used to generate the optional Python bindings for libCellML.
                     The current version (0.9) of libCellML uses SWIG 4.0.0.</paragraph>
@@ -260,7 +190,7 @@
                 <target refid="dev-setup-sphinx"></target>
             </section>
             <section ids="sphinx-for-python-documentation-optional dev-setup-sphinx" names="sphinx\ for\ python\ documentation\ (optional) dev_setup_sphinx">
-                <title refid="id16">Sphinx for Python documentation (optional)</title>
+                <title>Sphinx for Python documentation (optional)</title>
                 <paragraph><reference internal="False" refuri="http://www.sphinx-doc.org/en/master/">Sphinx</reference> is an additional documentation tool used here to assemble documentation of the Python bindings.
                     Instructions for all operating systems can be found on their <reference internal="False" refuri="http://www.sphinx-doc.org/en/master//usage/installation.html">Installation page</reference>.
                     The current version (2.0.1) needs Python version 3.5.2 or later (note that Python subversions 3.5.0 and 3.5.1 will still raise an <reference internal="False" refuri="https://github.com/rtfd/readthedocs.org/issues/3812">import error</reference> despite being reported fixed since version Sphinx 1.7.2).</paragraph>
@@ -268,12 +198,12 @@
             </section>
         </section>
         <section ids="setting-up-the-codebase dev-setup-codebase" names="setting\ up\ the\ codebase dev_setup_codebase">
-            <title refid="id17">Setting up the codebase</title>
+            <title>Setting up the codebase</title>
             <paragraph>The remainder of this document assumes that the above pre-requisites have been met, and covers setup from the command line.
                 If you are using a GUI like <reference internal="False" refuri="https://desktop.github.com/">GitHub Desktop</reference> then you will need to adjust the commands accordingly.</paragraph>
             <paragraph>The goal here is to get a working copy of source code, tests, and documentation onto your computer so that you can begin development.
                 To make this happen, you will need to fork the <reference internal="True" refuri="glossary#term-prime-libCellML-repository"><inline classes="xref std std-term">prime libCellML repository</inline></reference>, make a clone onto your computer, and set up the Git remotes.
-                In <number_reference internal="True" refid="fig-devsetup-githubrepos" title="Fig. %s"><inline classes="std std-numref">Fig. 1</inline></number_reference>, you can see a pictorial representation of what we are aiming to achieve.</paragraph>
+                In <number_reference internal="True" refid="fig-devsetup-githubrepos" title="Fig. %s"><inline classes="std std-numref">Fig. 10</inline></number_reference>, you can see a pictorial representation of what we are aiming to achieve.</paragraph>
             <target refid="fig-devsetup-githubrepos"></target>
             <figure align="center" ids="id1 fig-devsetup-githubrepos" names="fig_devsetup_githubrepos">
                 <image alt="Setup of Git repositories." candidates="{'*': './images/libCellMLProcesses-GitHubRepos.png'}" uri="./images/libCellMLProcesses-GitHubRepos.png"></image>
@@ -281,9 +211,9 @@
             </figure>
             <paragraph>The four steps to getting set up are detailed below.</paragraph>
             <section ids="forking-your-own-copy" names="forking\ your\ own\ copy">
-                <title refid="id18">Forking your own copy</title>
+                <title>Forking your own copy</title>
                 <paragraph>Login to Github using your credentials and go to <reference refuri="https://github.com/cellml/libCellML">https://github.com/cellml/libCellML</reference>.</paragraph>
-                <paragraph>Use the fork button to create a libCellML repository under your own account, see <number_reference internal="True" refid="fig-devsetup-githubfork" title="Fig. %s"><inline classes="std std-numref">Fig. 2</inline></number_reference> for locating this button.</paragraph>
+                <paragraph>Use the fork button to create a libCellML repository under your own account, see <number_reference internal="True" refid="fig-devsetup-githubfork" title="Fig. %s"><inline classes="std std-numref">Fig. 11</inline></number_reference> for locating this button.</paragraph>
                 <target refid="fig-devsetup-githubfork"></target>
                 <figure align="center" ids="id2 fig-devsetup-githubfork" names="fig_devsetup_githubfork">
                     <image alt="Fork button of libCellML repository." candidates="{'*': './images/libCellMLProcesses-GitHubForkButton.png'}" uri="./images/libCellMLProcesses-GitHubForkButton.png"></image>
@@ -291,7 +221,7 @@
                 </figure>
             </section>
             <section ids="clone" names="clone">
-                <title refid="id19">Clone</title>
+                <title>Clone</title>
                 <paragraph>You now need to clone the libCellML repository to your computer.
                     You do this by going to your fork (in this example user <emphasis>andre</emphasis>’s fork) at <reference refuri="https://github.com/andre/libCellML">https://github.com/andre/libCellML</reference>.</paragraph>
                 <container classes="nb">
@@ -306,7 +236,7 @@ git clone https://github.com/andre/libCellML.git</literal_block>
                 <paragraph>Note: again, do not clone this location; substitute your Github username for <emphasis>andre</emphasis>.</paragraph>
             </section>
             <section ids="set-git-remotes" names="set\ git\ remotes">
-                <title refid="id20">Set Git remotes</title>
+                <title>Set Git remotes</title>
                 <paragraph>You now need to setup a read-only remote connection to the <reference internal="True" refuri="glossary#term-prime-libCellML-repository"><inline classes="xref std std-term">prime libCellML repository</inline></reference>.
                     Given that you are still in the directory where you cloned the libCellML repository from, do the following:</paragraph>
                 <literal_block force="False" language="default" linenos="False" xml:space="preserve">cd libCellML
@@ -318,7 +248,7 @@ git config remote.prime.pushurl "You really did not want to do that!"</literal_b
             </section>
         </section>
         <section ids="finally" names="finally">
-            <title refid="id21">Finally</title>
+            <title>Finally</title>
             <paragraph>You are all done and ready to start development, read <reference internal="True" refuri="dev_building#dev-building"><inline classes="std std-ref">Building</inline></reference> on how to build libCellML.
                 Then, read <reference internal="True" refuri="dev_contribution#dev-contribution"><inline classes="std std-ref">Contribution</inline></reference> to get your changes into libCellML’s prime repository.</paragraph>
         </section>
