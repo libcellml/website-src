@@ -178,3 +178,7 @@ code.xref {
     line-height: 2em;
     color: white;
 }
+
+img {
+    max-width: 100%;
+}
