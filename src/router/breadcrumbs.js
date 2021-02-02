@@ -44,6 +44,13 @@ const hardRoutes = {
     hash: '#developers',
     type: 'pageFromName'
   },
+  'download': {
+    text: 'DOWNLOAD',
+    name: 'Home',
+    disabled: false,
+    hash: '#download',
+    type: 'pageFromName'
+  },
 }
 
 function convertToReadableText(bookmarkText) {
@@ -70,13 +77,15 @@ export function calculateBreadcrumbs(to) {
     to.name === 'DocumentationSummary' ||
     to.name === 'DocumentationAPI' ||
     to.name === 'DocumentationUserGuides' ||
-    to.name === 'DocumentationDevelopers'
+    to.name === 'DocumentationDevelopers' ||
+    to.name === 'Download'
   ) {
     routes.push({
       text: to.name.toUpperCase(),
       name: 'Home',
       disabled: false,
-      hash: '#' + to.name.toLowerCase()
+      hash: '#' + to.name.toLowerCase(),
+      type: 'pageFromName',
     })
   }
   else if (to.name === 'APIReferencePage') {
@@ -209,6 +218,5 @@ export function calculateBreadcrumbs(to) {
       hash: ''
     })
   }
-  console.log(routes)
   return routes.reverse()
 }
