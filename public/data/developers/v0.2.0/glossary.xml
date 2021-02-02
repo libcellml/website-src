@@ -10,20 +10,21 @@
                 <definition_list_item>
                     <term ids="term-C">C++<index entries="['single',\ 'C++',\ 'term-C',\ 'main',\ None]"></index></term>
                     <definition>
-                        <paragraph>The language in which libCellML is written.</paragraph>
+                        <paragraph>The language in which libCellML is written.
+                            Please see</paragraph>
                     </definition>
                 </definition_list_item>
                 <definition_list_item>
                     <term ids="term-CellML2">CellML2<index entries="['single',\ 'CellML2',\ 'term-CellML2',\ 'main',\ None]"></index></term>
                     <definition>
                         <paragraph>CellML2.0 is the markup language in which models are parsed, validated, and printed by libCellML.
-                            The namespace is defined at <reference refuri="http://www.cellml.org/cellml/2">http://www.cellml.org/cellml/2</reference>.0# and the formal language syntax can be found in the <problematic ids="id3" refid="id2">`CellML 2.0 Specification &lt;&gt;`__</problematic> document.</paragraph>
+                            The namespace is defined at <literal>http://www.cellml.org/cellml/2.0#</literal> and the formal language syntax can be found in the <reference internal="False" refuri="https://www.cellml.org/specifications/cellml_2.0">CellML 2.0 Specification</reference> document.</paragraph>
                     </definition>
                 </definition_list_item>
                 <definition_list_item>
                     <term ids="term-CMake">CMake<index entries="['single',\ 'CMake',\ 'term-CMake',\ 'main',\ None]"></index></term>
                     <definition>
-                        <paragraph><reference name="CMake" refuri="http://cmake.org/">CMake</reference> is an open-source, cross-platform family of tools designed to build, test and package software.
+                        <paragraph><reference internal="False" refuri="https://cmake.org/">CMake</reference> is an open-source, cross-platform family of tools designed to build, test and package software.
                             Instructions for installation of CMake can be found on the <reference internal="True" refuri="dev_setup#dev-setup-cmake"><inline classes="std std-ref">Setup page</inline></reference>.</paragraph>
                     </definition>
                 </definition_list_item>
@@ -37,15 +38,15 @@
                 <definition_list_item>
                     <term ids="term-Doxygen">Doxygen<index entries="['single',\ 'Doxygen',\ 'term-Doxygen',\ 'main',\ None]"></index></term>
                     <definition>
-                        <paragraph><reference name="Doxygen" refuri="http://www.doxygen.nl/">Doxygen</reference> is software which assembles documentation files directly from annotated source code, including the generation of inheritance and dependency tree diagrams for classes.
+                        <paragraph><reference internal="False" refuri="http://www.doxygen.nl/">Doxygen</reference> is software which assembles documentation files directly from annotated source code, including the generation of inheritance and dependency tree diagrams for classes.
                             More information on installing Doxygen is given on the <reference internal="True" refuri="dev_setup#dev-setup-doxygen"><inline classes="std std-ref">Setup page</inline></reference>.</paragraph>
                     </definition>
                 </definition_list_item>
                 <definition_list_item>
                     <term ids="term-Graphviz">Graphviz<index entries="['single',\ 'Graphviz',\ 'term-Graphviz',\ 'main',\ None]"></index></term>
                     <definition>
-                        <paragraph><reference name="Graphviz" refuri="http://graphviz.org/">Graphviz</reference> layout programs take descriptions of graphs in a simple text language, and make diagrams in several useful formats such as images and SVG for web pages.
-                            It is used here to supplement the class heirarchy graphs within the Doxygen documentation, and may need to be installed on Windows machines.
+                        <paragraph><reference internal="False" refuri="http://graphviz.org">Graphviz</reference> layout programs take descriptions of graphs in a simple text language, and make diagrams in several useful formats such as images and SVG for web pages.
+                            It is used here to supplement the class hierarchy graphs within the Doxygen documentation, and may need to be installed on Windows machines.
                             Installation links can be found on the <reference internal="True" refuri="dev_setup#dev-setup-doxygen"><inline classes="std std-ref">Setup page</inline></reference>.</paragraph>
                     </definition>
                 </definition_list_item>
@@ -62,15 +63,15 @@
                 <definition_list_item>
                     <term ids="term-Python">Python<index entries="['single',\ 'Python',\ 'term-Python',\ 'main',\ None]"></index></term>
                     <definition>
-                        <paragraph><reference name="Python" refuri="http://www.python.org/">Python</reference> is a scripting language for which optional bindings to libCellML can be generated.
+                        <paragraph><reference internal="False" refuri="https://www.python.org/">Python</reference> is a scripting language for which optional bindings to libCellML can be generated.
                             There are instructions for installing Python on the <reference internal="True" refuri="dev_setup#dev-setup-python"><inline classes="std std-ref">Setup page</inline></reference>.</paragraph>
                     </definition>
                 </definition_list_item>
                 <definition_list_item>
                     <term ids="term-SWIG">SWIG<index entries="['single',\ 'SWIG',\ 'term-SWIG',\ 'main',\ None]"></index></term>
                     <definition>
-                        <paragraph><reference name="SWIG" refuri="http://www.swig.org/">SWIG</reference> (Simplified Wrapper and Interface Generator) is a tool which acts as a translator between code written in C++ and other languages.
-                            LibCellML uses SWIG to generate the (optional) Python bindings - if you are not intending to use libCellML in other languages then you will not need to install SWIG.
+                        <paragraph><reference internal="False" refuri="http://swig.org">SWIG (Simplified Wrapper and Interface Generator)</reference> is a tool which acts as a translator between code written in C++ and other languages.
+                            libCellML uses SWIG to generate the (optional) Python bindings - if you are not intending to use libCellML in other languages then you will not need to install SWIG.
                             Instructions for installing SWIG on the various operating systems are given on the <reference internal="True" refuri="dev_setup#dev-setup"><inline classes="std std-ref">Setup page</inline></reference>.</paragraph>
                     </definition>
                 </definition_list_item>

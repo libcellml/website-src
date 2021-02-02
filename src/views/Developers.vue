@@ -3,9 +3,11 @@
     <v-container>
       <v-row>
         <v-col>
-          <BreadCrumbs v-bind:versionChoices="getVersions()" 
-          :currentVersion="`${$route.params.version}`" 
-          :versionType="'guides'" />
+          <BreadCrumbs
+            v-bind:versionChoices="getVersions()"
+            :currentVersion="`${$route.params.version}`"
+            :versionType="'developers'"
+          />
 
           <SphinxPage
             :baseURL="`/data/developers/${$route.params.version}`"
@@ -41,7 +43,7 @@ export default {
 
       // KRM include these on any page where the injected XML might contain tabs or toggle blocks.
       // Workaround only until sphinx tabs and toggles cann be handled outside the browser properly.
-      setTimeout(function() {
+      setTimeout(function () {
         ui.processSphinxTabs()
         ui.addClickHandlerTabs()
         ui.addClickHandlerToggles()
