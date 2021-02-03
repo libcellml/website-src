@@ -1,12 +1,12 @@
 export default {
-  addClickHandlerToggles: function () {
+  addClickHandlerToggles: function() {
     // Event capture for the "toggle" class:
     let headers = document.querySelectorAll('.header, .header-left')
 
     headers.forEach(header => {
       header.classList.add('inactive')
 
-      header.addEventListener('click', function () {
+      header.addEventListener('click', function() {
         let contents = header.nextElementSibling
         while (contents !== null) {
           contents.style.display =
@@ -20,17 +20,17 @@ export default {
     })
   },
 
-  addClickHandlerTabs: function () {
+  addClickHandlerTabs: function() {
     let tabNames = document.querySelectorAll('.tab2name')
     tabNames.forEach(tabName => {
-      tabName.addEventListener('click', function () {
+      tabName.addEventListener('click', function() {
         // Turn other tabs off.
         let group = tabName.parentElement.parentElement
-        group.querySelectorAll('.tab2').forEach((tab) => {
+        group.querySelectorAll('.tab2').forEach(tab => {
           tab.classList.remove('active')
           tab.classList.add('inactive')
         })
-        group.querySelectorAll('.tab2name').forEach((tab) => {
+        group.querySelectorAll('.tab2name').forEach(tab => {
           tab.classList.remove('active')
           tab.classList.add('inactive')
         })
@@ -48,7 +48,7 @@ export default {
     })
   },
 
-  processSphinxTabs: function () {
+  processSphinxTabs: function() {
     // KRM: Not a fan of this.  Processing should be done in getting
     // this into XML format, not in the browser!
 
@@ -127,14 +127,14 @@ export default {
     })
   },
 
-  goToSignature: function (sigName) {
-    // Scrolls to the first instance of an item with the CSS class sig-name 
-    // (from Doxygen) with content matching the given sigName.  
+  goToSignature: function(sigName) {
+    // Scrolls to the first instance of an item with the CSS class sig-name
+    // (from Doxygen) with content matching the given sigName.
     let items = document.querySelectorAll('.sig-name')
-    let sigNameItems = Array.prototype.filter.call(items, function (item) {
+    let sigNameItems = Array.prototype.filter.call(items, function(item) {
       return item.textContent.trim() === sigName
     })
-    if(sigNameItems.length == 0) {
+    if (sigNameItems.length == 0) {
       return
     }
     let bookmark = sigNameItems[0].closest('.function')

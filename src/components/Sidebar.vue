@@ -55,7 +55,6 @@
               </li>
             </ul>
           </template>
-
         </v-col>
       </v-row>
     </v-container>
@@ -72,9 +71,8 @@ export default {
   },
   mounted() {
     setTimeout(() => {
-        this.menuInSidebar = this.calculateMenu()
-      }, this.$store.getters.getTransitionDelay)
-
+      this.menuInSidebar = this.calculateMenu()
+    }, this.$store.getters.getTransitionDelay)
   },
   destroyed() {
     window.removeEventListener('resize', this.handleResize)
@@ -124,7 +122,7 @@ export default {
     },
     hasQuickLinks() {
       return this.quickLinks.length
-    }
+    },
   },
 
   watch: {
@@ -155,7 +153,7 @@ export default {
       let el = document.querySelector('#pageContent')
       if (el) {
         let headings = this.getHeadings(el, headingInitial)
-        headings.forEach((heading) => {
+        headings.forEach(heading => {
           let subHeadings = this.getHeadings(heading, headingInitial + 1)
           const treeEntry = {
             el: heading,

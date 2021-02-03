@@ -17,7 +17,10 @@
             functionality for annotation support, model debugging, mathematical
             analysis and code generation.
           </p>
-          <p>For more information about CellML please see the <a href="http://cellml.org" target="_blank">CellML homepage</a>.</p> 
+          <p>
+            For more information about CellML please see the
+            <a href="http://cellml.org" target="_blank">CellML homepage</a>.
+          </p>
         </v-col>
       </v-row>
     </v-container>

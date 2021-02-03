@@ -22,7 +22,6 @@
                 :versionChoices="versionChoices"
                 :currentVersion="currentVersion"
                 :versionType="versionType"
-                
               /><v-breadcrumbs-item
                 :to="{ name: item.name, hash: item.hash, params: item.params }"
                 :disabled="item.disabled"
@@ -34,7 +33,7 @@
             </template>
 
             <!-- Normal item, no dropdown, formed from named page: -->
-            <template v-else-if="item.type=== 'pageFromName'">
+            <template v-else-if="item.type === 'pageFromName'">
               <v-breadcrumbs-item
                 :exact="true"
                 :to="{ name: item.name, hash: item.hash, params: item.params }"
@@ -68,7 +67,11 @@
 
 <script>
 import VersionDropdown from './VersionDropdown'
-import { getDoxygenVersions, getSphinxVersions, getDevelopersVersions } from '../js/versions'
+import {
+  getDoxygenVersions,
+  getSphinxVersions,
+  getDevelopersVersions,
+} from '../js/versions'
 
 export default {
   name: 'BreadCrumbs',
@@ -98,7 +101,7 @@ export default {
   methods: {
     versionIsOld() {
       return false
-    }
+    },
   },
   computed: {
     breadcrumbs() {
@@ -107,8 +110,7 @@ export default {
     latest() {
       if (this.$props.versionType === 'guides') {
         return getSphinxVersions()[0]
-      }
-      else if(this.$props.versionType === 'developers') {
+      } else if (this.$props.versionType === 'developers') {
         return getDevelopersVersions()[0]
       }
       return getDoxygenVersions()[0]

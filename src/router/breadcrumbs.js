@@ -1,4 +1,8 @@
-import { getSphinxVersions, getDoxygenVersions, getDevelopersVersions } from "../js/versions"
+import {
+  getSphinxVersions,
+  getDoxygenVersions,
+  getDevelopersVersions,
+} from '../js/versions'
 
 const skipPaths = [
   // KRM views to skip in the breadcrumbs
@@ -10,46 +14,46 @@ const skipTitles = [
 ]
 
 const hardRoutes = {
-  'home': {
+  home: {
     text: 'HOME', // KRM change to icon here?
     name: 'Home',
     disabled: false,
-    type: 'pageFromName'
+    type: 'pageFromName',
   },
-  'documentation': {
+  documentation: {
     text: 'DOCUMENTATION',
     name: 'Home',
     disabled: false,
     hash: '#documentation',
-    type: 'pageFromName'
+    type: 'pageFromName',
   },
-  'api_reference': {
+  api_reference: {
     text: 'API',
     name: 'Home',
     disabled: false,
     hash: '#api_reference',
-    type: 'pageFromName'
+    type: 'pageFromName',
   },
-  'user_guide': {
+  user_guide: {
     text: 'USER GUIDES',
     name: 'Home',
     disabled: false,
     hash: '#guides',
-    type: 'pageFromName'
+    type: 'pageFromName',
   },
-  'developers': {
+  developers: {
     text: 'DEVELOPERS',
     name: 'Home',
     disabled: false,
     hash: '#developers',
-    type: 'pageFromName'
+    type: 'pageFromName',
   },
-  'download': {
+  download: {
     text: 'DOWNLOAD',
     name: 'Home',
     disabled: false,
     hash: '#download',
-    type: 'pageFromName'
+    type: 'pageFromName',
   },
 }
 
@@ -60,7 +64,7 @@ function convertToReadableText(bookmarkText) {
   bookmarkText = bookmarkText.replaceAll('_', ' ')
   bookmarkText = bookmarkText.replace(/([A-Z])/g, ' $1') // Insert space before capital letter
   bookmarkText = bookmarkText.replace(/([0-9])/g, ' $1') // Insert space before number
-  bookmarkText = bookmarkText.trim()                     // Removing leading space, if present
+  bookmarkText = bookmarkText.trim() // Removing leading space, if present
   return bookmarkText
 }
 
@@ -87,8 +91,7 @@ export function calculateBreadcrumbs(to) {
       hash: '#' + to.name.toLowerCase(),
       type: 'pageFromName',
     })
-  }
-  else if (to.name === 'APIReferencePage') {
+  } else if (to.name === 'APIReferencePage') {
     routes.push(hardRoutes.documentation)
     routes.push(hardRoutes.api_reference)
 
@@ -121,13 +124,11 @@ export function calculateBreadcrumbs(to) {
           name: 'APIReferencePage',
           hash: '',
           params: { pageName: page },
-          type: 'pageFromName'
+          type: 'pageFromName',
         })
       }
     })
-  }
-  else if (to.name === 'TutorialsPage') {
-
+  } else if (to.name === 'TutorialsPage') {
     routes.push(hardRoutes.documentation)
     routes.push(hardRoutes.user_guide)
 
@@ -167,9 +168,7 @@ export function calculateBreadcrumbs(to) {
       page = index < pages.length ? pages[index] : null
       lastLink += '/' + page
     }
-  }
-  else if (to.name === 'Developers') {
-
+  } else if (to.name === 'Developers') {
     routes.push(hardRoutes.documentation)
     routes.push(hardRoutes.developers)
 
@@ -209,13 +208,12 @@ export function calculateBreadcrumbs(to) {
       page = index < pages.length ? pages[index] : null
       lastLink += '/' + page
     }
-  }
-  else {
+  } else {
     routes.push({
       text: to.name.toUpperCase(),
       name: to.name,
       disabled: false,
-      hash: ''
+      hash: '',
     })
   }
   return routes.reverse()

@@ -44,6 +44,3 @@ export default {
   name: 'DownloadComplete',
 }
 </script>
-
-<style scoped>
-</style>
