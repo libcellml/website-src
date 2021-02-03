@@ -3,7 +3,7 @@
     <div>
       <router-link to="download">
         See more information on available versions and requirements
-        </router-link>
+      </router-link>
     </div>
   </v-container>
 </template>
@@ -13,6 +13,3 @@ export default {
   name: 'DownloadLink',
 }
 </script>
-
-<style scoped>
-</style>
