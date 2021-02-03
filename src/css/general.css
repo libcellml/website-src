@@ -211,16 +211,24 @@ thead {
 }
 
 table p {
-    padding: 0 0.5em;
-}
-
-table td {
-    border: solid grey 1px collapse;
+    padding: 0.2em 0.5em;
 }
 
 table {
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 2em;
+    border-collapse: collapse;
+}
+
+td {
+    border-bottom: 0.1em solid var(--pale-grey);
+    padding: 0.3em;
+}
+
+th {
+    border-bottom: 0.3em solid var(--pale-grey);
+    padding: 0.3em;
 }
 
 .download::before {
