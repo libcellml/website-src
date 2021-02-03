@@ -11,14 +11,14 @@
                     <term ids="term-C">C++<index entries="['single',\ 'C++',\ 'term-C',\ 'main',\ None]"></index></term>
                     <definition>
                         <paragraph>The language in which libCellML is written.
-                            Please see</paragraph>
+                            Please see the <reference internal="False" refuri="https://en.cppreference.com/C++ Reference site">C++ Reference site</reference> for details.</paragraph>
                     </definition>
                 </definition_list_item>
                 <definition_list_item>
                     <term ids="term-CellML2">CellML2<index entries="['single',\ 'CellML2',\ 'term-CellML2',\ 'main',\ None]"></index></term>
                     <definition>
-                        <paragraph>CellML2.0 is the markup language in which models are parsed, validated, and printed by libCellML.
-                            The namespace is defined at <literal>http://www.cellml.org/cellml/2.0#</literal> and the formal language syntax can be found in the <reference internal="False" refuri="https://www.cellml.org/specifications/cellml_2.0">CellML 2.0 Specification</reference> document.</paragraph>
+                        <paragraph>CellML 2.0 is the markup language in which models are parsed, validated, and printed by libCellML.
+                            The namespace is defined at <literal classes="code">http://www.cellml.org/cellml/2.0#</literal> and the formal language syntax can be found in the <reference internal="False" refuri="https://www.cellml.org/specifications/cellml_2.0">CellML 2.0 Specification</reference> document.</paragraph>
                     </definition>
                 </definition_list_item>
                 <definition_list_item>
