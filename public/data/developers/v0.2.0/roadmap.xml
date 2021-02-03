@@ -143,7 +143,7 @@
                     <paragraph>Load a CellML 2.0 model and validate it.</paragraph>
                     <enumerated_list enumtype="arabic" prefix="" suffix=".">
                         <list_item>
-                            <paragraph>Validate models against the rules defined in the current draft of the CellML 2.0 specification (currently an active document, outstanding issues regarding the new <literal>reset</literal> construct are likely to require updates to the validation implementation).</paragraph>
+                            <paragraph>Validate models against the rules defined in the current draft of the CellML 2.0 specification (currently an active document, outstanding issues regarding the new <literal classes="code">reset</literal> construct are likely to require updates to the validation implementation).</paragraph>
                         </list_item>
                     </enumerated_list>
                 </list_item>
