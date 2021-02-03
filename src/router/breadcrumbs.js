@@ -31,10 +31,10 @@ const hardRoutes = {
     type: 'pageFromName'
   },
   'user_guide': {
-    text: 'USER GUIDE',
+    text: 'USER GUIDES',
     name: 'Home',
     disabled: false,
-    hash: '#user_guide',
+    hash: '#guides',
     type: 'pageFromName'
   },
   'developers': {
