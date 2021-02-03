@@ -222,3 +222,13 @@ table {
     margin-left: auto;
     margin-right: auto;
 }
+
+.download::before {
+    content: "\2913";
+}
+
+.download {
+    background-color: var(--transparent-grey);
+    padding: 0.1em;
+    border-radius: 0.1em;
+}
