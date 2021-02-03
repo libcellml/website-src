@@ -8,9 +8,9 @@
             For example, MEMCHECK is only available if the valgrind tool is available.</paragraph>
         <table align="default">
             <tgroup cols="3">
-                <colspec colwidth="14"></colspec>
+                <colspec colwidth="24"></colspec>
                 <colspec colwidth="12"></colspec>
-                <colspec colwidth="41"></colspec>
+                <colspec colwidth="43"></colspec>
                 <thead>
                     <row>
                         <entry>
@@ -27,7 +27,7 @@
                 <tbody>
                     <row>
                         <entry>
-                            <paragraph>BUILD_SHARED</paragraph>
+                            <paragraph><literal classes="code">BUILD_SHARED</literal></paragraph>
                         </entry>
                         <entry>
                             <paragraph>ON</paragraph>
@@ -38,7 +38,7 @@
                     </row>
                     <row>
                         <entry>
-                            <paragraph>BUILD_TYPE</paragraph>
+                            <paragraph><literal classes="code">BUILD_TYPE</literal></paragraph>
                         </entry>
                         <entry>
                             <paragraph>Release</paragraph>
@@ -49,7 +49,7 @@
                     </row>
                     <row>
                         <entry>
-                            <paragraph>COMPILER_CACHE</paragraph>
+                            <paragraph><literal classes="code">COMPILER_CACHE</literal></paragraph>
                         </entry>
                         <entry>
                             <paragraph>ON</paragraph>
@@ -60,7 +60,7 @@
                     </row>
                     <row>
                         <entry>
-                            <paragraph>COVERAGE</paragraph>
+                            <paragraph><literal classes="code">COVERAGE</literal></paragraph>
                         </entry>
                         <entry>
                             <paragraph>ON</paragraph>
@@ -71,7 +71,7 @@
                     </row>
                     <row>
                         <entry>
-                            <paragraph>INSTALL_PREFIX</paragraph>
+                            <paragraph><literal classes="code">INSTALL_PREFIX</literal></paragraph>
                         </entry>
                         <entry>
                             <paragraph>/usr/lib</paragraph>
@@ -82,7 +82,7 @@
                     </row>
                     <row>
                         <entry>
-                            <paragraph>MEMCHECK</paragraph>
+                            <paragraph><literal classes="code">MEMCHECK</literal></paragraph>
                         </entry>
                         <entry>
                             <paragraph>ON</paragraph>
@@ -93,7 +93,7 @@
                     </row>
                     <row>
                         <entry>
-                            <paragraph>TWAE <superscript>*</superscript></paragraph>
+                            <paragraph><literal classes="code">TWAE</literal></paragraph>
                         </entry>
                         <entry>
                             <paragraph>ON</paragraph>
@@ -104,7 +104,7 @@
                     </row>
                     <row>
                         <entry>
-                            <paragraph>UNIT_TESTS</paragraph>
+                            <paragraph><literal classes="code">UNIT_TESTS</literal></paragraph>
                         </entry>
                         <entry>
                             <paragraph>ON</paragraph>
