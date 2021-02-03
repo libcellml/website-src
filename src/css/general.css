@@ -194,6 +194,18 @@ figcaption {
     padding-bottom: 2em;
 }
 
+.footnote {
+    margin-top: 0.5em;
+}
+
+.footnote > span {
+    font-weight: 600;
+}
+
+.footnote > p {
+    padding-left: 2em;
+}
+
 thead {
     font-weight: 600;
 }
