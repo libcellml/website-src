@@ -14,7 +14,7 @@
 import BrokenLink from '@/components/BrokenLink'
 
 export default {
-  name: 'About',
+  name: 'NotFound',
   components: {
     BrokenLink,
   },
