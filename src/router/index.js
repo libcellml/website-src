@@ -5,7 +5,11 @@ import Home from '@/views/Home.vue'
 import store from '@/store'
 
 import { calculateBreadcrumbs } from './breadcrumbs'
-import { getDoxygenVersions, getSphinxVersions, getDevelopersVersions } from '../js/versions'
+import {
+  getDoxygenVersions,
+  getSphinxVersions,
+  getDevelopersVersions,
+} from '../js/versions'
 
 Vue.use(VueRouter)
 
@@ -18,14 +22,12 @@ const routes = [
   {
     path: '/documentation',
     name: 'Documentation',
-    component: () =>
-    import('../views/Documentation.vue'),
+    component: () => import('../views/Documentation.vue'),
   },
   {
     path: '/download',
     name: 'Download',
-    component: () =>
-    import('../views/Download.vue'),
+    component: () => import('../views/Download.vue'),
   },
   {
     path: '/documentation/api/:version/:pageName?',
@@ -51,7 +53,7 @@ const routes = [
     redirect: to => {
       // Defaults to latest version, if not specified.
       return '/documentation/guides/' + getSphinxVersions()[0]
-    }
+    },
   },
   {
     path: '/documentation/developers/:version/:pageName*',
@@ -64,7 +66,7 @@ const routes = [
     redirect: to => {
       // Defaults to latest version, if not specified.
       return '/documentation/developers/' + getDevelopersVersions()[0]
-    }
+    },
   },
   {
     path: '/404',
@@ -110,8 +112,7 @@ const createRouter = () => {
             resolve(value)
           }, store.getters.getTransitionDelay)
         })
-      }
-      else if (to.hash) {
+      } else if (to.hash) {
         let location = document.querySelector(to.hash)
         if (location) {
           return window.scrollTo({
@@ -131,10 +132,10 @@ const router = createRouter()
 
 router.beforeResolve((to, from, next) => {
   // Check for occurrences of 'latest' in the version field, and update
-  if(to.params.version === 'latest' && to.name === 'APIReferencePage') {
+  if (to.params.version === 'latest' && to.name === 'APIReferencePage') {
     to.params.version = getDoxygenVersions()[0]
   }
-  if(to.params.version === 'latest' && to.name === 'TutorialsPage') {
+  if (to.params.version === 'latest' && to.name === 'TutorialsPage') {
     to.params.version = getSphinxVersions()[0]
   }
   next()
