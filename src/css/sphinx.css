@@ -82,8 +82,8 @@ pre > code {
 }
 
 /* Shortlist class. */
-.shortlist > ul > li > p {
-    margin-bottom: 0.2em;
+.shortlist  p {
+    margin-bottom: 0.2em !important;
 }
 
 /* Formatting from the tutorials readthedocs site. */
