@@ -59,6 +59,7 @@ h1 {
 h2 {
     color:#333333;
     margin-bottom: 0.5em;
+    margin-top: 1em;
     border-bottom: solid 0.05rem var(--terminal-colour);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -181,4 +182,31 @@ code.xref {
 
 img {
     max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+figcaption {
+    color: var(--deep-blue);
+    font-style: italic;
+    text-align: center;
+    padding-bottom: 2em;
+}
+
+thead {
+    font-weight: 600;
+}
+
+table p {
+    padding: 0 0.5em;
+}
+
+table td {
+    border: solid grey 1px collapse;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
 }
