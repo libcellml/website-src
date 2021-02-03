@@ -44,8 +44,8 @@
           <v-tooltip bottom>
             <template v-slot:activator="{ on }">
               <v-btn block :class="'big-button'" v-on="on">
-                <IconWA/>
-                <br/>
+                <IconWA />
+                <br />
                 Web assembly
               </v-btn>
             </template>
@@ -69,12 +69,12 @@
 </template>
 
 <script>
-import IconWA from '@/assets/IconWA' 
+import IconWA from '@/assets/IconWA'
 export default {
   name: 'DownloadSummary',
   components: {
-    IconWA
-  }
+    IconWA,
+  },
 }
 </script>
 

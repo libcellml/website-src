@@ -14,7 +14,7 @@
               v-for="(version, index) in apiVersions"
               :key="'api_reference_' + index"
             >
-              <router-link :to="{ path: `documentation/api/${version}` }" >
+              <router-link :to="{ path: `documentation/api/${version}` }">
                 API Documentation {{ version }}
               </router-link>
             </li>
@@ -52,11 +52,10 @@
         <div>
           <br />
           <ul>
-            <li
-              v-for="(version, index) in devVersions"
-              :key="'guide_' + index"
-            >
-              <router-link :to="{ path: `documentation/developers/${version}` }">
+            <li v-for="(version, index) in devVersions" :key="'guide_' + index">
+              <router-link
+                :to="{ path: `documentation/developers/${version}` }"
+              >
                 Developers' Guides {{ version }}
               </router-link>
             </li>
@@ -68,7 +67,11 @@
 </template>
 
 <script>
-import { getDoxygenVersions, getSphinxVersions, getDevelopersVersions } from '@/js/versions'
+import {
+  getDoxygenVersions,
+  getSphinxVersions,
+  getDevelopersVersions,
+} from '@/js/versions'
 
 export default {
   name: 'DocumentationArchive',
