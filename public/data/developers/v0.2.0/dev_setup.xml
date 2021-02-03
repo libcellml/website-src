@@ -4,7 +4,7 @@
 <document source="/Users/kmoy001/libcellml/libcellml-src/docs/dev_setup.rst">
     <target refid="dev-setup"></target>
     <section ids="development-setup dev-setup" names="development\ setup dev_setup">
-        <title>Development Setup</title>
+        <title>Development setup</title>
         <paragraph>This section describes how someone wanting to contribute to the libCellML project should set up their <emphasis>working copy</emphasis> for developing libCellML.</paragraph>
         <section ids="overview" names="overview">
             <title>Overview</title>
