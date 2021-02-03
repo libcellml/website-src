@@ -4,9 +4,32 @@
       <v-col>
         <h1>Oops!</h1>
         <BrokenLink />
-        <p>or go <router-link to="/">back to the home page</router-link></p>
+        <router-link to="/">Back to the home page</router-link>
       </v-col>
     </v-row>
+    <script type="application/javascript">
+      // ========================================
+      // Credits:
+      // - https://stackoverflow.com/a/50259501
+      // - https://stackoverflow.com/a/50247140
+      // ========================================
+      const segment = 1
+
+      sessionStorage.redirect =
+        '/' +
+        location.pathname
+          .slice(1)
+          .split('/')
+          .slice(segment)
+          .join('/')
+
+      location.replace(
+        location.pathname
+          .split('/')
+          .slice(0, 1 + segment)
+          .join('/'),
+      )
+    </script>
   </v-container>
 </template>
 
