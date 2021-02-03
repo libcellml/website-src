@@ -31,7 +31,7 @@ export default {
     BreadCrumbs,
   },
   mounted() {
-    setTimeout(function () {
+    setTimeout(function() {
       let urlParams = new URLSearchParams(window.location.search)
       let fName = urlParams.get('fName')
       ui.goToSignature(fName)
@@ -39,7 +39,7 @@ export default {
   },
   watch: {
     $route() {
-      setTimeout(function () {
+      setTimeout(function() {
         let urlParams = new URLSearchParams(window.location.search)
         let fName = urlParams.get('fName')
         ui.goToSignature(fName)

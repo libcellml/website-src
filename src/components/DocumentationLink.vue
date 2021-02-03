@@ -26,6 +26,3 @@ export default {
   name: 'DocumentationLink',
 }
 </script>
-
-<style scoped>
-</style>

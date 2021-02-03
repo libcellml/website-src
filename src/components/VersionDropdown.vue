@@ -58,7 +58,7 @@ export default {
   methods: {
     expandDropdown() {
       let menu = document.getElementById('dropdown-id')
-      document.addEventListener('click', function (event) {
+      document.addEventListener('click', function(event) {
         var isClickInside = menu.contains(event.target)
         if (!isClickInside) {
           menu.nextSibling.classList = ['hide-options']
@@ -100,15 +100,15 @@ export default {
 }
 
 .old-version {
-    background-color: var(--warning-background);
+  background-color: var(--warning-background);
 }
 
 #dropdown-id {
-    font-weight: 500;
-    border-radius: 0.2em;
-    border-top-right-radius: 0; 
-    border-top-left-radius: 0;
-    padding: 0 0.1em;
-    margin: 0 0.1em;
+  font-weight: 500;
+  border-radius: 0.2em;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  padding: 0 0.1em;
+  margin: 0 0.1em;
 }
 </style>

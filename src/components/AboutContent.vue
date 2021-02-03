@@ -75,5 +75,3 @@ export default {
   name: 'AboutContent',
 }
 </script>
-
-<style scoped></style>
