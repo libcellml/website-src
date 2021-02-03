@@ -211,7 +211,8 @@ thead {
 }
 
 table p {
-    padding: 0.2em 0.5em;
+    padding: 0.2em;
+    margin-bottom: 0 !important;
 }
 
 table {
