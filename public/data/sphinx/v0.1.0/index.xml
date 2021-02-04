@@ -31,6 +31,8 @@
                     Note that this also contains informative sections, CellML code examples, and thoughts about the structure of CellML models.</paragraph>
             </list_item>
         </bullet_list>
+        <compound classes="toctree-wrapper">
+        </compound>
         <container classes="quicklinks">
             <paragraph><reference internal="True" refuri="installation/index#installation"><inline classes="std std-ref">Installation and setup</inline></reference>
                 <reference internal="True" refuri="tutorials/index#tutorials-index"><inline classes="std std-ref">Tutorials</inline></reference>

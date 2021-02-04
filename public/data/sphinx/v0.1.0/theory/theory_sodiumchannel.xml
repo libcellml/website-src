@@ -7,7 +7,7 @@
         <title>A model of a sodium channel</title>
         <paragraph>The second ion channel in Hodgkin-Huxley model controls sodium.
             The theory here is the basis for the the practical modelling
-            tutorial in <inline classes="xref std std-ref">Tutorial 7</inline>.</paragraph>
+            tutorial in <reference internal="True" refuri="../tutorials/hh_tutorials/tut3/index#debugsodiumchannelmodel"><inline classes="std std-ref">HH Tutorial 3</inline></reference>.</paragraph>
         <topic classes="contents local" ids="contents" names="contents">
             <bullet_list>
                 <list_item>
@@ -29,27 +29,18 @@
         </topic>
         <section ids="theory" names="theory">
             <title refid="id3">Theory</title>
-            <paragraph>The Hodgkin-Huxley model’s sodium channel has two types of gate,
-                an <math>m</math>-gate (of which
-                there are 3) that is initially closed (<math>m = 0</math>) before activating
-                and inactivating back to the closed state, and an <math>h</math>-gate that is
-                initially open (<math>h = 1</math>) before activating and inactivating back
-                to the open state. The short period when both types of gate are open
-                allows a brief window current to pass through the channel. Therefore,</paragraph>
+            <paragraph>The Hodgkin-Huxley model’s sodium channel has two types of gate, an <math>m</math>-gate (of which there are 3) that is initially closed (<math>m = 0</math>) before activating and inactivating back to the closed state, and an <math>h</math>-gate that is initially open (<math>h = 1</math>) before activating and inactivating back to the open state.
+                The short period when both types of gate are open allows a brief window current to pass through the channel.
+                Therefore,</paragraph>
             <math_block docname="theory/theory_sodiumchannel" label="True" nowrap="False" number="True" xml:space="preserve">i_{Na} = \bar{i}_{Na}m^{3}h = m^{3}{h.}\bar{g}_{Na}\left( V - E_{Na} \right)</math_block>
-            <paragraph>where <math>\bar{g}_{Na} = \ </math>120
-                mS.cm<superscript>-2</superscript>, and with
-                <math>\left\lbrack Na^{+} \right\rbrack_{i}</math>= 30mM and
-                <math>\left\lbrack Na^{+} \right\rbrack_{o}</math>= 140mM, the
-                Nernst potential for the sodium channel (<math>z=1</math>) is:</paragraph>
+            <paragraph>where <math>\bar{g}_{Na} = \ </math>120 mS.cm<superscript>-2</superscript>, and with <math>\left\lbrack Na^{+} \right\rbrack_{i}</math>= 30mM and <math>\left\lbrack Na^{+} \right\rbrack_{o}</math>= 140mM, the Nernst potential for the sodium channel (<math>z=1</math>) is:</paragraph>
             <math_block docname="theory/theory_sodiumchannel" label="True" nowrap="False" number="True" xml:space="preserve">E_{Na} = \frac{RT}{zF}\ln\frac{\left\lbrack Na^{+} \right\rbrack_{o}}{\left\lbrack Na^{+} \right\rbrack_{i}} = 25 \ln\frac{140}{30} = 35\text{mV}.</math_block>
             <paragraph><strong>TODO</strong> … this doesn’t equal 35 …??</paragraph>
             <paragraph>The gating kinetics are described by:</paragraph>
             <math_block docname="theory/theory_sodiumchannel" label="True" nowrap="False" number="True" xml:space="preserve">\frac{dm}{dt} = \alpha_{m}\left( 1 - m \right) - \beta_{m}.m
 
 \frac{dh}{dt} = \alpha_{h}\left( 1 - h \right) - \beta_{h}.h</math_block>
-            <paragraph>where the voltage dependence of these four rate constants is determined
-                experimentally <footnote_reference auto="1" docname="theory/theory_sodiumchannel" ids="id1" refid="id2">1</footnote_reference> to be:</paragraph>
+            <paragraph>where the voltage dependence of these four rate constants is determined experimentally <footnote_reference auto="1" docname="theory/theory_sodiumchannel" ids="id1" refid="id2">1</footnote_reference> to be:</paragraph>
             <math_block docname="theory/theory_sodiumchannel" label="True" nowrap="False" number="True" xml:space="preserve">\alpha_{m} = \frac{- 0.1\left( V + 50 \right)} {\exp {\left( - 0.1 \left( V + 50 \right)\right)} - 1} \\[5pt]
 \beta_{m} = 4 \exp \left( {\frac{- \left( V + 75 \right)}{18}} \right) \\[5pt]
 \alpha_{h} = 0.07\exp\left( {\frac{- \left( V + 75 \right)}{20}}\right) \\[5pt]
@@ -58,58 +49,41 @@
         </section>
         <section ids="interpretation-as-a-cellml-model theory-sodiumchannel-interpretation" names="interpretation\ as\ a\ cellml\ model theory_sodiumchannel_interpretation">
             <title refid="id4">Interpretation as a CellML model</title>
-            <paragraph>Before we construct a model of the sodium channel, we first
-                introduce some further CellML concepts that help deal with the
-                complexity inherent in biological modelling.  First we’ll look at the use of
-                <emphasis>encapsulation groups</emphasis> and <emphasis>public</emphasis> and <emphasis>private</emphasis> interfaces to control the
-                visibility of information in modular CellML components.  To understand
-                encapsulation, it is useful to use terms like <emphasis>parent</emphasis>, <emphasis>child</emphasis> and <emphasis>sibling</emphasis>,
-                to describe the relationships between components.  This is illustrated in
-                <literal classes="xref std std-numref">encapsulation_parent_structure</literal> below:</paragraph>
+            <paragraph>Before we construct a model of the sodium channel, we first introduce some further CellML concepts that help deal with the
+                complexity inherent in biological modelling.
+                First we’ll look at the use of <emphasis>encapsulation groups</emphasis> and <emphasis>public</emphasis> and <emphasis>private</emphasis> interfaces to control the visibility of information in modular CellML components.
+                To understand encapsulation, it is useful to use terms like <emphasis>parent</emphasis>, <emphasis>child</emphasis> and <emphasis>sibling</emphasis>, to describe the relationships between components.
+                This is illustrated in <number_reference internal="True" refid="encapsulation-parent-structure" title="Figure {number}"><inline classes="std std-numref">Figure 14</inline></number_reference> below:</paragraph>
             <figure align="center" ids="encapsulation-parent-structure" names="encapsulation_parent_structure">
                 <image alt="Encapsulation structure of nested components in a parent-child-sibling structure" candidates="{'*': 'theory/images/encapsulation_parent_structure.png'}" uri="theory/images/encapsulation_parent_structure.png"></image>
                 <caption>Encapsulation structure of nested components in a parent-child-sibling structure.</caption>
             </figure>
-            <paragraph>Defining an encapsulation structure controls which
-                components are able to see and be seen by which others, as defined by the
-                available interface types:</paragraph>
+            <paragraph>Defining an encapsulation structure controls which components are able to see and be seen by which others, as defined by the available interface types:</paragraph>
             <bullet_list bullet="-">
                 <list_item>
-                    <paragraph>By default, no interface exists between components.  The types of interface
-                        listed below are those which are <emphasis>possible</emphasis>; but each must be explicitly
-                        specified before it can be used. While <literal classes="code">none</literal> is the
-                        implied default, it may be specified explicitly as well.</paragraph>
+                    <paragraph>By default, no interface exists between components.
+                        The types of interface listed below are those which are <emphasis>possible</emphasis>; but each must be explicitly specified before it can be used.
+                        While <literal classes="code">none</literal> is the implied default, it may be specified explicitly as well.</paragraph>
                 </list_item>
                 <list_item>
-                    <paragraph>A <literal classes="code">public</literal> interface is available between siblings. This is also true
-                        of top-level components (which are siblings with a <literal classes="code">Model</literal> parent),
-                        such as the ‘grandparent’ and ‘no relation’ components
-                        in <literal classes="xref std std-numref">encapsulation_parent_structure</literal>.  A <literal classes="code">public</literal> interface
-                        is also available <emphasis>from</emphasis> a child <emphasis>to</emphasis> its parent (note direction).</paragraph>
+                    <paragraph>A <literal classes="code">public</literal> interface is available between siblings.
+                        This is also true of top-level components (which are siblings with a <literal classes="code">Model</literal> parent), such as the ‘grandparent’ and ‘no relation’ components in <number_reference internal="True" refid="encapsulation-parent-structure" title="Figure {number}"><inline classes="std std-numref">Figure 14</inline></number_reference>.
+                        A <literal classes="code">public</literal> interface is also available <emphasis>from</emphasis> a child <emphasis>to</emphasis> its parent (note direction).</paragraph>
                 </list_item>
                 <list_item>
-                    <paragraph>A <literal classes="code">private</literal> interface is available <emphasis>from</emphasis> a parent <emphasis>to</emphasis> its child(ren),
-                        again noting the direction.</paragraph>
+                    <paragraph>A <literal classes="code">private</literal> interface is available <emphasis>from</emphasis> a parent <emphasis>to</emphasis> its child(ren), again noting the direction.</paragraph>
                 </list_item>
                 <list_item>
-                    <paragraph>Both <literal classes="code">public</literal> and <literal classes="code">private</literal> interfaces are available using the
-                        <literal classes="code">public_and_private</literal> type, needed where there is more than one level of
-                        nesting  (for example, a grandparent-parent-child structure).  Here, the
-                        parent must define a <literal classes="code">public_and_private</literal> interface type as it is both
-                        the child of the grandparent, and the parent of the child.</paragraph>
+                    <paragraph>Both <literal classes="code">public</literal> and <literal classes="code">private</literal> interfaces are available using the <literal classes="code">public_and_private</literal> type, needed where there is more than one level of nesting  (for example, a grandparent-parent-child structure).
+                        Here, the parent must define a <literal classes="code">public_and_private</literal> interface type as it is both the child of the grandparent, and the parent of the child.</paragraph>
                 </list_item>
                 <list_item>
-                    <paragraph>Communication through the aunt-child, grandparent-child, and cousin-parent
-                        relationships is not possible as there is no available interface.
-                        Communication with the no-relation component is only possible with the
-                        grandparent because, as top-level components, they are siblings.</paragraph>
+                    <paragraph>Communication through the aunt-child, grandparent-child, and cousin-parent relationships is not possible as there is no available interface.
+                        Communication with the no-relation component is only possible with the grandparent because, as top-level components, they are siblings.</paragraph>
                 </list_item>
             </bullet_list>
-            <paragraph>We define the CellML components <strong>sodium_channel_m_gate</strong> and
-                <strong>sodium_channel_h_gate</strong> below. Each of these components has its own
-                equations (voltage-dependent gates and first-order gate kinetics) but
-                they are both parts of one protein – the sodium channel – so it is
-                useful to group them into one <strong>sodium_channel</strong> component.</paragraph>
+            <paragraph>We define the CellML components <strong>sodium_channel_m_gate</strong> and <strong>sodium_channel_h_gate</strong> below.
+                Each of these components has its own equations (voltage-dependent gates and first-order gate kinetics) but they are both parts of one protein – the sodium channel – so it is useful to group them into one <strong>sodium_channel</strong> component.</paragraph>
             <target refid="sodium-channel-encap-structure"></target>
             <figure align="left" ids="na-enc-str sodium-channel-encap-structure" names="na_enc_str sodium_channel_encap_structure">
                 <image candidates="{'*': 'theory/images/sodium_channel_encap_structure.png'}" uri="theory/images/sodium_channel_encap_structure.png"></image>
@@ -122,13 +96,10 @@
         </section>
         <section ids="simulation-and-results" names="simulation\ and\ results">
             <title refid="id5">Simulation and results</title>
-            <paragraph>The behaviour of the sodium channel was simulated using the
-                <reference internal="True" refuri="../tutorials/solver/index#solver"><inline classes="std std-ref">simple solver</inline></reference> provided to run the code generated
-                in <inline classes="xref std std-ref">Tutorial 7</inline>.  Three voltage-step experiments
-                were run with voltage conditions of
-                (a) -85mV to -20mV, (b) -85mV to 0mV and (c) -85mV to +20mV.
-                The results of the computation, with an end time of 40ms, and Euler step of
-                0.01ms are shown in <literal classes="xref std std-numref">sodium_v</literal> to <literal classes="xref std std-numref">sodium_i</literal> below.</paragraph>
+            <paragraph>The behaviour of the sodium channel was simulated using the <reference internal="True" refuri="../tutorials/solver/index#solver"><inline classes="std std-ref">simple solver</inline></reference> provided to run the code generated
+                in <reference internal="True" refuri="../tutorials/hh_tutorials/tut3/index#debugsodiumchannelmodel"><inline classes="std std-ref">HH Tutorial 3</inline></reference>.
+                Three voltage-step experiments were run with voltage conditions of (a) -85mV to -20mV, (b) -85mV to 0mV and (c) -85mV to +20mV.
+                The results of the computation, with an end time of 40ms, and Euler step of 0.01ms are shown in <number_reference internal="True" refid="sodium-v" title="Figure {number}"><inline classes="std std-numref">Figure 16</inline></number_reference> to <number_reference internal="True" refid="sodium-i" title="Figure {number}"><inline classes="std std-numref">Figure 20</inline></number_reference> below.</paragraph>
             <target refid="sodium-v"></target>
             <figure align="center" ids="tut7-vgraph sodium-v" names="tut7_vgraph sodium_v">
                 <image alt="Driving function for the voltage clamp" candidates="{'*': 'theory/images/tut7_Vgraph.png'}" uri="theory/images/tut7_Vgraph.png"></image>
@@ -160,45 +131,28 @@
             <paragraph>Of particular note in the results are these features:</paragraph>
             <enumerated_list enumtype="lowerroman" prefix="" suffix=".">
                 <list_item>
-                    <paragraph>The kinetics of the <math>m</math>-gate are much faster than the
-                        <math>h</math>-gate.</paragraph>
+                    <paragraph>The kinetics of the <math>m</math>-gate are much faster than the <math>h</math>-gate.</paragraph>
                 </list_item>
                 <list_item>
-                    <paragraph>The opening behaviour is faster as the voltage is stepped to higher
-                        values since <math>\tau = \frac{1}{\alpha_{n} + \beta_{n}}</math>
-                        reduces with increasing <math>V</math> (see <literal classes="xref std std-numref">ocr_tut_volt_deps_gates</literal>).</paragraph>
+                    <paragraph>The opening behaviour is faster as the voltage is stepped to higher values since <math>\tau = \frac{1}{\alpha_{n} + \beta_{n}}</math> reduces with increasing <math>V</math> (see <number_reference internal="True" refuri="theory_potassiumchannel#ocr-tut-volt-deps-gates" title="Figure {number}"><inline classes="std std-numref">Figure 7</inline></number_reference>).</paragraph>
                 </list_item>
                 <list_item>
-                    <paragraph>The sodium channel conductance rises (<emphasis>activates</emphasis>) and then falls
-                        (<emphasis>deactivates</emphasis>) under a positive voltage step from rest since the
-                        three <math>m</math>-gates turn on, but the <math>h</math>-gate turns off and the
-                        conductance is a product of these. Compare this with the
-                        <inline classes="xref std std-ref">kinetics of the potassium channel
-                            conductance</inline> which is only reduced back to zero
-                        by stepping the voltage back to its resting value – that is,
-                        <emphasis>deactivating</emphasis> it.</paragraph>
+                    <paragraph>The sodium channel conductance rises (<emphasis>activates</emphasis>) and then falls (<emphasis>deactivates</emphasis>) under a positive voltage step from rest since the three <math>m</math>-gates turn on, but the <math>h</math>-gate turns off and the conductance is a product of these.
+                        Compare this with the <number_reference internal="True" refuri="theory_potassiumchannel#potassium-ngate" title="Figure {number}"><inline classes="std std-numref">Figure 11</inline></number_reference> which is only reduced back to zero by stepping the voltage back to its resting value – that is, <emphasis>deactivating</emphasis> it.</paragraph>
                 </list_item>
                 <list_item>
-                    <paragraph>The only time current <math>i_{Na}</math> flows through the
-                        sodium channel is during the brief period when the <math>m</math>-gate is
-                        rapidly opening and the much slower <math>h</math>-gate is beginning to close.
-                        A small current flows during the reverse voltage step but this is at
-                        a time when the <math>h</math>-gate is now firmly off so the magnitude is very
-                        small.</paragraph>
+                    <paragraph>The only time current <math>i_{Na}</math> flows through the sodium channel is during the brief period when the <math>m</math>-gate is rapidly opening and the much slower <math>h</math>-gate is beginning to close.
+                        A small current flows during the reverse voltage step but this is at a time when the <math>h</math>-gate is now firmly off so the magnitude is very small.</paragraph>
                 </list_item>
                 <list_item>
-                    <paragraph>The large sodium current <math>i_{Na}</math> is an inward current
-                        and hence negative.</paragraph>
+                    <paragraph>The large sodium current <math>i_{Na}</math> is an inward current and hence negative.</paragraph>
                 </list_item>
             </enumerated_list>
         </section>
         <section ids="next-steps" names="next\ steps">
             <title refid="id7">Next steps</title>
-            <paragraph>The incorporation of this sodium channel model into the full Hodgkin-Huxley
-                model of a neuron is described in the next chapter,
-                <inline classes="xref std std-ref">Hodgkin-Huxley assembly</inline>.  This will include the
-                <math>n</math>-gate described in the previous chapter, <inline classes="xref std std-ref">A model of a potassium
-                    channel</inline> as well as a leakage current model.</paragraph>
+            <paragraph>The incorporation of this sodium channel model into the full Hodgkin-Huxley model of a neuron is described in the next chapter, <reference internal="True" refuri="theory_hh#hh-background"><inline classes="std std-ref">Hodgkin-Huxley assembly</inline></reference>.
+                This will include the <math>n</math>-gate described in the previous chapter, <reference internal="True" refuri="theory_potassiumchannel#theory-potassiumchannel"><inline classes="std std-ref">A model of a potassium channel</inline></reference> as well as a leakage current model.</paragraph>
             <transition></transition>
             <rubric>Footnotes</rubric>
             <footnote auto="1" backrefs="id1" docname="theory/theory_sodiumchannel" ids="id2" names="1">
