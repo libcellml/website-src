@@ -33,7 +33,7 @@ const fs = require('fs')
     // Write out CNAME
     await fs.promises.writeFile(`${folderName}/CNAME`, cname)
     // Add .nojekyll to allow directories starting with '_' (see: https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/)
-    await fs.promises.writeFile('.nojekyll', '')
+    await fs.promises.writeFile(`${folderName}/.nojekyll`, '')
     await execa('git', ['--work-tree', folderName, 'add', '--all'])
     await execa('git', [
       '--work-tree',
