@@ -200,7 +200,7 @@ pre > code {
 }
 
 .toggle > pre {
-    padding-top: 0.6em;
+    margin-top: 0.6em;
 }
 
 .toggle .header.active p, .toggle .header-left.active p {
