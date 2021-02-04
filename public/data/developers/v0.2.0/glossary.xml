@@ -57,7 +57,7 @@
                     <term ids="term-prime-libCellML-repository">prime libCellML repository<index entries="['single',\ 'prime\ libCellML\ repository',\ 'term-prime-libCellML-repository',\ 'main',\ None]"></index></term>
                     <definition>
                         <paragraph>The repository at <reference refuri="https://github.com/cellml/libcellml">https://github.com/cellml/libcellml</reference> is the definitive repository for the software and used for creating software releases.
-                            We will refer to this repository as the <strong>prime</strong> repository.</paragraph>
+                            We will refer to this repository as the prime repository.</paragraph>
                     </definition>
                 </definition_list_item>
                 <definition_list_item>
