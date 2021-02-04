@@ -19,6 +19,11 @@
     display:none;
 }
 
+.theme--light.v-application code {
+    color: var(--code-colour);
+    font-size: 100%;
+}
+
 /* Indent the function contents so it's easier to distinguish from the names.
    Default: Desktop screen width. */
 .function > * {
@@ -39,10 +44,15 @@
 /* Ensures a consistent look through the function heading.
 TODO: Find where the extra space is being added after the trailing ") " and move it to before ... 
 */
-.function > dt:first-of-type > * {
+.function > dt:first-of-type * {
     font-family: monospace;
     font-weight: 700;
-    font-size: 110%;
+    font-size: 1.2rem;
+    background-color: transparent !important;
+}
+
+code.sig-name {
+    color: var(--mid-red) !important;
 }
 
 .function > dt:first-of-type a {

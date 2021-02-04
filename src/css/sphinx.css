@@ -33,10 +33,6 @@ pre {
     background-color: var(--very-pale-grey);
 }
 
-/* pre > code.plaintext {
-    padding: 0.6em;
-} */
-
 /* Inline literal code blocks in the Sphinx-based files. */
 .theme--light.v-application code.code {
     color: var(--deep-blue);
@@ -49,9 +45,26 @@ pre {
     font-family: var(--code-font);
 }
 
-
 .v-application code::before, .v-application code::after {
     display: none;
+}
+
+code {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top:0.3em;
+    padding-bottom: 0.2em;
+}
+
+.v-application code {
+    font-size: 100%;
+    color: var(--code-colour);
+    font-family: var(--code-font);
+    font-weight: 400;
+}
+
+.theme--light.v-application code {
+    color: var(--code-colour);
 }
 
 code.plaintext {
