@@ -209,11 +209,17 @@ export function calculateBreadcrumbs(to) {
       lastLink += '/' + page
     }
   } else {
-    routes.push({
-      text: to.name.toUpperCase(),
-      name: to.name,
-      disabled: false,
-      hash: '',
+    const pages = to.path.split('/')
+    pages.forEach(page => {
+      if (page) {
+        routes.push({
+          text: page.toUpperCase(),
+          name: page,
+          disabled: false,
+          hash: '',
+          type: 'pageFromPath',
+        })
+      }
     })
   }
   return routes.reverse()
