@@ -78,6 +78,12 @@ const routes = [
     },
   },
   {
+    path: '/translate',
+    name: 'Translate',
+    component: () =>
+      import(/* webpackChunkName: "translate" */ '../views/Translate.vue'),
+  },
+  {
     path: '/404',
     name: '404',
     component: () =>
