@@ -87,6 +87,10 @@ export default {
         url: '/#documentation',
       },
       {
+        label: 'Services',
+        url: '/#services',
+      },
+      {
         label: 'About',
         url: '/#about',
       },

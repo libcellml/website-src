@@ -13,6 +13,9 @@
           <DocumentationSummary />
           <DocumentationLink />
         </v-col>
+        <v-col cols="12" id="services">
+          <services-landing-page-section />
+        </v-col>
         <v-col cols="12" id="about">
           <AboutContent />
         </v-col>
@@ -28,6 +31,7 @@ import DownloadLink from '@/components/DownloadLink'
 import DocumentationSummary from '@/components/DocumentationSummary'
 import DocumentationLink from '@/components/DocumentationLink'
 import IntroContent from '@/components/IntroContent'
+import ServicesLandingPageSection from '../components/ServicesLandingPageSection.vue'
 
 export default {
   name: 'Home',
@@ -38,6 +42,7 @@ export default {
     DocumentationSummary,
     DocumentationLink,
     IntroContent,
+    ServicesLandingPageSection,
   },
 }
 </script>
