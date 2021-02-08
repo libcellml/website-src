@@ -3,7 +3,7 @@
 */
 
 :root {
-    --bright-red: #bd4147;
+    --bright-red: #dd000b;
     --mid-red: #862e32;
     --deep-red: #4e0202;
     --pale-grey:#dddddd;
@@ -28,6 +28,9 @@
 
     --text-colour: #333333;
     --link-colour: #777777;
+    --text-link-colour: var(--mid-red);
+
+    --menu-link-colour: #777777;
 
     --warning-background: rgb(251, 239, 239);
     --warning-text: var(--deep-red);
@@ -73,9 +76,13 @@ h3 {
 }
 
 .v-application a {
-    color: var(--link-colour) !important;
+    color: var(--link-colour);
     text-decoration: none;
     font-weight: 500;
+}
+
+p a {
+    color: var(--text-link-colour) !important;
 }
 
 .v-application a.router-link-active {
@@ -91,6 +98,23 @@ h3 {
     display: none;
 }
 
+/* Disconnect the general link colour from the colours in the top menu bar */
+#topMenuBar * {
+    color: var(--menu-link-colour);
+}
+
+.v-btn--active {
+    background-color: rgb(255, 255, 255);
+}
+
+/* .v-btn a:hover {
+    color: yellow !important;
+} */
+
+.v-btn::before .v-btn--active {
+    background-color: transparent;
+}
+
 /* Move breadcrumbs down a little ... */
 .breadcrumbs {
     margin-top: 0.3rem;
@@ -104,6 +128,7 @@ h3 {
 .breadcrumbs * {
     margin: 0;
     padding: 0;
+    color: var(--menu-link-colour) !important;
 }
 
 .v-breadcrumbs {
@@ -224,39 +249,22 @@ th {
 }
 
 .v-application .download code {
-    border-bottom-right-radius: 0.3em !important;
-    border-top-right-radius: 0.3em !important;
-    border-bottom-left-radius: 0 !important;
-    border-top-left-radius: 0 !important;
+    font-family: var(--text-font);
+    color: var(--text-link-colour) !important;
+    background-color: transparent;
+    font-weight: 500;
+}
+
+.v-application .download code:hover {
+    color: var(--bright-red) !important;
 }
 
 .download::before {
     content: "\2913";
-    background-color: var(--transparent-grey);
-    padding: 0.1em 0.2em 0.2em 0.4em;
-    color: var(--code-colour);
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 0.3em;
-    border-top-left-radius: 0.3em;
+    color: var(--text-link-colour);
     vertical-align: bottom;
 }
 
-.download *:hover {
+.download code:hover::before  {
     color: var(--mid-red) !important;
 }
-
-.download:hover::before {
-    color: var(--mid-red);
-}
-
-
-/* .download {
-    /* background-color: var(--transparent-grey); 
-    padding: 0.2em;
-    border-radius: 0.1em;
-} */
-
-/* .download:hover {
-    color: var(--bright-red) !important;
-} */

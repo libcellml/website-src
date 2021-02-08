@@ -217,7 +217,7 @@ pre > code {
 .toggle .header.inactive p,
 .toggle .header-left.inactive p  {
     font-weight: 500;
-    color: var(--link-colour);
+    color: var(--text-link-colour);
     margin-bottom:0;
 }
 
@@ -253,7 +253,7 @@ pre > code {
 .tab2name.active {
     background-color: white;
     font-weight: 700;
-    color: var(--bright-red);
+    color: var(--mid-red);
     border-bottom: solid white 3px;
 }
 
