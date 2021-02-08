@@ -85,6 +85,10 @@ p a {
     color: var(--text-link-colour) !important;
 }
 
+td a {
+    color: var(--text-link-colour) !important;
+}
+
 .v-application a.router-link-active {
     color: var(--deep-red);
 }
