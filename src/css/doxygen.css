@@ -37,7 +37,7 @@
     margin-top: 1.3rem;
     margin-left: 0;
     margin-bottom: 0.3rem;
-    color: var(--mid-red);
+    color: var(--code-colour);
     border-bottom: solid 1px var(--pale-grey);
 }
 
@@ -46,13 +46,14 @@ TODO: Find where the extra space is being added after the trailing ") " and move
 */
 .function > dt:first-of-type * {
     font-family: monospace;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 1.2rem;
     background-color: transparent !important;
 }
 
 code.sig-name {
-    color: var(--mid-red) !important;
+    /* color: var(--mid-red) !important; */
+    font-weight: 700 !important;
 }
 
 .function > dt:first-of-type a {
