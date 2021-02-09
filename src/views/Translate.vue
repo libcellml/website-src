@@ -5,6 +5,13 @@
         <v-col>
           <BreadCrumbs />
           <h1>Translate CellML models</h1>
+          This service will accept CellML 1.0/1.1 compliant files and transform
+          them into CellML 2.0 compliant files. This service can accept text
+          based files or
+          <a href="http://co.mbine.org/specifications/omex.version-1.pdf"
+            >omex</a
+          >
+          files.
           <v-container>
             <v-file-input
               v-model="files"
