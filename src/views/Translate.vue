@@ -42,14 +42,9 @@
                   ></v-subheader
                 >
                 <v-list-item-group color="primary">
-                  <v-tooltip
-                    bottom
-                    v-for="(item, i) in downloads"
-                    :key="i"
-                    @click="downloadFile(i)"
-                  >
+                  <v-tooltip bottom v-for="(item, i) in downloads" :key="i">
                     <template v-slot:activator="{ on }">
-                      <v-list-item v-on="on">
+                      <v-list-item v-on="on" @click="downloadFile(i)">
                         <v-list-item-icon>
                           <v-icon>mdi-download</v-icon>
                         </v-list-item-icon>
