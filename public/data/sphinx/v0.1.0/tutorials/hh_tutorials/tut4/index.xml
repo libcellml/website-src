@@ -31,8 +31,8 @@
                 </list_item>
             </bullet_list>
         </container>
-        <container classes="shortlist">
-            <paragraph><strong>Code (C++)</strong></paragraph>
+        <container classes="directorylist">
+            <paragraph><strong>C++ resources</strong></paragraph>
             <bullet_list bullet="-">
                 <list_item>
                     <paragraph><download_reference filename="ba09ba7020b3df910b9d71ed3fe96949/CMakeLists.txt" refdoc="tutorials/hh_tutorials/tut4/index" refdomain="" refexplicit="True" reftarget="CMakeLists.txt" reftype="download" refwarn="False"><literal classes="xref download">CMakeLists.txt</literal></download_reference> The CMake file for building this tutorial;</paragraph>
@@ -47,9 +47,7 @@
                     <paragraph><download_reference filename="d4e4fc273a56364ebe24316f8500e10a/utilities.cpp" refdoc="tutorials/hh_tutorials/tut4/index" refdomain="" refexplicit="True" reftarget="../code/utilities.cpp" reftype="download" refwarn="False"><literal classes="xref download">utilities.cpp</literal></download_reference> and <download_reference filename="27bac0780ebf8d514deb217689bf9124/utilities.h" refdoc="tutorials/hh_tutorials/tut4/index" refdomain="" refexplicit="True" reftarget="../code/utilities.h" reftype="download" refwarn="False"><literal classes="xref download">utilities.h</literal></download_reference> Helper functions.</paragraph>
                 </list_item>
             </bullet_list>
-        </container>
-        <container classes="shortlist">
-            <paragraph><strong>Code (Python)</strong></paragraph>
+            <paragraph><strong>Python resources</strong></paragraph>
             <bullet_list bullet="-">
                 <list_item>
                     <paragraph><download_reference filename="f8e56c224d13ca02306377c9bf262dd3/generateMembraneModel.py" refdoc="tutorials/hh_tutorials/tut4/index" refdomain="" refexplicit="True" reftarget="generateMembraneModel.py" reftype="download" refwarn="False"><literal classes="xref download">generateMembraneModel.py</literal></download_reference> Either the skeleton code, or ..</paragraph>
@@ -61,9 +59,7 @@
                     <paragraph><download_reference filename="3782b05e9d237ba28b40940da104e4c7/utilities.py" refdoc="tutorials/hh_tutorials/tut4/index" refdomain="" refexplicit="True" reftarget="../code/utilities.py" reftype="download" refwarn="False"><literal classes="xref download">utilities.py</literal></download_reference> Helper functions.</paragraph>
                 </list_item>
             </bullet_list>
-        </container>
-        <container classes="shortlist">
-            <paragraph><strong>Resources</strong></paragraph>
+            <paragraph><strong>CellML resources</strong></paragraph>
             <bullet_list bullet="-">
                 <list_item>
                     <paragraph><download_reference filename="4da22200ec47bc9b4e3b7f5dd5c7e9a5/GateModel.cellml" refdoc="tutorials/hh_tutorials/tut4/index" refdomain="" refexplicit="True" reftarget="GateModel.cellml" reftype="download" refwarn="False"><literal classes="xref download">GateModel.cellml</literal></download_reference> the generic gate model (from Tutorial 1);</paragraph>
@@ -85,28 +81,11 @@
                 </list_item>
             </bullet_list>
         </container>
-        <paragraph><strong>Contents</strong></paragraph>
-        <topic classes="contents local" ids="contents" names="contents">
-            <bullet_list>
-                <list_item>
-                    <paragraph><reference ids="id1" refid="step-1-parse-the-existing-membrane-model">Step 1: Parse the existing membrane model</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id2" refid="step-2-resolve-the-imports-and-flatten">Step 2: Resolve the imports and flatten</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id3" refid="step-3-validate-and-analyse-the-flattened-model">Step 3: Validate and analyse the flattened model</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id4" refid="step-4-generate-code-and-output">Step 4: Generate code and output</reference></paragraph>
-                </list_item>
-            </bullet_list>
-        </topic>
         <paragraph>All of the ingredients have been assembled for us to parse a membrane model so that it can be turned into runnable code using the code generation functionality.
             We will parse the model, resolve its imports, flatten into an import-free model, validate, analyse, and generate.
             By this stage you should be familiar with most of these processes: we’ll go through the code generation in detail at the end.</paragraph>
         <section ids="step-1-parse-the-existing-membrane-model" names="step\ 1:\ parse\ the\ existing\ membrane\ model">
-            <title refid="id1">Step 1: Parse the existing membrane model</title>
+            <title>Step 1: Parse the existing membrane model</title>
             <container classes="dothis">
                 <paragraph>Parse the model in the “MembraneModel.cellml” file provided and print its contents to the terminal.</paragraph>
             </container>
@@ -230,7 +209,7 @@ COMPONENTS: 2 components
                           └──&gt; membraneEquations:V [mV]</literal_block>
         </section>
         <section ids="step-2-resolve-the-imports-and-flatten" names="step\ 2:\ resolve\ the\ imports\ and\ flatten">
-            <title refid="id2">Step 2: Resolve the imports and flatten</title>
+            <title>Step 2: Resolve the imports and flatten</title>
             <paragraph>In all of the other tutorials we’ve used a flattened model only to analyse its mathematics.
                 This time, we need to keep the flattened version and will use this as input to the code generator.
                 Resolve the imports, and create a flattened version of the model.
@@ -284,7 +263,7 @@ COMPONENTS: 2 components
             </container>
         </section>
         <section ids="step-3-validate-and-analyse-the-flattened-model" names="step\ 3:\ validate\ and\ analyse\ the\ flattened\ model">
-            <title refid="id3">Step 3: Validate and analyse the flattened model</title>
+            <title>Step 3: Validate and analyse the flattened model</title>
             <paragraph>You know what to do … we do not expect any issues to be raised by either the validator or the analyser.</paragraph>
             <container classes="dothis">
                 <paragraph><strong>3.a</strong> Create a <literal classes="code">Validator</literal> instance, pass in the flattened model, and check that there are no issues raised.</paragraph>
@@ -334,7 +313,7 @@ COMPONENTS: 2 components
             </container>
         </section>
         <section ids="step-4-generate-code-and-output" names="step\ 4:\ generate\ code\ and\ output">
-            <title refid="id4">Step 4: Generate code and output</title>
+            <title>Step 4: Generate code and output</title>
             <paragraph>The <literal classes="code">Generator</literal> is a translator class that will change the CellML model and its MathML equations into a representation in another language.
                 This is done using a <literal classes="code">GeneratorProfile</literal> to specify a dictionary of mathematical operations.
                 Two profiles are already defined; for C++ and for Python.</paragraph>

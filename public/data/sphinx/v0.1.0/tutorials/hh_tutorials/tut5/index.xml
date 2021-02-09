@@ -28,8 +28,8 @@
                 </list_item>
             </bullet_list>
         </container>
-        <container classes="shortlist">
-            <paragraph><strong>Code (C++)</strong></paragraph>
+        <container classes="directorylist">
+            <paragraph><strong>C++ resources</strong></paragraph>
             <bullet_list bullet="-">
                 <list_item>
                     <paragraph><download_reference filename="3bdf295a2be6b471e9d0e219a596a024/CMakeLists.txt" refdoc="tutorials/hh_tutorials/tut5/index" refdomain="" refexplicit="True" reftarget="CMakeLists.txt" reftype="download" refwarn="False"><literal classes="xref download">CMakeLists.txt</literal></download_reference> The CMake file for building this tutorial;</paragraph>
@@ -47,9 +47,7 @@
                     <paragraph><download_reference filename="d82c408121923784fe2bb23fed275ce6/HodgkinHuxleyModel.h" refdoc="tutorials/hh_tutorials/tut5/index" refdomain="" refexplicit="True" reftarget="HodgkinHuxleyModel.h" reftype="download" refwarn="False"><literal classes="xref download">HodgkinHuxleyModel.h</literal></download_reference> Generated interface code from Tutorial 4.</paragraph>
                 </list_item>
             </bullet_list>
-        </container>
-        <container classes="shortlist">
-            <paragraph><strong>Code (Python)</strong></paragraph>
+            <paragraph><strong>Python resources</strong></paragraph>
             <bullet_list bullet="-">
                 <list_item>
                     <paragraph><download_reference filename="2686ec98d4c9e4762da22d9a4d30ea6a/solveGeneratedCode.py" refdoc="tutorials/hh_tutorials/tut5/index" refdomain="" refexplicit="True" reftarget="solveGeneratedCode.py" reftype="download" refwarn="False"><literal classes="xref download">solveGeneratedCode.py</literal></download_reference> Either the skeleton code, or ..</paragraph>
@@ -58,32 +56,12 @@
                     <paragraph><download_reference filename="a5962cfe1b583b2944a4fb2d119be658/solveGeneratedCode_completed.py" refdoc="tutorials/hh_tutorials/tut5/index" refdomain="" refexplicit="True" reftarget="solveGeneratedCode_completed.py" reftype="download" refwarn="False"><literal classes="xref download">solveGeneratedCode_completed.py</literal></download_reference> the completed tutorial code;</paragraph>
                 </list_item>
                 <list_item>
-                    <paragraph><download_reference filename="f374e722f468de820283d1fcd359f0d4/HodgkinHuxleyModel.py" refdoc="tutorials/hh_tutorials/tut5/index" refdomain="" refexplicit="True" reftarget="HodgkinHuxleyModel.py" reftype="download" refwarn="False"><literal classes="xref download">HodgkinHuxleyModel.py</literal></download_reference> Generated implementation code from Tutorial 4</paragraph>
+                    <paragraph><download_reference filename="f374e722f468de820283d1fcd359f0d4/HodgkinHuxleyModel.py" refdoc="tutorials/hh_tutorials/tut5/index" refdomain="" refexplicit="True" reftarget="HodgkinHuxleyModel.py" reftype="download" refwarn="False"><literal classes="xref download">HodgkinHuxleyModel.py</literal></download_reference> Generated implementation code from Tutorial 4.</paragraph>
                 </list_item>
             </bullet_list>
         </container>
-        <topic classes="contents local" ids="contents" names="contents">
-            <title>Contents</title>
-            <bullet_list>
-                <list_item>
-                    <paragraph><reference ids="id1" refid="step-1-link-to-the-generated-code">Step 1: Link to the generated code</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id2" refid="step-2-access-the-variables-in-the-generated-files">Step 2: Access the variables in the generated files</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id3" refid="step-3-access-the-functions-in-the-generated-files">Step 3: Access the functions in the generated files</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id4" refid="step-4-iterate-through-the-solution">Step 4: Iterate through the solution</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id5" refid="step-5-sanity-check">Step 5: Sanity check</reference></paragraph>
-                </list_item>
-            </bullet_list>
-        </topic>
         <section ids="step-1-link-to-the-generated-code" names="step\ 1:\ link\ to\ the\ generated\ code">
-            <title refid="id1">Step 1: Link to the generated code</title>
+            <title>Step 1: Link to the generated code</title>
             <paragraph>The first step in interacting with the output from the code generation is including the generated files in the project.
                 There are necessarily big differences between C++ and Python for this tutorial!</paragraph>
             <container classes="sphinx-tabs">
@@ -167,7 +145,7 @@
             </container>
         </section>
         <section ids="step-2-access-the-variables-in-the-generated-files" names="step\ 2:\ access\ the\ variables\ in\ the\ generated\ files">
-            <title refid="id2">Step 2: Access the variables in the generated files</title>
+            <title>Step 2: Access the variables in the generated files</title>
             <paragraph>Probably the best way to understand the contents of the generated files is o open them and look!
                 The implementation file <literal classes="code">*.cpp</literal> has two types of items:</paragraph>
             <bullet_list bullet="-">
@@ -331,7 +309,7 @@
             </container>
         </section>
         <section ids="step-3-access-the-functions-in-the-generated-files" names="step\ 3:\ access\ the\ functions\ in\ the\ generated\ files">
-            <title refid="id3">Step 3: Access the functions in the generated files</title>
+            <title>Step 3: Access the functions in the generated files</title>
             <container classes="sphinx-tabs">
                 <container>
                     <container classes="item">
@@ -533,7 +511,7 @@
             </container>
         </section>
         <section ids="step-4-iterate-through-the-solution" names="step\ 4:\ iterate\ through\ the\ solution">
-            <title refid="id4">Step 4: Iterate through the solution</title>
+            <title>Step 4: Iterate through the solution</title>
             <paragraph>This part will make use of a simple routine to step through the solution iterations using the Euler method to update the state variables.</paragraph>
             <container classes="dothis">
                 <paragraph><strong>4.a</strong> Create variables which control how the solution will run, representing:</paragraph>
@@ -725,7 +703,7 @@
             </container>
         </section>
         <section ids="step-5-sanity-check" names="step\ 5:\ sanity\ check">
-            <title refid="id5">Step 5: Sanity check</title>
+            <title>Step 5: Sanity check</title>
             <paragraph>The file that results from running the completed version of this tutorial can be downloaded from <download_reference filename="a87b6a01620e7f3eaeec90cab4662af4/HodgkinHuxleyModelSolution.txt" refdoc="tutorials/hh_tutorials/tut5/index" refdomain="" refexplicit="True" reftarget="HodgkinHuxleyModelSolution.txt" reftype="download" refwarn="False"><literal classes="xref download">HodgkinHuxleyModelSolution.txt</literal></download_reference>, and is a tab-delimited file that can be easily read into your favourite plotting program.</paragraph>
         </section>
     </section>

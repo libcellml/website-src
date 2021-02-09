@@ -9,7 +9,7 @@
           <v-icon size="1.3em">mdi-alert-circle-outline</v-icon>
         </div>
       </template>
-      <v-row>
+      <v-row class="flex float-left">
         <v-breadcrumbs :items="breadcrumbs">
           <template v-slot:divider>
             <v-icon>mdi-chevron-right</v-icon>

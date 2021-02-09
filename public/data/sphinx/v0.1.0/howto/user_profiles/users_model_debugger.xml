@@ -6,51 +6,47 @@
     <section ids="model-debugger users-model-debugger" names="model\ debugger users_model_debugger">
         <title>Model debugger</title>
         <paragraph>This example walks through the process of using the <literal classes="code">Validator</literal> and <literal classes="code">Analyser</literal> classes to check a CellML model’s syntax and mathematical composition.</paragraph>
-        <paragraph><strong>Contents</strong></paragraph>
-        <topic classes="contents local" ids="contents" names="contents">
-            <bullet_list>
+        <container classes="directorylist">
+            <paragraph><strong>C++ resources</strong>: <download_reference filename="29454f7b3f404947d955a3904f40dc13/" refdoc="howto/user_profiles/users_model_debugger" refdomain="" refexplicit="True" reftarget="" reftype="download" refwarn="False"><literal classes="xref download">All C++ resources</literal></download_reference></paragraph>
+            <bullet_list bullet="-">
                 <list_item>
-                    <paragraph><reference ids="id1" refid="parse-an-existing-cellml-model">Parse an existing CellML model</reference></paragraph>
+                    <paragraph><download_reference filename="665a2cfa16356959033f94f27d3f2780/CMakeLists.txt" refdoc="howto/user_profiles/users_model_debugger" refdomain="" refexplicit="True" reftarget="../code/model_debugger/CMakeLists.txt" reftype="download" refwarn="False"><literal classes="xref download">CMakeLists.txt</literal></download_reference></paragraph>
                 </list_item>
                 <list_item>
-                    <paragraph><reference ids="id2" refid="resolve-the-imports-and-flatten-the-model">Resolve the imports and flatten the model</reference></paragraph>
+                    <paragraph><download_reference filename="80bb35c8579c317f044d56842243aaca/modelDebugger.cpp" refdoc="howto/user_profiles/users_model_debugger" refdomain="" refexplicit="True" reftarget="../code/model_debugger/modelDebugger.cpp" reftype="download" refwarn="False"><literal classes="xref download">example_modelDebugger.cpp</literal></download_reference></paragraph>
                 </list_item>
                 <list_item>
-                    <paragraph><reference ids="id3" refid="validate-the-model">Validate the model</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id4" refid="analyse-the-model">Analyse the model</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id5" refid="print-the-repaired-model-to-a-cellml-file">Print the repaired model to a CellML file</reference></paragraph>
+                    <paragraph>resources/</paragraph>
+                    <bullet_list bullet="-">
+                        <list_item>
+                            <paragraph><download_reference filename="4b39ae53d25787ab5ac314e9d4ecee50/debugAnalysisExample.cellml" refdoc="howto/user_profiles/users_model_debugger" refdomain="" refexplicit="True" reftarget="../code/model_debugger/debugAnalysisExample.cellml" reftype="download" refwarn="False"><literal classes="xref download">debugAnalysisExample.cellml</literal></download_reference></paragraph>
+                        </list_item>
+                        <list_item>
+                            <paragraph><download_reference filename="86425e00af76af588bd06b67d88a8a2d/debugAnalysisExampleImport.cellml" refdoc="howto/user_profiles/users_model_debugger" refdomain="" refexplicit="True" reftarget="../code/model_debugger/debugAnalysisExampleImport.cellml" reftype="download" refwarn="False"><literal classes="xref download">debugAnalysisExampleImport.cellml</literal></download_reference></paragraph>
+                        </list_item>
+                    </bullet_list>
                 </list_item>
             </bullet_list>
-        </topic>
-        <line_block>
-            <line><strong>C++ resources</strong></line>
-            <line_block>
-                <line>├ <download_reference filename="665a2cfa16356959033f94f27d3f2780/CMakeLists.txt" refdoc="howto/user_profiles/users_model_debugger" refdomain="" refexplicit="True" reftarget="../code/model_debugger/CMakeLists.txt" reftype="download" refwarn="False"><literal classes="xref download">CMakeLists.txt</literal></download_reference></line>
-                <line>├ <download_reference filename="80bb35c8579c317f044d56842243aaca/modelDebugger.cpp" refdoc="howto/user_profiles/users_model_debugger" refdomain="" refexplicit="True" reftarget="../code/model_debugger/modelDebugger.cpp" reftype="download" refwarn="False"><literal classes="xref download">example_modelDebugger.cpp</literal></download_reference></line>
-                <line>└ resources/</line>
-                <line_block>
-                    <line>├ <download_reference filename="4b39ae53d25787ab5ac314e9d4ecee50/debugAnalysisExample.cellml" refdoc="howto/user_profiles/users_model_debugger" refdomain="" refexplicit="True" reftarget="../code/model_debugger/debugAnalysisExample.cellml" reftype="download" refwarn="False"><literal classes="xref download">debugAnalysisExample.cellml</literal></download_reference></line>
-                    <line>└ <download_reference filename="86425e00af76af588bd06b67d88a8a2d/debugAnalysisExampleImport.cellml" refdoc="howto/user_profiles/users_model_debugger" refdomain="" refexplicit="True" reftarget="../code/model_debugger/debugAnalysisExampleImport.cellml" reftype="download" refwarn="False"><literal classes="xref download">debugAnalysisExampleImport.cellml</literal></download_reference></line>
-                </line_block>
-            </line_block>
-        </line_block>
-        <line_block>
-            <line><strong>Python resources</strong></line>
-            <line_block>
-                <line>├ <download_reference filename="c86323212e5c2506d6c3bc0cfcba36e6/modelDebugger.py" refdoc="howto/user_profiles/users_model_debugger" refdomain="" refexplicit="True" reftarget="../code/model_debugger/modelDebugger.py" reftype="download" refwarn="False"><literal classes="xref download">example_modelDebugger.py</literal></download_reference></line>
-                <line>└ resources/</line>
-                <line_block>
-                    <line>├ <download_reference filename="4b39ae53d25787ab5ac314e9d4ecee50/debugAnalysisExample.cellml" refdoc="howto/user_profiles/users_model_debugger" refdomain="" refexplicit="True" reftarget="../code/model_debugger/debugAnalysisExample.cellml" reftype="download" refwarn="False"><literal classes="xref download">debugAnalysisExample.cellml</literal></download_reference></line>
-                    <line>└ <download_reference filename="86425e00af76af588bd06b67d88a8a2d/debugAnalysisExampleImport.cellml" refdoc="howto/user_profiles/users_model_debugger" refdomain="" refexplicit="True" reftarget="../code/model_debugger/debugAnalysisExampleImport.cellml" reftype="download" refwarn="False"><literal classes="xref download">debugAnalysisExampleImport.cellml</literal></download_reference></line>
-                </line_block>
-            </line_block>
-        </line_block>
+            <paragraph><strong>Python resources</strong>: <download_reference filename="29454f7b3f404947d955a3904f40dc13/" refdoc="howto/user_profiles/users_model_debugger" refdomain="" refexplicit="True" reftarget="" reftype="download" refwarn="False"><literal classes="xref download">All Python resources</literal></download_reference></paragraph>
+            <bullet_list bullet="-">
+                <list_item>
+                    <paragraph><download_reference filename="c86323212e5c2506d6c3bc0cfcba36e6/modelDebugger.py" refdoc="howto/user_profiles/users_model_debugger" refdomain="" refexplicit="True" reftarget="../code/model_debugger/modelDebugger.py" reftype="download" refwarn="False"><literal classes="xref download">example_modelDebugger.py</literal></download_reference></paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>resources/</paragraph>
+                    <bullet_list bullet="-">
+                        <list_item>
+                            <paragraph><download_reference filename="4b39ae53d25787ab5ac314e9d4ecee50/debugAnalysisExample.cellml" refdoc="howto/user_profiles/users_model_debugger" refdomain="" refexplicit="True" reftarget="../code/model_debugger/debugAnalysisExample.cellml" reftype="download" refwarn="False"><literal classes="xref download">debugAnalysisExample.cellml</literal></download_reference></paragraph>
+                        </list_item>
+                        <list_item>
+                            <paragraph><download_reference filename="86425e00af76af588bd06b67d88a8a2d/debugAnalysisExampleImport.cellml" refdoc="howto/user_profiles/users_model_debugger" refdomain="" refexplicit="True" reftarget="../code/model_debugger/debugAnalysisExampleImport.cellml" reftype="download" refwarn="False"><literal classes="xref download">debugAnalysisExampleImport.cellml</literal></download_reference></paragraph>
+                        </list_item>
+                    </bullet_list>
+                </list_item>
+            </bullet_list>
+        </container>
         <section ids="parse-an-existing-cellml-model" names="parse\ an\ existing\ cellml\ model">
-            <title refid="id1">Parse an existing CellML model</title>
+            <title>Parse an existing CellML model</title>
             <paragraph>Here we use the <literal classes="code">Parser</literal> class to read the file, and deserialise the CellML into a <literal classes="code">Model</literal> object.
                 The CellML file used in this example makes use of imports, so we need to have the main file (debugAnalysisExample.cellml) as well as the file which it imports (debugAnalysisExampleImport.cellml).</paragraph>
             <container classes="sphinx-tabs">
@@ -92,7 +88,7 @@
             </container>
         </section>
         <section ids="resolve-the-imports-and-flatten-the-model" names="resolve\ the\ imports\ and\ flatten\ the\ model">
-            <title refid="id2">Resolve the imports and flatten the model</title>
+            <title>Resolve the imports and flatten the model</title>
             <paragraph>At present the <literal classes="code">Analyser</literal> class ignores the contents of imported items.
                 This example shows a model which has imports, so we need to resolve these and flatten the model before any analysis can happen.
                 For detailed information on debugging models with imports, please see the <reference internal="True" refuri="users_import_debugger#users-import-debugger"><inline classes="std std-ref">Import debugging</inline></reference> examples.</paragraph>
@@ -151,7 +147,7 @@
             </container>
         </section>
         <section ids="validate-the-model" names="validate\ the\ model">
-            <title refid="id3">Validate the model</title>
+            <title>Validate the model</title>
             <paragraph>The <literal classes="code">Validator</literal> class process is like a spelling checker: it will check the syntax of the model ahead of analysing its mathematical formulation in the <literal classes="code">Analyser</literal> later.
                 Here we create a validator, use it to check the model, and retrieve the descriptions of any issues it found.</paragraph>
             <container classes="sphinx-tabs">
@@ -246,7 +242,7 @@
             </container>
         </section>
         <section ids="analyse-the-model" names="analyse\ the\ model">
-            <title refid="id4">Analyse the model</title>
+            <title>Analyse the model</title>
             <paragraph>If the <literal classes="code">Validator</literal> is the spell-checker then the <literal classes="code">Analyser</literal> is the grammar-checker.
                 It will check for errors of logic or mathematical definition in the model formulation, and also make sure that all of the information which a solver needs is available.
                 The <literal classes="code">Analyser</literal> works in the same way as the other service classes: we create an instance, pass a model for checking, and then retrieve any issues it may have found.</paragraph>
@@ -419,7 +415,7 @@
             </container>
         </section>
         <section ids="print-the-repaired-model-to-a-cellml-file" names="print\ the\ repaired\ model\ to\ a\ cellml\ file">
-            <title refid="id5">Print the repaired model to a CellML file</title>
+            <title>Print the repaired model to a CellML file</title>
             <paragraph>Finally, we can serialised the repaired model for output to a CellML file using the <literal classes="code">Printer</literal> class.
                 Note that this prints the flattened model, so will not contain the import dependencies of the original one.</paragraph>
             <container classes="sphinx-tabs">

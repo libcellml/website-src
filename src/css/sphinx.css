@@ -61,10 +61,12 @@ code {
     color: var(--code-colour);
     font-family: var(--code-font);
     font-weight: 400;
+    background-color: var(--pale-transparent-grey);
 }
 
 .theme--light.v-application code {
     color: var(--code-colour);
+    background-color: var(--pale-transparent-grey);
 }
 
 code.plaintext {
@@ -95,9 +97,102 @@ pre > code {
 }
 
 /* Shortlist class. */
-.shortlist  p {
+.shortlist p {
     margin-bottom: 0.2em !important;
 }
+
+
+/* Directory list class */
+.directorylist {
+    /* border-left: solid 5px var(--pale-grey); */
+    padding-left: 2em;
+    background-color: var(--very-pale-grey);
+}
+
+.directorylist p {
+    padding: 0;
+    margin: 0;
+ }
+
+.directorylist ul {
+    list-style-type: none;
+}
+
+/*
+ .directorylist p {
+    padding: 0;
+    margin: 0;
+}
+
+.directorylist ul {
+    list-style-type: none;
+    padding-right: 0.5em;
+    margin-left: 1em;
+}
+
+.directorylist li {
+    border-left: solid 0.15em grey;
+}
+
+.directorylist ul li  {
+    margin: 0;
+    padding: 0;
+}
+
+.directorylist ul p::before {
+    padding-right: 0.5em;
+}
+
+.directorylist li p::before {
+    content: "\2500";
+    color: grey;
+    margin-left: -0.12em;
+}
+
+.directorylist li:last-child > p::before {
+    border-width: 0 0 0 0.15em;
+    border-image-source: linear-gradient(to top, grey 50%, transparent 50%);
+    border-image-slice: 1;
+} 
+*/
+
+/*
+.directorylist ul {
+    list-style-type: none;
+}
+
+.directorylist p {
+    padding: 0;
+    margin: 0;
+}
+
+.directorylist li p::before {
+    content:"\2500";
+    max-height: 0.5em;
+    padding-right: 0.2em;
+    margin-bottom: -0.45em;
+}
+
+.directorylist li {
+    border-left: solid 0.15em grey; 
+    margin-top: -0.2em;
+    margin-bottom: -1.1em;
+    padding-top: 0.2em;
+    padding-bottom: 1.2em;
+}
+
+.directorylist li:last-child {
+    border-left: none;
+    margin-top: -0.2em;
+    margin-bottom: 0.5em;
+    padding-top: -0.2em;
+}
+
+.directorylist ul > li {
+    padding-bottom: 0;
+    margin-bottom:0;
+}
+*/
 
 /* Formatting from the tutorials readthedocs site. */
 .dothis {
@@ -150,10 +245,12 @@ pre > code {
 /* Useful container list indents */
 .useful > ul {
     margin-left: 3rem;
+    list-style-type: none;
 }
 .useful > ul > li > p {
-    margin-bottom: 0.1em;
-    font-family: var(--mono-font);
+    margin-bottom: 0;
+    /* font-family: var(--mono-font); */
+    /* font-weight: 500; */
 }
 
 .nb {
@@ -205,7 +302,7 @@ pre > code {
 
 .toggle .header.active p, .toggle .header-left.active p {
     font-weight: 700;
-    color: var(--bright-red);
+    color: var(--mid-red);
     margin-bottom: 0.2em;
 }
 
@@ -217,8 +314,8 @@ pre > code {
 .toggle .header.inactive p,
 .toggle .header-left.inactive p  {
     font-weight: 500;
-    color: var(--link-colour);
-    margin-bottom:0;
+    color: var(--menu-link-colour);
+    margin-bottom: 0;
 }
 
 .toggle .header.inactive p::after,
@@ -253,7 +350,7 @@ pre > code {
 .tab2name.active {
     background-color: white;
     font-weight: 700;
-    color: var(--bright-red);
+    color: var(--mid-red);
     border-bottom: solid white 3px;
 }
 
