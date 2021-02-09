@@ -7,23 +7,12 @@
         <title>Simple solver for generated models</title>
         <paragraph>The theory behind how a numerical solver or integration program works is outlined in the <reference internal="True" refuri="../../theory/theory_ode_solutions#theory-ode-solutions"><inline classes="std std-ref">Theory of ODE solvers</inline></reference> page.
             This section describes how to use the simple solvers provided to run models generated with either the C or Python profiles.</paragraph>
-        <topic classes="contents local" ids="contents" names="contents">
-            <title>Contents</title>
-            <bullet_list>
-                <list_item>
-                    <paragraph><reference ids="id1" refid="c-profile-solver">C profile solver</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id2" refid="python-profile-solver">Python profile solver</reference></paragraph>
-                </list_item>
-            </bullet_list>
-        </topic>
         <section ids="c-profile-solver" names="c\ profile\ solver">
-            <title refid="id1">C profile solver</title>
+            <title>C profile solver</title>
             <paragraph>In C++ you can use the code provided in the <literal classes="code">tutorials/solver</literal> directory to build your generated code into a runnable simulation.
-                To use the package just follow the instructions below.
-                You will need to download:</paragraph>
-            <block_quote>
+                To use the package just follow the instructions below.</paragraph>
+            <container classes="directorylist">
+                <paragraph><strong>C/C++ resources</strong></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph><download_reference filename="e56c2227984d967aefe9abffce006e12/CMakeLists.txt" refdoc="tutorials/solver/index" refdomain="" refexplicit="True" reftarget="CMakeLists.txt" reftype="download" refwarn="False"><literal classes="xref download">CMakeLists.txt</literal></download_reference> The CMake file which controls the building of the solver.
@@ -33,7 +22,7 @@
                         <paragraph><download_reference filename="df6f8b84a936cdb2e2b16e7a3c353e81/simpleSolver.cpp" refdoc="tutorials/solver/index" refdomain="" refexplicit="True" reftarget="simpleSolver.cpp" reftype="download" refwarn="False"><literal classes="xref download">simpleSolver.cpp</literal></download_reference> The source file.</paragraph>
                     </list_item>
                 </bullet_list>
-            </block_quote>
+            </container>
             <container classes="dothis">
                 <paragraph><strong>1.a</strong> Assuming you’ve already generated code using the C profile, open a terminal window and navigate into the <literal classes="code">tutorials/solver</literal> directory.</paragraph>
             </container>
@@ -88,17 +77,17 @@
             <paragraph>The parameters read from the file, along with your command line arguments are printed to the terminal for checking, and the results of the simulation written to a tab-delimited file with the extension <literal classes="code">_solution.txt</literal> after your base file name.</paragraph>
         </section>
         <section ids="python-profile-solver" names="python\ profile\ solver">
-            <title refid="id2">Python profile solver</title>
+            <title>Python profile solver</title>
             <paragraph>The solver script is a very simple implementation of the Euler stepping method in Python.
-                The theory on which it’s based can be found on the <reference internal="True" refuri="../../theory/theory_ode_solutions#theory-ode-solutions"><inline classes="std std-ref">Theory of ODE solver</inline></reference> page.
-                You will need to download:</paragraph>
-            <block_quote>
+                The theory on which it’s based can be found on the <reference internal="True" refuri="../../theory/theory_ode_solutions#theory-ode-solutions"><inline classes="std std-ref">Theory of ODE solver</inline></reference> page.</paragraph>
+            <container classes="directorylist">
+                <paragraph><strong>Python resources</strong></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph><download_reference filename="9eb130da6ac864b0514eb41dc0620fff/simplesolver.py" refdoc="tutorials/solver/index" refdomain="" refexplicit="True" reftarget="simplesolver.py" reftype="download" refwarn="False"><literal classes="xref download">simplesolver.py</literal></download_reference> The solver script.</paragraph>
                     </list_item>
                 </bullet_list>
-            </block_quote>
+            </container>
             <paragraph>Once you’ve used the <literal classes="code">Generator</literal> to write a CellML model into Python format, you need to run it to produce the solution.
                 The script can be run from the command line as below:</paragraph>
             <container classes="dothis">

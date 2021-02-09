@@ -28,8 +28,8 @@
                 </list_item>
             </bullet_list>
         </container>
-        <container classes="shortlist">
-            <paragraph><strong>Code (C++)</strong></paragraph>
+        <container classes="directorylist">
+            <paragraph><strong>C++ resources</strong></paragraph>
             <bullet_list bullet="-">
                 <list_item>
                     <paragraph><download_reference filename="8f69ec13083aa710344751837ce46796/CMakeLists.txt" refdoc="tutorials/hh_tutorials/tut2/index" refdomain="" refexplicit="True" reftarget="CMakeLists.txt" reftype="download" refwarn="False"><literal classes="xref download">CMakeLists.txt</literal></download_reference> The CMake file for building this tutorial;</paragraph>
@@ -44,9 +44,7 @@
                     <paragraph><download_reference filename="3f4b97b047ce9d0b094a505f01945955/utilities.cpp" refdoc="tutorials/hh_tutorials/tut2/index" refdomain="" refexplicit="True" reftarget="../code/utilities.cpp" reftype="download" refwarn="False"><literal classes="xref download">utilities.cpp</literal></download_reference> and <download_reference filename="9c3e25b15f0f216f44ad351a1459315b/utilities.h" refdoc="tutorials/hh_tutorials/tut2/index" refdomain="" refexplicit="True" reftarget="../code/utilities.h" reftype="download" refwarn="False"><literal classes="xref download">utilities.h</literal></download_reference> Helper functions.</paragraph>
                 </list_item>
             </bullet_list>
-        </container>
-        <container classes="shortlist">
-            <paragraph><strong>Code (Python)</strong></paragraph>
+            <paragraph><strong>Python resources</strong></paragraph>
             <bullet_list bullet="-">
                 <list_item>
                     <paragraph><download_reference filename="8faf7cafda44a36ae2db3e39124fd9ea/createPotassiumChannelModel.py" refdoc="tutorials/hh_tutorials/tut2/index" refdomain="" refexplicit="True" reftarget="createPotassiumChannelModel.py" reftype="download" refwarn="False"><literal classes="xref download">createPotassiumChannelModel.py</literal></download_reference> Either the skeleton code, or ..</paragraph>
@@ -55,55 +53,15 @@
                     <paragraph><download_reference filename="191a37247986879f35c780ee8681d403/createPotassiumChannelModel_completed.py" refdoc="tutorials/hh_tutorials/tut2/index" refdomain="" refexplicit="True" reftarget="createPotassiumChannelModel_completed.py" reftype="download" refwarn="False"><literal classes="xref download">createPotassiumChannelModel_completed.py</literal></download_reference> the completed tutorial code.</paragraph>
                 </list_item>
             </bullet_list>
-        </container>
-        <container classes="shortlist">
-            <paragraph><strong>Resources</strong></paragraph>
+            <paragraph><strong>CellML resources</strong></paragraph>
             <bullet_list bullet="-">
                 <list_item>
                     <paragraph><download_reference filename="4b043800f5a7be5e66006da7fcb70762/GateModel.cellml" refdoc="tutorials/hh_tutorials/tut2/index" refdomain="" refexplicit="True" reftarget="GateModel.cellml" reftype="download" refwarn="False"><literal classes="xref download">GateModel.cellml</literal></download_reference> The generic gate model created in <reference internal="True" refuri="../tut1/index#creategatemodel"><inline classes="std std-ref">Tutorial 1</inline></reference>.</paragraph>
                 </list_item>
             </bullet_list>
         </container>
-        <topic classes="contents local" ids="contents" names="contents">
-            <title>Contents</title>
-            <bullet_list>
-                <list_item>
-                    <paragraph><reference ids="id1" refid="step-1-create-the-model">Step 1: Create the model</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id2" refid="step-2-create-a-potassium-channel-equations-component">Step 2: Create a potassium channel equations component</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id3" refid="step-3-create-the-ngate-and-its-child-components">Step 3: Create the nGate and its child components</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id4" refid="step-4-specify-imports-for-the-generic-gate-components">Step 4: Specify imports for the generic gate components</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id5" refid="step-5-specify-imports-for-the-controller-component">Step 5: Specify imports for the controller component</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id6" refid="step-6-analyse-the-model">Step 6: Analyse the model</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id7" refid="step-7-define-the-constants">Step 7: Define the constants</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id8" refid="step-8-connect-the-input-variables">Step 8: Connect the input variables</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id9" refid="step-9-connect-the-calculated-variables">Step 9: Connect the calculated variables</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id10" refid="step-10-connect-to-imported-components">Step 10: Connect to imported components</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id11" refid="step-11-output-the-model">Step 11: Output the model</reference></paragraph>
-                </list_item>
-            </bullet_list>
-        </topic>
         <section ids="step-1-create-the-model" names="step\ 1:\ create\ the\ model">
-            <title refid="id1">Step 1: Create the model</title>
+            <title>Step 1: Create the model</title>
             <paragraph>The final structure of this model is shown in the diagram below.</paragraph>
             <literal_block force="False" highlight_args="{}" language="text" linenos="False" xml:space="preserve">model: PotassiumChannelModel
     component: controller &lt;-- imported from PotassiumChannelController.cellml, component 'controller'
@@ -186,7 +144,7 @@
             </container>
         </section>
         <section ids="step-2-create-a-potassium-channel-equations-component" names="step\ 2:\ create\ a\ potassium\ channel\ equations\ component">
-            <title refid="id2">Step 2: Create a potassium channel equations component</title>
+            <title>Step 2: Create a potassium channel equations component</title>
             <container classes="useful">
                 <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Component">Component class</reference></paragraph>
                 <bullet_list bullet="-">
@@ -635,7 +593,7 @@ Issue [1] is an ERROR:
             </container>
         </section>
         <section ids="step-3-create-the-ngate-and-its-child-components" names="step\ 3:\ create\ the\ ngate\ and\ its\ child\ components">
-            <title refid="id3">Step 3: Create the nGate and its child components</title>
+            <title>Step 3: Create the nGate and its child components</title>
             <paragraph>The nGateEquations has some of the working of a generic gate (which we’ll import from GateModel.cellml), but instead of constant values for alpha and beta, we’ll introduce a voltage dependence.
                 The nGateParameters component allows us to specify those parameters specific to the movement of potassium.</paragraph>
             <container classes="dothis">
@@ -964,7 +922,7 @@ Issue [3] is an ERROR:
             </container>
         </section>
         <section ids="step-4-specify-imports-for-the-generic-gate-components" names="step\ 4:\ specify\ imports\ for\ the\ generic\ gate\ components">
-            <title refid="id4">Step 4: Specify imports for the generic gate components</title>
+            <title>Step 4: Specify imports for the generic gate components</title>
             <paragraph>The generic gate model (in GateModel.cellml) has two components:</paragraph>
             <bullet_list bullet="-">
                 <list_item>
@@ -1112,7 +1070,7 @@ Issue [3] is an ERROR:
             </container>
         </section>
         <section ids="step-5-specify-imports-for-the-controller-component" names="step\ 5:\ specify\ imports\ for\ the\ controller\ component">
-            <title refid="id5">Step 5: Specify imports for the controller component</title>
+            <title>Step 5: Specify imports for the controller component</title>
             <paragraph>Repeat Step 4 to import a controller component.
                 This should be at the top of the encapsulation hierarchy, and should import the component named “controller” from the file “PotassiumChannelController.cellml”.</paragraph>
             <container classes="dothis">
@@ -1170,7 +1128,7 @@ Issue [3] is an ERROR:
             </container>
         </section>
         <section ids="step-6-analyse-the-model" names="step\ 6:\ analyse\ the\ model">
-            <title refid="id6">Step 6: Analyse the model</title>
+            <title>Step 6: Analyse the model</title>
             <paragraph>We will introduce the <literal classes="code">Analyser</literal> class here so that its use as a debugging  tool can be demonstrated.
                 Of course, we know ahead of time that there is still a lot of connections to be created between the components, but the analyser can help us to find them.
                 The analyser is similar to the <literal classes="code">Validator</literal> class and keeps a record of issues it encounters.</paragraph>
@@ -1249,7 +1207,7 @@ Issue [2] is an ERROR:
             </container>
         </section>
         <section ids="step-7-define-the-constants" names="step\ 7:\ define\ the\ constants">
-            <title refid="id7">Step 7: Define the constants</title>
+            <title>Step 7: Define the constants</title>
             <paragraph>As we work through the next few steps we’ll be defining and connecting all of the components and variables together.
                 First we’ll define the variables which will have a constant value in the simulation.</paragraph>
             <container classes="dothis">
@@ -1498,7 +1456,7 @@ Issue [0] is an ERROR:
             </container>
         </section>
         <section ids="step-8-connect-the-input-variables" names="step\ 8:\ connect\ the\ input\ variables">
-            <title refid="id8">Step 8: Connect the input variables</title>
+            <title>Step 8: Connect the input variables</title>
             <paragraph>Looking at the variables listed in the issues above we can see that some of our “external” or “input” variables are listed more than once.
                 These are the voltage, V, and time, t.
                 Time is needed in every equations component, including the imported gate component.
@@ -1673,7 +1631,7 @@ Issue [0] is an ERROR:
             </container>
         </section>
         <section ids="step-9-connect-the-calculated-variables" names="step\ 9:\ connect\ the\ calculated\ variables">
-            <title refid="id9">Step 9: Connect the calculated variables</title>
+            <title>Step 9: Connect the calculated variables</title>
             <paragraph>Now we need to make sure that all of the calculated variables can move through the model properly.
                 In this example, the only calculated variable is n, the gate status.
                 This is calculated by solving the ODE in the nGate equations component, but needs to be initialised by the nGate parameters component, and its value passed back to the potassium channel equations component.</paragraph>
@@ -1735,7 +1693,7 @@ Issue [0] is an ERROR:
             </container>
         </section>
         <section ids="step-10-connect-to-imported-components" names="step\ 10:\ connect\ to\ imported\ components">
-            <title refid="id10">Step 10: Connect to imported components</title>
+            <title>Step 10: Connect to imported components</title>
             <paragraph>At this point, we have made all the connections we can between existing variables and components.
                 (You can verify this for yourself by printing your model to the terminal again if you like.)
                 Now the problem we have is that we need to connect to variables inside imported components, but these don’t exist in our model yet: the import sources that we created in Steps 4 and 5 are simply a recipe; they don’t actually create anything here.</paragraph>
@@ -2085,7 +2043,7 @@ Issue [0] is an ERROR:
             </container>
         </section>
         <section ids="step-11-output-the-model" names="step\ 11:\ output\ the\ model">
-            <title refid="id11">Step 11: Output the model</title>
+            <title>Step 11: Output the model</title>
             <container classes="dothis">
                 <paragraph><strong>11.a</strong> Create a <literal classes="code">Printer</literal> instance and use it to serialise the model.
                     This creates a string containing the CellML-formatted version of the model.
