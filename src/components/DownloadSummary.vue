@@ -3,10 +3,25 @@
     <div id="downloadContent">
       <h1>Download libCellML</h1>
       <v-row>
+        <v-col class="col-12">
+          <p>
+            Bianry distributions are not yet ready for release. In the meantime,
+            please follow the instructions on the
+            <a
+              href="/documentation/guides/latest/installation/build_from_source"
+              >Build from source
+            </a>
+            page.
+          </p>
+        </v-col>
+      </v-row>
+
+      <v-row>
         <v-col class="col-12 col-md-3">
           <v-tooltip bottom>
             <template v-slot:activator="{ on }">
-              <v-btn block :class="'big-button'" v-on="on">
+              <!-- Added disabled status until this is ready to go -->
+              <v-btn block :class="'big-button'" v-on="on" disabled>
                 <v-icon color="white" x-large>mdi-microsoft-windows</v-icon>
                 <br />
                 Windows
@@ -15,10 +30,12 @@
             <span>Launch installer for Microsoft Windows</span>
           </v-tooltip>
         </v-col>
+
         <v-col class="col-12 col-md-3">
           <v-tooltip bottom>
             <template v-slot:activator="{ on }">
-              <v-btn block :class="'big-button'" v-on="on">
+              <!-- Added disabled status until this is ready to go -->
+              <v-btn block :class="'big-button'" v-on="on" disabled>
                 <v-icon color="white" x-large>mdi-linux</v-icon>
                 <br />
                 Linux
@@ -27,10 +44,12 @@
             <span>Launch installer for Linux</span>
           </v-tooltip>
         </v-col>
+
         <v-col class="col-12 col-md-3">
           <v-tooltip bottom>
             <template v-slot:activator="{ on }">
-              <v-btn block :class="'big-button'" v-on="on">
+              <!-- Added disabled status until this is ready to go -->
+              <v-btn block :class="'big-button'" v-on="on" disabled>
                 <v-icon color="white" x-large>mdi-apple</v-icon>
                 <br />
                 macOS
@@ -43,7 +62,8 @@
         <v-col class="col-12 col-md-3">
           <v-tooltip bottom>
             <template v-slot:activator="{ on }">
-              <v-btn block :class="'big-button'" v-on="on">
+              <!-- Added disabled status until this is ready to go -->
+              <v-btn block :class="'big-button'" v-on="on" disabled>
                 <IconWA />
                 <br />
                 Web assembly

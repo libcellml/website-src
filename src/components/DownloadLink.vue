@@ -1,10 +1,10 @@
 <template>
   <v-container>
-    <div>
+    <p>
       <router-link to="download">
         See more information on available versions and requirements
       </router-link>
-    </div>
+    </p>
   </v-container>
 </template>
 
