@@ -44,9 +44,8 @@
         </container>
         <section ids="requirements" names="requirements">
             <title>Requirements</title>
-            <paragraph>Either <download_reference filename="d88debf49697a4d7ed21efc1ccbbed54/tutorial3.zip" refdoc="tutorials/tutorial3/index" refdomain="" refexplicit="True" reftarget="tutorial3.zip" reftype="download" refwarn="False"><literal classes="xref download">download the whole folder</literal></download_reference>, or:</paragraph>
-            <container classes="shortlist">
-                <paragraph><strong>C++</strong></paragraph>
+            <container classes="directorylist">
+                <paragraph><strong>C++ resources</strong></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph><download_reference filename="8e552cfaaf187c985680b6b3c5e7ef46/CMakeLists.txt" refdoc="tutorials/tutorial3/index" refdomain="" refexplicit="False" reftarget="CMakeLists.txt" reftype="download" refwarn="False"><literal classes="xref download">CMakeLists.txt</literal></download_reference> The CMake file for building this tutorial;</paragraph>
@@ -61,9 +60,7 @@
                         <paragraph><download_reference filename="a2d4a3ca1b36dbb0cf9e9c76357d80d8/utilities.h" refdoc="tutorials/tutorial3/index" refdomain="" refexplicit="True" reftarget="../utilities/utilities.h" reftype="download" refwarn="False"><literal classes="xref download">utilities.h</literal></download_reference> and <download_reference filename="912889e3f489eca7756b3017bf38e495/utilities.cpp" refdoc="tutorials/tutorial3/index" refdomain="" refexplicit="True" reftarget="../utilities/utilities.cpp" reftype="download" refwarn="False"><literal classes="xref download">utilities.cpp</literal></download_reference> Utility functions for use in the tutorials.</paragraph>
                     </list_item>
                 </bullet_list>
-            </container>
-            <container classes="shortlist">
-                <paragraph><strong>Python</strong></paragraph>
+                <paragraph><strong>Python resources</strong></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph><download_reference filename="31d34d5b6c4e980be32c278cb054f40e/tutorial3.py" refdoc="tutorials/tutorial3/index" refdomain="" refexplicit="False" reftarget="tutorial3.py" reftype="download" refwarn="False"><literal classes="xref download">tutorial3.py</literal></download_reference> Either the skeleton code; or</paragraph>

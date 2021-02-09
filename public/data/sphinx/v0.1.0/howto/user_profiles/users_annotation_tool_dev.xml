@@ -11,28 +11,38 @@
             In the <literal classes="code">Annotator</literal>, the ID string is used instead.
             Because an item of any type could have an ID attribute, there is no way of knowing what kind of will be returned.
             The class makes use of casting to and from the (C++ only) <reference internal="False" refuri="https://en.cppreference.com/w/cpp/utility/any">std::any type</reference> to handle this uncertainty.</paragraph>
-        <container classes="lineblocks">
-            <line_block>
-                <line><strong>C++ resources</strong></line>
-                <line_block>
-                    <line>├ <download_reference filename="61b55b25a3aa0bf359ae2b69dcce7f5a/CMakeLists.txt" refdoc="howto/user_profiles/users_annotation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/annotation_tool_dev/CMakeLists.txt" reftype="download" refwarn="False"><literal classes="xref download">CMakeLists.txt</literal></download_reference></line>
-                    <line>├ <download_reference filename="6b67da2fbfc46841482035367c333f90/annotationToolDev.cpp" refdoc="howto/user_profiles/users_annotation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/annotation_tool_dev/annotationToolDev.cpp" reftype="download" refwarn="False"><literal classes="xref download">annotationToolDev.cpp</literal></download_reference></line>
-                    <line>└ resources/</line>
-                    <line_block>
-                        <line>└ <download_reference filename="d52db739781576a602600793f15a5c67/annotationExample.cellml" refdoc="howto/user_profiles/users_annotation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/annotation_tool_dev/annotationExample.cellml" reftype="download" refwarn="False"><literal classes="xref download">annotationExample.cellml</literal></download_reference></line>
-                    </line_block>
-                </line_block>
-            </line_block>
-            <line_block>
-                <line><strong>Python resources</strong></line>
-                <line_block>
-                    <line>├ <download_reference filename="9dc110dc198bcd3d887e60d6cb882e58/annotationToolDev.py" refdoc="howto/user_profiles/users_annotation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/annotation_tool_dev/annotationToolDev.py" reftype="download" refwarn="False"><literal classes="xref download">annotationToolDev.py</literal></download_reference></line>
-                    <line>└ resources/</line>
-                    <line_block>
-                        <line>└ <download_reference filename="d52db739781576a602600793f15a5c67/annotationExample.cellml" refdoc="howto/user_profiles/users_annotation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/annotation_tool_dev/annotationExample.cellml" reftype="download" refwarn="False"><literal classes="xref download">annotationExample.cellml</literal></download_reference></line>
-                    </line_block>
-                </line_block>
-            </line_block>
+        <container classes="directorylist">
+            <paragraph><strong>C++ resources</strong></paragraph>
+            <bullet_list bullet="-">
+                <list_item>
+                    <paragraph><download_reference filename="61b55b25a3aa0bf359ae2b69dcce7f5a/CMakeLists.txt" refdoc="howto/user_profiles/users_annotation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/annotation_tool_dev/CMakeLists.txt" reftype="download" refwarn="False"><literal classes="xref download">CMakeLists.txt</literal></download_reference></paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph><download_reference filename="6b67da2fbfc46841482035367c333f90/annotationToolDev.cpp" refdoc="howto/user_profiles/users_annotation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/annotation_tool_dev/annotationToolDev.cpp" reftype="download" refwarn="False"><literal classes="xref download">annotationToolDev.cpp</literal></download_reference></paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>resources/</paragraph>
+                    <bullet_list bullet="-">
+                        <list_item>
+                            <paragraph><download_reference filename="d52db739781576a602600793f15a5c67/annotationExample.cellml" refdoc="howto/user_profiles/users_annotation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/annotation_tool_dev/annotationExample.cellml" reftype="download" refwarn="False"><literal classes="xref download">annotationExample.cellml</literal></download_reference></paragraph>
+                        </list_item>
+                    </bullet_list>
+                </list_item>
+            </bullet_list>
+            <paragraph><strong>Python resources</strong></paragraph>
+            <bullet_list bullet="-">
+                <list_item>
+                    <paragraph><download_reference filename="9dc110dc198bcd3d887e60d6cb882e58/annotationToolDev.py" refdoc="howto/user_profiles/users_annotation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/annotation_tool_dev/annotationToolDev.py" reftype="download" refwarn="False"><literal classes="xref download">annotationToolDev.py</literal></download_reference></paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>resources/</paragraph>
+                    <bullet_list bullet="-">
+                        <list_item>
+                            <paragraph><download_reference filename="d52db739781576a602600793f15a5c67/annotationExample.cellml" refdoc="howto/user_profiles/users_annotation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/annotation_tool_dev/annotationExample.cellml" reftype="download" refwarn="False"><literal classes="xref download">annotationExample.cellml</literal></download_reference></paragraph>
+                        </list_item>
+                    </bullet_list>
+                </list_item>
+            </bullet_list>
         </container>
         <section ids="parse-an-existing-cellml-model" names="parse\ an\ existing\ cellml\ model">
             <title>Parse an existing CellML model</title>
