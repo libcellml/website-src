@@ -7,9 +7,10 @@
     --mid-red: #862e32;
     --deep-red: #4e0202;
     --pale-grey:#dddddd;
-    --very-pale-grey: #efefef;
+    --very-pale-grey: #f6f6f6;
 
     --transparent-grey: rgba(27,31,35,.05);
+    --pale-transparent-grey: rgba(62, 72, 82, 0.05);
     --deep-blue: #476582;
     --deep-blue-grey: #2d4046c7;
 
@@ -263,8 +264,11 @@ th {
 .v-application .download code {
     font-family: var(--text-font);
     color: var(--text-link-colour) !important;
-    background-color: transparent;
     font-weight: 500;
+}
+
+.v-application .download * {
+    background-color: transparent !important;
 }
 
 .v-application .download code:hover {

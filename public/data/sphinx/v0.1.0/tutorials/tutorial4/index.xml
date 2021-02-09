@@ -25,9 +25,8 @@
         </bullet_list>
         <section ids="requirements" names="requirements">
             <title>Requirements</title>
-            <paragraph>Either <download_reference filename="9bd7957bed382360167cdbf9db88fa81/tutorial4.zip" refdoc="tutorials/tutorial4/index" refdomain="" refexplicit="True" reftarget="tutorial4.zip" reftype="download" refwarn="False"><literal classes="xref download">download the whole folder</literal></download_reference>, or:</paragraph>
-            <container classes="shortlist">
-                <paragraph><strong>C++</strong></paragraph>
+            <container classes="directorylist">
+                <paragraph><strong>C++ resources</strong></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph><download_reference filename="b823ad3768149a1f2a5a2857310b261b/CMakeLists.txt" refdoc="tutorials/tutorial4/index" refdomain="" refexplicit="False" reftarget="CMakeLists.txt" reftype="download" refwarn="False"><literal classes="xref download">CMakeLists.txt</literal></download_reference> The CMake file for building this tutorial;</paragraph>
@@ -42,9 +41,7 @@
                         <paragraph><download_reference filename="633f84e50b39f993a9a5feaff12bbc4f/utilities.h" refdoc="tutorials/tutorial4/index" refdomain="" refexplicit="True" reftarget="../utilities/utilities.h" reftype="download" refwarn="False"><literal classes="xref download">utilities.h</literal></download_reference> and <download_reference filename="16e702781af8601b1f222d5dc5260a72/utilities.cpp" refdoc="tutorials/tutorial4/index" refdomain="" refexplicit="True" reftarget="../utilities/utilities.cpp" reftype="download" refwarn="False"><literal classes="xref download">utilities.cpp</literal></download_reference> Utility functions for use in the tutorials.</paragraph>
                     </list_item>
                 </bullet_list>
-            </container>
-            <container classes="shortlist">
-                <paragraph><strong>Python</strong></paragraph>
+                <paragraph><strong>Python resources</strong></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph><download_reference filename="de61349f7b2826284ee9376b63b016c3/tutorial4.py" refdoc="tutorials/tutorial4/index" refdomain="" refexplicit="False" reftarget="tutorial4.py" reftype="download" refwarn="False"><literal classes="xref download">tutorial4.py</literal></download_reference> Either the skeleton code; or</paragraph>
@@ -56,9 +53,7 @@
                         <paragraph><download_reference filename="5a0301f7b835ccda86f6105901923b16/utilities.py" refdoc="tutorials/tutorial4/index" refdomain="" refexplicit="True" reftarget="../utilities/utilities.py" reftype="download" refwarn="False"><literal classes="xref download">utilities.py</literal></download_reference>  Utility functions for use in the tutorials.</paragraph>
                     </list_item>
                 </bullet_list>
-            </container>
-            <container classes="shortlist">
-                <paragraph><strong>Resources</strong></paragraph>
+                <paragraph><strong>CellML resources</strong></paragraph>
                 <paragraph>This tutorial is built upon the <reference internal="True" refuri="../tutorial3/index#tutorial3"><inline classes="std std-ref">previous Tutorial 3</inline></reference> and uses the output created there.
                     If you haven’t completed this tutorial, you can download those output files here:</paragraph>
                 <bullet_list bullet="-">

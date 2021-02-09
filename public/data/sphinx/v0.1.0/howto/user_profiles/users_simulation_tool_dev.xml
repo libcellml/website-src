@@ -7,52 +7,45 @@
         <title>Simulation tool developer</title>
         <paragraph>The code generation functionality in libCellML can be used to transform CellML models into procedural code for simulation.
             This example works through that process.</paragraph>
-        <paragraph><strong>Contents</strong></paragraph>
-        <topic classes="contents local" ids="contents" names="contents">
-            <bullet_list>
+        <container classes="directorylist">
+            <paragraph><strong>C++ resources</strong>: <download_reference filename="29454f7b3f404947d955a3904f40dc13/" refdoc="howto/user_profiles/users_simulation_tool_dev" refdomain="" refexplicit="True" reftarget="" reftype="download" refwarn="False"><literal classes="xref download">All C++ resources</literal></download_reference></paragraph>
+            <bullet_list bullet="-">
                 <list_item>
-                    <paragraph><reference ids="id1" refid="parse-an-existing-model-from-a-file">Parse an existing model from a file</reference></paragraph>
+                    <paragraph><download_reference filename="12cdcb42018001670dc9e0a397d4d1ff/CMakeLists.txt" refdoc="howto/user_profiles/users_simulation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/simulation_tool_dev/CMakeLists.txt" reftype="download" refwarn="False"><literal classes="xref download">CMakeLists.txt</literal></download_reference></paragraph>
                 </list_item>
                 <list_item>
-                    <paragraph><reference ids="id2" refid="resolve-imports-and-flatten-model">Resolve imports and flatten model</reference></paragraph>
+                    <paragraph><download_reference filename="1a96c1f0e6f53dae07a6c0a6b32f1036/simulationToolDev.cpp" refdoc="howto/user_profiles/users_simulation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/simulation_tool_dev/simulationToolDev.cpp" reftype="download" refwarn="False"><literal classes="xref download">example_simulationToolDev.cpp</literal></download_reference></paragraph>
                 </list_item>
                 <list_item>
-                    <paragraph><reference ids="id3" refid="validate-model">Validate model</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id4" refid="analyse-model">Analyse model</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id5" refid="generate-code">Generate code</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id6" refid="use-the-generated-code-to-simulate-the-model">Use the generated code to simulate the model</reference></paragraph>
+                    <paragraph>resources/</paragraph>
+                    <block_quote>
+                        <bullet_list bullet="-">
+                            <list_item>
+                                <paragraph><download_reference filename="e2de8df04fb09256cd8a3c9fd355481d/simulationExample.cellml" refdoc="howto/user_profiles/users_simulation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/simulation_tool_dev/simulationExample.cellml" reftype="download" refwarn="False"><literal classes="xref download">simulationExample.cellml</literal></download_reference></paragraph>
+                            </list_item>
+                        </bullet_list>
+                    </block_quote>
                 </list_item>
             </bullet_list>
-        </topic>
-        <line_block>
-            <line><strong>C++ resources</strong></line>
-            <line_block>
-                <line>├ <download_reference filename="12cdcb42018001670dc9e0a397d4d1ff/CMakeLists.txt" refdoc="howto/user_profiles/users_simulation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/simulation_tool_dev/CMakeLists.txt" reftype="download" refwarn="False"><literal classes="xref download">CMakeLists.txt</literal></download_reference></line>
-                <line>├ <download_reference filename="1a96c1f0e6f53dae07a6c0a6b32f1036/simulationToolDev.cpp" refdoc="howto/user_profiles/users_simulation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/simulation_tool_dev/simulationToolDev.cpp" reftype="download" refwarn="False"><literal classes="xref download">example_simulationToolDev.cpp</literal></download_reference></line>
-                <line>└ resources/</line>
-                <line_block>
-                    <line>└ <download_reference filename="e2de8df04fb09256cd8a3c9fd355481d/simulationExample.cellml" refdoc="howto/user_profiles/users_simulation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/simulation_tool_dev/simulationExample.cellml" reftype="download" refwarn="False"><literal classes="xref download">simulationExample.cellml</literal></download_reference></line>
-                </line_block>
-            </line_block>
-        </line_block>
-        <line_block>
-            <line><strong>Python resources</strong></line>
-            <line_block>
-                <line>├ <download_reference filename="5b3c7b36f7aedccc4adc246da4ad5d15/simulationToolDev.py" refdoc="howto/user_profiles/users_simulation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/simulation_tool_dev/simulationToolDev.py" reftype="download" refwarn="False"><literal classes="xref download">example_simulationToolDev.py</literal></download_reference></line>
-                <line>└ resources/</line>
-                <line_block>
-                    <line>└ <download_reference filename="e2de8df04fb09256cd8a3c9fd355481d/simulationExample.cellml" refdoc="howto/user_profiles/users_simulation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/simulation_tool_dev/simulationExample.cellml" reftype="download" refwarn="False"><literal classes="xref download">simulationExample.cellml</literal></download_reference></line>
-                </line_block>
-            </line_block>
-        </line_block>
+            <paragraph><strong>Python resources</strong>: <download_reference filename="29454f7b3f404947d955a3904f40dc13/" refdoc="howto/user_profiles/users_simulation_tool_dev" refdomain="" refexplicit="True" reftarget="" reftype="download" refwarn="False"><literal classes="xref download">All Python resources</literal></download_reference></paragraph>
+            <bullet_list bullet="-">
+                <list_item>
+                    <paragraph><download_reference filename="5b3c7b36f7aedccc4adc246da4ad5d15/simulationToolDev.py" refdoc="howto/user_profiles/users_simulation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/simulation_tool_dev/simulationToolDev.py" reftype="download" refwarn="False"><literal classes="xref download">example_simulationToolDev.py</literal></download_reference></paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>resources/</paragraph>
+                    <block_quote>
+                        <bullet_list bullet="-">
+                            <list_item>
+                                <paragraph><download_reference filename="e2de8df04fb09256cd8a3c9fd355481d/simulationExample.cellml" refdoc="howto/user_profiles/users_simulation_tool_dev" refdomain="" refexplicit="True" reftarget="../code/simulation_tool_dev/simulationExample.cellml" reftype="download" refwarn="False"><literal classes="xref download">simulationExample.cellml</literal></download_reference></paragraph>
+                            </list_item>
+                        </bullet_list>
+                    </block_quote>
+                </list_item>
+            </bullet_list>
+        </container>
         <section ids="parse-an-existing-model-from-a-file" names="parse\ an\ existing\ model\ from\ a\ file">
-            <title refid="id1">Parse an existing model from a file</title>
+            <title>Parse an existing model from a file</title>
             <paragraph>The following code will read a file called <literal classes="code">simulationExample.cellml</literal> and deserialise its contents into a <literal classes="code">Model</literal> instance.
                 Note that both the <literal classes="code">Parser</literal> class and its opposite number, the <literal classes="code">Printer</literal> class, deal with strings rather than files.
                 You’ll need to read the file into a string, and then use the string as input to the <literal classes="code">Parser</literal> item.</paragraph>
@@ -108,7 +101,7 @@
             </container>
         </section>
         <section ids="resolve-imports-and-flatten-model" names="resolve\ imports\ and\ flatten\ model">
-            <title refid="id2">Resolve imports and flatten model</title>
+            <title>Resolve imports and flatten model</title>
             <paragraph>The import functionality for <literal classes="code">Units</literal> and <literal classes="code">Component</literal> items is key to enabling the reuse and sharing of models.
                 The import statements are basically a recipe for how these imported items can be combined to make the present model.
                 While models which contain import dependencies are perfectly valid, they cannot be used to generate runnable code.
@@ -183,7 +176,7 @@
             </container>
         </section>
         <section ids="validate-model" names="validate\ model">
-            <title refid="id3">Validate model</title>
+            <title>Validate model</title>
             <paragraph>The <literal classes="code">Validator</literal> is the equivalent of a spelling checker: it can check that each item in a model has all of the information it needs, but it can’t check whether it means what you intend it to.
                 Thus even if a model is valid, it could still be the equivalent of correctly-spelled nonsense.</paragraph>
             <target refid="snippet-validate-model"></target>
@@ -231,7 +224,7 @@
             <paragraph>For more information on how to use any of the classes which record issues, please see the <reference internal="True" refuri="../actions/get_issues#actions-get-issues"><inline classes="std std-ref">Get Issues</inline></reference> section.</paragraph>
         </section>
         <section ids="analyse-model" names="analyse\ model">
-            <title refid="id4">Analyse model</title>
+            <title>Analyse model</title>
             <paragraph>Before code can be generated from this model, its mathematics must be checked.
                 The <literal classes="code">Validator</literal> checks that the syntax of the model is correct; the <literal classes="code">Analyser</literal> checks that the maths is sensible, and that all the required information is available.
                 There are three steps to model analysis:</paragraph>
@@ -283,7 +276,7 @@
             </container>
         </section>
         <section ids="generate-code" names="generate\ code">
-            <title refid="id5">Generate code</title>
+            <title>Generate code</title>
             <paragraph>Code generation is the process of representing the CellML model in another language format.
                 At the time of writing, two profiles are available: C (default) and Python.
                 There are four steps to code generation:</paragraph>
@@ -388,7 +381,7 @@
             </container>
         </section>
         <section ids="use-the-generated-code-to-simulate-the-model" names="use\ the\ generated\ code\ to\ simulate\ the\ model">
-            <title refid="id6">Use the generated code to simulate the model</title>
+            <title>Use the generated code to simulate the model</title>
             <paragraph>Instructions for a simple solver to solve the model can be found on the <reference internal="True" refuri="users_solver#users-solver"><inline classes="std std-ref">Simulation tool developer: Solver</inline></reference> page.</paragraph>
         </section>
     </section>

@@ -25,8 +25,8 @@
                 </list_item>
             </bullet_list>
         </container>
-        <container classes="shortlist">
-            <paragraph><strong>Code (C++)</strong></paragraph>
+        <container classes="directorylist">
+            <paragraph><strong>C++ resources</strong></paragraph>
             <bullet_list bullet="-">
                 <list_item>
                     <paragraph><download_reference filename="24eb7d0a1e98b3a065d25198ddf8a4a8/CMakeLists.txt" refdoc="tutorials/hh_tutorials/tut3/index" refdomain="" refexplicit="True" reftarget="CMakeLists.txt" reftype="download" refwarn="False"><literal classes="xref download">CMakeLists.txt</literal></download_reference> The CMake file for building this tutorial;</paragraph>
@@ -41,9 +41,7 @@
                     <paragraph><download_reference filename="06ff53536b706ded677269f762807d27/utilities.cpp" refdoc="tutorials/hh_tutorials/tut3/index" refdomain="" refexplicit="True" reftarget="../code/utilities.cpp" reftype="download" refwarn="False"><literal classes="xref download">utilities.cpp</literal></download_reference> and <download_reference filename="552053dccea02ef16af526455359b1c2/utilities.h" refdoc="tutorials/hh_tutorials/tut3/index" refdomain="" refexplicit="True" reftarget="../code/utilities.h" reftype="download" refwarn="False"><literal classes="xref download">utilities.h</literal></download_reference> Helper functions.</paragraph>
                 </list_item>
             </bullet_list>
-        </container>
-        <container classes="shortlist">
-            <paragraph><strong>Code (Python)</strong></paragraph>
+            <paragraph><strong>Python resources</strong></paragraph>
             <bullet_list bullet="-">
                 <list_item>
                     <paragraph><download_reference filename="21b5241d4e386cd903035149835d4ca5/debugSodiumChannelModel.py" refdoc="tutorials/hh_tutorials/tut3/index" refdomain="" refexplicit="True" reftarget="debugSodiumChannelModel.py" reftype="download" refwarn="False"><literal classes="xref download">debugSodiumChannelModel.py</literal></download_reference> Either the skeleton code, or ..</paragraph>
@@ -52,9 +50,7 @@
                     <paragraph><download_reference filename="6567751c1466a3320fa19f3806787f51/debugSodiumChannelModel_completed.py" refdoc="tutorials/hh_tutorials/tut3/index" refdomain="" refexplicit="True" reftarget="debugSodiumChannelModel_completed.py" reftype="download" refwarn="False"><literal classes="xref download">debugSodiumChannelModel_completed.py</literal></download_reference> the completed tutorial code; and</paragraph>
                 </list_item>
             </bullet_list>
-        </container>
-        <container classes="shortlist">
-            <paragraph><strong>Resources</strong></paragraph>
+            <paragraph><strong>CellML resources</strong></paragraph>
             <bullet_list bullet="-">
                 <list_item>
                     <paragraph><download_reference filename="5225d6f6f7848cde5af1de4059bc6cd1/GateModel.cellml" refdoc="tutorials/hh_tutorials/tut3/index" refdomain="" refexplicit="True" reftarget="GateModel.cellml" reftype="download" refwarn="False"><literal classes="xref download">GateModel.cellml</literal></download_reference> the generic gate model created in Tutorial 1;</paragraph>
@@ -73,41 +69,12 @@
                 </list_item>
             </bullet_list>
         </container>
-        <topic classes="contents local" ids="contents" names="contents">
-            <title>Contents</title>
-            <bullet_list>
-                <list_item>
-                    <paragraph><reference ids="id1" refid="overview">Overview</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id2" refid="step-1-parse-the-existing-sodium-channel-model">Step 1: Parse the existing sodium channel model</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id3" refid="step-2-validate-the-parsed-model">Step 2: Validate the parsed model</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id4" refid="step-3-repair-the-parsed-model">Step 3: Repair the parsed model</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id5" refid="step-4-resolve-the-model-s-imports">Step 4: Resolve the model’s imports</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id6" refid="step-5-validate-the-imported-dependencies">Step 5: Validate the imported dependencies</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id7" refid="step-6-analyse-the-model-s">Step 6: Analyse the model(s)</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id8" refid="step-7-serialise-and-print-the-repaired-model">Step 7: Serialise and print the repaired model</reference></paragraph>
-                </list_item>
-            </bullet_list>
-        </topic>
         <section ids="overview" names="overview">
-            <title refid="id1">Overview</title>
+            <title>Overview</title>
             <paragraph>This tutorial looks at how a “broken” model can be investigated and debugged using the diagnostic tools in the three special classes: the <literal classes="code">Importer</literal>, the <literal classes="code">Analyser</literal>, and the <literal classes="code">Validator</literal>.</paragraph>
         </section>
         <section ids="step-1-parse-the-existing-sodium-channel-model" names="step\ 1:\ parse\ the\ existing\ sodium\ channel\ model">
-            <title refid="id2">Step 1: Parse the existing sodium channel model</title>
+            <title>Step 1: Parse the existing sodium channel model</title>
             <paragraph>The <literal classes="code">Parser</literal> class is used to deserialise a CellML string into a <literal classes="code">Model</literal> instance.
                 This means that you’re responsible for finding, opening and reading the <literal classes="code">*.cellml</literal> file into a single string.
                 The parser will then read that string and return a model.</paragraph>
@@ -279,7 +246,7 @@
                             └──&gt; sodiumChannelEquations:E_Na [mV]</literal_block>
         </section>
         <section ids="step-2-validate-the-parsed-model" names="step\ 2:\ validate\ the\ parsed\ model">
-            <title refid="id3">Step 2: Validate the parsed model</title>
+            <title>Step 2: Validate the parsed model</title>
             <paragraph>Create a <literal classes="code">Validator</literal> item and use it to validate the model you’ve just read.</paragraph>
             <container classes="dothis">
                 <paragraph><strong>2.a</strong> Create a <literal classes="code">Validator</literal> item and validate the model.</paragraph>
@@ -364,7 +331,7 @@ stored item type: VARIABLE
             </container>
         </section>
         <section ids="step-3-repair-the-parsed-model" names="step\ 3:\ repair\ the\ parsed\ model">
-            <title refid="id4">Step 3: Repair the parsed model</title>
+            <title>Step 3: Repair the parsed model</title>
             <paragraph>The messages returned from the validator (and other classes) should (!) have enough information to enable you to know what the problem is.
                 In the case of the validator class, the URL listed contains additional resources and examples related to the issue, as well as its section in the CellML normative specification.</paragraph>
             <paragraph>In some situations more than one <literal classes="code">Issue</literal> will be generated from a single cause: this is the case with issues 0 and 1 here:</paragraph>
@@ -733,7 +700,7 @@ Issue 8: Variable 'V' in component 'sodiumChannel' has units of '' and an equiva
     - Component 'sodiumChannelParameters' has 0 child components</literal_block>
         </section>
         <section ids="step-4-resolve-the-model-s-imports" names="step\ 4:\ resolve\ the\ model's\ imports">
-            <title refid="id5">Step 4: Resolve the model’s imports</title>
+            <title>Step 4: Resolve the model’s imports</title>
             <paragraph>It’s important to remember that the imports are merely instructions for how components or units items should be located: only their syntax is checked by the validator, not that the files exist or contain the required information.  To debug the imported aspects of the model, we need to use an <literal classes="code">Importer</literal> class.</paragraph>
             <paragraph>To resolve the imports, we need a path to a base location against which any relative file addresses can be resolved.
                 For this tutorial, the files are in the same directory as the code, so simply using an empty string is sufficient.</paragraph>
@@ -900,7 +867,7 @@ Issue [0] is an ERROR:
             </container>
         </section>
         <section ids="step-5-validate-the-imported-dependencies" names="step\ 5:\ validate\ the\ imported\ dependencies">
-            <title refid="id6">Step 5: Validate the imported dependencies</title>
+            <title>Step 5: Validate the imported dependencies</title>
             <paragraph>At this stage we’ve validated the local model, and we’ve used the <literal classes="code">Importer</literal> class to retrieve all of its import dependencies.
                 These dependencies are stored in the importer’s library, and have not yet been validated or analysed.</paragraph>
             <container classes="useful">
@@ -1030,7 +997,7 @@ Import source [1]:
     library[url] = 0x7ff6141003c0</literal_block>
         </section>
         <section ids="step-6-analyse-the-model-s" names="step\ 6:\ analyse\ the\ model(s)">
-            <title refid="id7">Step 6: Analyse the model(s)</title>
+            <title>Step 6: Analyse the model(s)</title>
             <paragraph>As with the validator, the <literal classes="code">Analyser</literal> class is a diagnostic class which will check whether the mathematical representation is ready for simulation.
                 This involves making sure that variables are contained in equations, that integrated variables have initial conditions, and that there are no over- or under-constrained sets of equations.
                 Since this model uses imports, the real mathematical model is hidden from the <literal classes="code">Analyser</literal> (just as it was from the <literal classes="code">Validator</literal>).
@@ -1366,7 +1333,7 @@ Issue [1] is an ERROR:
             </container>
         </section>
         <section ids="step-7-serialise-and-print-the-repaired-model" names="step\ 7:\ serialise\ and\ print\ the\ repaired\ model">
-            <title refid="id8">Step 7: Serialise and print the repaired model</title>
+            <title>Step 7: Serialise and print the repaired model</title>
             <container classes="dothis">
                 <paragraph><strong>7.a</strong> Create a <literal classes="code">Printer</literal> instance and use it to print the CellML-formatted version of the repaired model to a string.
                     Remember we’ll still be printing the original version of the model, not the flattened one!</paragraph>
