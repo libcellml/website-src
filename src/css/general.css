@@ -124,9 +124,13 @@ td a {
     margin-top: 0.3rem;
     white-space: nowrap;
     display: block;
-    direction: rtl; /* This is so that it will collapse from the left on small screens */
+    direction: rtl;   /* This is so that it will collapse from the left on small screens */
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+ul.v-breadcrumbs {
+    padding: 0;
 }
 
 .breadcrumbs * {
@@ -136,12 +140,16 @@ td a {
 }
 
 .v-breadcrumbs {
-    padding: 0 0.5em 0 0;
+    padding: 0;
     flex-wrap: nowrap;
 }
 
 .v-breadcrumbs li {
     font-size: 0.9rem;
+}
+
+.v-breadcrumbs li:last-child {
+    padding-left: 0;
 }
 
 code.xref {
