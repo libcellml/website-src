@@ -41,28 +41,26 @@
                     >clear</v-btn
                   ></v-subheader
                 >
-                <v-list-item-group color="primary">
-                  <v-tooltip
-                    bottom
-                    v-for="(item, i) in downloads"
-                    :key="i"
-                    @click="downloadFile(i)"
-                  >
-                    <template v-slot:activator="{ on }">
-                      <v-list-item v-on="on">
-                        <v-list-item-icon>
-                          <v-icon>mdi-download</v-icon>
-                        </v-list-item-icon>
-                        <v-list-item-content>
-                          <v-list-item-title
-                            v-text="item.name"
-                          ></v-list-item-title>
-                        </v-list-item-content>
-                      </v-list-item>
-                    </template>
-                    <span>Download</span>
-                  </v-tooltip>
-                </v-list-item-group>
+                <v-tooltip bottom v-for="(item, i) in downloads" :key="i">
+                  <template v-slot:activator="{ on }">
+                    <v-list-item
+                      v-on="on"
+                      @click="downloadFile(item)"
+                      :disabled="item.pending"
+                    >
+                      <v-list-item-icon :class="{ loading: item.pending }">
+                        <v-icon v-if="item.pending">mdi-loading</v-icon>
+                        <v-icon v-else>mdi-download</v-icon>
+                      </v-list-item-icon>
+                      <v-list-item-content>
+                        <v-list-item-title
+                          v-text="downloadFileTitle(item)"
+                        ></v-list-item-title>
+                      </v-list-item-content>
+                    </v-list-item>
+                  </template>
+                  <span>Download</span>
+                </v-tooltip>
               </v-list>
             </v-card>
           </v-container>
@@ -75,8 +73,10 @@
 <script>
 import axios from 'axios'
 
+import filesize from 'filesize'
+import { mapActions } from 'vuex'
 import BreadCrumbs from '@/components/BreadCrumbs'
-import { translate, getXslt } from '@/js/translate'
+import { translate, translateOmex, getXslt } from '@/js/translate'
 
 export default {
   name: 'Download',
@@ -100,17 +100,55 @@ export default {
           if (file.type === '') {
             reader.readAsText(file, 'UTF-8')
             reader.onload = function(evt) {
-              this_.downloads.push({
-                name: file.name,
-                data: translate(evt.target.result, xsl),
-              })
+              try {
+                const translatedFile = translate(evt.target.result, xsl)
+                this_.downloads.push({
+                  name: file.name,
+                  data: translatedFile,
+                  type: 'text/xml',
+                  pending: false,
+                })
+              } catch {
+                // Ok so not straight up text then.
+                reader.readAsDataURL(file)
+                reader.onload = function(evt) {
+                  try {
+                    const base64Encoding = evt.target.result.split('base64,')
+                    const translatedFile = translateOmex(base64Encoding[1], xsl)
+                    const index = this_.downloads.length
+                    this_.downloads.push({
+                      name: file.name,
+                      data: null,
+                      type: 'application/x-zip',
+                      pending: true,
+                    })
+                    translatedFile.then(result => {
+                      this_.downloads[index].data = result
+                      this_.downloads[index].pending = false
+                    })
+                  } catch {
+                    this_.add({
+                      type: 'error',
+                      title: 'Could not translate file:',
+                      message: file.name,
+                    })
+                  }
+                }
+              }
             }
             reader.onerror = function(evt) {
-              console.log('file read error ...')
-              console.log(evt)
+              this_.add({
+                type: 'error',
+                title: `File read error:`,
+                message: file.name,
+              })
             }
           } else {
-            // console.log('Unhandled file type:', file.name, file.type)
+            this_.add({
+              type: 'error',
+              title: `Could not translate file:`,
+              message: `'${file.name}' of type '${file.type}'.`,
+            })
           }
         }
       })
@@ -129,20 +167,41 @@ export default {
     clearDownloads() {
       this.downloads = []
     },
-    downloadFile(key) {
-      const serializer = new XMLSerializer()
-      const documentFragmentString = serializer.serializeToString(
-        this.downloads[key].data,
-      )
-      const blob = new Blob([documentFragmentString], {
-        type: 'text/xml',
+    downloadFileTitle(item) {
+      let title = item.name
+      if (item.pending) {
+        title += ' (??)'
+      } else {
+        title += ` (${filesize(item.data.length)})`
+      }
+      return title
+    },
+    downloadFile(item) {
+      const blob = new Blob([item.data], {
+        type: item.type,
       })
       const link = document.createElement('a')
       link.href = window.URL.createObjectURL(blob)
-      link.download = this.downloads[key].name
+      link.download = item.name
       link._target = 'blank'
       link.click()
     },
+    ...mapActions('notifications', ['add']),
   },
 }
 </script>
+
+<style scoped>
+.loading {
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+</style>
