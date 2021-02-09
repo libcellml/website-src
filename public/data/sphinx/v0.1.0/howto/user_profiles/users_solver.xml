@@ -7,56 +7,44 @@
         <title>Simulation tool developer: Solver</title>
         <paragraph>The code generation functionality in libCellML can be used to transform CellML models into procedural code for simulation.
             This example works through that process.</paragraph>
-        <paragraph><strong>Contents</strong></paragraph>
-        <topic classes="contents local" ids="contents" names="contents">
-            <bullet_list>
+        <container classes="directorylist">
+            <paragraph><strong>C++ resources</strong>: <download_reference filename="29454f7b3f404947d955a3904f40dc13/" refdoc="howto/user_profiles/users_solver" refdomain="" refexplicit="True" reftarget="" reftype="download" refwarn="False"><literal classes="xref download">All C++ resources</literal></download_reference></paragraph>
+            <bullet_list bullet="-">
                 <list_item>
-                    <paragraph><reference ids="id1" refid="create-a-placeholder-for-the-solver">Create a placeholder for the solver</reference></paragraph>
+                    <paragraph><download_reference filename="368511725bf16ea613b7bdb8df7e1412/CMakeLists.txt" refdoc="howto/user_profiles/users_solver" refdomain="" refexplicit="True" reftarget="../code/solver/CMakeLists.txt" reftype="download" refwarn="False"><literal classes="xref download">CMakeLists.txt</literal></download_reference></paragraph>
                 </list_item>
                 <list_item>
-                    <paragraph><reference ids="id2" refid="connect-with-the-generated-code">Connect with the generated code</reference></paragraph>
+                    <paragraph><download_reference filename="f3257cc51d8dfcd4eed96e04a5e1cfa7/solveGeneratedModel.cpp" refdoc="howto/user_profiles/users_solver" refdomain="" refexplicit="True" reftarget="../code/solver/solveGeneratedModel.cpp" reftype="download" refwarn="False"><literal classes="xref download">example_solveGeneratedModel.cpp</literal></download_reference></paragraph>
                 </list_item>
                 <list_item>
-                    <paragraph><reference ids="id3" refid="retrieve-the-generated-model-information">Retrieve the generated model information</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id4" refid="allocate-space-for-the-solution">Allocate space for the solution</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id5" refid="retrieve-the-model-s-mathematical-formulation">Retrieve the model’s mathematical formulation</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id6" refid="prepare-a-file-for-the-solution-output">Prepare a file for the solution output</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id7" refid="perform-the-integration-steps">Perform the integration steps</reference></paragraph>
+                    <paragraph>resources/</paragraph>
+                    <bullet_list bullet="-">
+                        <list_item>
+                            <paragraph><download_reference filename="aba20c369f681f6810c30c666db506fa/sineComparisonExample.c" refdoc="howto/user_profiles/users_solver" refdomain="" refexplicit="True" reftarget="../code/generated_code/sineComparisonExample.c" reftype="download" refwarn="False"><literal classes="xref download">sineComparisonExample.c</literal></download_reference></paragraph>
+                        </list_item>
+                        <list_item>
+                            <paragraph><download_reference filename="26aaf738c4bda875abed08c39fa51c69/sineComparisonExample.h" refdoc="howto/user_profiles/users_solver" refdomain="" refexplicit="True" reftarget="../code/generated_code/sineComparisonExample.h" reftype="download" refwarn="False"><literal classes="xref download">sineComparisonExample.h</literal></download_reference></paragraph>
+                        </list_item>
+                    </bullet_list>
                 </list_item>
             </bullet_list>
-        </topic>
-        <line_block>
-            <line><strong>C++ resources</strong></line>
-            <line_block>
-                <line>├ <download_reference filename="368511725bf16ea613b7bdb8df7e1412/CMakeLists.txt" refdoc="howto/user_profiles/users_solver" refdomain="" refexplicit="True" reftarget="../code/solver/CMakeLists.txt" reftype="download" refwarn="False"><literal classes="xref download">CMakeLists.txt</literal></download_reference></line>
-                <line>├ <download_reference filename="f3257cc51d8dfcd4eed96e04a5e1cfa7/solveGeneratedModel.cpp" refdoc="howto/user_profiles/users_solver" refdomain="" refexplicit="True" reftarget="../code/solver/solveGeneratedModel.cpp" reftype="download" refwarn="False"><literal classes="xref download">example_solveGeneratedModel.cpp</literal></download_reference></line>
-                <line>└ resources/</line>
-                <line_block>
-                    <line>├ <download_reference filename="aba20c369f681f6810c30c666db506fa/sineComparisonExample.c" refdoc="howto/user_profiles/users_solver" refdomain="" refexplicit="True" reftarget="../code/generated_code/sineComparisonExample.c" reftype="download" refwarn="False"><literal classes="xref download">sineComparisonExample.c</literal></download_reference></line>
-                    <line>└ <download_reference filename="26aaf738c4bda875abed08c39fa51c69/sineComparisonExample.h" refdoc="howto/user_profiles/users_solver" refdomain="" refexplicit="True" reftarget="../code/generated_code/sineComparisonExample.h" reftype="download" refwarn="False"><literal classes="xref download">sineComparisonExample.h</literal></download_reference></line>
-                </line_block>
-            </line_block>
-        </line_block>
-        <line_block>
-            <line><strong>Python resources</strong></line>
-            <line_block>
-                <line>├ <download_reference filename="7db9c4c29d4e31a725d1b19d149e5949/solveGeneratedModel.py" refdoc="howto/user_profiles/users_solver" refdomain="" refexplicit="True" reftarget="../code/solver/solveGeneratedModel.py" reftype="download" refwarn="False"><literal classes="xref download">example_solveGeneratedModel.py</literal></download_reference></line>
-                <line>└ resources/</line>
-                <line_block>
-                    <line>└ <download_reference filename="e325e858a80f26b99ec7d5c025bb3a62/sineComparisonExample.py" refdoc="howto/user_profiles/users_solver" refdomain="" refexplicit="True" reftarget="../code/generated_code/sineComparisonExample.py" reftype="download" refwarn="False"><literal classes="xref download">sineComparisonExample.py</literal></download_reference></line>
-                </line_block>
-            </line_block>
-        </line_block>
+            <paragraph><strong>Python resources</strong>: <download_reference filename="29454f7b3f404947d955a3904f40dc13/" refdoc="howto/user_profiles/users_solver" refdomain="" refexplicit="True" reftarget="" reftype="download" refwarn="False"><literal classes="xref download">All Python resources</literal></download_reference></paragraph>
+            <bullet_list bullet="-">
+                <list_item>
+                    <paragraph><download_reference filename="7db9c4c29d4e31a725d1b19d149e5949/solveGeneratedModel.py" refdoc="howto/user_profiles/users_solver" refdomain="" refexplicit="True" reftarget="../code/solver/solveGeneratedModel.py" reftype="download" refwarn="False"><literal classes="xref download">example_solveGeneratedModel.py</literal></download_reference></paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>resources/</paragraph>
+                    <bullet_list bullet="-">
+                        <list_item>
+                            <paragraph><download_reference filename="e325e858a80f26b99ec7d5c025bb3a62/sineComparisonExample.py" refdoc="howto/user_profiles/users_solver" refdomain="" refexplicit="True" reftarget="../code/generated_code/sineComparisonExample.py" reftype="download" refwarn="False"><literal classes="xref download">sineComparisonExample.py</literal></download_reference></paragraph>
+                        </list_item>
+                    </bullet_list>
+                </list_item>
+            </bullet_list>
+        </container>
         <section ids="create-a-placeholder-for-the-solver" names="create\ a\ placeholder\ for\ the\ solver">
-            <title refid="id1">Create a placeholder for the solver</title>
+            <title>Create a placeholder for the solver</title>
             <paragraph>Interacting with procedural code means that we need a program, so the first step is to create what will soon become our solver.
                 To start with, the program only reads and interprets command line arguments; the size and number of timesteps to simulate.
                 This is done using a simple function, as below.</paragraph>
@@ -177,7 +165,7 @@
             </container>
         </section>
         <section ids="connect-with-the-generated-code" names="connect\ with\ the\ generated\ code">
-            <title refid="id2">Connect with the generated code</title>
+            <title>Connect with the generated code</title>
             <paragraph>The profile language will affect how you need to interact with the generated code.</paragraph>
             <paragraph>For Python, the generated code must be converted into a module, and then imported.
                 This is shown in the example code below.</paragraph>
@@ -252,7 +240,7 @@
             </container>
         </section>
         <section ids="retrieve-the-generated-model-information" names="retrieve\ the\ generated\ model\ information">
-            <title refid="id3">Retrieve the generated model information</title>
+            <title>Retrieve the generated model information</title>
             <paragraph>The generated code contains model information in dictionaries, as well as functions to interface with the model’s mathematics.
                 These are:</paragraph>
             <bullet_list bullet="-">
@@ -323,7 +311,7 @@
             </container>
         </section>
         <section ids="allocate-space-for-the-solution" names="allocate\ space\ for\ the\ solution">
-            <title refid="id4">Allocate space for the solution</title>
+            <title>Allocate space for the solution</title>
             <paragraph>Also within the generated code are functions to allocate space for the variables:</paragraph>
             <bullet_list bullet="-">
                 <list_item>
@@ -373,7 +361,7 @@
             </container>
         </section>
         <section ids="retrieve-the-model-s-mathematical-formulation" names="retrieve\ the\ model's\ mathematical\ formulation">
-            <title refid="id5">Retrieve the model’s mathematical formulation</title>
+            <title>Retrieve the model’s mathematical formulation</title>
             <paragraph>The mathematical equations that govern the model’s behaviour can be applied using functions from within the generated code:</paragraph>
             <bullet_list bullet="-">
                 <list_item>
@@ -443,7 +431,7 @@
             </container>
         </section>
         <section ids="prepare-a-file-for-the-solution-output" names="prepare\ a\ file\ for\ the\ solution\ output">
-            <title refid="id6">Prepare a file for the solution output</title>
+            <title>Prepare a file for the solution output</title>
             <paragraph>If you have an alternative way to save your solution, you can skip this step.
                 Here we create a simple text-delimited file into which the solution can be written at each timestep.</paragraph>
             <container classes="sphinx-tabs">
@@ -521,7 +509,7 @@
             </container>
         </section>
         <section ids="perform-the-integration-steps" names="perform\ the\ integration\ steps">
-            <title refid="id7">Perform the integration steps</title>
+            <title>Perform the integration steps</title>
             <paragraph>Finally we iterate through the timesteps, calculating the state variables, and updating the rates each step.
                 The solution values and calculated variables are written to the output file.</paragraph>
             <container classes="sphinx-tabs">

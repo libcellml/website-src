@@ -22,8 +22,8 @@
                 </list_item>
             </bullet_list>
         </container>
-        <container classes="shortlist">
-            <paragraph><strong>Requirements (C++)</strong></paragraph>
+        <container classes="directorylist">
+            <paragraph><strong>C++ resources</strong></paragraph>
             <bullet_list bullet="-">
                 <list_item>
                     <paragraph><download_reference filename="498b2ff29ba8a29e8e03b0daf6d35cee/CMakeLists.txt" refdoc="tutorials/hh_tutorials/tut1/index" refdomain="" refexplicit="True" reftarget="CMakeLists.txt" reftype="download" refwarn="False"><literal classes="xref download">CMakeLists.txt</literal></download_reference> The CMake file for building this tutorial;</paragraph>
@@ -38,9 +38,7 @@
                     <paragraph><download_reference filename="1e5a3e1f9cc923f9f6f123af58b3bb6f/utilities.cpp" refdoc="tutorials/hh_tutorials/tut1/index" refdomain="" refexplicit="True" reftarget="../code/utilities.cpp" reftype="download" refwarn="False"><literal classes="xref download">utilities.cpp</literal></download_reference> and <download_reference filename="7ac68c6c855c93c57f1b85874a704bb8/utilities.h" refdoc="tutorials/hh_tutorials/tut1/index" refdomain="" refexplicit="True" reftarget="../code/utilities.h" reftype="download" refwarn="False"><literal classes="xref download">utilities.h</literal></download_reference> Helper functions.</paragraph>
                 </list_item>
             </bullet_list>
-        </container>
-        <container classes="shortlist">
-            <paragraph><strong>Requirements (Python)</strong></paragraph>
+            <paragraph><strong>Python resources</strong></paragraph>
             <bullet_list bullet="-">
                 <list_item>
                     <paragraph><download_reference filename="7f10d220acc0dccc535cb51437241769/createGateModel.py" refdoc="tutorials/hh_tutorials/tut1/index" refdomain="" refexplicit="True" reftarget="createGateModel.py" reftype="download" refwarn="False"><literal classes="xref download">createGateModel.py</literal></download_reference> Either the skeleton code, or ..</paragraph>
@@ -50,40 +48,8 @@
                 </list_item>
             </bullet_list>
         </container>
-        <topic classes="contents local" ids="contents" names="contents">
-            <title>Contents</title>
-            <bullet_list>
-                <list_item>
-                    <paragraph><reference ids="id1" refid="overview">Overview</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id2" refid="step-1-set-up-the-model">Step 1: Set up the model</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id3" refid="step-2-create-the-gateequations-component">Step 2: Create the gateEquations component</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id4" refid="step-3-validate-the-model">Step 3: Validate the model</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id5" refid="step-4-add-the-variables">Step 4: Add the variables</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id6" refid="step-5-add-the-units">Step 5: Add the units</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id7" refid="step-6-analyse-the-mathematical-construction-of-the-model">Step 6: Analyse the mathematical construction of the model</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id8" refid="step-7-sanity-check">Step 7: Sanity check</reference></paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph><reference ids="id9" refid="step-8-serialise-and-output-the-model">Step 8: Serialise and output the model</reference></paragraph>
-                </list_item>
-            </bullet_list>
-        </topic>
         <section ids="overview" names="overview">
-            <title refid="id1">Overview</title>
+            <title>Overview</title>
             <paragraph>This is the first tutorial in a series designed to walk the user through some of libCellML’s functionality available in the API.
                 Its goal is to create from scratch a voltage-independent ion gate model.
                 The theory of this kind of gate can be found on the <reference internal="True" refuri="../../../theory/theory_iongates#theory-iongates"><inline classes="std std-ref">Ion Gate theory page</inline></reference>.</paragraph>
@@ -100,7 +66,7 @@
                 Each of the components created throughout this series of tutorials will follow this same structure.</paragraph>
         </section>
         <section ids="step-1-set-up-the-model" names="step\ 1:\ set\ up\ the\ model">
-            <title refid="id2">Step 1: Set up the model</title>
+            <title>Step 1: Set up the model</title>
             <container classes="useful">
                 <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Model">Model class</reference></paragraph>
                 <bullet_list bullet="-">
@@ -232,7 +198,7 @@
             VARIABLES: 0 variables</literal_block>
         </section>
         <section ids="step-2-create-the-gateequations-component" names="step\ 2:\ create\ the\ gateequations\ component">
-            <title refid="id3">Step 2: Create the gateEquations component</title>
+            <title>Step 2: Create the gateEquations component</title>
             <paragraph>Inside the wrapper component you created in Step 1 we need to create two more: an equations component, and a parameters component.
                 In this step we’ll construct the equations component.</paragraph>
             <container classes="dothis">
@@ -406,7 +372,7 @@ COMPONENTS: 1 components
                 &lt;/math&gt;</literal_block>
         </section>
         <section ids="step-3-validate-the-model" names="step\ 3:\ validate\ the\ model">
-            <title refid="id4">Step 3: Validate the model</title>
+            <title>Step 3: Validate the model</title>
             <paragraph>Once the mathematics has been added to the component, and the component to the model, we can make use of the diagnostic messages within the <literal classes="code">Validator</literal> class to tell us what else needs to be done.</paragraph>
             <container classes="useful">
                 <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Validator">Validator class</reference></paragraph>
@@ -588,7 +554,7 @@ Issue [5] is an ERROR:
     stored item type: MATHML</literal_block>
         </section>
         <section ids="step-4-add-the-variables" names="step\ 4:\ add\ the\ variables">
-            <title refid="id5">Step 4: Add the variables</title>
+            <title>Step 4: Add the variables</title>
             <paragraph>The issues reported by the validator are related to the MathML string that we entered in Step 2 requiring variables which don’t yet exist.
                 These must be created, named, and added to their parent component.</paragraph>
             <container classes="useful">
@@ -698,7 +664,7 @@ Issue [1] is an ERROR:
 ... etc ...</literal_block>
         </section>
         <section ids="step-5-add-the-units" names="step\ 5:\ add\ the\ units">
-            <title refid="id6">Step 5: Add the units</title>
+            <title>Step 5: Add the units</title>
             <paragraph>The validator has reported that the four variables are missing units attributes.
                 In this example none of the units exist yet, so we need to create all of them.</paragraph>
             <container classes="shortlist">
@@ -910,7 +876,7 @@ COMPONENTS: 1 components
                     [3]: X [dimensionless]</literal_block>
         </section>
         <section ids="step-6-analyse-the-mathematical-construction-of-the-model" names="step\ 6:\ analyse\ the\ mathematical\ construction\ of\ the\ model">
-            <title refid="id7">Step 6: Analyse the mathematical construction of the model</title>
+            <title>Step 6: Analyse the mathematical construction of the model</title>
             <container classes="useful">
                 <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Analyser">Analyser class</reference></paragraph>
                 <bullet_list bullet="-">
@@ -1241,7 +1207,7 @@ Issue [0] is an ERROR:
             </container>
         </section>
         <section ids="step-7-sanity-check" names="step\ 7:\ sanity\ check">
-            <title refid="id8">Step 7: Sanity check</title>
+            <title>Step 7: Sanity check</title>
             <container classes="useful">
                 <paragraph>There’s a helper function provided for these tutorials which will print the model to the terminal.
                     Use <literal classes="code">printModel(Model, bool)</literal> (in C++) or <literal classes="code">print_model</literal> (in Python) function to print the contents of the given <literal classes="code">Model</literal>.
@@ -1355,7 +1321,7 @@ COMPONENTS: 1 components
             </container>
         </section>
         <section ids="step-8-serialise-and-output-the-model" names="step\ 8:\ serialise\ and\ output\ the\ model">
-            <title refid="id9">Step 8: Serialise and output the model</title>
+            <title>Step 8: Serialise and output the model</title>
             <paragraph>The <literal classes="code">Printer</literal> class in libCellML takes the stored instance of a <literal classes="code">Model</literal> item and creates a string representing its serialisation into CellML code.</paragraph>
             <container classes="dothis">
                 <paragraph><strong>8.a</strong> Create a <literal classes="code">Printer</literal> instance and use it to serialise the model into a string.
