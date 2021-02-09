@@ -69,7 +69,7 @@
 </template>
 
 <script>
-import IconWA from '@/assets/IconWA'
+import IconWA from '@/assets/icons/IconWA'
 export default {
   name: 'DownloadSummary',
   components: {

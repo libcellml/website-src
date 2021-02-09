@@ -37,9 +37,8 @@
         </container>
         <section ids="requirements" names="requirements">
             <title>Requirements</title>
-            <paragraph>Either <download_reference filename="e93f8aa04b16df5f283bb9048d6f93d2/tutorial2.zip" refdoc="tutorials/tutorial2/index" refdomain="" refexplicit="True" reftarget="tutorial2.zip" reftype="download" refwarn="False"><literal classes="xref download">download the whole folder</literal></download_reference>, or:</paragraph>
-            <container classes="shortlist">
-                <paragraph><strong>C++</strong></paragraph>
+            <container classes="directorylist">
+                <paragraph><strong>C++ resources</strong></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph><download_reference filename="7e04211f837691438f50b728598bbfe7/CMakeLists.txt" refdoc="tutorials/tutorial2/index" refdomain="" refexplicit="True" reftarget="CMakeLists.txt" reftype="download" refwarn="False"><literal classes="xref download">CMakeLists.txt</literal></download_reference> The CMake file for building;</paragraph>
@@ -54,9 +53,7 @@
                         <paragraph><download_reference filename="7e5adff2a93596f4f1a6e2e1d9a90908/utilities.cpp" refdoc="tutorials/tutorial2/index" refdomain="" refexplicit="True" reftarget="../utilities/utilities.cpp" reftype="download" refwarn="False"><literal classes="xref download">utilities.cpp</literal></download_reference> and <download_reference filename="774be81a9e3619b2fc85c86a497145d1/utilities.h" refdoc="tutorials/tutorial2/index" refdomain="" refexplicit="True" reftarget="../utilities/utilities.h" reftype="download" refwarn="False"><literal classes="xref download">utilities.h</literal></download_reference> Utility functions for use in the tutorials.</paragraph>
                     </list_item>
                 </bullet_list>
-            </container>
-            <container classes="shortlist">
-                <paragraph><strong>Python</strong></paragraph>
+                <paragraph><strong>Python resources</strong></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph><download_reference filename="0ec22c96b572783b093236ffc5955c8f/tutorial2.py" refdoc="tutorials/tutorial2/index" refdomain="" refexplicit="False" reftarget="tutorial2.py" reftype="download" refwarn="False"><literal classes="xref download">tutorial2.py</literal></download_reference> The skeleton code or</paragraph>
@@ -68,9 +65,7 @@
                         <paragraph><download_reference filename="81cedc83cfc662b8b35c748c1444681a/utilities.py" refdoc="tutorials/tutorial2/index" refdomain="" refexplicit="True" reftarget="../utilities/utilities.py" reftype="download" refwarn="False"><literal classes="xref download">utilities.py</literal></download_reference> Utility functions for use in the tutorials.</paragraph>
                     </list_item>
                 </bullet_list>
-            </container>
-            <container classes="shortlist">
-                <paragraph><strong>Resources</strong></paragraph>
+                <paragraph><strong>CellML resources</strong></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
                         <paragraph><download_reference filename="443327a20d2934a8d0f8daf1203c5116/tutorial2.cellml" refdoc="tutorials/tutorial2/index" refdomain="" refexplicit="True" reftarget="tutorial2.cellml" reftype="download" refwarn="False"><literal classes="xref download">tutorial2.cellml</literal></download_reference> the input CellML file.</paragraph>
@@ -229,7 +224,7 @@ validator.validateModel(your_model_here)</literal_block>
                 <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Validator">Validator class</reference></paragraph>
                 <bullet_list bullet="-">
                     <list_item>
-                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1issueCount &lt;Validator?fName=&gt;issueCount">issueCount &lt;Validator?fName=&gt;issueCount</reference></paragraph>
+                        <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Validator?fName=issueCount">issueCount</reference></paragraph>
                     </list_item>
                     <list_item>
                         <paragraph><reference internal="False" refuri="/documentation/api/latest/classlibcellml_1_1Validator?fName=issue">issue</reference></paragraph>
@@ -304,14 +299,23 @@ validator.validateModel(your_model_here)</literal_block>
             <paragraph>Now we need to create an iterative loop to retrieve all the issues (and there should be a few in this particular model!) from the validator.
                 Again following the same retrieval idiom as in Tutorial 1 for items in sets, we can access the issues using an index:</paragraph>
             <container classes="sphinx-tabs">
-                <literal_block force="False" highlight_args="{}" language="c++" linenos="False" xml:space="preserve">auto theFifteenthIssue = validator-&gt;issue(14);</literal_block>
+                <container>
+                    <container classes="item">
+                        <container>
+                            <paragraph>C++</paragraph>
+                        </container>
+                    </container>
+                    <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-Qysr active">
+                    </container>
+                    <literal_block force="False" highlight_args="{}" language="cpp" linenos="False" xml:space="preserve">auto theFifteenthIssue = validator-&gt;issue(14);</literal_block>
+                </container>
                 <container>
                     <container classes="item">
                         <container>
                             <paragraph>Python</paragraph>
                         </container>
                     </container>
-                    <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-UHl0aG9u active">
+                    <container classes="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-UHl0aG9u">
                     </container>
                     <literal_block force="False" highlight_args="{}" language="python" linenos="False" xml:space="preserve">the_15th_issue = validator.issue(14)</literal_block>
                 </container>
@@ -605,18 +609,20 @@ Validator issue[4]:
                     <colspec colwidth="19"></colspec>
                     <colspec colwidth="18"></colspec>
                     <colspec colwidth="102"></colspec>
-                    <tbody>
+                    <thead>
                         <row>
                             <entry>
-                                <paragraph>enumeration value</paragraph>
+                                <paragraph>Enumeration value</paragraph>
                             </entry>
                             <entry>
-                                <paragraph>function to call</paragraph>
+                                <paragraph>Function to call</paragraph>
                             </entry>
                             <entry>
-                                <paragraph>type returned from function</paragraph>
+                                <paragraph>Type returned from function</paragraph>
                             </entry>
                         </row>
+                    </thead>
+                    <tbody>
                         <row>
                             <entry>
                                 <paragraph>COMPONENT</paragraph>
