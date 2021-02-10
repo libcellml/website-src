@@ -13,11 +13,14 @@ import {
 
 Vue.use(VueRouter)
 
+const DEFAULT_TITLE = 'libCellML';
+
 const routes = [
   {
     path: '/',
     name: 'Home',
     component: Home,
+    meta: { title: 'libCellML: Home' },
     beforeEnter: (to, from, next) => {
       if (sessionStorage.getItem('redirect') !== null) {
         const redirect = sessionStorage.redirect
@@ -31,16 +34,19 @@ const routes = [
   {
     path: '/documentation',
     name: 'Documentation',
+    meta: { title: 'libCellML: Documentation' },
     component: () => import('../views/Documentation.vue'),
   },
   {
     path: '/download',
     name: 'Download',
+    meta: { title: 'libCellML: Download' },
     component: () => import('../views/Download.vue'),
   },
   {
     path: '/documentation/api/:version/:pageName?',
     name: 'APIReferencePage',
+    meta: { title: 'libCellML: API' },
     component: () =>
       import(/* webpackChunkName: "doxygen" */ '../views/HelpAPIPage.vue'),
   },
@@ -54,6 +60,7 @@ const routes = [
   {
     path: '/documentation/guides/:version/:pageName*',
     name: 'TutorialsPage',
+    meta: { title: 'libCellML: User Guides' },
     component: () =>
       import(/* webpackChunkName: "sphinx" */ '../views/HelpTutorialsPage.vue'),
   },
@@ -67,6 +74,7 @@ const routes = [
   {
     path: '/documentation/developers/:version/:pageName*',
     name: 'Developers',
+    meta: { title: 'libCellML: Developer Guides' },
     component: () =>
       import(/* webpackChunkName: "sphinx" */ '../views/Developers.vue'),
   },
@@ -80,12 +88,14 @@ const routes = [
   {
     path: '/translate',
     name: 'Translate',
+    meta: { title: 'libCellML: Translate' },
     component: () =>
       import(/* webpackChunkName: "translate" */ '../views/Translate.vue'),
   },
   {
     path: '/404',
     name: '404',
+    meta: { title: 'libCellML: Not Found' },
     component: () =>
       import(/* webpackChunkName: "notFound" */ '../views/NotFound.vue'),
   },
@@ -166,6 +176,11 @@ router.afterEach((to, from) => {
   if (to.name !== from.name) {
     store.commit('togglePageContentChanged')
   }
+  Vue.nextTick(() => {
+    document.title = to.meta.title || DEFAULT_TITLE;
+  });
 })
+
+
 
 export default router
