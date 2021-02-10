@@ -9,12 +9,19 @@
           The library is intended to be lightweight and focused purely in
           dealing with CellML models. In achieving this, some of the convenience
           methods/objects that we might expect will not be part of libCellML.
-          For questions, feature requests, and bug reports about the libCellML library, please visit
-          the <a href="https://github.com/cellml/libcellml/issues" target="_blank">libCellML GitHub repository</a>.
+          For questions, feature requests, and bug reports about the libCellML
+          library, please visit the
+          <a href="https://github.com/cellml/libcellml/issues" target="_blank"
+            >libCellML GitHub repository</a
+          >.
         </p>
         <p>
-          For problems with this website, please visit
-          the <a href="https://github.com/libcellml/website-src/issues" target="_blank">website GitHub repository</a>.
+          For problems with this website, please visit the
+          <a
+            href="https://github.com/libcellml/website-src/issues"
+            target="_blank"
+            >website GitHub repository</a
+          >.
         </p>
 
         <h3>Citing libCellML</h3>

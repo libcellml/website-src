@@ -13,7 +13,7 @@ import {
 
 Vue.use(VueRouter)
 
-const DEFAULT_TITLE = 'libCellML';
+const DEFAULT_TITLE = 'libCellML'
 
 const routes = [
   {
@@ -177,10 +177,8 @@ router.afterEach((to, from) => {
     store.commit('togglePageContentChanged')
   }
   Vue.nextTick(() => {
-    document.title = to.meta.title || DEFAULT_TITLE;
-  });
+    document.title = to.meta.title || DEFAULT_TITLE
+  })
 })
-
-
 
 export default router
