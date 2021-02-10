@@ -16,17 +16,24 @@
         <v-col>
           <v-tooltip bottom>
             <template v-slot:activator="{ on }">
-              <div v-on="on">
+              <v-btn
+                plain
+                v-on="on"
+                href="https://github.com/libcellml/website-src/issues/new/choose"
+                target="_blank"
+              >
                 <v-icon class="buggy">mdi-bug</v-icon>
                 <span>Hover me!</span>
-              </div>
+              </v-btn>
             </template>
             <span
               >This website is a work in progress. Some parts have bugs
               <br />and others have outright infestations. We are working to fix
               these<br />
               issues but feel free to add an issue at <br />
-              https://github.com/libcellml/website-src.</span
+              https://github.com/libcellml/website-src.<br /><br />
+              <strong>Click me!</strong> if you want to add an issue right
+              now!</span
             >
           </v-tooltip>
         </v-col>
