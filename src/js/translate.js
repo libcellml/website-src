@@ -1,17 +1,8 @@
 import axios from 'axios'
-// import * as zip from '@zip.js/zip.js'
-// import * as zip from 'jszip'
 const JSZip = require('jszip')
-// const fs = require('fs')
-// import {
-//   ZipWriter,
-//   BlobReader,
-//   Data64URIWriter,
-//   ZipReader,
-// } from '@zip.js/zip.js'
 
-// Convert a string to XML Node Structure
-// Returns null on failure
+// Convert a string to XML Node Structure.
+// Returns null on failure.
 function textToXML(text) {
   try {
     let xml = null
@@ -40,6 +31,7 @@ function textToXML(text) {
   }
 }
 
+// Convert XML element to string.
 function xmlToText(xml) {
   const serializer = new XMLSerializer()
   const documentFragmentString = serializer.serializeToString(xml)
@@ -79,6 +71,20 @@ function parseXml(xmlStr) {
   return new window.DOMParser().parseFromString(xmlStr, 'text/xml')
 }
 
+function findCellMLFiles(doc) {
+  let cellMLFiles = []
+  const identifiers = [
+    'http://identifiers.org/combine.specifications/cellml',
+    'http://identifiers.org/combine.specifications/cellml.1.0',
+    'http://identifiers.org/combine.specifications/cellml.1.1',
+  ]
+  for (const identifier of identifiers) {
+    const result = doc.querySelectorAll(`content[format="${identifier}"]`)
+    cellMLFiles.push(...result)
+  }
+
+  return cellMLFiles
+}
 export const translateOmex = async (content, transform) => {
   let resultDocument = null
   const archive = new JSZip()
@@ -91,18 +97,19 @@ export const translateOmex = async (content, transform) => {
     const text = await zip.file('manifest.xml').async('string')
     if (text) {
       const doc = parseXml(text)
-      const elements = doc.querySelectorAll(
-        'content[format="http://identifiers.org/combine.specifications/cellml"]',
-      )
+      const elements = findCellMLFiles(doc)
       for (const el of elements) {
-        const cellMLFile = el.getAttribute('location')
-        const zipLocation = cellMLFile.substr(2)
-        const zippedFile = zip.file(zipLocation)
+        let cellMLFile = el.getAttribute('location')
+        console.log(cellMLFile)
+        if (cellMLFile.startsWith('./')) {
+          cellMLFile = cellMLFile.substr(2)
+        }
+        const zippedFile = zip.file(cellMLFile)
         if (zippedFile) {
           const cellMLContent = await zippedFile.async('string')
           const transformedCellMLContent = translate(cellMLContent, transform)
 
-          zip.file(zipLocation, transformedCellMLContent)
+          zip.file(cellMLFile, transformedCellMLContent)
         }
       }
     }
