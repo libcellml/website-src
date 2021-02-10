@@ -98,6 +98,23 @@ export default {
     }
   },
   methods: {
+    readXMLText(file) {
+      success = false
+      reader.readAsText(file, 'UTF-8')
+      reader.onload = function(evt) {
+        try {
+          const translatedFile = translate(evt.target.result, xsl)
+          this_.downloads.push({
+            name: file.name,
+            data: translatedFile,
+            type: 'text/xml',
+            pending: false,
+          })
+          success = true
+        } catch {}
+      }
+      return success
+    },
     translateFiles() {
       const reader = new FileReader()
       const this_ = this
@@ -149,6 +166,26 @@ export default {
                 title: `File read error:`,
                 message: file.name,
               })
+            }
+          }
+          if (file.type === 'text/xml') {
+            reader.readAsText(file, 'UTF-8')
+            reader.onload = function(evt) {
+              try {
+                const translatedFile = translate(evt.target.result, xsl)
+                this_.downloads.push({
+                  name: file.name,
+                  data: translatedFile,
+                  type: 'text/xml',
+                  pending: false,
+                })
+              } catch {
+                this_.add({
+                  type: 'error',
+                  title: `Could not translate file:`,
+                  message: `'${file.name}' of type '${file.type}'.`,
+                })
+              }
             }
           } else {
             this_.add({
