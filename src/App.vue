@@ -3,8 +3,8 @@
     <v-app-bar app clipped-left>
       <img src="./assets/logo.svg" width="40" height="40" />
       <v-app-bar-nav-icon @click="onSidebarOpen" />
-      <v-row id="topMenuBar">
-        <v-col
+      <v-row>
+        <v-col id="topMenuBar"
           v-for="link in links"
           :key="`${link.label}-header-link`"
           :cols="link.label === 'Home' ? 2 : 1"
@@ -13,14 +13,15 @@
             {{ link.label }}
           </v-btn>
         </v-col>
-        <v-col>
+        <v-col id="bugButton" >
           <v-tooltip bottom>
             <template v-slot:activator="{ on }">
               <v-btn
                 plain
                 v-on="on"
-                href="https://github.com/libcellml/website-src/issues/new/choose"
+                href="https://github.com/libcellml/website-src/issues/new"
                 target="_blank"
+                class="float-right"
               >
                 <v-icon class="buggy">mdi-bug</v-icon>
                 <span>Hover me!</span>
