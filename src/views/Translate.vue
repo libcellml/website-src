@@ -137,23 +137,6 @@ export default {
     }
   },
   methods: {
-    readXMLText(file) {
-      success = false
-      reader.readAsText(file, 'UTF-8')
-      reader.onload = function(evt) {
-        try {
-          const translatedFile = translate(evt.target.result, xsl)
-          this_.downloads.push({
-            name: file.name,
-            data: translatedFile,
-            type: 'text/xml',
-            pending: false,
-          })
-          success = true
-        } catch {}
-      }
-      return success
-    },
     translateFiles() {
       const reader = new FileReader()
       const this_ = this
