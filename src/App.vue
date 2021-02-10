@@ -4,7 +4,8 @@
       <img src="./assets/logo.svg" width="40" height="40" />
       <v-app-bar-nav-icon @click="onSidebarOpen" />
       <v-row>
-        <v-col id="topMenuBar"
+        <v-col
+          id="topMenuBar"
           v-for="link in links"
           :key="`${link.label}-header-link`"
           :cols="link.label === 'Home' ? 2 : 1"
@@ -13,7 +14,7 @@
             {{ link.label }}
           </v-btn>
         </v-col>
-        <v-col id="bugButton" >
+        <v-col id="bugButton">
           <v-tooltip bottom>
             <template v-slot:activator="{ on }">
               <v-btn

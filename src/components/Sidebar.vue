@@ -191,7 +191,6 @@ export default {
 
         // return this.width < fontSize * 54.5 // Equivalent to 54.5em
         return this.width < fontSize * 71.5 // 1140 width / 16 font size
-
       }
       return true
     },
