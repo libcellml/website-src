@@ -35,13 +35,13 @@ const routes = [
     path: '/documentation',
     name: 'Documentation',
     meta: { title: 'libCellML: Documentation' },
-    component: () => import('../views/Documentation.vue'),
+    component: () => import(/* webpackChunkName: "documentation" */ '../views/Documentation.vue'),
   },
   {
     path: '/download',
     name: 'Download',
     meta: { title: 'libCellML: Download' },
-    component: () => import('../views/Download.vue'),
+    component: () => import(/* webpackChunkName: "download" */ '../views/Download.vue'),
   },
   {
     path: '/documentation/api/:version/:pageName?',

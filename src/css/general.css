@@ -90,6 +90,10 @@ td a {
     color: var(--text-link-colour) !important;
 }
 
+li a {
+    color: var(--text-link-colour) !important;
+}
+
 .v-application a.router-link-active {
     color: var(--deep-red);
 }
