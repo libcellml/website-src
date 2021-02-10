@@ -1,5 +1,5 @@
 <template>
-  <v-app id="libcellml" class="relative">
+  <v-app id="libcellml">
     <v-app-bar app clipped-left>
       <img src="./assets/logo.svg" width="40" height="40" />
       <v-app-bar-nav-icon @click="onSidebarOpen" />
