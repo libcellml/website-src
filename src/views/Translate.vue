@@ -9,7 +9,7 @@
           them into CellML 2.0 compliant files. This service can accept text
           based files or
           <a href="http://co.mbine.org/specifications/omex.version-1.pdf"
-            >omex</a
+            >OMEX</a
           >
           files.
           <v-container>
@@ -71,6 +71,45 @@
               </v-list>
             </v-card>
           </v-container>
+          <h2>Limitiations</h2>
+          This service has some limitations that it is important to take note
+          of.
+          <v-list>
+            <v-list-item>
+              <v-list-item-icon>
+                <v-icon>mdi-arrow-right-bold</v-icon>
+              </v-list-item-icon>
+              <v-list-item-content>
+                <v-list-item-title
+                  >For OMEX files - <strong>Only</strong> CellML files are
+                  updated, SED-ML files that reference CellML files are not
+                  updated.</v-list-item-title
+                >
+              </v-list-item-content>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-icon>
+                <v-icon>mdi-arrow-right-bold</v-icon>
+              </v-list-item-icon>
+              <v-list-item-content>
+                <v-list-item-title
+                  >Definite integrals will be translated even though they are
+                  not valid in CellML 2.0.</v-list-item-title
+                >
+              </v-list-item-content>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-icon>
+                <v-icon>mdi-arrow-right-bold</v-icon>
+              </v-list-item-icon>
+              <v-list-item-content>
+                <v-list-item-title
+                  >Will not validate OMEX archives to determine if they are
+                  valid or not.</v-list-item-title
+                >
+              </v-list-item-content>
+            </v-list-item>
+          </v-list>
         </v-col>
       </v-row>
     </v-container>
@@ -149,6 +188,25 @@ export default {
                 title: `File read error:`,
                 message: file.name,
               })
+            }
+          } else if (file.type === 'text/xml') {
+            reader.readAsText(file, 'UTF-8')
+            reader.onload = function(evt) {
+              try {
+                const translatedFile = translate(evt.target.result, xsl)
+                this_.downloads.push({
+                  name: file.name,
+                  data: translatedFile,
+                  type: 'text/xml',
+                  pending: false,
+                })
+              } catch {
+                this_.add({
+                  type: 'error',
+                  title: `Could not translate file:`,
+                  message: `'${file.name}' of type '${file.type}'.`,
+                })
+              }
             }
           } else {
             this_.add({
