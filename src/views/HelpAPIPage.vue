@@ -3,15 +3,15 @@
     <v-container>
       <v-row>
         <v-col>
-          <div class="absolute-box">
-            <version-combo-box
-              :versions="availableVersions"
-            ></version-combo-box>
-          </div>
-          <doxygen-xml
+          <BreadCrumbs
+            v-bind:versionChoices="getVersions()"
+            :currentVersion="`${$route.params.version}`"
+            :versionType="'api'"
+          />
+          <DoxygenXml
             :baseURL="`/data/doxygen/${$route.params.version}`"
             @updated="updated"
-          ></doxygen-xml>
+          />
         </v-col>
       </v-row>
     </v-container>
@@ -20,21 +20,36 @@
 
 <script>
 import { DoxygenXml } from 'vue-doxygen-xml'
-import VersionComboBox from '@/components/VersionComboBox'
-import { getDoxygenVersions } from '@/js/versions'
+import BreadCrumbs from '@/components/BreadCrumbs'
+import { getDoxygenVersions } from '../js/versions'
+import ui from '@/js/ui'
 
 export default {
   name: 'APIPage',
   components: {
     DoxygenXml,
-    VersionComboBox,
+    BreadCrumbs,
   },
-  computed: {
-    availableVersions() {
-      return getDoxygenVersions()
+  mounted() {
+    setTimeout(function() {
+      let urlParams = new URLSearchParams(window.location.search)
+      let fName = urlParams.get('fName')
+      ui.goToSignature(fName)
+    }, this.$store.getters.getTransitionDelay)
+  },
+  watch: {
+    $route() {
+      setTimeout(function() {
+        let urlParams = new URLSearchParams(window.location.search)
+        let fName = urlParams.get('fName')
+        ui.goToSignature(fName)
+      }, this.$store.getters.getTransitionDelay)
     },
   },
   methods: {
+    getVersions() {
+      return getDoxygenVersions()
+    },
     updated() {
       this.$store.commit('togglePageContentChanged')
     },
@@ -46,8 +61,10 @@ export default {
 .api-reference {
   position: relative;
 }
-.absolute-box {
-  position: absolute;
-  top: 0;
+.version-box > * {
+  position: relative;
+  margin: 0;
+  padding: 0;
 }
 </style>
+<style src="../css/doxygen.css"></style>
