@@ -112,6 +112,8 @@ export const translateOmex = async (content, transform) => {
           zip.file(cellMLFile, transformedCellMLContent)
         }
       }
+    } else {
+      throw 'Invalid OMEX file.'
     }
     resultDocument = await zip.generateAsync({
       type: 'uint8array',
