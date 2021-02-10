@@ -1,5 +1,5 @@
 <template>
-  <v-app id="libcellml">
+  <v-app id="libcellml" class="relative">
     <v-app-bar app clipped-left>
       <img src="./assets/logo.svg" width="40" height="40" />
       <v-app-bar-nav-icon @click="onSidebarOpen" />
@@ -12,6 +12,23 @@
           <v-btn text :to="link.url">
             {{ link.label }}
           </v-btn>
+        </v-col>
+        <v-col>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on }">
+              <div v-on="on">
+                <v-icon class="buggy">mdi-bug</v-icon>
+                <span>Hover me!</span>
+              </div>
+            </template>
+            <span
+              >This website is a work in progress. Some parts have bugs
+              <br />and others have outright infestations. We are working to fix
+              these<br />
+              issues but feel free to add an issue at <br />
+              https://github.com/libcellml/website-src.</span
+            >
+          </v-tooltip>
         </v-col>
       </v-row>
     </v-app-bar>
@@ -149,5 +166,11 @@ export default {
 
 .col-1 {
   max-width: unset;
+}
+
+.buggy {
+  margin-left: 3em;
+  font-size: 2.3em !important;
+  color: yellowgreen !important;
 }
 </style>
