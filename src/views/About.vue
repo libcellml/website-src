@@ -1,16 +1,16 @@
 <template>
-  <div class="about">
-    <AboutInfo />
+  <div class="about" id="aboutContent">
+    <AboutContent />
   </div>
 </template>
 
 <script>
-import AboutInfo from '@/components/AboutInfo'
+import AboutContent from '@/components/AboutContent'
 
 export default {
   name: 'About',
   components: {
-    AboutInfo,
+    AboutContent,
   },
 }
 </script>

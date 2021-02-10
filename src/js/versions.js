@@ -6,5 +6,9 @@ export const getDoxygenVersions = () => {
 }
 
 export const getSphinxVersions = () => {
-  return ['v0.3.2', 'v0.2.4', 'v0.1.1']
+  return ['v0.1.0']
+}
+
+export const getDevelopersVersions = () => {
+  return ['v0.2.0']
 }

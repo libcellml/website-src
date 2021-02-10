@@ -34,20 +34,33 @@ const stripOutSamePatchVersions = versions => {
         resolve({ sphinx: files })
       })
     })
-
-    Promise.all([promiseDoxygen, promiseSphinx]).then(values => {
-      let doxygenVersions = []
-      let sphinxVersions = []
-      values.forEach(entry => {
-        if (entry.doxygen) {
-          const strippedVersions = stripOutSamePatchVersions(entry.doxygen)
-          doxygenVersions = semver.rsort(strippedVersions).join("', '")
-        } else if (entry.sphinx) {
-          const strippedVersions = stripOutSamePatchVersions(entry.sphinx)
-          sphinxVersions = semver.rsort(strippedVersions).join("', '")
+    const promiseDevelopers = new Promise((resolve, reject) => {
+      fs.readdir('public/data/developers', (err, files) => {
+        if (err) {
+          reject(err)
         }
+        resolve({ developers: files })
       })
-      const fileTemplate = `// This file is generated do not edit!
+    })
+
+    Promise.all([promiseDoxygen, promiseSphinx, promiseDevelopers]).then(
+      values => {
+        let doxygenVersions = []
+        let sphinxVersions = []
+        let developersVersions = []
+        values.forEach(entry => {
+          if (entry.doxygen) {
+            const strippedVersions = stripOutSamePatchVersions(entry.doxygen)
+            doxygenVersions = semver.rsort(strippedVersions).join("', '")
+          } else if (entry.sphinx) {
+            const strippedVersions = stripOutSamePatchVersions(entry.sphinx)
+            sphinxVersions = semver.rsort(strippedVersions).join("', '")
+          } else if (entry.developers) {
+            const strippedVersions = stripOutSamePatchVersions(entry.developers)
+            developersVersions = semver.rsort(strippedVersions).join("', '")
+          }
+        })
+        const fileTemplate = `// This file is generated do not edit!
 // To make modifications to this file change 'scripts/update-versions.js'.
 // To generate this file run 'npm run update-versions'.
 export const getDoxygenVersions = () => {
@@ -57,15 +70,20 @@ export const getDoxygenVersions = () => {
 export const getSphinxVersions = () => {
   return ['${sphinxVersions}']
 }
+
+export const getDevelopersVersions = () => {
+  return ['${developersVersions}']
+}
 `
-      fs.writeFile('src/js/versions.js', fileTemplate, err => {
-        if (err) {
-          throw err
-        } else {
-          console.log('Successfully updated versions.')
-        }
-      })
-    })
+        fs.writeFile('src/js/versions.js', fileTemplate, err => {
+          if (err) {
+            throw err
+          } else {
+            console.log('Successfully updated versions.')
+          }
+        })
+      },
+    )
   } catch (e) {
     console.log(e.message)
     process.exit(1)

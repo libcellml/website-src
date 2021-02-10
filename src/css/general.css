@@ -1,0 +1,286 @@
+/* 
+ General styles for the whole site.
+*/
+
+:root {
+    --bright-red: #dd000b;
+    --mid-red: #862e32;
+    --deep-red: #4e0202;
+    --pale-grey:#dddddd;
+    --very-pale-grey: #f6f6f6;
+
+    --transparent-grey: rgba(27,31,35,.05);
+    --pale-transparent-grey: rgba(62, 72, 82, 0.05);
+    --deep-blue: #476582;
+    --deep-blue-grey: #2d4046c7;
+
+    --dothis-background-color:#fbfff6;
+    --dothis-border-color: rgb(80, 121, 0);
+    --dothis-color: #22440b;
+
+    --useful-background-color:#f3f5f7;
+    --useful-border-color: #144b79;
+    --useful-color:  #144b79; /*#0f3555;*/
+    --useful-link-color: #1f76be;
+
+    --nb-background-color: rgba(255,229,100,.3);
+    --nb-border-color: #e7c000;
+    --nb-color: #6b5900;
+
+    --text-colour: #333333;
+    --link-colour: #777777;
+    --text-link-colour: var(--mid-red);
+
+    --menu-link-colour: #777777;
+
+    --warning-background: rgb(251, 239, 239);
+    --warning-text: var(--deep-red);
+
+    --terminal-colour: var(--pale-grey) !important;
+    --border-colour: var(--pale-grey);
+    --code-colour: var(--deep-blue);
+
+    --text-font: "Lato", "proxima-nova", "Helvetica Neue", "Arial", sans-serif;
+    --heading-font: Verdana, Geneva, Tahoma, sans-serif;
+    --code-font: monospace;
+    --mono-font: monospace;
+}
+
+/* Make max width for page content. */
+#pageContent {
+    max-width: 900px;
+    float: left;
+    padding-top: 0;
+}
+
+h1 {
+    color: var(--mid-red);
+    margin-bottom: 0.5em;
+    border-bottom: solid 0.05rem var(--terminal-colour);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2 {
+    color:#333333;
+    margin-bottom: 0.5em;
+    margin-top: 1em;
+    border-bottom: solid 0.05rem var(--terminal-colour);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h3 {
+    margin-top: 1em;
+}
+
+.v-application {
+    font-family: var(--text-font);
+}
+
+.v-application a {
+    color: var(--link-colour);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+p a {
+    color: var(--text-link-colour) !important;
+}
+
+td a {
+    color: var(--text-link-colour) !important;
+}
+
+.v-application a.router-link-active {
+    color: var(--deep-red);
+}
+
+.v-application a:hover {
+    color: var(--bright-red) !important;
+}
+
+/* Turn off the Contents blocks on pages as they're in the sidebar. */
+.topic.contents {
+    display: none;
+}
+
+/* Disconnect the general link colour from the colours in the top menu bar */
+#topMenuBar * {
+    color: var(--menu-link-colour);
+}
+
+.v-btn--active {
+    background-color: rgb(255, 255, 255);
+}
+
+/* .v-btn a:hover {
+    color: yellow !important;
+} */
+
+.v-btn::before .v-btn--active {
+    background-color: transparent;
+}
+
+/* Move breadcrumbs down a little ... */
+.breadcrumbs {
+    margin-top: 0.3rem;
+    white-space: nowrap;
+    display: block;
+    direction: rtl;   /* This is so that it will collapse from the left on small screens */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+ul.v-breadcrumbs {
+    padding: 0;
+}
+
+.breadcrumbs * {
+    margin: 0;
+    padding: 0;
+    color: var(--menu-link-colour) !important;
+}
+
+.v-breadcrumbs {
+    padding: 0;
+    flex-wrap: nowrap;
+}
+
+.v-breadcrumbs li {
+    font-size: 0.9rem;
+}
+
+.v-breadcrumbs li:last-child {
+    padding-left: 0;
+}
+
+code.xref {
+    font-family: var(--text-font);
+    color: var(--deep-red);
+    font-weight: 500;
+}
+
+/* The image-box tags are used to store the acknowledgement logos. */
+.image-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+.image-box * {
+    justify-content: center;
+    align-items: center;
+}
+.image-box img {
+    padding: 0.3rem;
+    max-width: 250px;
+}
+@media only screen and (max-width: 300px) {
+    .image-box img {
+       max-width: 100%;
+    }
+}
+
+/* Removing the top menu bar when its contents are in the sidebar. */ 
+@media only screen and (max-width: 54em) {
+    #topMenuBar {
+        display: none;
+    }
+}
+
+#footer-copyright, #footer-ack {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    color: var(--link-colour);
+}
+
+.big-button {
+    background-color: var(--deep-blue-grey) !important;
+    color: white !important;
+    min-height: 6rem;
+    text-align: center;
+}
+  
+.big-button:hover {
+    background-color: var(--deep-red) !important;
+    color: white !important;
+}
+
+.big-button .v-btn__content {
+    display: block !important;
+    line-height: 2em;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+figcaption {
+    color: var(--deep-blue);
+    font-style: italic;
+    text-align: center;
+    padding-bottom: 2em;
+}
+
+.footnote {
+    margin-top: 0.5em;
+}
+
+.footnote > span {
+    font-weight: 600;
+}
+
+.footnote > p {
+    padding-left: 2em;
+}
+
+thead {
+    font-weight: 600;
+}
+
+table p {
+    padding: 0.2em;
+    margin-bottom: 0 !important;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+    border-collapse: collapse;
+}
+
+td {
+    border-bottom: 0.1em solid var(--pale-grey);
+    padding: 0.3em;
+}
+
+th {
+    border-bottom: 0.3em solid var(--pale-grey);
+    padding: 0.3em;
+}
+
+.v-application .download code {
+    font-family: var(--text-font);
+    color: var(--text-link-colour) !important;
+    font-weight: 500;
+}
+
+.v-application .download * {
+    background-color: transparent !important;
+}
+
+.v-application .download code:hover {
+    color: var(--bright-red) !important;
+}
+
+.download::before {
+    content: "\2913";
+    color: var(--text-link-colour);
+    vertical-align: bottom;
+}
+
+.download code:hover::before  {
+    color: var(--mid-red) !important;
+}

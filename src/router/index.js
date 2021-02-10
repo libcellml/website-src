@@ -4,71 +4,98 @@ import Home from '@/views/Home.vue'
 
 import store from '@/store'
 
+import { calculateBreadcrumbs } from './breadcrumbs'
+import {
+  getDoxygenVersions,
+  getSphinxVersions,
+  getDevelopersVersions,
+} from '../js/versions'
+
 Vue.use(VueRouter)
+
+const DEFAULT_TITLE = 'libCellML';
 
 const routes = [
   {
     path: '/',
     name: 'Home',
     component: Home,
-  },
-  {
-    path: '/about',
-    name: 'About',
-    component: () =>
-      import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    meta: { title: 'libCellML: Home' },
+    beforeEnter: (to, from, next) => {
+      if (sessionStorage.getItem('redirect') !== null) {
+        const redirect = sessionStorage.redirect
+        delete sessionStorage.redirect
+        next(redirect)
+      } else {
+        next()
+      }
+    },
   },
   {
     path: '/documentation',
     name: 'Documentation',
-    component: () =>
-      import(
-        /* webpackChunkName: "documentation" */ '../views/Documentation.vue'
-      ),
-  },
-  {
-    path: '/help/api/:version/:pageName?',
-    name: 'APIReferencePage',
-    component: () =>
-      import(/* webpackChunkName: "doxygen" */ '../views/HelpAPIPage.vue'),
-  },
-  {
-    path: '/help/api',
-    name: 'APIReference',
-    component: () =>
-      import(/* webpackChunkName: "doxygen" */ '../views/HelpAPI.vue'),
-  },
-  {
-    path: '/help/tutorials/:version/:pageName*',
-    name: 'TutorialsPage',
-    component: () =>
-      import(/* webpackChunkName: "sphinx" */ '../views/HelpTutorialsPage.vue'),
-  },
-  {
-    path: '/help/tutorials',
-    name: 'Tutorials',
-    component: () =>
-      import(/* webpackChunkName: "sphinx" */ '../views/HelpTutorials.vue'),
-  },
-  {
-    path: '/help',
-    redirect: { name: 'Documentation' },
-  },
-  {
-    path: '/developers',
-    name: 'Developers',
-    component: () =>
-      import(/* webpackChunkName: "developers" */ '../views/Developers.vue'),
+    meta: { title: 'libCellML: Documentation' },
+    component: () => import('../views/Documentation.vue'),
   },
   {
     path: '/download',
     name: 'Download',
+    meta: { title: 'libCellML: Download' },
+    component: () => import('../views/Download.vue'),
+  },
+  {
+    path: '/documentation/api/:version/:pageName?',
+    name: 'APIReferencePage',
+    meta: { title: 'libCellML: API' },
     component: () =>
-      import(/* webpackChunkName: "download" */ '../views/Download.vue'),
+      import(/* webpackChunkName: "doxygen" */ '../views/HelpAPIPage.vue'),
+  },
+  {
+    path: '/documentation/api',
+    redirect: to => {
+      // Defaults to latest version, if not specified.
+      return '/documentation/api/' + getDoxygenVersions()[0]
+    },
+  },
+  {
+    path: '/documentation/guides/:version/:pageName*',
+    name: 'TutorialsPage',
+    meta: { title: 'libCellML: User Guides' },
+    component: () =>
+      import(/* webpackChunkName: "sphinx" */ '../views/HelpTutorialsPage.vue'),
+  },
+  {
+    path: '/documentation/guides',
+    redirect: to => {
+      // Defaults to latest version, if not specified.
+      return '/documentation/guides/' + getSphinxVersions()[0]
+    },
+  },
+  {
+    path: '/documentation/developers/:version/:pageName*',
+    name: 'Developers',
+    meta: { title: 'libCellML: Developer Guides' },
+    component: () =>
+      import(/* webpackChunkName: "sphinx" */ '../views/Developers.vue'),
+  },
+  {
+    path: '/documentation/developers',
+    redirect: to => {
+      // Defaults to latest version, if not specified.
+      return '/documentation/developers/' + getDevelopersVersions()[0]
+    },
+  },
+  {
+    path: '/translate',
+    name: 'Translate',
+    meta: { title: 'libCellML: Translate' },
+    component: () =>
+      import(/* webpackChunkName: "translate" */ '../views/Translate.vue'),
   },
   {
     path: '/404',
     name: '404',
+    meta: { title: 'libCellML: Not Found' },
     component: () =>
       import(/* webpackChunkName: "notFound" */ '../views/NotFound.vue'),
   },
@@ -82,7 +109,10 @@ const routes = [
   },
   {
     path: '*',
-    redirect: { name: '404', params: { resource: 'page' } },
+    redirect: {
+      name: '404',
+      params: { resource: 'page' },
+    },
   },
 ]
 
@@ -91,14 +121,16 @@ const createRouter = () => {
     mode: 'history',
     base: process.env.BASE_URL,
     routes,
+
     scrollBehavior(to, from, savedPosition) {
-      if (to.path !== from.path) {
+      if (to.path !== from.path && to.hash) {
         return new Promise((resolve, reject) => {
           setTimeout(() => {
             let value = { x: 0, y: 0 }
-            if (to.hash) {
+            let location = document.querySelector(to.hash)
+            if (location) {
               value = window.scrollTo({
-                top: document.querySelector(to.hash).offsetTop,
+                top: location.offsetTop,
                 behavior: 'smooth',
               })
             }
@@ -106,10 +138,14 @@ const createRouter = () => {
           }, store.getters.getTransitionDelay)
         })
       } else if (to.hash) {
-        return window.scrollTo({
-          top: document.querySelector(to.hash).offsetTop,
-          behavior: 'smooth',
-        })
+        let location = document.querySelector(to.hash)
+        if (location) {
+          return window.scrollTo({
+            top: location.offsetTop,
+            behavior: 'smooth',
+          })
+        }
+        return { x: 0, y: 0 }
       } else {
         return { x: 0, y: 0 }
       }
@@ -119,63 +155,20 @@ const createRouter = () => {
 
 const router = createRouter()
 
-router.beforeEach((to, from, next) => {
-  let items = [
-    {
-      text: 'home',
-      disabled: false,
-      href: '/',
-    },
-  ]
-  if (to.name === 'Home') {
-    items[0].disabled = true
-  } else if (
-    to.name === '404' ||
-    to.name === 'About' ||
-    to.name === 'Developers' ||
-    to.name === 'Download' ||
-    to.name === 'Documentation'
-  ) {
-    items.push({
-      text: to.name,
-      disabled: true,
-      href: to.path,
-    })
-  } else if (
-    to.name === 'TutorialsPage' ||
-    to.name === 'Tutorials' ||
-    to.name === 'APIReferencePage' ||
-    to.name === 'APIReference'
-  ) {
-    let toPath = to.path
-    let appendFileName = ''
-    if (to.params.pageName && to.params.pageName.indexOf('/') !== -1) {
-      appendFileName = to.params.pageName
-      toPath = toPath.replace(to.params.pageName, '')
-    }
-    const pathParts = toPath.split('/')
-    let builtPath = ''
-    pathParts.forEach(part => {
-      if (part) {
-        builtPath += `/${part}`
-        items.push({
-          text: part,
-          disabled: false,
-          href: builtPath,
-        })
-      }
-    })
-    if (appendFileName) {
-      items.push({
-        text: appendFileName,
-        disabled: true,
-        href: builtPath,
-      })
-    }
-    items[items.length - 1].disabled = true
+router.beforeResolve((to, from, next) => {
+  // Check for occurrences of 'latest' in the version field, and update
+  if (to.params.version === 'latest' && to.name === 'APIReferencePage') {
+    to.params.version = getDoxygenVersions()[0]
   }
+  if (to.params.version === 'latest' && to.name === 'TutorialsPage') {
+    to.params.version = getSphinxVersions()[0]
+  }
+  next()
+})
 
-  store.commit('setBreadcrumbs', items)
+router.beforeEach((to, from, next) => {
+  store.commit('setBreadcrumbs', calculateBreadcrumbs(to))
+  store.commit('updateLastURL', to.path)
   next()
 })
 
@@ -183,6 +176,11 @@ router.afterEach((to, from) => {
   if (to.name !== from.name) {
     store.commit('togglePageContentChanged')
   }
+  Vue.nextTick(() => {
+    document.title = to.meta.title || DEFAULT_TITLE;
+  });
 })
+
+
 
 export default router
