@@ -291,7 +291,7 @@ th {
 }
 
 /* Formatting for KaTeX math blocks */
-.equation-block {
+.katex-block {
     text-align: center;
     margin-bottom: 1em;
 }
@@ -301,16 +301,10 @@ th {
     white-space: nowrap;
 }
 
-.equation-block .equation {
-    margin-bottom: 1em;
-}
-
 /* The .v-application .accent class gives a blue colour to any maths symbol with an overbar. 
 This is needed to remove it.
 */
-.equation .accent {
+.katex .accent {
     background-color:transparent !important;
     border-color: transparent !important;
 }
-
-
