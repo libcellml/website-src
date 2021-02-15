@@ -202,8 +202,8 @@ pre > code {
     margin: 1rem 0;
 
     background-color: var(--dothis-background-color);
-    border-color: var(--dothis-border-color);
-    color: var(--dothis-color);
+    border-color: var(--dothis-border-colour);
+    color: var(--dothis-colour);
     font-family: var(--text-font);
 }
 
@@ -217,9 +217,9 @@ pre > code {
     border-left-style: solid;
     margin: 0.5rem 0;
 
-    background-color: var(--useful-background-color);
-    border-color: var(--useful-border-color);
-    color: var(--useful-color);
+    background-color: var(--useful-background-colour);
+    border-color: var(--useful-border-colour);
+    color: var(--useful-colour);
     font-family: var(--text-font);
 }
 
@@ -227,14 +227,14 @@ pre > code {
     content: "Useful functions";
     font-weight: 700;
     font-size: large;
-    color: var(--useful-color);
+    color: var(--useful-colour);
 }
 
 .useful > * {
     margin-left: 2rem;
 }
 .useful a {
-    color: var(--useful-link-color) !important;
+    color: var(--useful-link-colour) !important;
 }
 
 /* Useful container main text */
@@ -259,9 +259,9 @@ pre > code {
     border-left-style: solid;
     margin: 1rem 0;
 
-    background-color: var(--nb-background-color);
-    border-color: var(--nb-border-color);
-    color: var(--nb-color);
+    background-color: var(--nb-background-colour);
+    border-color: var(--nb-border-colour);
+    color: var(--nb-colour);
     line-height: 1.5em;
     font-family: var(--text-font);
 }
@@ -366,7 +366,7 @@ pre > code {
 
 .tab2 .active > .tab2name {
     font-weight: 700;
-    color: var(--bright-red);
+    color: var(--active-link);
 }
 
 .tab2 .inactive > .tab2name {
