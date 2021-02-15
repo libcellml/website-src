@@ -305,6 +305,10 @@ th {
 This is needed to remove it.
 */
 .katex .accent {
-    background-color:transparent !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+.v-application .accent {
+    background-color: transparent !important;
     border-color: transparent !important;
 }
