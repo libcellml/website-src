@@ -18,20 +18,20 @@ const stripOutSamePatchVersions = versions => {
 
 ;(async () => {
   try {
-    const promiseDoxygen = new Promise((resolve, reject) => {
-      fs.readdir('public/data/doxygen', (err, files) => {
+    const promiseApi = new Promise((resolve, reject) => {
+      fs.readdir('public/data/api', (err, files) => {
         if (err) {
           reject(err)
         }
-        resolve({ doxygen: files })
+        resolve({ api: files })
       })
     })
-    const promiseSphinx = new Promise((resolve, reject) => {
-      fs.readdir('public/data/sphinx', (err, files) => {
+    const promiseUserGuides = new Promise((resolve, reject) => {
+      fs.readdir('public/data/userguides', (err, files) => {
         if (err) {
           reject(err)
         }
-        resolve({ sphinx: files })
+        resolve({ userguides: files })
       })
     })
     const promiseDevelopers = new Promise((resolve, reject) => {
@@ -43,18 +43,18 @@ const stripOutSamePatchVersions = versions => {
       })
     })
 
-    Promise.all([promiseDoxygen, promiseSphinx, promiseDevelopers]).then(
+    Promise.all([promiseApi, promiseUserGuides, promiseDevelopers]).then(
       values => {
-        let doxygenVersions = []
-        let sphinxVersions = []
+        let apiVersions = []
+        let userGuidesVersions = []
         let developersVersions = []
         values.forEach(entry => {
-          if (entry.doxygen) {
-            const strippedVersions = stripOutSamePatchVersions(entry.doxygen)
-            doxygenVersions = semver.rsort(strippedVersions).join("', '")
-          } else if (entry.sphinx) {
-            const strippedVersions = stripOutSamePatchVersions(entry.sphinx)
-            sphinxVersions = semver.rsort(strippedVersions).join("', '")
+          if (entry.api) {
+            const strippedVersions = stripOutSamePatchVersions(entry.api)
+            apiVersions = semver.rsort(strippedVersions).join("', '")
+          } else if (entry.userguides) {
+            const strippedVersions = stripOutSamePatchVersions(entry.userguides)
+            userGuidesVersions = semver.rsort(strippedVersions).join("', '")
           } else if (entry.developers) {
             const strippedVersions = stripOutSamePatchVersions(entry.developers)
             developersVersions = semver.rsort(strippedVersions).join("', '")
@@ -63,12 +63,12 @@ const stripOutSamePatchVersions = versions => {
         const fileTemplate = `// This file is generated do not edit!
 // To make modifications to this file change 'scripts/update-versions.js'.
 // To generate this file run 'npm run update-versions'.
-export const getDoxygenVersions = () => {
-  return ['${doxygenVersions}']
+export const getApiVersions = () => {
+  return ['${apiVersions}']
 }
 
-export const getSphinxVersions = () => {
-  return ['${sphinxVersions}']
+export const getUserGuidesVersions = () => {
+  return ['${userGuidesVersions}']
 }
 
 export const getDevelopersVersions = () => {

@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import { getDoxygenVersions, getSphinxVersions } from '../js/versions'
+import { getApiVersions, getUserGuidesVersions } from '../js/versions'
 
 export default {
   name: 'VersionDropdown',
@@ -46,9 +46,9 @@ export default {
   mounted() {
     if (
       (this.$props.versionType === 'guides' &&
-        this.$props.currentVersion !== getSphinxVersions()[0]) ||
+        this.$props.currentVersion !== getUserGuidesVersions()[0]) ||
       (this.$props.versionType === 'api' &&
-        this.$props.currentVersion !== getDoxygenVersions()[0])
+        this.$props.currentVersion !== getApiVersions()[0])
     ) {
       let b = document.getElementById('dropdown-id')
       b.classList = ['old-version']

@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import { getDoxygenVersions, getSphinxVersions } from '@/js/versions'
+import { getApiVersions, getUserGuidesVersions } from '@/js/versions'
 
 export default {
   name: 'DocumentationContent',
@@ -40,8 +40,8 @@ export default {
     return { apiVersions: [], tutorialVersions: [] }
   },
   created() {
-    this.apiVersions = getDoxygenVersions()
-    this.tutorialVersions = getSphinxVersions()
+    this.apiVersions = getApiVersions()
+    this.tutorialVersions = getUserGuidesVersions()
   },
 }
 </script>

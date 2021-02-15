@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import { getDoxygenVersions } from '@/js/versions'
+import { getApiVersions } from '@/js/versions'
 
 import BreadCrumbs from '../components/BreadCrumbs'
 
@@ -33,7 +33,7 @@ export default {
     return { apiVersions: [] }
   },
   created() {
-    this.apiVersions = getDoxygenVersions()
+    this.apiVersions = getApiVersions()
   },
 }
 </script>
