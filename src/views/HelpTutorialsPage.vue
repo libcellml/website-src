@@ -10,7 +10,7 @@
           />
 
           <SphinxPage
-            :baseURL="`/data/sphinx/${$route.params.version}`"
+            :baseURL="`/data/userguides/${$route.params.version}`"
             indexFileName="index"
             @updated="updated"
           />
@@ -23,7 +23,7 @@
 <script>
 import { SphinxPage } from 'vue-sphinx-xml'
 import BreadCrumbs from '@/components/BreadCrumbs'
-import { getSphinxVersions } from '../js/versions'
+import { getUserGuidesVersions } from '../js/versions'
 
 import ui from '@/js/ui'
 
@@ -36,7 +36,7 @@ export default {
 
   methods: {
     getVersions() {
-      return getSphinxVersions()
+      return getUserGuidesVersions()
     },
     updated() {
       this.$store.commit('togglePageContentChanged')

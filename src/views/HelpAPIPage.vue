@@ -9,7 +9,7 @@
             :versionType="'api'"
           />
           <DoxygenXml
-            :baseURL="`/data/doxygen/${$route.params.version}`"
+            :baseURL="`/data/api/${$route.params.version}`"
             @updated="updated"
           />
         </v-col>
@@ -21,7 +21,7 @@
 <script>
 import { DoxygenXml } from 'vue-doxygen-xml'
 import BreadCrumbs from '@/components/BreadCrumbs'
-import { getDoxygenVersions } from '../js/versions'
+import { getApiVersions } from '../js/versions'
 import ui from '@/js/ui'
 
 export default {
@@ -48,7 +48,7 @@ export default {
   },
   methods: {
     getVersions() {
-      return getDoxygenVersions()
+      return getApiVersions()
     },
     updated() {
       this.$store.commit('togglePageContentChanged')
