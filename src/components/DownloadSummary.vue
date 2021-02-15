@@ -5,7 +5,7 @@
       <v-row>
         <v-col class="col-12">
           <p>
-            Bianry distributions are not yet ready for release. In the meantime,
+            Binary distributions are not yet ready for release. In the meantime,
             please follow the instructions on the
             <a
               href="/documentation/guides/latest/installation/build_from_source"
