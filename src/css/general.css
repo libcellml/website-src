@@ -3,7 +3,6 @@
 */
 
 :root {
-    --bright-red: #dd000b;
     --mid-red: #862e32;
     --deep-red: #4e0202;
     --pale-grey:#dddddd;
@@ -13,24 +12,25 @@
     --pale-transparent-grey: rgba(62, 72, 82, 0.05);
     --deep-blue: #476582;
     --deep-blue-grey: #2d4046c7;
+    --bright-blue: #1f76be;
 
     --dothis-background-color:#fbfff6;
-    --dothis-border-color: rgb(80, 121, 0);
-    --dothis-color: #22440b;
+    --dothis-border-colour: rgb(80, 121, 0);
+    --dothis-colour: #22440b;
 
-    --useful-background-color:#f3f5f7;
-    --useful-border-color: #144b79;
-    --useful-color:  #144b79; /*#0f3555;*/
-    --useful-link-color: #1f76be;
+    --useful-background-colour:#f3f5f7;
+    --useful-border-colour: #144b79;
+    --useful-colour:  #144b79; /*#0f3555;*/
+    --useful-link-colour: var(--bright-blue);
 
-    --nb-background-color: rgba(255,229,100,.3);
-    --nb-border-color: #e7c000;
-    --nb-color: #6b5900;
+    --nb-background-colour: rgba(255,229,100,.3);
+    --nb-border-colour: #e7c000;
+    --nb-colour: #6b5900;
 
     --text-colour: #333333;
     --link-colour: #777777;
+    --active-link: var(--bright-blue);
     --text-link-colour: var(--mid-red);
-
     --menu-link-colour: #777777;
 
     --warning-background: rgb(251, 239, 239);
@@ -99,7 +99,7 @@ li a {
 }
 
 .v-application a:hover {
-    color: var(--bright-red) !important;
+    color: var(--active-link) !important;
 }
 
 /* Turn off the Contents blocks on pages as they're in the sidebar. */
@@ -277,7 +277,7 @@ th {
 }
 
 .v-application .download code:hover {
-    color: var(--bright-red) !important;
+    color: var(--active-link) !important;
 }
 
 .download::before {
