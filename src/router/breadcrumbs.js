@@ -1,6 +1,6 @@
 import {
-  getSphinxVersions,
-  getDoxygenVersions,
+  getUserGuidesVersions,
+  getApiVersions,
   getDevelopersVersions,
 } from '../js/versions'
 
@@ -103,7 +103,7 @@ export function calculateBreadcrumbs(to) {
     // Version selector block, clicking v1.2.3 takes you to class list page
     if (version) {
       routes.push({
-        text: version === 'latest' ? getDoxygenVersions()[0] : version,
+        text: version === 'latest' ? getApiVersions()[0] : version,
         name: 'APIReferencePage',
         disabled: false,
         hash: '',
@@ -141,7 +141,7 @@ export function calculateBreadcrumbs(to) {
     // Version selector.
     if (version) {
       routes.push({
-        text: version === 'latest' ? getSphinxVersions()[0] : version,
+        text: version === 'latest' ? getUserGuidesVersions()[0] : version,
         name: 'TutorialsPage',
         disabled: false,
         hash: '',

@@ -68,8 +68,8 @@
 <script>
 import VersionDropdown from './VersionDropdown'
 import {
-  getDoxygenVersions,
-  getSphinxVersions,
+  getApiVersions,
+  getUserGuidesVersions,
   getDevelopersVersions,
 } from '../js/versions'
 
@@ -109,11 +109,11 @@ export default {
     },
     latest() {
       if (this.$props.versionType === 'guides') {
-        return getSphinxVersions()[0]
+        return getUserGuidesVersions()[0]
       } else if (this.$props.versionType === 'developers') {
         return getDevelopersVersions()[0]
       }
-      return getDoxygenVersions()[0]
+      return getApiVersions()[0]
     },
     latestFullPath() {
       return this.$route.fullPath.replace(

@@ -6,8 +6,8 @@ import store from '@/store'
 
 import { calculateBreadcrumbs } from './breadcrumbs'
 import {
-  getDoxygenVersions,
-  getSphinxVersions,
+  getApiVersions,
+  getUserGuidesVersions,
   getDevelopersVersions,
 } from '../js/versions'
 
@@ -48,13 +48,13 @@ const routes = [
     name: 'APIReferencePage',
     meta: { title: 'libCellML: API' },
     component: () =>
-      import(/* webpackChunkName: "doxygen" */ '../views/HelpAPIPage.vue'),
+      import(/* webpackChunkName: "api" */ '../views/HelpAPIPage.vue'),
   },
   {
     path: '/documentation/api',
     redirect: to => {
       // Defaults to latest version, if not specified.
-      return '/documentation/api/' + getDoxygenVersions()[0]
+      return '/documentation/api/' + getApiVersions()[0]
     },
   },
   {
@@ -62,13 +62,13 @@ const routes = [
     name: 'TutorialsPage',
     meta: { title: 'libCellML: User Guides' },
     component: () =>
-      import(/* webpackChunkName: "sphinx" */ '../views/HelpTutorialsPage.vue'),
+      import(/* webpackChunkName: "userguides" */ '../views/HelpTutorialsPage.vue'),
   },
   {
     path: '/documentation/guides',
     redirect: to => {
       // Defaults to latest version, if not specified.
-      return '/documentation/guides/' + getSphinxVersions()[0]
+      return '/documentation/guides/' + getUserGuidesVersions()[0]
     },
   },
   {
@@ -76,7 +76,7 @@ const routes = [
     name: 'Developers',
     meta: { title: 'libCellML: Developer Guides' },
     component: () =>
-      import(/* webpackChunkName: "sphinx" */ '../views/Developers.vue'),
+      import(/* webpackChunkName: "developers" */ '../views/Developers.vue'),
   },
   {
     path: '/documentation/developers',
@@ -158,10 +158,10 @@ const router = createRouter()
 router.beforeResolve((to, from, next) => {
   // Check for occurrences of 'latest' in the version field, and update
   if (to.params.version === 'latest' && to.name === 'APIReferencePage') {
-    to.params.version = getDoxygenVersions()[0]
+    to.params.version = getApiVersions()[0]
   }
   if (to.params.version === 'latest' && to.name === 'TutorialsPage') {
-    to.params.version = getSphinxVersions()[0]
+    to.params.version = getUserGuidesVersions()[0]
   }
   next()
 })
