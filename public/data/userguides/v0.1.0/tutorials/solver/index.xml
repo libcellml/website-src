@@ -5,7 +5,7 @@
     <target refid="solver"></target>
     <section ids="simple-solver-for-generated-models solver" names="simple\ solver\ for\ generated\ models solver">
         <title>Simple solver for generated models</title>
-        <paragraph>The theory behind how a numerical solver or integration program works is outlined in the <reference internal="True" refuri="../../theory/theory_ode_solutions#theory-ode-solutions"><inline classes="std std-ref">Theory of ODE solvers</inline></reference> page.
+        <paragraph>The theory behind how a numerical solver or integration program works is outlined in the <reference internal="True" refuri="../../theory/ode_solutions#ode-solutions"><inline classes="std std-ref">Theory of ODE solvers</inline></reference> page.
             This section describes how to use the simple solvers provided to run models generated with either the C or Python profiles.</paragraph>
         <section ids="c-profile-solver" names="c\ profile\ solver">
             <title>C profile solver</title>
@@ -79,7 +79,7 @@
         <section ids="python-profile-solver" names="python\ profile\ solver">
             <title>Python profile solver</title>
             <paragraph>The solver script is a very simple implementation of the Euler stepping method in Python.
-                The theory on which it’s based can be found on the <reference internal="True" refuri="../../theory/theory_ode_solutions#theory-ode-solutions"><inline classes="std std-ref">Theory of ODE solver</inline></reference> page.</paragraph>
+                The theory on which it’s based can be found on the <reference internal="True" refuri="../../theory/ode_solutions#ode-solutions"><inline classes="std std-ref">Theory of ODE solver</inline></reference> page.</paragraph>
             <container classes="directorylist">
                 <paragraph><strong>Python resources</strong></paragraph>
                 <bullet_list bullet="-">

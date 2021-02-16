@@ -92,7 +92,6 @@ export function calculateBreadcrumbs(to) {
       type: 'pageFromName',
     })
   } else if (to.name === 'APIReferencePage') {
-    routes.push(hardRoutes.documentation)
     routes.push(hardRoutes.api_reference)
 
     let lastLink = '/documentation/api'
@@ -129,7 +128,6 @@ export function calculateBreadcrumbs(to) {
       }
     })
   } else if (to.name === 'TutorialsPage') {
-    routes.push(hardRoutes.documentation)
     routes.push(hardRoutes.user_guide)
 
     let lastLink = '/documentation/guides'
@@ -169,7 +167,6 @@ export function calculateBreadcrumbs(to) {
       lastLink += '/' + page
     }
   } else if (to.name === 'Developers') {
-    routes.push(hardRoutes.documentation)
     routes.push(hardRoutes.developers)
 
     let lastLink = '/documentation/developers'
