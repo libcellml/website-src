@@ -3,8 +3,12 @@
 */
 
 :root {
+    --bright-red: #af3c42; 
     --mid-red: #862e32;
     --deep-red: #4e0202;
+    --bright-red-transparent: #af3c4225; 
+
+    --mid-grey: #777777;
     --pale-grey:#dddddd;
     --very-pale-grey: #f6f6f6;
 
@@ -28,10 +32,17 @@
     --nb-colour: #6b5900;
 
     --text-colour: #333333;
-    --link-colour: #777777;
-    --active-link: var(--bright-blue);
-    --text-link-colour: var(--mid-red);
-    --menu-link-colour: #777777;
+    --menu-link-colour: var(--mid-grey);
+
+    /* Link styling for readability */
+    --link-colour:var(--mid-grey);
+    --active-link: var(--deep-red);
+    --text-link-colour: var(--bright-red);
+    --link-underline-colour: var(--pale-grey);
+    --link-decoration-line: underline;
+    --link-decoration-style: solid;
+    --link-decoration-color: var(--link-underline-colour);
+    --link-underline-offset: 0.2em;
 
     --warning-background: rgb(251, 239, 239);
     --warning-text: var(--deep-red);
@@ -78,28 +89,45 @@ h3 {
 
 .v-application a {
     color: var(--link-colour);
-    text-decoration: none;
     font-weight: 500;
 }
 
 p a {
     color: var(--text-link-colour) !important;
+    text-decoration-line: var(--link-decoration-line);
+    text-decoration-style: var(--link-decoration-style);
+    text-decoration-color: var(--link-underline-colour);
+    text-underline-offset: 0.2em;
 }
 
 td a {
     color: var(--text-link-colour) !important;
+    text-decoration-line: var(--link-decoration-line);
+    text-decoration-style: var(--link-decoration-style);
+    text-decoration-color: var(--link-underline-colour);
+    text-underline-offset: 0.2em;
 }
 
 li a {
     color: var(--text-link-colour) !important;
+    text-decoration-line: var(--link-decoration-line);
+    text-decoration-style: var(--link-decoration-style);
+    text-decoration-color: var(--link-underline-colour);
+    text-underline-offset: 0.2em;
 }
 
 .v-application a.router-link-active {
-    color: var(--deep-red);
+    color: var(--text-link-colour);
+    text-decoration-line: var(--link-decoration-line);
+    text-decoration-style: var(--link-decoration-style);
+    text-decoration-color: var(--link-underline-colour);
+    text-underline-offset: 0.2em;
 }
 
 .v-application a:hover {
     color: var(--active-link) !important;
+    text-decoration-thickness: 3px;
+    text-decoration-color: var(--bright-red);
 }
 
 /* Turn off the Contents blocks on pages as they're in the sidebar. */
@@ -287,7 +315,7 @@ th {
 }
 
 .download code:hover::before  {
-    color: var(--mid-red) !important;
+    color: var(--active-link) !important;
 }
 
 /* Formatting for KaTeX math blocks */
