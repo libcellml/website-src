@@ -36,9 +36,14 @@
     font-weight: 700;
     margin-top: 1.3rem;
     margin-left: 0;
-    margin-bottom: 0.3rem;
-    color: var(--code-colour);
-    border-bottom: solid 1px var(--pale-grey);
+    margin-bottom: 0.5rem;
+    color: var(--text-colour);
+    /* border-top: solid 1px var(--bright-red); */
+    border-bottom: solid 1px var(--bright-red);
+    /* border-left: solid 5px var(--bright-red); */
+    /* background-color: var(--bright-red-transparent); */
+    /* padding-left: 1em; */
+    padding-bottom: 0.3em;
 }
 
 /* Ensures a consistent look through the function heading.
@@ -52,14 +57,18 @@ TODO: Find where the extra space is being added after the trailing ") " and move
 }
 
 code.sig-name {
-    /* color: var(--mid-red) !important; */
     font-weight: 700 !important;
+    color: var(--text-colour) !important;
 }
 
 .function > dt:first-of-type a {
     font-family: monospace;
     font-weight: 700;
-    color: var(--deep-red);
+    color: var(--text-link-colour);
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: var(--mid-red);
+    text-underline-offset: 0.2em;
 }
 
 /* Indenting the "see also", "parameters" and "return" blocks on wide screens. */
