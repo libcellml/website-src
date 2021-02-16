@@ -3,9 +3,12 @@
 */
 
 :root {
-    --bright-red: #dd000b;
+    --bright-red: #af3c42; 
     --mid-red: #862e32;
     --deep-red: #4e0202;
+    --bright-red-transparent: #af3c4225; 
+
+    --mid-grey: #777777;
     --pale-grey:#dddddd;
     --very-pale-grey: #f6f6f6;
 
@@ -13,25 +16,33 @@
     --pale-transparent-grey: rgba(62, 72, 82, 0.05);
     --deep-blue: #476582;
     --deep-blue-grey: #2d4046c7;
+    --bright-blue: #1f76be;
 
     --dothis-background-color:#fbfff6;
-    --dothis-border-color: rgb(80, 121, 0);
-    --dothis-color: #22440b;
+    --dothis-border-colour: rgb(80, 121, 0);
+    --dothis-colour: #22440b;
 
-    --useful-background-color:#f3f5f7;
-    --useful-border-color: #144b79;
-    --useful-color:  #144b79; /*#0f3555;*/
-    --useful-link-color: #1f76be;
+    --useful-background-colour:#f3f5f7;
+    --useful-border-colour: #144b79;
+    --useful-colour:  #144b79; /*#0f3555;*/
+    --useful-link-colour: var(--bright-blue);
 
-    --nb-background-color: rgba(255,229,100,.3);
-    --nb-border-color: #e7c000;
-    --nb-color: #6b5900;
+    --nb-background-colour: rgba(255,229,100,.3);
+    --nb-border-colour: #e7c000;
+    --nb-colour: #6b5900;
 
     --text-colour: #333333;
-    --link-colour: #777777;
-    --text-link-colour: var(--mid-red);
+    --menu-link-colour: var(--mid-grey);
 
-    --menu-link-colour: #777777;
+    /* Link styling for readability */
+    --link-colour:var(--mid-grey);
+    --active-link: var(--deep-red);
+    --text-link-colour: var(--bright-red);
+    --link-underline-colour: var(--pale-grey);
+    --link-decoration-line: underline;
+    --link-decoration-style: solid;
+    --link-decoration-color: var(--link-underline-colour);
+    --link-underline-offset: 0.2em;
 
     --warning-background: rgb(251, 239, 239);
     --warning-text: var(--deep-red);
@@ -78,28 +89,45 @@ h3 {
 
 .v-application a {
     color: var(--link-colour);
-    text-decoration: none;
     font-weight: 500;
 }
 
 p a {
     color: var(--text-link-colour) !important;
+    text-decoration-line: var(--link-decoration-line);
+    text-decoration-style: var(--link-decoration-style);
+    text-decoration-color: var(--link-underline-colour);
+    text-underline-offset: 0.2em;
 }
 
 td a {
     color: var(--text-link-colour) !important;
+    text-decoration-line: var(--link-decoration-line);
+    text-decoration-style: var(--link-decoration-style);
+    text-decoration-color: var(--link-underline-colour);
+    text-underline-offset: 0.2em;
 }
 
 li a {
     color: var(--text-link-colour) !important;
+    text-decoration-line: var(--link-decoration-line);
+    text-decoration-style: var(--link-decoration-style);
+    text-decoration-color: var(--link-underline-colour);
+    text-underline-offset: 0.2em;
 }
 
 .v-application a.router-link-active {
-    color: var(--deep-red);
+    color: var(--text-link-colour);
+    text-decoration-line: var(--link-decoration-line);
+    text-decoration-style: var(--link-decoration-style);
+    text-decoration-color: var(--link-underline-colour);
+    text-underline-offset: 0.2em;
 }
 
 .v-application a:hover {
-    color: var(--bright-red) !important;
+    color: var(--active-link) !important;
+    text-decoration-thickness: 3px;
+    text-decoration-color: var(--bright-red);
 }
 
 /* Turn off the Contents blocks on pages as they're in the sidebar. */
@@ -277,7 +305,7 @@ th {
 }
 
 .v-application .download code:hover {
-    color: var(--bright-red) !important;
+    color: var(--active-link) !important;
 }
 
 .download::before {
@@ -287,7 +315,7 @@ th {
 }
 
 .download code:hover::before  {
-    color: var(--mid-red) !important;
+    color: var(--active-link) !important;
 }
 
 /* Formatting for KaTeX math blocks */
