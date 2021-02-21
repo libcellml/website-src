@@ -57,10 +57,18 @@
                 Throughout these tutorials we will create entities in such a way as to enable their reuse as easily as possible.
                 The basic structure of this model highlights that too.</paragraph>
             <container classes="shortlist">
-                <paragraph>We will create a model with three components:
-                    - An <emphasis>equations</emphasis> component, which contains all of the working pieces and mathematics specific to the model;
-                    - A <emphasis>parameters</emphasis> component, which contains any hard-coded parameters or values specific to this model; and
-                    - A wrapper component, which is the parent of the other two.</paragraph>
+                <paragraph>We will create a model with three components:</paragraph>
+                <bullet_list bullet="-">
+                    <list_item>
+                        <paragraph>An <emphasis>equations</emphasis> component, which contains all of the working pieces and mathematics specific to the model;</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>A <emphasis>parameters</emphasis> component, which contains any hard-coded parameters or values specific to this model; and</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>A <emphasis>wrapper</emphasis> component, which is the parent of the other two.</paragraph>
+                    </list_item>
+                </bullet_list>
             </container>
             <paragraph>This arrangement means that it’s simple to import this model into others, as well as to locate or over-ride parameter values or reuse equations.
                 Each of the components created throughout this series of tutorials will follow this same structure.</paragraph>
