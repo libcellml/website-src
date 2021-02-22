@@ -33,7 +33,7 @@
           >
           and reference the CellML 2.0 paper below:
         </p>
-        <p style="padding-left: 1.5em;">
+        <p style="padding-left: 1.5em">
           Michael Clerx, Michael T. Cooling, Jonathan Cooper, Alan Garny, Keri
           Moyle, David P. Nickerson, Poul M. F. Nielsen, and Hugh Sorby (2020),
           "CellML 2.0", <i>Journal of Integrative Bioinformatics</i>,
@@ -53,6 +53,8 @@
             >libCellML Github repository page</a
           >.
         </p>
+
+        <GithubContributors />
 
         <h3>Supporters</h3>
         The libCellML team acknowledges the generous support of our sponsors.
@@ -82,7 +84,10 @@
 </template>
 
 <script>
+import GithubContributors from './GithubContributors'
+
 export default {
   name: 'AboutContent',
+  components: { GithubContributors },
 }
 </script>
