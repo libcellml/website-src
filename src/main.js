@@ -20,15 +20,6 @@ Vue.use(VueKatex)
 
 Vue.config.productionTip = false
 
-// GITHUB API STUFF
-// vue-resource is needed too
-import VueResource from 'vue-resource'
-Vue.use(VueResource)
- 
-// import vue-github-api
-import GitHubAPI from 'vue-github-api'
-Vue.use(GitHubAPI, { token: process.env.VUE_APP_GITHUB_TOKEN })
-
 new Vue({
   router,
   store,
