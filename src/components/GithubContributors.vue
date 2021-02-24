@@ -15,7 +15,7 @@
             </a>
           </template>
           <span>
-            <strong>{{ person.name }}</strong> contributes to:
+            <strong>{{ person.name }}</strong> contributed to:
             <ul
               v-for="repo in person.repos"
               :key="`contrib_${person.login}_${repo.org}_${repo.repo}`"
@@ -54,11 +54,17 @@ export default {
         let url =
           'https://api.github.com/repos/' + org + '/' + repo + '/contributors'
         req.open('GET', url)
+        req.setRequestHeader(
+          'Authorization',
+          'token '+ process.env.VUE_APP_GITHUB_TOKEN,
+        )
         req.onload = function () {
           if (req.status == 200) {
             pResolve(req.response)
           } else {
-            pReject("Oops, can't access repository: " + org + '/' + repo)
+            pReject(
+              'Oops!' + req.status + ": Can't access repository: " + org + '/' + repo,
+            )
           }
         }
         req.send()
@@ -71,6 +77,11 @@ export default {
         let req = new XMLHttpRequest()
         let url = 'https://api.github.com/users/' + user.login
         req.open('GET', url)
+        req.setRequestHeader(
+          'Authorization',
+          'token '+ process.env.VUE_APP_GITHUB_TOKEN,
+        )
+        console.log('added token to get user')
         req.onload = function () {
           if (req.status == 200) {
             console.log({ response: req.response, repos: user.repos })
