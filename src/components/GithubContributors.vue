@@ -54,6 +54,9 @@ export default {
         let url =
           'https://api.github.com/repos/' + org + '/' + repo + '/contributors'
         req.open('GET', url)
+        console.log('==================')
+        console.log(process.env.VUE_APP_GITHUB_TOKEN)
+        console.log('------------------')
         req.setRequestHeader(
           'Authorization',
           'token '+ process.env.VUE_APP_GITHUB_TOKEN,
