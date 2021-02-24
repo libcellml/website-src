@@ -1,15 +1,5 @@
 <template>
   <v-container>
-    <!-- Option 3: Names in combined list -->
-    <!-- <ul v-for="person in allContributors" :key="`person-${person.login}`">
-      <li>{{ person }}</li>
-      <li>
-        {{ person.user_data }}
-         <img :src="person.user_data.avatar_url" class="avatar" /> 
-      </li>
-    </ul> -->
-
-    <!-- OPTION 1: Avatars -->
     <v-row>
       <v-col
         v-for="person in allContributors"
@@ -28,9 +18,9 @@
             <strong>{{ person.name }}</strong> contributes to:
             <ul
               v-for="repo in person.repos"
-              :key="`person-${person.login}_${repo}`"
+              :key="`contrib_${person.login}_${repo.org}_${repo.repo}`"
             >
-              <li>{{ repo }}</li>
+              <li>{{ repo.name }}</li>
             </ul>
           </span>
         </v-tooltip>
@@ -55,8 +45,7 @@ const skipUser = '[bot]'
 export default {
   name: 'GithubContributors',
   data: () => ({
-    repo_data: {},
-    user_data: {},
+    user_data: [],
   }),
   mounted: function () {
     function githubGetContributors(org, repo) {
@@ -84,7 +73,8 @@ export default {
         req.open('GET', url)
         req.onload = function () {
           if (req.status == 200) {
-            pResolve(req.response)
+            console.log({ response: req.response, repos: user.repos })
+            pResolve({ response: req.response, repos: user.repos })
           } else {
             pReject("Oops, can't get user: " + user.login)
           }
@@ -106,29 +96,15 @@ export default {
         for (let u in temp) {
           let user = temp[u].login
           if (user.includes(skipUser)) {
-            console.log("Skipping ", user)
+            console.log('Skipping ', user)
             continue
           } else if (users[user]) {
             users[user].repos.push(repos[v])
           } else {
-            users[user] = { login: user, repos: [repos[v],] }
+            users[user] = { login: user, repos: [repos[v]] }
           }
         }
       }
-      console.log("users: ",users)
-
-      // let users = []
-      // for (var v in values) {
-      //   let temp = JSON.parse(values[v])
-      //   for (let u in temp) {
-      //     users.push(temp[u].login)
-      //   }
-      // }
-      // let uniqueUsers = [...new Set(users)]
-      // function notBot(user) {
-      //   return !user.includes(skipUser)
-      // }
-      // uniqueUsers = uniqueUsers.filter(notBot)
 
       let fetchUsers = []
       for (let u in users) {
@@ -138,15 +114,21 @@ export default {
       Promise.all(fetchUsers).then((userDataArray) => {
         let userData = []
         for (let u in userDataArray) {
-          let tempUser = JSON.parse(userDataArray[u])
+          let tempUser = JSON.parse(userDataArray[u].response)
+          console.log('tempUser: ', tempUser)
           userData.push({
             name: tempUser.name,
             login: tempUser.login,
             avatar_url: tempUser.avatar_url,
             url: tempUser.html_url,
+            repos: userDataArray[u].repos,
+            index: Math.random(), // Used for getting a random display order
           })
         }
-        this.user_data = userData
+        // Randomising the order of people
+        this.user_data = userData.sort(function (a, b) {
+          return a.index - b.index
+        })
       })
     })
   },
@@ -165,10 +147,15 @@ export default {
   border-radius: 50%;
 }
 .avatar_name {
-  /* max-width: 4rem; */
   text-align: center;
 }
 .avatar_card {
   padding: 0.5rem;
+}
+ul {
+  list-style-type: none;
+}
+li::before {
+  content: '- ';
 }
 </style>
