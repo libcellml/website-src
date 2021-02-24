@@ -15,7 +15,7 @@
             </a>
           </template>
           <span>
-            <strong>{{ person.name }}</strong> contributes to:
+            <strong>{{ person.name }}</strong> contributed to:
             <ul
               v-for="repo in person.repos"
               :key="`contrib_${person.login}_${repo.org}_${repo.repo}`"
