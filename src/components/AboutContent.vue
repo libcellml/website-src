@@ -45,6 +45,8 @@
           >
         </p>
 
+        <h2 id="acknowledgements">Acknowledgements</h2>
+
         <h3>Contributors</h3>
         <p>
           Contributors to the 
@@ -57,7 +59,7 @@
 
         <GithubContributors />
 
-        <h3 id="acknowledgements">Supporters</h3>
+        <h3>Supporters</h3>
         The libCellML team acknowledges the generous support of our sponsors.
 
         <v-container class="image-box">
