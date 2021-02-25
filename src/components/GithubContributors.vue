@@ -4,14 +4,68 @@
       <v-col
         v-for="person in allContributors"
         :key="`person-id-${person.login}`"
-        class="col-1"
+        class="col-4 col-6-sm"
       >
-        <v-tooltip bottom>
+        <!-- OPTION 1: Avatars with hover info, clickable to user link -->
+        <!-- <v-tooltip bottom>
           <template v-slot:activator="{ on }">
             <a v-on="on" :href="person.url" target="_blank">
               <v-avatar>
                 <img :src="person.avatar_url" :alt="person.name" />
               </v-avatar>
+            </a>
+          </template>
+          <span>
+            <strong>{{ person.name }}</strong> contributed to:
+            <ul
+              v-for="repo in person.repos"
+              :key="`contrib_${person.login}_${repo.org}_${repo.repo}`"
+            >
+              <li>{{ repo.name }}</li>
+            </ul>
+          </span>
+        </v-tooltip> -->
+
+        <!-- OPTION 2: Avatar with name underneath -->
+        <!-- <v-tooltip bottom>
+          <template v-slot:activator="{ on }">
+            <a v-on="on" :href="person.url" target="_blank">
+              <div class="avatar_card">
+                <img
+                  class="avatar"
+                  :src="person.avatar_url"
+                  :alt="person.name"
+                />
+
+                <div class="avatar_name">{{ person.name }}</div>
+              </div>
+            </a>
+          </template>
+          <span>
+            <strong>{{ person.name }}</strong> contributed to:
+            <ul
+              v-for="repo in person.repos"
+              :key="`contrib_${person.login}_${repo.org}_${repo.repo}`"
+            >
+              <li>{{ repo.name }}</li>
+            </ul>
+          </span>
+        </v-tooltip> -->
+
+        <!-- OPTION 3: Avatar with name on the side -->
+        <v-tooltip bottom>
+          <template v-slot:activator="{ on }">
+            <a v-on="on" :href="person.url" target="_blank">
+              <v-row no-gutters>
+              <v-col>
+                <img
+                  class="avatar_img"
+                  :src="person.avatar_url"
+                  :alt="person.name"
+                />
+              </v-col>
+              <v-col class="avatar_name">{{ person.name }}</v-col>
+              </v-row>
             </a>
           </template>
           <span>
@@ -56,14 +110,19 @@ export default {
         req.open('GET', url)
         req.setRequestHeader(
           'Authorization',
-          'token '+ process.env.VUE_APP_GITHUB_TOKEN,
+          'token ' + process.env.VUE_APP_GITHUB_TOKEN,
         )
         req.onload = function () {
           if (req.status == 200) {
             pResolve(req.response)
           } else {
             pReject(
-              'Oops!' + req.status + ": Can't access repository: " + org + '/' + repo,
+              'Oops!' +
+                req.status +
+                ": Can't access repository: " +
+                org +
+                '/' +
+                repo,
             )
           }
         }
@@ -79,7 +138,7 @@ export default {
         req.open('GET', url)
         req.setRequestHeader(
           'Authorization',
-          'token '+ process.env.VUE_APP_GITHUB_TOKEN,
+          'token ' + process.env.VUE_APP_GITHUB_TOKEN,
         )
         console.log('added token to get user')
         req.onload = function () {
@@ -153,20 +212,17 @@ export default {
 </script>
 
 <style scoped>
-.avatar {
-  max-width: 4rem;
+.avatar_img {
+  max-width: 4em;
   border-radius: 50%;
 }
 .avatar_name {
-  text-align: center;
+  text-align: left;
+  line-height: normal;
+  margin: auto;
 }
-.avatar_card {
-  padding: 0.5rem;
-}
-ul {
-  list-style-type: none;
-}
-li::before {
-  content: '- ';
+a {
+  text-decoration: none;
+  color: var(--text-colour) !important;
 }
 </style>
