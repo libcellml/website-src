@@ -48,12 +48,6 @@ const rateLimit = async () => {
   return response.data
 }
 
-// export default {
-//   user,
-//   contributors,
-//   rateLimit,
-// }
-
 module.exports = {
   rateLimit,
   contributors,

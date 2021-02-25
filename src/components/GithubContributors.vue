@@ -61,7 +61,7 @@ import { mapActions } from 'vuex'
 import github from '@/services/github'
 
 const repos = [
-  { org: 'cellml', repo: 'libcellml', name: 'libCellML code base' },
+  { org: 'cellml', repo: 'libcellml', name: 'libCellML library' },
   { org: 'libcellml', repo: 'website-src', name: 'libCellML website' },
   {
     org: 'kerimoyle',
