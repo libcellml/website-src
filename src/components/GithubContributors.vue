@@ -30,8 +30,6 @@
 </template>
 
 <script>
-import AES from 'crypto-js/aes'
-import enc from 'crypto-js/enc-utf8'
 import CryptoJS from 'crypto-js'
 
 const repos = [
