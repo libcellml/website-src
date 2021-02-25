@@ -45,13 +45,16 @@
           >
         </p>
 
+        <h2 id="acknowledgements">Acknowledgements</h2>
+
         <h3>Contributors</h3>
         <p>
-          A complete list of the developers and contributors to the libCellML
-          project are given on the
-          <a href="https://github.com/cellml/libcellml/graphs/contributors"
-            >libCellML Github repository page</a
-          >.
+          Contributors to the 
+          <a href="https://github.com/cellml/libcellml/graphs/contributors">
+          libCellML Github repository</a>, 
+          <a href="https://github.com/libcellml/website-src/graphs/contributors">
+          this website</a>, and <a href="https://github.com/kerimoyle/libcellml-tutorials/graphs/contributors">
+          our documentation</a> are shown below.
         </p>
 
         <GithubContributors />
