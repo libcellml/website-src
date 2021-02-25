@@ -54,13 +54,12 @@ export default {
         let url =
           'https://api.github.com/repos/' + org + '/' + repo + '/contributors'
         req.open('GET', url)
-        console.log('==================')
-        console.log(process.env.VUE_APP_GITHUB_TOKEN)
-        console.log('------------------')
-        req.setRequestHeader(
-          'Authorization',
-          'token ' + process.env.VUE_APP_GITHUB_TOKEN,
-        )
+        if (process.env.VUE_APP_GITHUB_TOKEN) {
+          req.setRequestHeader(
+            'Authorization',
+            'token ' + process.env.VUE_APP_GITHUB_TOKEN,
+          )
+        }
         req.onload = function() {
           if (req.status == 200) {
             pResolve(req.response)
@@ -85,14 +84,14 @@ export default {
         let req = new XMLHttpRequest()
         let url = 'https://api.github.com/users/' + user.login
         req.open('GET', url)
-        req.setRequestHeader(
-          'Authorization',
-          'token ' + process.env.VUE_APP_GITHUB_TOKEN,
-        )
-        console.log('added token to get user')
+        if (process.env.VUE_APP_GITHUB_TOKEN) {
+          req.setRequestHeader(
+            'Authorization',
+            'token ' + process.env.VUE_APP_GITHUB_TOKEN,
+          )
+        }
         req.onload = function() {
           if (req.status == 200) {
-            console.log({ response: req.response, repos: user.repos })
             pResolve({ response: req.response, repos: user.repos })
           } else {
             pReject("Oops, can't get user: " + user.login)
@@ -115,7 +114,6 @@ export default {
         for (let u in temp) {
           let user = temp[u].login
           if (user.includes(skipUser)) {
-            console.log('Skipping ', user)
             continue
           } else if (users[user]) {
             users[user].repos.push(repos[v])
@@ -134,7 +132,6 @@ export default {
         let userData = []
         for (let u in userDataArray) {
           let tempUser = JSON.parse(userDataArray[u].response)
-          console.log('tempUser: ', tempUser)
           userData.push({
             name: tempUser.name,
             login: tempUser.login,
