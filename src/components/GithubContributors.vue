@@ -1,58 +1,11 @@
 <template>
   <v-container>
-    <v-row>
+    <v-row v-if="status === 'ready'">
       <v-col
         v-for="person in allContributors"
         :key="`person-id-${person.login}`"
         class="col-12 col-sm-6 col-md-3"
       >
-        <!-- OPTION 1: Avatars with hover info, clickable to user link -->
-        <!-- <v-tooltip bottom>
-          <template v-slot:activator="{ on }">
-            <a v-on="on" :href="person.url" target="_blank">
-              <v-avatar>
-                <img :src="person.avatar_url" :alt="person.name" />
-              </v-avatar>
-            </a>
-          </template>
-          <span>
-            <strong>{{ person.name }}</strong> contributed to:
-            <ul
-              v-for="repo in person.repos"
-              :key="`contrib_${person.login}_${repo.org}_${repo.repo}`"
-            >
-              <li>{{ repo.name }}</li>
-            </ul>
-          </span>
-        </v-tooltip> -->
-
-        <!-- OPTION 2: Avatar with name underneath -->
-        <!-- <v-tooltip bottom>
-          <template v-slot:activator="{ on }">
-            <a v-on="on" :href="person.url" target="_blank">
-              <div class="avatar_card">
-                <img
-                  class="avatar"
-                  :src="person.avatar_url"
-                  :alt="person.name"
-                />
-
-                <div class="avatar_name">{{ person.name }}</div>
-              </div>
-            </a>
-          </template>
-          <span>
-            <strong>{{ person.name }}</strong> contributed to:
-            <ul
-              v-for="repo in person.repos"
-              :key="`contrib_${person.login}_${repo.org}_${repo.repo}`"
-            >
-              <li>{{ repo.name }}</li>
-            </ul>
-          </span>
-        </v-tooltip> -->
-
-        <!-- OPTION 3: Avatar with name on the side -->
         <v-tooltip bottom>
           <template v-slot:activator="{ on }">
             <a v-on="on" :href="person.url" target="_blank">
@@ -80,11 +33,32 @@
         </v-tooltip>
       </v-col>
     </v-row>
+    <v-row v-else-if="status === 'overuse'">
+      <v-col>
+        <h4>Contributor listing</h4>
+        <p>
+          We have been pestering GitHub too much to get the contributor list
+          from there ourselves. Please try again after
+          {{ resetTime }}.
+        </p></v-col
+      >
+    </v-row>
+    <v-row v-else>
+      <v-col>
+        <h4>Contributor listing</h4>
+        <p>
+          Something has gone wrong getting the contributor information from
+          GitHub. Please try again later.
+        </p></v-col
+      >
+    </v-row>
   </v-container>
 </template>
 
 <script>
-import CryptoJS from 'crypto-js'
+import { mapActions } from 'vuex'
+
+import github from '@/services/github'
 
 const repos = [
   { org: 'cellml', repo: 'libcellml', name: 'libCellML code base' },
@@ -98,124 +72,126 @@ const repos = [
 
 const skipUser = '[bot]'
 
-const authToken = () => {
-  var bytes = CryptoJS.AES.decrypt(
-    process.env.VUE_APP_ENCRYPTED_GITHUB_TOKEN,
-    'public-key',
-  )
-  var decrypted = bytes.toString(CryptoJS.enc.Utf8)
-  return decrypted
-}
-
 export default {
   name: 'GithubContributors',
   data: () => {
     return {
       user_data: [],
+      status: 'error',
+      resetTime: undefined,
     }
   },
-  mounted: function() {
-    function githubGetContributors(org, repo) {
-      let p = new Promise(function(pResolve, pReject) {
-        let req = new XMLHttpRequest()
-        let url =
-          'https://api.github.com/repos/' + org + '/' + repo + '/contributors'
-        req.open('GET', url)
-        const token = authToken()
-        if (token) {
-          req.setRequestHeader('Authorization', 'token ' + token)
-        }
-        req.onload = function() {
-          if (req.status == 200) {
-            pResolve(req.response)
-          } else {
-            pReject(
-              'Oops!' +
-                req.status +
-                ": Can't access repository: " +
-                org +
-                '/' +
-                repo,
-            )
+  mounted() {
+    this.status = 'error'
+    this.resetTime = undefined
+    github
+      .rateLimit()
+      .then(response => {
+        if (response.rate.remaining >= repos.length) {
+          let fetchContributors = []
+          for (const r of repos) {
+            fetchContributors.push(github.contributors(r.org, r.repo))
           }
+          Promise.all(fetchContributors)
+            .then(contributorList => {
+              let users = []
+              let index = 0
+              for (const v of contributorList) {
+                for (const u of v) {
+                  if (u.login.includes(skipUser)) {
+                    continue
+                  } else {
+                    const indexOfUser = users.findIndex(
+                      user => user.login === u.login,
+                    )
+                    if (indexOfUser !== -1) {
+                      users[indexOfUser].repos.push(repos[index])
+                    } else {
+                      users.push({ login: u.login, repos: [repos[index]] })
+                    }
+                  }
+                }
+                index++
+              }
+
+              if (
+                response.rate.remaining - repos.length >=
+                Object.keys(users).length
+              ) {
+                let fetchUsers = []
+                for (const u of users) {
+                  fetchUsers.push(github.user(u.login))
+                }
+
+                Promise.all(fetchUsers)
+                  .then(userDataList => {
+                    let userData = []
+                    let indexOfUser = 0
+                    for (const u of userDataList) {
+                      userData.push({
+                        name: u.name,
+                        login: u.login,
+                        avatar_url: u.avatar_url,
+                        url: u.html_url,
+                        repos: users[indexOfUser].repos,
+                        index: Math.random(), // Used for getting a random display order
+                      })
+                      indexOfUser++
+                    }
+
+                    this.user_data = userData.sort(function(a, b) {
+                      return a.index - b.index
+                    })
+                    this.status = 'ready'
+                  })
+                  .catch(error => {
+                    this.add({
+                      type: 'error',
+                      title: 'Fetching users failed:',
+                      message: error.message,
+                    })
+                  })
+              } else {
+                this.serviceOveruse(response.rate.reset)
+              }
+            })
+            .catch(error => {
+              this.add({
+                type: 'error',
+                title: 'Fetching contributors failed:',
+                message: error.message,
+              })
+            })
+        } else {
+          this.serviceOveruse(response.rate.reset)
         }
-        req.send()
       })
-      return p
-    }
-
-    function githubGetUser(user) {
-      let p = new Promise(function(pResolve, pReject) {
-        let req = new XMLHttpRequest()
-        let url = 'https://api.github.com/users/' + user.login
-        req.open('GET', url)
-        const token = authToken()
-        if (token) {
-          req.setRequestHeader('Authorization', 'token ' + token)
-        }
-        req.onload = function() {
-          if (req.status == 200) {
-            pResolve({ response: req.response, repos: user.repos })
-          } else {
-            pReject("Oops, can't get user: " + user.login)
-          }
-        }
-        req.send()
-      })
-      return p
-    }
-
-    let fetchContributors = []
-    for (let r in repos) {
-      fetchContributors.push(githubGetContributors(repos[r].org, repos[r].repo))
-    }
-
-    Promise.all(fetchContributors).then(values => {
-      let users = {}
-      for (var v in values) {
-        let temp = JSON.parse(values[v])
-        for (let u in temp) {
-          let user = temp[u].login
-          if (user.includes(skipUser)) {
-            continue
-          } else if (users[user]) {
-            users[user].repos.push(repos[v])
-          } else {
-            users[user] = { login: user, repos: [repos[v]] }
-          }
-        }
-      }
-
-      let fetchUsers = []
-      for (let u in users) {
-        fetchUsers.push(githubGetUser(users[u]))
-      }
-
-      Promise.all(fetchUsers).then(userDataArray => {
-        let userData = []
-        for (let u in userDataArray) {
-          let tempUser = JSON.parse(userDataArray[u].response)
-          userData.push({
-            name: tempUser.name,
-            login: tempUser.login,
-            avatar_url: tempUser.avatar_url,
-            url: tempUser.html_url,
-            repos: userDataArray[u].repos,
-            index: Math.random(), // Used for getting a random display order
-          })
-        }
-        // Randomising the order of people
-        this.user_data = userData.sort(function(a, b) {
-          return a.index - b.index
+      .catch(error => {
+        this.add({
+          type: 'error',
+          title: 'GitHub get rate limit error:',
+          message: error.message,
         })
       })
-    })
   },
-
   computed: {
     allContributors() {
       return this.user_data
     },
+  },
+  methods: {
+    serviceOveruse(reset) {
+      // console.log('We have used this service too much, please try again after:')
+      const d = new Date(reset * 1000)
+      const time = Intl.DateTimeFormat('en', {
+        hour: 'numeric',
+        minute: 'numeric',
+        hour12: true,
+      }).format(d)
+      this.resetTime = time
+      this.status = 'overuse'
+    },
+    ...mapActions('notifications', ['add']),
   },
 }
 </script>
