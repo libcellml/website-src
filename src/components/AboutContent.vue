@@ -49,12 +49,21 @@
 
         <h3>Contributors</h3>
         <p>
-          Contributors to the 
+          Contributors to the
           <a href="https://github.com/cellml/libcellml/graphs/contributors">
-          libCellML Github repository</a>, 
-          <a href="https://github.com/libcellml/website-src/graphs/contributors">
-          this website</a>, and <a href="https://github.com/kerimoyle/libcellml-tutorials/graphs/contributors">
-          our documentation</a> are shown below.
+            libCellML Github repository</a
+          >,
+          <a
+            href="https://github.com/libcellml/website-src/graphs/contributors"
+          >
+            this website</a
+          >, and
+          <a
+            href="https://github.com/kerimoyle/libcellml-tutorials/graphs/contributors"
+          >
+            our documentation</a
+          >
+          are shown below.
         </p>
 
         <GithubContributors />
