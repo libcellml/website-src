@@ -47,26 +47,30 @@ export default {
   data: () => ({
     user_data: [],
   }),
-  mounted: function () {
+  mounted: function() {
     function githubGetContributors(org, repo) {
-      let p = new Promise(function (pResolve, pReject) {
+      let p = new Promise(function(pResolve, pReject) {
         let req = new XMLHttpRequest()
         let url =
           'https://api.github.com/repos/' + org + '/' + repo + '/contributors'
         req.open('GET', url)
-        console.log('==================')
-        console.log(process.env.VUE_APP_GITHUB_TOKEN)
-        console.log('------------------')
-        req.setRequestHeader(
-          'Authorization',
-          'token '+ process.env.VUE_APP_GITHUB_TOKEN,
-        )
-        req.onload = function () {
+        if (process.env.VUE_APP_GITHUB_TOKEN) {
+          req.setRequestHeader(
+            'Authorization',
+            'token ' + process.env.VUE_APP_GITHUB_TOKEN,
+          )
+        }
+        req.onload = function() {
           if (req.status == 200) {
             pResolve(req.response)
           } else {
             pReject(
-              'Oops!' + req.status + ": Can't access repository: " + org + '/' + repo,
+              'Oops!' +
+                req.status +
+                ": Can't access repository: " +
+                org +
+                '/' +
+                repo,
             )
           }
         }
@@ -76,18 +80,18 @@ export default {
     }
 
     function githubGetUser(user) {
-      let p = new Promise(function (pResolve, pReject) {
+      let p = new Promise(function(pResolve, pReject) {
         let req = new XMLHttpRequest()
         let url = 'https://api.github.com/users/' + user.login
         req.open('GET', url)
-        req.setRequestHeader(
-          'Authorization',
-          'token '+ process.env.VUE_APP_GITHUB_TOKEN,
-        )
-        console.log('added token to get user')
-        req.onload = function () {
+        if (process.env.VUE_APP_GITHUB_TOKEN) {
+          req.setRequestHeader(
+            'Authorization',
+            'token ' + process.env.VUE_APP_GITHUB_TOKEN,
+          )
+        }
+        req.onload = function() {
           if (req.status == 200) {
-            console.log({ response: req.response, repos: user.repos })
             pResolve({ response: req.response, repos: user.repos })
           } else {
             pReject("Oops, can't get user: " + user.login)
@@ -103,14 +107,13 @@ export default {
       fetchContributors.push(githubGetContributors(repos[r].org, repos[r].repo))
     }
 
-    Promise.all(fetchContributors).then((values) => {
+    Promise.all(fetchContributors).then(values => {
       let users = {}
       for (var v in values) {
         let temp = JSON.parse(values[v])
         for (let u in temp) {
           let user = temp[u].login
           if (user.includes(skipUser)) {
-            console.log('Skipping ', user)
             continue
           } else if (users[user]) {
             users[user].repos.push(repos[v])
@@ -125,11 +128,10 @@ export default {
         fetchUsers.push(githubGetUser(users[u]))
       }
 
-      Promise.all(fetchUsers).then((userDataArray) => {
+      Promise.all(fetchUsers).then(userDataArray => {
         let userData = []
         for (let u in userDataArray) {
           let tempUser = JSON.parse(userDataArray[u].response)
-          console.log('tempUser: ', tempUser)
           userData.push({
             name: tempUser.name,
             login: tempUser.login,
@@ -140,7 +142,7 @@ export default {
           })
         }
         // Randomising the order of people
-        this.user_data = userData.sort(function (a, b) {
+        this.user_data = userData.sort(function(a, b) {
           return a.index - b.index
         })
       })
