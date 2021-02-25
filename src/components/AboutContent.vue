@@ -57,7 +57,7 @@
 
         <GithubContributors />
 
-        <h3>Supporters</h3>
+        <h3 id="acknowledgements">Supporters</h3>
         The libCellML team acknowledges the generous support of our sponsors.
 
         <v-container class="image-box">
