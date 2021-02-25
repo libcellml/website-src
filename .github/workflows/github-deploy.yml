@@ -44,12 +44,16 @@ jobs:
 
       - name: Run production deploy script
         if: github.ref == 'refs/heads/production'
+        env:
+          VUE_APP_GITHUB_TOKEN: ${{ secrets.VUE_APP_GITHUB_TOKEN }}
         run: |
           git config user.name hsorby && git config user.email h.sorby@auckland.ac.nz
           npm run github-deploy
 
       - name: Run staging deploy script
         if: github.ref == 'refs/heads/staging'
+        env:
+          VUE_APP_GITHUB_TOKEN: ${{ secrets.VUE_APP_GITHUB_TOKEN }}
         run: |
           git config user.name hsorby && git config user.email h.sorby@auckland.ac.nz
           npm run github-deploy -- staging
