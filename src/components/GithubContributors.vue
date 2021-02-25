@@ -84,6 +84,8 @@
 </template>
 
 <script>
+import CryptoJS from 'crypto-js'
+
 const repos = [
   { org: 'cellml', repo: 'libcellml', name: 'libCellML code base' },
   { org: 'libcellml', repo: 'website-src', name: 'libCellML website' },
@@ -96,11 +98,22 @@ const repos = [
 
 const skipUser = '[bot]'
 
+const authToken = () => {
+  var bytes = CryptoJS.AES.decrypt(
+    process.env.VUE_APP_ENCRYPTED_GITHUB_TOKEN,
+    'public-key',
+  )
+  var decrypted = bytes.toString(CryptoJS.enc.Utf8)
+  return decrypted
+}
+
 export default {
   name: 'GithubContributors',
-  data: () => ({
-    user_data: [],
-  }),
+  data: () => {
+    return {
+      user_data: [],
+    }
+  },
   mounted: function() {
     function githubGetContributors(org, repo) {
       let p = new Promise(function(pResolve, pReject) {
@@ -108,11 +121,9 @@ export default {
         let url =
           'https://api.github.com/repos/' + org + '/' + repo + '/contributors'
         req.open('GET', url)
-        if (process.env.VUE_APP_GITHUB_TOKEN) {
-          req.setRequestHeader(
-            'Authorization',
-            'token ' + process.env.VUE_APP_GITHUB_TOKEN,
-          )
+        const token = authToken()
+        if (token) {
+          req.setRequestHeader('Authorization', 'token ' + token)
         }
         req.onload = function() {
           if (req.status == 200) {
@@ -138,11 +149,9 @@ export default {
         let req = new XMLHttpRequest()
         let url = 'https://api.github.com/users/' + user.login
         req.open('GET', url)
-        if (process.env.VUE_APP_GITHUB_TOKEN) {
-          req.setRequestHeader(
-            'Authorization',
-            'token ' + process.env.VUE_APP_GITHUB_TOKEN,
-          )
+        const token = authToken()
+        if (token) {
+          req.setRequestHeader('Authorization', 'token ' + token)
         }
         req.onload = function() {
           if (req.status == 200) {
