@@ -64,7 +64,7 @@
         </v-col>
         <v-col class="text-right">
           <p id="footer-ack">
-            <router-link to="/#acknowledgements">Acknowledgements</router-link>
+            <router-link to="/#about">Acknowledgements</router-link>
           </p>
         </v-col>
       </v-row>
