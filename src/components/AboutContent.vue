@@ -35,7 +35,7 @@
           Michael Clerx, Michael T. Cooling, Jonathan Cooper, Alan Garny, Keri
           Moyle, David P. Nickerson, Poul M. F. Nielsen, and Hugh Sorby (2020),
           "CellML 2.0", <i>Journal of Integrative Bioinformatics</i>,
-          <b>17</b>:2-3
+          <b>17</b>:2-3.
           <br />
           <b>DOI: </b>
           <a href="https://doi.org/10.1515/jib-2020-0021"
