@@ -28,9 +28,7 @@
         <p>
           Until we have a formal paper to cite, please link to the official
           libCellML website
-          <a target="_blank" href="http://www.libcellml.org"
-            >www.libcellml.org</a
-          >
+          <a target="_blank" href="http://www.libcellml.org">libcellml.org</a>
           and reference the CellML 2.0 paper below:
         </p>
         <p style="padding-left: 1.5em">
