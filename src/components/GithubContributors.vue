@@ -17,12 +17,14 @@
                     :alt="person.name"
                   />
                 </v-col>
-                <v-col class="avatar_name">{{ person.name }}</v-col>
+                <v-col class="avatar_name">{{
+                  person.name || person.login
+                }}</v-col>
               </v-row>
             </a>
           </template>
           <span>
-            <strong>{{ person.name }}</strong> contributed to:
+            <strong>{{ person.name || person.login }}</strong> contributed to:
             <ul
               v-for="repo in person.repos"
               :key="`contrib_${person.login}_${repo.org}_${repo.repo}`"
