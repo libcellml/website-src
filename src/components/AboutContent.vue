@@ -6,10 +6,8 @@
 
         <h3>Questions and comments</h3>
         <p>
-          The library is intended to be lightweight and focused purely in
-          dealing with CellML models. In achieving this, some of the convenience
-          methods/objects that we might expect will not be part of libCellML.
-          For questions, feature requests, and bug reports about the libCellML
+          The library is designed to be used for working with CellML models. For
+          questions, feature requests, and bug reports about the libCellML
           library, please visit the
           <a href="https://github.com/cellml/libcellml/issues" target="_blank"
             >libCellML GitHub repository</a
@@ -61,7 +59,7 @@
           >
             our documentation</a
           >
-          are shown below.
+          are shown below (in an actively randomised order).
         </p>
 
         <GithubContributors />
