@@ -6,10 +6,8 @@
 
         <h3>Questions and comments</h3>
         <p>
-          The library is intended to be lightweight and focused purely in
-          dealing with CellML models. In achieving this, some of the convenience
-          methods/objects that we might expect will not be part of libCellML.
-          For questions, feature requests, and bug reports about the libCellML
+          The library is designed to be used for working with CellML models. For
+          questions, feature requests, and bug reports about the libCellML
           library, please visit the
           <a href="https://github.com/cellml/libcellml/issues" target="_blank"
             >libCellML GitHub repository</a
@@ -28,16 +26,14 @@
         <p>
           Until we have a formal paper to cite, please link to the official
           libCellML website
-          <a target="_blank" href="http://www.libcellml.org"
-            >www.libcellml.org</a
-          >
+          <a target="_blank" href="http://www.libcellml.org">libcellml.org</a>
           and reference the CellML 2.0 paper below:
         </p>
         <p style="padding-left: 1.5em">
           Michael Clerx, Michael T. Cooling, Jonathan Cooper, Alan Garny, Keri
           Moyle, David P. Nickerson, Poul M. F. Nielsen, and Hugh Sorby (2020),
           "CellML 2.0", <i>Journal of Integrative Bioinformatics</i>,
-          <b>17</b>:2-3
+          <b>17</b>:2-3.
           <br />
           <b>DOI: </b>
           <a href="https://doi.org/10.1515/jib-2020-0021"
@@ -63,7 +59,7 @@
           >
             our documentation</a
           >
-          are shown below.
+          are shown below (in an actively randomised order).
         </p>
 
         <GithubContributors />
@@ -90,6 +86,16 @@
             </v-col>
           </v-row>
         </v-container>
+        <h3>License</h3>
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"
+          ><img
+            alt="Creative Commons Licence"
+            style="border-width:0"
+            src="https://i.creativecommons.org/l/by/4.0/88x31.png"/></a
+        ><br />This work is licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"
+          >Creative Commons Attribution 4.0 International License</a
+        >.
       </v-col>
     </v-row>
   </v-container>
