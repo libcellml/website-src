@@ -1,5 +1,5 @@
 <template>
-  <div class="download">
+  <div class="download-view">
     <v-container>
       <v-row>
         <v-col>
