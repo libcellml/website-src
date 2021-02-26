@@ -14,7 +14,7 @@
 
 <script>
 import DocumentationArchive from '@/components/DocumentationArchive.vue'
-import { getDoxygenVersions, getSphinxVersions } from '@/js/versions'
+import { getApiVersions, getUserGuidesVersions } from '@/js/versions'
 import BreadCrumbs from '@/components/BreadCrumbs'
 
 export default {
@@ -27,8 +27,8 @@ export default {
     return { apiVersions: [], tutorialVersions: [] }
   },
   created() {
-    this.apiVersions = getDoxygenVersions()
-    this.tutorialVersions = getSphinxVersions()
+    this.apiVersions = getApiVersions()
+    this.tutorialVersions = getUserGuidesVersions()
   },
 }
 </script>

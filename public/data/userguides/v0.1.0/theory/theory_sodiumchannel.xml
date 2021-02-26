@@ -7,7 +7,7 @@
         <title>A model of a sodium channel</title>
         <paragraph>The second ion channel in Hodgkin-Huxley model controls sodium.
             The theory here is the basis for the the practical modelling
-            tutorial in <reference internal="True" refuri="../tutorials/hh_tutorials/tut3/index#debugsodiumchannelmodel"><inline classes="std std-ref">HH Tutorial 3</inline></reference>.</paragraph>
+            tutorial in <reference internal="True" refuri="../tutorials/hh_tutorial3/index#debugsodiumchannelmodel"><inline classes="std std-ref">HH Tutorial 3</inline></reference>.</paragraph>
         <topic classes="contents local" ids="contents" names="contents">
             <bullet_list>
                 <list_item>
@@ -97,7 +97,7 @@
         <section ids="simulation-and-results" names="simulation\ and\ results">
             <title refid="id5">Simulation and results</title>
             <paragraph>The behaviour of the sodium channel was simulated using the <reference internal="True" refuri="../tutorials/solver/index#solver"><inline classes="std std-ref">simple solver</inline></reference> provided to run the code generated
-                in <reference internal="True" refuri="../tutorials/hh_tutorials/tut3/index#debugsodiumchannelmodel"><inline classes="std std-ref">HH Tutorial 3</inline></reference>.
+                in <reference internal="True" refuri="../tutorials/hh_tutorial3/index#debugsodiumchannelmodel"><inline classes="std std-ref">HH Tutorial 3</inline></reference>.
                 Three voltage-step experiments were run with voltage conditions of (a) -85mV to -20mV, (b) -85mV to 0mV and (c) -85mV to +20mV.
                 The results of the computation, with an end time of 40ms, and Euler step of 0.01ms are shown in <number_reference internal="True" refid="sodium-v" title="Figure {number}"><inline classes="std std-numref">Figure 16</inline></number_reference> to <number_reference internal="True" refid="sodium-i" title="Figure {number}"><inline classes="std std-numref">Figure 20</inline></number_reference> below.</paragraph>
             <target refid="sodium-v"></target>

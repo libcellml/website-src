@@ -6,7 +6,7 @@
     <section ids="a-model-of-a-potassium-channel theory-potassiumchannel" names="a\ model\ of\ a\ potassium\ channel theory_potassiumchannel">
         <title>A model of a potassium channel</title>
         <paragraph>We now deal specifically with the application of the ion channel model discussed in <reference internal="True" refuri="theory_iongates#theory-iongates"><inline classes="std std-ref">the previous chapter on ion gates theory</inline></reference> to the Hodgkin and Huxley (HH) potassium channel.
-            This theory is the basis for the practical modelling tutorial in <reference internal="True" refuri="../tutorials/hh_tutorials/tut2/index#createpotassiumchannelmodel"><inline classes="std std-ref">HH Tutorial 2</inline></reference>.</paragraph>
+            This theory is the basis for the practical modelling tutorial in <reference internal="True" refuri="../tutorials/hh_tutorial2/index#createpotassiumchannelmodel"><inline classes="std std-ref">HH Tutorial 2</inline></reference>.</paragraph>
         <topic classes="contents local" ids="contents" names="contents">
             <bullet_list>
                 <list_item>
@@ -60,7 +60,7 @@
         </section>
         <section ids="interpretation-into-a-cellml-model" names="interpretation\ into\ a\ cellml\ model">
             <title refid="id4">Interpretation into a CellML model</title>
-            <paragraph>Defining components serves two purposes: it preserves a modular structure for CellML models, and allows these component modules to be imported into other models, as demonstrated in <reference internal="True" refuri="../tutorials/hh_tutorials/tut2/index#createpotassiumchannelmodel"><inline classes="std std-ref">HH Tutorial 2</inline></reference>.
+            <paragraph>Defining components serves two purposes: it preserves a modular structure for CellML models, and allows these component modules to be imported into other models, as demonstrated in <reference internal="True" refuri="../tutorials/hh_tutorial2/index#createpotassiumchannelmodel"><inline classes="std std-ref">HH Tutorial 2</inline></reference>.
                 For the potassium channel model we define components representing (i) the environment, (ii) the potassium channel conductivity, and (iii) the dynamics of the <math>n</math>-gate as shown in <strong>TODO</strong>.</paragraph>
             <paragraph>Since certain variables (<math>t</math>, <math>V</math> and <math>n</math>) are shared between components, we need to also define the component maps or equivalent variables as described below.</paragraph>
         </section>
@@ -69,7 +69,7 @@
             <paragraph>Variables are contained within components in order to make the models modular, and to enable the sharing and reuse of their different entities.
                 But along with this containment functionality comes the need for the enclosed variables to communicate with one another across these artificial barriers.
                 This is done by creating <emphasis>equivalent variable maps</emphasis>, wherein a variable in one component is mapped through an <emphasis>interface</emphasis> to a corresponding variable in another.</paragraph>
-            <paragraph>More information about how components can be nested to create a hierarchical <emphasis>encapsulation structure</emphasis> is shown in more detail in the next chapter, <reference internal="True" refuri="theory_sodiumchannel#theory-sodiumchannel"><inline classes="std std-ref">A model of a sodium channel</inline></reference> and demonstrated in <reference internal="True" refuri="../tutorials/hh_tutorials/tut3/index#debugsodiumchannelmodel"><inline classes="std std-ref">HH Tutorial 3</inline></reference>.</paragraph>
+            <paragraph>More information about how components can be nested to create a hierarchical <emphasis>encapsulation structure</emphasis> is shown in more detail in the next chapter, <reference internal="True" refuri="theory_sodiumchannel#theory-sodiumchannel"><inline classes="std std-ref">A model of a sodium channel</inline></reference> and demonstrated in <reference internal="True" refuri="../tutorials/hh_tutorial3/index#debugsodiumchannelmodel"><inline classes="std std-ref">HH Tutorial 3</inline></reference>.</paragraph>
             <figure align="center" ids="potassium-component-structure" names="potassium_component_structure" width="12cm">
                 <image alt="Structure of the potassium channel component with its n-gate and environment component" candidates="{'*': 'theory/images/potassium_component_structure.png'}" uri="theory/images/potassium_component_structure.png"></image>
                 <caption>Structure of the potassium channel component with its <math>n</math>-gate and environment component</caption>
@@ -77,7 +77,7 @@
         </section>
         <section ids="simulation-and-results" names="simulation\ and\ results">
             <title refid="id6">Simulation and results</title>
-            <paragraph>The behaviour of the potassium channel can be simulated using the <reference internal="True" refuri="../tutorials/solver/index#solver"><inline classes="std std-ref">simple solver</inline></reference> provided to run the code generated in <reference internal="True" refuri="../tutorials/hh_tutorials/tut2/index#createpotassiumchannelmodel"><inline classes="std std-ref">HH Tutorial 2</inline></reference>.
+            <paragraph>The behaviour of the potassium channel can be simulated using the <reference internal="True" refuri="../tutorials/solver/index#solver"><inline classes="std std-ref">simple solver</inline></reference> provided to run the code generated in <reference internal="True" refuri="../tutorials/hh_tutorial2/index#createpotassiumchannelmodel"><inline classes="std std-ref">HH Tutorial 2</inline></reference>.
                 A step change in membrane voltage between 0mV and -85mV and back gives the behaviour shown in <number_reference internal="True" refid="potassium-voltage" title="Figure {number}"><inline classes="std std-numref">Figure 10</inline></number_reference> to <number_reference internal="True" refid="potassium-current" title="Figure {number}"><inline classes="std std-numref">Figure 13</inline></number_reference> below.
                 These were created using a timestep of 0.01ms to an ending time of 40ms using the <reference internal="True" refuri="theory_ode_solutions#theory-ode-solutions"><inline classes="std std-ref">simple ODE solver</inline></reference>.</paragraph>
             <paragraph>At 0mV, the steady state value of the <math>n</math>-gate is <math>n_{\infty} = \frac{\alpha_{n}}{\alpha_{n} + \beta_{n}} =</math> 0.324 and, at -85mV, <math>n_{\infty} = \ </math>0.945.</paragraph>
@@ -113,7 +113,7 @@
         </section>
         <section ids="next-steps" names="next\ steps">
             <title refid="id7">Next steps</title>
-            <paragraph>This potassium channel model will be used - together with a sodium channel model (in <reference internal="True" refuri="../tutorials/hh_tutorials/tut3/index#debugsodiumchannelmodel"><inline classes="std std-ref">HH Tutorial 3</inline></reference>) and a leakage channel model - to form the Hodgkin-Huxley neuron model (in <reference internal="True" refuri="../tutorials/hh_tutorials/tut4/index#generatemembranemodel"><inline classes="std std-ref">HH Tutorial 4</inline></reference>), where the membrane ion channel current flows are coupled to the equations governing current flow along the axon to generate an action potential.</paragraph>
+            <paragraph>This potassium channel model will be used - together with a sodium channel model (in <reference internal="True" refuri="../tutorials/hh_tutorial3/index#debugsodiumchannelmodel"><inline classes="std std-ref">HH Tutorial 3</inline></reference>) and a leakage channel model - to form the Hodgkin-Huxley neuron model (in <reference internal="True" refuri="../tutorials/hh_tutorial4/index#generatemembranemodel"><inline classes="std std-ref">HH Tutorial 4</inline></reference>), where the membrane ion channel current flows are coupled to the equations governing current flow along the axon to generate an action potential.</paragraph>
             <paragraph>The next chapter describes the theory behind the <reference internal="True" refuri="theory_sodiumchannel#theory-sodiumchannel"><inline classes="std std-ref">sodium channel model</inline></reference>.</paragraph>
             <transition></transition>
             <rubric>Footnotes</rubric>

@@ -4,7 +4,8 @@
       <img src="./assets/logo.svg" width="40" height="40" />
       <v-app-bar-nav-icon @click="onSidebarOpen" />
       <v-row>
-        <v-col id="topMenuBar"
+        <v-col
+          id="topMenuBar"
           v-for="link in links"
           :key="`${link.label}-header-link`"
           :cols="link.label === 'Home' ? 2 : 1"
@@ -13,7 +14,7 @@
             {{ link.label }}
           </v-btn>
         </v-col>
-        <v-col id="bugButton" >
+        <v-col id="bugButton">
           <v-tooltip bottom>
             <template v-slot:activator="{ on }">
               <v-btn
@@ -59,11 +60,18 @@
       <v-row justify="center" no-gutters>
         <v-col />
         <v-col class="text-center">
-          <p id="footer-copyright">Copyright &#169; 2021 libCellML</p>
+          <p id="footer-copyright">
+            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"
+              ><img
+                alt="Creative Commons Licence"
+                style="border-width:0"
+                src="https://i.creativecommons.org/l/by/4.0/88x31.png"
+            /></a>
+          </p>
         </v-col>
         <v-col class="text-right">
           <p id="footer-ack">
-            <router-link to="about">Acknowledgements</router-link>
+            <router-link to="/#acknowledgements">Acknowledgements</router-link>
           </p>
         </v-col>
       </v-row>

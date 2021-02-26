@@ -68,8 +68,8 @@
 
 <script>
 import {
-  getDoxygenVersions,
-  getSphinxVersions,
+  getApiVersions,
+  getUserGuidesVersions,
   getDevelopersVersions,
 } from '@/js/versions'
 
@@ -80,8 +80,8 @@ export default {
     return { apiVersions: [], tutorialVersions: [] }
   },
   created() {
-    this.apiVersions = getDoxygenVersions()
-    this.tutorialVersions = getSphinxVersions()
+    this.apiVersions = getApiVersions()
+    this.tutorialVersions = getUserGuidesVersions()
     this.devVersions = getDevelopersVersions()
   },
 }

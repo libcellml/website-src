@@ -6,27 +6,27 @@
     <section ids="a-model-of-the-nerve-action-potential hh-background" names="a\ model\ of\ the\ nerve\ action\ potential hh_background">
         <title>A model of the nerve action potential</title>
         <paragraph>Here we describe the first (and most famous) model of nerve fibre electrophysiology based on the membrane ion channels that we have discussed in the last two sections.
-            This is the work by Alan Hodgkin and Andrew Huxley in 1952 cite <literal>10</literal> that won them (together with John Eccles) the 1963 Noble prize in Physiology or Medicine for <emphasis>“their discoveries concerning the ionic mechanisms involved in excitation and inhibition in
+            This is the work by Alan Hodgkin and Andrew Huxley in 1952 <footnote_reference auto="1" docname="theory/theory_hh" ids="id1" refid="id4">1</footnote_reference> that won them (together with John Eccles) the 1963 Noble prize in Physiology or Medicine for <emphasis>“their discoveries concerning the ionic mechanisms involved in excitation and inhibition in
                 the peripheral and central portions of the nerve cell membrane”</emphasis>.</paragraph>
         <topic classes="contents local" ids="contents" names="contents">
             <bullet_list>
                 <list_item>
-                    <paragraph><reference ids="id5" refid="theory-the-cable-equation">Theory: the cable equation</reference></paragraph>
+                    <paragraph><reference ids="id7" refid="theory-the-cable-equation">Theory: the cable equation</reference></paragraph>
                 </list_item>
                 <list_item>
-                    <paragraph><reference ids="id6" refid="theory-action-potentials">Theory: Action potentials</reference></paragraph>
+                    <paragraph><reference ids="id8" refid="theory-action-potentials">Theory: Action potentials</reference></paragraph>
                 </list_item>
                 <list_item>
-                    <paragraph><reference ids="id7" refid="interpretation-as-a-cellml-model">Interpretation as a CellML model</reference></paragraph>
+                    <paragraph><reference ids="id9" refid="interpretation-as-a-cellml-model">Interpretation as a CellML model</reference></paragraph>
                 </list_item>
                 <list_item>
-                    <paragraph><reference ids="id8" refid="simulation-and-results">Simulation and results</reference></paragraph>
+                    <paragraph><reference ids="id10" refid="simulation-and-results">Simulation and results</reference></paragraph>
                 </list_item>
             </bullet_list>
         </topic>
         <section ids="theory-the-cable-equation" names="theory:\ the\ cable\ equation">
-            <title refid="id5">Theory: the cable equation</title>
-            <paragraph>The <emphasis>cable equation</emphasis> was developed in 1890<footnote_reference auto="1" docname="theory/theory_hh" ids="id1" refid="id3">1</footnote_reference> to predict the degradation of an electrical signal passing along the transatlantic cable.
+            <title refid="id7">Theory: the cable equation</title>
+            <paragraph>The <emphasis>cable equation</emphasis> was developed in 1890<footnote_reference auto="1" docname="theory/theory_hh" ids="id2" refid="id5">2</footnote_reference> to predict the degradation of an electrical signal passing along the transatlantic cable.
                 It is derived as follows:</paragraph>
             <figure align="right" ids="ocr-tut-cur-flow-leaky" names="ocr_tut_cur_flow_leaky" width="6.5cm">
                 <image alt="Current flow in a leaky cable" candidates="{'*': 'theory/images/current_flow_leaky_cable.png'}" uri="theory/images/current_flow_leaky_cable.png"></image>
@@ -49,7 +49,7 @@
             <paragraph>where all terms represent <emphasis>current density</emphasis> (current per membrane area) and have units of <math>\mu A/cm^2</math>.</paragraph>
         </section>
         <section ids="theory-action-potentials" names="theory:\ action\ potentials">
-            <title refid="id6">Theory: Action potentials</title>
+            <title refid="id8">Theory: Action potentials</title>
             <figure align="right" ids="ocr-tut-cur-flow-neuron" names="ocr_tut_cur_flow_neuron" width="6.5cm">
                 <image alt="Current flow in a neuron" candidates="{'*': 'theory/images/current_flow_neuron.png'}" uri="theory/images/current_flow_neuron.png"></image>
                 <caption>Current flow in a neuron.  <strong>TODO</strong> I don’t understand the vertical arrow for V?? direction of voltage? Is one side in/out the cell?</caption>
@@ -65,7 +65,7 @@
             </figure>
             <paragraph>When the membrane potential <math>V</math> rises due to axial current flow, the sodium (<math>Na^+</math>) channels open and the potassium (<math>K^+</math>) channels close, such that the membrane potential moves towards the Nernst potential for sodium.
                 The subsequent decline of the Na channel conductance and the increasing K channel conductance as the voltage drops rapidly repolarises the membrane to its resting potential of -85mV (see <number_reference internal="True" refid="ocr-tut-cur-volt-traj" title="Figure %s"><inline classes="std std-numref">Figure 23</inline></number_reference>).</paragraph>
-            <paragraph>If we assume that the whole cell is clamped with an axially-uniform potential then we can neglect<footnote_reference auto="1" docname="theory/theory_hh" ids="id2" refid="id4">2</footnote_reference> the term in the equation above representing the rate of change of axial current along the cable:</paragraph>
+            <paragraph>If we assume that the whole cell is clamped with an axially-uniform potential then we can neglect<footnote_reference auto="1" docname="theory/theory_hh" ids="id3" refid="id6">3</footnote_reference> the term in the equation above representing the rate of change of axial current along the cable:</paragraph>
             <math_block docname="theory/theory_hh" label="True" nowrap="False" number="True" xml:space="preserve">- \frac{1}{r_a}\frac{\partial^{2}V}{\partial x^2} \approx 0</math_block>
             <paragraph>and so obtain the membrane potential <math>V</math> by integrating the first order ODE:</paragraph>
             <math_block docname="theory/theory_hh" label="True" nowrap="False" number="True" xml:space="preserve">\frac{dV}{dt} = \frac{- \left( i_{Na} + \ i_K + i_L \right)}{C_m}</math_block>
@@ -77,7 +77,7 @@
             <paragraph>TODO How are the i_L and I_L in the figure related?  Consistent labelling needed?</paragraph>
         </section>
         <section ids="interpretation-as-a-cellml-model" names="interpretation\ as\ a\ cellml\ model">
-            <title refid="id7">Interpretation as a CellML model</title>
+            <title refid="id9">Interpretation as a CellML model</title>
             <paragraph>We discussed the idea and implementation of <emphasis>encapsulation</emphasis> in the <reference internal="True" refuri="theory_sodiumchannel#theory-sodiumchannel"><inline classes="std std-ref">previous section on the sodium channel</inline></reference>, and here it is no different.
                 We would like to create a model with the encapsulation structure shown in <number_reference internal="True" refid="hh-encapsulation" title="Figure %s"><inline classes="std std-numref">Figure 25</inline></number_reference>.</paragraph>
             <figure align="center" ids="hh-encapsulation" names="hh_encapsulation">
@@ -86,21 +86,26 @@
             </figure>
             <paragraph>As with other aspects of libCellML, there are several options for the model construction process.
                 Since we already have potassium and sodium channel models available, it would make sense to be able to reuse these here.
-                This functionality requires <emphasis>imports</emphasis>; their use is demonstrated in <reference internal="True" refuri="../tutorials/hh_tutorials/tut2/index#createpotassiumchannelmodel"><inline classes="std std-ref">HH Tutorial 2: Creating a model which uses imports</inline></reference>.</paragraph>
-            <paragraph>Importing allows all or part of a model to be used in-situ, without needing to manually parse its CellML file and instantiate it as an additional model (as has been the procedure in <reference internal="True" refuri="../tutorials/hh_tutorials/tut1/index#creategatemodel"><inline classes="std std-ref">HH Tutorial 1: Creating a model using the API</inline></reference> and <reference internal="True" refuri="../tutorials/hh_tutorials/tut3/index#debugsodiumchannelmodel"><inline classes="std std-ref">HH Tutorial 3: Debugging a model</inline></reference>).</paragraph>
+                This functionality requires <emphasis>imports</emphasis>; their use is demonstrated in <reference internal="True" refuri="../tutorials/hh_tutorial2/index#createpotassiumchannelmodel"><inline classes="std std-ref">HH Tutorial 2: Creating a model which uses imports</inline></reference>.</paragraph>
+            <paragraph>Importing allows all or part of a model to be used in-situ, without needing to manually parse its CellML file and instantiate it as an additional model (as has been the procedure in <reference internal="True" refuri="../tutorials/hh_tutorial1/index#creategatemodel"><inline classes="std std-ref">HH Tutorial 1: Creating a model using the API</inline></reference> and <reference internal="True" refuri="../tutorials/hh_tutorial3/index#debugsodiumchannelmodel"><inline classes="std std-ref">HH Tutorial 3: Debugging a model</inline></reference>).</paragraph>
         </section>
         <section ids="simulation-and-results" names="simulation\ and\ results">
-            <title refid="id8">Simulation and results</title>
-            <paragraph><reference internal="True" refuri="../tutorials/hh_tutorials/tut2/index#createpotassiumchannelmodel"><inline classes="std std-ref">HH Tutorial 2: Creating a model which uses imports</inline></reference> outlines how smaller models can be used to construct a more complicated model as described above.
+            <title refid="id10">Simulation and results</title>
+            <paragraph><reference internal="True" refuri="../tutorials/hh_tutorial2/index#createpotassiumchannelmodel"><inline classes="std std-ref">HH Tutorial 2: Creating a model which uses imports</inline></reference> outlines how smaller models can be used to construct a more complicated model as described above.
                 In this instance, the models described earlier representing a <reference internal="True" refuri="theory_potassiumchannel#theory-potassiumchannel"><inline classes="std std-ref">potassium channel</inline></reference> and a <reference internal="True" refuri="theory_sodiumchannel#theory-sodiumchannel"><inline classes="std std-ref">sodium channel</inline></reference>, as well as one to represent the leakage concept introduced above can be combined to make the full Hodgkin-Huxley model.</paragraph>
             <transition></transition>
             <rubric>Footnotes</rubric>
-            <footnote auto="1" backrefs="id1" docname="theory/theory_hh" ids="id3" names="1">
+            <footnote auto="1" backrefs="id1" docname="theory/theory_hh" ids="id4" names="1">
                 <label>1</label>
+                <paragraph>Hodgkin AL and Huxley AF. A quantitative description of membrane current and its application to conduction and excitation in nerve.
+                    <emphasis>Journal of Physiology</emphasis> 117, 500-544, 1952. <reference name="PubMed ID: 12991237" refuri="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&amp;cmd=Retrieve&amp;dopt=AbstractPlus&amp;list_uids=12991237&amp;query_hl=1&amp;itool=pubmed_docsum">PubMed ID: 12991237</reference></paragraph>
+            </footnote>
+            <footnote auto="1" backrefs="id2" docname="theory/theory_hh" ids="id5" names="2">
+                <label>2</label>
                 <paragraph><reference refuri="http://en.wikipedia.org/wiki/Cable_theory">http://en.wikipedia.org/wiki/Cable_theory</reference></paragraph>
             </footnote>
-            <footnote auto="1" backrefs="id2" docname="theory/theory_hh" ids="id4" names="2">
-                <label>2</label>
+            <footnote auto="1" backrefs="id3" docname="theory/theory_hh" ids="id6" names="3">
+                <label>3</label>
                 <paragraph>This term is needed when determining the propagation of the action potential, including its wave speed.</paragraph>
             </footnote>
         </section>
