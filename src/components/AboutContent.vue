@@ -87,15 +87,12 @@
           </v-row>
         </v-container>
         <h3>License</h3>
-        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"
-          ><img
-            alt="Creative Commons Licence"
-            style="border-width:0"
-            src="https://i.creativecommons.org/l/by/4.0/88x31.png"/></a
-        ><br />This work is licensed under a
-        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"
-          >Creative Commons Attribution 4.0 International License</a
-        >.
+        <p>
+          This work is licensed under a
+          <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"
+            >Creative Commons Attribution 4.0 International License</a
+          >.
+        </p>
       </v-col>
     </v-row>
   </v-container>
