@@ -60,7 +60,14 @@
       <v-row justify="center" no-gutters>
         <v-col />
         <v-col class="text-center">
-          <p id="footer-copyright">Copyright &#169; 2021 libCellML</p>
+          <p id="footer-copyright">
+            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"
+              ><img
+                alt="Creative Commons Licence"
+                style="border-width:0"
+                src="https://i.creativecommons.org/l/by/4.0/88x31.png"
+            /></a>
+          </p>
         </v-col>
         <v-col class="text-right">
           <p id="footer-ack">
