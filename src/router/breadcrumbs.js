@@ -140,7 +140,7 @@ export function calculateBreadcrumbs(to) {
     if (version) {
       routes.push({
         text: version === 'latest' ? getUserGuidesVersions()[0] : version,
-        name: 'TutorialsPage',
+        name: 'GuidesHome',
         disabled: false,
         hash: '',
         type: 'versionSelector',

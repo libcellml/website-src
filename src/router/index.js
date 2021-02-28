@@ -62,6 +62,15 @@ const routes = [
     },
   },
   {
+    path: '/documentation/guides/:version',
+    name: 'GuidesHome',
+    meta: { title: 'libCellML: User Guides' },
+    component: () =>
+      import(
+        /* webpackChunkName: "userguides" */ '../views/GuidesHome.vue'
+      ),
+  },
+  {
     path: '/documentation/guides/:version/:pageName*',
     name: 'TutorialsPage',
     meta: { title: 'libCellML: User Guides' },
