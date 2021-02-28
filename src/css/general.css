@@ -92,6 +92,10 @@ h3 {
     font-weight: 500;
 }
 
+.v-footer {
+    z-index: 5 !important;
+}
+
 p a {
     color: var(--text-link-colour) !important;
     text-decoration-line: var(--link-decoration-line);
@@ -222,6 +226,10 @@ code.xref {
     margin-bottom: 0;
     padding-bottom: 0;
     color: var(--link-colour);
+}
+
+#footer-copyright {
+    float: left;
 }
 
 .big-button {
