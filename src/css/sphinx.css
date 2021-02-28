@@ -361,7 +361,7 @@ pre > code {
 }
 
 .tab2 * {
-    overflow: scroll;
+    overflow: auto;
 }
 
 .tab2 .active > .tab2name {
