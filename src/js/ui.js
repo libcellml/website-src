@@ -67,6 +67,8 @@ export default {
     let tabGroups = document.querySelectorAll('.sphinx-tabs')
 
     tabGroups.forEach((group, groupIndex) => {
+      group.classList.remove('container')
+
       if (!group.querySelector('.tab2menu')) {
         // Make a menu if one doesn't exist
         let menu = document.createElement('div')
@@ -84,6 +86,8 @@ export default {
           // Children become tab2
           tab.classList.add('tab2')
           tab.classList.add('inactive')
+          tab.classList.remove('container')
+          
           tab.id = 'g' + groupIndex + 't' + tabIndex + 'tab'
 
           // Each tab has a header in the class "item", turn it into a tab2name
@@ -94,6 +98,7 @@ export default {
             // Only the first tab is set to 'active' on page load.
             activeClass = 'inactive'
             name.classList.remove('item')
+            name.classList.remove('container')
             name.id = 'g' + groupIndex + 't' + tabIndex
             // Move its contents up one level, out of the classless div
             name.innerHTML = name.firstChild.innerHTML
@@ -112,6 +117,7 @@ export default {
         if (firstPanel) {
           firstPanel.classList.add('active')
           firstPanel.classList.remove('inactive')
+          firstPanel.classList.remove('container')
           firstPanel.insertAdjacentElement('beforebegin', menu)
         }
 
