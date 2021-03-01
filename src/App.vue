@@ -57,22 +57,23 @@
     <NotificationContainer />
     <BackToTop />
     <v-footer app>
-      <v-row no-gutters>
-        <v-col>
-          <p id="footer-copyright">
+      <v-row>
+        
+        <v-col />
+        <v-col class="text-right">
+          <span id="footer-ack">
+            <router-link to="/#acknowledgements">Acknowledgements</router-link>
+          </span>
+        </v-col>
+        <v-col cols="auto">
+          <span id="footer-copyright">
             <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"
               ><img
                 alt="Creative Commons Licence"
                 style="border-width:0"
                 src="https://i.creativecommons.org/l/by/4.0/88x31.png"
             /></a>
-          </p>
-        </v-col>
-        <v-col />
-        <v-col class="text-right">
-          <p id="footer-ack">
-            <router-link to="/#acknowledgements">Acknowledgements</router-link>
-          </p>
+          </span>
         </v-col>
       </v-row>
     </v-footer>
