@@ -114,10 +114,10 @@
             <paragraph>You should see output to the terminal which echoes the settings and initial conditions, as below.
                 An example file for running is provided for you in the <literal classes="code">resources/tutorial3_PredatorPrey_generated.py</literal> file, which can be run for 2000 steps and a step size of 0.01.
                 Running this will give you the terminal output:</paragraph>
-            <literal_block force="False" highlight_args="{}" language="text" linenos="False" xml:space="preserve">python3 solveGeneratedModel.py -m ../resources/tutorial3_PredatorPrey_generated.py -dt 0.01 -n 2000
+            <literal_block force="False" highlight_args="{}" language="text" linenos="False" xml:space="preserve">python3 solveGeneratedModel.py -m /resources/tutorial3_PredatorPrey_generated.py -dt 0.01 -n 2000
 
 ====================================================================
-   SIMPLE SOLVER: ../resources/tutorial3_PredatorPrey_generated
+   SIMPLE SOLVER: /resources/tutorial3_PredatorPrey_generated
 --------------------------------------------------------------------
 
    VARIABLE OF INTEGRATION (units, stepsize)
@@ -137,7 +137,7 @@
       d (per_fish_day, -0.6)
       c (per_day, -2.8)
 
-   SOLUTION written to ../resources/tutorial3_PredatorPrey_generated_solution.txt
+   SOLUTION written to /resources/tutorial3_PredatorPrey_generated_solution.txt
 ====================================================================</literal_block>
             <paragraph>The output is a tab delimited file with the ending <literal classes="code">_solution.txt</literal> after the input file name (note that it’s in the same directory as the running file too), which can be opened by the plotting program of your choice.</paragraph>
         </section>
