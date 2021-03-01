@@ -30,7 +30,7 @@
                 <paragraph><reference internal="True" refuri="coding_standards#coding-standards"><inline classes="std std-ref">Coding Standards</inline></reference> : Guidelines for coding style and standards for contributions.</paragraph>
             </list_item>
             <list_item>
-                <paragraph><reference internal="True" refuri="glossary#glossary"><inline classes="std std-ref">Glossary</inline></reference> : Glossary of terminology</paragraph>
+                <paragraph><reference internal="True" refuri="glossary#glossary-page"><inline classes="std std-ref">Glossary</inline></reference> : Glossary of terminology</paragraph>
             </list_item>
         </enumerated_list>
         <container classes="quicklinks">
@@ -41,7 +41,7 @@
                 <reference internal="True" refuri="contributing#contributing"><inline classes="std std-ref">Contributing to libCellML</inline></reference>
                 <reference internal="True" refuri="review_process#review-process"><inline classes="std std-ref">Review Process</inline></reference>
                 <reference internal="True" refuri="coding_standards#coding-standards"><inline classes="std std-ref">Coding Standards</inline></reference>
-                <reference internal="True" refuri="glossary#glossary"><inline classes="std std-ref">Glossary</inline></reference></paragraph>
+                <reference internal="True" refuri="glossary#glossary-page"><inline classes="std std-ref">Glossary</inline></reference></paragraph>
         </container>
         <compound classes="toctree-wrapper">
         </compound>
