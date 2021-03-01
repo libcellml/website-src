@@ -34,20 +34,22 @@ export default {
     BreadCrumbs,
   },
 
+  mounted() {
+    // KRM include these on any page where the injected XML might contain tabs or toggle blocks.
+    // Workaround only until sphinx tabs and toggles cann be handled outside the browser properly.
+    setTimeout(function () {
+      ui.processSphinxTabs()
+      ui.addClickHandlerTabs()
+      ui.addClickHandlerToggles()
+    }, this.$store.getters.getTransitionDelay)
+  },
+  
   methods: {
     getVersions() {
       return getUserGuidesVersions()
     },
     updated() {
       this.$store.commit('togglePageContentChanged')
-
-      // KRM include these on any page where the injected XML might contain tabs or toggle blocks.
-      // Workaround only until sphinx tabs and toggles cann be handled outside the browser properly.
-      setTimeout(function() {
-        ui.processSphinxTabs()
-        ui.addClickHandlerTabs()
-        ui.addClickHandlerToggles()
-      }, this.$store.getters.getTransitionDelay)
     },
   },
 }
