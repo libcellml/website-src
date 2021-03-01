@@ -5,7 +5,7 @@
     <section ids="options" names="options">
         <title>Options</title>
         <paragraph>Some options are platform or tool dependent.
-            For example, <literal classes="code">MEMCHECK</literal> is only available if the valgrind tool is available.</paragraph>
+            For example, MEMCHECK is only available if the valgrind tool is available.</paragraph>
         <table align="default">
             <tgroup cols="3">
                 <colspec colwidth="24"></colspec>
