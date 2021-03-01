@@ -25,21 +25,21 @@
                     <term ids="term-CMake">CMake<index entries="['single',\ 'CMake',\ 'term-CMake',\ 'main',\ None]"></index></term>
                     <definition>
                         <paragraph><reference internal="False" refuri="https://cmake.org/">CMake</reference> is an open-source, cross-platform family of tools designed to build, test and package software.
-                            Instructions for installation of CMake can be found on the <reference internal="True" refuri="dev_setup#dev-setup-cmake"><inline classes="std std-ref">Setup page</inline></reference>.</paragraph>
+                            Instructions for installation of CMake can be found on the <reference internal="True" refuri="setup#setup-cmake"><inline classes="std std-ref">Setup page</inline></reference>.</paragraph>
                     </definition>
                 </definition_list_item>
                 <definition_list_item>
                     <term ids="term-coding-standard">coding standard<index entries="['single',\ 'coding\ standard',\ 'term-coding-standard',\ 'main',\ None]"></index></term>
                     <definition>
                         <paragraph>A coding standard describes the style and general design approach taken in a project.
-                            For detailed information please refer to the <reference internal="True" refuri="dev_coding_standards#dev-coding-standards"><inline classes="std std-ref">Coding Standards</inline></reference> page.</paragraph>
+                            For detailed information please refer to the <reference internal="True" refuri="coding_standards#coding-standards"><inline classes="std std-ref">Coding Standards</inline></reference> page.</paragraph>
                     </definition>
                 </definition_list_item>
                 <definition_list_item>
                     <term ids="term-Doxygen">Doxygen<index entries="['single',\ 'Doxygen',\ 'term-Doxygen',\ 'main',\ None]"></index></term>
                     <definition>
                         <paragraph><reference internal="False" refuri="http://www.doxygen.nl/">Doxygen</reference> is software which assembles documentation files directly from annotated source code, including the generation of inheritance and dependency tree diagrams for classes.
-                            More information on installing Doxygen is given on the <reference internal="True" refuri="dev_setup#dev-setup-doxygen"><inline classes="std std-ref">Setup page</inline></reference>.</paragraph>
+                            More information on installing Doxygen is given on the <reference internal="True" refuri="setup#setup-doxygen"><inline classes="std std-ref">Setup page</inline></reference>.</paragraph>
                     </definition>
                 </definition_list_item>
                 <definition_list_item>
@@ -47,7 +47,7 @@
                     <definition>
                         <paragraph><reference internal="False" refuri="http://graphviz.org">Graphviz</reference> layout programs take descriptions of graphs in a simple text language, and make diagrams in several useful formats such as images and SVG for web pages.
                             It is used here to supplement the class hierarchy graphs within the Doxygen documentation, and may need to be installed on Windows machines.
-                            Installation links can be found on the <reference internal="True" refuri="dev_setup#dev-setup-doxygen"><inline classes="std std-ref">Setup page</inline></reference>.</paragraph>
+                            Installation links can be found on the <reference internal="True" refuri="setup#setup-doxygen"><inline classes="std std-ref">Setup page</inline></reference>.</paragraph>
                     </definition>
                 </definition_list_item>
                 <definition_list_item>
@@ -64,7 +64,7 @@
                     <term ids="term-Python">Python<index entries="['single',\ 'Python',\ 'term-Python',\ 'main',\ None]"></index></term>
                     <definition>
                         <paragraph><reference internal="False" refuri="https://www.python.org/">Python</reference> is a scripting language for which optional bindings to libCellML can be generated.
-                            There are instructions for installing Python on the <reference internal="True" refuri="dev_setup#dev-setup-python"><inline classes="std std-ref">Setup page</inline></reference>.</paragraph>
+                            There are instructions for installing Python on the <reference internal="True" refuri="setup#setup-python"><inline classes="std std-ref">Setup page</inline></reference>.</paragraph>
                     </definition>
                 </definition_list_item>
                 <definition_list_item>
@@ -72,7 +72,7 @@
                     <definition>
                         <paragraph><reference internal="False" refuri="http://swig.org">SWIG (Simplified Wrapper and Interface Generator)</reference> is a tool which acts as a translator between code written in C++ and other languages.
                             libCellML uses SWIG to generate the (optional) Python bindings - if you are not intending to use libCellML in other languages then you will not need to install SWIG.
-                            Instructions for installing SWIG on the various operating systems are given on the <reference internal="True" refuri="dev_setup#dev-setup"><inline classes="std std-ref">Setup page</inline></reference>.</paragraph>
+                            Instructions for installing SWIG on the various operating systems are given on the <reference internal="True" refuri="setup#setup"><inline classes="std std-ref">Setup page</inline></reference>.</paragraph>
                     </definition>
                 </definition_list_item>
                 <definition_list_item>
