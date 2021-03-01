@@ -125,7 +125,6 @@ li a {
 }
 
 .v-application a:hover {
-    color: var(--active-link) !important;
     text-decoration-thickness: 3px;
     text-decoration-color: var(--bright-red);
 }
@@ -143,10 +142,6 @@ li a {
 .v-btn--active {
     background-color: rgb(255, 255, 255);
 }
-
-/* .v-btn a:hover {
-    color: yellow !important;
-} */
 
 .v-btn::before .v-btn--active {
     background-color: transparent;
