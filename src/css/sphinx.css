@@ -432,18 +432,18 @@ pre > code {
     If you want a different alias to be displayed, be sure to define it first in 
     the list in the rst/xml document.
 */
-dl.glossary > dt > dt {
+#glossary dl > dt > dt {
     display: none;
 }
 
-dl.glossary > dt > dt:first-child {
+#glossary  dl > dt > dt:first-child {
     display: inherit;
     font-weight: 500;
     padding-left: 0;
     font-style: normal;
-    color: var(--mid-red);
+    color: black;
 }
 
-dl.glossary > dt > dd {
+#glossary dl > dt > dd {
     padding-left: 1em;
 }
