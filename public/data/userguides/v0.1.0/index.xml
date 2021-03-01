@@ -18,7 +18,7 @@
                 <paragraph><reference internal="True" refuri="howto/index#howto"><inline classes="std std-ref">How-to guide</inline></reference> A list of useful code examples showing specific actions.</paragraph>
             </list_item>
             <list_item>
-                <paragraph><reference internal="True" refuri="howto/common_users#common-users"><inline classes="std std-ref">Common scenarios</inline></reference> A collection of code snippets arranged according to the requirements of different user groups.</paragraph>
+                <paragraph><reference internal="True" refuri="common_users/index#common-users"><inline classes="std std-ref">Common scenarios</inline></reference> A collection of code snippets arranged according to the requirements of different user groups.</paragraph>
             </list_item>
         </bullet_list>
         <paragraph>For general discussions and information about the CellML model structure itself, the following resources might be helpful.</paragraph>
@@ -37,7 +37,7 @@
             <paragraph><reference internal="True" refuri="installation/index#installation"><inline classes="std std-ref">Installation and setup</inline></reference>
                 <reference internal="True" refuri="tutorials/index#tutorials-index"><inline classes="std std-ref">Tutorials</inline></reference>
                 <reference internal="True" refuri="howto/index#howto"><inline classes="std std-ref">How-to guide</inline></reference>
-                <reference internal="True" refuri="howto/common_users#common-users"><inline classes="std std-ref">Common scenarios</inline></reference>
+                <reference internal="True" refuri="common_users/index#common-users"><inline classes="std std-ref">Common scenarios</inline></reference>
                 <reference internal="True" refuri="asides/index#asides"><inline classes="std std-ref">Notes on CellML structure</inline></reference>
                 <reference internal="False" refuri="https://cellml-specification.readthedocs.io/en/latest/">CellML 2.0 Normative Specification</reference></paragraph>
         </container>

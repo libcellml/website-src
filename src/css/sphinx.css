@@ -343,8 +343,9 @@ pre > code {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     height: 3em; /*45px;*/
-    padding-left: 1.4em; /*20px;*/
-    padding-right: 1.4em; /*20px;*/
+    padding-left: 1.2em; /*20px;*/
+    padding-right: 1.2em; /*20px;*/
+    padding-top: 0.7em;
 }
 
 .tab2name.active {
@@ -378,8 +379,15 @@ pre > code {
     display: inline-block;
     border-left: var(--border-colour) solid 1px;
     margin-bottom: 0.8em;
-    padding-bottom: 0px;
-    padding-right: 0px;
+    padding-left: 0.6em;
+    padding-top: 0.5em;
+    padding-bottom: 0;
+    padding-right: 0;
+    width: 100%;
+}
+
+.sphinx-tab {
+    padding: 0 !important;
 }
 
 .tab2.inactive {
