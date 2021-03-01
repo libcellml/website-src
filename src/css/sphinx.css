@@ -441,7 +441,7 @@ pre > code {
     font-weight: 500;
     padding-left: 0;
     font-style: normal;
-    color: black;
+    color: var(--deep-red);
 }
 
 #glossary dl > dt > dd {
