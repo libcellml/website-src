@@ -149,7 +149,7 @@ export default {
       return (
         '/documentation/guides/' +
         this.$route.params.version +
-        '/howto/common_users'
+        '/common_users/index'
       )
     },
   },
