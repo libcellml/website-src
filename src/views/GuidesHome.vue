@@ -88,9 +88,9 @@
       <br />
       <p>
         This links above provide installation instructions, tutorials, code
-        examples, and user guides for the most common use cases.
-        For general discussions and information about the CellML model
-        structure itself, the following resources might be helpful too:
+        examples, and user guides for the most common use cases. For general
+        discussions and information about the CellML model structure itself, the
+        following resources might be helpful too:
       </p>
       <ul>
         <li>
@@ -158,17 +158,8 @@ export default {
     getVersions() {
       return getUserGuidesVersions()
     },
-
     updated() {
       this.$store.commit('togglePageContentChanged')
-
-      // KRM include these on any page where the injected XML might contain tabs or toggle blocks.
-      // Workaround only until sphinx tabs and toggles cann be handled outside the browser properly.
-      setTimeout(function () {
-        ui.processSphinxTabs()
-        ui.addClickHandlerTabs()
-        ui.addClickHandlerToggles()
-      }, this.$store.getters.getTransitionDelay)
     },
   },
 }
