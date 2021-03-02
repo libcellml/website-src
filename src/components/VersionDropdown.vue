@@ -6,18 +6,19 @@
       </v-col>
     </v-row>
     <v-row class="hide-options">
-      <router-link
-        v-for="(version, index) in versionChoices"
-        :key="'version_index_' + index"
-        :id="'version_' + version"
-        :to="{ path: `/documentation/${versionType}/${version}${pagePath}` }"
-      >
-        {{ version }}
+      <template v-for="(version, index) in versionChoices">
+        <router-link
+          :key="'version_index_' + index"
+          :id="'version_' + version"
+          :to="{ path: `/documentation/${versionType}/${version}${pagePath}` }"
+        >
+          {{ version }}
+        </router-link>
         <template v-if="version === currentVersion">
-          <v-icon size="1em">mdi-check</v-icon>
+          <v-icon :key="'version_tick'+version" size="1em">mdi-check</v-icon>
         </template>
-        <br />
-      </router-link>
+        <br :key="'_'+index" />
+      </template>
     </v-row>
   </v-container>
 </template>
@@ -58,7 +59,7 @@ export default {
   methods: {
     expandDropdown() {
       let menu = document.getElementById('dropdown-id')
-      document.addEventListener('click', function(event) {
+      document.addEventListener('click', function (event) {
         var isClickInside = menu.contains(event.target)
         if (!isClickInside) {
           menu.nextSibling.classList = ['hide-options']
@@ -97,6 +98,19 @@ export default {
   border-top: none;
   border-bottom-left-radius: 0.3em;
   border-bottom-right-radius: 0.3em;
+}
+
+.show-options a {
+  text-decoration: none;
+}
+
+.show-options a:hover {
+  text-decoration-line: var(--link-decoration-line);
+  text-decoration-style: var(--link-decoration-style);
+  text-decoration-color: var(--link-underline-colour);
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 3px;
+  text-decoration-color: var(--bright-red) !important;
 }
 
 .old-version {

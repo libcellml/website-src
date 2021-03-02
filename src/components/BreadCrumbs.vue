@@ -1,7 +1,7 @@
 <template>
   <div class="breadcrumbs" id="breadcrumbs">
     <v-container>
-      <template v-if="versionIsOld()">
+      <template v-if="currentVersion !== latest">
         <div class="old-version">
           <router-link :to="{ path: `${latestFullPath}` }">
             You are viewing an old version. Click to see the latest one
@@ -98,11 +98,7 @@ export default {
     items: [],
     version: '',
   }),
-  methods: {
-    versionIsOld() {
-      return false
-    },
-  },
+
   computed: {
     breadcrumbs() {
       return this.$store.state.breadcrumbs
@@ -132,5 +128,16 @@ export default {
   padding: 0.3rem 1rem 0.3rem 0.6rem;
   border-radius: 0.2em;
   font-weight: 500;
+}
+.old-version * {
+  text-decoration: none;
+}
+.old-version a:hover {
+  text-decoration-line: var(--link-decoration-line);
+  text-decoration-style: var(--link-decoration-style);
+  text-decoration-color: var(--link-underline-colour);
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 3px;
+  text-decoration-color: var(--bright-red);
 }
 </style>
