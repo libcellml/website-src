@@ -15,6 +15,10 @@ Vue.use(VueRouter)
 
 const DEFAULT_TITLE = 'libCellML'
 
+const guideVersions = getUserGuidesVersions()
+const devVersions = getDevelopersVersions()
+const apiVersions = getApiVersions()
+
 const routes = [
   {
     path: '/',
@@ -53,6 +57,14 @@ const routes = [
     meta: { title: 'libCellML: API' },
     component: () =>
       import(/* webpackChunkName: "api" */ '../views/HelpAPIPage.vue'),
+    beforeEnter: (to, from, next) => {
+      if (apiVersions.includes(to.params.version)) {
+        next()
+      }
+      else {
+        next('/documentation/api/' + apiVersions[0] + '/' + to.params.pageName)
+      }
+    }
   },
   {
     path: '/documentation/api',
@@ -69,6 +81,15 @@ const routes = [
       import(
         /* webpackChunkName: "userguides" */ '../views/GuidesHome.vue'
       ),
+    beforeEnter: (to, from, next) => {
+      // Check that version exists otherwise redirect to latest version
+      if (guideVersions.includes(to.params.version)) {
+        next()
+      }
+      else {
+        next('/documentation/guides/' + guideVersions[0])
+      }
+    },
   },
   {
     path: '/documentation/guides/:version/:pageName*',
@@ -78,12 +99,20 @@ const routes = [
       import(
         /* webpackChunkName: "userguides" */ '../views/HelpTutorialsPage.vue'
       ),
+    beforeEnter: (to, from, next) => {
+      if (guideVersions.includes(to.params.version)) {
+        next()
+      }
+      else {
+        next('/documentation/guides/' + guideVersions[0] + '/' + to.params.pageName)
+      }
+    }
   },
   {
     path: '/documentation/guides',
     redirect: to => {
       // Defaults to latest version, if not specified.
-      return '/documentation/guides/' + getUserGuidesVersions()[0]
+      return '/documentation/guides/' + guideVersions[0]
     },
   },
   {
@@ -92,12 +121,20 @@ const routes = [
     meta: { title: 'libCellML: Developer Guides' },
     component: () =>
       import(/* webpackChunkName: "developers" */ '../views/Developers.vue'),
+    beforeEnter: (to, from, next) => {
+      if (devVersions.includes(to.params.version)) {
+        next()
+      }
+      else {
+        next('/documentation/developers/' + devVersions[0] + '/' + to.params.pageName)
+      }
+    }
   },
   {
     path: '/documentation/developers',
     redirect: to => {
       // Defaults to latest version, if not specified.
-      return '/documentation/developers/' + getDevelopersVersions()[0]
+      return '/documentation/developers/' + devVersions[0]
     },
   },
   {
@@ -123,11 +160,16 @@ const routes = [
       ),
   },
   {
-    path: '*',
-    redirect: {
-      name: '404',
-      params: { resource: 'page' },
-    },
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: () =>
+      import(
+      /* webpackChunkName: "notFound" */ '../views/NotFound.vue'
+      ),
+    beforeEnter: (to, from, next) => {
+      store.commit('updateLastURL', to.path)
+      next()
+    }
   },
 ]
 
