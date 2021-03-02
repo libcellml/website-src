@@ -150,10 +150,6 @@ const routes = [
     meta: { title: 'libCellML: Not Found' },
     component: () =>
       import(/* webpackChunkName: "notFound" */ '../views/NotFound.vue'),
-    beforeEnter: (to, from, next) => {
-      store.commit('updateLastURL', to.path)
-      next()
-    }
   },
   {
     path: '/network-issue',
