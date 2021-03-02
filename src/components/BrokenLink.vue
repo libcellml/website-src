@@ -21,7 +21,7 @@ export default {
     lastURL() {
       let lastViaRouter = this.$store.getters.getLastURL
       if(lastViaRouter) {
-        return lastViaRouter
+        return window.location.origin + lastViaRouter
       }
       return window.location.href
     },
