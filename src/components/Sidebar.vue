@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer v-model="isOpen" app clipped>
+  <v-navigation-drawer v-model="isOpen" :id="'sideMenuPanel'" app clipped>
     <v-container>
       <v-row>
         <v-col>
@@ -70,9 +70,13 @@ export default {
     this.handleResize()
   },
   mounted() {
-    setTimeout(() => {
-      this.menuInSidebar = this.calculateMenu()
-    }, this.$store.getters.getTransitionDelay)
+    if (this.$route.name === 'Home') {
+      this.menuInSidebar = false
+    } else {
+      setTimeout(() => {
+        this.menuInSidebar = this.calculateMenu()
+      }, this.$store.getters.getTransitionDelay)
+    }
   },
   destroyed() {
     window.removeEventListener('resize', this.handleResize)
@@ -128,6 +132,12 @@ export default {
   watch: {
     pageChanged() {
       setTimeout(() => {
+        if (this.$route.name === 'Home') {
+          this.pageHeadings = []
+          this.quickLinks = []
+          this.menuInSidebar = false
+          return
+        }
         this.pageHeadings = this.findHeadings()
         this.quickLinks = this.findQuickLinks()
       }, this.$store.getters.getTransitionDelay)
@@ -153,7 +163,7 @@ export default {
       let el = document.querySelector('#pageContent')
       if (el) {
         let headings = this.getHeadings(el, headingInitial)
-        headings.forEach(heading => {
+        headings.forEach((heading) => {
           let subHeadings = this.getHeadings(heading, headingInitial + 1)
           const treeEntry = {
             el: heading,
@@ -169,9 +179,9 @@ export default {
     findQuickLinks() {
       let qs = document.getElementsByClassName('quicklinks')
       let quickLinks = []
-      qs.forEach(q => {
+      qs.forEach((q) => {
         let links = q.getElementsByTagName('a')
-        links.forEach(link => {
+        links.forEach((link) => {
           quickLinks.push({
             label: link.textContent,
             url: link.getAttribute('href'),
@@ -189,7 +199,6 @@ export default {
           .getPropertyValue('font-size')
         let fontSize = parseFloat(style)
 
-        // return this.width < fontSize * 54.5 // Equivalent to 54.5em
         return this.width < fontSize * 71.5 // 1140 width / 16 font size
       }
       return true

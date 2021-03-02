@@ -55,10 +55,9 @@
       </v-container>
     </v-main>
     <NotificationContainer />
-    <BackToTop />
+    <BackToTop :xOffset="getXOffset" />
     <v-footer app>
       <v-row>
-        
         <v-col />
         <v-col class="text-right">
           <span id="footer-ack">
@@ -70,7 +69,7 @@
             <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"
               ><img
                 alt="Creative Commons Licence"
-                style="border-width:0"
+                style="border-width: 0"
                 src="https://i.creativecommons.org/l/by/4.0/88x31.png"
             /></a>
           </span>
@@ -133,6 +132,7 @@ export default {
       width: 0,
       height: 0,
     },
+    xOffset: 0,
   }),
 
   methods: {
@@ -142,6 +142,12 @@ export default {
     handleResize() {
       this.window.width = window.innerWidth
       this.window.height = window.innerHeight
+    },
+  },
+
+  computed: {
+    getXOffset() {
+      return this.$store.getters.getSidebarOpen ? "12rem" : "1rem"
     },
   },
 
