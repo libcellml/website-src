@@ -162,14 +162,11 @@ const routes = [
   {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
-    component: () =>
-      import(
-      /* webpackChunkName: "notFound" */ '../views/NotFound.vue'
-      ),
-    beforeEnter: (to, from, next) => {
+    redirect: to => {
+      // Defaults to latest version, if not specified.
       store.commit('updateLastURL', to.path)
-      next()
-    }
+      return '/404'
+    },
   },
 ]
 
