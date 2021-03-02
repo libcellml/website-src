@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer v-model="isOpen" app clipped>
+  <v-navigation-drawer v-model="isOpen" :id="'sideMenuPanel'" app clipped>
     <v-container>
       <v-row>
         <v-col>
