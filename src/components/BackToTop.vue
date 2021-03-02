@@ -3,12 +3,14 @@
     <v-row>
       <v-col>
         <v-btn
+          :id="'backToTopButton'"
           v-scroll="onScroll"
           v-show="fab"
           fab
           dark
           fixed
           bottom
+          v-bind:style="{ left: getXOffset }"
           color="primary"
           @click="toTop"
         >
@@ -24,12 +26,19 @@ import { mdiArrowUp } from '@mdi/js'
 
 export default {
   name: 'BackToTop',
+  props: ['xOffset'],
 
   data: () => {
     return {
       fab: false,
       upIcon: mdiArrowUp,
     }
+  },
+
+  computed: {
+    getXOffset() {
+      return this.$props.xOffset
+    },
   },
 
   methods: {
