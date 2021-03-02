@@ -75,7 +75,7 @@ export function calculateBreadcrumbs(to) {
   let routes = [hardRoutes.home]
 
   if (
-    to.name === '404' ||
+    // to.name === '404' || // KRM: removed for option 2, save URL
     to.name === 'About' ||
     to.name === 'DownloadSummary' ||
     to.name === 'DocumentationSummary' ||
