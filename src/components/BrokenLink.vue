@@ -17,10 +17,13 @@
 <script>
 export default {
   name: 'BrokenLink',
-
   computed: {
     lastURL() {
-      return this.$store.getters.getLastURL
+      let lastViaRouter = this.$store.getters.getLastURL
+      if(lastViaRouter) {
+        return lastViaRouter
+      }
+      return window.location.href
     },
   },
 }
