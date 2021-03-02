@@ -144,13 +144,14 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "translate" */ '../views/Translate.vue'),
   },
-  {
-    path: '/404',
-    name: '404',
-    meta: { title: 'libCellML: Not Found' },
-    component: () =>
-      import(/* webpackChunkName: "notFound" */ '../views/NotFound.vue'),
-  },
+  // KRM: 404 is an actual page route.  Used for option 1 below.
+  // {
+  //   path: '/404',
+  //   name: '404',
+  //   meta: { title: 'libCellML: Not Found' },
+  //   component: () =>
+  //     import(/* webpackChunkName: "notFound" */ '../views/NotFound.vue'),
+  // },
   {
     path: '/network-issue',
     name: 'network-issue',
@@ -159,14 +160,26 @@ const routes = [
         /* webpackChunkName: "networkIssue" */ '../views/NetworkIssue.vue'
       ),
   },
+  // KRM: Option 1: Redirect to 404 page so that URL changes
+  // {
+  //   path: '/:pathMatch(.*)*',
+  //   name: 'NotFound',
+  //   redirect: to => {
+  //     // Defaults to latest version, if not specified.
+  //     store.commit('updateLastURL', to.fullPath)
+  //     return '/404'
+  //   },
+  // },
+  // KRM: Option 2: Do not redirect, only show 404 page content
   {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
-    redirect: to => {
-      // Defaults to latest version, if not specified.
-      store.commit('updateLastURL', to.path)
-      return '/404'
-    },
+    component: () =>
+      import(/* webpackChunkName: "notFound" */ '../views/NotFound.vue'),
+    beforeEnter: (to, from, next) => {
+      store.commit('updateLastURL', to.fullPath)
+      next()
+    }
   },
 ]
 
