@@ -22,10 +22,10 @@
                 v-on="on"
                 href="https://github.com/libcellml/website-src/issues/new"
                 target="_blank"
-                class="float-right"
+                class="float-right bug-button"
               >
                 <v-icon class="buggy">mdi-bug</v-icon>
-                <span>Hover me!</span>
+                <span class="bug-text"></span>
               </v-btn>
             </template>
             <span
@@ -147,7 +147,7 @@ export default {
 
   computed: {
     getXOffset() {
-      return this.$store.getters.getSidebarOpen ? "12rem" : "1rem"
+      return this.$store.getters.getSidebarOpen ? '12rem' : '1rem'
     },
   },
 
@@ -161,7 +161,6 @@ export default {
 }
 </script>
 
-<style src="./css/general.css"></style>
 <style>
 #pageContent {
   background-size: 80px;
@@ -191,9 +190,35 @@ export default {
   max-width: unset;
 }
 
+#bugButton {
+  width: 8em;
+}
+
 .buggy {
   margin-left: 3em;
   font-size: 2.3em !important;
   color: yellowgreen !important;
+}
+
+.v-btn__content {
+  opacity: 1 !important;
+}
+
+span.bug-text {
+  font-size: 0em;
+  min-width: 7em;
+}
+
+span.bug-text {
+  font-size: 1.3em;
+  min-width: 7em;
+}
+
+span.bug-text::after {
+  content: 'Hover me!';
+}
+
+span.bug-text:hover::after {
+  content: 'Click me!';
 }
 </style>
