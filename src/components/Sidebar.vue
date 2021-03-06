@@ -163,7 +163,7 @@ export default {
       let el = document.querySelector('#pageContent')
       if (el) {
         let headings = this.getHeadings(el, headingInitial)
-        headings.forEach((heading) => {
+        headings.forEach(heading => {
           let subHeadings = this.getHeadings(heading, headingInitial + 1)
           const treeEntry = {
             el: heading,
@@ -179,9 +179,9 @@ export default {
     findQuickLinks() {
       let qs = document.getElementsByClassName('quicklinks')
       let quickLinks = []
-      qs.forEach((q) => {
+      qs.forEach(q => {
         let links = q.getElementsByTagName('a')
-        links.forEach((link) => {
+        links.forEach(link => {
           quickLinks.push({
             label: link.textContent,
             url: link.getAttribute('href'),

@@ -87,7 +87,7 @@ export default {
           tab.classList.add('tab2')
           tab.classList.add('inactive')
           tab.classList.remove('container')
-          
+
           tab.id = 'g' + groupIndex + 't' + tabIndex + 'tab'
 
           // Each tab has a header in the class "item", turn it into a tab2name
