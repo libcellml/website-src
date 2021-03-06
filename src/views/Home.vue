@@ -2,21 +2,21 @@
   <div class="home">
     <v-container>
       <v-row>
-        <v-col cols="12" id="intro">
+        <v-col cols="12" id="intro" class="home-section">
           <IntroContent />
         </v-col>
-        <v-col cols="12" id="download">
+        <v-col cols="12" id="download" class="home-section">
           <DownloadSummary />
           <DownloadLink />
         </v-col>
-        <v-col cols="12" id="documentation">
+        <v-col cols="12" id="documentation" class="home-section">
           <DocumentationSummary />
           <DocumentationLink />
         </v-col>
-        <v-col cols="12" id="services">
+        <v-col cols="12" id="services" class="home-section">
           <services-landing-page-section />
         </v-col>
-        <v-col cols="12" id="about">
+        <v-col cols="12" id="about" class="home-section">
           <AboutContent />
         </v-col>
       </v-row>
@@ -47,4 +47,8 @@ export default {
 }
 </script>
 
-<style src="../css/general.css"></style>
+<style>
+.home-section {
+  min-height: 100vh;
+}
+</style>
