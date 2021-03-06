@@ -22,7 +22,7 @@
                 v-on="on"
                 href="https://github.com/libcellml/website-src/issues/new"
                 target="_blank"
-                class="float-right bug-button"
+                class="bug-button"
               >
                 <v-icon class="buggy">mdi-bug</v-icon>
                 <span class="bug-text"></span>
@@ -190,12 +190,13 @@ export default {
   max-width: unset;
 }
 
-#bugButton {
-  width: 8em;
+.bug-button {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .buggy {
-  margin-left: 3em;
+  /* margin-left: 3em; */
   font-size: 2.3em !important;
   color: yellowgreen !important;
 }
