@@ -15,9 +15,9 @@
           {{ version }}
         </router-link>
         <template v-if="version === currentVersion">
-          <v-icon :key="'version_tick'+version" size="1em">mdi-check</v-icon>
+          <v-icon :key="'version_tick' + version" size="1em">mdi-check</v-icon>
         </template>
-        <br :key="'_'+index" />
+        <br :key="'_' + index" />
       </template>
     </v-row>
   </v-container>
@@ -59,7 +59,7 @@ export default {
   methods: {
     expandDropdown() {
       let menu = document.getElementById('dropdown-id')
-      document.addEventListener('click', function (event) {
+      document.addEventListener('click', function(event) {
         var isClickInside = menu.contains(event.target)
         if (!isClickInside) {
           menu.nextSibling.classList = ['hide-options']

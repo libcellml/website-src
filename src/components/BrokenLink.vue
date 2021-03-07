@@ -20,7 +20,7 @@ export default {
   computed: {
     lastURL() {
       let lastViaRouter = this.$store.getters.getLastURL
-      if(lastViaRouter) {
+      if (lastViaRouter) {
         return window.location.origin + lastViaRouter
       }
       return window.location.href
