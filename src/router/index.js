@@ -60,11 +60,10 @@ const routes = [
     beforeEnter: (to, from, next) => {
       if (apiVersions.includes(to.params.version)) {
         next()
-      }
-      else {
+      } else {
         next('/documentation/api/' + apiVersions[0] + '/' + to.params.pageName)
       }
-    }
+    },
   },
   {
     path: '/documentation/api',
@@ -78,15 +77,12 @@ const routes = [
     name: 'GuidesHome',
     meta: { title: 'libCellML: User Guides' },
     component: () =>
-      import(
-        /* webpackChunkName: "userguides" */ '../views/GuidesHome.vue'
-      ),
+      import(/* webpackChunkName: "userguides" */ '../views/GuidesHome.vue'),
     beforeEnter: (to, from, next) => {
       // Check that version exists otherwise redirect to latest version
       if (guideVersions.includes(to.params.version)) {
         next()
-      }
-      else {
+      } else {
         next('/documentation/guides/' + guideVersions[0])
       }
     },
@@ -102,11 +98,15 @@ const routes = [
     beforeEnter: (to, from, next) => {
       if (guideVersions.includes(to.params.version)) {
         next()
+      } else {
+        next(
+          '/documentation/guides/' +
+            guideVersions[0] +
+            '/' +
+            to.params.pageName,
+        )
       }
-      else {
-        next('/documentation/guides/' + guideVersions[0] + '/' + to.params.pageName)
-      }
-    }
+    },
   },
   {
     path: '/documentation/guides',
@@ -124,11 +124,15 @@ const routes = [
     beforeEnter: (to, from, next) => {
       if (devVersions.includes(to.params.version)) {
         next()
+      } else {
+        next(
+          '/documentation/developers/' +
+            devVersions[0] +
+            '/' +
+            to.params.pageName,
+        )
       }
-      else {
-        next('/documentation/developers/' + devVersions[0] + '/' + to.params.pageName)
-      }
-    }
+    },
   },
   {
     path: '/documentation/developers',
@@ -179,7 +183,7 @@ const routes = [
     beforeEnter: (to, from, next) => {
       store.commit('updateLastURL', to.fullPath)
       next()
-    }
+    },
   },
 ]
 
