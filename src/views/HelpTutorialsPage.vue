@@ -41,6 +41,7 @@ export default {
       ui.processSphinxTabs()
       ui.addClickHandlerTabs()
       ui.addClickHandlerToggles()
+      ui.getFigureCaptions()
     }, this.$store.getters.getTransitionDelay)
   },
 

@@ -28,7 +28,7 @@
             <title refid="id7">Theory: the cable equation</title>
             <paragraph>The <emphasis>cable equation</emphasis> was developed in 1890<footnote_reference auto="1" docname="theory/theory_hh" ids="id2" refid="id5">2</footnote_reference> to predict the degradation of an electrical signal passing along the transatlantic cable.
                 It is derived as follows:</paragraph>
-            <figure align="right" ids="leaky-cable-current-flow" names="leaky_cable_current_flow" width="6.5cm">
+            <figure align="right" ids="leaky-cable-current-flow" names="leaky_cable_current_flow" width="50%">
                 <image alt="Current flow in a leaky cable" candidates="{'*': 'theory/images/current_flow_leaky_cable.png'}" uri="theory/images/current_flow_leaky_cable.png"></image>
                 <caption>Current flow in a leaky cable.  <strong>TODO</strong> I don’t understand the vertical arrow??</caption>
             </figure>
@@ -50,7 +50,7 @@
         </section>
         <section ids="theory-action-potentials" names="theory:\ action\ potentials">
             <title refid="id8">Theory: Action potentials</title>
-            <figure align="right" ids="neuron-current-flow" names="neuron_current_flow" width="6.5cm">
+            <figure align="right" ids="neuron-current-flow" names="neuron_current_flow" width="50%">
                 <image alt="Current flow in a neuron" candidates="{'*': 'theory/images/current_flow_neuron.png'}" uri="theory/images/current_flow_neuron.png"></image>
                 <caption>Current flow in a neuron.  <strong>TODO</strong> I don’t understand the vertical arrow for V?? direction of voltage? Is one side in/out the cell?</caption>
             </figure>

@@ -153,7 +153,7 @@
                         closing, respectively. (a)</inline></number_reference>. The specific characteristics of a channel’s
                 behaviour depend on how its gates modify the open channel conductance.</paragraph>
             <figure align="center" ids="ion-gates" names="ion_gates">
-                <image alt="Open channel linear IV" candidates="{'*': 'theory/images/ion_gates_theory.png'}" uri="theory/images/ion_gates_theory.png" width="12cm"></image>
+                <image alt="Open channel linear IV" candidates="{'*': 'theory/images/ion_gates_theory.png'}" uri="theory/images/ion_gates_theory.png" width="70%"></image>
                 <caption>(a) Open channel linear current-voltage relation.  (b) Ion channel gating
                     kinetics. <math>y</math> is the fraction of gates in the open state.
                     <math>\alpha_n</math> and <math>\beta_n</math> are the rate constants for opening and
