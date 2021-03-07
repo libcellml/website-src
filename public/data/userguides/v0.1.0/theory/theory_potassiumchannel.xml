@@ -39,10 +39,10 @@
             <math_block docname="theory/theory_potassiumchannel" label="True" nowrap="False" number="True" xml:space="preserve">\frac{dn}{dt} = \alpha_{n}\left( 1 - n \right) - \beta_{n}n</math_block>
             <paragraph>with time constant:</paragraph>
             <math_block docname="theory/theory_potassiumchannel" label="True" nowrap="False" number="True" xml:space="preserve">\tau_{n} = \frac{1}{\alpha_{n} + \beta_{n}}</math_block>
-            <paragraph>The main difference from the gating model in our previous example is that Hodgkin and Huxley found it necessary to make the rate constants <math>\alpha_n</math> and <math>\beta_n</math> functions of the membrane potential <math>V</math> (see <number_reference internal="True" refid="ocr-tut-volt-deps-gates" title="Figure {number}"><inline classes="std std-numref">Figure 7</inline></number_reference>) as follows <footnote_reference auto="1" docname="theory/theory_potassiumchannel" ids="id1" refid="id2">1</footnote_reference>:</paragraph>
+            <paragraph>The main difference from the gating model in our previous example is that Hodgkin and Huxley found it necessary to make the rate constants <math>\alpha_n</math> and <math>\beta_n</math> functions of the membrane potential <math>V</math> (see <number_reference internal="True" refid="voltage-dependent-gates" title="Figure: {name}"><inline classes="std std-numref">Figure: Voltage dependence of gate constants \alpha_n and \beta_n (\text{ms}^{-1}), time constant \tau_n (\text{ms}) and relative conductance \frac{g_{ss}}{\bar{g}_Y}.</inline></number_reference>) as follows <footnote_reference auto="1" docname="theory/theory_potassiumchannel" ids="id1" refid="id2">1</footnote_reference>:</paragraph>
             <math_block docname="theory/theory_potassiumchannel" label="True" nowrap="False" number="True" xml:space="preserve">\alpha_{n} = \frac{- 0.01\left( V + 65 \right)}{\exp \left({-0.1 \left( V + 65 \right)}\right) - 1} \\[16pt]
 \beta_{n} = 0.125\exp{\left( \frac{- \left( V + 75 \right) } {80} \right) }</math_block>
-            <figure align="center" ids="ocr-tut-volt-deps-gates" names="ocr_tut_volt_deps_gates">
+            <figure align="center" ids="voltage-dependent-gates" names="voltage_dependent_gates">
                 <image alt="Voltage dependencies of gate constants" candidates="{'*': 'theory/images/volt_deps_of_gate_consts.png'}" uri="theory/images/volt_deps_of_gate_consts.png" width="35em"></image>
                 <caption>Voltage dependence of gate constants <math>\alpha_n</math> and <math>\beta_n (\text{ms}^{-1})</math>, time constant <math>\tau_n (\text{ms})</math> and relative conductance <math>\frac{g_{ss}}{\bar{g}_Y}</math>.</caption>
             </figure>
@@ -51,9 +51,9 @@
 \frac{\alpha_{n}}{\alpha_{n} + \beta_{n}}</math_block>
             <paragraph>The voltage dependence of the steady state channel conductance is then:</paragraph>
             <math_block docname="theory/theory_potassiumchannel" label="True" nowrap="False" number="True" xml:space="preserve">g_{ss} = \left( \frac{\alpha_{n}}{\alpha_{n} + \beta_{n}} \right)^{4}.\bar{g}_{Y}</math_block>
-            <paragraph>(see <number_reference internal="True" refid="ocr-tut-volt-deps-gates" title="Figure {number}"><inline classes="std std-numref">Figure 7</inline></number_reference>).
-                The steady state current-voltage relation for the channel is illustrated in <number_reference internal="True" refid="ocr-tut-ss-cur-volt" title="Figure {number}"><inline classes="std std-numref">Figure 8</inline></number_reference>.</paragraph>
-            <figure align="center" ids="ocr-tut-ss-cur-volt" names="ocr_tut_ss_cur_volt">
+            <paragraph>(see <number_reference internal="True" refid="voltage-dependent-gates" title="Figure: {name}"><inline classes="std std-numref">Figure: Voltage dependence of gate constants \alpha_n and \beta_n (\text{ms}^{-1}), time constant \tau_n (\text{ms}) and relative conductance \frac{g_{ss}}{\bar{g}_Y}.</inline></number_reference>).
+                The steady state current-voltage relation for the channel is illustrated in <number_reference internal="True" refid="steady-state-current-voltage-relationship" title="Figure: {name}"><inline classes="std std-numref">Figure: The steady-state current-voltage relation for the potassium channel.</inline></number_reference>.</paragraph>
+            <figure align="center" ids="steady-state-current-voltage-relationship" names="steady_state_current_voltage_relationship">
                 <image alt="Steady-state current voltage" candidates="{'*': 'theory/images/ss_cur_volt.png'}" uri="theory/images/ss_cur_volt.png" width="35em"></image>
                 <caption>The steady-state current-voltage relation for the potassium channel.</caption>
             </figure>
@@ -78,15 +78,15 @@
         <section ids="simulation-and-results" names="simulation\ and\ results">
             <title refid="id6">Simulation and results</title>
             <paragraph>The behaviour of the potassium channel can be simulated using the <reference internal="True" refuri="../tutorials/solver/index#solver"><inline classes="std std-ref">simple solver</inline></reference> provided to run the code generated in <reference internal="True" refuri="../tutorials/hh_tutorial2/index#createpotassiumchannelmodel"><inline classes="std std-ref">HH Tutorial 2</inline></reference>.
-                A step change in membrane voltage between 0mV and -85mV and back gives the behaviour shown in <number_reference internal="True" refid="potassium-voltage" title="Figure {number}"><inline classes="std std-numref">Figure 10</inline></number_reference> to <number_reference internal="True" refid="potassium-current" title="Figure {number}"><inline classes="std std-numref">Figure 13</inline></number_reference> below.
+                A step change in membrane voltage between 0mV and -85mV and back gives the behaviour shown in <number_reference internal="True" refid="potassium-voltage" title="Figure: {name}"><inline classes="std std-numref">Figure: Membrane voltage clamp step from 0mv to -85mV and back.</inline></number_reference> to <number_reference internal="True" refid="potassium-current" title="Figure: {name}"><inline classes="std std-numref">Figure: Potassium channel current response</inline></number_reference> below.
                 These were created using a timestep of 0.01ms to an ending time of 40ms using the <reference internal="True" refuri="theory_ode_solutions#theory-ode-solutions"><inline classes="std std-ref">simple ODE solver</inline></reference>.</paragraph>
             <paragraph>At 0mV, the steady state value of the <math>n</math>-gate is <math>n_{\infty} = \frac{\alpha_{n}}{\alpha_{n} + \beta_{n}} =</math> 0.324 and, at -85mV, <math>n_{\infty} = \ </math>0.945.</paragraph>
-            <paragraph>The voltage traces are shown in <number_reference internal="True" refid="potassium-voltage" title="Figure {number}"><inline classes="std std-numref">Figure 10</inline></number_reference>.
-                The <math>n</math>-gate response in <number_reference internal="True" refid="potassium-ngate" title="Figure {number}"><inline classes="std std-numref">Figure 11</inline></number_reference> shows it opening beyond its initial partially open value of <math>n =</math>0.324 at 0mV, to plateau at an almost fully open state of <math>n =</math>0.945 at the Nernst potential of -85mV, before closing again as the voltage is stepped back to 0mV.
+            <paragraph>The voltage traces are shown in <number_reference internal="True" refid="potassium-voltage" title="Figure: {name}"><inline classes="std std-numref">Figure: Membrane voltage clamp step from 0mv to -85mV and back.</inline></number_reference>.
+                The <math>n</math>-gate response in <number_reference internal="True" refid="potassium-n-gate-response" title="Figure: {name}"><inline classes="std std-numref">Figure: First-order response of the n-gate to the voltage change.</inline></number_reference> shows it opening beyond its initial partially open value of <math>n =</math>0.324 at 0mV, to plateau at an almost fully open state of <math>n =</math>0.945 at the Nernst potential of -85mV, before closing again as the voltage is stepped back to 0mV.
                 Note that the opening behaviour (set by the voltage dependence of the <math>\alpha_{n}</math> opening rate constant) is faster than the closing behaviour (set by the voltage dependence of the <math>\beta_{n}</math> closing rate constant).
-                The channel conductance (<math>= n^{4}\bar{g}_K</math>) is shown in <number_reference internal="True" refid="potassium-conductance" title="Figure {number}"><inline classes="std std-numref">Figure 12</inline></number_reference>.
+                The channel conductance (<math>= n^{4}\bar{g}_K</math>) is shown in <number_reference internal="True" refid="potassium-conductance" title="Figure: {name}"><inline classes="std std-numref">Figure: Potassium channel conductance dynamics</inline></number_reference>.
                 Note the initial s-shaped conductance increase caused by the effect of the four gates in series <math>n^{4}</math> effect on conductance.
-                Finally the channel current <math>i_{K} = g_{Na}\left( V - E_{K} \right)</math> is shown in <number_reference internal="True" refid="potassium-current" title="Figure {number}"><inline classes="std std-numref">Figure 13</inline></number_reference>.
+                Finally the channel current <math>i_{K} = g_{Na}\left( V - E_{K} \right)</math> is shown in <number_reference internal="True" refid="potassium-current" title="Figure: {name}"><inline classes="std std-numref">Figure: Potassium channel current response</inline></number_reference>.
                 There is no current flow during the time when the voltage is clamped at the Nernst potential (-85mV) when the gate is opening.
                 When the voltage is stepped back to 0mV the open gates begin to close and the conductance declines, but as there is a voltage gradient it drives an outward (positive) current flow through the partially open channel.
                 Current can only flows when there is a non-zero conductance and a non-zero voltage gradient.
@@ -95,7 +95,7 @@
                 <image alt="Membrane voltage clamp function" candidates="{'*': 'theory/images/tutorial6_voltage.png'}" uri="theory/images/tutorial6_voltage.png"></image>
                 <caption>Membrane voltage clamp step from 0mv to -85mV and back.</caption>
             </figure>
-            <figure align="center" ids="potassium-ngate" names="potassium_ngate">
+            <figure align="center" ids="potassium-n-gate-response" names="potassium_n_gate_response">
                 <image alt="N-gate response" candidates="{'*': 'theory/images/tutorial6_ngate.png'}" uri="theory/images/tutorial6_ngate.png"></image>
                 <caption>First-order response of the n-gate to the voltage change.</caption>
             </figure>
@@ -109,7 +109,7 @@
             </figure>
             <paragraph>Note that the simulation above includes the Nernst equation with its dependence on the concentrations <math>\left\lbrack K^{+} \right\rbrack_{i}</math>= 90mM and <math>\left\lbrack K^{+} \right\rbrack_{o}</math>= 3mM.
                 By raising the external potassium concentration to <math>\left\lbrack K^{+} \right\rbrack_{o}</math>= 10mM you will then seethe Nernst potential increase from -85mV to -55mV and a negative (inward) current flowing during the period when the membrane voltage is clamped to -85mV.
-                The cell is now in a ‘hyperpolarised’ state because the potential is less than the equilibrium potential.</paragraph>
+                The cell is now in a ‘hyper-polarised’ state because the potential is less than the equilibrium potential.</paragraph>
         </section>
         <section ids="next-steps" names="next\ steps">
             <title refid="id7">Next steps</title>

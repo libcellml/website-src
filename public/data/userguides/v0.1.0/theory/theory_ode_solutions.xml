@@ -271,8 +271,8 @@ x(t_k+\Delta t) = x_k + f(t_k, x_k)\times\Delta t</math_block>
                 <paragraph>Simple implementations are provided which will take the generated files, from both the C and Python generator profiles, and solve the system of equations.</paragraph>
                 <paragraph>Simple solver routines have been provided for you for both the C and Python profiles.
                     Please see the <reference internal="True" refuri="../tutorials/solver/index#solver"><inline classes="std std-ref">Solver tutorial</inline></reference> for details.</paragraph>
-                <paragraph>Solving the model reveals the cyclical interaction between the populations of fish and sharks, as shown in <number_reference internal="True" refid="sharks-and-fishes" title="Figure {number}"><inline classes="std std-numref">Figure 26</inline></number_reference>.</paragraph>
-                <figure align="center" ids="sharks-and-fishes" names="sharks_and_fishes">
+                <paragraph>Solving the model reveals the cyclical interaction between the populations of fish and sharks, as shown in <number_reference internal="True" refid="population-dynamics" title="Figure: {name}"><inline classes="std std-numref">Figure: Solution to the 0&lt;time&lt;20 period for the interaction of the two populations</inline></number_reference>.</paragraph>
+                <figure align="center" ids="population-dynamics" names="population_dynamics">
                     <image alt="Population dynamics of sharks and fishes" candidates="{'*': 'theory/images/sharks_and_fishes.png'}" uri="theory/images/sharks_and_fishes.png"></image>
                     <caption>Solution to the 0&lt;time&lt;20 period for the interaction of the two populations</caption>
                 </figure>
