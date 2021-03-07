@@ -53,7 +53,7 @@
                 complexity inherent in biological modelling.
                 First we’ll look at the use of <emphasis>encapsulation groups</emphasis> and <emphasis>public</emphasis> and <emphasis>private</emphasis> interfaces to control the visibility of information in modular CellML components.
                 To understand encapsulation, it is useful to use terms like <emphasis>parent</emphasis>, <emphasis>child</emphasis> and <emphasis>sibling</emphasis>, to describe the relationships between components.
-                This is illustrated in <number_reference internal="True" refid="encapsulation-parent-structure" title="Figure {number}"><inline classes="std std-numref">Figure 14</inline></number_reference> below:</paragraph>
+                This is illustrated in <number_reference internal="True" refid="encapsulation-parent-structure" title="Figure: {name}"><inline classes="std std-numref">Figure: Encapsulation structure of nested components in a parent-child-sibling structure.</inline></number_reference> below:</paragraph>
             <figure align="center" ids="encapsulation-parent-structure" names="encapsulation_parent_structure">
                 <image alt="Encapsulation structure of nested components in a parent-child-sibling structure" candidates="{'*': 'theory/images/encapsulation_parent_structure.png'}" uri="theory/images/encapsulation_parent_structure.png"></image>
                 <caption>Encapsulation structure of nested components in a parent-child-sibling structure.</caption>
@@ -67,7 +67,7 @@
                 </list_item>
                 <list_item>
                     <paragraph>A <literal classes="code">public</literal> interface is available between siblings.
-                        This is also true of top-level components (which are siblings with a <literal classes="code">Model</literal> parent), such as the ‘grandparent’ and ‘no relation’ components in <number_reference internal="True" refid="encapsulation-parent-structure" title="Figure {number}"><inline classes="std std-numref">Figure 14</inline></number_reference>.
+                        This is also true of top-level components (which are siblings with a <literal classes="code">Model</literal> parent), such as the ‘grandparent’ and ‘no relation’ components in <number_reference internal="True" refid="encapsulation-parent-structure" title="Figure: {name}"><inline classes="std std-numref">Figure: Encapsulation structure of nested components in a parent-child-sibling structure.</inline></number_reference>.
                         A <literal classes="code">public</literal> interface is also available <emphasis>from</emphasis> a child <emphasis>to</emphasis> its parent (note direction).</paragraph>
                 </list_item>
                 <list_item>
@@ -85,7 +85,7 @@
             <paragraph>We define the CellML components <strong>sodium_channel_m_gate</strong> and <strong>sodium_channel_h_gate</strong> below.
                 Each of these components has its own equations (voltage-dependent gates and first-order gate kinetics) but they are both parts of one protein – the sodium channel – so it is useful to group them into one <strong>sodium_channel</strong> component.</paragraph>
             <target refid="sodium-channel-encap-structure"></target>
-            <figure align="left" ids="na-enc-str sodium-channel-encap-structure" names="na_enc_str sodium_channel_encap_structure">
+            <figure align="left" ids="sodium-chanel-encapsulation-structure sodium-channel-encap-structure" names="sodium_chanel_encapsulation_structure sodium_channel_encap_structure">
                 <image candidates="{'*': 'theory/images/sodium_channel_encap_structure.png'}" uri="theory/images/sodium_channel_encap_structure.png"></image>
                 <caption>The sodium channel component is the parent of two children:
                     the <math>m</math>-gate and the <math>h</math>-gate components, which are
@@ -99,29 +99,29 @@
             <paragraph>The behaviour of the sodium channel was simulated using the <reference internal="True" refuri="../tutorials/solver/index#solver"><inline classes="std std-ref">simple solver</inline></reference> provided to run the code generated
                 in <reference internal="True" refuri="../tutorials/hh_tutorial3/index#debugsodiumchannelmodel"><inline classes="std std-ref">HH Tutorial 3</inline></reference>.
                 Three voltage-step experiments were run with voltage conditions of (a) -85mV to -20mV, (b) -85mV to 0mV and (c) -85mV to +20mV.
-                The results of the computation, with an end time of 40ms, and Euler step of 0.01ms are shown in <number_reference internal="True" refid="sodium-v" title="Figure {number}"><inline classes="std std-numref">Figure 16</inline></number_reference> to <number_reference internal="True" refid="sodium-i" title="Figure {number}"><inline classes="std std-numref">Figure 20</inline></number_reference> below.</paragraph>
+                The results of the computation, with an end time of 40ms, and Euler step of 0.01ms are shown in <number_reference internal="True" refid="sodium-voltage" title="Figure: {name}"><inline classes="std std-numref">Figure: Driving function for the voltage clamps</inline></number_reference> to <number_reference internal="True" refid="sodium-i" title="Figure: {name}"><inline classes="std std-numref">Figure: Sodium current</inline></number_reference> below.</paragraph>
             <target refid="sodium-v"></target>
-            <figure align="center" ids="tut7-vgraph sodium-v" names="tut7_vgraph sodium_v">
+            <figure align="center" ids="sodium-voltage sodium-v" names="sodium_voltage sodium_v">
                 <image alt="Driving function for the voltage clamp" candidates="{'*': 'theory/images/tut7_Vgraph.png'}" uri="theory/images/tut7_Vgraph.png"></image>
                 <caption>Driving function for the voltage clamps</caption>
             </figure>
             <target refid="sodium-m"></target>
-            <figure align="center" ids="tut7-mgraph sodium-m" names="tut7_mgraph sodium_m">
+            <figure align="center" ids="m-gate-dynamics sodium-m" names="m_gate_dynamics sodium_m">
                 <image alt="m-gate dynamics" candidates="{'*': 'theory/images/tut7_mgraph.png'}" uri="theory/images/tut7_mgraph.png"></image>
                 <caption>m-gate dynamics</caption>
             </figure>
             <target refid="sodium-h"></target>
-            <figure align="center" ids="tut7-hgraph sodium-h" names="tut7_hgraph sodium_h">
+            <figure align="center" ids="h-gate-dynamics sodium-h" names="h_gate_dynamics sodium_h">
                 <image alt="h-gate dynamics" candidates="{'*': 'theory/images/tut7_hgraph.png'}" uri="theory/images/tut7_hgraph.png"></image>
                 <caption>h-gate dynamics</caption>
             </figure>
             <target refid="sodium-g"></target>
-            <figure align="center" ids="tut7-nacond-graph sodium-g" names="tut7_nacond_graph sodium_g">
+            <figure align="center" ids="sodium-conductance sodium-g" names="sodium_conductance sodium_g">
                 <image alt="Sodium conductance" candidates="{'*': 'theory/images/tut7_Nacond_graph.png'}" uri="theory/images/tut7_Nacond_graph.png"></image>
                 <caption>Sodium conductance</caption>
             </figure>
             <target refid="sodium-i"></target>
-            <figure align="center" ids="tut7-naigraph sodium-i" names="tut7_naigraph sodium_i">
+            <figure align="center" ids="sodium-current sodium-i" names="sodium_current sodium_i">
                 <image alt="Sodium current" candidates="{'*': 'theory/images/tut7_iNagraph.png'}" uri="theory/images/tut7_iNagraph.png"></image>
                 <caption>Sodium current</caption>
             </figure>
@@ -134,11 +134,11 @@
                     <paragraph>The kinetics of the <math>m</math>-gate are much faster than the <math>h</math>-gate.</paragraph>
                 </list_item>
                 <list_item>
-                    <paragraph>The opening behaviour is faster as the voltage is stepped to higher values since <math>\tau = \frac{1}{\alpha_{n} + \beta_{n}}</math> reduces with increasing <math>V</math> (see <number_reference internal="True" refuri="theory_potassiumchannel#ocr-tut-volt-deps-gates" title="Figure {number}"><inline classes="std std-numref">Figure 7</inline></number_reference>).</paragraph>
+                    <paragraph>The opening behaviour is faster as the voltage is stepped to higher values since <math>\tau = \frac{1}{\alpha_{n} + \beta_{n}}</math> reduces with increasing <math>V</math> (see <number_reference internal="True" refuri="theory_potassiumchannel#voltage-dependent-gates" title="Figure: {name}"><inline classes="std std-numref">Figure: Voltage dependence of gate constants \alpha_n and \beta_n (\text{ms}^{-1}), time constant \tau_n (\text{ms}) and relative conductance \frac{g_{ss}}{\bar{g}_Y}.</inline></number_reference>).</paragraph>
                 </list_item>
                 <list_item>
                     <paragraph>The sodium channel conductance rises (<emphasis>activates</emphasis>) and then falls (<emphasis>deactivates</emphasis>) under a positive voltage step from rest since the three <math>m</math>-gates turn on, but the <math>h</math>-gate turns off and the conductance is a product of these.
-                        Compare this with the <number_reference internal="True" refuri="theory_potassiumchannel#potassium-ngate" title="Figure {number}"><inline classes="std std-numref">Figure 11</inline></number_reference> which is only reduced back to zero by stepping the voltage back to its resting value – that is, <emphasis>deactivating</emphasis> it.</paragraph>
+                        Compare this with the <number_reference internal="True" refuri="theory_potassiumchannel#potassium-n-gate-response" title="Figure: {name}"><inline classes="std std-numref">Figure: First-order response of the n-gate to the voltage change.</inline></number_reference> which is only reduced back to zero by stepping the voltage back to its resting value – that is, <emphasis>deactivating</emphasis> it.</paragraph>
                 </list_item>
                 <list_item>
                     <paragraph>The only time current <math>i_{Na}</math> flows through the sodium channel is during the brief period when the <math>m</math>-gate is rapidly opening and the much slower <math>h</math>-gate is beginning to close.
