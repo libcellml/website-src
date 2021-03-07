@@ -43,7 +43,7 @@
             <math_block docname="theory/theory_potassiumchannel" label="True" nowrap="False" number="True" xml:space="preserve">\alpha_{n} = \frac{- 0.01\left( V + 65 \right)}{\exp \left({-0.1 \left( V + 65 \right)}\right) - 1} \\[16pt]
 \beta_{n} = 0.125\exp{\left( \frac{- \left( V + 75 \right) } {80} \right) }</math_block>
             <figure align="center" ids="voltage-dependent-gates" names="voltage_dependent_gates">
-                <image alt="Voltage dependencies of gate constants" candidates="{'*': 'theory/images/volt_deps_of_gate_consts.png'}" uri="theory/images/volt_deps_of_gate_consts.png" width="35em"></image>
+                <image alt="Voltage dependencies of gate constants" candidates="{'*': 'theory/images/volt_deps_of_gate_consts.png'}" uri="theory/images/volt_deps_of_gate_consts.png" width="35%"></image>
                 <caption>Voltage dependence of gate constants <math>\alpha_n</math> and <math>\beta_n (\text{ms}^{-1})</math>, time constant <math>\tau_n (\text{ms})</math> and relative conductance <math>\frac{g_{ss}}{\bar{g}_Y}</math>.</caption>
             </figure>
             <paragraph>Note that under steady state conditions when <math>t \rightarrow \infty</math> and <math>\frac{dn}{dt} \rightarrow 0</math>:</paragraph>
@@ -54,7 +54,7 @@
             <paragraph>(see <number_reference internal="True" refid="voltage-dependent-gates" title="Figure: {name}"><inline classes="std std-numref">Figure: Voltage dependence of gate constants \alpha_n and \beta_n (\text{ms}^{-1}), time constant \tau_n (\text{ms}) and relative conductance \frac{g_{ss}}{\bar{g}_Y}.</inline></number_reference>).
                 The steady state current-voltage relation for the channel is illustrated in <number_reference internal="True" refid="steady-state-current-voltage-relationship" title="Figure: {name}"><inline classes="std std-numref">Figure: The steady-state current-voltage relation for the potassium channel.</inline></number_reference>.</paragraph>
             <figure align="center" ids="steady-state-current-voltage-relationship" names="steady_state_current_voltage_relationship">
-                <image alt="Steady-state current voltage" candidates="{'*': 'theory/images/ss_cur_volt.png'}" uri="theory/images/ss_cur_volt.png" width="35em"></image>
+                <image alt="Steady-state current voltage" candidates="{'*': 'theory/images/ss_cur_volt.png'}" uri="theory/images/ss_cur_volt.png" width="35%"></image>
                 <caption>The steady-state current-voltage relation for the potassium channel.</caption>
             </figure>
         </section>
@@ -70,7 +70,7 @@
                 But along with this containment functionality comes the need for the enclosed variables to communicate with one another across these artificial barriers.
                 This is done by creating <emphasis>equivalent variable maps</emphasis>, wherein a variable in one component is mapped through an <emphasis>interface</emphasis> to a corresponding variable in another.</paragraph>
             <paragraph>More information about how components can be nested to create a hierarchical <emphasis>encapsulation structure</emphasis> is shown in more detail in the next chapter, <reference internal="True" refuri="theory_sodiumchannel#theory-sodiumchannel"><inline classes="std std-ref">A model of a sodium channel</inline></reference> and demonstrated in <reference internal="True" refuri="../tutorials/hh_tutorial3/index#debugsodiumchannelmodel"><inline classes="std std-ref">HH Tutorial 3</inline></reference>.</paragraph>
-            <figure align="center" ids="potassium-component-structure" names="potassium_component_structure" width="12cm">
+            <figure align="center" ids="potassium-component-structure" names="potassium_component_structure" width="80%">
                 <image alt="Structure of the potassium channel component with its n-gate and environment component" candidates="{'*': 'theory/images/potassium_component_structure.png'}" uri="theory/images/potassium_component_structure.png"></image>
                 <caption>Structure of the potassium channel component with its <math>n</math>-gate and environment component</caption>
             </figure>
