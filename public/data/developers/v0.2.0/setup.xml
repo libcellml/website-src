@@ -237,7 +237,7 @@
                     You do this by going to your fork (in this example user <emphasis>andre</emphasis>’s fork) at <reference refuri="https://github.com/andre/libCellML">https://github.com/andre/libCellML</reference>.</paragraph>
                 <container classes="nb">
                     <paragraph>Do not try and clone this location!
-                        Substitute your <reference internal="False" refuri="https://github.com/">Github</reference> username for <emphasis>andre</emphasis>.</paragraph>
+                        Substitute your Github username for <emphasis>andre</emphasis>.</paragraph>
                 </container>
                 <paragraph>On the right hand side of the webpage, on your fork of the repository, you can get the link for cloning the repository to your computer, in our example:</paragraph>
                 <literal_block force="False" language="default" linenos="False" xml:space="preserve">https://github.com/andre/libCellML.git</literal_block>
