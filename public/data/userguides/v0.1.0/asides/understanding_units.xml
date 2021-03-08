@@ -9,56 +9,57 @@
         <paragraph>There are four different kinds of units used here: irreducible units, built-in units, derived or combination units, and custom irreducible units.</paragraph>
         <section ids="irreducible-units" names="irreducible\ units">
             <title>Irreducible units</title>
-            <paragraph>The first are called <emphasis>irreducible</emphasis> because they represent the physical base quantities which cannot be further simplified:</paragraph>
-            <bullet_list bullet="-">
-                <list_item>
-                    <paragraph>length (<literal classes="code">metre</literal>)</paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph>time (<literal classes="code">second</literal>)</paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph>amount of a substance (<literal classes="code">mole</literal>)</paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph>temperature (<literal classes="code">kelvin</literal>)</paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph>mass (<literal classes="code">kilogram</literal>)</paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph>electrical current (<literal classes="code">ampere</literal>)</paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph>luminous intensity (<literal classes="code">candela</literal>)</paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph>non-dimensional (<literal classes="code">dimensionless</literal>)</paragraph>
-                </list_item>
-            </bullet_list>
+            <container classes="shortlist">
+                <paragraph>The first are called <emphasis>irreducible</emphasis> because they represent the physical base quantities which cannot be further simplified:</paragraph>
+                <bullet_list bullet="-">
+                    <list_item>
+                        <paragraph>length (<literal classes="code">metre</literal>)</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>time (<literal classes="code">second</literal>)</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>amount of a substance (<literal classes="code">mole</literal>)</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>temperature (<literal classes="code">kelvin</literal>)</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>mass (<literal classes="code">kilogram</literal>)</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>electrical current (<literal classes="code">ampere</literal>)</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>luminous intensity (<literal classes="code">candela</literal>)</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>non-dimensional (<literal classes="code">dimensionless</literal>)</paragraph>
+                    </list_item>
+                </bullet_list>
+            </container>
             <paragraph>These <emphasis>irreducible</emphasis> units can be used to create all other physically-based units by combining them using different exponents, multipliers, and prefixes.</paragraph>
         </section>
         <section ids="built-in-units" names="built-in\ units">
             <title>Built-in units</title>
             <paragraph>Some of these combinations form our second type of units, the <emphasis>built-in units</emphasis>, these being common relationships which have been constructed from combinations of the irreducible units.
                 The combinations can involve:</paragraph>
-            <bullet_list bullet="-">
-                <list_item>
-                    <paragraph>A scaling factor (the units <literal classes="code">millisecond</literal> is equivalent to
-                        <literal classes="code">second</literal> and a factor of 0.001);</paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph>A combination of units (a <literal classes="code">coulomb</literal> is a <literal classes="code">second</literal> multiplied by
-                        an <literal classes="code">ampere</literal>);</paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph>Powers of units (a <literal classes="code">hertz</literal> has a base of <literal classes="code">second</literal> with an
-                        exponent of -1); and</paragraph>
-                </list_item>
-                <list_item>
-                    <paragraph>Any combination of the above.</paragraph>
-                </list_item>
-            </bullet_list>
+            <container classes="shortlist">
+                <bullet_list bullet="-">
+                    <list_item>
+                        <paragraph>A scaling factor (the units <literal classes="code">millisecond</literal> is equivalent to <literal classes="code">second</literal> and a factor of 0.001);</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>A combination of units (a <literal classes="code">coulomb</literal> is a <literal classes="code">second</literal> multiplied by an <literal classes="code">ampere</literal>);</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Powers of units (a <literal classes="code">hertz</literal> has a base of <literal classes="code">second</literal> with an exponent of -1); and</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Any combination of the above.</paragraph>
+                    </list_item>
+                </bullet_list>
+            </container>
             <paragraph>A list of pre-existing <emphasis>built-in</emphasis> convenience units is shown in the <reference internal="False" refuri="https://cellml-specification.readthedocs.io/en/latest//reference/formal_and_informative/specC02_units_reference.html#table-built-in-units">Built-in Units table</reference>, along with their relationships to the irreducible units.</paragraph>
         </section>
         <section ids="combination-or-derived-units" names="combination\ or\ derived\ units">
