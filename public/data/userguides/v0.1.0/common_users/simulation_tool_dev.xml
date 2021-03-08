@@ -221,7 +221,7 @@
             </container>
             <paragraph>Once a model has been passed to a <literal classes="code">Validator</literal> instance, the validator’s internal logger will contain a list of any of the issues which have been encountered during the checking process.
                 A model can be said to be valid - that is, conforming to the <reference internal="False" refuri="https://cellml-specification.readthedocs.io/en/latest/">CellML normative specification</reference> - if the validator’s logger contains no issues with a level of <literal classes="code">ERROR</literal>.</paragraph>
-            <paragraph>For more information on how to use any of the classes which record issues, please see the <reference internal="True" refuri="../howto/get_issues#actions-get-issues"><inline classes="std std-ref">Get Issues</inline></reference> section.</paragraph>
+            <paragraph>For more information on how to use any of the classes which record issues, please see the <reference internal="True" refuri="../howto/check_model#actions-get-issues"><inline classes="std std-ref">Get Issues</inline></reference> section.</paragraph>
         </section>
         <section ids="analyse-model" names="analyse\ model">
             <title>Analyse model</title>
@@ -233,7 +233,7 @@
                     <paragraph>Create an <literal classes="code">Analyser</literal> item and submit the model for analysis.</paragraph>
                 </list_item>
                 <list_item>
-                    <paragraph>Address any issues reported (see the <reference internal="True" refuri="../howto/get_issues#actions-get-issues"><inline classes="std std-ref">Get Issues</inline></reference> section for details).</paragraph>
+                    <paragraph>Address any issues reported (see the <reference internal="True" refuri="../howto/check_model#actions-get-issues"><inline classes="std std-ref">Get Issues</inline></reference> section for details).</paragraph>
                 </list_item>
                 <list_item>
                     <paragraph>Use the <literal classes="code">AnalyserModel</literal> item that’s constructed as input to the <literal classes="code">Generator</literal> (see next section).</paragraph>

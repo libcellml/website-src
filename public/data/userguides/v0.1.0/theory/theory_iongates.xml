@@ -8,7 +8,7 @@
         <paragraph>This chapter describes a generic ion channel, and provides a foundation for
             later chapters where specific channels of sodium and potassium are described.
             The theory here is the basis for the practical modelling tutorial in
-            <reference internal="True" refuri="../tutorials/tutorial5/index#tutorial5"><inline classes="std std-ref">Tutorial 5</inline></reference>.</paragraph>
+            <reference internal="True" refuri="../tutorials/hh_tutorial5/index#solvegeneratedcode"><inline classes="std std-ref">HH Tutorial 5</inline></reference>.</paragraph>
         <topic classes="contents local" ids="contents" names="contents">
             <bullet_list>
                 <list_item>
