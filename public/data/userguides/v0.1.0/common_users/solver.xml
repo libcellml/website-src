@@ -595,8 +595,8 @@
             </container>
             <paragraph>The solution files are written in a tab-delimited format which can be read by your favourite plotting application.
                 The plots below were generated using a step size of 0.1 for 100 iterations.</paragraph>
-            <figure align="center" ids="sinecomparison" names="sinecomparison">
-                <image alt="Solution to sine comparison model" candidates="{'*': 'common_users/../images/sineComparison.png'}" uri="common_users/../images/sineComparison.png"></image>
+            <figure align="center" ids="sine-comparison" names="sine_comparison">
+                <image alt="Solution to sine comparison model" candidates="{'*': 'theory/images/sineComparison.png'}" uri="theory/images/sineComparison.png"></image>
                 <caption>Plots generated from an Euler solution to the sine comparison model for a step size of 0.1.</caption>
             </figure>
         </section>
