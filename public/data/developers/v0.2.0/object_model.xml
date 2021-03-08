@@ -12,8 +12,9 @@
         </section>
         <section ids="overview-of-object-model" names="overview\ of\ object\ model">
             <title>Overview of Object Model</title>
-            <figure align="default">
+            <figure align="default" ids="overview-of-libcellml-objects" names="overview_of_libcellml_objects">
                 <image alt="libCellML Overview Object Model." candidates="{'*': './images/libCellMLRoughObjectModel-Overview.png'}" uri="./images/libCellMLRoughObjectModel-Overview.png"></image>
+                <caption>Showing the inheritance structure between libCellML items within the model.</caption>
             </figure>
         </section>
         <section ids="detailed" names="detailed">

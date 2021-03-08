@@ -17,10 +17,9 @@
                 The <reference internal="False" refuri="https://buildbot.net/">Buildbot</reference> <literal classes="code">build/test</literal> procedure will run each time changes are pushed to the pull request’s branch, and the results are displayed in the pull request view.</paragraph>
             <paragraph>Once all the changes and reviews are complete, one of the <reference internal="True" refuri="glossary#term-prime-repository"><inline classes="xref std std-term">prime repository</inline></reference> owners will merge the pull request into the prime repository, onto the <literal classes="code">develop</literal> branch.</paragraph>
             <paragraph>Note that a bug is just a type of issue, and that resolving the bug should have both the implementation to fix the bug and a test that triggers the bug.</paragraph>
-            <paragraph><number_reference internal="True" refid="libcellml-development-process" title="Figure %s"><inline classes="std std-numref">Figure 8</inline></number_reference> gives a graphical overview of the developer contribution process.
+            <paragraph><number_reference internal="True" refid="libcellml-development-process" title="Fig. %s"><inline classes="std std-numref">Fig. 8</inline></number_reference> gives a graphical overview of the developer contribution process.
                 For more details, see the text below.</paragraph>
-            <target refid="libcellml-development-process"></target>
-            <figure align="center" ids="id1 libcellml-development-process" names="libcellml-development-process">
+            <figure align="center" ids="libcellml-development-process" names="libcellml_development_process">
                 <image alt="Developer contribution process." candidates="{'*': './images/libCellMLProcesses-DevelopmentProcess.png'}" uri="./images/libCellMLProcesses-DevelopmentProcess.png"></image>
                 <caption>Developer contribution process.</caption>
             </figure>
@@ -66,10 +65,9 @@
             <paragraph>A topic or feature branch is a branch that is local to you (and anyone you collaborate with), it is a branch that will not be available from the <reference internal="True" refuri="glossary#term-prime-repository"><inline classes="xref std std-term">prime repository</inline></reference>.
                 All development work should be carried out on a topic branch, for example any major feature that you work on or minor bug fix.
                 Before creating a local topic branch, pull the latest changes from the <reference internal="True" refuri="glossary#term-prime-repository"><inline classes="xref std std-term">prime repository</inline></reference> <literal classes="code">develop</literal> branch, to make sure that you’re working from the most up-to-date version of the code.</paragraph>
-            <target refid="libcellml-branching"></target>
-            <figure align="center" ids="id2 libcellml-branching" names="libcellml-branching">
+            <figure align="center" ids="git-branching" names="git_branching">
                 <image alt="Git branching illustration." candidates="{'*': './images/libCellMLProcesses-GitBranching.png'}" uri="./images/libCellMLProcesses-GitBranching.png"></image>
-                <caption>Git branching illustration.</caption>
+                <caption>How branching in a Git repository works.</caption>
             </figure>
             <paragraph>Following this process will make it easier to have multiple topic branches at once and keep them in-sync with the <reference internal="True" refuri="glossary#term-prime-repository"><inline classes="xref std std-term">prime repository</inline></reference> <literal classes="code">develop</literal> branch, which will in turn make it easier to manage multiple pull requests.</paragraph>
             <paragraph>The following Git commands show an example of how to create a topic branch for fixing a (hypothetical) bug described in <title_reference>issue #123</title_reference>:</paragraph>
@@ -93,7 +91,7 @@ git checkout -b issue123</literal_block>
         </section>
         <section ids="github-pull-requests" names="github\ pull\ requests">
             <title>GitHub pull requests</title>
-            <paragraph>Once some changes have been made and local commits committed, push your changes to your Github libCellML repository (refer to <number_reference internal="True" refid="libcellml-branching" title="Figure %s"><inline classes="std std-numref">Figure 9</inline></number_reference>).
+            <paragraph>Once some changes have been made and local commits committed, push your changes to your Github libCellML repository (refer to <number_reference internal="True" refid="git-branching" title="Fig. %s"><inline classes="std std-numref">Fig. 9</inline></number_reference>).
                 From there, create a pull request from your topic branch to the <reference internal="True" refuri="glossary#term-prime-repository"><inline classes="xref std std-term">prime repository</inline></reference> <literal classes="code">develop</literal> branch.
                 When creating the pull request, make sure to add in the comment <literal classes="code">Addresses issue #123</literal> (of course, replace the number 123 with the actual number of the issue you are addressing), or something to that effect.
                 This will create a link between the issue and the pull request enabling other people to see that you are working on this issue and comment on your work.</paragraph>
