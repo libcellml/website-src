@@ -42,7 +42,7 @@ export default {
       ui.addClickHandlerTabs()
       ui.addClickHandlerToggles()
       ui.getFigureCaptions()
-    }, this.$store.getters.getTransitionDelay)
+    }, this.$store.getters.getTransitionDelay+200)
   },
 
   methods: {
