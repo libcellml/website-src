@@ -703,7 +703,7 @@
         <section ids="step-5-sanity-check" names="step\ 5:\ sanity\ check">
             <title>Step 5: Sanity check</title>
             <paragraph>You should find results similar to the figure below, where the cyclical dependency of the shark and fish populations can be seen.</paragraph>
-            <figure align="center" ids="sharksandfish" names="sharksandfish">
+            <figure align="center" ids="population-dynamics-of-sharks-and-fish" names="population_dynamics_of_sharks_and_fish">
                 <image alt="Population dynamics of sharks and fish" candidates="{'*': 'tutorials/tutorial4/../images/sharks_and_fish.png'}" uri="tutorials/tutorial4/../images/sharks_and_fish.png"></image>
                 <caption>Population dynamics for the sharks and fish.</caption>
             </figure>

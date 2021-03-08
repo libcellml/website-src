@@ -447,3 +447,13 @@ pre > code {
 #glossary dl > dt > dd {
     padding-left: 1em;
 }
+
+.figure-caption {
+    font-size: 90%;
+    text-align: justify;
+    margin: 1em 4em;
+}
+
+.figure-caption-heading {
+    font-weight: 600;
+}
