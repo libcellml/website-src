@@ -4,7 +4,7 @@
 <document source="/Users/kmoy001/libcellml/libcellml-src/docs/configure_and_build.rst">
     <target refid="configure-and-build"></target>
     <section ids="configuring-and-building-libcellml configure-and-build" names="configuring\ and\ building\ libcellml configure_and_build">
-        <title refid="id9">Configuring and building libCellML</title>
+        <title refid="id2">Configuring and building libCellML</title>
         <paragraph>This document covers building libCellML from source.</paragraph>
         <paragraph>It is assumed that you already have the codebase downloaded and ready for building.
             If not, please see the <reference internal="True" refuri="setup#setup"><inline classes="std std-ref">Development Setup</inline></reference> page for instructions.</paragraph>
@@ -13,62 +13,62 @@
             <title>Contents</title>
             <bullet_list>
                 <list_item>
-                    <paragraph><reference ids="id9" refid="configuring-and-building-libcellml">Configuring and building libCellML</reference></paragraph>
+                    <paragraph><reference ids="id2" refid="configuring-and-building-libcellml">Configuring and building libCellML</reference></paragraph>
                     <bullet_list>
                         <list_item>
-                            <paragraph><reference ids="id10" refid="configure-with-cmake">Configure with CMake</reference></paragraph>
+                            <paragraph><reference ids="id3" refid="configure-with-cmake">Configure with CMake</reference></paragraph>
                             <bullet_list>
                                 <list_item>
-                                    <paragraph><reference ids="id11" refid="command-line-linux-macos">Command line Linux, MacOS</reference></paragraph>
+                                    <paragraph><reference ids="id4" refid="command-line-linux-macos">Command line Linux, MacOS</reference></paragraph>
                                 </list_item>
                                 <list_item>
-                                    <paragraph><reference ids="id12" refid="options">Options</reference></paragraph>
+                                    <paragraph><reference ids="id5" refid="options">Options</reference></paragraph>
                                 </list_item>
                                 <list_item>
-                                    <paragraph><reference ids="id13" refid="windows-command-line">Windows command line</reference></paragraph>
+                                    <paragraph><reference ids="id6" refid="windows-command-line">Windows command line</reference></paragraph>
                                 </list_item>
                                 <list_item>
-                                    <paragraph><reference ids="id14" refid="windows-cmake-gui">Windows CMake-GUI</reference></paragraph>
+                                    <paragraph><reference ids="id7" refid="windows-cmake-gui">Windows CMake-GUI</reference></paragraph>
                                 </list_item>
                                 <list_item>
-                                    <paragraph><reference ids="id15" refid="id1">Options</reference></paragraph>
+                                    <paragraph><reference ids="id8" refid="id1">Options</reference></paragraph>
                                 </list_item>
                             </bullet_list>
                         </list_item>
                         <list_item>
-                            <paragraph><reference ids="id16" refid="troubleshooting">Troubleshooting</reference></paragraph>
+                            <paragraph><reference ids="id9" refid="troubleshooting">Troubleshooting</reference></paragraph>
                             <bullet_list>
                                 <list_item>
-                                    <paragraph><reference ids="id17" refid="policy-cmp0086-is-not-set">Policy CMP0086 is not set</reference></paragraph>
+                                    <paragraph><reference ids="id10" refid="policy-cmp0086-is-not-set">Policy CMP0086 is not set</reference></paragraph>
                                 </list_item>
                                 <list_item>
-                                    <paragraph><reference ids="id18" refid="on-windows-without-python-debug-libraries">On Windows without Python debug libraries</reference></paragraph>
+                                    <paragraph><reference ids="id11" refid="on-windows-without-python-debug-libraries">On Windows without Python debug libraries</reference></paragraph>
                                 </list_item>
                                 <list_item>
-                                    <paragraph><reference ids="id19" refid="could-not-find-swig-missing-swig-dir-swig-executable">Could not find SWIG (missing: SWIG_DIR, SWIG_EXECUTABLE)</reference></paragraph>
+                                    <paragraph><reference ids="id12" refid="could-not-find-swig-missing-swig-dir-swig-executable">Could not find SWIG (missing: SWIG_DIR, SWIG_EXECUTABLE)</reference></paragraph>
                                 </list_item>
                                 <list_item>
-                                    <paragraph><reference ids="id20" refid="could-not-find-sphinx-missing-sphinx-executable">Could NOT find Sphinx (missing: SPHINX_EXECUTABLE)</reference></paragraph>
+                                    <paragraph><reference ids="id13" refid="could-not-find-sphinx-missing-sphinx-executable">Could NOT find Sphinx (missing: SPHINX_EXECUTABLE)</reference></paragraph>
                                 </list_item>
                             </bullet_list>
                         </list_item>
                         <list_item>
-                            <paragraph><reference ids="id21" refid="build-the-library">Build the library</reference></paragraph>
+                            <paragraph><reference ids="id14" refid="build-the-library">Build the library</reference></paragraph>
                             <bullet_list>
                                 <list_item>
-                                    <paragraph><reference ids="id22" refid="build-from-the-command-line-linux-macos-or-windows">Build from the command line Linux, MacOS, or Windows</reference></paragraph>
+                                    <paragraph><reference ids="id15" refid="build-from-the-command-line-linux-macos-or-windows">Build from the command line Linux, MacOS, or Windows</reference></paragraph>
                                 </list_item>
                                 <list_item>
-                                    <paragraph><reference ids="id23" refid="build-in-windows-and-visual-studio">Build in Windows and Visual Studio</reference></paragraph>
+                                    <paragraph><reference ids="id16" refid="build-in-windows-and-visual-studio">Build in Windows and Visual Studio</reference></paragraph>
                                     <bullet_list>
                                         <list_item>
-                                            <paragraph><reference ids="id24" refid="fatal-error-cannot-open-include-file-python-h">Fatal error: Cannot open include file Python.h</reference></paragraph>
+                                            <paragraph><reference ids="id17" refid="fatal-error-cannot-open-include-file-python-h">Fatal error: Cannot open include file Python.h</reference></paragraph>
                                         </list_item>
                                         <list_item>
-                                            <paragraph><reference ids="id25" refid="cannot-access-xxx">Cannot access xxx</reference></paragraph>
+                                            <paragraph><reference ids="id18" refid="cannot-access-xxx">Cannot access xxx</reference></paragraph>
                                         </list_item>
                                         <list_item>
-                                            <paragraph><reference ids="id26" refid="the-code-execution-cannot-proceed-because-libcellmld-dll-was-not-found">The code execution cannot proceed because libcellmld.dll was not found</reference></paragraph>
+                                            <paragraph><reference ids="id19" refid="the-code-execution-cannot-proceed-because-libcellmld-dll-was-not-found">The code execution cannot proceed because libcellmld.dll was not found</reference></paragraph>
                                         </list_item>
                                     </bullet_list>
                                 </list_item>
@@ -83,19 +83,19 @@
             A sibling directory of <literal classes="code">LIBCELLML_SRC</literal> is a good choice, named something like <literal classes="code">build</literal> or <literal classes="code">libcellml-build</literal>.
             The variable <literal classes="code">LIBCELLML_BUILD</literal> is used to refer to this build directory.</paragraph>
         <section ids="configure-with-cmake" names="configure\ with\ cmake">
-            <title refid="id10">Configure with CMake</title>
+            <title refid="id3">Configure with CMake</title>
             <paragraph>The first step is to use <reference internal="False" refuri="https://cmake.org/">CMake</reference> to configure and generate build files for the libCellML library.
                 Linux and MacOS use a command line interface, and under Windows there is an optional GUI.
                 Note that CMake version 3.2 or later is required to configure libCellML.
                 Instructions and information about installing CMake can be found in the <reference internal="True" refuri="setup#setup-cmake"><inline classes="std std-ref">Setup</inline></reference> section.</paragraph>
             <section ids="command-line-linux-macos" names="command\ line\ linux,\ macos">
-                <title refid="id11">Command line Linux, MacOS</title>
+                <title refid="id4">Command line Linux, MacOS</title>
                 <paragraph>CMake can either be run through a simple text-based executable called <literal classes="code">ccmake</literal>, or through the command line directly.
                     There are instructions for both available from <reference internal="False" refuri="https://cmake.org//runningcmake/">CMake directly</reference>.
                     Building libCellML requires that you set the configuration parameters as in the table below.</paragraph>
             </section>
             <section dupnames="options" ids="options">
-                <title refid="id12">Options</title>
+                <title refid="id5">Options</title>
                 <paragraph>Some options are platform or tool dependent.
                     For example, <literal classes="code">MEMCHECK</literal> is only available if the valgrind tool is available.</paragraph>
                 <table align="default">
@@ -234,7 +234,7 @@
 cmake -DBUILD_TYPE=Release $LIBCELLML_SRC</literal_block>
             </section>
             <section ids="windows-command-line" names="windows\ command\ line">
-                <title refid="id13">Windows command line</title>
+                <title refid="id6">Windows command line</title>
                 <paragraph>Note that CMake is also available on Windows as a GUI (instructions below).
                     This section describes how to use CMake on Windows directly from the command line.
                     Instructions for running CMake through the command line can be found on the <reference internal="False" refuri="https://cmake.org//runningcmake/">CMake site</reference> under the heading “Running CMake from the command line”.</paragraph>
@@ -250,12 +250,12 @@ cmake -DBUILD_TYPE=Release $LIBCELLML_SRC</literal_block>
                 </block_quote>
             </section>
             <section ids="windows-cmake-gui" names="windows\ cmake-gui">
-                <title refid="id14">Windows CMake-GUI</title>
+                <title refid="id7">Windows CMake-GUI</title>
                 <paragraph>The CMake-GUI gives slightly different options - chief among these being that the config variables are prefixed with <literal classes="code">LIBCELLML_</literal>.
                     Also, in Windows note that neither <literal classes="code">MEMCHECK</literal> nor <literal classes="code">COVERAGE</literal> testing options are available.</paragraph>
             </section>
             <section dupnames="options" ids="id1">
-                <title refid="id15">Options</title>
+                <title refid="id8">Options</title>
                 <table align="default">
                     <tgroup cols="3">
                         <colspec colwidth="43"></colspec>
@@ -346,8 +346,7 @@ cmake -DBUILD_TYPE=Release $LIBCELLML_SRC</literal_block>
                 <paragraph>As with any CMake session we first set the location of the source files (your <literal classes="code">LIBCELLML_SRC</literal> directory) and a location for the generated build files (your <literal classes="code">LIBCELLML_BUILD</literal> directory).
                     Don’t worry about setting the options at this stage, you can just push <emphasis>Configure</emphasis> and CMake will try and find what it needs.
                     You can edit anything you need to in the next step.</paragraph>
-                <target refid="fig-devbuilding-windowscmakeguisourcebuilddirs"></target>
-                <figure align="center" ids="id2 fig-devbuilding-windowscmakeguisourcebuilddirs" names="fig_devbuilding_windowscmakeguisourcebuilddirs">
+                <figure align="center" ids="cmake-gui-with-values" names="cmake_gui_with_values">
                     <image alt="CMake-GUI with initial values for source and build directories set." candidates="{'*': './images/libCellMLBuilding-CMakeGUISourceBuildDirs.png'}" uri="./images/libCellMLBuilding-CMakeGUISourceBuildDirs.png"></image>
                     <caption>CMake-GUI with source and build directories set for user <emphasis>andre</emphasis>.</caption>
                 </figure>
@@ -356,14 +355,12 @@ cmake -DBUILD_TYPE=Release $LIBCELLML_SRC</literal_block>
                     If CMake does not find the entries in the table above you will need to enter them manually and push the <emphasis>Configure</emphasis> button again.
                     To find out what’s missing, read the output from the configuration step.
                     Some common messages and their required actions are listed below.</paragraph>
-                <target refid="fig-devbuilding-windowscmakeguiinitialconfigureattempt"></target>
-                <figure align="center" ids="id3 fig-devbuilding-windowscmakeguiinitialconfigureattempt" names="fig_devbuilding_windowscmakeguiinitialconfigureattempt">
+                <figure align="center" ids="cmake-gui-with-initial-values" names="cmake_gui_with_initial_values">
                     <image alt="CMake-GUI with initial values shown in red." candidates="{'*': './images/libCellMLBuilding-CMakeOptionsInRed.png'}" uri="./images/libCellMLBuilding-CMakeOptionsInRed.png"></image>
                     <caption>CMake-GUI with initial values shown in red.</caption>
                 </figure>
                 <paragraph>The first time you push the <emphasis>Configure</emphasis> button you will probably encounter an error like the one shown below.</paragraph>
-                <target refid="fig-devbuilding-windowscmakeconfigurationerror"></target>
-                <figure align="center" ids="id4 fig-devbuilding-windowscmakeconfigurationerror" names="fig_devbuilding_windowscmakeconfigurationerror">
+                <figure align="center" ids="cmake-gui-with-errors" names="cmake_gui_with_errors">
                     <image alt="CMake-GUI on Windows showing configuration error after initial configuration attempt." candidates="{'*': './images/libCellMLBuilding-CMakeWindowsConfigurationError.png'}" uri="./images/libCellMLBuilding-CMakeWindowsConfigurationError.png"></image>
                     <caption>CMake-GUI showing configuration error after initial configuration attempt.</caption>
                 </figure>
@@ -392,48 +389,46 @@ cmake -DBUILD_TYPE=Release $LIBCELLML_SRC</literal_block>
             </section>
         </section>
         <section ids="troubleshooting" names="troubleshooting">
-            <title refid="id16">Troubleshooting</title>
+            <title refid="id9">Troubleshooting</title>
             <section ids="policy-cmp0086-is-not-set" names="policy\ cmp0086\ is\ not\ set">
-                <title refid="id17">Policy CMP0086 is not set</title>
+                <title refid="id10">Policy CMP0086 is not set</title>
                 <paragraph>Despite being in red and repeated multiple times, this is a warning which can safely be ignored.
                     It’s caused by a version mis-match between SWIG and libCellML and will be addressed in the next release.</paragraph>
-                <target refid="fig-devbuilding-libcellml-cmp0086"></target>
-                <figure align="center" ids="id5 fig-devbuilding-libcellml-cmp0086" names="fig_devbuilding_libcellml_cmp0086">
+                <figure align="center" ids="windows-error" names="windows_error">
                     <image alt="CMake-GUI on Windows shows CMP0086 error." candidates="{'*': './images/libCellMLBuilding-PolicyCMP0086Error.png'}" uri="./images/libCellMLBuilding-PolicyCMP0086Error.png"></image>
                     <caption>CMake-GUI showing CMP0086 error.</caption>
                 </figure>
             </section>
             <section ids="on-windows-without-python-debug-libraries" names="on\ windows\ without\ python\ debug\ libraries">
-                <title refid="id18">On Windows without Python debug libraries</title>
+                <title refid="id11">On Windows without Python debug libraries</title>
                 <paragraph>Even if CMake reports that it has found Python at the beginning of its configuration output, it may still report that it has not found the debug library later on.
                     To address this you need to manually set the location of the Python library using the <literal classes="code">PYTHON_DEBUG_LIBRARY</literal> flag.
                     This can be done through the interface by clicking the <emphasis>Add entry</emphasis> button, entering <literal classes="code">PYTHON_DEBUG_LIBRARY</literal> in the Name field, and selecting <literal classes="code">FILEPATH</literal> in the Option field.
                     Then simply browse to find the file in your Python installation called something like <literal classes="code">python35_d.lib</literal> (for Python3.5), probably in the <literal classes="code">libs</literal> directory of your Python folder.</paragraph>
-                <target refid="fig-devbuilding-pythondebuglibrary"></target>
-                <figure align="center" ids="id6 fig-devbuilding-pythondebuglibrary" names="fig_devbuilding_pythondebuglibrary">
+                <figure align="center" ids="python-libraries" names="python_libraries">
                     <image alt="Set the location of the debug library" candidates="{'*': './images/libCellMLBuilding-PythonDebugLibrary.png'}" uri="./images/libCellMLBuilding-PythonDebugLibrary.png"></image>
                     <caption>Set the location of the debug library using the <literal classes="code">PYTHON_DEBUG_LIBRARY</literal> tag</caption>
                 </figure>
             </section>
             <section ids="could-not-find-swig-missing-swig-dir-swig-executable" names="could\ not\ find\ swig\ (missing:\ swig_dir,\ swig_executable)">
-                <title refid="id19">Could not find SWIG (missing: SWIG_DIR, SWIG_EXECUTABLE)</title>
+                <title refid="id12">Could not find SWIG (missing: SWIG_DIR, SWIG_EXECUTABLE)</title>
                 <paragraph>SWIG is go-between software used by libCellML to generate bindings for Python and other languages.
                     If you have the CMake option <literal classes="code">LIBCELLML_BINDINGS_PYTHON</literal> set to <literal classes="code">true</literal> then SWIG is required.
                     Follow the instructions for <reference internal="True" refuri="setup#setup-swig"><inline classes="std std-ref">setting up SWIG</inline></reference>.
                     You may need to restart your computer after installation, and then re-launch CMake.</paragraph>
             </section>
             <section ids="could-not-find-sphinx-missing-sphinx-executable" names="could\ not\ find\ sphinx\ (missing:\ sphinx_executable)">
-                <title refid="id20">Could NOT find Sphinx (missing: SPHINX_EXECUTABLE)</title>
+                <title refid="id13">Could NOT find Sphinx (missing: SPHINX_EXECUTABLE)</title>
                 <paragraph><reference internal="False" refuri="http://www.sphinx-doc.org/en/master/">Sphinx</reference> is a documentation generator used by libCellML to collect documentation on Python bindings, which requires Python 3.5.2 or later in order to run.
                     Please see the installation instructions on the <reference internal="False" refuri="http://www.sphinx-doc.org/en/master//usage/installation.html">installation page</reference> and then restart CMake.
                     If you do not need to generate bindings for Python then simply un-tick the CMake option <literal classes="code">LIBCELLML_BINDINGS_PYTHON</literal>, and push <emphasis>Configure</emphasis> again.</paragraph>
             </section>
         </section>
         <section ids="build-the-library" names="build\ the\ library">
-            <title refid="id21">Build the library</title>
+            <title refid="id14">Build the library</title>
             <paragraph>Once the build scripts have been generated by CMake as above, it’s time to build the library.</paragraph>
             <section ids="build-from-the-command-line-linux-macos-or-windows" names="build\ from\ the\ command\ line\ linux,\ macos,\ or\ windows">
-                <title refid="id22">Build from the command line Linux, MacOS, or Windows</title>
+                <title refid="id15">Build from the command line Linux, MacOS, or Windows</title>
                 <paragraph>For <literal classes="code">Makefile</literal>-based configurations, the command is simply:</paragraph>
                 <literal_block force="False" language="default" linenos="False" xml:space="preserve">make</literal_block>
                 <paragraph>If testing is enabled, run the tests using the test target:</paragraph>
@@ -444,26 +439,24 @@ cmake -DBUILD_TYPE=Release $LIBCELLML_SRC</literal_block>
                 <literal_block force="False" language="default" linenos="False" xml:space="preserve">ctest -V</literal_block>
             </section>
             <section ids="build-in-windows-and-visual-studio" names="build\ in\ windows\ and\ visual\ studio">
-                <title refid="id23">Build in Windows and Visual Studio</title>
+                <title refid="id16">Build in Windows and Visual Studio</title>
                 <paragraph>Once you have used CMake to configure and generate your project files, either push the <emphasis>Open Project</emphasis> button to launch the project, or locate and open the solution <literal classes="code">*.sln</literal> file inside your build folder. You should see the collection of projects which make up the libCellML library listed.  Just use the build menus as normal to compile, link and build them.  Some issues and their solutions are listed below.</paragraph>
                 <section ids="fatal-error-cannot-open-include-file-python-h" names="fatal\ error:\ cannot\ open\ include\ file\ python.h">
-                    <title refid="id24">Fatal error: Cannot open include file Python.h</title>
+                    <title refid="id17">Fatal error: Cannot open include file Python.h</title>
                     <paragraph>If you’ve included Python bindings in your CMake configuration, but get this error in Visual Studio at build time, it’s because the path to the Python installation was not set correctly in the CMake step.  Re-running the CMake configuration with a manually-specified path to the Python installation will solve the problem.  See <title_reference>ERROR: On Windows without Python debug libaries</title_reference> for instructions.</paragraph>
                 </section>
                 <section ids="cannot-access-xxx" names="cannot\ access\ xxx">
-                    <title refid="id25">Cannot access xxx</title>
+                    <title refid="id18">Cannot access xxx</title>
                     <paragraph>This is probably a permissions error related to the locations of your libraries or your <literal classes="code">LIBCELLML_BUILD</literal> directory.
                         You could launch Visual Studio as an administrator by right-clicking on its icon in the Start Menu (see below), or create your <literal classes="code">LIBCELLML_BUILD</literal> directory somewhere your user has default permission to access.</paragraph>
-                    <target refid="fig-devbuilding-runasadministrator"></target>
-                    <figure align="center" ids="id7 fig-devbuilding-runasadministrator" names="fig_devbuilding_runasadministrator">
+                    <figure align="center" ids="how-to-run-as-admin" names="how_to_run_as_admin">
                         <image alt='Right-click the VS icon in your start menu and select "Run as administrator"' candidates="{'*': './images/libCellMLBuilding-WindowsRunAsAdmin.png'}" uri="./images/libCellMLBuilding-WindowsRunAsAdmin.png"></image>
                         <caption>Right-click the VS icon in your start menu and select “Run as administrator”</caption>
                     </figure>
                 </section>
                 <section ids="the-code-execution-cannot-proceed-because-libcellmld-dll-was-not-found" names="the\ code\ execution\ cannot\ proceed\ because\ libcellmld.dll\ was\ not\ found">
-                    <title refid="id26">The code execution cannot proceed because libcellmld.dll was not found</title>
-                    <target refid="fig-devbuilding-dllnotfound"></target>
-                    <figure align="center" ids="id8 fig-devbuilding-dllnotfound" names="fig_devbuilding_dllnotfound">
+                    <title refid="id19">The code execution cannot proceed because libcellmld.dll was not found</title>
+                    <figure align="center" ids="dll-not-found" names="dll_not_found">
                         <image alt="System error when dll is not found." candidates="{'*': './images/libCellMLBuilding-dllNotFound.png'}" uri="./images/libCellMLBuilding-dllNotFound.png"></image>
                         <caption>System error when dll is not found.</caption>
                     </figure>
