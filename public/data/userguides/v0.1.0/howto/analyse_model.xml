@@ -55,7 +55,7 @@
             </container>
         </container>
         <paragraph>Any issues or messages raised are stored within the class’s logger.
-            More information about accessing <literal classes="code">Issue</literal> items can be found on the <reference internal="True" refuri="get_issues#actions-get-issues"><inline classes="std std-ref">Common actions &gt; Retrieve Issue items</inline></reference> page.</paragraph>
+            More information about accessing <literal classes="code">Issue</literal> items can be found on the <reference internal="True" refuri="check_model#actions-get-issues"><inline classes="std std-ref">Common actions &gt; Retrieve Issue items</inline></reference> page.</paragraph>
         <paragraph>Use of the <literal classes="code">Analyser</literal> class is a prerequisite for the <literal classes="code">Generator</literal> class.
             The generator makes use of the structures created during the analysis process, so takes a <literal classes="code">AnalyserModel</literal> as an input.</paragraph>
         <target refid="snippet-analyser-output"></target>
