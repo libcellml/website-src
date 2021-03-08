@@ -94,10 +94,8 @@
       </p>
       <ul>
         <li>
-          <a
-            href="https://cellml-specification.readthedocs.io/en/latest/reference/index_sectionE.html"
-            target="_blank"
-            >Notes on CellML structure</a
+          <router-link :to="getAsidesPath"
+            >Notes on CellML structure</router-link
           >
           A small collection of pages including background information on how
           certain CellML elements have been designed to function.
@@ -148,6 +146,11 @@ export default {
     getHowtoPath() {
       return (
         '/documentation/guides/' + this.$route.params.version + '/howto/index'
+      )
+    },
+    getAsidesPath() {
+      return (
+        '/documentation/guides/' + this.$route.params.version + '/asides/index'
       )
     },
     getUserScenariosPath() {
