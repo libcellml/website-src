@@ -1056,7 +1056,7 @@ Issue [2] is an ERROR:
             <paragraph>So far in this tutorial we’ve only been creating items, defining them, and adding to their parent items.
                 Now for the first time we will need to retrieve a child item from its parent.
                 This can be done in one of two ways: either by the child’s index or by its name.
-                There is more information about interacting with collections of items on the <reference internal="True" refuri="../../howto/understand_collections#understand-collections"><inline classes="std std-ref">Understanding collections of items</inline></reference> page.</paragraph>
+                There is more information about interacting with collections of items on the <reference internal="True" refuri="../../asides/understanding_collections#understanding-collections"><inline classes="std std-ref">Understanding collections of items</inline></reference> page.</paragraph>
             <paragraph>Two particularly useful idioms are shown below.</paragraph>
             <container classes="sphinx-tabs">
                 <container>
