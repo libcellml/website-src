@@ -94,12 +94,15 @@
       </p>
       <ul>
         <li>
-          <a>Notes on CellML structure</a> A small collection of pages including
-          background information on how certain CellML elements have been
-          designed to function.
+          <router-link :to="getAsidesPath"
+            >Notes on CellML structure</router-link
+          >
+          A small collection of pages including background information on how
+          certain CellML elements have been designed to function.
         </li>
         <li>
-          <a>CellML 2.0 Normative Specification</a>
+          <a href="https://www.cellml.org/specifications/cellml_2.0" target="_blank">CellML 2.0 Normative Specification</a
+          >
           The official specification of the CellML language. Note that this also
           contains informative sections, CellML code examples, and thoughts
           about the structure of CellML models.
@@ -143,6 +146,11 @@ export default {
     getHowtoPath() {
       return (
         '/documentation/guides/' + this.$route.params.version + '/howto/index'
+      )
+    },
+    getAsidesPath() {
+      return (
+        '/documentation/guides/' + this.$route.params.version + '/asides/index'
       )
     },
     getUserScenariosPath() {
