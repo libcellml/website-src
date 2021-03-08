@@ -306,18 +306,10 @@ th {
     background-color: transparent !important;
 }
 
-.v-application .download code:hover {
-    color: var(--active-link) !important;
-}
-
 .download::before {
     content: "\2913";
     color: var(--text-link-colour);
     vertical-align: bottom;
-}
-
-.download code:hover::before  {
-    color: var(--active-link) !important;
 }
 
 /* Formatting for KaTeX math blocks */
