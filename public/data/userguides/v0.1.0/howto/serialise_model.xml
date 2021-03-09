@@ -122,7 +122,7 @@ write_file.write(serialised_model)
 write_file.close()</literal_block>
                 </container>
             </container>
-            <paragraph>Details of any issues that the printer encounters and records can be retrieved as described on the <reference internal="True" refuri="check_model#actions-get-issues"><inline classes="std std-ref">Retrieve Issue items</inline></reference> page.</paragraph>
+            <paragraph>Details of any issues that the printer encounters and records can be retrieved as described on the <reference internal="True" refuri="check_model#get-issues"><inline classes="std std-ref">Retrieve Issue items</inline></reference> page.</paragraph>
         </section>
     </section>
 </document>
