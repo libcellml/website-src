@@ -42,7 +42,13 @@ export default {
       ui.addClickHandlerTabs()
       ui.addClickHandlerToggles()
       ui.getFigureCaptions()
-    }, this.$store.getters.getTransitionDelay + 200)
+    }, this.$store.getters.getTransitionDelay+200)
+
+    setTimeout(function() {
+      let urlParams = new URLSearchParams(window.location.search)
+      let fName = urlParams.get('issue')
+      ui.goToSignature('issue-code',fName, '')
+    }, this.$store.getters.getTransitionDelay)
   },
 
   methods: {
@@ -51,6 +57,16 @@ export default {
     },
     updated() {
       this.$store.commit('togglePageContentChanged')
+    },
+  },
+
+  watch: {
+    $route() {
+      setTimeout(function() {
+        let urlParams = new URLSearchParams(window.location.search)
+        let fName = urlParams.get('issue')
+        ui.goToSignature('issue-code',fName)
+      }, this.$store.getters.getTransitionDelay)
     },
   },
 }

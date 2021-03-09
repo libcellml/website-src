@@ -149,17 +149,26 @@ export default {
     })
   },
 
-  goToSignature: function(sigName) {
+  goToSignature: function (sigClass, sigName, closestType) {
     // Scrolls to the first instance of an item with the CSS class sig-name
     // (from Doxygen) with content matching the given sigName.
-    let items = document.querySelectorAll('.sig-name')
-    let sigNameItems = Array.prototype.filter.call(items, function(item) {
+    let items = document.querySelectorAll('.'+sigClass)
+    let sigNameItems = Array.prototype.filter.call(items, function (item) {
       return item.textContent.trim() === sigName
     })
+
     if (sigNameItems.length == 0) {
       return
     }
-    let bookmark = sigNameItems[0].closest('.function')
+
+    let bookmark = null
+    if(closestType.length) {
+      bookmark = sigNameItems[0].closest('.'+closestType)
+    }
+    else {
+      bookmark = sigNameItems[0]
+    }
+    
     if (bookmark !== null) {
       window.scrollTo({ top: bookmark.offsetTop, behavior: 'smooth' })
     }
