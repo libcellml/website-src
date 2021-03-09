@@ -92,12 +92,14 @@
               :class="'big-button'"
               :to="getIssueCodesPath"
             >
-              <v-icon color="white" x-large>mdi-clipboard-text-play</v-icon><br />
+              <v-icon color="white" x-large>mdi-clipboard-text-play</v-icon
+              ><br />
               RUN-TIME CODES
             </v-btn>
           </template>
           <span>
-            A collection of codes returned during run-time and their interpretation.
+            A collection of codes returned during run-time and their
+            interpretation.
           </span>
         </v-tooltip>
       </v-col>
@@ -105,18 +107,13 @@
       <v-col class="col-12 col-md-4" id="asides">
         <v-tooltip bottom>
           <template v-slot:activator="{ on }">
-            <v-btn
-              block
-              v-on="on"
-              :class="'big-button'"
-              :to="getAsidesPath"
-            >
+            <v-btn block v-on="on" :class="'big-button'" :to="getAsidesPath">
               <v-icon color="white" x-large>mdi-information</v-icon><br />
               GENERAL INFO
             </v-btn>
           </template>
           <span>
-            General information about special functionality and best practice. 
+            General information about special functionality and best practice.
           </span>
         </v-tooltip>
       </v-col>
@@ -127,12 +124,15 @@
       <p>
         This links above provide installation instructions, tutorials, code
         examples, user guides for the most common use cases, and general
-        discussions and information about the CellML model structure itself.
-        The following resource might be helpful too:
+        discussions and information about the CellML model structure itself. The
+        following resource might be helpful too:
       </p>
       <ul>
         <li>
-          <a href="https://www.cellml.org/specifications/cellml_2.0" target="_blank">CellML 2.0 Normative Specification</a
+          <a
+            href="https://www.cellml.org/specifications/cellml_2.0"
+            target="_blank"
+            >CellML 2.0 Normative Specification</a
           >
           The official specification of the CellML language. Note that this also
           contains informative sections, CellML code examples, and thoughts
@@ -144,10 +144,8 @@
 </template>
 
 <script>
-
 import BreadCrumbs from '@/components/BreadCrumbs'
 import { getUserGuidesVersions } from '../js/versions'
-
 
 export default {
   name: 'GuidesHome',
@@ -195,7 +193,7 @@ export default {
         this.$route.params.version +
         '/issue_codes/index'
       )
-    }
+    },
   },
 
   methods: {
