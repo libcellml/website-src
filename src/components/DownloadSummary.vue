@@ -18,7 +18,7 @@
 
       <v-row>
         <v-col class="col-12 col-md-3">
-          <v-tooltip bottom>
+          <v-tooltip bottom open-delay="200">
             <template v-slot:activator="{ on }">
               <!-- Added disabled status until this is ready to go -->
               <v-btn block :class="'big-button'" v-on="on" disabled>
@@ -32,7 +32,7 @@
         </v-col>
 
         <v-col class="col-12 col-md-3">
-          <v-tooltip bottom>
+          <v-tooltip bottom open-delay="200">
             <template v-slot:activator="{ on }">
               <!-- Added disabled status until this is ready to go -->
               <v-btn block :class="'big-button'" v-on="on" disabled>
@@ -46,7 +46,7 @@
         </v-col>
 
         <v-col class="col-12 col-md-3">
-          <v-tooltip bottom>
+          <v-tooltip bottom open-delay="200">
             <template v-slot:activator="{ on }">
               <!-- Added disabled status until this is ready to go -->
               <v-btn block :class="'big-button'" v-on="on" disabled>
@@ -60,7 +60,7 @@
         </v-col>
 
         <v-col class="col-12 col-md-3">
-          <v-tooltip bottom>
+          <v-tooltip bottom open-delay="200">
             <template v-slot:activator="{ on }">
               <!-- Added disabled status until this is ready to go -->
               <v-btn block :class="'big-button'" v-on="on" disabled>
