@@ -100,7 +100,6 @@ export const translateOmex = async (content, transform) => {
       const elements = findCellMLFiles(doc)
       for (const el of elements) {
         let cellMLFile = el.getAttribute('location')
-        console.log(cellMLFile)
         if (cellMLFile.startsWith('./')) {
           cellMLFile = cellMLFile.substr(2)
         }
