@@ -16,7 +16,7 @@
     </v-row>
     <v-row>
       <v-col class="col-12 col-md-4" id="install">
-        <v-tooltip bottom>
+        <v-tooltip bottom open-delay="200">
           <template v-slot:activator="{ on }">
             <v-btn
               block
@@ -35,7 +35,7 @@
       </v-col>
 
       <v-col class="col-12 col-md-4" id="tutorials">
-        <v-tooltip bottom>
+        <v-tooltip bottom open-delay="200">
           <template v-slot:activator="{ on }">
             <v-btn block v-on="on" :class="'big-button'" :to="getTutorialsPath">
               <v-icon color="white" x-large>mdi-school</v-icon><br />
@@ -50,7 +50,7 @@
       </v-col>
 
       <v-col class="col-12 col-md-4" id="howto">
-        <v-tooltip bottom>
+        <v-tooltip bottom open-delay="200">
           <template v-slot:activator="{ on }">
             <v-btn block v-on="on" :class="'big-button'" :to="getHowtoPath">
               <v-icon color="white" x-large>mdi-teach</v-icon><br />
@@ -64,7 +64,7 @@
       </v-col>
 
       <v-col class="col-12 col-md-4" id="profiles">
-        <v-tooltip bottom>
+        <v-tooltip bottom open-delay="200">
           <template v-slot:activator="{ on }">
             <v-btn
               block
@@ -84,7 +84,7 @@
       </v-col>
 
       <v-col class="col-12 col-md-4" id="issues">
-        <v-tooltip bottom>
+        <v-tooltip bottom open-delay="200">
           <template v-slot:activator="{ on }">
             <v-btn
               block
@@ -105,11 +105,11 @@
       </v-col>
 
       <v-col class="col-12 col-md-4" id="asides">
-        <v-tooltip bottom>
+        <v-tooltip bottom open-delay="200">
           <template v-slot:activator="{ on }">
             <v-btn block v-on="on" :class="'big-button'" :to="getAsidesPath">
               <v-icon color="white" x-large>mdi-information</v-icon><br />
-              GENERAL INFO
+              GENERAL INFORMATION
             </v-btn>
           </template>
           <span>
@@ -191,7 +191,7 @@ export default {
       return (
         '/documentation/guides/' +
         this.$route.params.version +
-        '/issue_codes/index'
+        '/runtime_codes/index'
       )
     },
   },

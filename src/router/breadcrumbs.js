@@ -29,23 +29,24 @@ const hardRoutes = {
   },
   api_reference: {
     text: 'API',
-    name: 'Home',
+    name: 'APIReferencePage',
     disabled: false,
-    hash: '#api_reference',
+    // hash: '#api_reference',
+    hash: '',
     type: 'pageFromName',
   },
   user_guide: {
     text: 'USER GUIDES',
-    name: 'Home',
+    name: 'GuidesHome',
     disabled: false,
-    hash: '#guides',
+    hash: '',
     type: 'pageFromName',
   },
   developers: {
     text: 'DEVELOPERS',
-    name: 'Home',
+    name: 'Developers',
     disabled: false,
-    hash: '#developers',
+    hash: '',
     type: 'pageFromName',
   },
   download: {
@@ -127,7 +128,28 @@ export function calculateBreadcrumbs(to) {
         })
       }
     })
+  } else if (to.name === 'GuidesHome') {
+
+    routes.push(hardRoutes.documentation)
+    routes.push(hardRoutes.user_guide)
+
+    let path = to.path.replaceAll('/documentation/guides', '')
+    let pages = path.split('/')
+    let version = pages.length > 1 ? pages[1] : null
+
+    if (version) {
+      routes.push({
+        text: version === 'latest' ? getUserGuidesVersions()[0] : version,
+        name: 'GuidesHome',
+        disabled: false,
+        hash: '',
+        type: 'versionSelector',
+      })
+    }
+
   } else if (to.name === 'TutorialsPage') {
+
+    routes.push(hardRoutes.documentation)
     routes.push(hardRoutes.user_guide)
 
     let lastLink = '/documentation/guides'
@@ -156,7 +178,7 @@ export function calculateBreadcrumbs(to) {
     while (page && page !== 'index') {
       routes.push({
         text: convertToReadableText(page).toUpperCase(),
-        name: 'TutorialsPage',
+        name: to.name,
         disabled: false,
         hash: '',
         path: lastLink + (index === pages.length - 1 ? '' : '/index'),
@@ -166,7 +188,9 @@ export function calculateBreadcrumbs(to) {
       page = index < pages.length ? pages[index] : null
       lastLink += '/' + page
     }
+
   } else if (to.name === 'Developers') {
+    routes.push(hardRoutes.documentation)
     routes.push(hardRoutes.developers)
 
     let lastLink = '/documentation/developers'
