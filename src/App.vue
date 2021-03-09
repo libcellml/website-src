@@ -15,7 +15,7 @@
           </v-btn>
         </v-col>
         <v-col id="bugButton">
-          <v-tooltip bottom>
+          <v-tooltip bottom open-delay="200">
             <template v-slot:activator="{ on }">
               <v-btn
                 plain
