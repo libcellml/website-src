@@ -15,7 +15,7 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col class="col-12 col-md-3" id="install">
+      <v-col class="col-12 col-md-4" id="install">
         <v-tooltip bottom>
           <template v-slot:activator="{ on }">
             <v-btn
@@ -34,7 +34,7 @@
         </v-tooltip>
       </v-col>
 
-      <v-col class="col-12 col-md-3" id="tutorials">
+      <v-col class="col-12 col-md-4" id="tutorials">
         <v-tooltip bottom>
           <template v-slot:activator="{ on }">
             <v-btn block v-on="on" :class="'big-button'" :to="getTutorialsPath">
@@ -49,7 +49,7 @@
         </v-tooltip>
       </v-col>
 
-      <v-col class="col-12 col-md-3" id="howto">
+      <v-col class="col-12 col-md-4" id="howto">
         <v-tooltip bottom>
           <template v-slot:activator="{ on }">
             <v-btn block v-on="on" :class="'big-button'" :to="getHowtoPath">
@@ -63,7 +63,7 @@
         </v-tooltip>
       </v-col>
 
-      <v-col class="col-12 col-md-3" id="profiles">
+      <v-col class="col-12 col-md-4" id="profiles">
         <v-tooltip bottom>
           <template v-slot:activator="{ on }">
             <v-btn
@@ -82,24 +82,55 @@
           </span>
         </v-tooltip>
       </v-col>
+
+      <v-col class="col-12 col-md-4" id="issues">
+        <v-tooltip bottom>
+          <template v-slot:activator="{ on }">
+            <v-btn
+              block
+              v-on="on"
+              :class="'big-button'"
+              :to="getIssueCodesPath"
+            >
+              <v-icon color="white" x-large>mdi-clipboard-text-play</v-icon><br />
+              RUN-TIME CODES
+            </v-btn>
+          </template>
+          <span>
+            A collection of codes returned during run-time and their interpretation.
+          </span>
+        </v-tooltip>
+      </v-col>
+
+      <v-col class="col-12 col-md-4" id="asides">
+        <v-tooltip bottom>
+          <template v-slot:activator="{ on }">
+            <v-btn
+              block
+              v-on="on"
+              :class="'big-button'"
+              :to="getAsidesPath"
+            >
+              <v-icon color="white" x-large>mdi-information</v-icon><br />
+              GENERAL INFO
+            </v-btn>
+          </template>
+          <span>
+            General information about special functionality and best practice. 
+          </span>
+        </v-tooltip>
+      </v-col>
     </v-row>
 
     <div class="notes">
       <br />
       <p>
         This links above provide installation instructions, tutorials, code
-        examples, and user guides for the most common use cases. For general
-        discussions and information about the CellML model structure itself, the
-        following resources might be helpful too:
+        examples, user guides for the most common use cases, and general
+        discussions and information about the CellML model structure itself.
+        The following resource might be helpful too:
       </p>
       <ul>
-        <li>
-          <router-link :to="getAsidesPath"
-            >Notes on CellML structure</router-link
-          >
-          A small collection of pages including background information on how
-          certain CellML elements have been designed to function.
-        </li>
         <li>
           <a href="https://www.cellml.org/specifications/cellml_2.0" target="_blank">CellML 2.0 Normative Specification</a
           >
@@ -113,16 +144,14 @@
 </template>
 
 <script>
-// import { SphinxPage } from 'vue-sphinx-xml'
+
 import BreadCrumbs from '@/components/BreadCrumbs'
 import { getUserGuidesVersions } from '../js/versions'
 
-import ui from '@/js/ui'
 
 export default {
   name: 'GuidesHome',
   components: {
-    // SphinxPage,
     BreadCrumbs,
   },
   computed: {
@@ -160,6 +189,13 @@ export default {
         '/common_users/index'
       )
     },
+    getIssueCodesPath() {
+      return (
+        '/documentation/guides/' +
+        this.$route.params.version +
+        '/issue_codes/index'
+      )
+    }
   },
 
   methods: {
