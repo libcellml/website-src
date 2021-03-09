@@ -61,7 +61,14 @@ const routes = [
       if (apiVersions.includes(to.params.version)) {
         next()
       } else {
-        next('/documentation/api/' + apiVersions[0] + '/' + to.params.pageName)
+        let url = '/documentation/api/' + apiVersions[0] + '/' + to.params.pageName
+        if (to.query) {
+          url += '?'
+          for (const [key, value] of Object.entries(to.query)) {
+            url += key + '=' + value + '&'
+          }
+        }
+        next(url)
       }
     },
   },
@@ -99,12 +106,14 @@ const routes = [
       if (guideVersions.includes(to.params.version)) {
         next()
       } else {
-        next(
-          '/documentation/guides/' +
-            guideVersions[0] +
-            '/' +
-            to.params.pageName,
-        )
+        let url = '/documentation/guides/' + guideVersions[0] + '/' + to.params.pageName
+        if (to.query) {
+          url += '?'
+          for (const [key, value] of Object.entries(to.query)) {
+            url += key + '=' + value + '&'
+          }
+        }
+        next(url)
       }
     },
   },
@@ -125,12 +134,14 @@ const routes = [
       if (devVersions.includes(to.params.version)) {
         next()
       } else {
-        next(
-          '/documentation/developers/' +
-            devVersions[0] +
-            '/' +
-            to.params.pageName,
-        )
+        let url = '/documentation/developers/' + devVersions[0] + '/' + to.params.pageName     
+        if (to.query) {
+          url += '?'
+          for (const [key, value] of Object.entries(to.query)) {
+            url += key + '=' + value + '&'
+          }
+        }
+        next(url)
       }
     },
   },
