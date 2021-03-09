@@ -34,7 +34,7 @@ export default {
     setTimeout(function() {
       let urlParams = new URLSearchParams(window.location.search)
       let fName = urlParams.get('fName')
-      ui.goToSignature(fName)
+      ui.goToSignature('sig-name', fName, 'function')
     }, this.$store.getters.getTransitionDelay)
   },
   watch: {
@@ -42,7 +42,7 @@ export default {
       setTimeout(function() {
         let urlParams = new URLSearchParams(window.location.search)
         let fName = urlParams.get('fName')
-        ui.goToSignature(fName)
+        ui.goToSignature('sig-name', fName, 'function')
       }, this.$store.getters.getTransitionDelay)
     },
   },

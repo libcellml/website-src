@@ -43,6 +43,13 @@ export default {
       ui.addClickHandlerToggles()
       ui.getFigureCaptions()
     }, this.$store.getters.getTransitionDelay+200)
+
+    setTimeout(function() {
+      let urlParams = new URLSearchParams(window.location.search)
+      let fName = urlParams.get('issue')
+      console.log("fName="+fName)
+      ui.goToSignature('issue-code',fName, '')
+    }, this.$store.getters.getTransitionDelay)
   },
 
   methods: {
@@ -51,6 +58,16 @@ export default {
     },
     updated() {
       this.$store.commit('togglePageContentChanged')
+    },
+  },
+
+  watch: {
+    $route() {
+      setTimeout(function() {
+        let urlParams = new URLSearchParams(window.location.search)
+        let fName = urlParams.get('issue')
+        ui.goToSignature('issue-code',fName)
+      }, this.$store.getters.getTransitionDelay)
     },
   },
 }
