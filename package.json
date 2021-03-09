@@ -1,6 +1,6 @@
 {
   "name": "@libcellml/website",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -22,7 +22,7 @@
     "vue-katex": "^0.5.0",
     "vue-router": "^3.1.6",
     "vue-select": "^3.10.7",
-    "vue-sphinx-xml": "^0.3.1",
+    "vue-sphinx-xml": "^0.3.3",
     "vuetify": "^2.3.9",
     "vuex": "^3.3.0"
   },
