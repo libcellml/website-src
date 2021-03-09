@@ -7,7 +7,8 @@
         <title>Check a model</title>
         <paragraph>Two checker classes are provided in libCellML; the <literal classes="code">Validator</literal> and the <literal classes="code">Analyser</literal> classes.
             These can be used to check the syntax and structure of your model is correct (validating), and to check that its mathematical representation is solvable (analysing).</paragraph>
-        <section ids="validate-a-model" names="validate\ a\ model">
+        <target refid="validate-model"></target>
+        <section ids="validate-a-model validate-model" names="validate\ a\ model validate_model">
             <title>Validate a model</title>
             <paragraph>The <literal classes="code">Validator</literal> is the equivalent of a spelling checker: it can check that each item in a model has all of the information it needs, but it can’t check whether it means what you intend it to.
                 Thus even if a model is valid, it could still be the equivalent of correctly-spelled nonsense.</paragraph>
@@ -58,10 +59,10 @@
             </container>
             <paragraph>Once a model has been passed to a <literal classes="code">Validator</literal> instance, the validator’s internal logger will contain a list of any of the issues which have been encountered during the checking process.
                 A model can be said to be valid - that is, conforming to the <reference internal="False" refuri="https://cellml-specification.readthedocs.io/en/latest/">CellML normative specification</reference> - if the validator’s logger contains no issues with a level of <literal classes="code">ERROR</literal>.</paragraph>
-            <paragraph>For more information on how to use any of the classes which record issues, please see the <reference internal="True" refid="actions-get-issues"><inline classes="std std-ref">Get Issues</inline></reference> section below.</paragraph>
-            <target refid="actions-get-issues"></target>
+            <paragraph>For more information on how to use any of the classes which record issues, please see the <reference internal="True" refid="get-issues"><inline classes="std std-ref">Get Issues</inline></reference> section below.</paragraph>
+            <target refid="get-issues"></target>
         </section>
-        <section ids="retrieve-issue-items actions-get-issues" names="retrieve\ issue\ items actions_get_issues">
+        <section ids="retrieve-issue-items get-issues" names="retrieve\ issue\ items get_issues">
             <title>Retrieve Issue items</title>
             <paragraph>Selected libCellML classes contain a <literal classes="code">Logger</literal> whose job it is to curate any issues encountered within the class, and return them to the user when asked.</paragraph>
             <container classes="shortlist">
@@ -301,7 +302,7 @@ my_level = issue.level()</literal_block>
             </container>
         </section>
         <section ids="useful-functions-for-dealing-with-issues" names="useful\ functions\ for\ dealing\ with\ issues">
-            <title>Useful functions for dealing with issues</title>
+            <title>Useful functions for dealing with Issues</title>
             <target refid="snippet-get-issues"></target>
             <container classes="toggle" ids="snippet-get-issues" names="snippet_get_issues">
                 <container classes="header-left">
@@ -540,9 +541,10 @@ std::string getCellmlElementTypeFromEnum(libcellml::CellmlElementType t) {
                     </container>
                 </container>
             </container>
+            <target refid="analyse-model"></target>
         </section>
-        <section ids="analyse-a-model-item" names="analyse\ a\ model\ item">
-            <title>Analyse a model item</title>
+        <section ids="analyse-a-model-item analyse-model" names="analyse\ a\ model\ item analyse_model">
+            <title>Analyse a Model item</title>
             <paragraph>The <literal classes="code">Analyser</literal> class takes an existing, valid <literal classes="code">Model</literal> item, and checks it for mathematical sense.
                 This includes checking things like that all variables requiring initial values have them, that equations do not conflict with one another, and that any variables used in equations are actually defined in the model.</paragraph>
             <paragraph>The three basic steps to model analysis are:</paragraph>
@@ -593,7 +595,7 @@ std::string getCellmlElementTypeFromEnum(libcellml::CellmlElementType t) {
                 </container>
             </container>
             <paragraph>Any issues or messages raised are stored within the class’s logger.
-                More information about accessing <literal classes="code">Issue</literal> items can be found on the <reference internal="True" refid="actions-get-issues"><inline classes="std std-ref">Common actions &gt; Retrieve Issue items</inline></reference> page.</paragraph>
+                More information about accessing <literal classes="code">Issue</literal> items can be found on the <reference internal="True" refid="get-issues"><inline classes="std std-ref">Common actions &gt; Retrieve Issue items</inline></reference> page.</paragraph>
             <paragraph>Use of the <literal classes="code">Analyser</literal> class is a prerequisite for the <literal classes="code">Generator</literal> class.
                 The generator makes use of the structures created during the analysis process, so takes a <literal classes="code">AnalyserModel</literal> as an input.</paragraph>
             <target refid="snippet-analyser-output"></target>
