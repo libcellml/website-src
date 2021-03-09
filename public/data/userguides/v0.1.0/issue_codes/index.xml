@@ -11,63 +11,97 @@
         <section ids="analyser-codes" names="analyser\ codes">
             <title>Analyser codes</title>
             <target refid="analyser-variable-initialised-more-than-once"></target>
-            <container classes="issue-code" ids="analyser-variable-initialised-more-than-once" names="analyser_variable_initialised_more_than_once">
-                <paragraph>ANALYSER_VARIABLE_INITIALISED_MORE_THAN_ONCE</paragraph>
+            <container classes="issue" ids="analyser-variable-initialised-more-than-once" names="analyser_variable_initialised_more_than_once">
+                <container classes="issue-code">
+                    <paragraph>ANALYSER_VARIABLE_INITIALISED_MORE_THAN_ONCE</paragraph>
+                </container>
+                <paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Proin mauris sapien, scelerisque eu ornare et, luctus feugiat odio.
+                    Mauris vestibulum augue vel ligula tincidunt euismod. Duis eros mauris, bibendum et nulla in, pulvinar malesuada lacus.
+                    Mauris nulla justo, faucibus vulputate elementum a, auctor ac mi.
+                    Nunc vestibulum, dui porta lobortis tempor, odio neque semper tellus, eu efficitur erat magna non nisi.
+                    Integer finibus feugiat ultrices. Vivamus ut nunc elementum, tristique nisi sed, euismod sapien.</paragraph>
             </container>
             <target refid="analyser-variable-non-constant-initialisation"></target>
-            <container classes="issue-code" ids="analyser-variable-non-constant-initialisation" names="analyser_variable_non_constant_initialisation">
-                <paragraph>ANALYSER_VARIABLE_NON_CONSTANT_INITIALISATION</paragraph>
+            <container classes="issue" ids="analyser-variable-non-constant-initialisation" names="analyser_variable_non_constant_initialisation">
+                <container classes="issue-code">
+                    <paragraph>ANALYSER_VARIABLE_NON_CONSTANT_INITIALISATION</paragraph>
+                </container>
             </container>
             <target refid="analyser-voi-initialised"></target>
-            <container classes="issue-code" ids="analyser-voi-initialised" names="analyser_voi_initialised">
-                <paragraph>ANALYSER_VOI_INITIALISED</paragraph>
+            <container classes="issue" ids="analyser-voi-initialised" names="analyser_voi_initialised">
+                <container classes="issue-code">
+                    <paragraph>ANALYSER_VOI_INITIALISED</paragraph>
+                </container>
             </container>
             <target refid="analyser-voi-several"></target>
-            <container classes="issue-code" ids="analyser-voi-several" names="analyser_voi_several">
-                <paragraph>ANALYSER_VOI_SEVERAL</paragraph>
+            <container classes="issue" ids="analyser-voi-several" names="analyser_voi_several">
+                <container classes="issue-code">
+                    <paragraph>ANALYSER_VOI_SEVERAL</paragraph>
+                </container>
             </container>
             <target refid="analyser-ode-not-first-order"></target>
-            <container classes="issue-code" ids="analyser-ode-not-first-order" names="analyser_ode_not_first_order">
-                <paragraph>ANALYSER_ODE_NOT_FIRST_ORDER</paragraph>
+            <container classes="issue" ids="analyser-ode-not-first-order" names="analyser_ode_not_first_order">
+                <container classes="issue-code">
+                    <paragraph>ANALYSER_ODE_NOT_FIRST_ORDER</paragraph>
+                </container>
             </container>
             <target refid="analyser-variable-unused"></target>
-            <container classes="issue-code" ids="analyser-variable-unused" names="analyser_variable_unused">
-                <paragraph>ANALYSER_VARIABLE_UNUSED</paragraph>
+            <container classes="issue" ids="analyser-variable-unused" names="analyser_variable_unused">
+                <container classes="issue-code">
+                    <paragraph>ANALYSER_VARIABLE_UNUSED</paragraph>
+                </container>
             </container>
             <target refid="analyser-state-not-initialised"></target>
-            <container classes="issue-code" ids="analyser-state-not-initialised" names="analyser_state_not_initialised">
-                <paragraph>ANALYSER_STATE_NOT_INITIALISED</paragraph>
+            <container classes="issue" ids="analyser-state-not-initialised" names="analyser_state_not_initialised">
+                <container classes="issue-code">
+                    <paragraph>ANALYSER_STATE_NOT_INITIALISED</paragraph>
+                </container>
             </container>
             <target refid="analyser-variable-computed-more-than-once"></target>
-            <container classes="issue-code" ids="analyser-variable-computed-more-than-once" names="analyser_variable_computed_more_than_once">
-                <paragraph>ANALYSER_VARIABLE_COMPUTED_MORE_THAN_ONCE</paragraph>
+            <container classes="issue" ids="analyser-variable-computed-more-than-once" names="analyser_variable_computed_more_than_once">
+                <container classes="issue-code">
+                    <paragraph>ANALYSER_VARIABLE_COMPUTED_MORE_THAN_ONCE</paragraph>
+                </container>
             </container>
             <target refid="analyser-external-variable-different-model"></target>
-            <container classes="issue-code" ids="analyser-external-variable-different-model" names="analyser_external_variable_different_model">
-                <paragraph>ANALYSER_EXTERNAL_VARIABLE_DIFFERENT_MODEL</paragraph>
+            <container classes="issue" ids="analyser-external-variable-different-model" names="analyser_external_variable_different_model">
+                <container classes="issue-code">
+                    <paragraph>ANALYSER_EXTERNAL_VARIABLE_DIFFERENT_MODEL</paragraph>
+                </container>
             </container>
             <target refid="analyser-external-variable-voi"></target>
-            <container classes="issue-code" ids="analyser-external-variable-voi" names="analyser_external_variable_voi">
-                <paragraph>ANALYSER_EXTERNAL_VARIABLE_VOI</paragraph>
+            <container classes="issue" ids="analyser-external-variable-voi" names="analyser_external_variable_voi">
+                <container classes="issue-code">
+                    <paragraph>ANALYSER_EXTERNAL_VARIABLE_VOI</paragraph>
+                </container>
             </container>
             <target refid="analyser-external-variable-use-primary-variable"></target>
-            <container classes="issue-code" ids="analyser-external-variable-use-primary-variable" names="analyser_external_variable_use_primary_variable">
-                <paragraph>ANALYSER_EXTERNAL_VARIABLE_USE_PRIMARY_VARIABLE</paragraph>
+            <container classes="issue" ids="analyser-external-variable-use-primary-variable" names="analyser_external_variable_use_primary_variable">
+                <container classes="issue-code">
+                    <paragraph>ANALYSER_EXTERNAL_VARIABLE_USE_PRIMARY_VARIABLE</paragraph>
+                </container>
             </container>
         </section>
         <section ids="importer-codes" names="importer\ codes">
             <title>Importer codes</title>
             <target refid="importer-null-model"></target>
-            <container classes="issue-code" ids="importer-null-model" names="importer_null_model">
-                <paragraph>IMPORTER_NULL_MODEL</paragraph>
+            <container classes="issue" ids="importer-null-model" names="importer_null_model">
+                <container classes="issue-code">
+                    <paragraph>IMPORTER_NULL_MODEL</paragraph>
+                </container>
             </container>
             <target refid="importer-missing-component"></target>
-            <container classes="issue-code" ids="importer-missing-component" names="importer_missing_component">
-                <paragraph>IMPORTER_MISSING_COMPONENT</paragraph>
+            <container classes="issue" ids="importer-missing-component" names="importer_missing_component">
+                <container classes="issue-code">
+                    <paragraph>IMPORTER_MISSING_COMPONENT</paragraph>
+                </container>
             </container>
             <target refid="importer-missing-units"></target>
-            <container classes="issue-code" ids="importer-missing-units" names="importer_missing_units">
-                <paragraph>IMPORTER_MISSING_UNITS</paragraph>
+            <container classes="issue" ids="importer-missing-units" names="importer_missing_units">
+                <container classes="issue-code">
+                    <paragraph>IMPORTER_MISSING_UNITS</paragraph>
+                </container>
             </container>
         </section>
         <section ids="parser-codes" names="parser\ codes">
@@ -79,12 +113,16 @@
         <section ids="miscellaneous-codes" names="miscellaneous\ codes">
             <title>Miscellaneous codes</title>
             <target refid="map-variables-identical-unit-reduction"></target>
-            <container classes="issue-code" ids="map-variables-identical-unit-reduction" names="map_variables_identical_unit_reduction">
-                <paragraph>MAP_VARIABLES_IDENTICAL_UNIT_REDUCTION</paragraph>
+            <container classes="issue" ids="map-variables-identical-unit-reduction" names="map_variables_identical_unit_reduction">
+                <container classes="issue-code">
+                    <paragraph>MAP_VARIABLES_IDENTICAL_UNIT_REDUCTION</paragraph>
+                </container>
             </container>
             <target refid="invalid-argument"></target>
-            <container classes="issue-code" ids="invalid-argument" names="invalid_argument">
-                <paragraph>INVALID_ARGUMENT</paragraph>
+            <container classes="issue" ids="invalid-argument" names="invalid_argument">
+                <container classes="issue-code">
+                    <paragraph>INVALID_ARGUMENT</paragraph>
+                </container>
             </container>
         </section>
     </section>

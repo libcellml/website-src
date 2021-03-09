@@ -334,3 +334,13 @@ This is needed to remove it.
     background-color: transparent !important;
     border-color: transparent !important;
 }
+
+.issue-code {
+    font-size: 110%;
+    color: var(--code-colour);
+    font-family: var(--code-font);
+    font-weight: 500;
+}
+.issue > p {
+    margin-left: 2em;
+}

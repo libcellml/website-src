@@ -47,7 +47,6 @@ export default {
     setTimeout(function() {
       let urlParams = new URLSearchParams(window.location.search)
       let fName = urlParams.get('issue')
-      console.log("fName="+fName)
       ui.goToSignature('issue-code',fName, '')
     }, this.$store.getters.getTransitionDelay)
   },
