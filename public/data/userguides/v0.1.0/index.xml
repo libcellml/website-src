@@ -39,6 +39,7 @@
                 <reference internal="True" refuri="howto/index#howto"><inline classes="std std-ref">How-to guide</inline></reference>
                 <reference internal="True" refuri="common_users/index#common-users"><inline classes="std std-ref">Common scenarios</inline></reference>
                 <reference internal="True" refuri="asides/index#asides"><inline classes="std std-ref">Notes on CellML structure</inline></reference>
+                <reference internal="True" refuri="issue_codes/index#issue-codes"><inline classes="std std-ref">Run-time issue codes</inline></reference>
                 <reference internal="False" refuri="https://cellml-specification.readthedocs.io/en/latest/">CellML 2.0 Normative Specification</reference></paragraph>
         </container>
     </section>
