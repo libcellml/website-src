@@ -191,7 +191,7 @@ export default {
       return (
         '/documentation/guides/' +
         this.$route.params.version +
-        '/issue_codes/index'
+        '/runtime_codes/index'
       )
     },
   },
