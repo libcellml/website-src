@@ -1,24 +1,28 @@
 export default {
-
-  getFigureCaptions: function () {
+  getFigureCaptions: function() {
     // Use the id of a figure as the header for its caption.
     let captions = document.querySelectorAll('.figure-caption')
     captions.forEach(caption => {
       let id = caption.parentElement.getAttribute('id')
       let heading = id.split('-').join(' ')
       heading = heading.charAt(0).toUpperCase() + heading.slice(1)
-      caption.innerHTML = '<span class="figure-caption-heading">' + heading + ': ' + '</span>' + caption.innerHTML
+      caption.innerHTML =
+        '<span class="figure-caption-heading">' +
+        heading +
+        ': ' +
+        '</span>' +
+        caption.innerHTML
     })
   },
 
-  addClickHandlerToggles: function () {
+  addClickHandlerToggles: function() {
     // Event capture for the "toggle" class:
     let headers = document.querySelectorAll('.header, .header-left')
 
     headers.forEach(header => {
       header.classList.add('inactive')
 
-      header.addEventListener('click', function () {
+      header.addEventListener('click', function() {
         let contents = header.nextElementSibling
         while (contents !== null) {
           contents.style.display =
@@ -32,10 +36,10 @@ export default {
     })
   },
 
-  addClickHandlerTabs: function () {
+  addClickHandlerTabs: function() {
     let tabNames = document.querySelectorAll('.tab2name')
     tabNames.forEach(tabName => {
-      tabName.addEventListener('click', function () {
+      tabName.addEventListener('click', function() {
         // Turn other tabs off.
         let group = tabName.parentElement.parentElement
         group.querySelectorAll('.tab2').forEach(tab => {
@@ -60,7 +64,7 @@ export default {
     })
   },
 
-  processSphinxTabs: function () {
+  processSphinxTabs: function() {
     // KRM: Not a fan of this.  Processing should be done in getting
     // this into XML format, not in the browser!
 
