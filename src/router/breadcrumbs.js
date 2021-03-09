@@ -127,7 +127,24 @@ export function calculateBreadcrumbs(to) {
         })
       }
     })
-  } else if (to.name === 'TutorialsPage' || to.name === 'GuidesHome') {
+  } else if (to.name === 'GuidesHome') {
+    routes.push(hardRoutes.documentation)
+    routes.push(hardRoutes.user_guide)
+
+    let lastLink = '/documentation/guides'
+    let path = to.path.replaceAll(lastLink, '')
+    let pages = path.split('/')
+    let version = pages.length > 1 ? pages[1] : null
+
+    routes.push({
+      text: version === 'latest' ? getUserGuidesVersions()[0] : version,
+      name: to.home,
+      disabled: false,
+      hash: '',
+      type: 'versionSelector',
+    })
+
+  } else if (to.name === 'TutorialsPage') {
 
     routes.push(hardRoutes.documentation)
     routes.push(hardRoutes.user_guide)
@@ -168,6 +185,7 @@ export function calculateBreadcrumbs(to) {
       page = index < pages.length ? pages[index] : null
       lastLink += '/' + page
     }
+
   } else if (to.name === 'Developers') {
     routes.push(hardRoutes.developers)
 
