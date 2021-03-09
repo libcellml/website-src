@@ -109,7 +109,7 @@
           <template v-slot:activator="{ on }">
             <v-btn block v-on="on" :class="'big-button'" :to="getAsidesPath">
               <v-icon color="white" x-large>mdi-information</v-icon><br />
-              GENERAL INFO
+              GENERAL INFORMATION
             </v-btn>
           </template>
           <span>

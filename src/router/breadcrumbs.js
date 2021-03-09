@@ -127,7 +127,9 @@ export function calculateBreadcrumbs(to) {
         })
       }
     })
-  } else if (to.name === 'TutorialsPage') {
+  } else if (to.name === 'TutorialsPage' || to.name === 'GuidesHome') {
+
+    routes.push(hardRoutes.documentation)
     routes.push(hardRoutes.user_guide)
 
     let lastLink = '/documentation/guides'
@@ -140,7 +142,7 @@ export function calculateBreadcrumbs(to) {
     if (version) {
       routes.push({
         text: version === 'latest' ? getUserGuidesVersions()[0] : version,
-        name: 'GuidesHome',
+        name: to.home,
         disabled: false,
         hash: '',
         type: 'versionSelector',
@@ -156,7 +158,7 @@ export function calculateBreadcrumbs(to) {
     while (page && page !== 'index') {
       routes.push({
         text: convertToReadableText(page).toUpperCase(),
-        name: 'TutorialsPage',
+        name: to.name,
         disabled: false,
         hash: '',
         path: lastLink + (index === pages.length - 1 ? '' : '/index'),
