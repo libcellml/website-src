@@ -159,6 +159,13 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "translate" */ '../views/Translate.vue'),
   },
+  {
+    path: '/validate',
+    name: 'Validate',
+    meta: { title: 'libCellML: Validate' },
+    component: () =>
+      import(/* webpackChunkName: "validate" */ '../views/Validate.vue'),
+  },
   // KRM: 404 is an actual page route.  Used for option 1 below.
   // {
   //   path: '/404',
