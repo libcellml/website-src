@@ -56,6 +56,13 @@ const hardRoutes = {
     hash: '#download',
     type: 'pageFromName',
   },
+  services: {
+    text: 'SERVICES',
+    name: 'Home',
+    disabled: false,
+    hash: '#services',
+    type: 'pageFromName',
+  }
 }
 
 function convertToReadableText(bookmarkText) {
@@ -92,6 +99,10 @@ export function calculateBreadcrumbs(to) {
       hash: '#' + to.name.toLowerCase(),
       type: 'pageFromName',
     })
+  } else if (to.name === 'Translate' || to.name === 'Validate') {
+
+    routes.push(hardRoutes.services)
+
   } else if (to.name === 'APIReferencePage') {
     routes.push(hardRoutes.api_reference)
 
