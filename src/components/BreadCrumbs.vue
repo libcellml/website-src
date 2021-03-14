@@ -1,7 +1,7 @@
 <template>
   <div class="breadcrumbs" id="breadcrumbs">
     <v-container>
-      <template v-if="currentVersion !== latest">
+      <template v-if="currentVersion && currentVersion !== latest">
         <div class="old-version">
           <router-link :to="{ path: `${latestFullPath}` }">
             You are viewing an old version. Click to see the latest one
