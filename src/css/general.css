@@ -18,18 +18,26 @@
     --deep-blue-grey: #2d4046c7;
     --bright-blue: #1f76be;
 
-    --dothis-background-color:#fbfff6;
-    --dothis-border-colour: rgb(80, 121, 0);
-    --dothis-colour: #22440b;
+    --very-pale-green:#fbfff6;
+    --mid-green: rgb(80, 121, 0);
+    --dark-green: #22440b;
+
+    --very-pale-yellow: rgba(255,229,100,.3);
+    --mid-yellow: #e7c000;
+    --dark-yellow: #6b5900;
+
+    --dothis-background-color: var(--very-pale-green);
+    --dothis-border-colour: var(--mid-green);
+    --dothis-colour: var(--dark-green);
 
     --useful-background-colour:#f3f5f7;
     --useful-border-colour: #144b79;
     --useful-colour:  #144b79; /*#0f3555;*/
     --useful-link-colour: var(--bright-blue);
 
-    --nb-background-colour: rgba(255,229,100,.3);
-    --nb-border-colour: #e7c000;
-    --nb-colour: #6b5900;
+    --nb-background-colour: var(--very-pale-yellow);
+    --nb-border-colour: var(--mid-yellow);
+    --nb-colour: var(--dark-yellow);
 
     --text-colour: #333333;
     --menu-link-colour: var(--mid-grey);
