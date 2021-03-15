@@ -30,7 +30,7 @@
                 <v-btn
                   block
                   :class="'big-button'"
-                  v-on:click="readFiles"
+                  v-on:click="readFile"
                   v-if="file !== null"
                 >
                   <v-icon color="white" x-large>mdi-file-check-outline</v-icon
@@ -41,7 +41,36 @@
             </v-row>
           </v-container>
 
-          <v-container>
+          <v-container v-if="parserHasErrors">
+            <v-card class="errors" elevation="0">
+              <v-card-title>
+                <v-icon large>mdi-alert-circle</v-icon>
+                <span style="padding-right: 1em; font-weight: 600"
+                  >{{ file.name }}:</span
+                >
+                <span
+                  >Parser errors were found!</span
+                >
+              </v-card-title>
+            </v-card>
+
+            <v-card
+              v-for="(issue, j) in getIssues"
+              :key="j"
+              elevation="0"
+              outlined
+            >
+              <v-card-text>{{ issue.description }}</v-card-text>
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn right text light @click="removeMessage(j)"
+                  >Dismiss</v-btn
+                >
+              </v-card-actions>
+            </v-card>
+          </v-container>
+
+          <v-container v-else>
             <v-card
               v-if="fileIsTested && !hasErrors"
               class="noErrors"
@@ -49,7 +78,9 @@
             >
               <v-card-title>
                 <v-icon large>mdi-check-bold</v-icon>
-                <span style="padding-right:1em;font-weight:600;">{{ file.name }}:</span>
+                <span style="padding-right: 0.5em; font-weight: 600"
+                  >{{ file.name }}:</span
+                >
                 <span>The model is valid!</span>
               </v-card-title>
             </v-card>
@@ -60,7 +91,9 @@
             >
               <v-card-title>
                 <v-icon large>mdi-alert-circle</v-icon>
-                <span style="padding-right:1em;font-weight:600;">{{ file.name }}:</span>
+                <span style="padding-right: 0.5em; font-weight: 600"
+                  >{{ file.name }}:</span
+                >
                 <span>Validation errors were found</span>
               </v-card-title>
             </v-card>
@@ -105,6 +138,7 @@
 import { mapActions } from 'vuex'
 import BreadCrumbs from '@/components/BreadCrumbs'
 
+// TODO: This should be updated to the "latest" version when drafting is merged with production in the spec.
 const baseSpecificationUrl =
   'https://cellml-specification.readthedocs.io/en/cellml-2-drafting/reference/formal_and_informative/'
 
@@ -117,6 +151,7 @@ export default {
     return {
       isTested: false,
       errorsFound: false,
+      parserErrorsFound: false,
       file: null,
       issueData: [],
     }
@@ -137,12 +172,13 @@ export default {
     fileChanged() {
       return this.$data.file
     },
+    parserHasErrors() {
+      return this.$data.parserErrorsFound
+    },
   },
   watch: {
     fileChanged() {
-      this.$data.errorsFound = false
-      this.$data.isTested = false
-      this.$data.issueData = [] 
+      this.clearData()
     },
   },
   methods: {
@@ -167,17 +203,44 @@ export default {
     //   }
     //   return url
     // },
+
     validate(cellmlString) {
       let parser = new this.$libcellml.Parser()
       let validator = new this.$libcellml.Validator()
-      let model = parser.parseModel(cellmlString)
-
-      validator.validateModel(model)
+      let model = null
+      try {
+        model = parser.parseModel(cellmlString)
+      } catch (err) {
+        this.$data.parserErrorsFound = true
+        return {
+          issues: [
+            {
+              description:
+                'At present, CellML files containing Units cannot be read.  ' +
+                err.message,
+            },
+          ],
+          type: 'parser',
+        }
+      }
 
       let errors = []
-
       let i = 0
 
+      if (parser.errorCount()) {
+        while (i < parser.errorCount()) {
+          let e = parser.error(i)
+          errors.push({
+            description: e.description(),
+          })
+          i++
+        }
+        this.$data.parserErrorsFound = true
+        return { issues: errors, type: 'parser' }
+      }
+
+      i = 0
+      validator.validateModel(model)
       while (i < validator.errorCount()) {
         let e = validator.error(i)
         // let ref = e.referenceHeading()
@@ -194,15 +257,17 @@ export default {
       } else {
         this.$data.errorsFound = false
       }
-      return errors
+      return { issues: errors, type: 'validator' }
     },
 
     clearData() {
+      this.$data.parserErrorsFound = false
+      this.$data.errorsFound = false
       this.$data.isTested = false
       this.$data.issueData = []
     },
 
-    readFiles() {
+    readFile() {
       this.clearData()
 
       const reader = new FileReader()
@@ -213,10 +278,11 @@ export default {
       reader.onload = function (evt) {
         try {
           let results = this_.validate(evt.target.result)
-          this_.$data.isTested = true
-          this_.$data.issueData = results
-        } catch {
-          console.log('could not validate')
+          this_.$data.issueData = results.issues
+          this_.$data.isTested = results.type === 'validator'
+          this_.$data.parserHasErrors = results.type === 'parser'
+        } catch (err) {
+          console.log('Could not validate file: ' + err.message)
         }
       }
 
