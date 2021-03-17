@@ -363,8 +363,9 @@
                     </container>
                 </container>
             </container>
+            <target refid="handle-duplicated-id-attributes"></target>
         </section>
-        <section ids="handle-duplicated-id-attributes" names="handle\ duplicated\ id\ attributes">
+        <section ids="handle-duplicated-id-attributes id1" names="handle\ duplicated\ id\ attributes handle_duplicated_id_attributes">
             <title>Handle duplicated ID attributes</title>
             <paragraph>Duplicated IDs in any XML document are not permitted, and CellML is no different.
                 There are several tools to support users in removing duplicates from their models.
