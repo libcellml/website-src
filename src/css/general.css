@@ -345,9 +345,16 @@ This is needed to remove it.
 
 .issue-code {
     font-size: 110%;
-    color: var(--code-colour);
-    font-family: var(--code-font);
+    color: var(--text-colour);
     font-weight: 500;
+    padding-left: 0;
+    padding-bottom: 0;
+    border-bottom: var(--pale-grey) solid 1px;
+    margin-bottom: 0.2em;
+}
+.issue-code p {
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 .issue > p {
     margin-left: 2em;
