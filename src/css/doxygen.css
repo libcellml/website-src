@@ -24,25 +24,15 @@
     font-size: 100%;
 }
 
-/* Indent the function contents so it's easier to distinguish from the names.
-   Default: Desktop screen width. */
-.function > * {
-    margin-left: 1rem;
-}
-
 /* Format the function definitions. */
 .function > dt:first-of-type {
-    font-family: monospace;
-    font-weight: 700;
+    font-family: var(--code-font);
+    font-weight: 600;
     margin-top: 1.3rem;
     margin-left: 0;
     margin-bottom: 0.5rem;
     color: var(--text-colour);
-    /* border-top: solid 1px var(--bright-red); */
-    border-bottom: solid 1px var(--bright-red);
-    /* border-left: solid 5px var(--bright-red); */
-    /* background-color: var(--bright-red-transparent); */
-    /* padding-left: 1em; */
+    border-bottom: solid 1px var(--pale-grey);
     padding-bottom: 0.3em;
 }
 
@@ -50,25 +40,28 @@
 TODO: Find where the extra space is being added after the trailing ") " and move it to before ... 
 */
 .function > dt:first-of-type * {
-    font-family: monospace;
+    font-family: var(--code-font);
+    color: var(--code-colour);
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     background-color: transparent !important;
 }
 
 code.sig-name {
-    font-weight: 700 !important;
-    color: var(--text-colour) !important;
+    font-weight: 600 !important;
+    color: var(--code-colour) !important;
 }
 
 .function > dt:first-of-type a {
-    font-family: monospace;
-    font-weight: 700;
+    font-family: var(--code-font);
+    font-weight: 500;
     color: var(--text-link-colour);
-    text-decoration-line: underline;
-    text-decoration-style: dotted;
-    text-decoration-color: var(--mid-red);
-    text-underline-offset: 0.2em;
+    text-decoration-color: var(--pale-grey); 
+    text-underline-offset: 0.2em; 
+}
+
+.function a:hover {
+    text-decoration-color: var(--bright-red) !important;
 }
 
 /* Indenting the "see also", "parameters" and "return" blocks on wide screens. */
@@ -82,12 +75,12 @@ section[id^="classlibcellml"]
 > section[id^="public_"]
 > table {
     color: black;
-    font-family: monospace;
+    font-family: var(--code-font);
 }
 
 /* Tables of enum values should be monospaced. */
 .enum > table > tr > td:first-child {
-    font-family: monospace;
+    font-family: var(--code-font);
     text-align: right;
     padding-right: 0.8rem;
 }
