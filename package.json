@@ -15,7 +15,7 @@
     "core-js": "^3.6.5",
     "crypto-js": "^4.0.0",
     "filesize": "^6.1.0",
-    "jszip": "^3.6.0-0",
+    "jszip": "^3.7.0",
     "libcellml.js": "^0.3.0-rc.171",
     "vue": "^2.6.11",
     "vue-doxygen-xml": "^0.1.1",
