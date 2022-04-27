@@ -31,7 +31,7 @@ const init = async () => {
         return libCellMLWasm
       }
       return prefix + path
-    }
+    },
   })
 
   new Vue({
