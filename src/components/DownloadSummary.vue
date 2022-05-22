@@ -89,7 +89,7 @@
 </template>
 
 <script>
-import IconWA from '@/assets/icons/IconWA'
+import IconWA from '@/assets/icons/IconWA.vue'
 export default {
   name: 'DownloadSummary',
   components: {
