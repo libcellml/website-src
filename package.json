@@ -7,7 +7,7 @@
     "build": "vite build",
     "dev": "vite",
     "preview": "vite preview",
-    "github-deploy": "node .github/scripts/github-deploy.js"
+    "github-deploy": "node .github/scripts/github-deploy.mjs"
   },
   "dependencies": {
     "@mdi/font": "5.9.55",
