@@ -11,7 +11,7 @@ const apiClient = axios.create({
 
 const authToken = () => {
   let decrypted = undefined
-  const encryptedToken = process.env.VUE_APP_ENCRYPTED_GITHUB_TOKEN
+  const encryptedToken = import.meta.env.VITE_APP_ENCRYPTED_GITHUB_TOKEN
   if (encryptedToken) {
     const bytes = CryptoJS.AES.decrypt(encryptedToken, 'public-key')
     decrypted = bytes.toString(CryptoJS.enc.Utf8)
