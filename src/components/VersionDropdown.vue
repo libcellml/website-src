@@ -1,79 +1,88 @@
 <template>
-  <v-container>
-    <v-row id="dropdown-id">
-      <v-col @click="expandDropdown" class="breadcrumb-dropdown">
-        <v-icon size="1.1em">mdi-chevron-down</v-icon>
-      </v-col>
-    </v-row>
-    <v-row class="hide-options">
-      <template v-for="(version, index) in versionChoices">
+  <v-row id="dropdown-id">
+    <v-col @click="expandDropdown" class="breadcrumb-dropdown">
+      <v-icon size="1.1em">mdi-chevron-down</v-icon>
+    </v-col>
+  </v-row>
+  <div
+    class="dropdown-blocker"
+    :class="optionsState"
+    @click="collapseDropdown"
+  ></div>
+  <v-row :class="optionsState" @click="collapseDropdown">
+    <v-col>
+      <template
+        v-for="(version, index) in versionChoices"
+        :key="'version_index_' + index"
+      >
+        <span v-if="version === store.state.current_documentation_version">
+          {{ version }}
+          <v-icon size="1em">mdi-check</v-icon>
+        </span>
         <router-link
-          :key="'version_index_' + index"
+          v-else
           :id="'version_' + version"
-          :to="{ path: `/documentation/${versionType}/${version}${pagePath}` }"
+          :to="getRouteForVersion(version)"
+          @click="updateCurrentVersion(version)"
         >
           {{ version }}
         </router-link>
-        <template v-if="version === currentVersion">
-          <v-icon :key="'version_tick' + version" size="1em">mdi-check</v-icon>
-        </template>
-        <br :key="'_' + index" />
+        <br />
       </template>
-    </v-row>
-  </v-container>
+    </v-col>
+  </v-row>
 </template>
 
-<script>
-import { getApiVersions, getUserGuidesVersions } from '../js/versions'
+<script setup>
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { useStore } from 'vuex'
 
-export default {
-  name: 'VersionDropdown',
-  props: {
-    currentVersion: {
-      type: String,
-      default: '',
-    },
-    versionChoices: {
-      type: Array,
-      default: () => {
-        return []
-      },
-    },
-    versionType: {
-      type: String,
-      default: '',
-    },
-  },
-  mounted() {
-    if (
-      (this.$props.versionType === 'guides' &&
-        this.$props.currentVersion !== getUserGuidesVersions()[0]) ||
-      (this.$props.versionType === 'api' &&
-        this.$props.currentVersion !== getApiVersions()[0])
-    ) {
-      let b = document.getElementById('dropdown-id')
-      b.classList = ['old-version']
-    }
-  },
+import { changeRouteVersion } from '../router'
 
-  methods: {
-    expandDropdown() {
-      let menu = document.getElementById('dropdown-id')
-      document.addEventListener('click', function(event) {
-        var isClickInside = menu.contains(event.target)
-        if (!isClickInside) {
-          menu.nextSibling.classList = ['hide-options']
-        }
-      })
-      this.$el.lastElementChild.classList = ['show-options']
-    },
-  },
-  computed: {
-    pagePath() {
-      return this.$route.fullPath.split(`${this.$route.params.version}`)[1]
-    },
-  },
+const router = useRouter()
+const store = useStore()
+
+let optionsState = ref('hide-options')
+
+function expandDropdown() {
+  optionsState.value = 'show-options'
 }
+
+function collapseDropdown() {
+  optionsState.value = 'hide-options'
+}
+
+function getRouteForVersion(version) {
+  const currentRoute = router.currentRoute.value
+  let changedRoute = { path: '/' }
+  // Some 'routes' received here are not proper routes but breadcrumb link routes.
+  // We will ignore those routes.
+  if (
+    currentRoute.path &&
+    currentRoute.fullPath &&
+    currentRoute.href &&
+    currentRoute.params &&
+    currentRoute.params.version
+  ) {
+    changedRoute = changeRouteVersion(currentRoute, version)
+  }
+  return changedRoute
+}
+
+function updateCurrentVersion(version) {
+  store.commit('setCurrentDocumentationVersion', version)
+}
+
+const props = defineProps({
+  versionChoices: {
+    type: Array,
+    default: () => {
+      return []
+    },
+  },
+})
+
 </script>
 
 <style scoped>
@@ -124,5 +133,15 @@ export default {
   border-top-left-radius: 0;
   padding: 0 0.1em;
   margin: 0 0.1em;
+}
+
+.dropdown-blocker {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  content: ' ';
+  background: rgba(0, 0, 0, 0.5);
 }
 </style>

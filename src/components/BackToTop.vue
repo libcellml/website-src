@@ -1,60 +1,38 @@
 <template>
-  <v-container>
-    <v-row>
-      <v-col>
-        <v-btn
-          :id="'backToTopButton'"
-          v-scroll="onScroll"
-          v-show="fab"
-          fab
-          dark
-          fixed
-          bottom
-          v-bind:style="{ left: getXOffset }"
-          color="primary"
-          @click="toTop"
-        >
-          <v-icon large>{{ upIcon }}</v-icon>
-        </v-btn>
-      </v-col>
-    </v-row>
-  </v-container>
+  <v-btn
+    id="backToTopButton"
+    title="Scroll to top"
+    v-scroll="onScroll"
+    v-show="showButton"
+    :style="{ left: xOffset, bottom: '0.675rem', position: 'fixed', zIndex: '6' }"
+    fab
+    dark
+    color="primary"
+    @click="toTop"
+  >
+    <v-icon large>mdi-arrow-up</v-icon>
+  </v-btn>
 </template>
 
-<script>
-import { mdiArrowUp } from '@mdi/js'
+<script setup>
+import { ref } from 'vue'
 
-export default {
-  name: 'BackToTop',
-  props: ['xOffset'],
+const props = defineProps({
+  xOffset: String,
+})
 
-  data: () => {
-    return {
-      fab: false,
-      upIcon: mdiArrowUp,
-    }
-  },
+const showButton = ref(false)
 
-  computed: {
-    getXOffset() {
-      return this.$props.xOffset
-    },
-  },
-
-  methods: {
-    onScroll(e) {
-      if (typeof window === 'undefined') return
-      const top = window.pageYOffset || e.target.scrollTop || 0
-      this.fab = top > 20
-    },
-    toTop() {
-      history.pushState(
-        '',
-        document.title,
-        window.location.pathname + window.location.search,
-      )
-      this.$vuetify.goTo(0)
-    },
-  },
+function onScroll(e) {
+  if (typeof window === 'undefined') {
+    return
+  }
+  const top = window.pageYOffset || e.target.scrollTop || 0
+  showButton.value = top > 20
+}
+function toTop() {
+  const url = window.location.pathname + window.location.search
+  history.replaceState(history.state, '', url)
+  window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 </script>

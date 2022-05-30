@@ -1,5 +1,5 @@
 import axios from 'axios'
-const JSZip = require('jszip')
+import JSZip from 'jszip'
 
 // Convert a string to XML Node Structure.
 // Returns null on failure.

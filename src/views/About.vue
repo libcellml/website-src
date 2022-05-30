@@ -1,16 +1,11 @@
-<template>
-  <div class="about" id="aboutContent">
-    <AboutContent />
-  </div>
-</template>
+<script setup>
 
-<script>
-import AboutContent from '@/components/AboutContent'
-
-export default {
-  name: 'About',
-  components: {
-    AboutContent,
-  },
-}
 </script>
+
+<template>
+  <h1>About</h1>
+
+  <p>
+    Investigate the process of creating the documentation for the libCellML website.
+  </p>
+</template>

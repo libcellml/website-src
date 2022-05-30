@@ -14,12 +14,6 @@
   </svg>
 </template>
 
-<script>
-export default {
-  name: 'IconWA',
-}
-</script>
-
 <style scoped>
 svg {
   height: 2.2em;

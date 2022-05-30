@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import BasicSelect from '@/components/BasicSelect'
+import BasicSelect from './BasicSelect.vue'
 // import 'vue-select/dist/vue-select.css'
 
 // :value="version"

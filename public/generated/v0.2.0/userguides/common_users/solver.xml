@@ -1,0 +1,314 @@
+<document xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/" xmlns:todo="https://www.sphinx-doc.org/" source="/Users/hsor001/Projects/cellml/sandbox/userguides/common_users/solver.rst">
+    <target refid="users-solver"/>
+    <section ids="simulation-tool-developer-solver users-solver" names="simulation\ tool\ developer:\ solver users_solver">
+        <title>Simulation tool developer: Solver</title>
+        <paragraph>The code generation functionality in libCellML can be used to transform CellML models into procedural code for simulation.
+            This example works through that process.</paragraph>
+        <container classes="directorylist">
+            <paragraph><strong>C++ resources</strong>: <download_reference filename="3ed60cb9718c6786dcc04b00ac22f12a/common_users" refdoc="common_users/solver" refdomain="" refexplicit="True" reftarget="" reftype="download" refwarn="False"><literal classes="xref download">All C++ resources</literal></download_reference></paragraph>
+            <bullet_list bullet="-">
+                <list_item>
+                    <paragraph><download_reference refdoc="common_users/solver" refdomain="" refexplicit="True" reftarget="/resources/code/solver/CMakeLists.txt" reftype="download" refwarn="False"><literal classes="xref download">CMakeLists.txt</literal></download_reference></paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph><download_reference refdoc="common_users/solver" refdomain="" refexplicit="True" reftarget="/resources/code/solver/solveGeneratedModel.cpp" reftype="download" refwarn="False"><literal classes="xref download">example_solveGeneratedModel.cpp</literal></download_reference></paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>resources/</paragraph>
+                    <bullet_list bullet="-">
+                        <list_item>
+                            <paragraph><download_reference filename="7ab90524c466b0803124f74c76123814/sineComparisonExample.c" refdoc="common_users/solver" refdomain="" refexplicit="True" reftarget="/resources/code/generated_code/sineComparisonExample.c" reftype="download" refwarn="False"><literal classes="xref download">sineComparisonExample.c</literal></download_reference></paragraph>
+                        </list_item>
+                        <list_item>
+                            <paragraph><download_reference filename="ad864591c6eaed1a7e848a276e880cd7/sineComparisonExample.h" refdoc="common_users/solver" refdomain="" refexplicit="True" reftarget="/resources/code/generated_code/sineComparisonExample.h" reftype="download" refwarn="False"><literal classes="xref download">sineComparisonExample.h</literal></download_reference></paragraph>
+                        </list_item>
+                    </bullet_list>
+                </list_item>
+            </bullet_list>
+            <paragraph><strong>Python resources</strong>: <download_reference filename="3ed60cb9718c6786dcc04b00ac22f12a/common_users" refdoc="common_users/solver" refdomain="" refexplicit="True" reftarget="" reftype="download" refwarn="False"><literal classes="xref download">All Python resources</literal></download_reference></paragraph>
+            <bullet_list bullet="-">
+                <list_item>
+                    <paragraph><download_reference refdoc="common_users/solver" refdomain="" refexplicit="True" reftarget="/resources/code/solver/solveGeneratedModel.py" reftype="download" refwarn="False"><literal classes="xref download">example_solveGeneratedModel.py</literal></download_reference></paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>resources/</paragraph>
+                    <bullet_list bullet="-">
+                        <list_item>
+                            <paragraph><download_reference filename="f7de50c71829e0052e372d2987e907e1/sineComparisonExample.py" refdoc="common_users/solver" refdomain="" refexplicit="True" reftarget="/resources/code/generated_code/sineComparisonExample.py" reftype="download" refwarn="False"><literal classes="xref download">sineComparisonExample.py</literal></download_reference></paragraph>
+                        </list_item>
+                    </bullet_list>
+                </list_item>
+            </bullet_list>
+        </container>
+        <section ids="create-a-placeholder-for-the-solver" names="create\ a\ placeholder\ for\ the\ solver">
+            <title>Create a placeholder for the solver</title>
+            <paragraph>Interacting with procedural code means that we need a program, so the first step is to create what will soon become our solver.
+                To start with, the program only reads and interprets command line arguments; the size and number of timesteps to simulate.
+                This is done using a simple function, as below.</paragraph>
+            <container classes="sphinx-tabs" type="tab-element">
+                <container>
+                    <container>
+                        <container>
+                            <paragraph>C++</paragraph>
+                        </container>
+                    </container>
+                    <container>
+                    </container>
+                </container>
+                <container>
+                    <container>
+                        <container>
+                            <paragraph>Python</paragraph>
+                        </container>
+                    </container>
+                    <container>
+                    </container>
+                </container>
+            </container>
+            <paragraph>Once the function exists, we can call it from the main function to process the command line arguments.</paragraph>
+            <container classes="sphinx-tabs" type="tab-element">
+                <container>
+                    <container>
+                        <container>
+                            <paragraph>C++</paragraph>
+                        </container>
+                    </container>
+                    <container>
+                    </container>
+                </container>
+                <container>
+                    <container>
+                        <container>
+                            <paragraph>Python</paragraph>
+                        </container>
+                    </container>
+                    <container>
+                    </container>
+                </container>
+            </container>
+        </section>
+        <section ids="connect-with-the-generated-code" names="connect\ with\ the\ generated\ code">
+            <title>Connect with the generated code</title>
+            <paragraph>The profile language will affect how you need to interact with the generated code.</paragraph>
+            <paragraph>For Python, the generated code must be converted into a module, and then imported.
+                This is shown in the example code below.</paragraph>
+            <paragraph>For C it&#8217;s a little more complicated, as you will need to compile the solver whilst including the generated interface <literal classes="code">*.h</literal> file and linking to the implementation <literal classes="code">*.c</literal> file.
+                A CMake file is provided which will do this for you.
+                The build process needs to know the name of the implementation file containing the generated code, so this is given as the <literal classes="code">-DINPUT=yourBaseFileName</literal> argument (without extension).
+                This file and the corresponding interface <literal classes="code">.h</literal> file are copied by CMake to two files named <literal classes="code">modelToSolve.cpp</literal> and <literal classes="code">modelToSolve.h</literal> respectively.
+                This step is required so that within the solver code we can <literal classes="code">#include</literal> a known file name.</paragraph>
+            <container classes="sphinx-tabs" type="tab-element">
+                <container>
+                    <container>
+                        <container>
+                            <paragraph>C building and linking</paragraph>
+                        </container>
+                    </container>
+                    <container>
+                        <paragraph>Navigate into the folder containing the generated code <literal classes="code">sineComparisonExample.[c,h]</literal> as well as the :code:` example_solveGeneratedModel.cpp` source code from above.</paragraph>
+                        <literal_block force="False" highlight_args="{}" language="text" linenos="False" xml:space="preserve">cmake -DINPUT=sineComparisonExample .</literal_block>
+                        <paragraph>You should see an output similar to this:</paragraph>
+                        <literal_block force="False" highlight_args="{}" language="text" linenos="False" xml:space="preserve">-- The C compiler identification is AppleClang 10.0.1.10010046
+-- The CXX compiler identification is AppleClang 10.0.1.10010046
+-- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc
+-- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /Library/Developer/CommandLineTools/usr/bin/c++
+-- Check for working CXX compiler: /Library/Developer/CommandLineTools/usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+
+1) First use 'make -j' to build the executable
+2) Then solve by running: ./solve_sineComparisonExample with the arguments:
+-n  step_total
+-dt step_size
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: your/file/location/here</literal_block>
+                        <paragraph>Note that the combined program is now available with the prefix <literal classes="code">solve_</literal> before the base file name you provided with the <literal classes="code">-DINPUT</literal> argument, and can be run using the instructions given in the printout above.</paragraph>
+                    </container>
+                </container>
+                <container>
+                    <container>
+                        <container>
+                            <paragraph>Python</paragraph>
+                        </container>
+                    </container>
+                    <container>
+                    </container>
+                </container>
+            </container>
+        </section>
+        <section ids="retrieve-the-generated-model-information" names="retrieve\ the\ generated\ model\ information">
+            <title>Retrieve the generated model information</title>
+            <paragraph>The generated code contains model information in dictionaries, as well as functions to interface with the model&#8217;s mathematics.
+                These are:</paragraph>
+            <bullet_list bullet="-">
+                <list_item>
+                    <paragraph><literal classes="code">VOI_INFO</literal>: a dictionary with the <literal classes="code">.name</literal>, <literal classes="code">.units</literal>, and <literal classes="code">.component</literal> attributes related to the variable of integration,</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph><literal classes="code">STATE_INFO</literal>: a list of similar information for the state variables,</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph><literal classes="code">VARIABLE_INFO</literal>: a list of similar information for the non-state variables.</paragraph>
+                </list_item>
+            </bullet_list>
+            <container classes="sphinx-tabs" type="tab-element">
+                <container>
+                    <container>
+                        <container>
+                            <paragraph>C++</paragraph>
+                        </container>
+                    </container>
+                    <container>
+                    </container>
+                </container>
+                <container>
+                    <container>
+                        <container>
+                            <paragraph>Python</paragraph>
+                        </container>
+                    </container>
+                    <container>
+                    </container>
+                </container>
+            </container>
+        </section>
+        <section ids="allocate-space-for-the-solution" names="allocate\ space\ for\ the\ solution">
+            <title>Allocate space for the solution</title>
+            <paragraph>Also within the generated code are functions to allocate space for the variables:</paragraph>
+            <bullet_list bullet="-">
+                <list_item>
+                    <paragraph>create states array: to construct arrays for storage of the state variables and their rates;</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>create variables array: to construct an array to store the other variables.</paragraph>
+                </list_item>
+            </bullet_list>
+            <container classes="sphinx-tabs" type="tab-element">
+                <container>
+                    <container>
+                        <container>
+                            <paragraph>C++</paragraph>
+                        </container>
+                    </container>
+                    <container>
+                    </container>
+                </container>
+                <container>
+                    <container>
+                        <container>
+                            <paragraph>Python</paragraph>
+                        </container>
+                    </container>
+                    <container>
+                    </container>
+                </container>
+            </container>
+        </section>
+        <section ids="retrieve-the-model-s-mathematical-formulation" names="retrieve\ the\ model's\ mathematical\ formulation">
+            <title>Retrieve the model&#8217;s mathematical formulation</title>
+            <paragraph>The mathematical equations that govern the model&#8217;s behaviour can be applied using functions from within the generated code:</paragraph>
+            <bullet_list bullet="-">
+                <list_item>
+                    <paragraph>initialise states and constants: does what it says, sets all the initial value attributes;</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>compute computed constants: computes the value of any constants which depend on others;</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>compute variables: calculates those variables whose values depend on the state variables; and</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>compute rates: calculates the rates of change of the state variables.</paragraph>
+                </list_item>
+            </bullet_list>
+            <paragraph>Note that all model variables which affect the rates&#8217; values (and thereby affect the states&#8217; values) are updated in the <emphasis>compute rates</emphasis> function.
+                This means that you only need to call the <emphasis>compute variables</emphasis> function when you&#8217;re saving the output from a step; it does not need to be called for intermediate timesteps.</paragraph>
+            <paragraph>Before we begin iterating, the values of all variables are calculated.</paragraph>
+            <container classes="sphinx-tabs" type="tab-element">
+                <container>
+                    <container>
+                        <container>
+                            <paragraph>C++</paragraph>
+                        </container>
+                    </container>
+                    <container>
+                    </container>
+                </container>
+                <container>
+                    <container>
+                        <container>
+                            <paragraph>Python</paragraph>
+                        </container>
+                    </container>
+                    <container>
+                    </container>
+                </container>
+            </container>
+        </section>
+        <section ids="prepare-a-file-for-the-solution-output" names="prepare\ a\ file\ for\ the\ solution\ output">
+            <title>Prepare a file for the solution output</title>
+            <paragraph>If you have an alternative way to save your solution, you can skip this step.
+                Here we create a simple text-delimited file into which the solution can be written at each timestep.</paragraph>
+            <container classes="sphinx-tabs" type="tab-element">
+                <container>
+                    <container>
+                        <container>
+                            <paragraph>C++</paragraph>
+                        </container>
+                    </container>
+                    <container>
+                    </container>
+                </container>
+                <container>
+                    <container>
+                        <container>
+                            <paragraph>Python</paragraph>
+                        </container>
+                    </container>
+                    <container>
+                    </container>
+                </container>
+            </container>
+        </section>
+        <section ids="perform-the-integration-steps" names="perform\ the\ integration\ steps">
+            <title>Perform the integration steps</title>
+            <paragraph>Finally we iterate through the timesteps, calculating the state variables, and updating the rates each step.
+                The solution values and calculated variables are written to the output file.</paragraph>
+            <container classes="sphinx-tabs" type="tab-element">
+                <container>
+                    <container>
+                        <container>
+                            <paragraph>C++</paragraph>
+                        </container>
+                    </container>
+                    <container>
+                    </container>
+                </container>
+                <container>
+                    <container>
+                        <container>
+                            <paragraph>Python</paragraph>
+                        </container>
+                    </container>
+                    <container>
+                    </container>
+                </container>
+            </container>
+            <paragraph>The solution files are written in a tab-delimited format which can be read by your favourite plotting application.
+                The plots below were generated using a step size of 0.1 for 100 iterations.</paragraph>
+            <figure align="center" ids="sine-comparison" names="sine_comparison">
+                <image alt="Solution to sine comparison model" candidates="{'*': 'common_users/images/sine_comparison.png'}" uri="common_users/images/sine_comparison.png"/>
+                <caption_number>Figure 27 </caption_number><caption>Plots generated from an Euler solution to the sine comparison model for a step size of 0.1.</caption>
+            </figure>
+        </section>
+    </section>
+</document>

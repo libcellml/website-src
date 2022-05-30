@@ -1,0 +1,630 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="classlibcellml_1_1Analyser" kind="class" language="C++" prot="public">
+    <compoundname>libcellml::Analyser</compoundname>
+    <basecompoundref refid="classlibcellml_1_1Logger" prot="public" virt="non-virtual">libcellml::Logger</basecompoundref>
+    <includes refid="analyser_8h" local="no">analyser.h</includes>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlibcellml_1_1Analyser_1a429f04fde25e67acf3668d3df8a4c5de" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Analyser::~Analyser</definition>
+        <argsstring>() override</argsstring>
+        <name>~Analyser</name>
+        <qualifiedname>libcellml::Analyser::~Analyser</qualifiedname>
+        <briefdescription>
+<para>Destructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyser.h" line="34" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Analyser_1a237e37f4f49935665343109b44ad06c8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Analyser::Analyser</definition>
+        <argsstring>(const Analyser &amp;rhs)=delete</argsstring>
+        <name>Analyser</name>
+        <qualifiedname>libcellml::Analyser::Analyser</qualifiedname>
+        <param>
+          <type>const <ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyser.h" line="35" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Analyser_1a31ce4d585e0b5a20ac0ad9e59a9dbf68" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Analyser::Analyser</definition>
+        <argsstring>(Analyser &amp;&amp;rhs) noexcept=delete</argsstring>
+        <name>Analyser</name>
+        <qualifiedname>libcellml::Analyser::Analyser</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyser.h" line="36" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Analyser_1a35006cf7a9ccee6e3235264f0d5cba93" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref> &amp;</type>
+        <definition>Analyser &amp; libcellml::Analyser::operator=</definition>
+        <argsstring>(Analyser rhs)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>libcellml::Analyser::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyser.h" line="37" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Analyser_1aa1d6122115e1251ca38e31b5265e3b57" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Analyser::Analyser</definition>
+        <argsstring>()</argsstring>
+        <name>Analyser</name>
+        <qualifiedname>libcellml::Analyser::Analyser</qualifiedname>
+        <briefdescription>
+<para>Constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyser.h" line="238" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Analyser_1a810294164147df8920c1b447018e80e8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AnalyserImpl *</type>
+        <definition>AnalyserImpl * libcellml::Analyser::pFunc</definition>
+        <argsstring>()</argsstring>
+        <name>pFunc</name>
+        <qualifiedname>libcellml::Analyser::pFunc</qualifiedname>
+        <briefdescription>
+<para>Forward declaration for pImpl idiom,. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Getter for private implementation pointer,. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyser.h" line="242" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Analyser_1a68edb09917a1dde10536abdada98eb55" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const AnalyserImpl *</type>
+        <definition>const AnalyserImpl * libcellml::Analyser::pFunc</definition>
+        <argsstring>() const</argsstring>
+        <name>pFunc</name>
+        <qualifiedname>libcellml::Analyser::pFunc</qualifiedname>
+        <briefdescription>
+<para>Const getter for private implementation pointer,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyser.h" line="243" column="24"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classlibcellml_1_1Analyser_1ada46ca6d05bd73c7c6b5bc8919d43540" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1ac778cadbda6547bc40b34adc572863f8" kindref="member">AnalyserPtr</ref></type>
+        <definition>static AnalyserPtr libcellml::Analyser::create</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>create</name>
+        <qualifiedname>libcellml::Analyser::create</qualifiedname>
+        <briefdescription>
+<para>Create an <ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Factory method to create an <ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref>. Create an analyser with::</para>
+<para><programlisting><codeline><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>analyser<sp/>=<sp/><ref refid="classlibcellml_1_1Analyser_1ada46ca6d05bd73c7c6b5bc8919d43540" kindref="member">libcellml::Analyser::create</ref>();</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>A smart pointer to an <ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref> object. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyser.h" line="50" column="24"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlibcellml_1_1Analyser_1ad962bc1ecb74171e9440f3d4d3e1cda0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Analyser::analyseModel</definition>
+        <argsstring>(const ModelPtr &amp;model)</argsstring>
+        <name>analyseModel</name>
+        <qualifiedname>libcellml::Analyser::analyseModel</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref> &amp;</type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+<para>Analyse the <computeroutput><ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref></computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Analyse the <computeroutput><ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref></computeroutput> using this <ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput><ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref></computeroutput> to analyse. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyser.h" line="59" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Analyser_1a8fc9a43b4f7362e6ce2677dee0afb10c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Analyser::addExternalVariable</definition>
+        <argsstring>(const AnalyserExternalVariablePtr &amp;externalVariable)</argsstring>
+        <name>addExternalVariable</name>
+        <qualifiedname>libcellml::Analyser::addExternalVariable</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a00d38ed1af399801e004689c40dfb4a2" kindref="member">AnalyserExternalVariablePtr</ref> &amp;</type>
+          <declname>externalVariable</declname>
+        </param>
+        <briefdescription>
+<para>Add an <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> to this <ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Add the given <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> to this <ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref>, but only if the given <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> has not already been added.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>externalVariable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> to add.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the variable was added, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyser.h" line="71" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Analyser_1af3ad689881d7d3df8b82897542051843" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Analyser::removeExternalVariable</definition>
+        <argsstring>(size_t index)</argsstring>
+        <name>removeExternalVariable</name>
+        <qualifiedname>libcellml::Analyser::removeExternalVariable</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Remove the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> at the given <computeroutput>index</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> with the given <computeroutput>index</computeroutput>. The <computeroutput>index</computeroutput> must be in the range [0, #externalVariables).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> to remove.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> was removed, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyser.h" line="84" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Analyser_1a556e2510766196eb4aadfe6115a3eaa2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Analyser::removeExternalVariable</definition>
+        <argsstring>(const ModelPtr &amp;model, const std::string &amp;componentName, const std::string &amp;variableName)</argsstring>
+        <name>removeExternalVariable</name>
+        <qualifiedname>libcellml::Analyser::removeExternalVariable</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref> &amp;</type>
+          <declname>model</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>componentName</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>variableName</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> with the given <computeroutput>variableName</computeroutput> in the <computeroutput><ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref></computeroutput> with the given <computeroutput>componentName</computeroutput> in the given <computeroutput>model</computeroutput>.</para>
+<para>Remove the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> found that matches the given <computeroutput>variableName</computeroutput> in the <computeroutput><ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref></computeroutput> with the given <computeroutput>componentName</computeroutput> in the given <computeroutput>model</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the <computeroutput><ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref></computeroutput> which contains the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> to remove. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>componentName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the <computeroutput><ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref></computeroutput> which contains the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> to remove. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>variableName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> to remove.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> was removed, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyser.h" line="107" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Analyser_1a986f411e0d3d77444837fe13c79a7a97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Analyser::removeExternalVariable</definition>
+        <argsstring>(const AnalyserExternalVariablePtr &amp;externalVariable)</argsstring>
+        <name>removeExternalVariable</name>
+        <qualifiedname>libcellml::Analyser::removeExternalVariable</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a00d38ed1af399801e004689c40dfb4a2" kindref="member">AnalyserExternalVariablePtr</ref> &amp;</type>
+          <declname>externalVariable</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> with the given pointer.</para>
+<para>Remove the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> with the pointer <computeroutput>externalVariable</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>externalVariable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> to remove.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> was removed, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyser.h" line="124" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Analyser_1a79434d76cbb524f8f6bf2f3b153baf73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Analyser::removeAllExternalVariables</definition>
+        <argsstring>()</argsstring>
+        <name>removeAllExternalVariables</name>
+        <qualifiedname>libcellml::Analyser::removeAllExternalVariables</qualifiedname>
+        <briefdescription>
+<para>Remove all <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> items from this <ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clear all <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> items that have been added to this <ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyser.h" line="133" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Analyser_1aa573a3434d171755c413dcb56de25b79" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Analyser::containsExternalVariable</definition>
+        <argsstring>(const ModelPtr &amp;model, const std::string &amp;componentName, const std::string &amp;variableName) const</argsstring>
+        <name>containsExternalVariable</name>
+        <qualifiedname>libcellml::Analyser::containsExternalVariable</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref> &amp;</type>
+          <declname>model</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>componentName</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>variableName</declname>
+        </param>
+        <briefdescription>
+<para>Test to see if the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> with the given <computeroutput>variableName</computeroutput> in the <computeroutput><ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref></computeroutput> with the given <computeroutput>componentName</computeroutput> in the given <computeroutput>model</computeroutput> is contained within this <ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Test to see if the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> with the the given <computeroutput>variableName</computeroutput> in the <computeroutput><ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref></computeroutput> with the given <computeroutput>componentName</computeroutput> in the given <computeroutput>model</computeroutput> is contained within this <ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref>. Return <computeroutput>true</computeroutput> if the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> is in the <ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref> and <computeroutput>false</computeroutput> otherwise.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the <computeroutput><ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref></computeroutput> which contains the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> to test. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>componentName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the <computeroutput><ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref></computeroutput> which contains the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> to test. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>variableName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> to test.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> is in this <ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref> and <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyser.h" line="155" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Analyser_1ab2eeeb74fa1b661dc587dd6f79021258" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Analyser::containsExternalVariable</definition>
+        <argsstring>(const AnalyserExternalVariablePtr &amp;externalVariable) const</argsstring>
+        <name>containsExternalVariable</name>
+        <qualifiedname>libcellml::Analyser::containsExternalVariable</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a00d38ed1af399801e004689c40dfb4a2" kindref="member">AnalyserExternalVariablePtr</ref> &amp;</type>
+          <declname>externalVariable</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Test to see if the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> with the given pointer is contained within this <ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref>.</para>
+<para>Test to see if the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> with the given pointer is contained within this <ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref>. Return <computeroutput>true</computeroutput> if the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> is in the <ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref> and <computeroutput>false</computeroutput> otherwise.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>externalVariable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> to remove.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> is in this <ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref> and <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyser.h" line="174" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Analyser_1ad2f6508557cfeee370094cd57b55f072" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a00d38ed1af399801e004689c40dfb4a2" kindref="member">AnalyserExternalVariablePtr</ref></type>
+        <definition>AnalyserExternalVariablePtr libcellml::Analyser::externalVariable</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>externalVariable</name>
+        <qualifiedname>libcellml::Analyser::externalVariable</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Get the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> at the given <computeroutput>index</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return a reference to the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> at the given <computeroutput>index</computeroutput>. The <computeroutput>index</computeroutput> must be in the range [0, #externalVariables).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> to return.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> at the given <computeroutput>index</computeroutput> on success, <computeroutput>nullptr</computeroutput> on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyser.h" line="187" column="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Analyser_1aca13d1db8d36242022966bf40fa3b7c7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a00d38ed1af399801e004689c40dfb4a2" kindref="member">AnalyserExternalVariablePtr</ref></type>
+        <definition>AnalyserExternalVariablePtr libcellml::Analyser::externalVariable</definition>
+        <argsstring>(const ModelPtr &amp;model, const std::string &amp;componentName, const std::string &amp;variableName) const</argsstring>
+        <name>externalVariable</name>
+        <qualifiedname>libcellml::Analyser::externalVariable</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref> &amp;</type>
+          <declname>model</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>componentName</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>variableName</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> with the given <computeroutput>name</computeroutput>.</para>
+<para>Return the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> with the given <computeroutput>variableName</computeroutput> in the <computeroutput><ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref></computeroutput> with the given <computeroutput>componentName</computeroutput> in the given <computeroutput>model</computeroutput>. If no such <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> is contained within the <ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref>, a <computeroutput>nullptr</computeroutput> is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the <computeroutput><ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref></computeroutput> which contains the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>componentName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the <computeroutput><ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref></computeroutput> which contains the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>variableName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> with the given <computeroutput>variableName</computeroutput> in the <computeroutput><ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref></computeroutput> with the given <computeroutput>componentName</computeroutput> in the given <computeroutput>model</computeroutput> on success, <computeroutput>nullptr</computeroutput> on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyser.h" line="210" column="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Analyser_1afe72d329b2e62f979adcec1a2c9d0019" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::Analyser::externalVariableCount</definition>
+        <argsstring>() const</argsstring>
+        <name>externalVariableCount</name>
+        <qualifiedname>libcellml::Analyser::externalVariableCount</qualifiedname>
+        <briefdescription>
+<para>Get the number of <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> items in this <ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the number of <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> items the <ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref> contains.</para>
+<para><simplesect kind="return"><para>The number of <ref refid="classlibcellml_1_1AnalyserExternalVariable" kindref="compound">AnalyserExternalVariable</ref> items. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyser.h" line="223" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Analyser_1a56489170157c78975ce887357ac28d65" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref></type>
+        <definition>AnalyserModelPtr libcellml::Analyser::model</definition>
+        <argsstring>() const</argsstring>
+        <name>model</name>
+        <qualifiedname>libcellml::Analyser::model</qualifiedname>
+        <briefdescription>
+<para>Get the analysed model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the analysed model that is the result of the model analysis. This allows to retrieve some information about the type of the model, its variable of integration, states, variables, equations, and whether it needs some specific mathematical functions.</para>
+<para><simplesect kind="return"><para>The analysed model for the <computeroutput><ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref></computeroutput> analysed by this <ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyser.h" line="235" column="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref> class is for representing a CellML <ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref>, which aims to check whether a model makes mathematical sense. If a model makes mathematical sense then an <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref> object can be retrieved, which can be used to generate code, for instance. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>libcellml::Analyser</label>
+        <link refid="classlibcellml_1_1Analyser"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>libcellml::Logger</label>
+        <link refid="classlibcellml_1_1Logger"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>libcellml::Analyser</label>
+        <link refid="classlibcellml_1_1Analyser"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>libcellml::Logger</label>
+        <link refid="classlibcellml_1_1Logger"/>
+      </node>
+    </collaborationgraph>
+    <location file="libcellml/analyser.h" line="31" column="1" bodyfile="libcellml/analyser.h" bodystart="32" bodyend="244"/>
+    <listofallmembers>
+      <member refid="classlibcellml_1_1Analyser_1a8fc9a43b4f7362e6ce2677dee0afb10c" prot="public" virt="non-virtual"><scope>libcellml::Analyser</scope><name>addExternalVariable</name></member>
+      <member refid="classlibcellml_1_1Analyser_1ad962bc1ecb74171e9440f3d4d3e1cda0" prot="public" virt="non-virtual"><scope>libcellml::Analyser</scope><name>analyseModel</name></member>
+      <member refid="classlibcellml_1_1Analyser_1a237e37f4f49935665343109b44ad06c8" prot="private" virt="non-virtual"><scope>libcellml::Analyser</scope><name>Analyser</name></member>
+      <member refid="classlibcellml_1_1Analyser_1a31ce4d585e0b5a20ac0ad9e59a9dbf68" prot="private" virt="non-virtual"><scope>libcellml::Analyser</scope><name>Analyser</name></member>
+      <member refid="classlibcellml_1_1Analyser_1aa1d6122115e1251ca38e31b5265e3b57" prot="private" virt="non-virtual"><scope>libcellml::Analyser</scope><name>Analyser</name></member>
+      <member refid="classlibcellml_1_1Analyser_1aa573a3434d171755c413dcb56de25b79" prot="public" virt="non-virtual"><scope>libcellml::Analyser</scope><name>containsExternalVariable</name></member>
+      <member refid="classlibcellml_1_1Analyser_1ab2eeeb74fa1b661dc587dd6f79021258" prot="public" virt="non-virtual"><scope>libcellml::Analyser</scope><name>containsExternalVariable</name></member>
+      <member refid="classlibcellml_1_1Analyser_1ada46ca6d05bd73c7c6b5bc8919d43540" prot="public" virt="non-virtual"><scope>libcellml::Analyser</scope><name>create</name></member>
+      <member refid="classlibcellml_1_1Logger_1a5a260a645de3be9ffb844ce3f7584c4f" prot="public" virt="non-virtual"><scope>libcellml::Analyser</scope><name>error</name></member>
+      <member refid="classlibcellml_1_1Logger_1a6bb9f053eb4f1b743167b84bbf5e9b34" prot="public" virt="non-virtual"><scope>libcellml::Analyser</scope><name>errorCount</name></member>
+      <member refid="classlibcellml_1_1Analyser_1ad2f6508557cfeee370094cd57b55f072" prot="public" virt="non-virtual"><scope>libcellml::Analyser</scope><name>externalVariable</name></member>
+      <member refid="classlibcellml_1_1Analyser_1aca13d1db8d36242022966bf40fa3b7c7" prot="public" virt="non-virtual"><scope>libcellml::Analyser</scope><name>externalVariable</name></member>
+      <member refid="classlibcellml_1_1Analyser_1afe72d329b2e62f979adcec1a2c9d0019" prot="public" virt="non-virtual"><scope>libcellml::Analyser</scope><name>externalVariableCount</name></member>
+      <member refid="classlibcellml_1_1Logger_1a192650ae59ea8747feb6c4f09de6a389" prot="public" virt="non-virtual"><scope>libcellml::Analyser</scope><name>issue</name></member>
+      <member refid="classlibcellml_1_1Logger_1a3c078e9502a10748ade938374faef6d9" prot="public" virt="non-virtual"><scope>libcellml::Analyser</scope><name>issueCount</name></member>
+      <member refid="classlibcellml_1_1Logger_1a866117b4f6589724a2fd01f88e56d66f" prot="public" virt="non-virtual"><scope>libcellml::Analyser</scope><name>message</name></member>
+      <member refid="classlibcellml_1_1Logger_1a05e6f7de0ed9a88611d3c9749e3dbd21" prot="public" virt="non-virtual"><scope>libcellml::Analyser</scope><name>messageCount</name></member>
+      <member refid="classlibcellml_1_1Analyser_1a56489170157c78975ce887357ac28d65" prot="public" virt="non-virtual"><scope>libcellml::Analyser</scope><name>model</name></member>
+      <member refid="classlibcellml_1_1Analyser_1a35006cf7a9ccee6e3235264f0d5cba93" prot="private" virt="non-virtual"><scope>libcellml::Analyser</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1Analyser_1a810294164147df8920c1b447018e80e8" prot="private" virt="non-virtual"><scope>libcellml::Analyser</scope><name>pFunc</name></member>
+      <member refid="classlibcellml_1_1Analyser_1a68edb09917a1dde10536abdada98eb55" prot="private" virt="non-virtual"><scope>libcellml::Analyser</scope><name>pFunc</name></member>
+      <member refid="classlibcellml_1_1Analyser_1a79434d76cbb524f8f6bf2f3b153baf73" prot="public" virt="non-virtual"><scope>libcellml::Analyser</scope><name>removeAllExternalVariables</name></member>
+      <member refid="classlibcellml_1_1Analyser_1af3ad689881d7d3df8b82897542051843" prot="public" virt="non-virtual"><scope>libcellml::Analyser</scope><name>removeExternalVariable</name></member>
+      <member refid="classlibcellml_1_1Analyser_1a556e2510766196eb4aadfe6115a3eaa2" prot="public" virt="non-virtual"><scope>libcellml::Analyser</scope><name>removeExternalVariable</name></member>
+      <member refid="classlibcellml_1_1Analyser_1a986f411e0d3d77444837fe13c79a7a97" prot="public" virt="non-virtual"><scope>libcellml::Analyser</scope><name>removeExternalVariable</name></member>
+      <member refid="classlibcellml_1_1Logger_1a610d4878881567899c6d47db5e625736" prot="public" virt="non-virtual"><scope>libcellml::Analyser</scope><name>warning</name></member>
+      <member refid="classlibcellml_1_1Logger_1a6973054ad6d00d9bb6d2bfb488cdfebd" prot="public" virt="non-virtual"><scope>libcellml::Analyser</scope><name>warningCount</name></member>
+      <member refid="classlibcellml_1_1Analyser_1a429f04fde25e67acf3668d3df8a4c5de" prot="private" virt="non-virtual"><scope>libcellml::Analyser</scope><name>~Analyser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
