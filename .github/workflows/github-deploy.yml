@@ -42,6 +42,7 @@ jobs:
       - name: Clean install dependencies
         run: |
           yarn
+          yarn add --dev execa
 
       - name: Run production deploy script
         if: github.ref == 'refs/heads/production'
@@ -49,7 +50,6 @@ jobs:
           VITE_APP_ENCRYPTED_GITHUB_TOKEN: ${{ secrets.VUE_APP_ENCRYPTED_GITHUB_TOKEN }}
         run: |
           git config user.name hsorby && git config user.email h.sorby@auckland.ac.nz
-          npm install -g execa
           npm run github-deploy
 
       - name: Run staging deploy script
@@ -58,5 +58,4 @@ jobs:
           VITE_APP_ENCRYPTED_GITHUB_TOKEN: ${{ secrets.VUE_APP_ENCRYPTED_GITHUB_TOKEN }}
         run: |
           git config user.name hsorby && git config user.email h.sorby@auckland.ac.nz
-          npm install -g execa
           npm run github-deploy -- staging
