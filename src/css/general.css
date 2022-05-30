@@ -3,359 +3,364 @@
 */
 
 :root {
-    --bright-red: #af3c42; 
-    --mid-red: #862e32;
-    --deep-red: #4e0202;
-    --bright-red-transparent: #af3c4225; 
+  --bright-red: #af3c42;
+  --mid-red: #862e32;
+  --deep-red: #4e0202;
+  --bright-red-transparent: #af3c4225;
 
-    --mid-grey: #777777;
-    --pale-grey:#dddddd;
-    --very-pale-grey: #f6f6f6;
+  --mid-grey: #777777;
+  --pale-grey: #dddddd;
+  --very-pale-grey: #f6f6f6;
 
-    --transparent-grey: rgba(27,31,35,.05);
-    --pale-transparent-grey: rgba(62, 72, 82, 0.05);
-    --deep-blue: #476582;
-    --deep-blue-grey: #2d4046c7;
-    --bright-blue: #1f76be;
+  --transparent-grey: rgba(27, 31, 35, 0.05);
+  --pale-transparent-grey: rgba(62, 72, 82, 0.05);
+  --deep-blue: #476582;
+  --deep-blue-grey: #2d4046c7;
+  --bright-blue: #1f76be;
 
-    --very-pale-green:#fbfff6;
-    --mid-green: rgb(80, 121, 0);
-    --dark-green: #22440b;
+  --very-pale-green: #fbfff6;
+  --mid-green: rgb(80, 121, 0);
+  --dark-green: #22440b;
 
-    --very-pale-yellow: rgba(255,229,100,.3);
-    --mid-yellow: #e7c000;
-    --dark-yellow: #6b5900;
+  --very-pale-yellow: rgba(255, 229, 100, 0.3);
+  --mid-yellow: #e7c000;
+  --dark-yellow: #6b5900;
 
-    --dothis-background-color: var(--very-pale-green);
-    --dothis-border-colour: var(--mid-green);
-    --dothis-colour: var(--dark-green);
+  --dothis-background-color: var(--very-pale-green);
+  --dothis-border-colour: var(--mid-green);
+  --dothis-colour: var(--dark-green);
 
-    --useful-background-colour:#f3f5f7;
-    --useful-border-colour: #144b79;
-    --useful-colour:  #144b79; /*#0f3555;*/
-    --useful-link-colour: var(--bright-blue);
+  --useful-background-colour: #f3f5f7;
+  --useful-border-colour: #144b79;
+  --useful-colour: #144b79; /*#0f3555;*/
+  --useful-link-colour: var(--bright-blue);
 
-    --nb-background-colour: var(--very-pale-yellow);
-    --nb-border-colour: var(--mid-yellow);
-    --nb-colour: var(--dark-yellow);
+  --nb-background-colour: var(--very-pale-yellow);
+  --nb-border-colour: var(--mid-yellow);
+  --nb-colour: var(--dark-yellow);
 
-    --text-colour: #333333;
-    --menu-link-colour: var(--mid-grey);
+  --text-colour: #333333;
+  --menu-link-colour: var(--mid-grey);
 
-    /* Link styling for readability */
-    --link-colour:var(--mid-grey);
-    --active-link: var(--deep-red);
-    --text-link-colour: var(--bright-red);
-    --link-underline-colour: var(--pale-grey);
-    --link-decoration-line: underline;
-    --link-decoration-style: solid;
-    --link-decoration-color: var(--link-underline-colour);
-    --link-underline-offset: 0.2em;
+  /* Link styling for readability */
+  --link-colour: var(--mid-grey);
+  --active-link: var(--deep-red);
+  --text-link-colour: var(--bright-red);
+  --link-underline-colour: var(--pale-grey);
+  --link-decoration-line: underline;
+  --link-decoration-style: solid;
+  --link-decoration-color: var(--link-underline-colour);
+  --link-underline-offset: 0.2em;
 
-    --warning-background: rgb(251, 239, 239);
-    --warning-text: var(--deep-red);
+  --warning-background: rgb(251, 239, 239);
+  --warning-text: var(--deep-red);
 
-    --terminal-colour: var(--pale-grey) !important;
-    --border-colour: var(--pale-grey);
-    --code-colour: var(--deep-blue);
+  --terminal-colour: var(--pale-grey) !important;
+  --border-colour: var(--pale-grey);
+  --code-colour: var(--deep-blue);
 
-    --text-font: "Lato", "proxima-nova", "Helvetica Neue", "Arial", sans-serif;
-    --heading-font: Verdana, Geneva, Tahoma, sans-serif;
-    --code-font: monospace;
-    --mono-font: monospace;
+  --text-font: 'Lato', 'proxima-nova', 'Helvetica Neue', 'Arial', sans-serif;
+  --heading-font: Verdana, Geneva, Tahoma, sans-serif;
+  --code-font: monospace;
+  --mono-font: monospace;
 }
 
 /* Make max width for page content. */
 #pageContent {
-    max-width: 900px;
-    float: left;
-    padding-top: 0;
+  max-width: 900px;
+  float: left;
+  padding-top: 0;
 }
 
 h1 {
-    color: var(--mid-red);
-    margin-bottom: 0.5em;
-    border-bottom: solid 0.05rem var(--terminal-colour);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--mid-red);
+  margin-bottom: 0.5em;
+  border-bottom: solid 0.05rem var(--terminal-colour);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h2 {
-    color:#333333;
-    margin-bottom: 0.5em;
-    margin-top: 1em;
-    border-bottom: solid 0.05rem var(--terminal-colour);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #333333;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+  border-bottom: solid 0.05rem var(--terminal-colour);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h3 {
-    margin-top: 1em;
+  margin-top: 1em;
 }
 
 .v-application {
-    font-family: var(--text-font);
+  font-family: var(--text-font);
 }
 
 .v-application a {
-    color: var(--link-colour);
-    font-weight: 500;
+  color: var(--link-colour);
+  font-weight: 500;
 }
 
 p a {
-    color: var(--text-link-colour) !important;
-    text-decoration-line: var(--link-decoration-line);
-    text-decoration-style: var(--link-decoration-style);
-    text-decoration-color: var(--link-underline-colour);
-    text-underline-offset: 0.2em;
+  color: var(--text-link-colour) !important;
+  text-decoration-line: var(--link-decoration-line);
+  text-decoration-style: var(--link-decoration-style);
+  text-decoration-color: var(--link-underline-colour);
+  text-underline-offset: 0.2em;
 }
 
 td a {
-    color: var(--text-link-colour) !important;
-    text-decoration-line: var(--link-decoration-line);
-    text-decoration-style: var(--link-decoration-style);
-    text-decoration-color: var(--link-underline-colour);
-    text-underline-offset: 0.2em;
+  color: var(--text-link-colour) !important;
+  text-decoration-line: var(--link-decoration-line);
+  text-decoration-style: var(--link-decoration-style);
+  text-decoration-color: var(--link-underline-colour);
+  text-underline-offset: 0.2em;
 }
 
 li a {
-    color: var(--text-link-colour) !important;
-    text-decoration-line: var(--link-decoration-line);
-    text-decoration-style: var(--link-decoration-style);
-    text-decoration-color: var(--link-underline-colour);
-    text-underline-offset: 0.2em;
+  color: var(--text-link-colour) !important;
+  text-decoration-line: var(--link-decoration-line);
+  text-decoration-style: var(--link-decoration-style);
+  text-decoration-color: var(--link-underline-colour);
+  text-underline-offset: 0.2em;
 }
 
 .v-application a.router-link-active {
-    color: var(--text-link-colour);
-    text-decoration-line: var(--link-decoration-line);
-    text-decoration-style: var(--link-decoration-style);
-    text-decoration-color: var(--link-underline-colour);
-    text-underline-offset: 0.2em;
+  color: var(--text-link-colour);
+  text-decoration-line: var(--link-decoration-line);
+  text-decoration-style: var(--link-decoration-style);
+  text-decoration-color: var(--link-underline-colour);
+  text-underline-offset: 0.2em;
 }
 
 .v-application a:hover {
-    text-decoration-thickness: 3px;
-    text-decoration-color: var(--bright-red);
+  text-decoration-thickness: 3px;
+  text-decoration-color: var(--bright-red);
 }
 
 /* Turn off the Contents blocks on pages as they're in the sidebar. */
 .topic.contents {
-    display: none;
+  display: none;
 }
 
 /* Disconnect the general link colour from the colours in the top menu bar */
 #topMenuBar * {
-    color: var(--menu-link-colour);
+  color: var(--menu-link-colour);
 }
 
 .v-btn--active {
-    background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
 }
 
 .v-btn::before .v-btn--active {
-    background-color: transparent;
+  background-color: transparent;
+}
+
+.breadcrumb-bar {
+  min-height: 5rem;
+  align-content: center
 }
 
 /* Move breadcrumbs down a little ... */
 .breadcrumbs {
-    margin-top: 0.3rem;
-    white-space: nowrap;
-    display: block;
-    direction: rtl;   /* This is so that it will collapse from the left on small screens */
-    overflow: hidden;
-    text-overflow: ellipsis;
+  margin-top: 0.3rem;
+  white-space: nowrap;
+  display: block;
+  direction: rtl; /* This is so that it will collapse from the left on small screens */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 ul.v-breadcrumbs {
-    padding: 0;
+  padding: 0;
 }
 
 .breadcrumbs * {
-    margin: 0;
-    padding: 0;
-    color: var(--menu-link-colour) !important;
+  margin: 0;
+  padding: 0;
+  color: var(--menu-link-colour) !important;
 }
 
 .v-breadcrumbs {
-    padding: 0;
-    flex-wrap: nowrap;
+  padding: 0;
+  flex-wrap: nowrap;
 }
 
 .v-breadcrumbs li {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 
 .v-breadcrumbs li:last-child {
-    padding-left: 0;
+  padding-left: 0;
 }
 
 code.xref {
-    font-family: var(--text-font);
-    color: var(--deep-red);
-    font-weight: 500;
+  font-family: var(--text-font);
+  color: var(--deep-red);
+  font-weight: 500;
 }
 
 /* The image-box tags are used to store the acknowledgement logos. */
 .image-box {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .image-box * {
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 .image-box img {
-    padding: 0.3rem;
-    max-width: 250px;
+  padding: 0.3rem;
+  max-width: 250px;
 }
 @media only screen and (max-width: 300px) {
-    .image-box img {
-       max-width: 100%;
-    }
+  .image-box img {
+    max-width: 100%;
+  }
 }
 
-/* Removing the top menu bar when its contents are in the sidebar. */ 
+/* Removing the top menu bar when its contents are in the sidebar. */
 /* @media only screen and (max-width: 54em) { */
 @media only screen and (max-width: 71.5em) {
-    #topMenuBar {
-        display: none;
-    }
+  #topMenuBar {
+    display: none;
+  }
 }
 
 #footer-ack {
-    margin-bottom: 0;
-    padding-bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 #footer-ack * {
-    text-decoration: none !important;
-    color: var(--link-colour) !important;
+  text-decoration: none !important;
+  color: var(--link-colour) !important;
 }
 
 #footer-copyright img {
-    max-height: 25px;
+  max-height: 25px;
 }
 
 .big-button {
-    background-color: var(--deep-blue-grey) !important;
-    color: white !important;
-    min-height: 6rem;
-    text-align: center;
+  background-color: var(--deep-blue-grey) !important;
+  color: white !important;
+  min-height: 6rem;
+  text-align: center;
 }
-  
+
 .big-button:hover {
-    background-color: var(--deep-red) !important;
-    color: white !important;
+  background-color: var(--deep-red) !important;
+  color: white !important;
 }
 
 .big-button .v-btn__content {
-    display: block !important;
-    line-height: 2em;
-    color: white;
+  display: block !important;
+  line-height: 2em;
+  color: white;
 }
 
 img {
-    max-width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 figcaption {
-    color: var(--deep-blue);
-    font-style: italic;
-    text-align: center;
-    padding-bottom: 2em;
+  color: var(--deep-blue);
+  font-style: italic;
+  text-align: center;
+  padding-bottom: 2em;
 }
 
 .footnote {
-    margin-top: 0.5em;
+  margin-top: 0.5em;
 }
 
 .footnote > span {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .footnote > p {
-    padding-left: 2em;
+  padding-left: 2em;
 }
 
 thead {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 table p {
-    padding: 0.2em;
-    margin-bottom: 0 !important;
+  padding: 0.2em;
+  margin-bottom: 0 !important;
 }
 
 table {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 2em;
-    border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+  border-collapse: collapse;
 }
 
 td {
-    border-bottom: 0.1em solid var(--pale-grey);
-    padding: 0.3em;
+  border-bottom: 0.1em solid var(--pale-grey);
+  padding: 0.3em;
 }
 
 th {
-    border-bottom: 0.3em solid var(--pale-grey);
-    padding: 0.3em;
+  border-bottom: 0.3em solid var(--pale-grey);
+  padding: 0.3em;
 }
 
 .v-application .download code {
-    font-family: var(--text-font);
-    color: var(--text-link-colour) !important;
-    font-weight: 500;
+  font-family: var(--text-font);
+  color: var(--text-link-colour) !important;
+  font-weight: 500;
 }
 
 .v-application .download * {
-    background-color: transparent !important;
+  background-color: transparent !important;
 }
 
 .download::before {
-    content: "\2913";
-    color: var(--text-link-colour);
-    vertical-align: bottom;
+  content: '\2913';
+  color: var(--text-link-colour);
+  vertical-align: bottom;
 }
 
 /* Formatting for KaTeX math blocks */
 .katex-block {
-    text-align: center;
-    margin-bottom: 1em;
+  text-align: center;
+  margin-bottom: 1em;
 }
 
 .katex {
-    display: inline;
-    white-space: nowrap;
+  display: inline;
+  white-space: nowrap;
 }
 
 /* The .v-application .accent class gives a blue colour to any maths symbol with an overbar. 
 This is needed to remove it.
 */
 .katex .accent {
-    background-color: transparent !important;
-    border-color: transparent !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
 }
 .v-application .accent {
-    background-color: transparent !important;
-    border-color: transparent !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
 }
 
 .issue-code {
-    font-size: 110%;
-    color: var(--text-colour);
-    font-weight: 500;
-    padding-left: 0;
-    padding-bottom: 0;
-    border-bottom: var(--pale-grey) solid 1px;
-    margin-bottom: 0.2em;
+  font-size: 110%;
+  color: var(--text-colour);
+  font-weight: 500;
+  padding-left: 0;
+  padding-bottom: 0;
+  border-bottom: var(--pale-grey) solid 1px;
+  margin-bottom: 0.2em;
 }
 .issue-code p {
-    padding-bottom: 0;
-    margin-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 .issue > p {
-    margin-left: 2em;
+  margin-left: 2em;
 }

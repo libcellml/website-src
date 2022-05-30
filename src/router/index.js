@@ -1,273 +1,321 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '@/views/Home.vue'
+import { createWebHistory, createRouter } from 'vue-router'
 
 import store from '@/store'
 
-import { calculateBreadcrumbs } from './breadcrumbs'
-import {
-  getApiVersions,
-  getUserGuidesVersions,
-  getDevelopersVersions,
-} from '../js/versions'
+import Home from '@/views/Home.vue'
+import DocumentationHome from '@/views/DocumentationHome.vue'
+import About from '@/views/About.vue'
 
-Vue.use(VueRouter)
+import { getDocumentationVersions } from '../js/versions'
 
 const DEFAULT_TITLE = 'libCellML'
 
-const guideVersions = getUserGuidesVersions()
-const devVersions = getDevelopersVersions()
-const apiVersions = getApiVersions()
+function checkDocumentationVersion(to) {
+  const routeParams = to.params
+  // Check that version exists otherwise redirect to latest version
+  const availableVersions = getDocumentationVersions()
+  if (availableVersions.includes(routeParams.version)) {
+    store.commit('setCurrentDocumentationVersion', routeParams.version)
+    return true
+  } else if (routeParams.version === '') {
+    return {
+      name: 'Documentation',
+      params: {
+        version: availableVersions[0],
+      },
+    }
+  } else if (routeParams.version === 'latest') {
+    return changeRouteVersion(to, availableVersions[0])
+  }
 
-const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home,
-    meta: { title: 'libCellML: Home' },
-    beforeEnter: (to, from, next) => {
-      if (sessionStorage.getItem('redirect') !== null) {
-        const redirect = sessionStorage.redirect
-        delete sessionStorage.redirect
-        next(redirect)
-      } else {
-        next()
-      }
-    },
-  },
-  {
-    path: '/documentation',
-    name: 'Documentation',
-    meta: { title: 'libCellML: Documentation' },
-    component: () =>
-      import(
-        /* webpackChunkName: "documentation" */ '../views/Documentation.vue'
-      ),
-  },
-  {
-    path: '/download',
-    name: 'Download',
-    meta: { title: 'libCellML: Download' },
-    component: () =>
-      import(/* webpackChunkName: "download" */ '../views/Download.vue'),
-  },
-  {
-    path: '/documentation/api/:version/:pageName?',
-    name: 'APIReferencePage',
-    meta: { title: 'libCellML: API' },
-    component: () =>
-      import(/* webpackChunkName: "api" */ '../views/HelpAPIPage.vue'),
-    beforeEnter: (to, from, next) => {
-      if (apiVersions.includes(to.params.version)) {
-        next()
-      } else {
-        let url = '/documentation/api/' + apiVersions[0] + '/' + to.params.pageName
-        if (to.query) {
-          url += '?'
-          for (const [key, value] of Object.entries(to.query)) {
-            url += key + '=' + value + '&'
-          }
-        }
-        next(url)
-      }
-    },
-  },
-  {
-    path: '/documentation/api',
-    redirect: to => {
-      // Defaults to latest version, if not specified.
-      return '/documentation/api/' + getApiVersions()[0]
-    },
-  },
-  {
-    path: '/documentation/guides/:version',
-    name: 'GuidesHome',
-    meta: { title: 'libCellML: User Guides' },
-    component: () =>
-      import(/* webpackChunkName: "userguides" */ '../views/GuidesHome.vue'),
-    beforeEnter: (to, from, next) => {
-      // Check that version exists otherwise redirect to latest version
-      if (guideVersions.includes(to.params.version)) {
-        next()
-      } else {
-        next('/documentation/guides/' + guideVersions[0])
-      }
-    },
-  },
-  {
-    path: '/documentation/guides/:version/:pageName*',
-    name: 'TutorialsPage',
-    meta: { title: 'libCellML: User Guides' },
-    component: () =>
-      import(
-        /* webpackChunkName: "userguides" */ '../views/HelpTutorialsPage.vue'
-      ),
-    beforeEnter: (to, from, next) => {
-      if (guideVersions.includes(to.params.version)) {
-        next()
-      } else {
-        let url = '/documentation/guides/' + guideVersions[0] + '/' + to.params.pageName
-        if (to.query) {
-          url += '?'
-          for (const [key, value] of Object.entries(to.query)) {
-            url += key + '=' + value + '&'
-          }
-        }
-        next(url)
-      }
-    },
-  },
-  {
-    path: '/documentation/guides',
-    redirect: to => {
-      // Defaults to latest version, if not specified.
-      return '/documentation/guides/' + guideVersions[0]
-    },
-  },
-  {
-    path: '/documentation/developers/:version/:pageName*',
-    name: 'Developers',
-    meta: { title: 'libCellML: Developer Guides' },
-    component: () =>
-      import(/* webpackChunkName: "developers" */ '../views/Developers.vue'),
-    beforeEnter: (to, from, next) => {
-      if (devVersions.includes(to.params.version)) {
-        next()
-      } else {
-        let url = '/documentation/developers/' + devVersions[0] + '/' + to.params.pageName     
-        if (to.query) {
-          url += '?'
-          for (const [key, value] of Object.entries(to.query)) {
-            url += key + '=' + value + '&'
-          }
-        }
-        next(url)
-      }
-    },
-  },
-  {
-    path: '/documentation/developers',
-    redirect: to => {
-      // Defaults to latest version, if not specified.
-      return '/documentation/developers/' + devVersions[0]
-    },
-  },
-  {
-    path: '/translate',
-    name: 'Translate',
-    meta: { title: 'libCellML: Translate' },
-    component: () =>
-      import(/* webpackChunkName: "translate" */ '../views/Translate.vue'),
-  },
-  {
-    path: '/validate',
-    name: 'Validate',
-    meta: { title: 'libCellML: Validate' },
-    component: () =>
-      import(/* webpackChunkName: "validate" */ '../views/Validate.vue'),
-  },
-  // KRM: 404 is an actual page route.  Used for option 1 below.
-  // {
-  //   path: '/404',
-  //   name: '404',
-  //   meta: { title: 'libCellML: Not Found' },
-  //   component: () =>
-  //     import(/* webpackChunkName: "notFound" */ '../views/NotFound.vue'),
-  // },
-  {
-    path: '/network-issue',
-    name: 'network-issue',
-    component: () =>
-      import(
-        /* webpackChunkName: "networkIssue" */ '../views/NetworkIssue.vue'
-      ),
-  },
-  // KRM: Option 1: Redirect to 404 page so that URL changes
-  // {
-  //   path: '/:pathMatch(.*)*',
-  //   name: 'NotFound',
-  //   redirect: to => {
-  //     // Defaults to latest version, if not specified.
-  //     store.commit('updateLastURL', to.fullPath)
-  //     return '/404'
-  //   },
-  // },
-  // KRM: Option 2: Do not redirect, only show 404 page content
-  {
-    path: '/:pathMatch(.*)*',
-    name: 'NotFound',
-    component: () =>
-      import(/* webpackChunkName: "notFound" */ '../views/NotFound.vue'),
-    beforeEnter: (to, from, next) => {
-      store.commit('updateLastURL', to.fullPath)
-      next()
-    },
-  },
-]
-
-const createRouter = () => {
-  return new VueRouter({
-    mode: 'history',
-    base: process.env.BASE_URL,
-    routes,
-
-    scrollBehavior(to, from, savedPosition) {
-      if (to.path !== from.path && to.hash) {
-        return new Promise((resolve, reject) => {
-          setTimeout(() => {
-            let value = { x: 0, y: 0 }
-            let location = document.querySelector(to.hash)
-            if (location) {
-              value = window.scrollTo({
-                top: location.offsetTop,
-                behavior: 'smooth',
-              })
-            }
-            resolve(value)
-          }, store.getters.getTransitionDelay)
-        })
-      } else if (to.hash) {
-        let location = document.querySelector(to.hash)
-        if (location) {
-          return window.scrollTo({
-            top: location.offsetTop,
-            behavior: 'smooth',
-          })
-        }
-        return { x: 0, y: 0 }
-      } else {
-        return { x: 0, y: 0 }
-      }
-    },
+  store.dispatch('notifications/add', {
+    type: 'error',
+    title: `Could not find documentation for version: ${routeParams.version}`,
+    message: 'redirecting to `latest` documentation page.',
   })
+  return {
+    name: 'Documentation',
+    params: {
+      version: availableVersions[0],
+    },
+  }
 }
 
-const router = createRouter()
+const homeRoute = {
+  path: '/',
+  name: 'Home',
+  meta: { title: 'libCellML: Home' },
+  component: Home,
+}
+const aboutRoute = {
+  path: '/#about',
+  name: 'About',
+  component: About,
+}
+const baseDocumentationRoute = {
+  path: '/documentation',
+  name: 'DocumentationBase',
+  strict: true,
+  redirect: (to) => {
+    // the function receives the target route as the argument
+    // we return a redirect path/location here.
+    return {
+      name: 'DocumentationHome',
+      params: { version: getDocumentationVersions()[0] },
+    }
+  },
+}
+const baseVersionDocumentationRoute = {
+  path: '/documentation/:version?',
+  name: 'DocumentationHome',
+  meta: { title: 'libCellML: Documentation' },
+  component: DocumentationHome,
+  beforeEnter: (to, from, next) => {
+    const nextTarget = checkDocumentationVersion(to)
+    next(nextTarget)
+  },
+}
+const apiDocumentationRoute = {
+  path: '/documentation/:version/api/:pageName?',
+  name: 'DocumentationAPI',
+  meta: { title: 'libCellML: API' },
+  component: () =>
+    import(
+      /* webpackChunkName: "DocumentationAPI" */ '@/views/DocumentationAPI.vue'
+    ),
+  beforeEnter: (to, from, next) => {
+    const nextTarget = checkDocumentationVersion(to)
+    next(nextTarget)
+  },
+}
+const developerDocumentationHomeRoute = {
+  path: '/documentation/:version/developer/:pageName*',
+  name: 'DocumentationDeveloper',
+  meta: { title: 'libCellML: Developer' },
+  component: () =>
+    import(
+      /* webpackChunkName: "DocumentationDeveloper" */ '@/views/DocumentationDeveloper.vue'
+    ),
+  beforeEnter: (to, from, next) => {
+    const nextTarget = checkDocumentationVersion(to)
+    next(nextTarget)
+  },
+}
+const userGuidesDocumentationHomeRoute = {
+  path: '/documentation/:version/userguides',
+  name: 'DocumentationUserGuidesHome',
+  meta: { title: 'libCellML: User Guides' },
+  component: () =>
+    import(
+      /* webpackChunkName: "DocumentationUserGuidesHome" */ '@/views/DocumentationUserGuidesHome.vue'
+    ),
+  beforeEnter: (to, from, next) => {
+    const nextTarget = checkDocumentationVersion(to)
+    next(nextTarget)
+  },
+}
+const userGuidesDocumentationRoute = {
+  path: '/documentation/:version/userguides/:pageName+',
+  name: 'DocumentationUserGuides',
+  meta: { title: 'libCellML: User Guides' },
+  component: () =>
+    import(
+      /* webpackChunkName: "DocumentationUserGuides" */ '@/views/DocumentationUserGuides.vue'
+    ),
+  beforeEnter: (to, from, next) => {
+    const nextTarget = checkDocumentationVersion(to)
+    next(nextTarget)
+  },
+}
+const validateRoute = {
+  path: '/validate',
+  name: 'Validate',
+  meta: { title: 'libCellML: Validate' },
+  component: () =>
+    import(/* webpackChunkName: "validate" */ '@/views/Validate.vue'),
+}
+const translateRoute = {
+  path: '/translate',
+  name: 'Translate',
+  meta: { title: 'libCellML: Translate' },
+  component: () =>
+    import(/* webpackChunkName: "translate" */ '@/views/Translate.vue'),
+}
+const downloadRoute = {
+  path: '/download',
+  name: 'Download',
+  meta: { title: 'libCellML: Download' },
+  component: () =>
+    import(/* webpackChunkName: "download" */ '@/views/Download.vue'),
+}
+const importRoute = {
+  path: '/import',
+  name: 'Import',
+  meta: { title: 'libCellML: Import' },
+  component: () =>
+    import(/* webpackChunkName: "download" */ '@/views/Import.vue'),
+}
 
-router.beforeResolve((to, from, next) => {
-  // Check for occurrences of 'latest' in the version field, and update
-  if (to.params.version === 'latest' && to.name === 'APIReferencePage') {
-    to.params.version = getApiVersions()[0]
-  }
-  if (to.params.version === 'latest' && to.name === 'TutorialsPage') {
-    to.params.version = getUserGuidesVersions()[0]
-  }
-  next()
+const routes = [
+  homeRoute,
+  aboutRoute,
+  apiDocumentationRoute,
+  developerDocumentationHomeRoute,
+  userGuidesDocumentationHomeRoute,
+  userGuidesDocumentationRoute,
+  baseVersionDocumentationRoute,
+  baseDocumentationRoute,
+  translateRoute,
+  validateRoute,
+  downloadRoute,
+  importRoute,
+]
+
+export const versionedRoutes = ['DocumentationAPI', 'DocumentationDeveloper', 'DocumentationUserGuides']
+
+const onePathDeepRoutes = [
+  downloadRoute.name,
+  importRoute.name,
+  translateRoute.name,
+  validateRoute.name,
+]
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (to.name === homeRoute.name && to.hash) {
+      let location = document.querySelector(to.hash)
+      if (location) {
+        return window.scrollTo({
+          top: location.offsetTop,
+          behavior: 'smooth',
+        })
+      }
+    }
+  },
 })
+
+const prettifyTitles = [
+  { search: 'classlibcellml_1_1', replace: 'Class libcellml::' },
+  { search: 'namespacelibcellml', replace: 'Namespace libcellml' },
+]
+
+function convertToReadableText(bookmarkText) {
+  for (const entry of prettifyTitles) {
+    bookmarkText = bookmarkText.replace(entry.search, entry.replace)
+  }
+  bookmarkText = bookmarkText.replaceAll('_', ' ')
+  // bookmarkText = bookmarkText.replace(/([A-Z])/g, ' $1') // Insert space before capital letter
+  bookmarkText = bookmarkText.replace(/([0-9])/g, ' $1') // Insert space before number
+  bookmarkText = bookmarkText.trim() // Removing leading space, if present
+  return bookmarkText
+}
+
+function createBreadcrumb(to, label = undefined, choice = false) {
+  let text = label
+  if (label === undefined) {
+    text = to.name
+  }
+  return {
+    disabled: false,
+    exact: false,
+    link: false,
+    text,
+    to,
+    versionChoice: choice,
+  }
+}
+
+export const calculateBreadcrumbs = (to) => {
+  const versions = getDocumentationVersions()
+  // If I wanted to disable the breadcrumb for *Home* when on the home page
+  // I would set the *to* parameter to '', but this gives me a differently
+  // sized home icon which I dislike more than having the home crumb a link.
+  let crumbs = [createBreadcrumb(to.name === 'Home' ? '/' : '/', 'Home')]
+  if (to.name !== 'Home') {
+    let pages = to.path.split('/')
+    pages.shift()
+    let path = ''
+    let depth = 0
+    if (onePathDeepRoutes.includes(to.name)) {
+      crumbs.push(createBreadcrumb('', pages[0]))
+    } else {
+      for (const el of pages) {
+        depth += 1
+        path += '/' + el
+        if (to.name === baseVersionDocumentationRoute.name) {
+          if (versions.includes(el)) {
+            crumbs.push(createBreadcrumb('', el, true))
+          } else {
+            crumbs.push(createBreadcrumb('', el))
+          }
+        } else if (to.name === aboutRoute.name) {
+          crumbs.push(createBreadcrumb('', aboutRoute.name))
+        } else if (to.name === apiDocumentationRoute.name) {
+          if (versions.includes(el)) {
+            crumbs.push(createBreadcrumb('', el, true))
+          } else {
+            let route = { path }
+            if (el === pages[pages.length - 1]) {
+              route = ''
+            }
+
+            crumbs.push(createBreadcrumb(route, convertToReadableText(el)))
+          }
+        } else if (
+          to.name === userGuidesDocumentationRoute.name ||
+          to.name === userGuidesDocumentationHomeRoute.name ||
+          to.name === developerDocumentationHomeRoute.name
+        ) {
+          if (versions.includes(el)) {
+            crumbs.push(createBreadcrumb('', el, true))
+          } else {
+            let subPath = 'userguides'
+            if (to.name === developerDocumentationHomeRoute.name) {
+              subPath = 'developer'
+            }
+            let route = { path }
+            if (el !== subPath && path.includes(subPath)) {
+              route = { path: path + '/index' }
+            }
+            if (depth === pages.length) {
+              route = ''
+            }
+            if (pages[depth] === 'index') {
+              route = ''
+            }
+            if (pages[depth - 1] !== 'index') {
+              crumbs.push(createBreadcrumb(route, convertToReadableText(el)))
+            }
+          }
+        }
+      }
+    }
+  }
+
+  return crumbs
+}
 
 router.beforeEach((to, from, next) => {
   store.commit('setBreadcrumbs', calculateBreadcrumbs(to))
-  store.commit('updateLastURL', to.path)
   next()
 })
 
 router.afterEach((to, from) => {
-  if (to.name !== from.name) {
-    store.commit('togglePageContentChanged')
-  }
-  Vue.nextTick(() => {
+  setTimeout(() => {
     document.title = to.meta.title || DEFAULT_TITLE
-  })
+  }, 0)
 })
 
 export default router
+
+export const changeRouteVersion = (route, version) => {
+  const clone = JSON.parse(JSON.stringify(route))
+  clone.href = clone.href.replace(route.params.version, version)
+  clone.fullPath = clone.fullPath.replace(route.params.version, version)
+  clone.path = clone.path.replace(route.params.version, version)
+  clone.params.version = version
+
+  return clone
+}

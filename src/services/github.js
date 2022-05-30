@@ -1,7 +1,7 @@
-// import axios from 'axios'
-const axios = require('axios')
-// import CryptoJS from 'crypto-js'
-const CryptoJS = require('crypto-js')
+import axios from 'axios'
+// const axios = require('axios')
+import CryptoJS from 'crypto-js'
+// const CryptoJS = require('crypto-js')
 
 const apiClient = axios.create({
   baseURL: 'https://api.github.com/',
@@ -48,7 +48,7 @@ const rateLimit = async () => {
   return response.data
 }
 
-module.exports = {
+export default {
   rateLimit,
   contributors,
   user,

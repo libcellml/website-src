@@ -1,28 +1,12 @@
 <template>
   <div class="download-view">
-    <v-container>
-      <v-row>
-        <v-col>
-          <BreadCrumbs />
-          <DownloadSummary />
-          <DownloadComplete />
-        </v-col>
-      </v-row>
-    </v-container>
+    <download-intro />
+    <download-complete />
   </div>
 </template>
 
-<script>
-import DownloadSummary from '@/components/DownloadSummary'
-import DownloadComplete from '@/components/DownloadComplete'
-import BreadCrumbs from '@/components/BreadCrumbs'
-
-export default {
-  name: 'Download',
-  components: {
-    DownloadSummary,
-    DownloadComplete,
-    BreadCrumbs,
-  },
-}
+<script setup>
+import DownloadIntro from '../components/download/DownloadIntro.vue'
+// import DownloadSummary from '../components/download/DownloadSummary.vue'
+import DownloadComplete from '../components/download/DownloadComplete.vue'
 </script>
