@@ -77,5 +77,7 @@ onMounted(() => {
   )
 
   document.head.appendChild(redirectScript)
+  console.log('============')
+  console.log(redirectScript)
 })
 </script>
