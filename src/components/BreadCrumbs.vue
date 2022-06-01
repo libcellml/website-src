@@ -27,6 +27,7 @@
                     v-bind="props"
                     variant="outlined"
                   >
+                    <v-icon right>mdi-unfold-more-horizontal</v-icon>
                     {{ store.state.current_documentation_version }}
                   </v-btn>
                 </template>
