@@ -72,7 +72,7 @@
 import { ref } from 'vue'
 import { useStore } from 'vuex'
 
-import TranslateLimitiations from '../components/TranslateLimitiations.vue'
+import TranslateLimitations from '../components/TranslateLimitations.vue'
 
 import { translate, translateOmex, getXslt } from '@/js/translate'
 import { downloadFile, downloadFileTitle } from '../js/utilities'
