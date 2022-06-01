@@ -30,7 +30,7 @@
 </template>
 
 <script setup>
-import { computed, inject } from 'vue'
+import { computed, inject, onMounted } from 'vue'
 import { useStore } from 'vuex'
 
 import BreadCrumbs from './components/BreadCrumbs.vue'
@@ -61,5 +61,21 @@ const sidebarState = computed({
   set(val) {
     store.state.sidebarOpen = val
   },
+})
+
+onMounted(() => {
+  let redirectScript = document.createElement('script')
+  redirectScript.setAttribute('type', 'text/javascript')
+  redirectScript.setInnerHtml(
+    ```; (function () {
+      var redirect = sessionStorage.redirect
+      delete sessionStorage.redirect
+      if (redirect && redirect !== location.href) {
+        history.replaceState(null, null, redirect)
+      }
+    })()```
+  )
+
+  document.head.appendChild(redirectScript)
 })
 </script>
