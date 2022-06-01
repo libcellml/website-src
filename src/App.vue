@@ -7,6 +7,7 @@
       app
       v-model="sidebarState"
       id="sideMenuPanel"
+      width="256"
       clipped
       stateless
     >
@@ -29,7 +30,7 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, inject } from 'vue'
 import { useStore } from 'vuex'
 
 import BreadCrumbs from './components/BreadCrumbs.vue'
@@ -43,8 +44,14 @@ import './css/general.css'
 
 const store = useStore()
 
+const sidebarOverlaySizes = ['xs', 'sm', 'md']
+
 const getXOffset = computed(() => {
-  return '1rem'
+  const vuetifyDisplay = inject(Symbol.for('vuetify:display'))
+  if (sidebarOverlaySizes.includes(vuetifyDisplay.name.value)) {
+    return '1rem'
+  }
+  return store.state.sidebarOpen ? '17rem' : '1rem'
 })
 
 const sidebarState = computed({
