@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div id="aboutContent" class="about">
     <h1>About libCellML</h1>
     <h3>Questions and comments</h3>
     <p>

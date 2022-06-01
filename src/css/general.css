@@ -65,13 +65,6 @@
   --mono-font: monospace;
 }
 
-/* Make max width for page content. */
-#pageContent {
-  max-width: 900px;
-  float: left;
-  padding-top: 0;
-}
-
 h1 {
   color: var(--mid-red);
   margin-bottom: 0.5em;
