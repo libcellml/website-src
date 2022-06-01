@@ -17,15 +17,30 @@
         <template v-slot:text="{ item }">
           <!-- Dropdown in the breadcrumbs menu: -->
           <template v-if="item.versionChoice">
-            <version-dropdown
-              :versionChoices="getDocumentationVersions()"
-            /><v-breadcrumbs-item
-              :to="item.to"
-              :disabled="item.disabled"
-              :exact="true"
-              :style="'padding-right: 0;'"
-            >
-              {{ item.text }}
+            <!-- I would prefer this to be a v-select based element but that doesn't behave very well as a breadcrumb item. -->
+            <v-breadcrumbs-item>
+              <v-menu transition="scroll-y-transition">
+                <template v-slot:activator="{ props }">
+                  <v-btn
+                    color="primary"
+                    class="ma-2"
+                    v-bind="props"
+                    variant="outlined"
+                  >
+                    {{ store.state.current_documentation_version }}
+                  </v-btn>
+                </template>
+                <v-list>
+                  <v-list-item
+                    v-for="v of alternativeVersions"
+                    :key="v"
+                    :to="v.to"
+                    @click="updateCurrentVersion(v.text)"
+                  >
+                    <v-list-item-title v-text="v.text"></v-list-item-title>
+                  </v-list-item>
+                </v-list>
+              </v-menu>
             </v-breadcrumbs-item>
           </template>
 
@@ -53,20 +68,19 @@
 <script setup>
 import { computed } from 'vue'
 import { useStore } from 'vuex'
-import { useRouter } from 'vue-router'
+import { useRoute } from 'vue-router'
 
-import VersionDropdown from './VersionDropdown.vue'
 import { getDocumentationVersions } from '../js/versions'
 import { versionedRoutes, changeRouteVersion } from '../router'
 
 const store = useStore()
-const router = useRouter()
+const route = useRoute()
 
 const latest = getDocumentationVersions()[0]
 
 const viewingOldDocumentation = computed(() => {
   if (
-    versionedRoutes.includes(router.currentRoute.value.name) &&
+    versionedRoutes.includes(route.name) &&
     store.state.current_documentation_version !== latest
   ) {
     return true
@@ -76,15 +90,62 @@ const viewingOldDocumentation = computed(() => {
 
 const getRouteToLatestVersion = computed(() => {
   if (viewingOldDocumentation) {
-    const currentRoute = router.currentRoute.value
-    return changeRouteVersion(currentRoute, latest)
+    return changeRouteVersion(route, latest)
   }
 
   return { name: 'Home' }
 })
 
+const alternativeVersions = computed(() => {
+  let versionList = []
+  for (const version of getDocumentationVersions()) {
+    if (version !== store.state.current_documentation_version) {
+      versionList.push({
+        to: getRouteForVersion(version),
+        text: version,
+      })
+    }
+  }
+  if (versionList.length === 0) {
+    versionList.push({
+      to: '',
+      text: 'No other versions available.',
+    })
+  }
+
+  return versionList
+})
+const currentVersion = computed({
+  get() {
+    return store.state.current_documentation_version
+  },
+  set(val) {
+    store.state.current_documentation_version = val
+  },
+})
+
+function getRouteForVersion(version) {
+  const currentRoute = route
+  let changedRoute = { path: '/' }
+  // Some 'routes' received here are not proper routes but breadcrumb link routes.
+  // We will ignore those routes.
+  if (
+    currentRoute.path &&
+    currentRoute.fullPath &&
+    currentRoute.params &&
+    currentRoute.params.version
+  ) {
+    changedRoute = changeRouteVersion(currentRoute, version)
+  }
+  return changedRoute
+}
+
 function onViewLatest() {
   store.commit('setCurrentDocumentationVersion', latest)
+}
+
+function updateCurrentVersion(version) {
+  store.commit('setCurrentDocumentationVersion', version)
 }
 </script>
 
