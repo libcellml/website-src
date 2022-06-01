@@ -312,7 +312,7 @@ export default router
 
 export const changeRouteVersion = (route, version) => {
   const clone = JSON.parse(JSON.stringify(route))
-  clone.href = clone.href.replace(route.params.version, version)
+  // clone.href = clone.href.replace(route.params.version, version)
   clone.fullPath = clone.fullPath.replace(route.params.version, version)
   clone.path = clone.path.replace(route.params.version, version)
   clone.params.version = version

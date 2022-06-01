@@ -4,7 +4,7 @@
     title="Scroll to top"
     v-scroll="onScroll"
     v-show="showButton"
-    :style="{ left: xOffset, bottom: '0.675rem', position: 'fixed', zIndex: '6' }"
+    :style="{ left: xOffset, bottom: '0.675rem', position: 'fixed', zIndex: '1005' }"
     fab
     dark
     color="primary"
