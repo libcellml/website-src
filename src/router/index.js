@@ -171,7 +171,11 @@ const routes = [
   importRoute,
 ]
 
-export const versionedRoutes = ['DocumentationAPI', 'DocumentationDeveloper', 'DocumentationUserGuides']
+export const versionedRoutes = [
+  'DocumentationAPI',
+  'DocumentationDeveloper',
+  'DocumentationUserGuides',
+]
 
 const onePathDeepRoutes = [
   downloadRoute.name,
@@ -310,9 +314,28 @@ router.afterEach((to, from) => {
 
 export default router
 
+const keepKeys = [
+  'fullPath',
+  'hash',
+  'href',
+  // 'matched',
+  'meta',
+  'name',
+  'params',
+  'path',
+  'query',
+]
+
 export const changeRouteVersion = (route, version) => {
-  const clone = JSON.parse(JSON.stringify(route))
-  // clone.href = clone.href.replace(route.params.version, version)
+  let clone = {}
+  for (const key of keepKeys) {
+    if (route[key] !== undefined) {
+      clone[key] = JSON.parse(JSON.stringify(route[key]))
+    }
+  }
+  if (clone.href !== undefined) {
+    clone.href = clone.href.replace(route.params.version, version)
+  }
   clone.fullPath = clone.fullPath.replace(route.params.version, version)
   clone.path = clone.path.replace(route.params.version, version)
   clone.params.version = version
