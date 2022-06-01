@@ -1,239 +1,190 @@
 <template>
-  
-    <v-container>
-      <v-row>
-        <v-col>
-          <template v-if="menuInSidebar">
-            <h4>Menu</h4>
-            <ul id="sidebarMenu">
-              <li
-                v-for="link in links"
-                :key="link.label"
-                style="list-style-type: none"
-              >
-                <router-link :to="link.url">
-                  {{ link.label }}
-                </router-link>
-              </li>
-            </ul>
-          </template>
-          <br />
+  <v-container>
+    <v-row>
+      <v-col>
+        <template v-if="haveQuickLinks">
+          <h4>Quick links</h4>
+          <ul id="sidebarMenu">
+            <li
+              v-for="link in quickLinks"
+              :key="link.label"
+              style="list-style-type: none"
+            >
+              <router-link :to="link.url">
+                {{ link.label }}
+              </router-link>
+            </li>
+          </ul>
+        </template>
 
-          <template v-if="hasQuickLinks">
-            <h4>Quick links</h4>
-            <ul id="sidebarMenu">
-              <li
-                v-for="link in quickLinks"
-                :key="link.label"
-                style="list-style-type: none"
+        <template v-if="havePageHeadings">
+          <h4>On this page</h4>
+          <ul>
+            <li
+              v-for="(heading, index) in pageHeadings"
+              :key="'h1_' + index"
+              style="list-style-type: none"
+            >
+              <router-link
+                v-if="heading.id"
+                :to="`${$route.path}#${heading.id}`"
               >
-                <router-link :to="link.url">
-                  {{ link.label }}
-                </router-link>
-              </li>
-            </ul>
-          </template>
-
-          <template v-if="havePageHeadings">
-            <h4>On this page</h4>
-            <ul>
-              <li
-                v-for="(heading, index) in pageHeadings"
-                :key="'h1_' + index"
-                style="list-style-type: none"
+                {{ heading.el.innerText || heading.el.textContent }}
+              </router-link>
+              <template v-else>
+                {{ heading.el.innerText || heading.el.textContent }}
+              </template>
+              <ul
+                v-if="heading.children.length"
+                style="padding-inline-start: 1rem"
               >
-                <router-link
-                  v-if="heading.id"
-                  :to="`${$route.path}#${heading.id}`"
+                <li
+                  v-for="(subHeading, index) in heading.children"
+                  :key="'h2_' + index"
+                  style="list-style-type: none"
                 >
-                  {{ heading.el.innerText || heading.el.textContent }}
-                </router-link>
-                <template v-else>
-                  {{ heading.el.innerText || heading.el.textContent }}
-                </template>
-              </li>
-            </ul>
-          </template>
-        </v-col>
-      </v-row>
-    </v-container>
+                  <router-link
+                    v-if="subHeading.id"
+                    :to="`${$route.path}#${subHeading.id}`"
+                  >
+                    {{ subHeading.el.innerText || subHeading.el.textContent }}
+                  </router-link>
+                  <template v-else>
+                    {{ subHeading.el.innerText || subHeading.el.textContent }}
+                  </template>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </template>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { useStore } from 'vuex'
+import { useRoute } from 'vue-router'
 
 const store = useStore()
+const route = useRoute()
 
-const sidebarState = computed({
-  get() {
-    return store.state.sidebarOpen
-  },
-  set(val) {
-    store.state.sidebarOpen = val
-  },
-})
-
-const menuInSidebar = ref(false)
 const quickLinks = ref([])
 const pageHeadings = ref([])
-const havePageHeadings = pageHeadings.value.length > 0
-const hasQuickLinks = quickLinks.value.length > 0
-// export default {
-//   name: 'Sidebar',
 
-//   created() {
-//     window.addEventListener('resize', this.handleResize)
-//     this.handleResize()
-//   },
-//   mounted() {
-//     if (this.$route.name === 'Home') {
-//       this.menuInSidebar = false
-//     } else {
-//       setTimeout(() => {
-//         this.menuInSidebar = this.calculateMenu()
-//       }, this.$store.getters.getTransitionDelay)
-//     }
-//   },
-//   destroyed() {
-//     window.removeEventListener('resize', this.handleResize)
-//   },
+let previousHeight = -1
+let mainContentElement = null
+let timeout = null
 
-//   data() {
-//     return {
-//       menuInSidebar: false,
-//       pageHeadings: [],
-//       quickLinks: [],
-//       width: 0,
-//       links: [
-//         {
-//           label: 'Home',
-//           url: '/',
-//         },
-//         {
-//           label: 'Download',
-//           url: '/#download',
-//         },
-//         {
-//           label: 'Documentation',
-//           url: '/#documentation',
-//         },
-//         {
-//           label: 'Services',
-//           url: '/#services',
-//         },
-//         {
-//           label: 'About',
-//           url: '/#about',
-//         },
-//       ],
-//     }
-//   },
+const resizeObserver = new ResizeObserver((entries) => {
+  if (entries.length === 1) {
+    const entry = entries[0]
+    const currentHeight = entry.contentRect.height
+    if (currentHeight !== previousHeight) {
+      previousHeight = currentHeight
+      refresh()
+    }
+  }
+})
 
-//   computed: {
-//     isOpen: {
-//       get() {
-//         return this.$store.getters.getSidebarOpen
-//       },
-//       set(newValue) {
-//         this.$store.commit('setSidebarOpen', newValue)
-//       },
-//     },
-//     pageChanged() {
-//       return this.$store.state.pageContentChanged
-//     },
-//     havePageHeadings() {
-//       return this.pageHeadings.length
-//     },
-//     hasQuickLinks() {
-//       return this.quickLinks.length
-//     },
-//   },
+onMounted(() => {
+  findPageMainContent()
+})
 
-//   watch: {
-//     pageChanged() {
-//       setTimeout(() => {
-//         if (this.$route.name === 'Home') {
-//           this.pageHeadings = []
-//           this.quickLinks = []
-//           this.menuInSidebar = false
-//           return
-//         }
-//         this.pageHeadings = this.findHeadings()
-//         this.quickLinks = this.findQuickLinks()
-//       }, this.$store.getters.getTransitionDelay)
-//     },
-//   },
+const havePageHeadings = computed(() => {
+  return pageHeadings.value.length > 0
+})
+const haveQuickLinks = computed(() => {
+  return quickLinks.value.length > 0
+})
 
-//   methods: {
-//     getHeadings(element, level) {
-//       return element.getElementsByTagName('h' + level)
-//     },
-//     getHeaderLinkId(element) {
-//       let id = element.getAttribute('id')
-//       if (!id) {
-//         if (element.parentElement.nodeName === 'SECTION') {
-//           id = element.parentElement.getAttribute('id')
-//         }
-//       }
-//       return id
-//     },
-//     findHeadings() {
-//       const headingInitial = 2
-//       let headingTree = []
-//       let el = document.querySelector('#pageContent')
-//       if (el) {
-//         let headings = this.getHeadings(el, headingInitial)
-//         headings.forEach((heading) => {
-//           let subHeadings = this.getHeadings(heading, headingInitial + 1)
-//           const treeEntry = {
-//             el: heading,
-//             id: this.getHeaderLinkId(heading),
-//             children: subHeadings,
-//           }
-//           headingTree.push(treeEntry)
-//         })
-//       }
-//       return headingTree
-//     },
-
-//     findQuickLinks() {
-//       let qs = document.getElementsByClassName('quicklinks')
-//       let quickLinks = []
-//       qs.forEach((q) => {
-//         let links = q.getElementsByTagName('a')
-//         links.forEach((link) => {
-//           quickLinks.push({
-//             label: link.textContent,
-//             url: link.getAttribute('href'),
-//           })
-//         })
-//       })
-//       return quickLinks
-//     },
-
-//     calculateMenu() {
-//       let menuBar = document.getElementById('topMenuBar')
-//       if (menuBar !== null) {
-//         let style = window
-//           .getComputedStyle(menuBar, null)
-//           .getPropertyValue('font-size')
-//         let fontSize = parseFloat(style)
-
-//         return this.width < fontSize * 71.5 // 1140 width / 16 font size
-//       }
-//       return true
-//     },
-//     handleResize() {
-//       this.width = window.innerWidth
-//       this.menuInSidebar = this.calculateMenu()
-//     },
-//   },
-// }
-</script>
-
-<style>
-#libcellml .v-navigation-drawer__border {
-  display: none;
+function refresh() {
+  clearTimeout(timeout)
+  timeout = setTimeout(() => {
+    pageHeadings.value = findHeadings()
+    quickLinks.value = findQuickLinks()
+    timeout = null
+  }, 150)
 }
-</style>
+function findHeadings() {
+  const headingInitial = 1
+  let headingTree = []
+  if (mainContentElement) {
+    const headings = mainContentElement.getElementsByTagName(
+      'h' + headingInitial
+    )
+    for (const heading of headings) {
+      const subHeadings = getSubHeadings(heading, headingInitial)
+      const treeEntry = {
+        el: heading,
+        id: getHeaderLinkId(heading),
+        children: subHeadings,
+      }
+      headingTree.push(treeEntry)
+    }
+  }
+  return headingTree
+}
+function getSubHeadings(element, level) {
+  const nextLevelTag = 'H' + (level + 1)
+  const thisLevelTag = 'H' + level
+  let subHeadings = []
+  let nextElementSibling = element.nextElementSibling
+  while (nextElementSibling) {
+    if (nextElementSibling.tagName === thisLevelTag) {
+      nextElementSibling = null
+    } else {
+      if (nextElementSibling.tagName === nextLevelTag) {
+        subHeadings.push({
+          el: nextElementSibling,
+          id: getHeaderLinkId(nextElementSibling),
+        })
+      }
+      const result = nextElementSibling.getElementsByTagName(nextLevelTag)
+      if (result.length) {
+        for (const r of result) {
+          subHeadings.push({ el: r, id: getHeaderLinkId(r) })
+        }
+      }
+      nextElementSibling = nextElementSibling.nextElementSibling
+    }
+  }
+  return subHeadings
+}
+function getHeaderLinkId(element) {
+  let id = element.getAttribute('id')
+  if (!id) {
+    if (element.parentElement.nodeName === 'SECTION') {
+      id = element.parentElement.getAttribute('id')
+    } else if (element.parentElement.nodeName === 'DIV') {
+      id = element.parentElement.getAttribute('id')
+    }
+  }
+  return id
+}
+function findQuickLinks() {
+  let quickLinksList = []
+  let qs = mainContentElement.getElementsByClassName('quicklinks')
+  for (const q of qs) {
+    let links = q.getElementsByTagName('a')
+    for (const link of links) {
+      quickLinksList.push({
+        label: link.textContent,
+        url: link.getAttribute('href'),
+      })
+    }
+  }
+  return quickLinksList
+}
+function findPageMainContent() {
+  mainContentElement = document.querySelector('#pageMainContent')
+  if (mainContentElement === null) {
+    setTimeout(() => {
+      findPageMainContent()
+    }, 100)
+  } else {
+    resizeObserver.observe(mainContentElement)
+  }
+}
+</script>

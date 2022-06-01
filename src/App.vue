@@ -21,7 +21,9 @@
             <bread-crumbs />
           </v-col>
         </v-row>
-        <router-view />
+        <div id="pageMainContent">
+          <router-view />
+        </div>
       </v-container>
     </v-main>
     <notification-container />

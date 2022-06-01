@@ -1,5 +1,5 @@
 <template>
-  <div class="intro">
+  <div  id="introContent" class="intro">
     <h1>libCellML</h1>
     <h3>
       libCellML is an easy-to-use library aiming to be useful to developers of
