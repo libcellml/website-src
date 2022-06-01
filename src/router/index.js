@@ -79,10 +79,7 @@ const apiDocumentationRoute = {
   path: '/documentation/:version/api/:pageName?',
   name: 'DocumentationAPI',
   meta: { title: 'libCellML: API' },
-  component: () =>
-    import(
-      /* webpackChunkName: "DocumentationAPI" */ '@/views/DocumentationAPI.vue'
-    ),
+  component: () => import('@/views/DocumentationAPI.vue'),
   beforeEnter: (to, from, next) => {
     const nextTarget = checkDocumentationVersion(to)
     next(nextTarget)
@@ -92,10 +89,7 @@ const developerDocumentationHomeRoute = {
   path: '/documentation/:version/developer/:pageName*',
   name: 'DocumentationDeveloper',
   meta: { title: 'libCellML: Developer' },
-  component: () =>
-    import(
-      /* webpackChunkName: "DocumentationDeveloper" */ '@/views/DocumentationDeveloper.vue'
-    ),
+  component: () => import('@/views/DocumentationDeveloper.vue'),
   beforeEnter: (to, from, next) => {
     const nextTarget = checkDocumentationVersion(to)
     next(nextTarget)
@@ -105,10 +99,7 @@ const userGuidesDocumentationHomeRoute = {
   path: '/documentation/:version/userguides',
   name: 'DocumentationUserGuidesHome',
   meta: { title: 'libCellML: User Guides' },
-  component: () =>
-    import(
-      /* webpackChunkName: "DocumentationUserGuidesHome" */ '@/views/DocumentationUserGuidesHome.vue'
-    ),
+  component: () => import('@/views/DocumentationUserGuidesHome.vue'),
   beforeEnter: (to, from, next) => {
     const nextTarget = checkDocumentationVersion(to)
     next(nextTarget)
@@ -118,10 +109,7 @@ const userGuidesDocumentationRoute = {
   path: '/documentation/:version/userguides/:pageName+',
   name: 'DocumentationUserGuides',
   meta: { title: 'libCellML: User Guides' },
-  component: () =>
-    import(
-      /* webpackChunkName: "DocumentationUserGuides" */ '@/views/DocumentationUserGuides.vue'
-    ),
+  component: () => import('@/views/DocumentationUserGuides.vue'),
   beforeEnter: (to, from, next) => {
     const nextTarget = checkDocumentationVersion(to)
     next(nextTarget)
@@ -131,29 +119,37 @@ const validateRoute = {
   path: '/validate',
   name: 'Validate',
   meta: { title: 'libCellML: Validate' },
-  component: () =>
-    import(/* webpackChunkName: "validate" */ '@/views/Validate.vue'),
+  component: () => import('@/views/Validate.vue'),
 }
 const translateRoute = {
   path: '/translate',
   name: 'Translate',
   meta: { title: 'libCellML: Translate' },
-  component: () =>
-    import(/* webpackChunkName: "translate" */ '@/views/Translate.vue'),
+  component: () => import('@/views/Translate.vue'),
 }
 const downloadRoute = {
   path: '/download',
   name: 'Download',
   meta: { title: 'libCellML: Download' },
-  component: () =>
-    import(/* webpackChunkName: "download" */ '@/views/Download.vue'),
+  component: () => import('@/views/Download.vue'),
 }
 const importRoute = {
   path: '/import',
   name: 'Import',
   meta: { title: 'libCellML: Import' },
-  component: () =>
-    import(/* webpackChunkName: "download" */ '@/views/Import.vue'),
+  component: () => import('@/views/Import.vue'),
+}
+const notFoundRoute = {
+  path: '/404',
+  name: '404',
+  meta: { title: 'libCellML: Not Found' },
+  component: () => import('../views/NotFound.vue'),
+}
+const catchEverythingRoute = {
+  path: '/:unknownPageName.*',
+  redirect: {
+    name: '404',
+  },
 }
 
 const routes = [
@@ -169,6 +165,8 @@ const routes = [
   validateRoute,
   downloadRoute,
   importRoute,
+  notFoundRoute,
+  catchEverythingRoute,
 ]
 
 export const versionedRoutes = [
@@ -182,6 +180,7 @@ const onePathDeepRoutes = [
   importRoute.name,
   translateRoute.name,
   validateRoute.name,
+  notFoundRoute.name,
 ]
 
 const router = createRouter({
