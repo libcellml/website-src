@@ -11,6 +11,7 @@ const store = createStore({
     documentation_versions: documentationVersions,
     current_documentation_version: documentationVersions[0],
     sidebarOpen: false,
+    lastURL: ['', '', ''],
     quickLinks: [],
   },
   getters: {
@@ -20,11 +21,14 @@ const store = createStore({
     getCurrentDocumentationVersion: (state) => {
       return state.current_documentation_version
     },
-    getSidebarState: state => {
+    getSidebarState: (state) => {
       return state.sidebarOpen
     },
-    getQuickLinks: state => {
+    getQuickLinks: (state) => {
       return state.quickLinks
+    },
+    getLastURL: (state) => {
+      return state.lastURL[1]
     },
   },
   mutations: {
@@ -41,6 +45,11 @@ const store = createStore({
     },
     setQuickLinks: (state, value) => {
       state.quickLinks = value
+    },
+    updateLastURL: (state, value) => {
+      state.lastURL[0] = state.lastURL[1]
+      state.lastURL[1] = state.lastURL[2]
+      state.lastURL[2] = value
     },
   },
   modules: { notifications },
