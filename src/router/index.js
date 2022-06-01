@@ -46,6 +46,15 @@ const homeRoute = {
   name: 'Home',
   meta: { title: 'libCellML: Home' },
   component: Home,
+  beforeEnter: (to, from, next) => {
+    if (sessionStorage.getItem('redirect') !== null) {
+      const redirect = sessionStorage.redirect
+      delete sessionStorage.redirect
+      next(redirect)
+    } else {
+      next()
+    }
+  },
 }
 const aboutRoute = {
   path: '/#about',
