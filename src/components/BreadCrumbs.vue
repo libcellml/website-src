@@ -23,12 +23,12 @@
                 <template v-slot:activator="{ props }">
                   <v-btn
                     color="primary"
-                    class="ma-2"
+                    class="ma-2 text-lowercase"
                     v-bind="props"
                     variant="outlined"
                   >
-                    <v-icon right>mdi-unfold-more-horizontal</v-icon>
                     {{ store.state.current_documentation_version }}
+                    <v-icon end icon="mdi-unfold-more-horizontal"></v-icon>
                   </v-btn>
                 </template>
                 <v-list>

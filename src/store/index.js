@@ -8,7 +8,6 @@ const documentationVersions = getDocumentationVersions()
 const store = createStore({
   state: {
     breadcrumbs: [],
-    documentation_versions: documentationVersions,
     current_documentation_version: documentationVersions[0],
     sidebarOpen: false,
     lastURL: ['', '', ''],

@@ -7,10 +7,14 @@
       <download-content />
     </v-col>
     <v-col cols="12" id="documentation" class="home-section">
-      <documentation-content />
+      <h1>Documentation</h1>
+      <documentation-buttons />
+      <documentation-blurb />
     </v-col>
     <v-col cols="12" id="services" class="home-section">
-      <services-content />
+      <h1>Services</h1>
+      <services-buttons />
+      <services-blurb />
     </v-col>
     <v-col cols="12" id="about" class="home-section">
       <about-content />
@@ -22,8 +26,10 @@
 import IntroContent from '../components/home/IntroContent.vue'
 import AboutContent from '../components/home/AboutContent.vue'
 import DownloadContent from '../components/home/DownloadContent.vue'
-import DocumentationContent from '../components/home/DocumentationContent.vue'
-import ServicesContent from '../components/home/ServicesContent.vue'
+import DocumentationButtons from '../components/DocumentationButtons.vue'
+import DocumentationBlurb from '../components/DocumentationBlurb.vue'
+import ServicesButtons from '../components/ServicesButtons.vue'
+import ServicesBlurb from '../components/ServicesBlurb.vue'
 </script>
 
 <style scoped>

@@ -15,26 +15,26 @@
     <v-row>
       <v-col md="4">
         <v-card>
-          <v-card-title> C++ </v-card-title>
+          <v-card-title>C++</v-card-title>
           <v-card-subtitle>Installers</v-card-subtitle>
           <v-card-text>
             <v-btn md="3" block :class="'big-button'" disabled>
               <v-icon color="white" x-large>mdi-microsoft-windows</v-icon>
-              <br />
+              <small-spacer />
               Windows
             </v-btn>
           </v-card-text>
           <v-card-text>
             <v-btn block :class="'big-button'" disabled>
               <v-icon color="white" x-large>mdi-linux</v-icon>
-              <br />
+              <small-spacer />
               Linux
             </v-btn>
           </v-card-text>
           <v-card-text>
             <v-btn md="3" block :class="'big-button'" disabled>
               <v-icon color="white" x-large>mdi-apple</v-icon>
-              <br />
+              <small-spacer />
               macOS
             </v-btn>
           </v-card-text>
@@ -42,16 +42,12 @@
       </v-col>
       <v-col md="4">
         <v-card>
-          <v-card-title> Web Assembly </v-card-title>
+          <v-card-title>Web Assembly</v-card-title>
           <v-card-subtitle>yarn add libcellml.js</v-card-subtitle>
           <v-card-text>
-            <v-btn
-              block
-              :class="'big-button'"
-              @click="onWebAssemblyClicked"
-            >
+            <v-btn block :class="'big-button'" @click="onWebAssemblyClicked">
               <icon-w-a />
-              <br />
+              <small-spacer />
               Web assembly
             </v-btn>
           </v-card-text>
@@ -59,34 +55,28 @@
       </v-col>
       <v-col md="4">
         <v-card>
-          <v-card-title> Python </v-card-title>
+          <v-card-title>Python</v-card-title>
           <v-card-subtitle>pip install libcellml</v-card-subtitle>
           <v-card-text>
-            <v-btn
-              block
-              md="3"
-              :class="'big-button'"
-              @click="onPythonClicked"
-            >
+            <v-btn block md="3" :class="'big-button'" @click="onPythonClicked">
               <icon-py-pi />
-              <br />
+              <small-spacer />
               Python
             </v-btn>
           </v-card-text>
         </v-card>
       </v-col>
     </v-row>
-    <h3>Previous versions</h3>
-    A complete list of historical versions and operating system options can be
-    found
-    <router-link to="/download"> here </router-link>
-    .
+    <h3>Further information</h3>
+    For further information on downloads please visit the
+    <router-link to="/download">Download page</router-link>.
   </div>
 </template>
 
 <script setup>
 import IconWA from '@/assets/icons/IconWA.vue'
 import IconPyPi from '@/assets/icons/IconPyPI.vue'
+import SmallSpacer from '../SmallSpacer.vue'
 
 function onWebAssemblyClicked() {
   const url = 'https://www.npmjs.com/package/libcellml.js'

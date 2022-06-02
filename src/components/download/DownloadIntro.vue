@@ -23,7 +23,7 @@
             <!-- Added disabled status until this is ready to go -->
             <v-btn block :class="'big-button'" v-bind="props" disabled>
               <v-icon color="white" x-large>mdi-microsoft-windows</v-icon>
-              <br />
+              <small-spacer />
               Windows
             </v-btn>
           </template>
@@ -36,7 +36,7 @@
             <!-- Added disabled status until this is ready to go -->
             <v-btn block :class="'big-button'" v-bind="props" disabled>
               <v-icon color="white" x-large>mdi-apple</v-icon>
-              <br />
+              <small-spacer />
               macOS
             </v-btn>
           </template>
@@ -50,7 +50,7 @@
             <!-- Added disabled status until this is ready to go -->
             <v-btn block :class="'big-button'" v-bind="props" disabled>
               <icon-w-a />
-              <br />
+              <small-spacer />
               Web assembly
             </v-btn>
           </template>
@@ -74,6 +74,7 @@
 
 <script setup>
 import IconWA from '@/assets/icons/IconWA.vue'
+import SmallSpacer from '../SmallSpacer.vue';
 </script>
 
 <style scoped>

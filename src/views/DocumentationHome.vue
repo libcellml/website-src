@@ -1,68 +1,64 @@
 <template>
   <h1>Documentation</h1>
-  <v-row>
-    <v-col v-if="haveAPIDocumentation" col="12" md="4" id="api">
-      <v-btn
-        block
-        :class="'big-button'"
-        :to="`/documentation/${store.state.current_documentation_version}/api`"
-      >
-        <v-icon color="white" x-large>mdi-book-open-page-variant</v-icon><br />
-        API Documentation
-      </v-btn>
-    </v-col>
-
-    <v-col v-if="haveUserGuidesDocumentation" col="12" md="4" id="guides">
-      <v-btn
-        block
-        :class="'big-button'"
-        :to="`/documentation/${store.state.current_documentation_version}/userguides`"
-      >
-        <v-icon color="white" x-large>mdi-account-group</v-icon>
-        <br />
-        Users' Guides
-      </v-btn>
-    </v-col>
-
-    <v-col v-if="haveDeveloperDocumentation" col="12" md="4" id="developer">
-      <v-btn
-        block
-        :class="'big-button'"
-        :to="`/documentation/${store.state.current_documentation_version}/developer`"
-      >
-        <v-icon color="white" x-large>mdi-cogs</v-icon>
-        <br />
-        Developers' Guides
-      </v-btn>
-    </v-col>
-  </v-row>
+  <p>Documentation for {{ latest }} of libCellML.</p>
+  <br />
+  <documentation-buttons />
+  <br />
+  <h3>Previous versions of the documentation</h3>
+  <br />
+  <div v-for="v of olderVersions" key="'older_' + v.version">
+    <h4>{{ v.version }}</h4>
+    <ul style="padding-left: 2.5rem">
+      <li v-if="v.haveAPI">
+        <router-link :to="`/documentation/${v.version}/api`"
+          >API Documentation</router-link
+        >
+      </li>
+      <li v-if="v.haveUser">
+        <router-link :to="`/documentation/${v.version}/userguides`"
+          >Users' Guides Documentation</router-link
+        >
+      </li>
+      <li v-if="v.haveDeveloper">
+        <router-link :to="`/documentation/${v.version}/developer`"
+          >Developers Documentation</router-link
+        >
+      </li>
+    </ul>
+    <br />
+  </div>
 </template>
 
 <script setup>
-import { onMounted, onUpdated, ref } from 'vue'
-import { useStore } from 'vuex'
+import { ref } from 'vue'
 
 import { useCommon } from '../composables/common'
+import { getDocumentationVersions } from '../js/versions'
 
-const store = useStore()
+import DocumentationButtons from '../components/DocumentationButtons.vue'
+
 const { checkDocumentationAvailability } = useCommon()
 
-const haveAPIDocumentation = ref(false)
-const haveUserGuidesDocumentation = ref(false)
-const haveDeveloperDocumentation = ref(false)
+const availableVersions = getDocumentationVersions()
+const latest = availableVersions[0]
 
-function doCheckDocumentationAvailability() {
-  checkDocumentationAvailability(
-    store.state.current_documentation_version,
-    haveAPIDocumentation,
-    haveUserGuidesDocumentation,
-    haveDeveloperDocumentation
-  )
+const olderVersions = ref([])
+
+for (const version of availableVersions) {
+  if (version !== latest) {
+    const info = {
+      version,
+      haveAPI: ref(false),
+      haveUser: ref(false),
+      haveDeveloper: ref(false),
+    }
+    checkDocumentationAvailability(
+      version,
+      info.haveAPI,
+      info.haveUser,
+      info.haveDeveloper,
+    )
+    olderVersions.value.push(info)
+  }
 }
-onMounted(() => {
-  doCheckDocumentationAvailability()
-})
-onUpdated(() => {
-  doCheckDocumentationAvailability()
-})
 </script>

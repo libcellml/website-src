@@ -63,16 +63,15 @@ const aboutRoute = {
 }
 const baseDocumentationRoute = {
   path: '/documentation',
-  name: 'DocumentationBase',
-  strict: true,
-  redirect: (to) => {
-    // the function receives the target route as the argument
-    // we return a redirect path/location here.
-    return {
-      name: 'DocumentationHome',
-      params: { version: getDocumentationVersions()[0] },
-    }
-  },
+  name: 'DocumentationHome',
+  meta: { title: 'libCellML: Documentation' },
+  component: () => import('@/views/DocumentationHome.vue'),
+}
+const servicesHomeRoute = {
+  path: '/services',
+  name: 'ServicesHome',
+  meta: { title: 'libCellML: Services' },
+  component: () => import('@/views/ServicesHome.vue'),
 }
 const baseVersionDocumentationRoute = {
   path: '/documentation/:version?',
@@ -125,13 +124,13 @@ const userGuidesDocumentationRoute = {
   },
 }
 const validateRoute = {
-  path: '/validate',
+  path: '/services/validate',
   name: 'Validate',
   meta: { title: 'libCellML: Validate' },
   component: () => import('@/views/Validate.vue'),
 }
 const translateRoute = {
-  path: '/translate',
+  path: '/services/translate',
   name: 'Translate',
   meta: { title: 'libCellML: Translate' },
   component: () => import('@/views/Translate.vue'),
@@ -143,7 +142,7 @@ const downloadRoute = {
   component: () => import('@/views/Download.vue'),
 }
 const importRoute = {
-  path: '/import',
+  path: '/services/import',
   name: 'Import',
   meta: { title: 'libCellML: Import' },
   component: () => import('@/views/Import.vue'),
@@ -168,8 +167,9 @@ const routes = [
   developerDocumentationHomeRoute,
   userGuidesDocumentationHomeRoute,
   userGuidesDocumentationRoute,
-  baseVersionDocumentationRoute,
+  // baseVersionDocumentationRoute,
   baseDocumentationRoute,
+  servicesHomeRoute,
   translateRoute,
   validateRoute,
   downloadRoute,
@@ -186,9 +186,6 @@ export const versionedRoutes = [
 
 const onePathDeepRoutes = [
   downloadRoute.name,
-  importRoute.name,
-  translateRoute.name,
-  validateRoute.name,
   notFoundRoute.name,
 ]
 
