@@ -11,11 +11,11 @@
         API Documentation
       </v-btn>
     </v-col>
-    <v-col v-if="haveUserGuidesDocumentation" col="12" md="4" id="guides">
+    <v-col v-if="haveUserDocumentation" col="12" md="4" id="guides">
       <v-btn
         block
         :class="'big-button'"
-        :to="`/documentation/${latest}/userguides`"
+        :to="`/documentation/${latest}/user`"
       >
         <v-icon color="white" x-large>mdi-account-group</v-icon>
         <small-spacer />
@@ -49,13 +49,13 @@ const { checkDocumentationAvailability } = useCommon()
 const latest = getDocumentationVersions()[0]
 
 const haveAPIDocumentation = ref(false)
-const haveUserGuidesDocumentation = ref(false)
+const haveUserDocumentation = ref(false)
 const haveDeveloperDocumentation = ref(false)
 
 checkDocumentationAvailability(
   latest,
   haveAPIDocumentation,
-  haveUserGuidesDocumentation,
+  haveUserDocumentation,
   haveDeveloperDocumentation
 )
 </script>

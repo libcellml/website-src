@@ -1,6 +1,6 @@
 <template>
-  <div class="userguides">
-    <sphinx-page :baseURL="`/generated/${store.state.current_documentation_version}/userguides`" />
+  <div class="user">
+    <sphinx-page :baseURL="`/generated/${store.state.current_documentation_version}/user`" />
   </div>
 </template>
 

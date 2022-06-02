@@ -6,7 +6,7 @@
       please follow the instructions on the
       <router-link
         :to="{
-          path: '/documentation/latest/userguides/installation/build_from_source',
+          path: '/documentation/latest/user/installation/build_from_source',
         }"
         >Build from source
       </router-link>
