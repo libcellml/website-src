@@ -103,21 +103,21 @@ const developerDocumentationHomeRoute = {
     next(nextTarget)
   },
 }
-const userGuidesDocumentationHomeRoute = {
-  path: '/documentation/:version/userguides',
-  name: 'DocumentationUserGuidesHome',
+const userDocumentationHomeRoute = {
+  path: '/documentation/:version/user',
+  name: 'DocumentationUserHome',
   meta: { title: 'libCellML: User Guides' },
-  component: () => import('@/views/DocumentationUserGuidesHome.vue'),
+  component: () => import('@/views/DocumentationUserHome.vue'),
   beforeEnter: (to, from, next) => {
     const nextTarget = checkDocumentationVersion(to)
     next(nextTarget)
   },
 }
-const userGuidesDocumentationRoute = {
-  path: '/documentation/:version/userguides/:pageName+',
-  name: 'DocumentationUserGuides',
+const userDocumentationRoute = {
+  path: '/documentation/:version/user/:pageName+',
+  name: 'DocumentationUser',
   meta: { title: 'libCellML: User Guides' },
-  component: () => import('@/views/DocumentationUserGuides.vue'),
+  component: () => import('@/views/DocumentationUser.vue'),
   beforeEnter: (to, from, next) => {
     const nextTarget = checkDocumentationVersion(to)
     next(nextTarget)
@@ -165,8 +165,8 @@ const routes = [
   aboutRoute,
   apiDocumentationRoute,
   developerDocumentationHomeRoute,
-  userGuidesDocumentationHomeRoute,
-  userGuidesDocumentationRoute,
+  userDocumentationHomeRoute,
+  userDocumentationRoute,
   // baseVersionDocumentationRoute,
   baseDocumentationRoute,
   servicesHomeRoute,
@@ -181,7 +181,7 @@ const routes = [
 export const versionedRoutes = [
   'DocumentationAPI',
   'DocumentationDeveloper',
-  'DocumentationUserGuides',
+  'DocumentationUser',
 ]
 
 const onePathDeepRoutes = [
@@ -273,14 +273,14 @@ export const calculateBreadcrumbs = (to) => {
             crumbs.push(createBreadcrumb(route, convertToReadableText(el)))
           }
         } else if (
-          to.name === userGuidesDocumentationRoute.name ||
-          to.name === userGuidesDocumentationHomeRoute.name ||
+          to.name === userDocumentationRoute.name ||
+          to.name === userDocumentationHomeRoute.name ||
           to.name === developerDocumentationHomeRoute.name
         ) {
           if (versions.includes(el)) {
             crumbs.push(createBreadcrumb('', el, true))
           } else {
-            let subPath = 'userguides'
+            let subPath = 'user'
             if (to.name === developerDocumentationHomeRoute.name) {
               subPath = 'developer'
             }

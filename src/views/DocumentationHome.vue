@@ -15,7 +15,7 @@
         >
       </li>
       <li v-if="v.haveUser">
-        <router-link :to="`/documentation/${v.version}/userguides`"
+        <router-link :to="`/documentation/${v.version}/user`"
           >Users' Guides Documentation</router-link
         >
       </li>

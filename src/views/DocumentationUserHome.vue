@@ -153,7 +153,7 @@ import { useStore } from 'vuex'
 const store = useStore()
 
 function getToPath(subpath) {
-  return `/documentation/${store.state.current_documentation_version}/userguides/${subpath}/index`
+  return `/documentation/${store.state.current_documentation_version}/user/${subpath}/index`
 }
 </script>
 
