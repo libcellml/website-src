@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col>
-      <h1>libCellML Users' Guides</h1>
+      <h1>Users' Guides</h1>
     </v-col>
   </v-row>
   <v-row>

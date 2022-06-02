@@ -112,7 +112,7 @@ export const translateOmex = async (content, transform) => {
         }
       }
     } else {
-      throw 'Invalid OMEX file.'
+      throw 'Invalid COMBINE archive.'
     }
     resultDocument = await zip.generateAsync({
       type: 'uint8array',
