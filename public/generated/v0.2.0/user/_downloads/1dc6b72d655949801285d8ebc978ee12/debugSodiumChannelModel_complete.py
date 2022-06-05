@@ -8,25 +8,31 @@
   - Use the Importer class to resolve imports and identify issues and
   - Use the diagnostic Analyser class to identify issues in the model's mathematical formulation.
 """
+import os
+import sys
 
-from libcellml import Analyser, Component, Importer, CellmlElementType, Model, Parser, Printer, Units, Validator, Variable
+from libcellml import Analyser, Component, Importer, CellmlElementType, Model, Parser, Printer, Units, Validator, Variable, cellmlElementTypeAsString
 
-from utilities import print_issues, print_model, get_cellml_element_type_from_enum, get_issue_level_from_enum, print_encapsulation
+from utilities import print_issues, print_model, get_issue_level_from_enum, print_encapsulation
 
 if __name__ == '__main__':
 
 
-    print('----------------------------------------------------------')
-    print('   STEP 1: Parse the existing sodium channel model        ')
-    print('----------------------------------------------------------')
+    print('-------------------------------------------------')
+    print(' STEP 1: Parse the existing sodium channel model')
+    print('-------------------------------------------------')
 
+    model_file = "SodiumChannelModel_broken.cellml"
+    if len(sys.argv) > 1:
+        model_file = sys.argv[1]
     #         The Parser class is used to deserialise a CellML string into a Model instance.
     #         This means that you're responsible for finding, opening and reading the.cellml 
     #         file into a single string.  The Parser will then read that string and return a model.
 
     #  1.a 
     #      Read a CellML file into a string.
-    read_file = open("sodiumChannelModel_broken.cellml")
+    with open(model_file) as f:
+        content = f.read()
 
     #  1.b 
     #      Create a Parser item. 
@@ -34,7 +40,7 @@ if __name__ == '__main__':
 
     #  1.c 
     #      Use the parser to deserialise the contents of the string you've read and return the model.
-    model = parser.parseModel(read_file.read())
+    model = parser.parseModel(content)
 
     #  1.d 
     #      Print the parsed model to the terminal for viewing.
@@ -42,9 +48,9 @@ if __name__ == '__main__':
 
     #  end 1
 
-    print('----------------------------------------------------------')
-    print('   STEP 2: Validate the parsed model                      ')
-    print('----------------------------------------------------------')
+    print('-----------------------------------')
+    print(' STEP 2: Validate the parsed model')
+    print('-----------------------------------')
 
     #  2.a 
     #      Create a Validator item and validate the model.
@@ -69,14 +75,14 @@ if __name__ == '__main__':
         print('Issue {}: {}'.format(i,issue.description()))
         print('  reference: {}'.format(issue.referenceHeading()))
         print('  see: {}'.format(issue.url()))
-        print('  stored item type: {}'.format(get_cellml_element_type_from_enum(issue.cellmlElementType())))
+        print('  stored item type: {}'.format(cellmlElementTypeAsString(issue.item().type())))
         print()
 
     #  end 2
 
-    print('----------------------------------------------------------')
-    print('   STEP 3: Repair the parsed model                        ')
-    print('----------------------------------------------------------')
+    print('---------------------------------')
+    print(' STEP 3: Repair the parsed model')
+    print('---------------------------------')
 
     #      The messages returned from the validator (and other classes) should (!) have enough information 
     #      to enable you to know what the problem is.  In the case of the validator class, the URL listed
@@ -86,10 +92,7 @@ if __name__ == '__main__':
     #      In some situations more than one Issue will be generated from a single cause: this is the case
     #      with issues 0 and 1 here:
 
-    # Issue 0: CellML identifiers must not contain any characters other than [a-zA-Z0-9_].
-    #   reference: 1.3.1.1
-    #   see: https://cellml-specification.readthedocs.io/en/latest/reference/formal_and_informative/specA03.html?issue=1.3.1.1
-    # Issue 1: Component 'mGateEquations!' does not have a valid name attribute.
+    # Issue 0: Component 'mGateEquations!' does not have a valid name attribute.
     #   reference: 2.7.1
     #   see: https://cellml-specification.readthedocs.io/en/latest/reference/formal_and_informative/specB07.html?issue=2.7.1
 
@@ -105,13 +108,13 @@ if __name__ == '__main__':
 
     #  The messages below indicate that we're missing a Units item named 'mS_per_cm2'. 
 
-    # Issue 2: Variable 'Na_conductance' in component 'sodiumChannelEquations' has a units reference 'mS_per_cm2' which is neither standard nor defined in the parent model.
+    # Issue 1: Variable 'Na_conductance' in component 'sodiumChannelEquations' has a units reference 'mS_per_cm2' which is neither standard nor defined in the parent model.
     #   reference: 2.8.1.2
     #   see: https://cellml-specification.readthedocs.io/en/latest/reference/formal_and_informative/specB08.html?issue=2.8.1.2
-    # Issue 3: Variable 'g_Na' in component 'sodiumChannelEquations' has a units reference 'mS_per_cm2' which is neither standard nor defined in the parent model.
+    # Issue 2: Variable 'g_Na' in component 'sodiumChannelEquations' has a units reference 'mS_per_cm2' which is neither standard nor defined in the parent model.
     #   reference: 2.8.1.2
     #   see: https://cellml-specification.readthedocs.io/en/latest/reference/formal_and_informative/specB08.html?issue=2.8.1.2
-    # Issue 4: Variable 'g_Na' in component 'sodiumChannelParameters' has a units reference 'mS_per_cm2' which is neither standard nor defined in the parent model.
+    # Issue 3: Variable 'g_Na' in component 'sodiumChannelParameters' has a units reference 'mS_per_cm2' which is neither standard nor defined in the parent model.
     #   reference: 2.8.1.2
     #   see: https://cellml-specification.readthedocs.io/en/latest/reference/formal_and_informative/specB08.html?issue=2.8.1.2
 
@@ -127,10 +130,7 @@ if __name__ == '__main__':
     #      As with 3.a, here we have more than one issue generated from the same cause: in this case, 
     #      we haven't specified units for a variable.
     
-    # Issue 5: CellML identifiers must contain one or more basic Latin alphabetic characters.
-    #   reference: 1.3.1.1
-    #   see: https://cellml-specification.readthedocs.io/en/latest/reference/formal_and_informative/specA03.html?issue=1.3.1.1
-    # Issue 6: Variable 'V' in component 'sodiumChannel' does not have a valid units attribute. The attribute given is ''.
+    # Issue 4: Variable 'V' in component 'sodiumChannel' does not have a valid units attribute. The attribute given is ''.
     #   reference: 2.8.1.2
     #   see: https://cellml-specification.readthedocs.io/en/latest/reference/formal_and_informative/specB08.html?issue=2.8.1.2
     #  Issue 8: Variable 'V' in component 'sodiumChannel' has units of '' and an equivalent variable 'V' in component 'sodiumChannelEquations' with non-matching units of 'mV'. The mismatch is: 
@@ -148,15 +148,14 @@ if __name__ == '__main__':
     #  3.c
     #      Check that the item to be returned from the issue is in fact an CellmlElementType.VARIABLE by calling the Issue.type()
     #      function.  Retrieve the variable missing units from the issue.  Set its units to be millivolts.
-    issue6 = validator.issue(6)
-    print('Issue 6 is a {}'.format(get_cellml_element_type_from_enum(issue6.cellmlElementType())))
-    issue6.variable().setUnits(model.units('mV'))
+    issue4 = validator.issue(4)
+    issue4.item().variable().setUnits(model.units('mV'))
 
     #  end 3.c
 
     #  The error below indicates that a child Unit references something which can't be found.  
     
-    #  Issue 7: Units reference 'i_dont_exist' in units 'mV' is not a valid reference to a local units or a standard unit type.
+    #  Issue 5: Units reference 'i_dont_exist' in units 'mV' is not a valid reference to a local units or a standard unit type.
     #      reference: 2.6.1
     #      see: https://cellml-specification.readthedocs.io/en/latest/reference/formal_and_informative/specB06.html?issue=2.6.1
     
@@ -174,25 +173,23 @@ if __name__ == '__main__':
     #  3.d
     #      Choose your preferred method and use it to retrieve the problem unit attributes and print them all to
     #      to the terminal.  Then fix the issue.
-    prefix = ''
-    id = ''
-    exponent = 0.0
-    multiplier = 0.0
+    # prefix = ''
+    # id = ''
+    # exponent = 0.0
+    # multiplier = 0.0
     mV = model.units('mV')
-    # prefix, exponent, multiplier, id = mV.unitAttributes('i_dont_exist')
-    print(mV.unitAttributes('i_dont_exist'))
-    print('The units \'mV\' child has attributes: base units = \'i_dont_exist\', prefix = \'{p}\', exponent = \'{e}\', and multiplier = \'{m}\'.'.format(p=prefix, e=exponent, m=multiplier))
+    name, prefix, exponent, multiplier, id = mV.unitAttributes('i_dont_exist')
+    print('The units \'mV\' child has attributes: base units = \'{n}\', prefix = \'{p}\', exponent = \'{e}\', and multiplier = \'{m}\''.format(n=name, p=prefix, e=exponent, m=multiplier))
 
     # Method 1:
     # mV.removeUnit('i_dont_exist')
     # mV.addUnit('volt', 'milli')
 
     # Method 2:
-    issue7 = validator.issue(7)
-    print('Issue 7 is a {}'.format(get_cellml_element_type_from_enum(issue7.cellmlElementType())))
-    issue7_units = issue7.unit().units()
-    issue7_units.removeUnit(issue7.unit().index())
-    issue7_units.addUnit('volt', 'milli')
+    issue5 = validator.issue(5)
+    issue5_units = issue5.item().unitsItem().units()
+    issue5_units.removeUnit(issue5.item().unitsItem().index())
+    issue5_units.addUnit('volt', 'milli')
 
     # Method 3:
     # missing_units = Units('i_dont_exist')
@@ -204,15 +201,15 @@ if __name__ == '__main__':
     #  The final validator issue refers to the fact that we need to explicitly specify how other components
     #  can access each of the variables in this component.
     
-    # Issue 9: Variable 't' in component 'sodiumChannelEquations' has no interface type set. The interface type required is 'public_and_private'.
+    # Issue 6: Variable 't' in component 'sodiumChannelEquations' has no interface type set. The interface type required is 'public_and_private'.
     #   reference: 3.10.8
     #   see: https://cellml-specification.readthedocs.io/en/latest/reference/formal_and_informative/specC10.html?issue=3.10.8
     
     #  3.e
     #      Retrieve the variable either using the issue pointer method, or using the name method, and set its 
     #      interface to be the required type.
-    issue9 = validator.issue(9)
-    issue9.variable().setInterfaceType('public_and_private')
+    issue6 = validator.issue(6)
+    issue6.item().variable().setInterfaceType('public_and_private')
 
     #  3.f 
     #      Revalidate the model and confirm that the errors have gone.
@@ -239,10 +236,11 @@ if __name__ == '__main__':
 
     #  end 3
 
-    print('----------------------------------------------------------')
-    print('   STEP 4: Resolve the imports ')
-    print('----------------------------------------------------------')
+    print('-----------------------------')
+    print(' STEP 4: Resolve the imports')
+    print('-----------------------------')
 
+    import_path = os.path.dirname(model_file)
     #      It's important to remember that the imports are merely instructions for how
     #      components or units items should be located: only their syntax is checked by the
     #      validator, not that the files exist or contain the required information.  To debug
@@ -256,7 +254,7 @@ if __name__ == '__main__':
     #  4.a 
     #      Create an Importer instance and use it to resolve the model.
     importer = Importer()
-    importer.resolveImports(model, '')
+    importer.resolveImports(model, import_path)
 
     #  4.b 
     #      Similarly to the validator, the importer will log any issues it encounters.
@@ -265,7 +263,7 @@ if __name__ == '__main__':
     print_issues(importer)
 
     #  end 4.b
-    #  Importer error[0]:
+    #  Importer error[1]:
     #     Description: Import of component 'importedGateH' from 'GateModel.cellml' requires 
     #     component named 'i_dont_exist' which cannot be found.
 
@@ -275,8 +273,8 @@ if __name__ == '__main__':
     #  4.c 
     #      Fix the issues reported by the importer.  This needs to be an iterative process as
     #      more files become available to the importer.
-    issue0 = importer.issue(0)
-    issue0.component().setImportReference('gateEquations')
+    issue0 = importer.issue(1)
+    issue0.item().component().setImportReference('gateEquations')
 
     #  end 4.c
     #      The second issue reported is a circular dependency. This is contained in files that
@@ -284,7 +282,7 @@ if __name__ == '__main__':
     #      fact that the Importer class opens and instantates all required dependencies, and that
     #      some of those dependencies may have problems of their own.  
 
-    #  Issue [1] is a WARNING:
+    #  Issue [0] is an ERROR:
     #     description: Cyclic dependencies were found when attempting to resolve components in model 'CircularReferences'. The dependency loop is:
     #      - component 'importedGateH' is imported from 'i_dont_exist' in 'GateModel.cellml'
     #      - component 'importedGateM' is imported from 'gateEquations' in 'GateModel.cellml'
@@ -303,17 +301,15 @@ if __name__ == '__main__':
     model.component('controller', True).importSource().setUrl('SodiumChannelController.cellml')
 
     #  4.e 
-    #      Clear all issues from the importer using the removeAllIssues() function.
     #      Resolve the imports again and check that there are no further issues.
-    importer.removeAllIssues()
-    importer.resolveImports(model, '')
+    importer.resolveImports(model, import_path)
     print_issues(importer)
 
     #  end 4
 
-    print('----------------------------------------------------------')
-    print('   STEP 5: Validate the imported dependencies ')
-    print('----------------------------------------------------------')
+    print('--------------------------------------------')
+    print(' STEP 5: Validate the imported dependencies')
+    print('--------------------------------------------')
 
     #      At this stage we've validated the local model, and we've used the Importer class
     #      to retrieve all of its import dependencies.  These dependencies are stored in
@@ -350,17 +346,17 @@ if __name__ == '__main__':
     #      You'll notice that these have been used as the keys in the importer library.
     #      Check that the importer library's models are the same as that attached to the
     #      import source item.
-    for i in range(0, model.importSourceCount()):
-        print('Import source [{}]:'.format(i))
-        print('     url = {}'.format(model.importSource(i).url()))
-        print('     model = {}'.format(model.importSource(i).model()))
-        print('     library[url] = {}'.format(importer.library(model.importSource(i).url())))
+    #for i in range(0, model.importSourceCount()):
+    #    print('Import source [{}]:'.format(i))
+    #    print('     url = {}'.format(model.importSource(i).url()))
+    #    print('     model = {}'.format(model.importSource(i).model()))
+    #    print('     library[url] = {}'.format(importer.library(model.importSource(i).url())))
 
     #  end 5
 
-    print('----------------------------------------------------------')
-    print('   STEP 6: Analyse the model(s) ')
-    print('----------------------------------------------------------')
+    print('------------------------------')
+    print(' STEP 6: Analyse the model(s)')
+    print('------------------------------')
 
     #      As with the validator, the Analyser class is a diagnostic class which will check
     #      whether the mathematical representation is ready for simulation.  This involves
@@ -385,7 +381,6 @@ if __name__ == '__main__':
     #      missing from this model.
     print_issues(analyser)
 
-    print()
     #  6.c 
     #      Create a flattened version of the model print it to the screen.
     #      Notice that any comments indicating that a component was an import have been
@@ -495,9 +490,9 @@ if __name__ == '__main__':
 
     #  end 6
 
-    print('----------------------------------------------------------')
-    print('   STEP 7: Serialise and print the repaired model         ')
-    print('----------------------------------------------------------')
+    print('------------------------------------------------')
+    print(' STEP 7: Serialise and print the repaired model')
+    print('------------------------------------------------')
 
     #  7.a 
     #      Create a Printer instance and use it to print the CellML-formatted version of
@@ -508,11 +503,10 @@ if __name__ == '__main__':
     
     #  7.b 
     #      Write the string to a file named 'SodiumChannelModel.cellml'.
-    write_file = open('SodiumChannelModel.cellml', 'w')
-    write_file.write(printed_model_string)
-    write_file.close()
+    with open('SodiumChannelModel.cellml', 'w') as f:
+        f.write(printed_model_string)
 
     #  end
 
-    print('The repaired sodium channel model has been written to SodiumChannelModel.cellml.')
+    print('The repaired sodium channel model has been written to: SodiumChannelModel.cellml.')
 

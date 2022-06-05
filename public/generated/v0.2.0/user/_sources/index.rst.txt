@@ -29,6 +29,7 @@ For general discussions and information about the CellML model structure itself,
   common_users/index.rst
   asides/index.rst
   runtime_codes/index.rst
+  resources/code/solver/index.rst
 
 
 .. container:: quicklinks

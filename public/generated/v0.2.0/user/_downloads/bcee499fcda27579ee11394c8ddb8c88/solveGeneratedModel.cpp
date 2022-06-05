@@ -1,6 +1,4 @@
 /**
- *  SIMPLE SOLVER
- *
  *  Very simple implementation of an Euler-stepping solver intended to solve
  *  files created using the libCellML::Generator functionality.  This file needs to be
  *  built with the accompanying CMakeLists file, which will copy the input file to a

@@ -1,4 +1,4 @@
-<document xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/" xmlns:todo="https://www.sphinx-doc.org/" source="/Users/hsor001/Projects/cellml/sandbox/userguides/common_users/solver.rst">
+<document xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/" xmlns:todo="https://www.sphinx-doc.org/" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/common_users/solver.rst">
     <target refid="users-solver"/>
     <section ids="simulation-tool-developer-solver users-solver" names="simulation\ tool\ developer:\ solver users_solver">
         <title>Simulation tool developer: Solver</title>
@@ -8,10 +8,10 @@
             <paragraph><strong>C++ resources</strong>: <download_reference filename="3ed60cb9718c6786dcc04b00ac22f12a/common_users" refdoc="common_users/solver" refdomain="" refexplicit="True" reftarget="" reftype="download" refwarn="False"><literal classes="xref download">All C++ resources</literal></download_reference></paragraph>
             <bullet_list bullet="-">
                 <list_item>
-                    <paragraph><download_reference refdoc="common_users/solver" refdomain="" refexplicit="True" reftarget="/resources/code/solver/CMakeLists.txt" reftype="download" refwarn="False"><literal classes="xref download">CMakeLists.txt</literal></download_reference></paragraph>
+                    <paragraph><download_reference filename="c3875bfa0c2a1f1d593bc10fb1635cbf/CMakeLists.txt" refdoc="common_users/solver" refdomain="" refexplicit="True" reftarget="/resources/code/solver/CMakeLists.txt" reftype="download" refwarn="False"><literal classes="xref download">CMakeLists.txt</literal></download_reference></paragraph>
                 </list_item>
                 <list_item>
-                    <paragraph><download_reference refdoc="common_users/solver" refdomain="" refexplicit="True" reftarget="/resources/code/solver/solveGeneratedModel.cpp" reftype="download" refwarn="False"><literal classes="xref download">example_solveGeneratedModel.cpp</literal></download_reference></paragraph>
+                    <paragraph><download_reference filename="bcee499fcda27579ee11394c8ddb8c88/solveGeneratedModel.cpp" refdoc="common_users/solver" refdomain="" refexplicit="True" reftarget="/resources/code/solver/solveGeneratedModel.cpp" reftype="download" refwarn="False"><literal classes="xref download">example_solveGeneratedModel.cpp</literal></download_reference></paragraph>
                 </list_item>
                 <list_item>
                     <paragraph>resources/</paragraph>
@@ -28,7 +28,7 @@
             <paragraph><strong>Python resources</strong>: <download_reference filename="3ed60cb9718c6786dcc04b00ac22f12a/common_users" refdoc="common_users/solver" refdomain="" refexplicit="True" reftarget="" reftype="download" refwarn="False"><literal classes="xref download">All Python resources</literal></download_reference></paragraph>
             <bullet_list bullet="-">
                 <list_item>
-                    <paragraph><download_reference refdoc="common_users/solver" refdomain="" refexplicit="True" reftarget="/resources/code/solver/solveGeneratedModel.py" reftype="download" refwarn="False"><literal classes="xref download">example_solveGeneratedModel.py</literal></download_reference></paragraph>
+                    <paragraph><download_reference filename="720f0969a3d62e612fd4909324baa756/solveGeneratedModel.py" refdoc="common_users/solver" refdomain="" refexplicit="True" reftarget="/resources/code/solver/solveGeneratedModel.py" reftype="download" refwarn="False"><literal classes="xref download">example_solveGeneratedModel.py</literal></download_reference></paragraph>
                 </list_item>
                 <list_item>
                     <paragraph>resources/</paragraph>
@@ -53,6 +53,33 @@
                         </container>
                     </container>
                     <container>
+                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/resources/code/solver/solveGeneratedModel.cpp" xml:space="preserve">std::map&lt;std::string, std::string&gt; processArguments(int argc, char **argv)
+{
+    if (argc == 1) {
+        std::cout &lt;&lt; "Usage:" &lt;&lt; std::endl;
+        std::cout &lt;&lt; "  -n maxSteps -dt stepSize" &lt;&lt; std::endl;
+        std::cout &lt;&lt; "     -n     the number of steps to take before stopping" &lt;&lt; std::endl;
+        std::cout &lt;&lt; "     -dt    the step size to use" &lt;&lt; std::endl;
+        exit(1);
+    }
+
+    std::map&lt;std::string, std::string&gt; argMap;
+    std::string value = argv[0];
+    value.erase(0, 8); // removes the "solve_" from the start of the executable name to get back to the input
+    argMap["input"] = value;
+
+    for (size_t i = 0; i &lt; argc - 1; ++i) {
+        if (argv[i][0] == '-') {
+            std::string key = argv[i];
+            key.erase(0, 1);
+            value = argv[i + 1];
+            argMap[key] = value;
+            i++;
+        }
+    }
+    return argMap;
+}
+</literal_block>
                     </container>
                 </container>
                 <container>
@@ -62,6 +89,23 @@
                         </container>
                     </container>
                     <container>
+                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/resources/code/solver/solveGeneratedModel.py" xml:space="preserve">def module_from_file(input):
+
+    # Check the extension is stripped during input.
+    if input[-3:] != '.py':
+        module_file = input + ".py"
+        module_name = input.split("/")[-1]
+    else:
+        module_file = input
+        module_name = ".".join(input.split("/")[-1].split(".")[:-1])
+
+    # Import the generated code as a module, and return it.
+    spec = importlib.util.spec_from_file_location(module_name, module_file)
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[module_name] = module
+    spec.loader.exec_module(module)
+    return module
+</literal_block>
                     </container>
                 </container>
             </container>
@@ -74,6 +118,21 @@
                         </container>
                     </container>
                     <container>
+                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/resources/code/solver/solveGeneratedModel.cpp" xml:space="preserve">    // Retrieve the command line arguments.
+    std::map&lt;std::string, std::string&gt; args = processArguments(argc, argv);
+    double stepSize = std::stod(args["dt"]);
+    int stepCount = std::stoi(args["n"]);
+    std::string input = args["input"];
+
+    std::cout &lt;&lt; "-------------------------------------------------------------" &lt;&lt; std::endl;
+    std::cout &lt;&lt; "   SIMPLE SOLVER  " &lt;&lt; std::endl;
+    std::cout &lt;&lt; "-------------------------------------------------------------" &lt;&lt; std::endl;
+    std::cout &lt;&lt; "       model = " &lt;&lt; input &lt;&lt; std::endl;
+    std::cout &lt;&lt; "       timestep = " &lt;&lt; stepSize &lt;&lt; std::endl;
+    std::cout &lt;&lt; "       number of steps = " &lt;&lt; stepCount &lt;&lt; std::endl
+              &lt;&lt; std::endl;
+
+</literal_block>
                     </container>
                 </container>
                 <container>
@@ -83,6 +142,21 @@
                         </container>
                     </container>
                     <container>
+                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/resources/code/solver/solveGeneratedModel.py" xml:space="preserve">if __name__ == "__main__":
+
+    args = process_arguments(sys.argv)
+    dt = args['dt']
+    n = args['n']
+
+    print('-------------------------------------------------------------')
+    print('   SIMPLE SOLVER')
+    print('-------------------------------------------------------------')
+    print('       model = {}'.format(input))
+    print('       timestep = {}'.format(stepSize)
+    print('       number of steps = {}'.format(stepCount)
+    print()
+
+</literal_block>
                     </container>
                 </container>
             </container>
@@ -141,6 +215,23 @@
                         </container>
                     </container>
                     <container>
+                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/resources/code/solver/solveGeneratedModel.py" xml:space="preserve">def module_from_file(input):
+
+    # Check the extension is stripped during input.
+    if input[-3:] != '.py':
+        module_file = input + ".py"
+        module_name = input.split("/")[-1]
+    else:
+        module_file = input
+        module_name = ".".join(input.split("/")[-1].split(".")[:-1])
+
+    # Import the generated code as a module, and return it.
+    spec = importlib.util.spec_from_file_location(module_name, module_file)
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[module_name] = module
+    spec.loader.exec_module(module)
+    return module
+</literal_block>
                     </container>
                 </container>
             </container>
@@ -168,6 +259,23 @@
                         </container>
                     </container>
                     <container>
+                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/resources/code/solver/solveGeneratedModel.cpp" xml:space="preserve">    // Inside the generated code are structures with information about the 
+    // model and its dimensions.  These are:
+    //   - VOI_INFO: a dict with the name, units, and component of the variable of integration,
+    //   - STATE_INFO: a list of dicts for the state variables,
+    //   - VARIABLE_INFO: a list of dicts for the non-state variables. 
+
+    std::cout &lt;&lt; "   VARIABLE OF INTEGRATION (units) " &lt;&lt; std::endl;
+    std::cout &lt;&lt; "      " &lt;&lt; VOI_INFO.name &lt;&lt; " (" &lt;&lt; VOI_INFO.units &lt;&lt; ")" &lt;&lt;std::endl 
+              &lt;&lt; std::endl;
+    std::cout &lt;&lt; "   STATE VARIABLES (units) " &lt;&lt; std::endl;
+    std::cout &lt;&lt; "-------------------------------------------------------------" &lt;&lt; std::endl;
+    for (size_t i = 0; i &lt; STATE_COUNT; ++i) {
+        std::cout &lt;&lt; "      " &lt;&lt; STATE_INFO[i].name &lt;&lt; " (" &lt;&lt; STATE_INFO[i].units &lt;&lt; ")" &lt;&lt; std::endl;
+    }
+    std::cout &lt;&lt; std::endl;
+
+</literal_block>
                     </container>
                 </container>
                 <container>
@@ -177,6 +285,24 @@
                         </container>
                     </container>
                     <container>
+                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/resources/code/solver/solveGeneratedModel.py" xml:space="preserve">    # Retrieve model module from the generated code file.
+    model = module_from_file(args['m'])
+
+    # Inside the 'model' module are structures with information about the 
+    # model and its dimensions.  These are:
+    #   - VOI_INFO: a dict with the name, units, and component of the variable of integration,
+    #   - STATE_INFO: a list of similar dicts for the state variables,
+    #   - VARIABLE_INFO: a list of similar dicts for the non-state variables. 
+
+    print('   VARIABLE OF INTEGRATION (units)')
+    print('--------------------------------------------------------------------')
+    print('      {} ({}, {})'.format(model.VOI_INFO['name'],
+                                     model.VOI_INFO['units'],
+                                     dt))
+    print('      {} steps'.format(n))
+    print()
+
+</literal_block>
                     </container>
                 </container>
             </container>
@@ -200,6 +326,15 @@
                         </container>
                     </container>
                     <container>
+                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/resources/code/solver/solveGeneratedModel.cpp" xml:space="preserve">    // Call module functions to construct and initialise the variable arrays.
+    // Note that both the rates and the states arrays have the same dimensions,
+    // so it's possible to call the createStatesArray() function for both.
+    double time = 0.0;
+    auto myStateVariables = createStatesArray();
+    auto myRates = createStatesArray();
+    auto myVariables = createVariablesArray();
+
+</literal_block>
                     </container>
                 </container>
                 <container>
@@ -209,6 +344,15 @@
                         </container>
                     </container>
                     <container>
+                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/resources/code/solver/solveGeneratedModel.py" xml:space="preserve">    # Call module functions to construct the variable arrays.
+    # Note that both the rates and the states arrays have the same dimensions,
+    # so it's possible to call the create_states_array() function for both.
+    time = 0.0
+    my_variables = model.create_variables_array()
+    my_state_variables = model.create_states_array()
+    my_rates = model.create_states_array()
+    
+</literal_block>
                     </container>
                 </container>
             </container>
@@ -241,6 +385,13 @@
                         </container>
                     </container>
                     <container>
+                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/resources/code/solver/solveGeneratedModel.cpp" xml:space="preserve">    // Make use of the access functions provided to initialise the variable arrays.
+    initialiseStatesAndConstants(myStateVariables, myVariables);
+    computeComputedConstants(myVariables);
+    computeRates(time, myStateVariables, myRates, myVariables);
+    computeVariables(time, myStateVariables, myRates, myVariables);
+
+</literal_block>
                     </container>
                 </container>
                 <container>
@@ -250,6 +401,28 @@
                         </container>
                     </container>
                     <container>
+                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/resources/code/solver/solveGeneratedModel.py" xml:space="preserve">    # Compute the parameters which require it, including the rates and variable values.
+    model.initialise_states_and_constants(my_state_variables, my_variables)
+    model.compute_computed_constants(my_variables)
+    model.compute_rates(0, my_state_variables, my_rates, my_variables)
+    model.compute_variables(0, my_state_variables, my_rates, my_variables)
+
+    print('   STATE VARIABLES (units, initial value)')
+    print('--------------------------------------------------------------------')
+    for i in range(0, model.STATE_COUNT):
+        print('      {} ({}, {})'.format(model.STATE_INFO[i]['name'],
+                                         model.STATE_INFO[i]['units'],
+                                         my_state_variables[i]))
+    print()
+    print('   VARIABLES (units, initial value)')
+    print('--------------------------------------------------------------------')
+
+    for v in range(0, model.VARIABLE_COUNT):
+        print('      {} ({}, {})'.format(model.VARIABLE_INFO[v]['name'],
+                                         model.VARIABLE_INFO[v]['units'],
+                                         my_variables[v]))
+
+</literal_block>
                     </container>
                 </container>
             </container>
@@ -266,6 +439,43 @@
                         </container>
                     </container>
                     <container>
+                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/resources/code/solver/solveGeneratedModel.cpp" xml:space="preserve">    // Prepare a file for writing during the solution process.
+    std::cout &lt;&lt; "   INITIAL CONDITIONS" &lt;&lt; std::endl;
+    std::cout &lt;&lt; "-------------------------------------------------------------" &lt;&lt; std::endl;
+    for (size_t i = 0; i &lt; STATE_COUNT; ++i) {
+        std::cout &lt;&lt; "      " &lt;&lt; STATE_INFO[i].name &lt;&lt; "(" &lt;&lt; VOI_INFO.name &lt;&lt; " = 0) = " &lt;&lt; myStateVariables[i] &lt;&lt; std::endl;
+    }
+    for (size_t i = 0; i &lt; VARIABLE_COUNT; ++i) {
+        std::cout &lt;&lt; "      " &lt;&lt; VARIABLE_INFO[i].name &lt;&lt; "(" &lt;&lt; VOI_INFO.name &lt;&lt; " = 0) = " &lt;&lt; myVariables[i] &lt;&lt; std::endl;
+    }
+
+    std::cout &lt;&lt; std::endl;
+    std::string outFileName = args["input"] + "_solution.txt";
+    std::ofstream outFile(outFileName);
+
+    // Header line for output file
+    outFile &lt;&lt; "iteration";
+    outFile &lt;&lt; "\t" &lt;&lt; VOI_INFO.name &lt;&lt; " (" &lt;&lt; VOI_INFO.units &lt;&lt; ")";
+    for (size_t s = 0; s &lt; STATE_COUNT; ++s) {
+        outFile &lt;&lt; "\t" &lt;&lt; STATE_INFO[s].name;
+    }
+    for (size_t s = 0; s &lt; VARIABLE_COUNT; ++s) {
+        outFile &lt;&lt; "\t" &lt;&lt; VARIABLE_INFO[s].name;
+    }
+    outFile &lt;&lt; std::endl;
+
+    // Initial conditions in output file
+    outFile &lt;&lt; 0;
+    outFile &lt;&lt; "\t" &lt;&lt; 0;
+    for (size_t s = 0; s &lt; STATE_COUNT; ++s) {
+        outFile &lt;&lt; "\t" &lt;&lt; myStateVariables[s];
+    }
+    for (size_t s = 0; s &lt; VARIABLE_COUNT; ++s) {
+        outFile &lt;&lt; "\t" &lt;&lt; myVariables[s];
+    }
+    outFile &lt;&lt; std::endl;
+
+</literal_block>
                     </container>
                 </container>
                 <container>
@@ -275,6 +485,22 @@
                         </container>
                     </container>
                     <container>
+                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/resources/code/solver/solveGeneratedModel.py" xml:space="preserve">    # Prepare to write output to a file during the solution process.
+    row = 'iteration\t{}({})'.format(
+        model.VOI_INFO['name'], model.VOI_INFO['units'])
+    for s in range(0, model.STATE_COUNT):
+        row += '\t{}({})'.format(model.STATE_INFO[s]
+                                 ['name'], model.STATE_INFO[s]['units'])
+    for s in range(0, model.VARIABLE_COUNT):
+        row += '\t{}({})'.format(model.VARIABLE_INFO[s]
+                                 ['name'], model.VARIABLE_INFO[s]['units'])
+    row += '\n'
+
+    write_file_name = '{}_solution.txt'.format(args['m'])
+    write_file = open(write_file_name, 'w')
+    write_file.write(row)
+
+</literal_block>
                     </container>
                 </container>
             </container>
@@ -291,6 +517,36 @@
                         </container>
                     </container>
                     <container>
+                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/resources/code/solver/solveGeneratedModel.cpp" xml:space="preserve">    // Numerically integrate the state variables using the Euler method to step through the solution.
+
+    // Solution columns in output file
+    for (size_t step = 1; step &lt; stepCount; ++step) {
+        time = step * stepSize;
+        computeRates(time, myStateVariables, myRates, myVariables);
+        outFile &lt;&lt; step &lt;&lt; "\t " &lt;&lt; time;
+        for (size_t s = 0; s &lt; STATE_COUNT; ++s) {
+            myStateVariables[s] = myStateVariables[s] + myRates[s] * stepSize;
+            outFile &lt;&lt; "\t" &lt;&lt; myStateVariables[s];
+        }
+        // The variables in the "myVariables" array are those which do not affect the calculation
+        // of rates or state variables.  They only need to be computed when outputting the 
+        // results of a timestep: if you're not saving every timestep, then you can skip this
+        // until you are.
+        computeVariables(time, myStateVariables, myRates, myVariables); 
+        for (size_t s = 0; s &lt; VARIABLE_COUNT; ++s) {
+            outFile &lt;&lt; "\t" &lt;&lt; myVariables[s];
+        }
+        outFile &lt;&lt; "\n";
+    }
+    outFile.close();
+
+    // Housekeeping.
+
+    deleteArray(myStateVariables);
+    deleteArray(myVariables);
+    deleteArray(myRates);
+
+</literal_block>
                     </container>
                 </container>
                 <container>
@@ -300,6 +556,37 @@
                         </container>
                     </container>
                     <container>
+                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/resources/code/solver/solveGeneratedModel.py" xml:space="preserve">    # Numerically integrate using Euler steps to solve the model.
+    for step in range(0, n):
+        time = step * dt
+
+        model.compute_rates(time, my_state_variables, my_rates, my_variables)
+
+        # Formatting for output.
+        row = '{}\t{}'.format(step, time)
+        for s in range(0, model.STATE_COUNT):
+            my_state_variables[s] = my_state_variables[s] + \
+                my_rates[s] * dt
+            row += '\t{}'.format(my_state_variables[s])
+
+        # Note that the variables in the my_variables array are those which 
+        # are independent of the integration: thus, they only need to be
+        # computed at timesteps where the solution is to be written to the
+        # output.  For large simulations, this may not be every integration 
+        # timestep.
+        model.compute_variables(
+            time, my_state_variables, my_rates, my_variables)
+
+        # Output the solution.
+        for s in range(0, model.VARIABLE_COUNT):
+            row += '\t{}'.format(my_variables[s])
+
+        row += '\n'
+        write_file.write(row)
+
+    write_file.close()
+
+</literal_block>
                     </container>
                 </container>
             </container>

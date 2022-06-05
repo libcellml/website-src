@@ -214,15 +214,15 @@
 <codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classlibcellml_1_1Parser" kindref="compound">Parser</ref><sp/>&amp;operator=(<ref refid="classlibcellml_1_1Parser" kindref="compound">Parser</ref><sp/>rhs)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;<sp/></highlight></codeline>
 <codeline lineno="51" refid="classlibcellml_1_1Parser_1a5354bd9dd3b7676a21951d8299f4d018" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespacelibcellml_1a8b173eeb9712743770c113924ca0c6a4" kindref="member">ParserPtr</ref><sp/><ref refid="classlibcellml_1_1Parser_1a5354bd9dd3b7676a21951d8299f4d018" kindref="member">create</ref>()<sp/>noexcept;</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="65" refid="classlibcellml_1_1Parser_1a7b15027b4d3b39ae2c3b675747644d57" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref><sp/>parseModel(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;input);</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal">private:</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classlibcellml_1_1Parser" kindref="compound">Parser</ref>();<sp/></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>ParserImpl;<sp/></highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>ParserImpl<sp/>*pFunc();<sp/></highlight></codeline>
-<codeline lineno="73"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>libcellml</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="classlibcellml_1_1Parser_1adab4041e0ea9645eed6ebb8e6d59baa2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref><sp/>parseModel(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;input,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>parseVersion1XModels=false);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">private:</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classlibcellml_1_1Parser" kindref="compound">Parser</ref>();<sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>ParserImpl;<sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>ParserImpl<sp/>*pFunc();<sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>libcellml</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="libcellml/parser.h"/>
   </compounddef>

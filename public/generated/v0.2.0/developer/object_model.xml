@@ -1,4 +1,4 @@
-<document xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/" xmlns:todo="https://www.sphinx-doc.org/" source="/Users/hsor001/Projects/cellml/sandbox/libcellml/docs/object_model.rst">
+<document xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/" xmlns:todo="https://www.sphinx-doc.org/" source="/Users/hsor001/Projects/cellml/sandbox/tmp/libcellml/docs/object_model.rst">
     <target refid="libcellmlobjectmodel"/>
     <section ids="libcellml-object-model libcellmlobjectmodel" names="libcellml\ object\ model libcellmlobjectmodel">
         <title>libCellML Object Model</title>
@@ -11,7 +11,7 @@
             <title>Overview of Object Model</title>
             <figure ids="overview-of-libcellml-objects" names="overview_of_libcellml_objects">
                 <image alt="libCellML Overview Object Model." candidates="{'*': 'images/libCellMLRoughObjectModel-Overview.png'}" uri="images/libCellMLRoughObjectModel-Overview.png"/>
-                <caption_number>Fig. 10 </caption_number><caption_number>Fig. 10 </caption_number><caption>Showing the inheritance structure between libCellML items within the model.</caption>
+                <caption_number>Fig. 10 </caption_number><caption_number>Fig. 10 </caption_number><caption_number>Fig. 10 </caption_number><caption_number>Fig. 10 </caption_number><caption_number>Fig. 10 </caption_number><caption_number>Fig. 10 </caption_number><caption_number>Fig. 10 </caption_number><caption>Showing the inheritance structure between libCellML items within the model.</caption>
             </figure>
         </section>
         <section ids="detailed" names="detailed">

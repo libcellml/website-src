@@ -36,11 +36,6 @@
 
       .. literalinclude:: /tutorials/utilities/utilities.py
         :language: c++
-        :start-after: # START get_cellml_element_type_from_enum
-        :end-before: # END get_cellml_element_type_from_enum
-
-      .. literalinclude:: /tutorials/utilities/utilities.py
-        :language: c++
         :start-after: # START get_issue_level_from_enum
         :end-before: # END get_issue_level_from_enum
     

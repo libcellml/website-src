@@ -1018,7 +1018,7 @@
     <member refid="classlibcellml_1_1Parser_1aa7615d22f48a204bdc9a767acc03c1cb" kind="function"><name>Parser</name></member>
     <member refid="classlibcellml_1_1Parser_1a5ea08d2c49c6648247a1b2f8e27aa8db" kind="function"><name>pFunc</name></member>
     <member refid="classlibcellml_1_1Parser_1a5354bd9dd3b7676a21951d8299f4d018" kind="function"><name>create</name></member>
-    <member refid="classlibcellml_1_1Parser_1a7b15027b4d3b39ae2c3b675747644d57" kind="function"><name>parseModel</name></member>
+    <member refid="classlibcellml_1_1Parser_1adab4041e0ea9645eed6ebb8e6d59baa2" kind="function"><name>parseModel</name></member>
   </compound>
   <compound refid="classlibcellml_1_1Printer" kind="class"><name>libcellml::Printer</name>
     <member refid="classlibcellml_1_1Printer_1a366e6a6609fc6dfbc4efded083dea98a" kind="variable"><name>mPimpl</name></member>

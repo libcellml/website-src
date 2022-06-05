@@ -1,4 +1,4 @@
-<document xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/" xmlns:todo="https://www.sphinx-doc.org/" source="/Users/hsor001/Projects/cellml/sandbox/libcellml/docs/setup.rst">
+<document xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/" xmlns:todo="https://www.sphinx-doc.org/" source="/Users/hsor001/Projects/cellml/sandbox/tmp/libcellml/docs/setup.rst">
     <target refid="setup"/>
     <section ids="development-setup setup" names="development\ setup setup">
         <title>Development setup</title>
@@ -279,7 +279,7 @@ cd build-libxml2</literal_block>
                 In <number_reference internal="True" refid="repository-setup" title="Fig. %s"><inline classes="std std-numref">Fig. 11</inline></number_reference>, you can see a pictorial representation of what we are aiming to achieve.</paragraph>
             <figure align="center" ids="repository-setup" names="repository_setup">
                 <image alt="Setup of Git repositories." candidates="{'*': 'images/libCellMLProcesses-GitHubRepos.png'}" uri="images/libCellMLProcesses-GitHubRepos.png"/>
-                <caption_number>Fig. 11 </caption_number><caption_number>Fig. 11 </caption_number><caption>How the repositories for development are arranged.</caption>
+                <caption_number>Fig. 11 </caption_number><caption_number>Fig. 11 </caption_number><caption_number>Fig. 11 </caption_number><caption_number>Fig. 11 </caption_number><caption_number>Fig. 11 </caption_number><caption_number>Fig. 11 </caption_number><caption_number>Fig. 11 </caption_number><caption>How the repositories for development are arranged.</caption>
             </figure>
             <paragraph>The four steps to getting set up are detailed below.</paragraph>
             <section ids="forking-your-own-copy" names="forking\ your\ own\ copy">
@@ -288,7 +288,7 @@ cd build-libxml2</literal_block>
                 <paragraph>Use the fork button to create a libCellML repository under your own account, see <number_reference internal="True" refid="forking-a-repo" title="Fig. %s"><inline classes="std std-numref">Fig. 12</inline></number_reference> for locating this button.</paragraph>
                 <figure align="center" ids="forking-a-repo" names="forking_a_repo">
                     <image alt="Fork button of libCellML repository." candidates="{'*': 'images/libCellMLProcesses-GitHubForkButton.png'}" uri="images/libCellMLProcesses-GitHubForkButton.png"/>
-                    <caption_number>Fig. 12 </caption_number><caption_number>Fig. 12 </caption_number><caption>Fork button for libCellML repository.</caption>
+                    <caption_number>Fig. 12 </caption_number><caption_number>Fig. 12 </caption_number><caption_number>Fig. 12 </caption_number><caption_number>Fig. 12 </caption_number><caption_number>Fig. 12 </caption_number><caption_number>Fig. 12 </caption_number><caption_number>Fig. 12 </caption_number><caption>Fork button for libCellML repository.</caption>
                 </figure>
             </section>
             <section ids="clone" names="clone">

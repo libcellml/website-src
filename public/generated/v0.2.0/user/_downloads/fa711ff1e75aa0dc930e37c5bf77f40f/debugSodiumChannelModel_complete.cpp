@@ -9,6 +9,7 @@
  *  - Use the diagnostic Analyser class to identify issues in the model's mathematical formulation.
  */
 
+#include <filesystem>
 #include <fstream>
 #include <iostream>
 #include <sstream>
@@ -17,12 +18,16 @@
 
 #include "utilities.h"
 
-int main()
+int main(int argc, char* argv[])
 {
-    std::cout << "----------------------------------------------------------" << std::endl;
-    std::cout << "   STEP 1: Parse the existing sodium channel model " << std::endl;
-    std::cout << "----------------------------------------------------------" << std::endl;
+    std::cout << "-------------------------------------------------" << std::endl;
+    std::cout << " STEP 1: Parse the existing sodium channel model" << std::endl;
+    std::cout << "-------------------------------------------------" << std::endl;
 
+    std::filesystem::path inFileName = "SodiumChannelModel_broken.cellml";
+    if (argc > 1) {
+        inFileName = argv[1];
+    }
     // STEP 1: Parse an existing model from a CellML file.
     //         The Parser class is used to deserialise a CellML string into a Model instance.
     //         This means that you're responsible for finding, opening and reading the *.cellml 
@@ -30,7 +35,7 @@ int main()
 
     //  1.a 
     //      Read a CellML file into a std::string.
-    std::ifstream inFile("sodiumChannelModel_broken.cellml");
+    std::ifstream inFile(inFileName);
     std::stringstream inFileContents;
     inFileContents << inFile.rdbuf();
 
@@ -48,9 +53,9 @@ int main()
 
     //  end 1
 
-    std::cout << "----------------------------------------------------------" << std::endl;
-    std::cout << "   STEP 2: Validate the parsed model " << std::endl;
-    std::cout << "----------------------------------------------------------" << std::endl;
+    std::cout << "-----------------------------------" << std::endl;
+    std::cout << " STEP 2: Validate the parsed model" << std::endl;
+    std::cout << "-----------------------------------" << std::endl;
 
     //  2.a 
     //      Create a Validator item and validate the model.
@@ -75,14 +80,14 @@ int main()
         std::cout << "Issue " << i << ": " << issue->description() << std::endl;
         std::cout << "  reference: "<< issue->referenceHeading() << std::endl;
         std::cout << "  see: " << issue->url() << std::endl;
-        std::cout << "  stored item type: " << getCellmlElementTypeFromEnum(issue->cellmlElementType()) << std::endl;
+        std::cout << "  stored item type: " << cellmlElementTypeAsString(issue->item()->type()) << std::endl;
         std::cout << std::endl;
     }
     //  end 2
 
-    std::cout << "----------------------------------------------------------" << std::endl;
-    std::cout << "   STEP 3: Repair the parsed model " << std::endl;
-    std::cout << "----------------------------------------------------------" << std::endl;
+    std::cout << "---------------------------------" << std::endl;
+    std::cout << " STEP 3: Repair the parsed model" << std::endl;
+    std::cout << "---------------------------------" << std::endl;
 
     //      The messages returned from the validator (and other classes) should (!) have enough information 
     //      to enable you to know what the problem is.  In the case of the validator class, the URL listed
@@ -138,11 +143,6 @@ int main()
     //     see: https://cellml-specification.readthedocs.io/en/latest/reference/formal_and_informative/specB08.html?issue=2.8.1.2
     //     stored item type: VARIABLE
 
-    // Issue 6: Variable 'V' in component 'sodiumChannel' has units of '' and an equivalent variable 'V' in component 'sodiumChannelEquations' with non-matching units of 'mV'. The mismatch is: 
-    //     reference: 
-    //     see: 
-    //     stored item type: MAP_VARIABLES
-
     //  Each issue generated contains a pointer to the item to which it refers. We can retrieve the affected item
     //  directly from the issue in one of two ways:
     //      - retrieving an AnyItem struct (whose "first" attribute is an enum of the CellmlElementType; 
@@ -155,8 +155,8 @@ int main()
     //      Check that the item to be returned from the issue is in fact an CellmlElementType::VARIABLE by calling the Issue::type()
     //      function.  Retrieve the variable missing units from the issue.  Set its units to be millivolts.
     auto issue4 = validator->issue(4);
-    assert(issue4->cellmlElementType() == libcellml::CellmlElementType::VARIABLE);
-    issue4->variable()->setUnits(model->units("mV"));
+    assert(issue4->item()->type() == libcellml::CellmlElementType::VARIABLE);
+    issue4->item()->variable()->setUnits(model->units("mV"));
 
     //  end 3.c
 
@@ -188,7 +188,7 @@ int main()
     double multiplier;
     auto mV = model->units("mV");
     mV->unitAttributes("i_dont_exist", prefix, exponent, multiplier, id);
-    std::cout << "The units 'mV' child has attributes: base units = 'i_dont_exist', prefix = '"<< prefix << "', exponent = "<<exponent<<", and multiplier = "<<multiplier <<std::endl;
+    std::cout << std::fixed << std::setprecision(1) << "The units 'mV' child has attributes: base units = 'i_dont_exist', prefix = '"<< prefix << "', exponent = '"<<exponent<<"', and multiplier = '"<<multiplier <<"'"<<std::endl;
 
     // Method 1:
     // mV->removeUnit("i_dont_exist");
@@ -196,8 +196,8 @@ int main()
 
     // Method 2:
     auto issue5 = validator->issue(5);
-    assert(issue5->cellmlElementType() == libcellml::CellmlElementType::UNIT);
-    auto issue5item = issue5->unit();
+    assert(issue5->item()->type() == libcellml::CellmlElementType::UNIT);
+    auto issue5item = issue5->item()->unitsItem();
     issue5item->units()->removeUnit(issue5item->index());
     issue5item->units()->addUnit("volt", "milli");
 
@@ -211,7 +211,7 @@ int main()
     //  The final validator issue refers to the fact that we need to explicitly specify how other components
     //  can access each of the variables in this component.
     //
-    // Issue 7: Variable 't' in component 'sodiumChannelEquations' has no interface type set. The interface type required is 'public_and_private'.
+    // Issue 6: Variable 't' in component 'sodiumChannelEquations' has no interface type set. The interface type required is 'public_and_private'.
     //     reference: 3.10.8
     //     see: https://cellml-specification.readthedocs.io/en/latest/reference/formal_and_informative/specC10.html?issue=3.10.8
     //     stored item type: VARIABLE
@@ -219,9 +219,9 @@ int main()
     //  3.e
     //      Retrieve the variable either using the issue pointer method, or using the name method, and set its 
     //      interface to be the required type.
-    auto issue7 = validator->issue(7);
-    assert(issue7->cellmlElementType() == libcellml::CellmlElementType::VARIABLE);
-    issue7->variable()->setInterfaceType("public_and_private");
+    auto issue6 = validator->issue(6);
+    assert(issue6->item()->type() == libcellml::CellmlElementType::VARIABLE);
+    issue6->item()->variable()->setInterfaceType("public_and_private");
 
     //  3.f 
     //      Revalidate the model and confirm that the errors have gone.
@@ -248,9 +248,9 @@ int main()
 
     //  end 3
 
-    std::cout << "----------------------------------------------------------" << std::endl;
-    std::cout << "   STEP 4: Resolve the imports " << std::endl;
-    std::cout << "----------------------------------------------------------" << std::endl;
+    std::cout << "-----------------------------" << std::endl;
+    std::cout << " STEP 4: Resolve the imports" << std::endl;
+    std::cout << "-----------------------------" << std::endl;
 
     //      It's important to remember that the imports are merely instructions for how
     //      components or units items should be located: only their syntax is checked by the
@@ -265,7 +265,7 @@ int main()
     //  4.a 
     //      Create an Importer instance and use it to resolve the model.
     auto importer = libcellml::Importer::create();
-    importer->resolveImports(model, "");
+    importer->resolveImports(model, inFileName.remove_filename());
 
     //  4.b 
     //      Similarly to the validator, the importer will log any issues it encounters.
@@ -274,7 +274,7 @@ int main()
     printIssues(importer);
 
     //  end 4.b
-    //  Importer error[0]:
+    //  Importer error[1]:
     //     Description: Import of component 'importedGateH' from 'GateModel.cellml' requires 
     //     component named 'i_dont_exist' which cannot be found.
     //
@@ -284,8 +284,8 @@ int main()
     //  4.c 
     //      Fix the issues reported by the importer.  This needs to be an iterative process as
     //      more files become available to the importer.
-    auto issue0 = importer->issue(0);
-    issue0->component()->setImportReference("gateEquations");
+    auto issue0 = importer->issue(1);
+    issue0->item()->component()->setImportReference("gateEquations");
 
     //  end 4.c
     //      The second issue reported is a circular dependency. This is contained in files that
@@ -293,7 +293,7 @@ int main()
     //      fact that the Importer class opens and instantates all required dependencies, and that
     //      some of those dependencies may have problems of their own.  
     //
-    //  Issue [1] is a WARNING:
+    //  Issue [0] is an ERROR:
     //     description: Cyclic dependencies were found when attempting to resolve components in model 'CircularReferences'. The dependency loop is:
     //      - component 'importedGateH' is imported from 'i_dont_exist' in 'GateModel.cellml';
     //      - component 'importedGateM' is imported from 'gateEquations' in 'GateModel.cellml';
@@ -312,17 +312,15 @@ int main()
     model->component("controller", true)->importSource()->setUrl("SodiumChannelController.cellml");
 
     //  4.e 
-    //      Clear the current issues from the importer using the removeAllIssues function.
     //      Resolve the imports again and check that there are no further issues.
-    importer->removeAllIssues();
-    importer->resolveImports(model, "");
+    importer->resolveImports(model, inFileName.remove_filename());
     printIssues(importer);
 
     //  end 4
 
-    std::cout << "----------------------------------------------------------" << std::endl;
-    std::cout << "   STEP 5: Validate the imported dependencies " << std::endl;
-    std::cout << "----------------------------------------------------------" << std::endl;
+    std::cout << "--------------------------------------------" << std::endl;
+    std::cout << " STEP 5: Validate the imported dependencies" << std::endl;
+    std::cout << "--------------------------------------------" << std::endl;
 
     //      At this stage we've validated the local model, and we've used the Importer class
     //      to retrieve all of its import dependencies.  These dependencies are stored in
@@ -359,18 +357,18 @@ int main()
     //      You'll notice that these have been used as the keys in the importer library.
     //      Check that the importer library's models are the same as that attached to the
     //      import source item.
-    for(size_t i = 0; i < model->importSourceCount(); ++i) {
-        std::cout << "Import source [" << i << "]:" << std::endl;
-        std::cout << "     url = " << model->importSource(i)->url() << std::endl;
-        std::cout << "     model = " << model->importSource(i)->model()->name() << std::endl;
-        std::cout << "     library[url] = " << importer->library(model->importSource(i)->url())->name() << std::endl;
-    }
+    // for(size_t i = 0; i < model->importSourceCount(); ++i) {
+    //     std::cout << "Import source [" << i << "]:" << std::endl;
+    //     std::cout << "     url = " << model->importSource(i)->url() << std::endl;
+    //     std::cout << "     model = " << model->importSource(i)->model()->name() << std::endl;
+    //     std::cout << "     library[url] = " << importer->library(model->importSource(i)->url())->name() << std::endl;
+    // }
 
     //  end 5
 
-    std::cout << "----------------------------------------------------------" << std::endl;
-    std::cout << "   STEP 6: Analyse the model(s) " << std::endl;
-    std::cout << "----------------------------------------------------------" << std::endl;
+    std::cout << "------------------------------" << std::endl;
+    std::cout << " STEP 6: Analyse the model(s)" << std::endl;
+    std::cout << "------------------------------" << std::endl;
 
     //      As with the validator, the Analyser class is a diagnostic class which will check
     //      whether the mathematical representation is ready for simulation.  This involves
@@ -504,9 +502,9 @@ int main()
 
     //  end 6
 
-    std::cout << "----------------------------------------------------------" << std::endl;
-    std::cout << "   STEP 7: Serialise and print the repaired model         " << std::endl;
-    std::cout << "----------------------------------------------------------" << std::endl;
+    std::cout << "------------------------------------------------" << std::endl;
+    std::cout << " STEP 7: Serialise and print the repaired model" << std::endl;
+    std::cout << "------------------------------------------------" << std::endl;
 
     //  7.a 
     //      Create a Printer instance and use it to print the CellML-formatted version of
@@ -523,5 +521,5 @@ int main()
 
     //  end
 
-    std::cout << "The repaired sodium channel model has been written to SodiumChannelModel.cellml." << std::endl;
+    std::cout << "The repaired sodium channel model has been written to: SodiumChannelModel.cellml." << std::endl;
 }
