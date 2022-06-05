@@ -1,4 +1,4 @@
-<document xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/" xmlns:todo="https://www.sphinx-doc.org/" source="/Users/hsor001/Projects/cellml/sandbox/libcellml/docs/contributing.rst">
+<document xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/" xmlns:todo="https://www.sphinx-doc.org/" source="/Users/hsor001/Projects/cellml/sandbox/tmp/libcellml/docs/contributing.rst">
     <target refid="contributing"/>
     <section ids="contributing-to-libcellml contributing" names="contributing\ to\ libcellml contributing">
         <title>Contributing to libCellML</title>
@@ -18,7 +18,7 @@
                 For more details, see the text below.</paragraph>
             <figure align="center" ids="libcellml-development-process" names="libcellml_development_process">
                 <image alt="Developer contribution process." candidates="{'*': 'images/libCellMLProcesses-DevelopmentProcess.png'}" uri="images/libCellMLProcesses-DevelopmentProcess.png"/>
-                <caption_number>Fig. 8 </caption_number><caption_number>Fig. 8 </caption_number><caption>Developer contribution process.</caption>
+                <caption_number>Fig. 8 </caption_number><caption_number>Fig. 8 </caption_number><caption_number>Fig. 8 </caption_number><caption_number>Fig. 8 </caption_number><caption_number>Fig. 8 </caption_number><caption_number>Fig. 8 </caption_number><caption_number>Fig. 8 </caption_number><caption>Developer contribution process.</caption>
             </figure>
         </section>
         <section ids="github-issues" names="github\ issues">
@@ -64,7 +64,7 @@
                 Before creating a local topic branch, pull the latest changes from the <reference internal="True" refuri="glossary#term-prime-repository"><inline classes="xref std std-term">prime repository</inline></reference> <literal classes="code">develop</literal> branch, to make sure that you&#8217;re working from the most up-to-date version of the code.</paragraph>
             <figure align="center" ids="git-branching" names="git_branching">
                 <image alt="Git branching illustration." candidates="{'*': 'images/libCellMLProcesses-GitBranching.png'}" uri="images/libCellMLProcesses-GitBranching.png"/>
-                <caption_number>Fig. 9 </caption_number><caption_number>Fig. 9 </caption_number><caption>How branching in a Git repository works.</caption>
+                <caption_number>Fig. 9 </caption_number><caption_number>Fig. 9 </caption_number><caption_number>Fig. 9 </caption_number><caption_number>Fig. 9 </caption_number><caption_number>Fig. 9 </caption_number><caption_number>Fig. 9 </caption_number><caption_number>Fig. 9 </caption_number><caption>How branching in a Git repository works.</caption>
             </figure>
             <paragraph>Following this process will make it easier to have multiple topic branches at once and keep them in-sync with the <reference internal="True" refuri="glossary#term-prime-repository"><inline classes="xref std std-term">prime repository</inline></reference> <literal classes="code">develop</literal> branch, which will in turn make it easier to manage multiple pull requests.</paragraph>
             <paragraph>The following Git commands show an example of how to create a topic branch for fixing a (hypothetical) bug described in <title_reference>issue #123</title_reference>:</paragraph>

@@ -1,4 +1,4 @@
-<document xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/" xmlns:todo="https://www.sphinx-doc.org/" source="/Users/hsor001/Projects/cellml/sandbox/userguides/theory/ion_gates.rst">
+<document xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/" xmlns:todo="https://www.sphinx-doc.org/" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/theory/ion_gates.rst">
     <target refid="ion-gates"/>
     <section ids="a-model-of-ion-channel-gating-and-current ion-gates" names="a\ model\ of\ ion\ channel\ gating\ and\ current ion_gates">
         <title>A model of ion channel gating and current</title>
@@ -42,7 +42,7 @@
                 <emphasis>entropy</emphasis>.</paragraph>
             <figure align="center" ids="distribution-of-microstates" names="distribution_of_microstates">
                 <image alt="Distribution of microstates" candidates="{'*': 'theory/images/distribution_microstates.png'}" uri="theory/images/distribution_microstates.png" width="50%"/>
-                <caption_number>Figure 2 </caption_number><caption_number>Figure 2 </caption_number><caption_number>Figure 2 </caption_number><caption_number>Figure 2 </caption_number><caption_number>Figure 2 </caption_number><caption>Distribution of microstates in a system <footnote_reference auto="1" docname="theory/ion_gates" ids="id2" refid="id8">2</footnote_reference>. The 16 particles in a
+                <caption_number>Figure 2 </caption_number><caption_number>Figure 2 </caption_number><caption_number>Figure 2 </caption_number><caption>Distribution of microstates in a system <footnote_reference auto="1" docname="theory/ion_gates" ids="id2" refid="id8">2</footnote_reference>. The 16 particles in a
                     confined region (left) have only one possible arrangement (<math>W=1</math>) and
                     therefore zero entropy (<math>k_{B}\ln W=0</math>). When the barrier is
                     removed and the number of possible locations for each particle increases
@@ -120,7 +120,7 @@
                     \frac{2.5\times10^{3}\ }{0.96\times10^{5}}\text{ }(J.C^{-1}) \approx 25mV</math>.</paragraph>
             <figure align="center" ids="balance-of-forces" names="balance_of_forces">
                 <image alt="Balance of entropic and electrostatic forces" candidates="{'*': 'theory/images/balance_forces.png'}" uri="theory/images/balance_forces.png" width="30%"/>
-                <caption_number>Figure 3 </caption_number><caption_number>Figure 3 </caption_number><caption_number>Figure 3 </caption_number><caption_number>Figure 3 </caption_number><caption_number>Figure 3 </caption_number><caption>The balance between entropic and electrostatic forces
+                <caption_number>Figure 3 </caption_number><caption_number>Figure 3 </caption_number><caption_number>Figure 3 </caption_number><caption>The balance between entropic and electrostatic forces
                     determines the Nernst potential.</caption>
             </figure>
         </section>
@@ -136,7 +136,7 @@
                 behaviour depend on how its gates modify the open channel conductance.</paragraph>
             <figure align="center" ids="ion-gates-theory" names="ion_gates_theory">
                 <image alt="Open channel linear IV" candidates="{'*': 'theory/images/ion_gates_theory.png'}" uri="theory/images/ion_gates_theory.png" width="70%"/>
-                <caption_number>Figure 4 </caption_number><caption_number>Figure 4 </caption_number><caption_number>Figure 4 </caption_number><caption_number>Figure 4 </caption_number><caption_number>Figure 4 </caption_number><caption>(a) Open channel linear current-voltage relation.  (b) Ion channel gating
+                <caption_number>Figure 4 </caption_number><caption_number>Figure 4 </caption_number><caption_number>Figure 4 </caption_number><caption>(a) Open channel linear current-voltage relation.  (b) Ion channel gating
                     kinetics. <math>y</math> is the fraction of gates in the open state.
                     <math>\alpha_n</math> and <math>\beta_n</math> are the rate constants for opening and
                     closing, respectively.</caption>
@@ -162,7 +162,7 @@
                 flow began more slowly, as in <number_reference internal="True" refid="transient-gate-behaviour" title="Figure {number} (b)"><inline classes="std std-numref">Figure 5 (b)</inline></number_reference>.</paragraph>
             <figure align="center" ids="transient-gate-behaviour" names="transient_gate_behaviour" width="50%">
                 <image alt="Transient gate behaviour" candidates="{'*': 'theory/images/transient_beh_gates.png'}" uri="theory/images/transient_beh_gates.png"/>
-                <caption_number>Figure 5 </caption_number><caption_number>Figure 5 </caption_number><caption_number>Figure 5 </caption_number><caption_number>Figure 5 </caption_number><caption_number>Figure 5 </caption_number><caption>Transient behaviour for one gate (left) and &#947; gates in series (right). Note
+                <caption_number>Figure 5 </caption_number><caption_number>Figure 5 </caption_number><caption_number>Figure 5 </caption_number><caption>Transient behaviour for one gate (left) and &#947; gates in series (right). Note
                     that the right hand graph has an initial S-shaped increase, reflecting the
                     multiple gates in series.</caption>
             </figure>
@@ -192,7 +192,7 @@
                 observed experimentally by Hodgkin and Huxley.</paragraph>
             <figure align="center" ids="ion-gate-status" names="ion_gate_status">
                 <image alt="Gate status for a single gate, and current through four gates" candidates="{'*': 'theory/images/tut5.png'}" uri="theory/images/tut5.png"/>
-                <caption_number>Figure 6 </caption_number><caption_number>Figure 6 </caption_number><caption_number>Figure 6 </caption_number><caption_number>Figure 6 </caption_number><caption_number>Figure 6 </caption_number><caption>Dynamics of opening status for a single gate, and the resulting current
+                <caption_number>Figure 6 </caption_number><caption_number>Figure 6 </caption_number><caption_number>Figure 6 </caption_number><caption>Dynamics of opening status for a single gate, and the resulting current
                     for <math>\gamma=4</math> gates in series.</caption>
             </figure>
         </section>

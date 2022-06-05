@@ -1,4 +1,4 @@
-<document xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/" xmlns:todo="https://www.sphinx-doc.org/" source="/Users/hsor001/Projects/cellml/sandbox/userguides/tutorials/tutorial4/index.rst">
+<document xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/" xmlns:todo="https://www.sphinx-doc.org/" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/tutorials/tutorial4/index.rst">
     <target refid="tutorial4"/>
     <section ids="tutorial-4-using-generated-code-to-run-a-simulation tutorial4" names="tutorial\ 4:\ using\ generated\ code\ to\ run\ a\ simulation tutorial4">
         <title>Tutorial 4: Using generated code to run a simulation</title>
@@ -97,7 +97,7 @@
                         <container classes="header">
                             <paragraph>Show C++ snippet</paragraph>
                         </container>
-                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/userguides/tutorials/tutorial4/tutorial4_complete.cpp" xml:space="preserve">    //  1.e 
+                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/tutorials/tutorial4/tutorial4_complete.cpp" xml:space="preserve">    //  1.e 
     //      Retrieve the version numbers from the libCellML library and the generated code you've just included.
     std::cout &lt;&lt; "The generated code used libCellML version " &lt;&lt; LIBCELLML_VERSION &lt;&lt; std::endl;
     std::cout &lt;&lt; "The library version of libCellML is " &lt;&lt; libcellml::versionString() &lt;&lt; std::endl;
@@ -116,16 +116,14 @@
                         <container classes="header">
                             <paragraph>Show Python snippet</paragraph>
                         </container>
-                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/userguides/tutorials/tutorial4/tutorial4_complete.py" xml:space="preserve">    #  1.a
+                        <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/tutorials/tutorial4/tutorial4_complete.py" xml:space="preserve">    #  1.a
     #       Use the importlib functionality to open the generated code file.
-    spec = importlib.util.spec_from_file_location('PredatorPrey', 'PredatorPrey.py')
-    module = importlib.util.module_from_spec(spec)
+    spec = importlib.util.spec_from_file_location('PredatorPrey', os.path.join(here, 'PredatorPrey.py'))
+    model = importlib.util.module_from_spec(spec)
 
     #  1.b
-    #       Load into a module.
-    sys.modules['PredatorPrey'] = module
-    spec.loader.exec_module(module)
-    model = module
+    #       Load module.
+    spec.loader.exec_module(model)
 
 </literal_block>
                     </container>
@@ -171,7 +169,7 @@
                 <container classes="header">
                     <paragraph>Show C++ snippet</paragraph>
                 </container>
-                <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/userguides/tutorials/tutorial4/tutorial4_complete.cpp" xml:space="preserve">    //  2.a
+                <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/tutorials/tutorial4/tutorial4_complete.cpp" xml:space="preserve">    //  2.a
     //      Get the number of variables and iterate through the VARIABLE_INFO structure to
     //      retrieve and print each variable's information to the terminal.
 
@@ -190,7 +188,7 @@
                 <container classes="header">
                     <paragraph>Show Python snippet</paragraph>
                 </container>
-                <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/userguides/tutorials/tutorial4/tutorial4_complete.py" xml:space="preserve">    #  2.a
+                <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/tutorials/tutorial4/tutorial4_complete.py" xml:space="preserve">    #  2.a
     #       Get the number of variables and iterate through the VARIABLE_INFO dict to
     #       retrieve and print each variable's information to the terminal.
     print('VARIABLE_COUNT = {}'.format(model.VARIABLE_COUNT))
@@ -229,7 +227,7 @@
                 <container classes="header">
                     <paragraph>Show C++ snippet</paragraph>
                 </container>
-                <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/userguides/tutorials/tutorial4/tutorial4_complete.cpp" xml:space="preserve">    //  2.b
+                <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/tutorials/tutorial4/tutorial4_complete.cpp" xml:space="preserve">    //  2.b
     //      Get the number of state variables and iterate through the STATE_INFO structure to
     //      retrieve and print each state variable's information to the terminal.
     std::cout &lt;&lt; std::endl;
@@ -247,7 +245,7 @@
                 <container classes="header">
                     <paragraph>Show Python snippet</paragraph>
                 </container>
-                <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/userguides/tutorials/tutorial4/tutorial4_complete.py" xml:space="preserve">    #  2.b
+                <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/tutorials/tutorial4/tutorial4_complete.py" xml:space="preserve">    #  2.b
     #       Get the number of state variables and iterate through the STATE_INFO dict to
     #       retrieve and print each state variable's information to the terminal.
     print('STATE_COUNT = {}'.format(model.STATE_COUNT))
@@ -268,7 +266,7 @@
                 <container classes="header">
                     <paragraph>Show C++ snippet</paragraph>
                 </container>
-                <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/userguides/tutorials/tutorial4/tutorial4_complete.cpp" xml:space="preserve">    //  2.c 
+                <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/tutorials/tutorial4/tutorial4_complete.cpp" xml:space="preserve">    //  2.c 
     //      Get the integration variable and print its information to the terminal. This
     //      is stored in a VariableInfo struct called VOI_INFO.
     std::cout &lt;&lt; std::endl;
@@ -284,7 +282,7 @@
                 <container classes="header">
                     <paragraph>Show Python snippet</paragraph>
                 </container>
-                <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/userguides/tutorials/tutorial4/tutorial4_complete.py" xml:space="preserve">    #  2.c 
+                <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/tutorials/tutorial4/tutorial4_complete.py" xml:space="preserve">    #  2.c 
     #       Get the integration variable and print its information to the terminal. This
     #       is stored in a dict called VOI_INFO.
     print('VOI_INFO')
@@ -379,7 +377,7 @@
                 <container classes="header">
                     <paragraph>Show C++ snippet</paragraph>
                 </container>
-                <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/userguides/tutorials/tutorial4/tutorial4_complete.cpp" xml:space="preserve">    //  3.a 
+                <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/tutorials/tutorial4/tutorial4_complete.cpp" xml:space="preserve">    //  3.a 
     //      Create three arrays and use the functions to allocate them, representing
     //      - variables,
     //      - rates
@@ -396,7 +394,7 @@
                 <container classes="header">
                     <paragraph>Show Python snippet</paragraph>
                 </container>
-                <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/userguides/tutorials/tutorial4/tutorial4_complete.py" xml:space="preserve">    #  3.a 
+                <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/tutorials/tutorial4/tutorial4_complete.py" xml:space="preserve">    #  3.a 
     #       Create three arrays representing:
     #       - the variables (which here includes constants)
     #       - the states (the integrated variables)
@@ -416,7 +414,7 @@
                 <container classes="header">
                     <paragraph>Show C++ snippet</paragraph>
                 </container>
-                <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/userguides/tutorials/tutorial4/tutorial4_complete.cpp" xml:space="preserve">    //  3.b 
+                <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/tutorials/tutorial4/tutorial4_complete.cpp" xml:space="preserve">    //  3.b 
     //      Use the functions provided to initialise the arrays you created, then print them 
     //      to the screen for checking.
     initialiseStatesAndConstants(myStateVariables, myVariables);
@@ -433,7 +431,7 @@
                 <container classes="header">
                     <paragraph>Show Python snippet</paragraph>
                 </container>
-                <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/userguides/tutorials/tutorial4/tutorial4_complete.py" xml:space="preserve">    #  3.b 
+                <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/tutorials/tutorial4/tutorial4_complete.py" xml:space="preserve">    #  3.b 
     #       Use the functions provided to initialise the arrays you created, then print them 
     #       to the screen for checking.
     model.initialise_states_and_constants(my_state_variables, my_variables)
@@ -456,7 +454,7 @@
                 <container classes="header">
                     <paragraph>Show C++ snippet</paragraph>
                 </container>
-                <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/userguides/tutorials/tutorial4/tutorial4_complete.cpp" xml:space="preserve">    //  3.c 
+                <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/tutorials/tutorial4/tutorial4_complete.cpp" xml:space="preserve">    //  3.c 
     //      Compute the constants, compute the variables, and print them to the screen for checking.
     computeComputedConstants(myVariables);
     computeVariables(time, myStateVariables, myRates, myVariables);
@@ -472,7 +470,7 @@
                 <container classes="header">
                     <paragraph>Show Python snippet</paragraph>
                 </container>
-                <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/userguides/tutorials/tutorial4/tutorial4_complete.py" xml:space="preserve">    #  3.c 
+                <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/tutorials/tutorial4/tutorial4_complete.py" xml:space="preserve">    #  3.c 
     #       Compute the constants, compute the variables,  and print them to the screen for checking.
     print('The initial values including all computed constants are:')
     model.compute_computed_constants(my_variables)
@@ -506,7 +504,7 @@
                 <container classes="header">
                     <paragraph>Show C++ snippet</paragraph>
                 </container>
-                <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/userguides/tutorials/tutorial4/tutorial4_complete.cpp" xml:space="preserve">    //  4.a 
+                <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/tutorials/tutorial4/tutorial4_complete.cpp" xml:space="preserve">    //  4.a 
     //      Create variables which control how the solution will run, representing:
     //      - variable of integration (time);
     //      - step size; and
@@ -521,7 +519,7 @@
                 <container classes="header">
                     <paragraph>Show Python snippet</paragraph>
                 </container>
-                <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/userguides/tutorials/tutorial4/tutorial4_complete.py" xml:space="preserve">    #  4.a 
+                <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/tutorials/tutorial4/tutorial4_complete.py" xml:space="preserve">    #  4.a 
     #       Create variables which control how the solution will run, representing:
     #       - step size and
     #       - the number of steps to take.
@@ -560,7 +558,7 @@
                 <container classes="header">
                     <paragraph>Show C++ snippet</paragraph>
                 </container>
-                <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/userguides/tutorials/tutorial4/tutorial4_complete.cpp" xml:space="preserve">    //  4.b 
+                <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/tutorials/tutorial4/tutorial4_complete.cpp" xml:space="preserve">    //  4.b 
     //      Create a file for output and open it. You can use the information to name columns
     //      with the variables, component, and units so you can keep track later.
     std::ofstream outFile("solution.txt");
@@ -580,7 +578,7 @@
                 <container classes="header">
                     <paragraph>Show Python snippet</paragraph>
                 </container>
-                <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/userguides/tutorials/tutorial4/tutorial4_complete.py" xml:space="preserve">    #  4.b 
+                <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/tutorials/tutorial4/tutorial4_complete.py" xml:space="preserve">    #  4.b 
     #       Create a file for output and open it. You can use the information to name columns
     #       with the variables, component, and units so you can keep track later.
     write_file = open('solution.txt', 'w')
@@ -604,7 +602,7 @@
                 <container classes="header">
                     <paragraph>Show C++ snippet</paragraph>
                 </container>
-                <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/userguides/tutorials/tutorial4/tutorial4_complete.cpp" xml:space="preserve">    //  4.c
+                <literal_block force="False" highlight_args="{'linenostart': 1}" language="c++" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/tutorials/tutorial4/tutorial4_complete.cpp" xml:space="preserve">    //  4.c
     //      Iterate through the time domain and write the solution at each step. 
     for (size_t step = 0; step &lt; stepCount; ++step) {
         time = step * stepSize;
@@ -644,7 +642,7 @@
                 <container classes="header">
                     <paragraph>Show Python snippet</paragraph>
                 </container>
-                <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/userguides/tutorials/tutorial4/tutorial4_complete.py" xml:space="preserve">    #  4.c 
+                <literal_block force="False" highlight_args="{'linenostart': 1}" language="python" linenos="False" source="/Users/hsor001/Projects/cellml/sandbox/tmp/userguides/tutorials/tutorial4/tutorial4_complete.py" xml:space="preserve">    #  4.c 
     #      Iterate through the time domain and write the solution at each step. 
     for step in range(0, step_count):
         time = step * step_size
@@ -682,7 +680,7 @@
             <paragraph>You should find results similar to the figure below, where the cyclical dependency of the shark and fish populations can be seen.</paragraph>
             <figure align="center" ids="population-dynamics-of-sharks-and-fish" names="population_dynamics_of_sharks_and_fish">
                 <image alt="Population dynamics of sharks and fish" candidates="{'*': 'tutorials/images/sharks_and_fish.png'}" uri="tutorials/images/sharks_and_fish.png"/>
-                <caption_number>Figure 1 </caption_number><caption_number>Figure 1 </caption_number><caption_number>Figure 1 </caption_number><caption_number>Figure 1 </caption_number><caption_number>Figure 1 </caption_number><caption_number>Figure 1 </caption_number><caption_number>Figure 1 </caption_number><caption_number>Figure 1 </caption_number><caption>Population dynamics for the sharks and fish.</caption>
+                <caption_number>Figure 1 </caption_number><caption_number>Figure 1 </caption_number><caption_number>Figure 1 </caption_number><caption>Population dynamics for the sharks and fish.</caption>
             </figure>
         </section>
     </section>

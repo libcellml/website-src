@@ -1,4 +1,4 @@
-<document xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/" xmlns:todo="https://www.sphinx-doc.org/" source="/Users/hsor001/Projects/cellml/sandbox/libcellml/docs/configure_and_build.rst">
+<document xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/" xmlns:todo="https://www.sphinx-doc.org/" source="/Users/hsor001/Projects/cellml/sandbox/tmp/libcellml/docs/configure_and_build.rst">
     <target refid="configure-and-build"/>
     <section ids="configuring-and-building-libcellml configure-and-build" names="configuring\ and\ building\ libcellml configure_and_build">
         <title refid="id2">Configuring and building libCellML</title>
@@ -363,7 +363,7 @@ cmake -DBUILD_TYPE=Release $LIBCELLML_SRC</literal_block>
                     You can edit anything you need to in the next step.</paragraph>
                 <figure align="center" ids="cmake-gui-with-values" names="cmake_gui_with_values">
                     <image alt="CMake-GUI with initial values for source and build directories set." candidates="{'*': 'images/libCellMLBuilding-CMakeGUISourceBuildDirs.png'}" uri="images/libCellMLBuilding-CMakeGUISourceBuildDirs.png"/>
-                    <caption_number>Fig. 1 </caption_number><caption_number>Fig. 1 </caption_number><caption>CMake-GUI with source and build directories set for user <emphasis>andre</emphasis>.</caption>
+                    <caption_number>Fig. 1 </caption_number><caption_number>Fig. 1 </caption_number><caption_number>Fig. 1 </caption_number><caption_number>Fig. 1 </caption_number><caption_number>Fig. 1 </caption_number><caption_number>Fig. 1 </caption_number><caption_number>Fig. 1 </caption_number><caption>CMake-GUI with source and build directories set for user <emphasis>andre</emphasis>.</caption>
                 </figure>
                 <paragraph>After the initial configuration attempt, CMake lists any <emphasis>changed</emphasis> values in red.
                     This done not mean that there&#8217;s anything wrong with them!
@@ -372,12 +372,12 @@ cmake -DBUILD_TYPE=Release $LIBCELLML_SRC</literal_block>
                     Some common messages and their required actions are listed below.</paragraph>
                 <figure align="center" ids="cmake-gui-with-initial-values" names="cmake_gui_with_initial_values">
                     <image alt="CMake-GUI with initial values shown in red." candidates="{'*': 'images/libCellMLBuilding-CMakeOptionsInRed.png'}" uri="images/libCellMLBuilding-CMakeOptionsInRed.png"/>
-                    <caption_number>Fig. 2 </caption_number><caption_number>Fig. 2 </caption_number><caption>CMake-GUI with initial values shown in red.</caption>
+                    <caption_number>Fig. 2 </caption_number><caption_number>Fig. 2 </caption_number><caption_number>Fig. 2 </caption_number><caption_number>Fig. 2 </caption_number><caption_number>Fig. 2 </caption_number><caption_number>Fig. 2 </caption_number><caption_number>Fig. 2 </caption_number><caption>CMake-GUI with initial values shown in red.</caption>
                 </figure>
                 <paragraph>The first time you push the <emphasis>Configure</emphasis> button you will probably encounter an error like the one shown below.</paragraph>
                 <figure align="center" ids="cmake-gui-with-errors" names="cmake_gui_with_errors">
                     <image alt="CMake-GUI on Windows showing configuration error after initial configuration attempt." candidates="{'*': 'images/libCellMLBuilding-CMakeWindowsConfigurationError.png'}" uri="images/libCellMLBuilding-CMakeWindowsConfigurationError.png"/>
-                    <caption_number>Fig. 3 </caption_number><caption_number>Fig. 3 </caption_number><caption>CMake-GUI showing libxml2 configuration error after initial configuration attempt.</caption>
+                    <caption_number>Fig. 3 </caption_number><caption_number>Fig. 3 </caption_number><caption_number>Fig. 3 </caption_number><caption_number>Fig. 3 </caption_number><caption_number>Fig. 3 </caption_number><caption_number>Fig. 3 </caption_number><caption_number>Fig. 3 </caption_number><caption>CMake-GUI showing libxml2 configuration error after initial configuration attempt.</caption>
                 </figure>
                 <paragraph>To fix the issue, check that:</paragraph>
                 <bullet_list bullet="-">
@@ -420,7 +420,7 @@ cmake -DBUILD_TYPE=Release $LIBCELLML_SRC</literal_block>
                     It&#8217;s caused by a version mis-match between SWIG and libCellML and will be addressed in the next release.</paragraph>
                 <figure align="center" ids="windows-error" names="windows_error">
                     <image alt="CMake-GUI on Windows shows CMP0086 error." candidates="{'*': 'images/libCellMLBuilding-PolicyCMP0086Error.png'}" uri="images/libCellMLBuilding-PolicyCMP0086Error.png"/>
-                    <caption_number>Fig. 4 </caption_number><caption_number>Fig. 4 </caption_number><caption>CMake-GUI showing CMP0086 error.</caption>
+                    <caption_number>Fig. 4 </caption_number><caption_number>Fig. 4 </caption_number><caption_number>Fig. 4 </caption_number><caption_number>Fig. 4 </caption_number><caption_number>Fig. 4 </caption_number><caption_number>Fig. 4 </caption_number><caption_number>Fig. 4 </caption_number><caption>CMake-GUI showing CMP0086 error.</caption>
                 </figure>
             </section>
             <section ids="on-windows-without-python-debug-libraries" names="on\ windows\ without\ python\ debug\ libraries">
@@ -431,7 +431,7 @@ cmake -DBUILD_TYPE=Release $LIBCELLML_SRC</literal_block>
                     Then simply browse to find the file in your Python installation called something like <literal classes="code">python35_d.lib</literal> (for Python3.5), probably in the <literal classes="code">libs</literal> directory of your Python folder.</paragraph>
                 <figure align="center" ids="python-libraries" names="python_libraries">
                     <image alt="Set the location of the debug library" candidates="{'*': 'images/libCellMLBuilding-PythonDebugLibrary.png'}" uri="images/libCellMLBuilding-PythonDebugLibrary.png"/>
-                    <caption_number>Fig. 5 </caption_number><caption_number>Fig. 5 </caption_number><caption>Set the location of the debug library using the <literal classes="code">PYTHON_DEBUG_LIBRARY</literal> tag</caption>
+                    <caption_number>Fig. 5 </caption_number><caption_number>Fig. 5 </caption_number><caption_number>Fig. 5 </caption_number><caption_number>Fig. 5 </caption_number><caption_number>Fig. 5 </caption_number><caption_number>Fig. 5 </caption_number><caption_number>Fig. 5 </caption_number><caption>Set the location of the debug library using the <literal classes="code">PYTHON_DEBUG_LIBRARY</literal> tag</caption>
                 </figure>
             </section>
             <section ids="could-not-find-swig-missing-swig-dir-swig-executable" names="could\ not\ find\ swig\ (missing:\ swig_dir,\ swig_executable)">
@@ -475,14 +475,14 @@ cmake -DBUILD_TYPE=Release $LIBCELLML_SRC</literal_block>
                         You could launch Visual Studio as an administrator by right-clicking on its icon in the Start Menu (see below), or create your <literal classes="code">LIBCELLML_BUILD</literal> directory somewhere your user has default permission to access.</paragraph>
                     <figure align="center" ids="how-to-run-as-admin" names="how_to_run_as_admin">
                         <image alt="Right-click the VS icon in your start menu and select &quot;Run as administrator&quot;" candidates="{'*': 'images/libCellMLBuilding-WindowsRunAsAdmin.png'}" uri="images/libCellMLBuilding-WindowsRunAsAdmin.png"/>
-                        <caption_number>Fig. 6 </caption_number><caption_number>Fig. 6 </caption_number><caption>Right-click the VS icon in your start menu and select &#8220;Run as administrator&#8221;</caption>
+                        <caption_number>Fig. 6 </caption_number><caption_number>Fig. 6 </caption_number><caption_number>Fig. 6 </caption_number><caption_number>Fig. 6 </caption_number><caption_number>Fig. 6 </caption_number><caption_number>Fig. 6 </caption_number><caption_number>Fig. 6 </caption_number><caption>Right-click the VS icon in your start menu and select &#8220;Run as administrator&#8221;</caption>
                     </figure>
                 </section>
                 <section ids="the-code-execution-cannot-proceed-because-libcellmld-dll-was-not-found" names="the\ code\ execution\ cannot\ proceed\ because\ libcellmld.dll\ was\ not\ found">
                     <title refid="id19">The code execution cannot proceed because libcellmld.dll was not found</title>
                     <figure align="center" ids="dll-not-found" names="dll_not_found">
                         <image alt="System error when dll is not found." candidates="{'*': 'images/libCellMLBuilding-dllNotFound.png'}" uri="images/libCellMLBuilding-dllNotFound.png"/>
-                        <caption_number>Fig. 7 </caption_number><caption_number>Fig. 7 </caption_number><caption>System error when dll is not found.</caption>
+                        <caption_number>Fig. 7 </caption_number><caption_number>Fig. 7 </caption_number><caption_number>Fig. 7 </caption_number><caption_number>Fig. 7 </caption_number><caption_number>Fig. 7 </caption_number><caption_number>Fig. 7 </caption_number><caption_number>Fig. 7 </caption_number><caption>System error when dll is not found.</caption>
                     </figure>
                     <paragraph>You need to add location of the file(s) to the environment path of the project.
                         To do this, right-click the project and open the Properties editor.

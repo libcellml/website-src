@@ -90,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="libcellml/parser.h" line="68" column="5"/>
+        <location file="libcellml/parser.h" line="75" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classlibcellml_1_1Parser_1a5ea08d2c49c6648247a1b2f8e27aa8db" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>ParserImpl *</type>
@@ -106,7 +106,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="libcellml/parser.h" line="72" column="16"/>
+        <location file="libcellml/parser.h" line="79" column="16"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -132,15 +132,20 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="classlibcellml_1_1Parser_1a7b15027b4d3b39ae2c3b675747644d57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classlibcellml_1_1Parser_1adab4041e0ea9645eed6ebb8e6d59baa2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref></type>
         <definition>ModelPtr libcellml::Parser::parseModel</definition>
-        <argsstring>(const std::string &amp;input)</argsstring>
+        <argsstring>(const std::string &amp;input, bool parseVersion1XModels=false)</argsstring>
         <name>parseModel</name>
         <qualifiedname>libcellml::Parser::parseModel</qualifiedname>
         <param>
           <type>const std::string &amp;</type>
           <declname>input</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>parseVersion1XModels</declname>
+          <defval>false</defval>
         </param>
         <briefdescription>
 <para>Create and populate a new model from a <computeroutput>std::string</computeroutput>. </para>
@@ -148,12 +153,21 @@
         <detaileddescription>
 <para>Creates and populates a new model pointer by parsing CellML entities and attributes from the <computeroutput>input</computeroutput> <computeroutput>std::string</computeroutput>.</para>
 <para>All existing issues will be removed before the input is parsed.</para>
+<para>If <computeroutput>parseVersion1XModels</computeroutput> is <computeroutput>true</computeroutput> then CellML 1.0, CellML 1.1, and CellML 2.0 models will be parsed. If <computeroutput>parseVersion1XModels</computeroutput> is <computeroutput>false</computeroutput> then only CellML 2.0 models will be parsed. The default value of parseVersion1XModels is <computeroutput>false</computeroutput>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>input</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The string to parse into a model.</para>
+<para>The string to parse into a model. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parseVersion1XModels</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Boolean to signal whether CellML 1.X models should be parsed, <computeroutput>false</computeroutput> by default.</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -163,7 +177,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="libcellml/parser.h" line="65" column="14"/>
+        <location file="libcellml/parser.h" line="72" column="14"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -196,7 +210,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="libcellml/parser.h" line="33" column="1" bodyfile="libcellml/parser.h" bodystart="34" bodyend="73"/>
+    <location file="libcellml/parser.h" line="33" column="1" bodyfile="libcellml/parser.h" bodystart="34" bodyend="80"/>
     <listofallmembers>
       <member refid="classlibcellml_1_1Parser_1a5354bd9dd3b7676a21951d8299f4d018" prot="public" virt="non-virtual"><scope>libcellml::Parser</scope><name>create</name></member>
       <member refid="classlibcellml_1_1Logger_1a5a260a645de3be9ffb844ce3f7584c4f" prot="public" virt="non-virtual"><scope>libcellml::Parser</scope><name>error</name></member>
@@ -206,7 +220,7 @@
       <member refid="classlibcellml_1_1Logger_1a866117b4f6589724a2fd01f88e56d66f" prot="public" virt="non-virtual"><scope>libcellml::Parser</scope><name>message</name></member>
       <member refid="classlibcellml_1_1Logger_1a05e6f7de0ed9a88611d3c9749e3dbd21" prot="public" virt="non-virtual"><scope>libcellml::Parser</scope><name>messageCount</name></member>
       <member refid="classlibcellml_1_1Parser_1af561cf532e3de31310a5ffd503c2be0b" prot="private" virt="non-virtual"><scope>libcellml::Parser</scope><name>operator=</name></member>
-      <member refid="classlibcellml_1_1Parser_1a7b15027b4d3b39ae2c3b675747644d57" prot="public" virt="non-virtual"><scope>libcellml::Parser</scope><name>parseModel</name></member>
+      <member refid="classlibcellml_1_1Parser_1adab4041e0ea9645eed6ebb8e6d59baa2" prot="public" virt="non-virtual"><scope>libcellml::Parser</scope><name>parseModel</name></member>
       <member refid="classlibcellml_1_1Parser_1a6355eb466ad62937f1e11b95b18dcbf2" prot="private" virt="non-virtual"><scope>libcellml::Parser</scope><name>Parser</name></member>
       <member refid="classlibcellml_1_1Parser_1abef5e7b629ab37add78300099afc6290" prot="private" virt="non-virtual"><scope>libcellml::Parser</scope><name>Parser</name></member>
       <member refid="classlibcellml_1_1Parser_1aa7615d22f48a204bdc9a767acc03c1cb" prot="private" virt="non-virtual"><scope>libcellml::Parser</scope><name>Parser</name></member>

@@ -1,41 +1,53 @@
 import string
 
-from libcellml import Issue, CellmlElementType
+from libcellml import Issue, CellmlElementType, cellmlElementTypeAsString
 
 def print_model(model, include_maths=False):
-    print("The model name is: '{}'".format(model.name()))
+
+    if model is None:
+        print("No model passed to this function.")
+        return
+
+    spacer = "    "
+    print(f"MODEL: '{model.name()}'", end="")
     if model.id() != "":
-        print("The model id is: '{}'".format(model.id()))
+        print(f", id: '{model.id()}'", end="")
 
-    print("The model defines {} custom units:".format(model.unitsCount()))
+    print()
+
+    print(spacer + f"UNITS: {model.unitsCount()} custom units")
     for u in range(0, model.unitsCount()):
-        print("  Units[{u}] is '{n}'".format(u=u, n=model.units(u).name()))
+        print(spacer + spacer + f"[{u}]: {model.units(u).name()}", end="")
+        if model.units(u).isImport():
+            print(", imported from: '", end="")
+            print(model.units(u).importReference(), end="")
+            print(f"' in '{model.units(u).importSource().url()}'", end="")
 
-    print("The model has {n} components:".format(n=model.componentCount()))
+        print()
+    
+    print(spacer + "COMPONENTS: {n} components".format(n=model.componentCount()))
     for c in range(0, model.componentCount()):
         component = model.component(c)
-        spacer = "  "
-        print_component_to_terminal(component, c, spacer, include_maths)
-
-    return
+        print_component_to_terminal(component, c, spacer + spacer, include_maths)
 
 
 def print_component_to_terminal(component, c, spacer, include_maths=False):
-    local = '    '
+    local = "    "
     # Print this component
-    print("{s}Component[{c}] has name: '{n}'".format(
-        s=spacer,
-        c=c,
-        n=component.name()))
+    print(f"{spacer}[{c}]: '{component.name()}'", end="")
     if component.id() != "":
-        print("{s}Component[{c}] has id: '{n}'".format(
-            s=spacer,
-            c=c,
-            n=component.id()))
+        print(f", id: '{component.id()}'", end="")
+    if component.isImport():
+        print(" <--- imported from: '", end="")
+        print(component.importReference(), end="")
+        print(f"' in '{component.importSource().url()}'", end="")
 
+    print()
+
+    print(spacer + local + f"VARIABLES: {component.variableCount()} variables")
     # Print variables in this component
     for v in range(0, component.variableCount()):
-        print(spacer + local + local, end='')
+        print(spacer + local + local, end="")
         print("[{}]: {}".format(v, component.variable(v).name()), end='')
         if component.variable(v).units() is not None:
             print(" [{}]".format(component.variable(v).units().name()), end='')
@@ -56,34 +68,30 @@ def print_component_to_terminal(component, c, spacer, include_maths=False):
                     print("WHOOPS! Null parent component for equivalent variable!")
                     continue
                 
-                print("{} {}:{}".format(con,ev_parent.name(),ev.name()), end='')
+                print("{}{}:{}".format(con,ev_parent.name(),ev.name()), end='')
                 if ev.units() is not None:
                     print(" [{}]".format(ev.units().name()), end='')
                 
                 con = ", "
             print()
-    if include_maths:
-        print("The component contains maths:")
+    if include_maths and component.math():
+        print(spacer + "  Maths in the component is:")
         print(component.math())
 
     # Print the encapsulated components inside this one
     if component.componentCount() > 0:
-        print("{s}Component[{c}] has {n} child components".format(
-            s=spacer,
-            c=c,
-            n=component.componentCount()))
+        print(f"{spacer}{local}COMPONENT {component.name()} has {component.componentCount()} child components:")
 
         for c2 in range(0, component.componentCount()):
             child = component.component(c2)
-            one_more_spacer = spacer + "    "
-            print_component_to_terminal(child, c2, one_more_spacer)
+            one_more_spacer = spacer + local + local
+            print_component_to_terminal(child, c2, one_more_spacer, include_maths)
 
 # START level_as_string
 level_as_string = {
-    Issue.Level.ERROR: "Error",
-    Issue.Level.WARNING: "Warning",
-    Issue.Level.HINT: "Hint",
-    Issue.Level.MESSAGE: "Message"
+    Issue.Level.ERROR: "an ERROR",
+    Issue.Level.WARNING: "a WARNING",
+    Issue.Level.MESSAGE: "a MESSAGE"
 }
 # END level_as_string
 
@@ -94,13 +102,10 @@ def print_issues(item):
     # return issues of all levels.  To retrieve the total number of a specific level
     # of issues, use the errorCount(), warningCount(), hintCount(), or messageCount() functions. 
     number_of_issues = item.issueCount()
+    print(f"Recorded {number_of_issues} issues", end="")
 
     if number_of_issues != 0:
-        print("\nThe {t} has found {n} issues:".format(
-            t=type(item).__name__,
-            n=number_of_issues)
-        )
-
+        print(":")
         for e in range(0, number_of_issues):
 
             # Retrieve the issue at index i.  Note that this is agnostic as to the level of issue.
@@ -110,9 +115,7 @@ def print_issues(item):
 
             # The level of an issue is retrieved using the level() function as an enum value. 
             level = i.level()
-            print("  {l}[{e}]:".format(
-                l=level_as_string[level],
-                e=e))
+            print(f"Issue {e} is {level_as_string[level]}:")
 
             # Each issue has a descriptive text field, accessible through the description() function.
             print("    Description: {d}".format(
@@ -128,17 +131,16 @@ def print_issues(item):
             # An optional URL is given for some issues which directs the user to more detailed information.
             url = i.url()
             if url != "":
-                print("    More information is available at {url}".format(
+                print("    More information is available at: {url}".format(
                     url=url))
 
             # Each issue is associated with an item.  In order to properly deal with the item stored, its type is 
             # recorded too in an enumeration.
-            print("    Stored item type: {}".format(get_cellml_element_type_from_enum(i.cellmlElementType())))
-
+            print("    Stored item type: {}".format(cellmlElementTypeAsString(i.item().type())))
+        print()
     else:
-        print("\nThe {t} has not found any issues!".format(
-            t=type(item).__name__)
-        )
+        print("!")
+        print()
 # END print_issues
 
 def print_component_only_to_terminal(component, spacer):
@@ -209,68 +211,11 @@ def get_issue_level_from_enum(my_level):
     elif my_level == Issue.Level.WARNING:
         my_type_as_string = "WARNING"
         
-    elif my_level == Issue.Level.HINT:
-        my_type_as_string = "HINT"
-
     elif my_level == Issue.Level.MESSAGE:
         my_type_as_string = "MESSAGE"
 
     return my_type_as_string
 # END get_issue_level_from_enum
-
-# START get_cellml_element_type_from_enum
-def get_cellml_element_type_from_enum(my_cause):
-
-    my_type_as_string = "dunno"
-
-    if my_cause == CellmlElementType.COMPONENT:
-        my_type_as_string = "COMPONENT"
-
-    elif my_cause == CellmlElementType.COMPONENT_REF:
-        my_type_as_string = "COMPONENT_REf"
-
-    elif my_cause == CellmlElementType.CONNECTION:
-        my_type_as_string = "CONNECTION"
-
-    elif my_cause == CellmlElementType.ENCAPSULATION:
-        my_type_as_string = "ENCAPSULATION"
-
-    elif my_cause == CellmlElementType.IMPORT:
-        my_type_as_string = "IMPORT"
-
-    elif my_cause == CellmlElementType.MATH:
-        my_type_as_string = "MATH"
-
-    elif my_cause == CellmlElementType.MAP_VARIABLES:
-        my_type_as_string = "MAP_VARIABLES"
-
-    elif my_cause == CellmlElementType.MODEL:
-        my_type_as_string = "MODEL"
-
-    elif my_cause == CellmlElementType.RESET:
-        my_type_as_string = "RESET"
-
-    elif my_cause == CellmlElementType.RESET_VALUE:
-        my_type_as_string = "RESET_VALUE"
-
-    elif my_cause == CellmlElementType.TEST_VALUE:
-        my_type_as_string = "TEST_VALUE"
-
-    elif my_cause == CellmlElementType.UNDEFINED:
-        my_type_as_string = "UNDEFINED"
-
-    elif my_cause == CellmlElementType.UNIT:
-        my_type_as_string = "UNIT"
-
-    elif my_cause == CellmlElementType.UNITS:
-        my_type_as_string = "UNITS"
-
-    elif my_cause == CellmlElementType.VARIABLE:
-        my_type_as_string = "VARIABLE"
-
-    return my_type_as_string
-# END get_cellml_element_type_from_enum
-
 
 # START print_equivalent_variable_set
 def list_equivalent_variables(variable, variable_set):
