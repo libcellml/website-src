@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@mdi/font": "5.9.55",
+    "axios": "^0.27.2",
     "crypto-js": "^4.1.1",
     "filesize": "^8.0.7",
     "jszip": "^3.9.1",

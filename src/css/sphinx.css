@@ -477,11 +477,17 @@ pre > code {
     If you want a different alias to be displayed, be sure to define it first in 
     the list in the rst/xml document.
 */
-#glossary dl > dt > dt {
+
+dl.glossary dt dt {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+dl.glossary > dt > dt {
     display: none;
 }
 
-#glossary  dl > dt > dt:first-child {
+dl.glossary > dt > dt:first-child {
     display: inherit;
     font-weight: 500;
     padding-left: 0;
@@ -489,7 +495,7 @@ pre > code {
     color: var(--deep-red);
 }
 
-#glossary dl > dt > dd {
+dl.glossary > dt > dd {
     padding-left: 1em;
 }
 
