@@ -93,7 +93,7 @@ const apiDocumentationRoute = {
     next(nextTarget)
   },
 }
-const developerDocumentationHomeRoute = {
+const developerDocumentationRoute = {
   path: '/documentation/:version/developer/:pageName*',
   name: 'DocumentationDeveloper',
   meta: { title: 'libCellML: Developer' },
@@ -164,7 +164,7 @@ const routes = [
   homeRoute,
   aboutRoute,
   apiDocumentationRoute,
-  developerDocumentationHomeRoute,
+  developerDocumentationRoute,
   userDocumentationHomeRoute,
   userDocumentationRoute,
   // baseVersionDocumentationRoute,
@@ -184,10 +184,14 @@ export const versionedRoutes = [
   'DocumentationUser',
 ]
 
-const onePathDeepRoutes = [
-  downloadRoute.name,
-  notFoundRoute.name,
+const onePathDeepRoutes = [downloadRoute.name, notFoundRoute.name]
+
+const sphinxRoutes = [
+  userDocumentationRoute.name,
+  developerDocumentationRoute.name,
 ]
+
+const doxygenRoutes = [apiDocumentationRoute.name]
 
 const router = createRouter({
   history: createWebHistory(),
@@ -247,58 +251,42 @@ export const calculateBreadcrumbs = (to) => {
     pages.shift()
     let path = ''
     let depth = 0
-    if (onePathDeepRoutes.includes(to.name)) {
-      crumbs.push(createBreadcrumb('', pages[0]))
-    } else {
-      for (const el of pages) {
-        depth += 1
-        path += '/' + el
-        if (to.name === baseVersionDocumentationRoute.name) {
-          if (versions.includes(el)) {
-            crumbs.push(createBreadcrumb('', el, true))
-          } else {
-            crumbs.push(createBreadcrumb('', el))
-          }
-        } else if (to.name === aboutRoute.name) {
-          crumbs.push(createBreadcrumb('', aboutRoute.name))
-        } else if (to.name === apiDocumentationRoute.name) {
-          if (versions.includes(el)) {
-            crumbs.push(createBreadcrumb('', el, true))
-          } else {
-            let route = { path }
-            if (el === pages[pages.length - 1]) {
-              route = ''
-            }
-
-            crumbs.push(createBreadcrumb(route, convertToReadableText(el)))
-          }
-        } else if (
-          to.name === userDocumentationRoute.name ||
-          to.name === userDocumentationHomeRoute.name ||
-          to.name === developerDocumentationHomeRoute.name
-        ) {
-          if (versions.includes(el)) {
-            crumbs.push(createBreadcrumb('', el, true))
-          } else {
-            let subPath = 'user'
-            if (to.name === developerDocumentationHomeRoute.name) {
-              subPath = 'developer'
-            }
-            let route = { path }
-            if (el !== subPath && path.includes(subPath)) {
-              route = { path: path + '/index' }
-            }
-            if (depth === pages.length) {
-              route = ''
-            }
-            if (pages[depth] === 'index') {
-              route = ''
-            }
-            if (pages[depth - 1] !== 'index') {
-              crumbs.push(createBreadcrumb(route, convertToReadableText(el)))
-            }
-          }
+    for (const el of pages) {
+      depth += 1
+      path += '/' + el
+      const readableText = convertToReadableText(el)
+      if (versions.includes(el)) {
+        crumbs.push(createBreadcrumb('', el, true))
+      } else if (doxygenRoutes.includes(to.name)) {
+        let route = { path }
+        if (el === pages[pages.length - 1]) {
+          route = ''
         }
+
+        crumbs.push(createBreadcrumb(route, readableText))
+      } else if (sphinxRoutes.includes(to.name)) {
+        let subPath = 'user'
+        if (to.name === developerDocumentationRoute.name) {
+          subPath = 'developer'
+        }
+        let route = { path }
+        if (el !== subPath && path.includes(subPath)) {
+          route = { path: path + '/index' }
+        }
+        if (depth === pages.length) {
+          route = ''
+        }
+        if (pages[depth] === 'index') {
+          route = ''
+        }
+        if (pages[depth - 1] !== 'index') {
+          crumbs.push(createBreadcrumb(route, readableText))
+        }
+      } else if (depth === pages.length) {
+        crumbs.push(createBreadcrumb('', readableText))
+      } else {
+        const route = { path }
+        crumbs.push(createBreadcrumb(route, readableText))
       }
     }
   }
