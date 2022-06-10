@@ -8,7 +8,7 @@
     </v-col>
     <v-col cols="auto">
       <span id="footer-copyright">
-        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank"
           ><img
             alt="Creative Commons Licence"
             style="border-width: 0"
