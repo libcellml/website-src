@@ -21,7 +21,7 @@
     <p>
       Until we have a formal paper to cite, please link to the official
       libCellML website
-      <a target="_blank" href="http://www.libcellml.org">libcellml.org</a>
+      <a href="http://www.libcellml.org" target="_blank">libcellml.org</a>
       and reference the CellML 2.0 paper below:
     </p>
     <p style="padding-left: 1.5em">
@@ -30,7 +30,7 @@
       "CellML 2.0", <i>Journal of Integrative Bioinformatics</i>, <b>17</b>:2-3.
       <br />
       <b>DOI: </b>
-      <a href="https://doi.org/10.1515/jib-2020-0021"
+      <a href="https://doi.org/10.1515/jib-2020-0021" target="_blank"
         >https://doi.org/10.1515/jib-2020-0021</a
       >
     </p>
@@ -40,14 +40,21 @@
     <h3>Contributors</h3>
     <p>
       Contributors to the
-      <a href="https://github.com/cellml/libcellml/graphs/contributors">
+      <a
+        href="https://github.com/cellml/libcellml/graphs/contributors"
+        target="_blank"
+      >
         libCellML Github repository</a
       >,
-      <a href="https://github.com/libcellml/website-src/graphs/contributors">
+      <a
+        href="https://github.com/libcellml/website-src/graphs/contributors"
+        target="_blank"
+      >
         this website</a
       >, and
       <a
         href="https://github.com/kerimoyle/libcellml-tutorials/graphs/contributors"
+        target="_blank"
       >
         our documentation</a
       >
@@ -81,7 +88,10 @@
     <h3>License</h3>
     <p>
       This work is licensed under a
-      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"
+      <a
+        rel="license"
+        href="http://creativecommons.org/licenses/by/4.0/"
+        target="_blank"
         >Creative Commons Attribution 4.0 International License</a
       >.
     </p>
@@ -90,5 +100,4 @@
 
 <script setup>
 import GithubContributors from '../GithubContributors.vue'
-
 </script>
