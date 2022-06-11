@@ -9,7 +9,7 @@ const path = require('path')
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
-    minify: false
+    minify: true
   },
   plugins: [
     vue(),
@@ -35,10 +35,6 @@ export default defineConfig({
     // fs: {
       // allow: [
         // searchForWorkspaceRoot(process.cwd()),
-        // '/Users/hsor001/Projects/cellml/emscripten_libs/sandbox/build-libcellml-release/src/bindings/javascript',
-        // '/Users/hsor001/Projects/cellml/web/vue3-sphinx-xml/src/components/templates/',
-        // '/Users/hsor001/Projects/cellml/web/vue3-doxygen-xml/dist/',
-        // '/Users/hsor001/Projects/cellml/web/vue3-sphinx-xml/node_modules/katex/dist/fonts/',
       // ],
     // },
   },
