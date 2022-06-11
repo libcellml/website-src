@@ -1,6 +1,6 @@
 <template>
   <div class="user">
-    <sphinx-page :baseURL="`/generated/${store.state.current_documentation_version}/user`" />
+    <sphinx-page :baseURL="`/generated/${store.state.current_documentation_version}/user`" pageNotFoundName="NotFound" />
   </div>
 </template>
 

@@ -148,15 +148,20 @@ const importRoute = {
   component: () => import('@/views/Import.vue'),
 }
 const notFoundRoute = {
-  path: '/404',
-  name: '404',
+  path: '/notfound',
+  name: 'NotFound',
   meta: { title: 'libCellML: Not Found' },
   component: () => import('../views/NotFound.vue'),
 }
 const catchEverythingRoute = {
-  path: '/:unknownPageName.*',
-  redirect: {
-    name: '404',
+  path: '/:catchUnknown(.*)',
+  redirect: (to) => {
+    return {
+      name: 'NotFound',
+      query: {
+        path: '/' + to.params.catchUnknown,
+      },
+    }
   },
 }
 
