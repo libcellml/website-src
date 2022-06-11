@@ -1043,10 +1043,10 @@ vue-router@^4.0.15:
   dependencies:
     "@vue/devtools-api" "^6.0.0"
 
-vue3-doxygen-xml@^0.1.0-beta.12:
-  version "0.1.0-beta.12"
-  resolved "https://registry.yarnpkg.com/vue3-doxygen-xml/-/vue3-doxygen-xml-0.1.0-beta.12.tgz#54e51a30eb85fc9513e65282bdac0bab22f8e7e9"
-  integrity sha512-KyzBbJFFT+IwSJteSvZfInGG1X9JGvCCibqiXiFEAbX6XH1Vz15VcxlkYty0QbPlTHLLAGSma4BLwe/xgQ8MWQ==
+vue3-doxygen-xml@^0.1.0-beta.13:
+  version "0.1.0-beta.13"
+  resolved "https://registry.yarnpkg.com/vue3-doxygen-xml/-/vue3-doxygen-xml-0.1.0-beta.13.tgz#9ddd2a054be2a8b4f0e268240b6f5b00e0cb7195"
+  integrity sha512-yNFuM3SDZiTuYQBSZTBd4qTvxLAM09zITyZtez5GRpzJFuuofvuMR0R0pxa9cym5OY8AUcFDw9O+7bb2K54eHA==
   dependencies:
     axios "^0.21.1"
     vue "^3.2.25"
