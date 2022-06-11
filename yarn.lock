@@ -1043,10 +1043,10 @@ vue-router@^4.0.15:
   dependencies:
     "@vue/devtools-api" "^6.0.0"
 
-vue3-doxygen-xml@^0.1.0-beta.1:
-  version "0.1.0-beta.11"
-  resolved "https://registry.yarnpkg.com/vue3-doxygen-xml/-/vue3-doxygen-xml-0.1.0-beta.11.tgz#707e4f06f39fe3705c887c72d63c0d0ca08b530b"
-  integrity sha512-Zia5/shSVDVjDCPP9er/DbJC7pbzel/h7hsAZyUuuYGckJzt63A3NqBlCH4Og9SLSRjKS2vd2WmQ18fN0qbBbA==
+vue3-doxygen-xml@^0.1.0-beta.12:
+  version "0.1.0-beta.12"
+  resolved "https://registry.yarnpkg.com/vue3-doxygen-xml/-/vue3-doxygen-xml-0.1.0-beta.12.tgz#54e51a30eb85fc9513e65282bdac0bab22f8e7e9"
+  integrity sha512-KyzBbJFFT+IwSJteSvZfInGG1X9JGvCCibqiXiFEAbX6XH1Vz15VcxlkYty0QbPlTHLLAGSma4BLwe/xgQ8MWQ==
   dependencies:
     axios "^0.21.1"
     vue "^3.2.25"
@@ -1061,10 +1061,10 @@ vue3-libcellml.js@^0.1.0-beta.1:
     core-js "^3.8.3"
     libcellml.js "^0.2.0-dev.24"
 
-vue3-sphinx-xml@^0.1.0-beta.0:
-  version "0.1.0-beta.1"
-  resolved "https://registry.yarnpkg.com/vue3-sphinx-xml/-/vue3-sphinx-xml-0.1.0-beta.1.tgz#5476b10f5a89e99f75976d05c92d0af9b6f34c45"
-  integrity sha512-D8s+XUkRb9R4wlT+pVt4SzDuZCd//47ewnN2BNCuTllMOMSm+Wdg01Fphr6cIWH6210EP6fgoiV7gyDyVzfSXQ==
+vue3-sphinx-xml@^0.1.0-beta.2:
+  version "0.1.0-beta.2"
+  resolved "https://registry.yarnpkg.com/vue3-sphinx-xml/-/vue3-sphinx-xml-0.1.0-beta.2.tgz#b2858123707bde30a0792602ec039bb6c8570367"
+  integrity sha512-mC4Np0PFNlalkzK43yCxUaNajwuKeRGSAy+seaf+G3vCUVqkfNMHQxTbHBzI+uaq4VPWHR6ckGGEStNWGtcGzg==
   dependencies:
     "@hsorby/vue3-katex" "^0.6.0-rc.2"
     axios "^0.21.4"
