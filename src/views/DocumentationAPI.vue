@@ -1,6 +1,6 @@
 <template>
   <div class="doxygen">
-    <doxygen-xml :baseURL="`/generated/${store.state.current_documentation_version}/api`" />
+    <doxygen-xml :baseURL="`/generated/${store.state.current_documentation_version}/api`" pageNotFoundName="NotFound"/>
   </div>
 </template>
 
