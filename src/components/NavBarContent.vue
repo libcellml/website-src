@@ -32,7 +32,7 @@ const links = [
     hashLocation: '/#documentation',
   },
   { label: 'Services', location: '/services', hashLocation: '/#services' },
-  { label: 'About', location: '/#about', hashLocation: '/#about' },
+  { label: 'About', location: '/about', hashLocation: '/#about' },
 ]
 
 function onSidebarButtonClicked() {

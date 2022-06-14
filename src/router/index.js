@@ -56,11 +56,6 @@ const homeRoute = {
     }
   },
 }
-const aboutRoute = {
-  path: '/#about',
-  name: 'About',
-  component: About,
-}
 const baseDocumentationRoute = {
   path: '/documentation',
   name: 'DocumentationHome',
@@ -140,6 +135,12 @@ const downloadRoute = {
   name: 'Download',
   meta: { title: 'libCellML: Download' },
   component: () => import('@/views/Download.vue'),
+}
+const aboutRoute = {
+  path: '/about',
+  name: 'About',
+  meta: { title: 'libCellML: About' },
+  component: () => import('@/views/About.vue'),
 }
 const importRoute = {
   path: '/services/import',
