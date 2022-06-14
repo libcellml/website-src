@@ -1,28 +1,29 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
-import store from './store'
 import router from './router'
+import store from './store'
 import vuetify from './plugins/vuetify'
+import { loadFonts } from './plugins/webfontloader'
 
-import DoxygenXml from 'vue-doxygen-xml'
-import SphinxXml from 'vue-sphinx-xml'
+import { installVue3DoxygenXml } from 'vue3-doxygen-xml'
+import 'vue3-doxygen-xml/dist/style.css'
+
+import { installVue3SphinxXml } from 'vue3-sphinx-xml'
+import 'vue3-sphinx-xml/dist/style.css'
+
 import VueHighlightJS from 'vue-highlightjs'
-import VueKatex from 'vue-katex'
-
 import 'highlight.js/styles/xcode.css'
-import './css/general.css'
-import 'katex/dist/katex.min.css'
 
-Vue.use(DoxygenXml, { store })
-Vue.use(SphinxXml, { store })
-Vue.use(VueHighlightJS)
-Vue.use(VueKatex)
+import Vue3LibCellML from 'vue3-libcellml.js'
 
-Vue.config.productionTip = false
+loadFonts()
 
-new Vue({
-  router,
-  store,
-  vuetify,
-  render: h => h(App),
-}).$mount('#app')
+createApp(App)
+  .use(router)
+  .use(store)
+  .use(installVue3DoxygenXml, { store })
+  .use(installVue3SphinxXml, { store })
+  .use(vuetify)
+  .use(VueHighlightJS)
+  .use(Vue3LibCellML)
+  .mount('#app')

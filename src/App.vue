@@ -1,192 +1,67 @@
 <template>
-  <v-app id="libcellml">
+  <v-app id="top">
     <v-app-bar app clipped-left>
-      <img src="./assets/logo.svg" width="40" height="40" />
-      <v-app-bar-nav-icon @click="onSidebarOpen" />
-      <v-row>
-        <v-col
-          id="topMenuBar"
-          v-for="link in links"
-          :key="`${link.label}-header-link`"
-          :cols="link.label === 'Home' ? 2 : 1"
-        >
-          <v-btn text :to="link.url">
-            {{ link.label }}
-          </v-btn>
-        </v-col>
-        <v-col id="bugButton">
-          <v-tooltip bottom>
-            <template v-slot:activator="{ on }">
-              <v-btn
-                plain
-                v-on="on"
-                href="https://github.com/libcellml/website-src/issues/new"
-                target="_blank"
-                class="float-right"
-              >
-                <v-icon class="buggy">mdi-bug</v-icon>
-                <span>Hover me!</span>
-              </v-btn>
-            </template>
-            <span
-              >This website is a work in progress. Some parts have bugs
-              <br />and others have outright infestations. We are working to fix
-              these<br />
-              issues but feel free to add an issue at <br />
-              https://github.com/libcellml/website-src.<br /><br />
-              <strong>Click me!</strong> if you want to add an issue right
-              now!</span
-            >
-          </v-tooltip>
-        </v-col>
-      </v-row>
+      <nav-bar-content />
     </v-app-bar>
-    <!--      <Sidebar/>-->
-    <!-- Provides the application the proper gutter -->
-    <Sidebar app />
-
-    <!-- Sizes your content based upon application components -->
+    <v-navigation-drawer
+      app
+      v-model="sidebarState"
+      id="sideMenuPanel"
+      width="256"
+      clipped
+      stateless
+    >
+      <sidebar-content />
+    </v-navigation-drawer>
+    <back-to-top :xOffset="getXOffset" />
     <v-main>
-      <v-container fluid id="pageContent">
-        <!-- If using vue-router -->
-        <transition name="slide" mode="out-in">
-          <router-view :key="$route.path" />
-        </transition>
+      <v-container>
+        <v-row mx="4">
+          <v-col>
+            <bread-crumbs />
+          </v-col>
+        </v-row>
+        <div id="pageMainContent">
+          <router-view />
+        </div>
       </v-container>
     </v-main>
-    <NotificationContainer />
-    <BackToTop />
-    <v-footer app>
-      <v-row justify="center" no-gutters>
-        <v-col />
-        <v-col class="text-center">
-          <p id="footer-copyright">
-            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"
-              ><img
-                alt="Creative Commons Licence"
-                style="border-width:0"
-                src="https://i.creativecommons.org/l/by/4.0/88x31.png"
-            /></a>
-          </p>
-        </v-col>
-        <v-col class="text-right">
-          <p id="footer-ack">
-            <router-link to="/#acknowledgements">Acknowledgements</router-link>
-          </p>
-        </v-col>
-      </v-row>
-    </v-footer>
+    <notification-container />
+    <v-footer app bottom fixed><footer-content /></v-footer>
   </v-app>
 </template>
 
-<script>
-import BackToTop from '@/components/BackToTop'
-import Sidebar from '@/components/Sidebar'
-import NotificationContainer from '@/components/NotificationContainer'
+<script setup>
+import { computed, inject } from 'vue'
+import { useStore } from 'vuex'
 
-export default {
-  name: 'App',
+import BreadCrumbs from './components/BreadCrumbs.vue'
+import BackToTop from './components/BackToTop.vue'
+import FooterContent from './components/FooterContent.vue'
+import NotificationContainer from './components/NotificationContainer.vue'
+import SidebarContent from './components/SidebarContent.vue'
+import NavBarContent from './components/NavBarContent.vue'
 
-  components: {
-    BackToTop,
-    Sidebar,
-    NotificationContainer,
+import './css/general.css'
+
+const store = useStore()
+
+const sidebarOverlaySizes = ['xs', 'sm', 'md']
+
+const getXOffset = computed(() => {
+  const vuetifyDisplay = inject(Symbol.for('vuetify:display'))
+  if (sidebarOverlaySizes.includes(vuetifyDisplay.name.value)) {
+    return '1rem'
+  }
+  return store.state.sidebarOpen ? '17rem' : '1rem'
+})
+
+const sidebarState = computed({
+  get() {
+    return store.state.sidebarOpen
   },
-
-  created() {
-    window.addEventListener('resize', this.handleResize)
-    this.handleResize()
+  set(val) {
+    store.state.sidebarOpen = val
   },
-
-  destroyed() {
-    window.removeEventListener('resize', this.handleResize)
-  },
-
-  mounted() {},
-
-  data: () => ({
-    pageChange: false,
-    links: [
-      {
-        label: 'Home',
-        url: '/',
-      },
-      {
-        label: 'Download',
-        url: '/#download',
-      },
-      {
-        label: 'Documentation',
-        url: '/#documentation',
-      },
-      {
-        label: 'Services',
-        url: '/#services',
-      },
-      {
-        label: 'About',
-        url: '/#about',
-      },
-    ],
-    window: {
-      width: 0,
-      height: 0,
-    },
-  }),
-
-  methods: {
-    onSidebarOpen() {
-      this.$store.commit('setSidebarOpen', !this.$store.getters.getSidebarOpen)
-    },
-    handleResize() {
-      this.window.width = window.innerWidth
-      this.window.height = window.innerHeight
-    },
-  },
-
-  watch: {
-    $route(to, from) {
-      if (to.path !== from.path) {
-        this.pageChange = !this.pageChange
-      }
-    },
-  },
-}
+})
 </script>
-
-<style src="./css/general.css"></style>
-<style>
-#pageContent {
-  background-size: 80px;
-  background-position: 12px 12px;
-}
-
-.slide-enter-active,
-.slide-leave-active {
-  /* transition: opacity 1s, transform 1s; KRM used to be 1s for each */
-  transition: opacity 0.25s, transform 0.25s;
-}
-
-.slide-enter,
-.slide-leave-to {
-  opacity: 0;
-}
-
-.slide-enter {
-  transform: translateX(20px);
-}
-
-.slide-leave-to {
-  transform: translateX(-20px);
-}
-
-.col-1 {
-  max-width: unset;
-}
-
-.buggy {
-  margin-left: 3em;
-  font-size: 2.3em !important;
-  color: yellowgreen !important;
-}
-</style>
