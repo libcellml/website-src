@@ -1,67 +1,57 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import { createStore } from 'vuex'
+import { getDocumentationVersions } from '@/js/versions'
 
 import * as notifications from '@/store/modules/notifications.js'
 
-Vue.use(Vuex)
+const documentationVersions = getDocumentationVersions()
 
-export default new Vuex.Store({
+const store = createStore({
   state: {
-    sidebarOpen: null,
-    dynamicRoutes: [],
-    transitionDelay: 300, // This number has to be higher than page transition
-    pageContentChanged: false,
     breadcrumbs: [],
+    current_documentation_version: documentationVersions[0],
+    sidebarOpen: false,
     lastURL: ['', '', ''],
     quickLinks: [],
   },
   getters: {
-    getSidebarOpen: state => {
-      return state.sidebarOpen
-    },
-    getDynamicRoutes: state => {
-      return state.dynamicRoutes
-    },
-    getTransitionDelay: state => {
-      return state.transitionDelay
-    },
-    getPageContentChanged: state => {
-      return state.pageContentChanged
-    },
-    hasRoute: state => name => {
-      return state.dynamicRoutes.filter(entry => entry.name === name).length > 0
-    },
-    getLastURL: state => {
-      return state.lastURL[1]
-    },
-    getBreadcrumbs: state => {
+    getBreadcrumbs: (state) => {
       return state.breadcrumbs
     },
-    getQuickLinks: state => {
+    getCurrentDocumentationVersion: (state) => {
+      return state.current_documentation_version
+    },
+    getSidebarState: (state) => {
+      return state.sidebarOpen
+    },
+    getQuickLinks: (state) => {
       return state.quickLinks
+    },
+    getLastURL: (state) => {
+      return state.lastURL[1]
     },
   },
   mutations: {
-    setSidebarOpen: (state, value) => {
-      state.sidebarOpen = value
-    },
-    addRoute: (state, value) => {
-      state.dynamicRoutes.push(value)
-    },
-    togglePageContentChanged: state => {
-      state.pageContentChanged = !state.pageContentChanged
-    },
     setBreadcrumbs: (state, value) => {
       state.breadcrumbs = value
+    },
+    setCurrentDocumentationVersion: (state, value) => {
+      if (documentationVersions.includes(value)) {
+        state.current_documentation_version = value
+      }
+    },
+    toggleSidebar: (state) => {
+      state.sidebarOpen = !state.sidebarOpen
+    },
+    setQuickLinks: (state, value) => {
+      state.quickLinks = value
     },
     updateLastURL: (state, value) => {
       state.lastURL[0] = state.lastURL[1]
       state.lastURL[1] = state.lastURL[2]
       state.lastURL[2] = value
     },
-    setQuickLinks: (state, value) => {
-      state.quickLinks = value
-    },
   },
   modules: { notifications },
 })
+
+export default store

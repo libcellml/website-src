@@ -1,0 +1,751 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="classlibcellml_1_1Importer" kind="class" language="C++" prot="public">
+    <compoundname>libcellml::Importer</compoundname>
+    <basecompoundref refid="classlibcellml_1_1Logger" prot="public" virt="non-virtual">libcellml::Logger</basecompoundref>
+    <includes refid="importer_8h" local="no">importer.h</includes>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlibcellml_1_1Importer_1afe96b6bf1e85f6851c8dd4cac29e0b84" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Importer::~Importer</definition>
+        <argsstring>() override</argsstring>
+        <name>~Importer</name>
+        <qualifiedname>libcellml::Importer::~Importer</qualifiedname>
+        <briefdescription>
+<para>Destructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importer.h" line="34" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Importer_1acaa59d662526a705ecbe71ff4d715ee8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Importer::Importer</definition>
+        <argsstring>(const Importer &amp;rhs)=delete</argsstring>
+        <name>Importer</name>
+        <qualifiedname>libcellml::Importer::Importer</qualifiedname>
+        <param>
+          <type>const <ref refid="classlibcellml_1_1Importer" kindref="compound">Importer</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importer.h" line="35" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Importer_1a6b4c4344898f9f1921ece358c4821ed8" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Importer::Importer</definition>
+        <argsstring>(Importer &amp;&amp;rhs) noexcept=delete</argsstring>
+        <name>Importer</name>
+        <qualifiedname>libcellml::Importer::Importer</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Importer" kindref="compound">Importer</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importer.h" line="36" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Importer_1ab61c2b1d6e5f342f199fd93a879babd9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1Importer" kindref="compound">Importer</ref> &amp;</type>
+        <definition>Importer &amp; libcellml::Importer::operator=</definition>
+        <argsstring>(Importer rhs)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>libcellml::Importer::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Importer" kindref="compound">Importer</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importer.h" line="37" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Importer_1affb763a93f0847f019c96a6ab13f86ec" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Importer::Importer</definition>
+        <argsstring>()</argsstring>
+        <name>Importer</name>
+        <qualifiedname>libcellml::Importer::Importer</qualifiedname>
+        <briefdescription>
+<para>Constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importer.h" line="252" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Importer_1ac658aad1e88e38512f26b3482e047cbc" prot="private" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Importer::Importer</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>Importer</name>
+        <qualifiedname>libcellml::Importer::Importer</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Constructor with std::string parameter,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importer.h" line="253" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Importer_1a20dbdabe7a589c5c3aac609fc6857678" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ImporterImpl *</type>
+        <definition>ImporterImpl * libcellml::Importer::pFunc</definition>
+        <argsstring>()</argsstring>
+        <name>pFunc</name>
+        <qualifiedname>libcellml::Importer::pFunc</qualifiedname>
+        <briefdescription>
+<para>Forward declaration for pImpl idiom,. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Getter for private implementation pointer,. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importer.h" line="257" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Importer_1a93eb9fedd11c39dca464f547a36df239" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const ImporterImpl *</type>
+        <definition>const ImporterImpl * libcellml::Importer::pFunc</definition>
+        <argsstring>() const</argsstring>
+        <name>pFunc</name>
+        <qualifiedname>libcellml::Importer::pFunc</qualifiedname>
+        <briefdescription>
+<para>Const getter for private implementation pointer,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importer.h" line="258" column="24"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classlibcellml_1_1Importer_1ac53a2e8e87bd08f64fbb4b245a29063b" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a147e6312fd7a42e09e30c88dbffb709d" kindref="member">ImporterPtr</ref></type>
+        <definition>static ImporterPtr libcellml::Importer::create</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>create</name>
+        <qualifiedname>libcellml::Importer::create</qualifiedname>
+        <briefdescription>
+<para>Create an <computeroutput><ref refid="classlibcellml_1_1Importer" kindref="compound">Importer</ref></computeroutput> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Factory method to create an <computeroutput><ref refid="classlibcellml_1_1Importer" kindref="compound">Importer</ref></computeroutput>. Create a blank importer with::</para>
+<para>auto importer = <ref refid="classlibcellml_1_1Importer_1ac53a2e8e87bd08f64fbb4b245a29063b" kindref="member">libcellml::Importer::create()</ref>;</para>
+<para><simplesect kind="return"><para>A smart pointer to an <computeroutput><ref refid="classlibcellml_1_1Importer" kindref="compound">Importer</ref></computeroutput> object. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importer.h" line="49" column="24"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlibcellml_1_1Importer_1a1d9483f224337f1425cf553dc1b7a138" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref></type>
+        <definition>ModelPtr libcellml::Importer::flattenModel</definition>
+        <argsstring>(const ModelPtr &amp;model)</argsstring>
+        <name>flattenModel</name>
+        <qualifiedname>libcellml::Importer::flattenModel</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref> &amp;</type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+<para>Flatten the <computeroutput>model</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Instantiate all imports and removes them from the <computeroutput>model</computeroutput>. The result is a self-contained model requiring no external resources and having no imports.</para>
+<para>All existing issues will be removed before the model is flattened.</para>
+<para><simplesect kind="see"><para>clone</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>ModelPtr</computeroutput> whose imports will be resolved.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>If the operation is successful, a new <computeroutput>ModelPtr</computeroutput> to the flattened model; otherwise, the <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importer.h" line="66" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Importer_1a7a44d9e9202bbde1852d7d7c8ce0f468" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Importer::resolveImports</definition>
+        <argsstring>(ModelPtr &amp;model, const std::string &amp;basePath)</argsstring>
+        <name>resolveImports</name>
+        <qualifiedname>libcellml::Importer::resolveImports</qualifiedname>
+        <param>
+          <type><ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref> &amp;</type>
+          <declname>model</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>basePath</declname>
+        </param>
+        <briefdescription>
+<para>Resolve all imports in the <computeroutput>model</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Resolve all <computeroutput><ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref></computeroutput> and <computeroutput><ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref></computeroutput> imports by loading the models from local disk through relative URLs. The <computeroutput>basePath</computeroutput> defines the full path to the directory that import URLs are relative to.</para>
+<para>All existing issues will be removed before any imports are resolved.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput><ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref></computeroutput> whose imports need resolution. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>basePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The full path used to resolve relative import URLs.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if all imports have been resolved successfully, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importer.h" line="82" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Importer_1a768c4ecaab3bb2d98d2f2094a5bbcb3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::Importer::libraryCount</definition>
+        <argsstring>()</argsstring>
+        <name>libraryCount</name>
+        <qualifiedname>libcellml::Importer::libraryCount</qualifiedname>
+        <briefdescription>
+<para>Return the number of models present in the importer&apos;s library. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The number of models present in the importer&apos;s library. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importer.h" line="89" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Importer_1abb5069b1d550fdadaf1075e832cd787a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref></type>
+        <definition>ModelPtr libcellml::Importer::library</definition>
+        <argsstring>(const std::string &amp;key)</argsstring>
+        <name>library</name>
+        <qualifiedname>libcellml::Importer::library</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve the <computeroutput>ModelPtr</computeroutput> instance from the importer library which was loaded from the given <computeroutput>key</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A <computeroutput>ModelPtr</computeroutput> instance. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importer.h" line="97" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Importer_1a0242ea1d4f460f18670539ed4426f549" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref></type>
+        <definition>ModelPtr libcellml::Importer::library</definition>
+        <argsstring>(const size_t &amp;index)</argsstring>
+        <name>library</name>
+        <qualifiedname>libcellml::Importer::library</qualifiedname>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Get a model from the library at the given <computeroutput>index</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return a reference to the model at the index <computeroutput>index</computeroutput> for this importer&apos;s library. If the index is not valid a <computeroutput>nullptr</computeroutput> is returned. The valid range for the index is [0, #library items).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the model to return.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the model at the given index on success, <computeroutput>nullptr</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importer.h" line="110" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Importer_1a50497e4f333d124eacd8b99323608d72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Importer::key</definition>
+        <argsstring>(const size_t &amp;index)</argsstring>
+        <name>key</name>
+        <qualifiedname>libcellml::Importer::key</qualifiedname>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Get the key string under which a model is stored in the library, at the given <computeroutput>index</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the key string under which a model is stored in the library, at the given <computeroutput>index</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the key to return.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>If successful, a string under which the model has been stored, or an empty string otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importer.h" line="121" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Importer_1ab70a1d276bbdef9afbb201a11456818d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Importer::addModel</definition>
+        <argsstring>(const ModelPtr &amp;model, const std::string &amp;key)</argsstring>
+        <name>addModel</name>
+        <qualifiedname>libcellml::Importer::addModel</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref> &amp;</type>
+          <declname>model</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Manually add a local <computeroutput>ModelPtr</computeroutput> model instance to the importer library, using the given <computeroutput>key</computeroutput> as a reference. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the given key already exists in the library, the function will return false and the library will not be changed.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Importer_1a514fc21498fa4ab90a3ccb13b1b1776b" kindref="member">replaceModel</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a <computeroutput>ModelPtr</computeroutput> instance to add. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a <computeroutput>std::string</computeroutput> representing the key to associate with the model.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the model was added, <computeroutput>false</computeroutput> if it was not. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importer.h" line="137" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Importer_1a514fc21498fa4ab90a3ccb13b1b1776b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Importer::replaceModel</definition>
+        <argsstring>(const ModelPtr &amp;model, const std::string &amp;key)</argsstring>
+        <name>replaceModel</name>
+        <qualifiedname>libcellml::Importer::replaceModel</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref> &amp;</type>
+          <declname>model</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Replace a <computeroutput>ModelPtr</computeroutput> model instance in the importer library, using the given <computeroutput>key</computeroutput> as a reference. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the given key already exists in the library, the function will replace its model with the one supplied, and return <computeroutput>true</computeroutput>.</para>
+<para>If the given key does not exist, the function will return <computeroutput>false</computeroutput>, and the library will be unchanged.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Importer_1ab70a1d276bbdef9afbb201a11456818d" kindref="member">addModel</ref>.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a <computeroutput>ModelPtr</computeroutput> instance to replace the current one. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a <computeroutput>std::string</computeroutput> representing the key at which to replace the model.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the model was replaced, <computeroutput>false</computeroutput> if it was not. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importer.h" line="156" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Importer_1a2e0399c37c12eb8e170d6cc9fc1aebec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Importer::clearImports</definition>
+        <argsstring>(ModelPtr &amp;model)</argsstring>
+        <name>clearImports</name>
+        <qualifiedname>libcellml::Importer::clearImports</qualifiedname>
+        <param>
+          <type><ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref> &amp;</type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+<para>Clear the links with other models from all import sources. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clear the links with other models from all import sources. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importer.h" line="163" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Importer_1aed99b3d291325377a2ece81d8a3f233a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Importer::removeAllModels</definition>
+        <argsstring>()</argsstring>
+        <name>removeAllModels</name>
+        <qualifiedname>libcellml::Importer::removeAllModels</qualifiedname>
+        <briefdescription>
+<para>Remove all models from the library. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove all models from the library. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importer.h" line="170" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Importer_1a63b721826d4a9deb4b9aade6dc3be47b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Importer::addImportSource</definition>
+        <argsstring>(const ImportSourcePtr &amp;importSource)</argsstring>
+        <name>addImportSource</name>
+        <qualifiedname>libcellml::Importer::addImportSource</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1ac2c4e6d1793d7214616c1548d8a9f502" kindref="member">ImportSourcePtr</ref> &amp;</type>
+          <declname>importSource</declname>
+        </param>
+        <briefdescription>
+<para>Add an import source item to this importer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Add import source by reference to the importer.</para>
+<para>The function will return <computeroutput>false</computeroutput> and no action is taken if:<itemizedlist>
+<listitem><para>The <computeroutput>importSource</computeroutput> pointer already exists in this importer; or</para>
+</listitem><listitem><para>The <computeroutput>importSource</computeroutput> is <computeroutput>nullptr</computeroutput>.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>importSource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The import source to add.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the import source item is added or <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importer.h" line="185" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Importer_1a8f8a8d15b757fcbfb5b41ff69fe28ade" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::Importer::importSourceCount</definition>
+        <argsstring>() const</argsstring>
+        <name>importSourceCount</name>
+        <qualifiedname>libcellml::Importer::importSourceCount</qualifiedname>
+        <briefdescription>
+<para>Get the number of import source items in the importer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of import source items the importer contains.</para>
+<para><simplesect kind="return"><para>The number of import source items. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importer.h" line="194" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Importer_1a702e1a8dabcc5db16da27c9e19fed9b4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1ac2c4e6d1793d7214616c1548d8a9f502" kindref="member">ImportSourcePtr</ref></type>
+        <definition>ImportSourcePtr libcellml::Importer::importSource</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>importSource</name>
+        <qualifiedname>libcellml::Importer::importSource</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Get the import source item at the given <computeroutput>index</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a reference to an import source at the given <computeroutput>index</computeroutput>. If the <computeroutput>index</computeroutput> is not valid a <computeroutput>nullptr</computeroutput> is returned, the range of valid values for the index is [0, #importSources).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the import source to return.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the import source at the given <computeroutput>index</computeroutput> on success, <computeroutput>nullptr</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importer.h" line="207" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Importer_1af7985862ab6f22112c28fe33e4b4e3d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Importer::removeImportSource</definition>
+        <argsstring>(size_t index)</argsstring>
+        <name>removeImportSource</name>
+        <qualifiedname>libcellml::Importer::removeImportSource</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Remove the import source at the given <computeroutput>index</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove the import source from this importer at the given <computeroutput>index</computeroutput>. <computeroutput>index</computeroutput> must be in the range [0, #importSources).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the import source to remove.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the import source was removed, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importer.h" line="219" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Importer_1abd560b2642c3b813fe74cf2222b67cb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Importer::removeImportSource</definition>
+        <argsstring>(const ImportSourcePtr &amp;importSource)</argsstring>
+        <name>removeImportSource</name>
+        <qualifiedname>libcellml::Importer::removeImportSource</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1ac2c4e6d1793d7214616c1548d8a9f502" kindref="member">ImportSourcePtr</ref> &amp;</type>
+          <declname>importSource</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove the import source at the given reference.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>importSource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the import source to remove.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the import source was removed, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importer.h" line="230" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Importer_1ae603b136ba78070b353909b53122b6f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Importer::removeAllImportSources</definition>
+        <argsstring>()</argsstring>
+        <name>removeAllImportSources</name>
+        <qualifiedname>libcellml::Importer::removeAllImportSources</qualifiedname>
+        <briefdescription>
+<para>Remove all import sources stored in this importer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears all import sources that have been added to this importer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importer.h" line="237" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Importer_1a50be898212115a59a46742913720f45d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Importer::hasImportSource</definition>
+        <argsstring>(const ImportSourcePtr &amp;importSource) const</argsstring>
+        <name>hasImportSource</name>
+        <qualifiedname>libcellml::Importer::hasImportSource</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1ac2c4e6d1793d7214616c1548d8a9f502" kindref="member">ImportSourcePtr</ref> &amp;</type>
+          <declname>importSource</declname>
+        </param>
+        <briefdescription>
+<para>Tests to see if the import source is within this importer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Tests to see if the given import source is contained within this importer. Returns <computeroutput>true</computeroutput> if the import source is in the importer and <computeroutput>false</computeroutput> otherwise.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>importSource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The import source to test for existence in this importer.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the import source is in the importer and <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/importer.h" line="249" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classlibcellml_1_1Importer" kindref="compound">Importer</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classlibcellml_1_1Importer" kindref="compound">Importer</ref> class is for representing a CellML <ref refid="classlibcellml_1_1Importer" kindref="compound">Importer</ref>. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>libcellml::Importer</label>
+        <link refid="classlibcellml_1_1Importer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>libcellml::Logger</label>
+        <link refid="classlibcellml_1_1Logger"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>libcellml::Importer</label>
+        <link refid="classlibcellml_1_1Importer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>libcellml::Logger</label>
+        <link refid="classlibcellml_1_1Logger"/>
+      </node>
+    </collaborationgraph>
+    <location file="libcellml/importer.h" line="31" column="1" bodyfile="libcellml/importer.h" bodystart="32" bodyend="259"/>
+    <listofallmembers>
+      <member refid="classlibcellml_1_1Importer_1a63b721826d4a9deb4b9aade6dc3be47b" prot="public" virt="non-virtual"><scope>libcellml::Importer</scope><name>addImportSource</name></member>
+      <member refid="classlibcellml_1_1Importer_1ab70a1d276bbdef9afbb201a11456818d" prot="public" virt="non-virtual"><scope>libcellml::Importer</scope><name>addModel</name></member>
+      <member refid="classlibcellml_1_1Importer_1a2e0399c37c12eb8e170d6cc9fc1aebec" prot="public" virt="non-virtual"><scope>libcellml::Importer</scope><name>clearImports</name></member>
+      <member refid="classlibcellml_1_1Importer_1ac53a2e8e87bd08f64fbb4b245a29063b" prot="public" virt="non-virtual"><scope>libcellml::Importer</scope><name>create</name></member>
+      <member refid="classlibcellml_1_1Logger_1a5a260a645de3be9ffb844ce3f7584c4f" prot="public" virt="non-virtual"><scope>libcellml::Importer</scope><name>error</name></member>
+      <member refid="classlibcellml_1_1Logger_1a6bb9f053eb4f1b743167b84bbf5e9b34" prot="public" virt="non-virtual"><scope>libcellml::Importer</scope><name>errorCount</name></member>
+      <member refid="classlibcellml_1_1Importer_1a1d9483f224337f1425cf553dc1b7a138" prot="public" virt="non-virtual"><scope>libcellml::Importer</scope><name>flattenModel</name></member>
+      <member refid="classlibcellml_1_1Importer_1a50be898212115a59a46742913720f45d" prot="public" virt="non-virtual"><scope>libcellml::Importer</scope><name>hasImportSource</name></member>
+      <member refid="classlibcellml_1_1Importer_1acaa59d662526a705ecbe71ff4d715ee8" prot="private" virt="non-virtual"><scope>libcellml::Importer</scope><name>Importer</name></member>
+      <member refid="classlibcellml_1_1Importer_1a6b4c4344898f9f1921ece358c4821ed8" prot="private" virt="non-virtual"><scope>libcellml::Importer</scope><name>Importer</name></member>
+      <member refid="classlibcellml_1_1Importer_1affb763a93f0847f019c96a6ab13f86ec" prot="private" virt="non-virtual"><scope>libcellml::Importer</scope><name>Importer</name></member>
+      <member refid="classlibcellml_1_1Importer_1ac658aad1e88e38512f26b3482e047cbc" prot="private" virt="non-virtual"><scope>libcellml::Importer</scope><name>Importer</name></member>
+      <member refid="classlibcellml_1_1Importer_1a702e1a8dabcc5db16da27c9e19fed9b4" prot="public" virt="non-virtual"><scope>libcellml::Importer</scope><name>importSource</name></member>
+      <member refid="classlibcellml_1_1Importer_1a8f8a8d15b757fcbfb5b41ff69fe28ade" prot="public" virt="non-virtual"><scope>libcellml::Importer</scope><name>importSourceCount</name></member>
+      <member refid="classlibcellml_1_1Logger_1a192650ae59ea8747feb6c4f09de6a389" prot="public" virt="non-virtual"><scope>libcellml::Importer</scope><name>issue</name></member>
+      <member refid="classlibcellml_1_1Logger_1a3c078e9502a10748ade938374faef6d9" prot="public" virt="non-virtual"><scope>libcellml::Importer</scope><name>issueCount</name></member>
+      <member refid="classlibcellml_1_1Importer_1a50497e4f333d124eacd8b99323608d72" prot="public" virt="non-virtual"><scope>libcellml::Importer</scope><name>key</name></member>
+      <member refid="classlibcellml_1_1Importer_1abb5069b1d550fdadaf1075e832cd787a" prot="public" virt="non-virtual"><scope>libcellml::Importer</scope><name>library</name></member>
+      <member refid="classlibcellml_1_1Importer_1a0242ea1d4f460f18670539ed4426f549" prot="public" virt="non-virtual"><scope>libcellml::Importer</scope><name>library</name></member>
+      <member refid="classlibcellml_1_1Importer_1a768c4ecaab3bb2d98d2f2094a5bbcb3a" prot="public" virt="non-virtual"><scope>libcellml::Importer</scope><name>libraryCount</name></member>
+      <member refid="classlibcellml_1_1Logger_1a866117b4f6589724a2fd01f88e56d66f" prot="public" virt="non-virtual"><scope>libcellml::Importer</scope><name>message</name></member>
+      <member refid="classlibcellml_1_1Logger_1a05e6f7de0ed9a88611d3c9749e3dbd21" prot="public" virt="non-virtual"><scope>libcellml::Importer</scope><name>messageCount</name></member>
+      <member refid="classlibcellml_1_1Importer_1ab61c2b1d6e5f342f199fd93a879babd9" prot="private" virt="non-virtual"><scope>libcellml::Importer</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1Importer_1a20dbdabe7a589c5c3aac609fc6857678" prot="private" virt="non-virtual"><scope>libcellml::Importer</scope><name>pFunc</name></member>
+      <member refid="classlibcellml_1_1Importer_1a93eb9fedd11c39dca464f547a36df239" prot="private" virt="non-virtual"><scope>libcellml::Importer</scope><name>pFunc</name></member>
+      <member refid="classlibcellml_1_1Importer_1ae603b136ba78070b353909b53122b6f6" prot="public" virt="non-virtual"><scope>libcellml::Importer</scope><name>removeAllImportSources</name></member>
+      <member refid="classlibcellml_1_1Importer_1aed99b3d291325377a2ece81d8a3f233a" prot="public" virt="non-virtual"><scope>libcellml::Importer</scope><name>removeAllModels</name></member>
+      <member refid="classlibcellml_1_1Importer_1af7985862ab6f22112c28fe33e4b4e3d2" prot="public" virt="non-virtual"><scope>libcellml::Importer</scope><name>removeImportSource</name></member>
+      <member refid="classlibcellml_1_1Importer_1abd560b2642c3b813fe74cf2222b67cb8" prot="public" virt="non-virtual"><scope>libcellml::Importer</scope><name>removeImportSource</name></member>
+      <member refid="classlibcellml_1_1Importer_1a514fc21498fa4ab90a3ccb13b1b1776b" prot="public" virt="non-virtual"><scope>libcellml::Importer</scope><name>replaceModel</name></member>
+      <member refid="classlibcellml_1_1Importer_1a7a44d9e9202bbde1852d7d7c8ce0f468" prot="public" virt="non-virtual"><scope>libcellml::Importer</scope><name>resolveImports</name></member>
+      <member refid="classlibcellml_1_1Logger_1a610d4878881567899c6d47db5e625736" prot="public" virt="non-virtual"><scope>libcellml::Importer</scope><name>warning</name></member>
+      <member refid="classlibcellml_1_1Logger_1a6973054ad6d00d9bb6d2bfb488cdfebd" prot="public" virt="non-virtual"><scope>libcellml::Importer</scope><name>warningCount</name></member>
+      <member refid="classlibcellml_1_1Importer_1afe96b6bf1e85f6851c8dd4cac29e0b84" prot="private" virt="non-virtual"><scope>libcellml::Importer</scope><name>~Importer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

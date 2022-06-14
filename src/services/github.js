@@ -1,7 +1,7 @@
-// import axios from 'axios'
-const axios = require('axios')
-// import CryptoJS from 'crypto-js'
-const CryptoJS = require('crypto-js')
+import axios from 'axios'
+// const axios = require('axios')
+import CryptoJS from 'crypto-js'
+// const CryptoJS = require('crypto-js')
 
 const apiClient = axios.create({
   baseURL: 'https://api.github.com/',
@@ -11,7 +11,7 @@ const apiClient = axios.create({
 
 const authToken = () => {
   let decrypted = undefined
-  const encryptedToken = process.env.VUE_APP_ENCRYPTED_GITHUB_TOKEN
+  const encryptedToken = import.meta.env.VITE_APP_ENCRYPTED_GITHUB_TOKEN
   if (encryptedToken) {
     const bytes = CryptoJS.AES.decrypt(encryptedToken, 'public-key')
     decrypted = bytes.toString(CryptoJS.enc.Utf8)
@@ -48,7 +48,7 @@ const rateLimit = async () => {
   return response.data
 }
 
-module.exports = {
+export default {
   rateLimit,
   contributors,
   user,

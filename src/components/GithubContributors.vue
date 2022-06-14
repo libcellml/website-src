@@ -2,13 +2,15 @@
   <v-container>
     <v-row v-if="status === 'ready'">
       <v-col
-        v-for="person in allContributors"
+        v-for="person in userData"
         :key="`person-id-${person.login}`"
-        class="col-12 col-sm-6 col-md-3"
+        col="12"
+        sm="6"
+        md="3"
       >
-        <v-tooltip bottom>
-          <template v-slot:activator="{ on }">
-            <a v-on="on" :href="person.url" target="_blank">
+        <v-tooltip anchor="bottom">
+          <template v-slot:activator="{ props }">
+            <a v-bind="props" :href="person.url" target="_blank">
               <v-row no-gutters>
                 <v-col>
                   <img
@@ -57,8 +59,9 @@
   </v-container>
 </template>
 
-<script>
-import { mapActions } from 'vuex'
+<script setup>
+import { onMounted, ref } from 'vue'
+import { useStore } from 'vuex'
 
 import github from '@/services/github'
 
@@ -66,131 +69,119 @@ const repos = [
   { org: 'cellml', repo: 'libcellml', name: 'libCellML library' },
   { org: 'libcellml', repo: 'website-src', name: 'libCellML website' },
   {
-    org: 'kerimoyle',
-    repo: 'libcellml-tutorials',
+    org: 'libcellml',
+    repo: 'userguides',
     name: 'libCellML documentation',
   },
 ]
 
+const store = useStore()
+
 const skipUser = '[bot]'
 
-export default {
-  name: 'GithubContributors',
-  data: () => {
-    return {
-      user_data: [],
-      status: 'error',
-      resetTime: undefined,
-    }
-  },
-  mounted() {
-    this.status = 'error'
-    this.resetTime = undefined
-    github
-      .rateLimit()
-      .then(response => {
-        if (response.rate.remaining >= repos.length) {
-          let fetchContributors = []
-          for (const r of repos) {
-            fetchContributors.push(github.contributors(r.org, r.repo))
-          }
-          Promise.all(fetchContributors)
-            .then(contributorList => {
-              let users = []
-              let index = 0
-              for (const v of contributorList) {
-                for (const u of v) {
-                  if (u.login.includes(skipUser)) {
-                    continue
+const userData = ref([])
+const status = ref('error')
+let resetTime = undefined
+
+onMounted(() => {
+  status.value = 'error'
+  resetTime = undefined
+  github
+    .rateLimit()
+    .then((response) => {
+      if (response.rate.remaining >= repos.length) {
+        let fetchContributors = []
+        for (const r of repos) {
+          fetchContributors.push(github.contributors(r.org, r.repo))
+        }
+        Promise.all(fetchContributors)
+          .then((contributorList) => {
+            let users = []
+            let index = 0
+            for (const v of contributorList) {
+              for (const u of v) {
+                if (u.login.includes(skipUser)) {
+                  continue
+                } else {
+                  const indexOfUser = users.findIndex(
+                    (user) => user.login === u.login
+                  )
+                  if (indexOfUser !== -1) {
+                    users[indexOfUser].repos.push(repos[index])
                   } else {
-                    const indexOfUser = users.findIndex(
-                      user => user.login === u.login,
-                    )
-                    if (indexOfUser !== -1) {
-                      users[indexOfUser].repos.push(repos[index])
-                    } else {
-                      users.push({ login: u.login, repos: [repos[index]] })
-                    }
+                    users.push({ login: u.login, repos: [repos[index]] })
                   }
                 }
-                index++
+              }
+              index++
+            }
+
+            if (response.rate.remaining - repos.length >= users.length) {
+              let fetchUsers = []
+              for (const u of users) {
+                fetchUsers.push(github.user(u.login))
               }
 
-              if (response.rate.remaining - repos.length >= users.length) {
-                let fetchUsers = []
-                for (const u of users) {
-                  fetchUsers.push(github.user(u.login))
-                }
-
-                Promise.all(fetchUsers)
-                  .then(userDataList => {
-                    let userData = []
-                    let indexOfUser = 0
-                    for (const u of userDataList) {
-                      userData.push({
-                        name: u.name,
-                        login: u.login,
-                        avatar_url: u.avatar_url,
-                        url: u.html_url,
-                        repos: users[indexOfUser].repos,
-                        index: Math.random(), // Used for getting a random display order
-                      })
-                      indexOfUser++
-                    }
-
-                    this.user_data = userData.sort(function(a, b) {
-                      return a.index - b.index
+              Promise.all(fetchUsers)
+                .then((userDataList) => {
+                  let tmpUserData = []
+                  let indexOfUser = 0
+                  for (const u of userDataList) {
+                    tmpUserData.push({
+                      name: u.name,
+                      login: u.login,
+                      avatar_url: u.avatar_url,
+                      url: u.html_url,
+                      repos: users[indexOfUser].repos,
+                      index: Math.random(), // Used for getting a random display order
                     })
-                    this.status = 'ready'
+                    indexOfUser++
+                  }
+
+                  userData.value = tmpUserData.sort(function (a, b) {
+                    return a.index - b.index
                   })
-                  .catch(error => {
-                    this.add({
-                      type: 'error',
-                      title: 'Fetching users failed:',
-                      message: error.message,
-                    })
+                  status.value = 'ready'
+                })
+                .catch((error) => {
+                  store.dispatch('notifications/add', {
+                    type: 'error',
+                    title: 'Fetching users failed:',
+                    message: error.message,
                   })
-              } else {
-                this.serviceOveruse(response.rate.reset)
-              }
+                })
+            } else {
+              serviceOveruse(response.rate.reset)
+            }
+          })
+          .catch((error) => {
+            store.dispatch('notifications/add', {
+              type: 'error',
+              title: 'Fetching contributors failed:',
+              message: error.message,
             })
-            .catch(error => {
-              this.add({
-                type: 'error',
-                title: 'Fetching contributors failed:',
-                message: error.message,
-              })
-            })
-        } else {
-          this.serviceOveruse(response.rate.reset)
-        }
+          })
+      } else {
+        serviceOveruse(response.rate.reset)
+      }
+    })
+    .catch((error) => {
+      store.dispatch('notifications/add', {
+        type: 'error',
+        title: 'GitHub get rate limit error:',
+        message: error.message,
       })
-      .catch(error => {
-        this.add({
-          type: 'error',
-          title: 'GitHub get rate limit error:',
-          message: error.message,
-        })
-      })
-  },
-  computed: {
-    allContributors() {
-      return this.user_data
-    },
-  },
-  methods: {
-    serviceOveruse(reset) {
-      const d = new Date(reset * 1000)
-      const time = Intl.DateTimeFormat('en', {
-        hour: 'numeric',
-        minute: 'numeric',
-        hour12: true,
-      }).format(d)
-      this.resetTime = time
-      this.status = 'overuse'
-    },
-    ...mapActions('notifications', ['add']),
-  },
+    })
+})
+function serviceOveruse(reset) {
+  const d = new Date(reset * 1000)
+  const time = Intl.DateTimeFormat('en', {
+    hour: 'numeric',
+    minute: 'numeric',
+    hour12: true,
+  }).format(d)
+  resetTime = time
+  status.value = 'overuse'
 }
 </script>
 

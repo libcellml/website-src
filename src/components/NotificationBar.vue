@@ -1,62 +1,41 @@
 <template>
-  <div class="notification-bar" :class="notificationTypeClass">
-    <v-card :color="colour" dark>
+  <div class="notification-bar">
+    <v-card :color="notification.type" dark>
       <v-card-title class="headline">{{ notification.title }}</v-card-title>
-
       <v-card-subtitle>{{ notification.message }}</v-card-subtitle>
     </v-card>
   </div>
 </template>
 
-<script>
-import { mapActions } from 'vuex'
+<script setup>
+import { onMounted, onUnmounted, toRefs } from 'vue'
+import { useStore } from 'vuex'
 
-export default {
-  props: {
+const store = useStore()
+
+let timeout = null
+
+const props = defineProps({
     notification: {
       type: Object,
       required: true,
     },
-  },
-  data() {
-    return {
-      timeout: null,
-    }
-  },
-  mounted() {
-    let timeout = 5000
-    if (this.notification.type === 'success') {
-      timeout = 1000
-    }
-    this.timeout = setTimeout(() => {
-      this.remove(this.notification)
-    }, timeout)
-  },
-  beforeDestroy() {
-    clearTimeout(this.timeout)
-  },
-  computed: {
-    notificationTypeClass() {
-      return `-text-${this.notification.type}`
-    },
-    colour() {
-      return this.notification.type === 'error' ? '#8b0000' : '#006400'
-    },
-  },
-  methods: mapActions('notifications', ['remove']),
-}
+})
+
+const { notification } = toRefs(props)
+
+onMounted(() => {
+  timeout = setTimeout(() => {
+    store.dispatch('notifications/remove', notification.value)
+  }, notification.value.type === 'success' ? 1000 : 5000)
+})
+onUnmounted(() => {
+  clearTimeout(timeout)
+})
 </script>
 
 <style scoped>
 .notification-bar {
   margin: 1em 0 1em;
-}
-
-.-text-success {
-  color: #006400;
-}
-
-.-text-error {
-  color: #8b0000;
 }
 </style>

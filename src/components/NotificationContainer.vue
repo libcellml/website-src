@@ -1,31 +1,27 @@
 <template>
   <div class="notification-container">
-    <NotificationBar
-      v-for="notification in notifications"
+    <notification-bar
+      v-for="notification in store.state.notifications.current"
       :key="notification.id"
       :notification="notification"
     />
   </div>
 </template>
 
-<script>
-import { mapState } from 'vuex'
+<script setup>
+import { useStore } from 'vuex'
 
-import NotificationBar from '@/components/NotificationBar'
+import NotificationBar from '@/components/NotificationBar.vue'
 
-export default {
-  components: {
-    NotificationBar,
-  },
-  computed: mapState('notifications', ['notifications']),
-}
+const store = useStore()
+
 </script>
 
 <style scoped>
 .notification-container {
   position: fixed;
-  bottom: 30px;
+  bottom: 3rem;
   right: 0;
-  padding-right: 40px;
+  padding-right: 2.5rem;
 }
 </style>

@@ -1,16 +1,11 @@
 <template>
-  <div class="about" id="aboutContent">
-    <AboutContent />
-  </div>
+  <v-row>
+    <v-col cols="12" id="about" class="about-section">
+      <about-content />
+    </v-col>
+  </v-row>
 </template>
 
-<script>
-import AboutContent from '@/components/AboutContent'
-
-export default {
-  name: 'About',
-  components: {
-    AboutContent,
-  },
-}
+<script setup>
+import AboutContent from '../components/home/AboutContent.vue'
 </script>

@@ -12,7 +12,7 @@ jobs:
       - name: Setup Node.js for use with actions
         uses: actions/setup-node@v1.4.4
         with:
-          version: 12.x
+          node-version: 17.x
 
       - name: Checkout branch
         uses: actions/checkout@v2
@@ -40,12 +40,14 @@ jobs:
           echo "github.com ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ==" > ~/.ssh/known_hosts
 
       - name: Clean install dependencies
-        run: npm ci
+        run: |
+          yarn
+          yarn add --dev execa
 
       - name: Run production deploy script
         if: github.ref == 'refs/heads/production'
         env:
-          VUE_APP_ENCRYPTED_GITHUB_TOKEN: ${{ secrets.VUE_APP_ENCRYPTED_GITHUB_TOKEN }}
+          VITE_APP_ENCRYPTED_GITHUB_TOKEN: ${{ secrets.VUE_APP_ENCRYPTED_GITHUB_TOKEN }}
         run: |
           git config user.name hsorby && git config user.email h.sorby@auckland.ac.nz
           npm run github-deploy
@@ -53,7 +55,7 @@ jobs:
       - name: Run staging deploy script
         if: github.ref == 'refs/heads/staging'
         env:
-          VUE_APP_ENCRYPTED_GITHUB_TOKEN: ${{ secrets.VUE_APP_ENCRYPTED_GITHUB_TOKEN }}
+          VITE_APP_ENCRYPTED_GITHUB_TOKEN: ${{ secrets.VUE_APP_ENCRYPTED_GITHUB_TOKEN }}
         run: |
           git config user.name hsorby && git config user.email h.sorby@auckland.ac.nz
           npm run github-deploy -- staging

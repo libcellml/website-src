@@ -1,20 +1,20 @@
 export const namespaced = true
 
 export const state = {
-  notifications: [],
+  current: [],
 }
 
 let nextId = 1
 
 export const mutations = {
   PUSH(state, notification) {
-    state.notifications.push({
+    state.current.push({
       ...notification,
       id: nextId++,
     })
   },
   DELETE(state, notificationToRemove) {
-    state.notifications = state.notifications.filter(
+    state.current = state.current.filter(
       notification => notification.id !== notificationToRemove.id,
     )
   },

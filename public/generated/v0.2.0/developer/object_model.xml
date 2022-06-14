@@ -1,0 +1,27 @@
+<document xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/" xmlns:todo="https://www.sphinx-doc.org/" source="/Users/hsor001/Projects/cellml/sandbox/tmp/libcellml/docs/object_model.rst">
+    <target refid="libcellmlobjectmodel"/>
+    <section ids="libcellml-object-model libcellmlobjectmodel" names="libcellml\ object\ model libcellmlobjectmodel">
+        <title>libCellML Object Model</title>
+        <section ids="introduction" names="introduction">
+            <title>Introduction</title>
+            <paragraph>The object model described by this document is a very high level conceptual design.
+                This document is organic and is expected to change in accordance with community decisions/discussion.</paragraph>
+        </section>
+        <section ids="overview-of-object-model" names="overview\ of\ object\ model">
+            <title>Overview of Object Model</title>
+            <figure ids="overview-of-libcellml-objects" names="overview_of_libcellml_objects">
+                <image alt="libCellML Overview Object Model." candidates="{'*': 'images/libCellMLRoughObjectModel-Overview.png'}" uri="images/libCellMLRoughObjectModel-Overview.png"/>
+                <caption_number>Fig. 10 </caption_number><caption_number>Fig. 10 </caption_number><caption_number>Fig. 10 </caption_number><caption_number>Fig. 10 </caption_number><caption_number>Fig. 10 </caption_number><caption_number>Fig. 10 </caption_number><caption_number>Fig. 10 </caption_number><caption>Showing the inheritance structure between libCellML items within the model.</caption>
+            </figure>
+        </section>
+        <section ids="detailed" names="detailed">
+            <title>Detailed</title>
+            <figure>
+                <image alt="libCellML Object Model." candidates="{'*': 'images/libCellMLRoughObjectModel-Entities.png'}" uri="images/libCellMLRoughObjectModel-Entities.png"/>
+            </figure>
+            <figure>
+                <image alt="libCellML Object Model." candidates="{'*': 'images/libCellMLRoughObjectModel-IOError.png'}" uri="images/libCellMLRoughObjectModel-IOError.png"/>
+            </figure>
+        </section>
+    </section>
+</document>
