@@ -68,8 +68,10 @@
       </v-col>
     </v-row>
     <h3>Further information</h3>
-    For further information on downloads please visit the
-    <router-link to="/download">Download page</router-link>.
+    <p>
+      For further information on downloads please visit the
+      <router-link to="/download">Download page</router-link>.
+    </p>
   </div>
 </template>
 
