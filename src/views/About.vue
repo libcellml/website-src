@@ -1,11 +1,11 @@
-<script setup>
-
-</script>
-
 <template>
-  <h1>About</h1>
-
-  <p>
-    Investigate the process of creating the documentation for the libCellML website.
-  </p>
+  <v-row>
+    <v-col cols="12" id="about" class="about-section">
+      <about-content />
+    </v-col>
+  </v-row>
 </template>
+
+<script setup>
+import AboutContent from '../components/home/AboutContent.vue'
+</script>
