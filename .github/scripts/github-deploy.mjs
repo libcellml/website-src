@@ -16,6 +16,9 @@ import * as fs from 'fs'
       console.log('Production run.')
     }
 
+    console.log("--------")
+    console.log(process.env)
+    console.log(process.env.BOT_ACCESS_TOKEN)
     const deployRepo = `https://libcellml-bot:${process.env.BOT_ACCESS_TOKEN}@github.com/libcellml/${cname}.git`
     const result = await execa('git', ['branch', '--show-current'])
     const currentGitBranch = result.stdout
