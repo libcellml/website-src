@@ -28,7 +28,7 @@ jobs:
           BOT_ACCESS_TOKEN: ${{ secrets.BOT_ACCESS_TOKEN }}
         run: |
           git config user.name hsorby && git config user.email h.sorby@auckland.ac.nz
-          if [ "{{ github.ref }}" = "refs/heads/staging" ]; then
+          if [ "${{ github.ref }}" = "refs/heads/staging" ]; then
             staging="-- staging"
           endif
           npm run github-deploy $staging
