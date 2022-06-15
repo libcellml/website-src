@@ -28,7 +28,9 @@ jobs:
           BOT_ACCESS_TOKEN: ${{ secrets.BOT_ACCESS_TOKEN }}
         run: |
           git config user.name hsorby && git config user.email h.sorby@auckland.ac.nz
-          if [ "${{ github.ref }}" = "refs/heads/staging" ]; then
-            staging="-- staging"
+          if [ "${{ github.ref }}" = "refs/heads/production" ]; then
+            npm run github-deploy
+          else
+            # If it isn't be a production deployment then it must be a staging deployment.
+            npm run github-deploy -- staging
           endif
-          npm run github-deploy $staging
