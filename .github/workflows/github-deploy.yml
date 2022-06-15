@@ -33,4 +33,4 @@ jobs:
           else
             # If it isn't be a production deployment then it must be a staging deployment.
             npm run github-deploy -- staging
-          endif
+          fi
