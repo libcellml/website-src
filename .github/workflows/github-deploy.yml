@@ -27,7 +27,7 @@ jobs:
           VITE_APP_ENCRYPTED_GITHUB_TOKEN: ${{ secrets.VUE_APP_ENCRYPTED_GITHUB_TOKEN }}
           BOT_ACCESS_TOKEN: ${{ secrets.BOT_ACCESS_TOKEN }}
         run: |
-          git config user.name hsorby && git config user.email h.sorby@auckland.ac.nz
+          git config user.name libcellml-bot && git config user.email abi.git.user+libcellml.bot@gmail.com
           if [ "${{ github.ref }}" = "refs/heads/production" ]; then
             npm run github-deploy
           else
