@@ -16,13 +16,13 @@ import * as fs from 'fs'
       console.log('Production run.')
     }
 
-    const deployRepo = `https://${process.env.BOT_ACCESS_TOKEN}@github.com/libcellml/${cname}`
+    const deployRepo = `https://${process.env.BOT_ACCESS_TOKEN}@github.com/libcellml/${cname}.git`
     const result = await execa('git', ['branch', '--show-current'])
     const currentGitBranch = result.stdout
 
     const workingGitBranch = 'dist'
     await execa('git', ['checkout', '--orphan', workingGitBranch])
-    await execa('git', ['remote', 'add', 'deploy', deployRepo])
+    // await execa('git', ['remote', 'add', 'deploy', deployRepo])
     console.log('Building ...')
     await execa('yarn', ['run', 'build'])
     // Understand if it's dist or build folder
@@ -44,7 +44,7 @@ import * as fs from 'fs'
     ])
     console.log('Building ... success.')
     console.log(`Pushing to deploy/${targetGitBranch} ...`)
-    await execa('git', ['push', 'deploy', `HEAD:${targetGitBranch}`, '--force'])
+    await execa('git', ['push', deployRepo, `HEAD:${targetGitBranch}`, '--force'])
     console.log(`Pushing to deploy/${targetGitBranch} ... success.`)
     console.log('Cleaning up ...')
     await execa('rm', ['-r', folderName])
