@@ -153,7 +153,7 @@
         <a :href="framework_url" target="_blank"> {{ framework_ref }}</a>
         of the testing framework and
         <a :href="database_url" target="_blank"> {{ database_ref }}</a>
-        of the tests.
+        of the test database.
       </p>
       <p v-else>
         There is no known validation of this documentation with the libCellML
