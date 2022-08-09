@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="analysermodel_8h" kind="file" language="C++">
+    <compoundname>analysermodel.h</compoundname>
+    <includes refid="analyser_8h" local="yes">libcellml/analyser.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>libcellml/analyser.h</label>
+        <link refid="analyser_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>libcellml/analysermodel.h</label>
+        <link refid="analysermodel_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>libcellml/enums.h</label>
+        <link refid="enums_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>libcellml/issue.h</label>
+        <link refid="issue_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>libcellml/logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>libcellml/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>libcellml/exportdefinitions.h</label>
+      </node>
+      <node id="9">
+        <label>map</label>
+      </node>
+      <node id="10">
+        <label>memory</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>utility</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classlibcellml_1_1AnalyserModel" prot="public">libcellml::AnalyserModel</innerclass>
+    <innernamespace refid="namespacelibcellml">libcellml</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">Copyright<sp/>libCellML<sp/>Contributors</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment">Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"></highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="analyser_8h" kindref="compound">libcellml/analyser.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacelibcellml" kindref="compound">libcellml</ref><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classlibcellml_1_1AnalyserModel" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">LIBCELLML_EXPORT<sp/><ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31" refid="classlibcellml_1_1AnalyserModel_1a8fc045316ed5fb70e4aabbca5f40d8ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="46" refid="classlibcellml_1_1AnalyserModel_1a2df8a5f70631d57d478756180810adfd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1a2df8a5f70631d57d478756180810adfd" kindref="member">Type</ref></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UNKNOWN,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ALGEBRAIC,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ODE,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INVALID,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UNDERCONSTRAINED,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OVERCONSTRAINED,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UNSUITABLY_CONSTRAINED</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">~AnalyserModel</ref>();<sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref><sp/>&amp;rhs)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref>(<ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref><sp/>&amp;&amp;rhs)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref><sp/>&amp;operator=(<ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref><sp/>rhs)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="71" refid="classlibcellml_1_1AnalyserModel_1a18748768c90b87452ef7213512736346" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1a18748768c90b87452ef7213512736346" kindref="member">isValid</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="classlibcellml_1_1AnalyserModel_1af6f0fabf59f1782d1e29ef37e7934765" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classlibcellml_1_1AnalyserModel_1a2df8a5f70631d57d478756180810adfd" kindref="member">Type</ref><sp/><ref refid="classlibcellml_1_1AnalyserModel_1af6f0fabf59f1782d1e29ef37e7934765" kindref="member">type</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="classlibcellml_1_1AnalyserModel_1a89f12472fcaf204eeba02dea7b753b2f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1a89f12472fcaf204eeba02dea7b753b2f" kindref="member">hasExternalVariables</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="classlibcellml_1_1AnalyserModel_1a278afb0909cdfa9d4dcc8b5838fb796d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1acfd2932a24a4fe8b5e9147ccf0a23a11" kindref="member">AnalyserVariablePtr</ref><sp/><ref refid="classlibcellml_1_1AnalyserModel_1a278afb0909cdfa9d4dcc8b5838fb796d" kindref="member">voi</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="classlibcellml_1_1AnalyserModel_1a716c7d786a3657e2cb591956d181d1b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1a716c7d786a3657e2cb591956d181d1b6" kindref="member">stateCount</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="classlibcellml_1_1AnalyserModel_1a3d367685c74bcb824519d756405fddb5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;AnalyserVariablePtr&gt;<sp/><ref refid="classlibcellml_1_1AnalyserModel_1a3d367685c74bcb824519d756405fddb5" kindref="member">states</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="classlibcellml_1_1AnalyserModel_1a1ddaf43386baa67abacce03c09c37bfb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1acfd2932a24a4fe8b5e9147ccf0a23a11" kindref="member">AnalyserVariablePtr</ref><sp/><ref refid="classlibcellml_1_1AnalyserModel_1a1ddaf43386baa67abacce03c09c37bfb" kindref="member">state</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="classlibcellml_1_1AnalyserModel_1a1d358f89dc568ae0081f3f2a7ac2cd0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1a1d358f89dc568ae0081f3f2a7ac2cd0c" kindref="member">variableCount</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150" refid="classlibcellml_1_1AnalyserModel_1abc93d7f15e54b56520b7385d2ce8f6a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;AnalyserVariablePtr&gt;<sp/><ref refid="classlibcellml_1_1AnalyserModel_1abc93d7f15e54b56520b7385d2ce8f6a3" kindref="member">variables</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162" refid="classlibcellml_1_1AnalyserModel_1a4074fe6796d171b958b82cb22805bc33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1acfd2932a24a4fe8b5e9147ccf0a23a11" kindref="member">AnalyserVariablePtr</ref><sp/><ref refid="classlibcellml_1_1AnalyserModel_1a4074fe6796d171b958b82cb22805bc33" kindref="member">variable</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171" refid="classlibcellml_1_1AnalyserModel_1a267a1450663d071038c6db414e944cfa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1a267a1450663d071038c6db414e944cfa" kindref="member">equationCount</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="classlibcellml_1_1AnalyserModel_1aaf090b4d0d92a358c3dbfae9c8ed8ac8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;AnalyserEquationPtr&gt;<sp/><ref refid="classlibcellml_1_1AnalyserModel_1aaf090b4d0d92a358c3dbfae9c8ed8ac8" kindref="member">equations</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192" refid="classlibcellml_1_1AnalyserModel_1acd84360a9dc930ea74f08cee4dd7a9d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1a077e0ba912fc57b70090ab980aba2e25" kindref="member">AnalyserEquationPtr</ref><sp/><ref refid="classlibcellml_1_1AnalyserModel_1acd84360a9dc930ea74f08cee4dd7a9d3" kindref="member">equation</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204" refid="classlibcellml_1_1AnalyserModel_1ad886c8b0e48cdfcff6fa2ba77c4358dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1ad886c8b0e48cdfcff6fa2ba77c4358dc" kindref="member">needEqFunction</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216" refid="classlibcellml_1_1AnalyserModel_1a9433cbdeada230108c8f4460a4275123" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1a9433cbdeada230108c8f4460a4275123" kindref="member">needNeqFunction</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228" refid="classlibcellml_1_1AnalyserModel_1a271f3e2e2962cbed266bfc93797cd53b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1a271f3e2e2962cbed266bfc93797cd53b" kindref="member">needLtFunction</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240" refid="classlibcellml_1_1AnalyserModel_1aebeec3b9de037196de9661c76765d839" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1aebeec3b9de037196de9661c76765d839" kindref="member">needLeqFunction</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252" refid="classlibcellml_1_1AnalyserModel_1a39aae00c33cc99ac6f2c4fdf3f8c47fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1a39aae00c33cc99ac6f2c4fdf3f8c47fc" kindref="member">needGtFunction</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264" refid="classlibcellml_1_1AnalyserModel_1ab4bd72e5e6aa3c886dbf6d70132e10f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1ab4bd72e5e6aa3c886dbf6d70132e10f8" kindref="member">needGeqFunction</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275" refid="classlibcellml_1_1AnalyserModel_1adc242db56da221a1a7be4c75f2559816" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1adc242db56da221a1a7be4c75f2559816" kindref="member">needAndFunction</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286" refid="classlibcellml_1_1AnalyserModel_1a5207fef52526f41cceaeef79a3f68d6c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1a5207fef52526f41cceaeef79a3f68d6c" kindref="member">needOrFunction</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298" refid="classlibcellml_1_1AnalyserModel_1a5975c16ac4a0d4fed3a1272a73c1ee61" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1a5975c16ac4a0d4fed3a1272a73c1ee61" kindref="member">needXorFunction</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309" refid="classlibcellml_1_1AnalyserModel_1a55c852112af915e9d514930589f603a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1a55c852112af915e9d514930589f603a7" kindref="member">needNotFunction</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320" refid="classlibcellml_1_1AnalyserModel_1ae936fbb0dda5ab43fa3f23bd59a9bf96" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1ae936fbb0dda5ab43fa3f23bd59a9bf96" kindref="member">needMinFunction</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="331" refid="classlibcellml_1_1AnalyserModel_1a811fb5054989fffa85dfc13f74026b24" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1a811fb5054989fffa85dfc13f74026b24" kindref="member">needMaxFunction</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="342" refid="classlibcellml_1_1AnalyserModel_1a8aa0e9544cc0e724dfb491ca4808ac06" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1a8aa0e9544cc0e724dfb491ca4808ac06" kindref="member">needSecFunction</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="353" refid="classlibcellml_1_1AnalyserModel_1a1a13974abba24196e0d0eddcbc62b476" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1a1a13974abba24196e0d0eddcbc62b476" kindref="member">needCscFunction</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight></codeline>
+<codeline lineno="365" refid="classlibcellml_1_1AnalyserModel_1a46216bae7b2ced7009517ccf381743d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1a46216bae7b2ced7009517ccf381743d2" kindref="member">needCotFunction</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight></codeline>
+<codeline lineno="377" refid="classlibcellml_1_1AnalyserModel_1a7ed82fd1c9dfa7463c9c36d0f3b1396f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1a7ed82fd1c9dfa7463c9c36d0f3b1396f" kindref="member">needSechFunction</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"></highlight></codeline>
+<codeline lineno="389" refid="classlibcellml_1_1AnalyserModel_1aaf02ca5eda5c045f6128560cd1d4ff8c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1aaf02ca5eda5c045f6128560cd1d4ff8c" kindref="member">needCschFunction</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight></codeline>
+<codeline lineno="401" refid="classlibcellml_1_1AnalyserModel_1accd202c2af3e89461070c4ce433d7157" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1accd202c2af3e89461070c4ce433d7157" kindref="member">needCothFunction</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"></highlight></codeline>
+<codeline lineno="413" refid="classlibcellml_1_1AnalyserModel_1a849ccb412bea78174390afb559d85f5b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1a849ccb412bea78174390afb559d85f5b" kindref="member">needAsecFunction</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"></highlight></codeline>
+<codeline lineno="425" refid="classlibcellml_1_1AnalyserModel_1a220f8099c1aadbb227906dc4ce20bdd5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1a220f8099c1aadbb227906dc4ce20bdd5" kindref="member">needAcscFunction</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"></highlight></codeline>
+<codeline lineno="437" refid="classlibcellml_1_1AnalyserModel_1a02563540dc67dbc5698a96128a8cc954" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1a02563540dc67dbc5698a96128a8cc954" kindref="member">needAcotFunction</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"></highlight></codeline>
+<codeline lineno="449" refid="classlibcellml_1_1AnalyserModel_1a2954d22849c9473cc469835594f51abd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1a2954d22849c9473cc469835594f51abd" kindref="member">needAsechFunction</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"></highlight></codeline>
+<codeline lineno="461" refid="classlibcellml_1_1AnalyserModel_1a92f596ed1c8ee64feda59811054fb8fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1a92f596ed1c8ee64feda59811054fb8fc" kindref="member">needAcschFunction</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="462"><highlight class="normal"></highlight></codeline>
+<codeline lineno="473" refid="classlibcellml_1_1AnalyserModel_1a6132ebb067c45d7e5afb3abaaec540e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1a6132ebb067c45d7e5afb3abaaec540e0" kindref="member">needAcothFunction</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="474"><highlight class="normal"></highlight></codeline>
+<codeline lineno="499" refid="classlibcellml_1_1AnalyserModel_1af8342b9f661ccf68c8c072017b20a8dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1AnalyserModel_1af8342b9f661ccf68c8c072017b20a8dd" kindref="member">areEquivalentVariables</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref><sp/>&amp;variable1,</highlight></codeline>
+<codeline lineno="500"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref><sp/>&amp;variable2);</highlight></codeline>
+<codeline lineno="501"><highlight class="normal"></highlight></codeline>
+<codeline lineno="502"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="503"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref>();<sp/></highlight></codeline>
+<codeline lineno="505"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">AnalyserModelImpl;</highlight></codeline>
+<codeline lineno="506"><highlight class="normal"><sp/><sp/><sp/><sp/>AnalyserModelImpl<sp/>*mPimpl;<sp/></highlight></codeline>
+<codeline lineno="507"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="508"><highlight class="normal"></highlight></codeline>
+<codeline lineno="509"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>libcellml</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="libcellml/analysermodel.h"/>
+  </compounddef>
+</doxygen>
