@@ -1,0 +1,281 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classlibcellml_1_1ParentedEntity" kind="class" language="C++" prot="public">
+    <compoundname>libcellml::ParentedEntity</compoundname>
+    <basecompoundref refid="classlibcellml_1_1Entity" prot="public" virt="non-virtual">libcellml::Entity</basecompoundref>
+    <derivedcompoundref refid="classlibcellml_1_1NamedEntity" prot="public" virt="non-virtual">libcellml::NamedEntity</derivedcompoundref>
+    <derivedcompoundref refid="classlibcellml_1_1Reset" prot="public" virt="non-virtual">libcellml::Reset</derivedcompoundref>
+    <includes refid="parentedentity_8h" local="no">parentedentity.h</includes>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlibcellml_1_1ParentedEntity_1aab8b78f33473e172f43b682edcbdd1ee" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::ParentedEntity::~ParentedEntity</definition>
+        <argsstring>() override=default</argsstring>
+        <name>~ParentedEntity</name>
+        <qualifiedname>libcellml::ParentedEntity::~ParentedEntity</qualifiedname>
+        <briefdescription>
+<para>Destructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/parentedentity.h" line="35" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ParentedEntity_1a6810a5e67f2f0a5670e3bb796602ac23" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::ParentedEntity::ParentedEntity</definition>
+        <argsstring>(const ParentedEntity &amp;rhs)=delete</argsstring>
+        <name>ParentedEntity</name>
+        <qualifiedname>libcellml::ParentedEntity::ParentedEntity</qualifiedname>
+        <param>
+          <type>const <ref refid="classlibcellml_1_1ParentedEntity" kindref="compound">ParentedEntity</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/parentedentity.h" line="36" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ParentedEntity_1ade98740f2ce1475b38a9bd9b950eb569" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::ParentedEntity::ParentedEntity</definition>
+        <argsstring>(ParentedEntity &amp;&amp;rhs) noexcept=delete</argsstring>
+        <name>ParentedEntity</name>
+        <qualifiedname>libcellml::ParentedEntity::ParentedEntity</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1ParentedEntity" kindref="compound">ParentedEntity</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/parentedentity.h" line="37" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ParentedEntity_1aa303dbb33a6b745b55f5090d31ef25fa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1ParentedEntity" kindref="compound">ParentedEntity</ref> &amp;</type>
+        <definition>ParentedEntity &amp; libcellml::ParentedEntity::operator=</definition>
+        <argsstring>(ParentedEntity rhs)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>libcellml::ParentedEntity::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1ParentedEntity" kindref="compound">ParentedEntity</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/parentedentity.h" line="38" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ParentedEntity_1a9974dc33443d40e4662657f8b0663e11" prot="private" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::ParentedEntity::ParentedEntity</definition>
+        <argsstring>(ParentedEntityImpl *pImpl)</argsstring>
+        <name>ParentedEntity</name>
+        <qualifiedname>libcellml::ParentedEntity::ParentedEntity</qualifiedname>
+        <param>
+          <type>ParentedEntityImpl *</type>
+          <declname>pImpl</declname>
+        </param>
+        <briefdescription>
+<para>Forward declaration for pImpl idiom. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor for derived classes,. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/parentedentity.h" line="76" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ParentedEntity_1a612bca66dd1e1372cc517ee487a97e12" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const ParentedEntityImpl *</type>
+        <definition>const ParentedEntityImpl * libcellml::ParentedEntity::pFunc</definition>
+        <argsstring>() const</argsstring>
+        <name>pFunc</name>
+        <qualifiedname>libcellml::ParentedEntity::pFunc</qualifiedname>
+        <briefdescription>
+<para>Const getter for private implementation pointer,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/parentedentity.h" line="79" column="30"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlibcellml_1_1ParentedEntity_1ac662ca494335a944f845b1a432822292" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a820ad73bdd5ed01542aa3070b283bb11" kindref="member">ParentedEntityPtr</ref></type>
+        <definition>ParentedEntityPtr libcellml::ParentedEntity::parent</definition>
+        <argsstring>() const</argsstring>
+        <name>parent</name>
+        <qualifiedname>libcellml::ParentedEntity::parent</qualifiedname>
+        <briefdescription>
+<para>Returns the parent of the CellML <ref refid="classlibcellml_1_1Entity" kindref="compound">Entity</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A pointer to the entity&apos;s parent if it has one, otherwise it returns the null pointer. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/parentedentity.h" line="46" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ParentedEntity_1a24d037686b4ccd86539a35c84c267813" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::ParentedEntity::hasParent</definition>
+        <argsstring>() const</argsstring>
+        <name>hasParent</name>
+        <qualifiedname>libcellml::ParentedEntity::hasParent</qualifiedname>
+        <briefdescription>
+<para>Test to see if the given entity has a parent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Tests the given entity to determine if the entity has a parent. If the entity has a parent then <computeroutput>true</computeroutput> is returned otherwise <computeroutput>false</computeroutput> is returned.</para>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if this entity has a parent, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/parentedentity.h" line="57" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1ParentedEntity_1abe6ca3f56655c2d1ea97d18712f78c22" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::ParentedEntity::hasAncestor</definition>
+        <argsstring>(const ParentedEntityPtr &amp;entity) const</argsstring>
+        <name>hasAncestor</name>
+        <qualifiedname>libcellml::ParentedEntity::hasAncestor</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a820ad73bdd5ed01542aa3070b283bb11" kindref="member">ParentedEntityPtr</ref> &amp;</type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+<para>Test to see if the given entity is an ancestor of this entity. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Tests the given entity to determine if this entity or any of its parent entities already has the given entity as a parent. This allows for a test against creating cycles. If the given entity is an ancestor of the current entity then the result is <computeroutput>true</computeroutput> otherwise the result is <computeroutput>false</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The entity to test against.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if this entity has the given entity as an ancestor, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/parentedentity.h" line="72" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The Parented <ref refid="classlibcellml_1_1Entity" kindref="compound">Entity</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Base class for all libCellML classes that have a parent. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5">
+        <label>libcellml::Component</label>
+        <link refid="classlibcellml_1_1Component"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>libcellml::ComponentEntity</label>
+        <link refid="classlibcellml_1_1ComponentEntity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>libcellml::Entity</label>
+        <link refid="classlibcellml_1_1Entity"/>
+      </node>
+      <node id="6">
+        <label>libcellml::Model</label>
+        <link refid="classlibcellml_1_1Model"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>libcellml::NamedEntity</label>
+        <link refid="classlibcellml_1_1NamedEntity"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>libcellml::ParentedEntity</label>
+        <link refid="classlibcellml_1_1ParentedEntity"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>libcellml::Reset</label>
+        <link refid="classlibcellml_1_1Reset"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>libcellml::Units</label>
+        <link refid="classlibcellml_1_1Units"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>libcellml::Variable</label>
+        <link refid="classlibcellml_1_1Variable"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>libcellml::Entity</label>
+        <link refid="classlibcellml_1_1Entity"/>
+      </node>
+      <node id="1">
+        <label>libcellml::ParentedEntity</label>
+        <link refid="classlibcellml_1_1ParentedEntity"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libcellml/parentedentity.h" line="32" column="1" bodyfile="libcellml/parentedentity.h" bodystart="33" bodyend="80"/>
+    <listofallmembers>
+      <member refid="classlibcellml_1_1Entity_1aaf1f5a51be3e2fcc22113b2c2428967c" prot="public" virt="non-virtual"><scope>libcellml::ParentedEntity</scope><name>Entity</name></member>
+      <member refid="classlibcellml_1_1Entity_1a5ccd682791b20cc0431cd3abe265f734" prot="public" virt="non-virtual"><scope>libcellml::ParentedEntity</scope><name>Entity</name></member>
+      <member refid="classlibcellml_1_1Entity_1ae20d00ec2f8b44c6874ca43a46fb84a1" prot="public" virt="non-virtual"><scope>libcellml::ParentedEntity</scope><name>equals</name></member>
+      <member refid="classlibcellml_1_1ParentedEntity_1abe6ca3f56655c2d1ea97d18712f78c22" prot="public" virt="non-virtual"><scope>libcellml::ParentedEntity</scope><name>hasAncestor</name></member>
+      <member refid="classlibcellml_1_1ParentedEntity_1a24d037686b4ccd86539a35c84c267813" prot="public" virt="non-virtual"><scope>libcellml::ParentedEntity</scope><name>hasParent</name></member>
+      <member refid="classlibcellml_1_1Entity_1a05439119b7eeab2fc61f8aa5a86eb092" prot="public" virt="non-virtual"><scope>libcellml::ParentedEntity</scope><name>id</name></member>
+      <member refid="classlibcellml_1_1ParentedEntity_1aa303dbb33a6b745b55f5090d31ef25fa" prot="private" virt="non-virtual"><scope>libcellml::ParentedEntity</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1ParentedEntity_1ac662ca494335a944f845b1a432822292" prot="public" virt="non-virtual"><scope>libcellml::ParentedEntity</scope><name>parent</name></member>
+      <member refid="classlibcellml_1_1ParentedEntity_1a6810a5e67f2f0a5670e3bb796602ac23" prot="private" virt="non-virtual"><scope>libcellml::ParentedEntity</scope><name>ParentedEntity</name></member>
+      <member refid="classlibcellml_1_1ParentedEntity_1ade98740f2ce1475b38a9bd9b950eb569" prot="private" virt="non-virtual"><scope>libcellml::ParentedEntity</scope><name>ParentedEntity</name></member>
+      <member refid="classlibcellml_1_1ParentedEntity_1a9974dc33443d40e4662657f8b0663e11" prot="private" virt="non-virtual"><scope>libcellml::ParentedEntity</scope><name>ParentedEntity</name></member>
+      <member refid="classlibcellml_1_1ParentedEntity_1a612bca66dd1e1372cc517ee487a97e12" prot="private" virt="non-virtual"><scope>libcellml::ParentedEntity</scope><name>pFunc</name></member>
+      <member refid="classlibcellml_1_1Entity_1a959de09716024274913a396cf76b9076" prot="public" virt="non-virtual"><scope>libcellml::ParentedEntity</scope><name>removeId</name></member>
+      <member refid="classlibcellml_1_1Entity_1a13bdf688cdf007be5abad5dc628fd4ad" prot="public" virt="non-virtual"><scope>libcellml::ParentedEntity</scope><name>setId</name></member>
+      <member refid="classlibcellml_1_1Entity_1a5f2e6419f17f23f551bcd1ada87986b3" prot="public" virt="pure-virtual"><scope>libcellml::ParentedEntity</scope><name>~Entity</name></member>
+      <member refid="classlibcellml_1_1ParentedEntity_1aab8b78f33473e172f43b682edcbdd1ee" prot="private" virt="non-virtual"><scope>libcellml::ParentedEntity</scope><name>~ParentedEntity</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
