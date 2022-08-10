@@ -193,7 +193,6 @@ function readFile() {
 }
 </script>
 
-<style src="../css/general.css"></style>
 <style scoped>
 .loading {
   animation: spin 1.5s linear infinite;
