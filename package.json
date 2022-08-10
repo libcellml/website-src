@@ -23,7 +23,7 @@
     "vue-router": "^4.0.15",
     "vue3-doxygen-xml": "^0.1.0-beta.13",
     "vue3-libcellml.js": "^0.1.0-beta.1",
-    "vue3-sphinx-xml": "^0.1.0-beta.2",
+    "vue3-sphinx-xml": "^0.1.0",
     "vuetify": "^3.0.0-beta.0",
     "vuex": "^4.0.2",
     "webfontloader": "^1.0.0"
