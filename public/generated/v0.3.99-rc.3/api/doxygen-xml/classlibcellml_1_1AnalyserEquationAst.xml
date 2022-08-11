@@ -1,0 +1,1052 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classlibcellml_1_1AnalyserEquationAst" kind="class" language="C++" prot="public">
+    <compoundname>libcellml::AnalyserEquationAst</compoundname>
+    <includes refid="analyserequationast_8h" local="no">analyserequationast.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Type</name>
+        <qualifiedname>libcellml::AnalyserEquationAst::Type</qualifiedname>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a791ff9f35e0ac7dbbf3a564c6ef98c83" prot="public">
+          <name>ASSIGNMENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a2dcbad7477fd40561e8b8198f173bd47" prot="public">
+          <name>EQ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a375b332cf2e0c6d522baf007ef7cb554" prot="public">
+          <name>NEQ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8ac562607189d77eb9dfb707464c1e7b0b" prot="public">
+          <name>LT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a2a8fef531add4d7bc6e1a7dcc0f208ec" prot="public">
+          <name>LEQ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8acd6a9bd2a175104eed40f0d33a8b4020" prot="public">
+          <name>GT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8af3a19508545196b65d938817de495891" prot="public">
+          <name>GEQ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a558ffc8f5770d8e4f95f51d822685532" prot="public">
+          <name>AND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a1d00e7dce692e8dc3f6877f035e3a616" prot="public">
+          <name>OR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a97675eb3f268048604dc5155511a2a4d" prot="public">
+          <name>XOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a10df3d67626099df882920ba6552f16d" prot="public">
+          <name>NOT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a883acd43c77567e1c3baced84ccf6ed7" prot="public">
+          <name>PLUS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8affc0d9b54a1fe677c4c9e6b050e67c81" prot="public">
+          <name>MINUS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8aa541906f54b023eb41750e762c1e321a" prot="public">
+          <name>TIMES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a210c66d794cec40488f3f8f634d6c33b" prot="public">
+          <name>DIVIDE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8ac9c9c146c630ca5ef9197c73c032f4a6" prot="public">
+          <name>POWER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8aea2adde5c377cb5e09d14b71935c6f32" prot="public">
+          <name>ROOT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a7d8a220d2262f9d6c658d549ee12cf2c" prot="public">
+          <name>ABS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a8c670f8c37b95e1ed14a0ce414b049c7" prot="public">
+          <name>EXP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8afaccf5fbece5d95182fae0726ddadd4b" prot="public">
+          <name>LN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a4b5ffcdaf38ce4d463171f5c977c5ab3" prot="public">
+          <name>LOG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a2d00f82c70b57ec775b431907f0abcdb" prot="public">
+          <name>CEILING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a56c1e354d36beb85b0d881c5b2e24cbe" prot="public">
+          <name>FLOOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8ace31e2a082d17e038fcc6e3006166653" prot="public">
+          <name>MIN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a26a4b44a837bf97b972628509912b4a5" prot="public">
+          <name>MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8af5b7d8538da68fa55ace6e8f83a2378c" prot="public">
+          <name>REM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8aa2e1ec2dd3d8195d238c5494f0ac5578" prot="public">
+          <name>DIFF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a5b001d63db54e7383587771eeb2018a1" prot="public">
+          <name>SIN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8aef23ef1d426ae1a73a7eed399cef707d" prot="public">
+          <name>COS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a71211c96ad35b40178446956e22be10e" prot="public">
+          <name>TAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8acde50a071fd29ce8ebf9813061a2db77" prot="public">
+          <name>SEC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a4853aeb78ea51020a44f2d2615436dae" prot="public">
+          <name>CSC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8afc0ca659c125e8c13927b5d30a5e6c42" prot="public">
+          <name>COT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8ab387e847a769f9ef3794a3f559afcf69" prot="public">
+          <name>SINH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8ac8766c03013c3464d6bfd8e3c11b867d" prot="public">
+          <name>COSH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a143c8c6f51b9bb893ce71e38702e3cc1" prot="public">
+          <name>TANH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a92229961597d927f4cce2eda38d2b67a" prot="public">
+          <name>SECH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a2f3594cfdcb7cf034b65688cb3c913ab" prot="public">
+          <name>CSCH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a9abe8209791975c2d61a3c667942dc09" prot="public">
+          <name>COTH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a8db07d2e99c2a6161d6dc93c2fe4efff" prot="public">
+          <name>ASIN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a2655b658707a1e9bc2d9ece8e81434fd" prot="public">
+          <name>ACOS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8ac48a365c0a15f8c01a4006d6a17da5be" prot="public">
+          <name>ATAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a1b6a56d8276cbb3dccffab5c3dcc87ab" prot="public">
+          <name>ASEC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8acdf0be14e892ac17c692474c91f0992f" prot="public">
+          <name>ACSC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a472c19412d8e75adc6697d70570a6c6e" prot="public">
+          <name>ACOT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a17f260603139b1211836fc9fe6af32d2" prot="public">
+          <name>ASINH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a5430ac1a562ce2c1803bba1b9e26ada7" prot="public">
+          <name>ACOSH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a7b5d2847ff4dd6eacaa0c32e26603e21" prot="public">
+          <name>ATANH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a3c5e8e85c323a123c1b9ce63b448c01c" prot="public">
+          <name>ASECH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8aab3f28a1d96ac2fd2352be08b7cd89b0" prot="public">
+          <name>ACSCH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8ad71e5ff59fb64f79c5688ef159013ed9" prot="public">
+          <name>ACOTH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a53954e9239ed21822dbef573e9bd7c1a" prot="public">
+          <name>PIECEWISE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a739f118a0c439ac447a0409d09b42641" prot="public">
+          <name>PIECE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a069d7631b1149b7531beb3790d45412b" prot="public">
+          <name>OTHERWISE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a3ba0f40775d6d6ace27ef929f5be3cdf" prot="public">
+          <name>CI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a1c2903397d8833382673bab22aa8b937" prot="public">
+          <name>CN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a536890ac9b7738283f05d5c2cf979fe1" prot="public">
+          <name>DEGREE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a4224a92bca29117b805c8b09bea14f22" prot="public">
+          <name>LOGBASE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8ae0cecb0b85fc131031d68116937d5cb5" prot="public">
+          <name>BVAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8ac0d83f0b82a6b30de8811e69e6d95c61" prot="public">
+          <name>TRUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a946003f97ccc52d5d3b54ac0ec31bbfc" prot="public">
+          <name>FALSE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a3a3ea00cfc35332cedf6e5e9a32e94da" prot="public">
+          <name>E</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a3a372b04b95323b72c2b2f9a5d24e67b" prot="public">
+          <name>PI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8a9517fd0bf8faa655990a4dffe358e13e" prot="public">
+          <name>INF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8af3e78f3265a769c4ce90390e0f40be55" prot="public">
+          <name>NAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The type of a node in an abstract syntax tree (AST). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A node in an abstract syntax tree (AST) can be of one of the following types:<itemizedlist>
+<listitem><para>Assignment type:<itemizedlist>
+<listitem><para>ASSIGNMENT: the assignment operator</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Relational and logical operators:<itemizedlist>
+<listitem><para>EQ: the equal to function;</para>
+</listitem><listitem><para>NEQ: the not equal to function;</para>
+</listitem><listitem><para>LT: the less than function;</para>
+</listitem><listitem><para>LEQ: the less than or equal to function;</para>
+</listitem><listitem><para>GT: the greater than function;</para>
+</listitem><listitem><para>GEQ: the greater than or equal to function;</para>
+</listitem><listitem><para>AND: the and function;</para>
+</listitem><listitem><para>OR: the or function</para>
+</listitem><listitem><para>XOR: the exclusive or function;</para>
+</listitem><listitem><para>NOT: the not function;</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Arithmetic operators:<itemizedlist>
+<listitem><para>PLUS: the plus operator;</para>
+</listitem><listitem><para>MINUS: the minus operator;</para>
+</listitem><listitem><para>TIMES: the times operator;</para>
+</listitem><listitem><para>DIVIDE: the divide operator;</para>
+</listitem><listitem><para>POWER: the power operator;</para>
+</listitem><listitem><para>ROOT: the root operator;</para>
+</listitem><listitem><para>ABS: the absolute value function;</para>
+</listitem><listitem><para>EXP: the exponential function;</para>
+</listitem><listitem><para>LN: the natural logarithm function;</para>
+</listitem><listitem><para>LOG: the common logarithm function;</para>
+</listitem><listitem><para>CEILING: the ceiling function;</para>
+</listitem><listitem><para>FLOOR: the floor function;</para>
+</listitem><listitem><para>MIN: the minimum function;</para>
+</listitem><listitem><para>MAX: the maximum function;</para>
+</listitem><listitem><para>REM: the remainder function;</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Calculus elements:<itemizedlist>
+<listitem><para>DIFF: the differentiation operator;</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Trigonometric operators:<itemizedlist>
+<listitem><para>SIN: the sine function;</para>
+</listitem><listitem><para>COS: the cosine function;</para>
+</listitem><listitem><para>TAN: the tangent function;</para>
+</listitem><listitem><para>SEC: the secant function;</para>
+</listitem><listitem><para>CSC: the cosecant function;</para>
+</listitem><listitem><para>COT: the cotangent function;</para>
+</listitem><listitem><para>SINH: the hyperbolic sine function;</para>
+</listitem><listitem><para>COSH: the hyperbolic cosine function;</para>
+</listitem><listitem><para>TANH: the hyperbolic tangent function;</para>
+</listitem><listitem><para>SECH: the hyperbolic secant function;</para>
+</listitem><listitem><para>CSCH: the hyperbolic cosecant function;</para>
+</listitem><listitem><para>COTH: the hyperbolic cotangent function;</para>
+</listitem><listitem><para>ASIN: the arc sine function;</para>
+</listitem><listitem><para>ACOS: the arc cosine function;</para>
+</listitem><listitem><para>ATAN: the arc tangent function;</para>
+</listitem><listitem><para>ASEC: the arc secant function;</para>
+</listitem><listitem><para>ACSC: the arc cosecant function;</para>
+</listitem><listitem><para>ACOT: the arc cotangent function;</para>
+</listitem><listitem><para>ASINH: the arc hyperbolic sine function;</para>
+</listitem><listitem><para>ACOSH: the arc hyperbolic cosine function;</para>
+</listitem><listitem><para>ATANH: the arc hyperbolic tangent function;</para>
+</listitem><listitem><para>ASECH: the arc hyperbolic secant function;</para>
+</listitem><listitem><para>ACSCH: the arc hyperbolic cosecant function;</para>
+</listitem><listitem><para>ACOTH: the arc hyperbolic cotangent function;</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Piecewise statement:<itemizedlist>
+<listitem><para>PIECEWISE: the &quot;piecewise&quot; statement;</para>
+</listitem><listitem><para>PIECE: the &quot;piece&quot; part of a &quot;piecewise&quot; statement;</para>
+</listitem><listitem><para>OTHERWISE: the &quot;otherwise&quot; part of a &quot;piecewise&quot; statement;</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Token elements:<itemizedlist>
+<listitem><para>CI: an identifier (i.e. the name of a model variable);</para>
+</listitem><listitem><para>CN: a number;</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Qualifier elements:<itemizedlist>
+<listitem><para>DEGREE: the degree of a root operator (it is only used when its value is not 2);</para>
+</listitem><listitem><para>LOGBASE: the base with respect to which the logarithm is taken;</para>
+</listitem><listitem><para>BVAR: the bound variable of a differential equation;</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Constants:<itemizedlist>
+<listitem><para>TRUE: the &quot;true&quot; boolean;</para>
+</listitem><listitem><para>FALSE: the &quot;false&quot; boolean;</para>
+</listitem><listitem><para>E: Euler&apos;s number;</para>
+</listitem><listitem><para>PI: the π constant;</para>
+</listitem><listitem><para>INF: the infinity value; or</para>
+</listitem><listitem><para>NAN: the not-a-number value. </para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequationast.h" line="120" column="5" bodyfile="libcellml/analyserequationast.h" bodystart="121" bodyend="213"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classlibcellml_1_1AnalyserEquationAst_1a8fc045316ed5fb70e4aabbca5f40d8ec" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Analyser</definition>
+        <argsstring></argsstring>
+        <name>Analyser</name>
+        <qualifiedname>libcellml::AnalyserEquationAst::Analyser</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequationast.h" line="36" column="18" bodyfile="libcellml/analyserequationast.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlibcellml_1_1AnalyserEquationAst_1a2e556fb99950bce252615e0761a3c688" prot="private" static="no" mutable="no">
+        <type>AnalyserEquationAstImpl *</type>
+        <definition>AnalyserEquationAstImpl* libcellml::AnalyserEquationAst::mPimpl</definition>
+        <argsstring></argsstring>
+        <name>mPimpl</name>
+        <qualifiedname>libcellml::AnalyserEquationAst::mPimpl</qualifiedname>
+        <briefdescription>
+<para>Private member to implementation pointer,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequationast.h" line="351" column="29" bodyfile="libcellml/analyserequationast.h" bodystart="351" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquationAst_1a2f7ecc542f0420c290ad1822f7009dfe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::AnalyserEquationAst::~AnalyserEquationAst</definition>
+        <argsstring>()</argsstring>
+        <name>~AnalyserEquationAst</name>
+        <qualifiedname>libcellml::AnalyserEquationAst::~AnalyserEquationAst</qualifiedname>
+        <briefdescription>
+<para>Destructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequationast.h" line="215" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquationAst_1a106da6b2fb76924c2dce0c3c9f7fef2b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::AnalyserEquationAst::AnalyserEquationAst</definition>
+        <argsstring>(const AnalyserEquationAst &amp;rhs)=delete</argsstring>
+        <name>AnalyserEquationAst</name>
+        <qualifiedname>libcellml::AnalyserEquationAst::AnalyserEquationAst</qualifiedname>
+        <param>
+          <type>const <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequationast.h" line="216" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquationAst_1a5b5007274b2b4c980a4195fcf431f846" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::AnalyserEquationAst::AnalyserEquationAst</definition>
+        <argsstring>(AnalyserEquationAst &amp;&amp;rhs) noexcept=delete</argsstring>
+        <name>AnalyserEquationAst</name>
+        <qualifiedname>libcellml::AnalyserEquationAst::AnalyserEquationAst</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequationast.h" line="217" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquationAst_1aee790935454da3c8e85e19f12f5f6956" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref> &amp;</type>
+        <definition>AnalyserEquationAst &amp; libcellml::AnalyserEquationAst::operator=</definition>
+        <argsstring>(AnalyserEquationAst rhs)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>libcellml::AnalyserEquationAst::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequationast.h" line="218" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquationAst_1ac3ada07b4f0c52525dc504691154ba85" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::AnalyserEquationAst::AnalyserEquationAst</definition>
+        <argsstring>()</argsstring>
+        <name>AnalyserEquationAst</name>
+        <qualifiedname>libcellml::AnalyserEquationAst::AnalyserEquationAst</qualifiedname>
+        <briefdescription>
+<para>Constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequationast.h" line="348" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquationAst_1a180b5d3a7c83d7d214e1bcb06169880b" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1ac0baf0fbed265d4ccb07118569060148" kindref="member">AnalyserEquationAstPtr</ref></type>
+        <definition>static AnalyserEquationAstPtr libcellml::AnalyserEquationAst::create</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>create</name>
+        <qualifiedname>libcellml::AnalyserEquationAst::create</qualifiedname>
+        <briefdescription>
+<para>Create an <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Factory method to create an <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>. Create a blank equation AST with::</para>
+<para><programlisting><codeline><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ast<sp/>=<sp/><ref refid="classlibcellml_1_1AnalyserEquationAst_1a180b5d3a7c83d7d214e1bcb06169880b" kindref="member">libcellml::AnalyserEquationAst::create</ref>();</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>A smart pointer to an <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref> object. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequationast.h" line="232" column="35"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquationAst_1a5e47a7f99f5b6369d7a62072d62cee99" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8" kindref="member">Type</ref></type>
+        <definition>Type libcellml::AnalyserEquationAst::type</definition>
+        <argsstring>() const</argsstring>
+        <name>type</name>
+        <qualifiedname>libcellml::AnalyserEquationAst::type</qualifiedname>
+        <briefdescription>
+<para>Get the <computeroutput>Type</computeroutput> of this <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the <computeroutput>Type</computeroutput> of this <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>.</para>
+<para><simplesect kind="return"><para>The <computeroutput>Type</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequationast.h" line="241" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquationAst_1a7cb9a07d0e4da8ddd2762d91cd092e03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::AnalyserEquationAst::setType</definition>
+        <argsstring>(Type type)</argsstring>
+        <name>setType</name>
+        <qualifiedname>libcellml::AnalyserEquationAst::setType</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8" kindref="member">Type</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Set the type of this <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the type of this <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref> type to be set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequationast.h" line="250" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquationAst_1abbf8fe3823dd73f4b5fbfe1f035a22bf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::AnalyserEquationAst::value</definition>
+        <argsstring>() const</argsstring>
+        <name>value</name>
+        <qualifiedname>libcellml::AnalyserEquationAst::value</qualifiedname>
+        <briefdescription>
+<para>Get the value for this <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the value for this <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>.</para>
+<para><simplesect kind="return"><para>The value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequationast.h" line="259" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquationAst_1ad9118c1a16997e79a529d027b79b8436" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::AnalyserEquationAst::setValue</definition>
+        <argsstring>(const std::string &amp;value)</argsstring>
+        <name>setValue</name>
+        <qualifiedname>libcellml::AnalyserEquationAst::setValue</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Set the value for this <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the value for this <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>std::string</computeroutput> to be set as the value for this <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequationast.h" line="269" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquationAst_1a788b914b26a416710c9557bcd92e4fdd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref></type>
+        <definition>VariablePtr libcellml::AnalyserEquationAst::variable</definition>
+        <argsstring>() const</argsstring>
+        <name>variable</name>
+        <qualifiedname>libcellml::AnalyserEquationAst::variable</qualifiedname>
+        <briefdescription>
+<para>Get the <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput> for this <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput> for this <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>.</para>
+<para><simplesect kind="return"><para>The variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequationast.h" line="278" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquationAst_1a4d3b9fba7721a03efa0fd447d2412e89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::AnalyserEquationAst::setVariable</definition>
+        <argsstring>(const VariablePtr &amp;variable)</argsstring>
+        <name>setVariable</name>
+        <qualifiedname>libcellml::AnalyserEquationAst::setVariable</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable</declname>
+        </param>
+        <briefdescription>
+<para>Set the <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput> for this <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput> for this <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput> to be set as the variable for this <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequationast.h" line="288" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquationAst_1a97de2195946435c2d2924646c3b6e048" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1ac0baf0fbed265d4ccb07118569060148" kindref="member">AnalyserEquationAstPtr</ref></type>
+        <definition>AnalyserEquationAstPtr libcellml::AnalyserEquationAst::parent</definition>
+        <argsstring>() const</argsstring>
+        <name>parent</name>
+        <qualifiedname>libcellml::AnalyserEquationAst::parent</qualifiedname>
+        <briefdescription>
+<para>Get the parent of this <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the parent of this <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>.</para>
+<para><simplesect kind="return"><para>The parent. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequationast.h" line="297" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquationAst_1a8da30b835e43a5239aeb95bdc7fa6d29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::AnalyserEquationAst::setParent</definition>
+        <argsstring>(const AnalyserEquationAstPtr &amp;parent)</argsstring>
+        <name>setParent</name>
+        <qualifiedname>libcellml::AnalyserEquationAst::setParent</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1ac0baf0fbed265d4ccb07118569060148" kindref="member">AnalyserEquationAstPtr</ref> &amp;</type>
+          <declname>parent</declname>
+        </param>
+        <briefdescription>
+<para>Set the parent of this <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the parent of this <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref> to be set as the parent of this <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequationast.h" line="307" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquationAst_1a4510a0d636581ee75d69c196339099a7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1ac0baf0fbed265d4ccb07118569060148" kindref="member">AnalyserEquationAstPtr</ref></type>
+        <definition>AnalyserEquationAstPtr libcellml::AnalyserEquationAst::leftChild</definition>
+        <argsstring>() const</argsstring>
+        <name>leftChild</name>
+        <qualifiedname>libcellml::AnalyserEquationAst::leftChild</qualifiedname>
+        <briefdescription>
+<para>Get the left child for this <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the left child of this <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>.</para>
+<para><simplesect kind="return"><para>The left child. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequationast.h" line="316" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquationAst_1a8a9f7e2033ddce1984a2a518f2f8db73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::AnalyserEquationAst::setLeftChild</definition>
+        <argsstring>(const AnalyserEquationAstPtr &amp;leftChild)</argsstring>
+        <name>setLeftChild</name>
+        <qualifiedname>libcellml::AnalyserEquationAst::setLeftChild</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1ac0baf0fbed265d4ccb07118569060148" kindref="member">AnalyserEquationAstPtr</ref> &amp;</type>
+          <declname>leftChild</declname>
+        </param>
+        <briefdescription>
+<para>Set the left child of this <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the left child of this <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>leftChild</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref> to be set as the left child of this <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequationast.h" line="326" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquationAst_1adc764786722fd2d09417f2dd1ed38096" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1ac0baf0fbed265d4ccb07118569060148" kindref="member">AnalyserEquationAstPtr</ref></type>
+        <definition>AnalyserEquationAstPtr libcellml::AnalyserEquationAst::rightChild</definition>
+        <argsstring>() const</argsstring>
+        <name>rightChild</name>
+        <qualifiedname>libcellml::AnalyserEquationAst::rightChild</qualifiedname>
+        <briefdescription>
+<para>Get the right child for this <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the right child of this <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>.</para>
+<para><simplesect kind="return"><para>The right child. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequationast.h" line="335" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquationAst_1a4bac9f53529119aefc4fff4a17a6dc3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::AnalyserEquationAst::setRightChild</definition>
+        <argsstring>(const AnalyserEquationAstPtr &amp;rightChild)</argsstring>
+        <name>setRightChild</name>
+        <qualifiedname>libcellml::AnalyserEquationAst::setRightChild</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1ac0baf0fbed265d4ccb07118569060148" kindref="member">AnalyserEquationAstPtr</ref> &amp;</type>
+          <declname>rightChild</declname>
+        </param>
+        <briefdescription>
+<para>Set the right child of this <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the right child of this <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rightChild</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref> to be set as the right child of this <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequationast.h" line="345" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref> class is for representing an equation abstract syntax tree (AST) in the context of a CellML <ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref>. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>libcellml::AnalyserEquationAst</label>
+        <link refid="classlibcellml_1_1AnalyserEquationAst"/>
+      </node>
+    </collaborationgraph>
+    <location file="libcellml/analyserequationast.h" line="34" column="1" bodyfile="libcellml/analyserequationast.h" bodystart="35" bodyend="352"/>
+    <listofallmembers>
+      <member refid="classlibcellml_1_1AnalyserEquationAst_1a8fc045316ed5fb70e4aabbca5f40d8ec" prot="private" virt="non-virtual"><scope>libcellml::AnalyserEquationAst</scope><name>Analyser</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquationAst_1a106da6b2fb76924c2dce0c3c9f7fef2b" prot="private" virt="non-virtual"><scope>libcellml::AnalyserEquationAst</scope><name>AnalyserEquationAst</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquationAst_1a5b5007274b2b4c980a4195fcf431f846" prot="private" virt="non-virtual"><scope>libcellml::AnalyserEquationAst</scope><name>AnalyserEquationAst</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquationAst_1ac3ada07b4f0c52525dc504691154ba85" prot="private" virt="non-virtual"><scope>libcellml::AnalyserEquationAst</scope><name>AnalyserEquationAst</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquationAst_1a180b5d3a7c83d7d214e1bcb06169880b" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquationAst</scope><name>create</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquationAst_1a4510a0d636581ee75d69c196339099a7" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquationAst</scope><name>leftChild</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquationAst_1a2e556fb99950bce252615e0761a3c688" prot="private" virt="non-virtual"><scope>libcellml::AnalyserEquationAst</scope><name>mPimpl</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquationAst_1aee790935454da3c8e85e19f12f5f6956" prot="private" virt="non-virtual"><scope>libcellml::AnalyserEquationAst</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquationAst_1a97de2195946435c2d2924646c3b6e048" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquationAst</scope><name>parent</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquationAst_1adc764786722fd2d09417f2dd1ed38096" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquationAst</scope><name>rightChild</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquationAst_1a8a9f7e2033ddce1984a2a518f2f8db73" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquationAst</scope><name>setLeftChild</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquationAst_1a8da30b835e43a5239aeb95bdc7fa6d29" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquationAst</scope><name>setParent</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquationAst_1a4bac9f53529119aefc4fff4a17a6dc3b" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquationAst</scope><name>setRightChild</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquationAst_1a7cb9a07d0e4da8ddd2762d91cd092e03" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquationAst</scope><name>setType</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquationAst_1ad9118c1a16997e79a529d027b79b8436" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquationAst</scope><name>setValue</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquationAst_1a4d3b9fba7721a03efa0fd447d2412e89" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquationAst</scope><name>setVariable</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquationAst_1ab999b3142292f22b42dc0801352f20b8" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquationAst</scope><name>Type</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquationAst_1a5e47a7f99f5b6369d7a62072d62cee99" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquationAst</scope><name>type</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquationAst_1abbf8fe3823dd73f4b5fbfe1f035a22bf" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquationAst</scope><name>value</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquationAst_1a788b914b26a416710c9557bcd92e4fdd" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquationAst</scope><name>variable</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquationAst_1a2f7ecc542f0420c290ad1822f7009dfe" prot="private" virt="non-virtual"><scope>libcellml::AnalyserEquationAst</scope><name>~AnalyserEquationAst</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

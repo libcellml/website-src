@@ -1,0 +1,2258 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classlibcellml_1_1Annotator" kind="class" language="C++" prot="public">
+    <compoundname>libcellml::Annotator</compoundname>
+    <basecompoundref refid="classlibcellml_1_1Logger" prot="public" virt="non-virtual">libcellml::Logger</basecompoundref>
+    <includes refid="annotator_8h" local="no">annotator.h</includes>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a37473a58d00d056be8c8fd21e3c030f8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Annotator::~Annotator</definition>
+        <argsstring>() override</argsstring>
+        <name>~Annotator</name>
+        <qualifiedname>libcellml::Annotator::~Annotator</qualifiedname>
+        <briefdescription>
+<para>Destructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="35" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a55a59dea98dfee045f251e3cd40a6f46" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Annotator::Annotator</definition>
+        <argsstring>(const Annotator &amp;rhs)=delete</argsstring>
+        <name>Annotator</name>
+        <qualifiedname>libcellml::Annotator::Annotator</qualifiedname>
+        <param>
+          <type>const <ref refid="classlibcellml_1_1Annotator" kindref="compound">Annotator</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="36" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a0ca81c148be7233bd20bb19557300d80" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Annotator::Annotator</definition>
+        <argsstring>(Annotator &amp;&amp;rhs) noexcept=delete</argsstring>
+        <name>Annotator</name>
+        <qualifiedname>libcellml::Annotator::Annotator</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Annotator" kindref="compound">Annotator</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="37" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1ab57d0676125b35bc3ab28197cfdf328f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1Annotator" kindref="compound">Annotator</ref> &amp;</type>
+        <definition>Annotator &amp; libcellml::Annotator::operator=</definition>
+        <argsstring>(Annotator rhs)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>libcellml::Annotator::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Annotator" kindref="compound">Annotator</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="38" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a33d7676783f6f81adbed8a2135921fa2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Annotator::Annotator</definition>
+        <argsstring>()</argsstring>
+        <name>Annotator</name>
+        <qualifiedname>libcellml::Annotator::Annotator</qualifiedname>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="895" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a4faec2f8402cec6aa852525d36817c5c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AnnotatorImpl *</type>
+        <definition>AnnotatorImpl * libcellml::Annotator::pFunc</definition>
+        <argsstring>()</argsstring>
+        <name>pFunc</name>
+        <qualifiedname>libcellml::Annotator::pFunc</qualifiedname>
+        <briefdescription>
+<para>Forward declaration for pImpl idiom,. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Getter for private implementation pointer,. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="899" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a962caded4a0c943b19281f7d554e0621" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const AnnotatorImpl *</type>
+        <definition>const AnnotatorImpl * libcellml::Annotator::pFunc</definition>
+        <argsstring>() const</argsstring>
+        <name>pFunc</name>
+        <qualifiedname>libcellml::Annotator::pFunc</qualifiedname>
+        <briefdescription>
+<para>Const getter for private implementation pointer,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="900" column="25"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1ad6bec1cd4eaddfd27152eda74db6e853" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a06e401be76fde0b91c9b6fe737e1b371" kindref="member">AnnotatorPtr</ref></type>
+        <definition>static AnnotatorPtr libcellml::Annotator::create</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>create</name>
+        <qualifiedname>libcellml::Annotator::create</qualifiedname>
+        <briefdescription>
+<para>Create a <ref refid="classlibcellml_1_1Annotator" kindref="compound">Annotator</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Factory method to create a <ref refid="classlibcellml_1_1Annotator" kindref="compound">Annotator</ref>. Create an annotator with:</para>
+<para><programlisting><codeline><highlight class="normal"><ref refid="namespacelibcellml_1a06e401be76fde0b91c9b6fe737e1b371" kindref="member">AnnotatorPtr</ref><sp/>annotator<sp/>=<sp/><ref refid="classlibcellml_1_1Annotator_1ad6bec1cd4eaddfd27152eda74db6e853" kindref="member">libcellml::Annotator::create</ref>();</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>A smart pointer to an <ref refid="classlibcellml_1_1Annotator" kindref="compound">Annotator</ref> object. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="52" column="25"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a07028637ed7a556f42285e5d6ac2e54a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Annotator::setModel</definition>
+        <argsstring>(const ModelPtr &amp;model)</argsstring>
+        <name>setModel</name>
+        <qualifiedname>libcellml::Annotator::setModel</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref> &amp;</type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+<para>Set the model that this annotator will use. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the model that this annotator will use.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref> model to use in this annotator. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="61" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1aec28f90c2593cfd69fec7ab6dcf72ec0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref></type>
+        <definition>ModelPtr libcellml::Annotator::model</definition>
+        <argsstring>() const</argsstring>
+        <name>model</name>
+        <qualifiedname>libcellml::Annotator::model</qualifiedname>
+        <briefdescription>
+<para>Get the model associated with this annotator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the model associated with this annotator. A <computeroutput>nullptr</computeroutput> is returned if there is no model associated with this annotator.</para>
+<para><simplesect kind="return"><para>A <ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref> to a model, or a <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="71" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1af02e7830260850c7f46024690f78031a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1adfe61184a6b1f01266643d95352af87c" kindref="member">AnyCellmlElementPtr</ref></type>
+        <definition>AnyCellmlElementPtr libcellml::Annotator::item</definition>
+        <argsstring>(const std::string &amp;id)</argsstring>
+        <name>item</name>
+        <qualifiedname>libcellml::Annotator::item</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Return the item with the <computeroutput>id</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Find and return the item with the given <computeroutput>id</computeroutput> string. If no item can be found an empty <ref refid="classlibcellml_1_1AnyCellmlElement" kindref="compound">AnyCellmlElement</ref> is returned. If there are multiple items with the same <computeroutput>id</computeroutput> string an empty <ref refid="classlibcellml_1_1AnyCellmlElement" kindref="compound">AnyCellmlElement</ref> is returned.</para>
+<para>An issue is logged if a problem was encountered. Any previous issues will be cleared when this method is used.</para>
+<para>The item returned is an <ref refid="classlibcellml_1_1AnyCellmlElement" kindref="compound">AnyCellmlElement</ref> object containing both:<itemizedlist>
+<listitem><para>a type (as a <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref> enum); and</para>
+</listitem><listitem><para>an item, which can be a<itemizedlist>
+<listitem><para><ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref>,</para>
+</listitem><listitem><para><ref refid="classlibcellml_1_1ImportSource" kindref="compound">ImportSource</ref>,</para>
+</listitem><listitem><para><ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref>,</para>
+</listitem><listitem><para><ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref>,</para>
+</listitem><listitem><para><ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref>,</para>
+</listitem><listitem><para><ref refid="classlibcellml_1_1UnitsItem" kindref="compound">UnitsItem</ref>,</para>
+</listitem><listitem><para><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref>; or a</para>
+</listitem><listitem><para><ref refid="classlibcellml_1_1VariablePair" kindref="compound">VariablePair</ref>.</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> representing the <computeroutput>id</computeroutput> to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classlibcellml_1_1AnyCellmlElement" kindref="compound">AnyCellmlElement</ref> item. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="99" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a6c6e162ebf2ce54c0e77b54d7aa79621" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1adfe61184a6b1f01266643d95352af87c" kindref="member">AnyCellmlElementPtr</ref></type>
+        <definition>AnyCellmlElementPtr libcellml::Annotator::item</definition>
+        <argsstring>(const std::string &amp;id, size_t index)</argsstring>
+        <name>item</name>
+        <qualifiedname>libcellml::Annotator::item</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Return the item at <computeroutput>index</computeroutput> with the <computeroutput>id</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>From a list of items extracted from the stored model find and return the item with the given <computeroutput>id</computeroutput> string and <computeroutput>index</computeroutput>.</para>
+<para>An <ref refid="classlibcellml_1_1Issue" kindref="compound">Issue</ref> is logged if:<itemizedlist>
+<listitem><para>there is no stored model; or</para>
+</listitem><listitem><para>there is no item with the given <computeroutput>id</computeroutput> and <computeroutput>index</computeroutput>.</para>
+</listitem></itemizedlist>
+</para>
+<para>Any previous issues will be cleared when this method is used.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> representing the <computeroutput>id</computeroutput> to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the item to return from the list of items with <computeroutput>id</computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classlibcellml_1_1AnyCellmlElement" kindref="compound">AnyCellmlElement</ref> item as described in <ref refid="classlibcellml_1_1Annotator_1af02e7830260850c7f46024690f78031a" kindref="member">item(const std::string &amp;)</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="118" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1ab18b13332bcb08463615a7f9b6f1830e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref></type>
+        <definition>ComponentPtr libcellml::Annotator::component</definition>
+        <argsstring>(const std::string &amp;id)</argsstring>
+        <name>component</name>
+        <qualifiedname>libcellml::Annotator::component</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a component from the stored model with <computeroutput>id</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Find and return the component with the given <computeroutput>id</computeroutput> string.</para>
+<para>If either:<itemizedlist>
+<listitem><para>no component can be found; or</para>
+</listitem><listitem><para>the <computeroutput>id</computeroutput> is not unique across the stored model, then a <computeroutput>nullptr</computeroutput> is returned.</para>
+</listitem></itemizedlist>
+</para>
+<para>An issue with information on the specific problem encountered is logged if a <computeroutput>nullptr</computeroutput> is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> representing the identifier of the component to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref> on success otherwise <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="136" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a798a95bde9e802a21c31373189d5fd9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref></type>
+        <definition>ComponentPtr libcellml::Annotator::component</definition>
+        <argsstring>(const std::string &amp;id, size_t index)</argsstring>
+        <name>component</name>
+        <qualifiedname>libcellml::Annotator::component</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>From a list of items in the stored model with the given <computeroutput>id</computeroutput> string, this method returns a <ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref> in the <computeroutput>index</computeroutput> position, if it exists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>From a list of all items with the given <computeroutput>id</computeroutput> return the <ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref> at that location.</para>
+<para>A <computeroutput>nullptr</computeroutput> will be returned if:<itemizedlist>
+<listitem><para>no item with the given <computeroutput>id</computeroutput> exists in the stored model;</para>
+</listitem><listitem><para>the given <computeroutput>index</computeroutput> is beyond the range [0, #itemCount(id));</para>
+</listitem><listitem><para>the item stored at the <computeroutput>index</computeroutput> is not a <ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref>; or</para>
+</listitem><listitem><para>the annotator does not have a model attached.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> representing the identifier of the item to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position of an item within the list of items with the given <computeroutput>id</computeroutput> to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref> on success otherwise <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="155" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1ae9e682b5598c1329f6d15782dd30497c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref></type>
+        <definition>ComponentPtr libcellml::Annotator::componentEncapsulation</definition>
+        <argsstring>(const std::string &amp;id)</argsstring>
+        <name>componentEncapsulation</name>
+        <qualifiedname>libcellml::Annotator::componentEncapsulation</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a component with encapsulation id from the stored model with <computeroutput>id</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Find and return the component with encapsulation id with the given <computeroutput>id</computeroutput> string. If either:<itemizedlist>
+<listitem><para>no component with encapsulation id with <computeroutput>id</computeroutput> can be found; or</para>
+</listitem><listitem><para>the <computeroutput>id</computeroutput> is not unique across the stored model, then a <computeroutput>nullptr</computeroutput> is returned.</para>
+</listitem></itemizedlist>
+</para>
+<para>An issue with information on the specific problem encountered is logged if a <computeroutput>nullptr</computeroutput> is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> representing the identifier of the component with encapsulation id to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref> on success otherwise <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="172" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1af2356316bc1822b158a51e56dfa893ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref></type>
+        <definition>ComponentPtr libcellml::Annotator::componentEncapsulation</definition>
+        <argsstring>(const std::string &amp;id, size_t index)</argsstring>
+        <name>componentEncapsulation</name>
+        <qualifiedname>libcellml::Annotator::componentEncapsulation</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>From a list of items in the stored model with the given <computeroutput>id</computeroutput> string, this method returns a <ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref> in the <computeroutput>index</computeroutput> position, if it exists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>From a list of all items with the given <computeroutput>id</computeroutput> return the <ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref> at that location.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> representing the identifier of the item to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position of an item within the list of items with the given <computeroutput>id</computeroutput> to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref> on success otherwise <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="185" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a01391411e9ed1ff30d2a0c816b070c30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref></type>
+        <definition>ModelPtr libcellml::Annotator::encapsulation</definition>
+        <argsstring>(const std::string &amp;id)</argsstring>
+        <name>encapsulation</name>
+        <qualifiedname>libcellml::Annotator::encapsulation</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a model from the stored model with <computeroutput>id</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Find and return the model with the given <computeroutput>id</computeroutput> string. If either:<itemizedlist>
+<listitem><para>no model with <computeroutput>id</computeroutput> can be found; or</para>
+</listitem><listitem><para>the <computeroutput>id</computeroutput> is not unique across the stored model, then a <computeroutput>nullptr</computeroutput> is returned.</para>
+</listitem></itemizedlist>
+</para>
+<para>An issue with information on the specific problem encountered is logged if a <computeroutput>nullptr</computeroutput> is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> representing the identifier of the model to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref> on success otherwise <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="202" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a9a273d267ed816e57b839d3f1978f244" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref></type>
+        <definition>ModelPtr libcellml::Annotator::encapsulation</definition>
+        <argsstring>(const std::string &amp;id, size_t index)</argsstring>
+        <name>encapsulation</name>
+        <qualifiedname>libcellml::Annotator::encapsulation</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>From a list of items in the stored model with the given <computeroutput>id</computeroutput> string, this method returns a <ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref> in the <computeroutput>index</computeroutput> position, if it exists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>From a list of all items with the given <computeroutput>id</computeroutput> return the <ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref> at that location.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Annotator_1a798a95bde9e802a21c31373189d5fd9c" kindref="member">component(const std::string &amp;, size_t)</ref> for times when a <computeroutput>nullptr</computeroutput> is returned.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> representing the identifier of the item to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position of an item within the list of items with the given <computeroutput>id</computeroutput> to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref> on success otherwise <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="217" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1acb1b0523e3291d988f2a24326d310332" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref></type>
+        <definition>VariablePtr libcellml::Annotator::variable</definition>
+        <argsstring>(const std::string &amp;id)</argsstring>
+        <name>variable</name>
+        <qualifiedname>libcellml::Annotator::variable</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a variable from the stored model with <computeroutput>id</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Find and return the variable with the given <computeroutput>id</computeroutput> string. If either:<itemizedlist>
+<listitem><para>no variable with <computeroutput>id</computeroutput> can be found; or</para>
+</listitem><listitem><para>the <computeroutput>id</computeroutput> is not unique across the stored model, then a <computeroutput>nullptr</computeroutput> is returned.</para>
+</listitem></itemizedlist>
+</para>
+<para>An issue with information on the specific problem encountered is logged if a <computeroutput>nullptr</computeroutput> is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> representing the identifier of the variable to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref> on success otherwise <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="234" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a4410ce2b5842315e1efef1dcbb393871" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref></type>
+        <definition>VariablePtr libcellml::Annotator::variable</definition>
+        <argsstring>(const std::string &amp;id, size_t index)</argsstring>
+        <name>variable</name>
+        <qualifiedname>libcellml::Annotator::variable</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>From a list of items in the stored model with the given <computeroutput>id</computeroutput> string, this method returns a <ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref> in the <computeroutput>index</computeroutput> position, if it exists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>From a list of all items with the given <computeroutput>id</computeroutput> return the <ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref> at that location.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Annotator_1a798a95bde9e802a21c31373189d5fd9c" kindref="member">component(const std::string &amp;, size_t)</ref> for times when a <computeroutput>nullptr</computeroutput> is returned.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> representing the identifier of the item to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position of an item within the list of items with the given <computeroutput>id</computeroutput> to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref> on success otherwise <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="249" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a642764f00ac7f0b1b446c54b48bc8fd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a329055beefacf51332628055453f390a" kindref="member">ResetPtr</ref></type>
+        <definition>ResetPtr libcellml::Annotator::reset</definition>
+        <argsstring>(const std::string &amp;id)</argsstring>
+        <name>reset</name>
+        <qualifiedname>libcellml::Annotator::reset</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a reset from the stored model with <computeroutput>id</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Find and return the reset with the given <computeroutput>id</computeroutput> string. If either:<itemizedlist>
+<listitem><para>no reset with <computeroutput>id</computeroutput> can be found; or</para>
+</listitem><listitem><para>the <computeroutput>id</computeroutput> is not unique across the stored model, then a <computeroutput>nullptr</computeroutput> is returned.</para>
+</listitem></itemizedlist>
+</para>
+<para>An issue with information on the specific problem encountered is logged if a <computeroutput>nullptr</computeroutput> is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> representing the identifier of the reset to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref> on success otherwise <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="266" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a85f64818bb13f04c826904f24d95a6dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a329055beefacf51332628055453f390a" kindref="member">ResetPtr</ref></type>
+        <definition>ResetPtr libcellml::Annotator::reset</definition>
+        <argsstring>(const std::string &amp;id, size_t index)</argsstring>
+        <name>reset</name>
+        <qualifiedname>libcellml::Annotator::reset</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>From a list of items in the stored model with the given <computeroutput>id</computeroutput> string, this method returns a <ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref> in the <computeroutput>index</computeroutput> position, if it exists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>From a list of all items with the given <computeroutput>id</computeroutput> return the <ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref> at that location.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Annotator_1a798a95bde9e802a21c31373189d5fd9c" kindref="member">component(const std::string &amp;, size_t)</ref> for times when a <computeroutput>nullptr</computeroutput> is returned.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> representing the identifier of the item to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position of an item within the list of items with the given <computeroutput>id</computeroutput> to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref> on success otherwise <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="281" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1ab8363f4efdcabe777ebbdd48ec99e91c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref></type>
+        <definition>ModelPtr libcellml::Annotator::model</definition>
+        <argsstring>(const std::string &amp;id)</argsstring>
+        <name>model</name>
+        <qualifiedname>libcellml::Annotator::model</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a model from the stored model with <computeroutput>id</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Find and return the model with the given <computeroutput>id</computeroutput> string. If either:<itemizedlist>
+<listitem><para>no model with <computeroutput>id</computeroutput> can be found; or</para>
+</listitem><listitem><para>the <computeroutput>id</computeroutput> is not unique across the stored model, then a <computeroutput>nullptr</computeroutput> is returned.</para>
+</listitem></itemizedlist>
+</para>
+<para>An issue with information on the specific problem encountered is logged if a <computeroutput>nullptr</computeroutput> is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> representing the identifier of the model to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref> on success otherwise <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="298" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a4d48b559128a64ccc349b8bfdc65d95a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref></type>
+        <definition>ModelPtr libcellml::Annotator::model</definition>
+        <argsstring>(const std::string &amp;id, size_t index)</argsstring>
+        <name>model</name>
+        <qualifiedname>libcellml::Annotator::model</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>From a list of items in the stored model with the given <computeroutput>id</computeroutput> string, this method returns a <ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref> in the <computeroutput>index</computeroutput> position, if it exists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>From a list of all items with the given <computeroutput>id</computeroutput> return the <ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref> at that location.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Annotator_1a798a95bde9e802a21c31373189d5fd9c" kindref="member">component(const std::string &amp;, size_t)</ref> for times when a <computeroutput>nullptr</computeroutput> is returned.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> representing the identifier of the item to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position of an item within the list of items with the given <computeroutput>id</computeroutput> to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref> on success otherwise <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="313" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a325e2798614de441a256f8716f8ae684" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1ac2c4e6d1793d7214616c1548d8a9f502" kindref="member">ImportSourcePtr</ref></type>
+        <definition>ImportSourcePtr libcellml::Annotator::importSource</definition>
+        <argsstring>(const std::string &amp;id)</argsstring>
+        <name>importSource</name>
+        <qualifiedname>libcellml::Annotator::importSource</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve an import source from the stored model with <computeroutput>id</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Find and return the import source with the given <computeroutput>id</computeroutput> string. If either:<itemizedlist>
+<listitem><para>no import source with <computeroutput>id</computeroutput> can be found; or</para>
+</listitem><listitem><para>the <computeroutput>id</computeroutput> is not unique across the stored model, then a <computeroutput>nullptr</computeroutput> is returned.</para>
+</listitem></itemizedlist>
+</para>
+<para>An issue with information on the specific problem encountered is logged if a <computeroutput>nullptr</computeroutput> is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> representing the identifier of the import source to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="classlibcellml_1_1ImportSource" kindref="compound">ImportSource</ref> on success otherwise <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="330" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a0a8f6cf1829cf663ad5b1810288e2270" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1ac2c4e6d1793d7214616c1548d8a9f502" kindref="member">ImportSourcePtr</ref></type>
+        <definition>ImportSourcePtr libcellml::Annotator::importSource</definition>
+        <argsstring>(const std::string &amp;id, size_t index)</argsstring>
+        <name>importSource</name>
+        <qualifiedname>libcellml::Annotator::importSource</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>From a list of items in the stored model with the given <computeroutput>id</computeroutput> string, this method returns a <ref refid="classlibcellml_1_1ImportSource" kindref="compound">ImportSource</ref> in the <computeroutput>index</computeroutput> position, if it exists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>From a list of all items with the given <computeroutput>id</computeroutput> return the <ref refid="classlibcellml_1_1ImportSource" kindref="compound">ImportSource</ref> at that location.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Annotator_1a798a95bde9e802a21c31373189d5fd9c" kindref="member">component(const std::string &amp;, size_t)</ref> for times when a <computeroutput>nullptr</computeroutput> is returned.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> representing the identifier of the item to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position of an item within the list of items with the given <computeroutput>id</computeroutput> to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <ref refid="classlibcellml_1_1ImportSource" kindref="compound">ImportSource</ref> on success otherwise <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="345" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a9f6ad7662e9a7755dc0fb409a4cf1fbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a3259debe09f915678b203e98100ea10a" kindref="member">UnitsPtr</ref></type>
+        <definition>UnitsPtr libcellml::Annotator::units</definition>
+        <argsstring>(const std::string &amp;id)</argsstring>
+        <name>units</name>
+        <qualifiedname>libcellml::Annotator::units</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a units from the stored model with <computeroutput>id</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Find and return the units with the given <computeroutput>id</computeroutput> string. If either:<itemizedlist>
+<listitem><para>no units with <computeroutput>id</computeroutput> can be found; or</para>
+</listitem><listitem><para>the <computeroutput>id</computeroutput> is not unique across the stored model, then a <computeroutput>nullptr</computeroutput> is returned.</para>
+</listitem></itemizedlist>
+</para>
+<para>An issue with information on the specific problem encountered is logged if a <computeroutput>nullptr</computeroutput> is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> representing the identifier of the units to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref> on success otherwise <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="362" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1aebf1bae9d6682d33d3eb7b981081d27d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a3259debe09f915678b203e98100ea10a" kindref="member">UnitsPtr</ref></type>
+        <definition>UnitsPtr libcellml::Annotator::units</definition>
+        <argsstring>(const std::string &amp;id, size_t index)</argsstring>
+        <name>units</name>
+        <qualifiedname>libcellml::Annotator::units</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>From a list of items in the stored model with the given <computeroutput>id</computeroutput> string, this method returns a <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref> in the <computeroutput>index</computeroutput> position, if it exists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>From a list of all items with the given <computeroutput>id</computeroutput> return the <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref> at that location.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Annotator_1a798a95bde9e802a21c31373189d5fd9c" kindref="member">component(const std::string &amp;, size_t)</ref> for times when a <computeroutput>nullptr</computeroutput> is returned.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> representing the identifier of the item to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position of an item within the list of items with the given <computeroutput>id</computeroutput> to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref> on success otherwise <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="377" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a62968cc69a09f89028b29e30360e6c68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a6b568d1251dec59e864e6ea189da9320" kindref="member">VariablePairPtr</ref></type>
+        <definition>VariablePairPtr libcellml::Annotator::mapVariables</definition>
+        <argsstring>(const std::string &amp;id)</argsstring>
+        <name>mapVariables</name>
+        <qualifiedname>libcellml::Annotator::mapVariables</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a variable pair from the stored model with <computeroutput>id</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Find and return the variable pair with the given <computeroutput>id</computeroutput> string. If either:<itemizedlist>
+<listitem><para>no variable pair with <computeroutput>id</computeroutput> can be found; or</para>
+</listitem><listitem><para>the <computeroutput>id</computeroutput> is not unique across the stored model, then a <computeroutput>nullptr</computeroutput> is returned.</para>
+</listitem></itemizedlist>
+</para>
+<para>An issue with information on the specific problem encountered is logged if a <computeroutput>nullptr</computeroutput> is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> representing the identifier of the variable pair to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="classlibcellml_1_1VariablePair" kindref="compound">VariablePair</ref> on success otherwise <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="394" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a6d30c942327c7edc9ce62f579d1cc4f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a6b568d1251dec59e864e6ea189da9320" kindref="member">VariablePairPtr</ref></type>
+        <definition>VariablePairPtr libcellml::Annotator::mapVariables</definition>
+        <argsstring>(const std::string &amp;id, size_t index)</argsstring>
+        <name>mapVariables</name>
+        <qualifiedname>libcellml::Annotator::mapVariables</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>From a list of items in the stored model with the given <computeroutput>id</computeroutput> string, this method returns a <ref refid="classlibcellml_1_1VariablePair" kindref="compound">VariablePair</ref> in the <computeroutput>index</computeroutput> position, if it exists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>From a list of all items with the given <computeroutput>id</computeroutput> return the <ref refid="classlibcellml_1_1VariablePair" kindref="compound">VariablePair</ref> at that location.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Annotator_1a798a95bde9e802a21c31373189d5fd9c" kindref="member">component(const std::string &amp;, size_t)</ref> for times when a <computeroutput>nullptr</computeroutput> is returned.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> representing the identifier of the item to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position of an item within the list of items with the given <computeroutput>id</computeroutput> to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="classlibcellml_1_1VariablePair" kindref="compound">VariablePair</ref> on success otherwise <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="409" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1ad4481ac795febfabcc51d24547a4d766" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a6b568d1251dec59e864e6ea189da9320" kindref="member">VariablePairPtr</ref></type>
+        <definition>VariablePairPtr libcellml::Annotator::connection</definition>
+        <argsstring>(const std::string &amp;id)</argsstring>
+        <name>connection</name>
+        <qualifiedname>libcellml::Annotator::connection</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a variable pair from the stored model with <computeroutput>id</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Find and return the variable pair with the given <computeroutput>id</computeroutput> string. If either:<itemizedlist>
+<listitem><para>no variable pair with <computeroutput>id</computeroutput> can be found; or</para>
+</listitem><listitem><para>the <computeroutput>id</computeroutput> is not unique across the stored model, then a <computeroutput>nullptr</computeroutput> is returned.</para>
+</listitem></itemizedlist>
+</para>
+<para>An issue with information on the specific problem encountered is logged if a <computeroutput>nullptr</computeroutput> is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> representing the identifier of the variable pair to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="classlibcellml_1_1VariablePair" kindref="compound">VariablePair</ref> on success otherwise <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="426" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a6feb764fc11fce3dc6ba6b69f73b298e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a6b568d1251dec59e864e6ea189da9320" kindref="member">VariablePairPtr</ref></type>
+        <definition>VariablePairPtr libcellml::Annotator::connection</definition>
+        <argsstring>(const std::string &amp;id, size_t index)</argsstring>
+        <name>connection</name>
+        <qualifiedname>libcellml::Annotator::connection</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>From a list of items in the stored model with the given <computeroutput>id</computeroutput> string, this method returns a <ref refid="classlibcellml_1_1VariablePair" kindref="compound">VariablePair</ref> in the <computeroutput>index</computeroutput> position, if it exists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>From a list of all items with the given <computeroutput>id</computeroutput> return the <ref refid="classlibcellml_1_1VariablePair" kindref="compound">VariablePair</ref> at that location.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Annotator_1a798a95bde9e802a21c31373189d5fd9c" kindref="member">component(const std::string &amp;, size_t)</ref> for times when a <computeroutput>nullptr</computeroutput> is returned.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> representing the identifier of the item to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position of an item within the list of items with the given <computeroutput>id</computeroutput> to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="classlibcellml_1_1VariablePair" kindref="compound">VariablePair</ref> on success otherwise <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="441" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a31fec2d3b24b81171669b1b30324a01f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a29f1c2968e2baea904984ba46c9032b0" kindref="member">UnitsItemPtr</ref></type>
+        <definition>UnitsItemPtr libcellml::Annotator::unitsItem</definition>
+        <argsstring>(const std::string &amp;id)</argsstring>
+        <name>unitsItem</name>
+        <qualifiedname>libcellml::Annotator::unitsItem</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a units item from the stored model with <computeroutput>id</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Find and return the units item with the given <computeroutput>id</computeroutput> string. If either:<itemizedlist>
+<listitem><para>no units item with <computeroutput>id</computeroutput> can be found; or</para>
+</listitem><listitem><para>the <computeroutput>id</computeroutput> is not unique across the stored model, then a <computeroutput>nullptr</computeroutput> is returned.</para>
+</listitem></itemizedlist>
+</para>
+<para>An issue with information on the specific problem encountered is logged if a <computeroutput>nullptr</computeroutput> is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> representing the identifier of the units item to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="classlibcellml_1_1UnitsItem" kindref="compound">UnitsItem</ref> on success otherwise <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="458" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a917f5c9d2bf02873a6c08fdb0940c8e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a29f1c2968e2baea904984ba46c9032b0" kindref="member">UnitsItemPtr</ref></type>
+        <definition>UnitsItemPtr libcellml::Annotator::unitsItem</definition>
+        <argsstring>(const std::string &amp;id, size_t index)</argsstring>
+        <name>unitsItem</name>
+        <qualifiedname>libcellml::Annotator::unitsItem</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>From a list of items in the stored model with the given <computeroutput>id</computeroutput> string, this method returns a <ref refid="classlibcellml_1_1UnitsItem" kindref="compound">UnitsItem</ref> in the <computeroutput>index</computeroutput> position, if it exists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>From a list of all items with the given <computeroutput>id</computeroutput> return the <ref refid="classlibcellml_1_1UnitsItem" kindref="compound">UnitsItem</ref> at that location.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Annotator_1a798a95bde9e802a21c31373189d5fd9c" kindref="member">component(const std::string &amp;, size_t)</ref> for times when a <computeroutput>nullptr</computeroutput> is returned.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> representing the identifier of the item to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position of an item within the list of items with the given <computeroutput>id</computeroutput> to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="classlibcellml_1_1UnitsItem" kindref="compound">UnitsItem</ref> on success otherwise <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="473" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1acf61e51f1dfe594e903d289517fbcadf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a329055beefacf51332628055453f390a" kindref="member">ResetPtr</ref></type>
+        <definition>ResetPtr libcellml::Annotator::testValue</definition>
+        <argsstring>(const std::string &amp;id)</argsstring>
+        <name>testValue</name>
+        <qualifiedname>libcellml::Annotator::testValue</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a reset with test value id from the stored model with <computeroutput>id</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Find and return the reset with test value id with the given <computeroutput>id</computeroutput> string. If either:<itemizedlist>
+<listitem><para>no reset with test value id with <computeroutput>id</computeroutput> can be found; or</para>
+</listitem><listitem><para>the <computeroutput>id</computeroutput> is not unique across the stored model, then a <computeroutput>nullptr</computeroutput> is returned.</para>
+</listitem></itemizedlist>
+</para>
+<para>An issue with information on the specific problem encountered is logged if a <computeroutput>nullptr</computeroutput> is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> representing the identifier of the reset with test value id to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref> on success otherwise <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="490" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1ab1ec981988820d9c3b350aea4c04b928" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a329055beefacf51332628055453f390a" kindref="member">ResetPtr</ref></type>
+        <definition>ResetPtr libcellml::Annotator::testValue</definition>
+        <argsstring>(const std::string &amp;id, size_t index)</argsstring>
+        <name>testValue</name>
+        <qualifiedname>libcellml::Annotator::testValue</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>From a list of items in the stored model with the given <computeroutput>id</computeroutput> string, this method returns a <ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref> in the <computeroutput>index</computeroutput> position, if it exists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>From a list of all items with the given <computeroutput>id</computeroutput> return the <ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref> at that location.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Annotator_1a798a95bde9e802a21c31373189d5fd9c" kindref="member">component(const std::string &amp;, size_t)</ref> for times when a <computeroutput>nullptr</computeroutput> is returned.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> representing the identifier of the item to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position of an item within the list of items with the given <computeroutput>id</computeroutput> to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref> on success otherwise <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="505" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1ac996359845dabb2745608c51e30fe8f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a329055beefacf51332628055453f390a" kindref="member">ResetPtr</ref></type>
+        <definition>ResetPtr libcellml::Annotator::resetValue</definition>
+        <argsstring>(const std::string &amp;id)</argsstring>
+        <name>resetValue</name>
+        <qualifiedname>libcellml::Annotator::resetValue</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a reset with reset value id from the stored model with <computeroutput>id</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Find and return the reset with reset value id with the given <computeroutput>id</computeroutput> string. If either:<itemizedlist>
+<listitem><para>no reset with reset value id with <computeroutput>id</computeroutput> can be found; or</para>
+</listitem><listitem><para>the <computeroutput>id</computeroutput> is not unique across the stored model, then a <computeroutput>nullptr</computeroutput> is returned.</para>
+</listitem></itemizedlist>
+</para>
+<para>An issue with information on the specific problem encountered is logged if a <computeroutput>nullptr</computeroutput> is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> representing the identifier of the reset with reset value id to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref> on success otherwise <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="522" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a19ef056ddd383f20dbb57bf67f36df58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a329055beefacf51332628055453f390a" kindref="member">ResetPtr</ref></type>
+        <definition>ResetPtr libcellml::Annotator::resetValue</definition>
+        <argsstring>(const std::string &amp;id, size_t index)</argsstring>
+        <name>resetValue</name>
+        <qualifiedname>libcellml::Annotator::resetValue</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>From a list of items in the stored model with the given <computeroutput>id</computeroutput> string, this method returns a <ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref> in the <computeroutput>index</computeroutput> position, if it exists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>From a list of all items with the given <computeroutput>id</computeroutput> return the <ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref> at that location.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Annotator_1a798a95bde9e802a21c31373189d5fd9c" kindref="member">component(const std::string &amp;, size_t)</ref> for times when a <computeroutput>nullptr</computeroutput> is returned.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> representing the identifier of the item to retrieve. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position of an item within the list of items with the given <computeroutput>id</computeroutput> to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref> on success otherwise <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="537" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a5e8e459cab6db01a8dd3508986a667eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Annotator::assignAllIds</definition>
+        <argsstring>()</argsstring>
+        <name>assignAllIds</name>
+        <qualifiedname>libcellml::Annotator::assignAllIds</qualifiedname>
+        <briefdescription>
+<para>Assign an identifier to every item without one in the model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Assign an identifier to every item in the model which do not already have an identifier assigned. Newly assigned identifiers will be unique within the model. No identifiers will be added to MathML items.</para>
+<para>Existing identifiers will not be changed.</para>
+<para>Returns <computeroutput>true</computeroutput> if at least one identifier was assigned, <computeroutput>false</computeroutput> otherwise.</para>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if any identifiers have been changed, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="552" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1af3a8265b49e7b6e1dd32d3fcffc1748d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Annotator::assignAllIds</definition>
+        <argsstring>(ModelPtr &amp;model)</argsstring>
+        <name>assignAllIds</name>
+        <qualifiedname>libcellml::Annotator::assignAllIds</qualifiedname>
+        <param>
+          <type><ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref> &amp;</type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+<para>Assign an identifier to every item without one in the given <computeroutput>model</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Assign a unique, automatic identifier to every item in the given <computeroutput>model</computeroutput>, excluding its MathML items.</para>
+<para>Existing identifiers will not be changed.</para>
+<para>The given <computeroutput>model</computeroutput> replaces any previously stored in this annotator.</para>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref> to which identifiers will be assigned.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if any identifiers have been changed, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="570" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1aea2b3baafbf486f6d6fb15a43060734e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Annotator::assignIds</definition>
+        <argsstring>(CellmlElementType type)</argsstring>
+        <name>assignIds</name>
+        <qualifiedname>libcellml::Annotator::assignIds</qualifiedname>
+        <param>
+          <type><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Assign an identifier string to every item of the given <computeroutput>type</computeroutput> in the model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Assign an identifier string to every item of the given <computeroutput>type</computeroutput> in the model. Returns <computeroutput>true</computeroutput> if at least one identifier was assigned, <computeroutput>false</computeroutput> otherwise.</para>
+<para>Existing identifiers will not be changed.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Items of this <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref> will all be assigned a new identifier.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if any identifiers have been changed, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="584" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a683eb9fe935720841936025f9dcdcc1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Annotator::clearAllIds</definition>
+        <argsstring>()</argsstring>
+        <name>clearAllIds</name>
+        <qualifiedname>libcellml::Annotator::clearAllIds</qualifiedname>
+        <briefdescription>
+<para>Clear all identifiers from the model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clear all identifiers from all items in the stored model. Does nothing if there is no model. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="592" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1ad7ec62fb8da9151d6c070ec7ed712e80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Annotator::clearAllIds</definition>
+        <argsstring>(ModelPtr &amp;model)</argsstring>
+        <name>clearAllIds</name>
+        <qualifiedname>libcellml::Annotator::clearAllIds</qualifiedname>
+        <param>
+          <type><ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref> &amp;</type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+<para>Clear all identifiers from all items in the given <computeroutput>model</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clear all identifiers from the <computeroutput>model</computeroutput>. The given <computeroutput>model</computeroutput> will replace any model currently stored in this annotator.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="602" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1ab943ebd9b9c6c79ed4eb5c49d7444d37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Annotator::isUnique</definition>
+        <argsstring>(const std::string &amp;id)</argsstring>
+        <name>isUnique</name>
+        <qualifiedname>libcellml::Annotator::isUnique</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Test whether the given <computeroutput>id</computeroutput> exists uniquely within the stored model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Test whether the given <computeroutput>id</computeroutput> exists uniquely within the stored model.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> to test for uniqueness amongst the set of identifiers in the stored model.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the <computeroutput>id</computeroutput> exists exactly once, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="613" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a83a86869e393efc48c83d13bce2008f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="namespacelibcellml_1adfe61184a6b1f01266643d95352af87c" kindref="member">AnyCellmlElementPtr</ref> &gt;</type>
+        <definition>std::vector&lt; AnyCellmlElementPtr &gt; libcellml::Annotator::items</definition>
+        <argsstring>(const std::string &amp;id)</argsstring>
+        <name>items</name>
+        <qualifiedname>libcellml::Annotator::items</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Return a <computeroutput>std::vector</computeroutput> of <ref refid="classlibcellml_1_1AnyCellmlElement" kindref="compound">AnyCellmlElement</ref> items which have the given <computeroutput>id</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return all items with the given <computeroutput>id</computeroutput>.</para>
+<para>The annotator requires a model to be set with <ref refid="classlibcellml_1_1Annotator_1a07028637ed7a556f42285e5d6ac2e54a" kindref="member">setModel(const ModelPtr &amp;)</ref> before this method can be called successfully.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> used to identify the items to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a <computeroutput>std::vector</computeroutput> of <ref refid="classlibcellml_1_1AnyCellmlElement" kindref="compound">AnyCellmlElement</ref> items. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="627" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1aa023607e8579a929fa6dd1f9530283af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; libcellml::Annotator::ids</definition>
+        <argsstring>()</argsstring>
+        <name>ids</name>
+        <qualifiedname>libcellml::Annotator::ids</qualifiedname>
+        <briefdescription>
+<para>Return a <computeroutput>std::vector</computeroutput> of <computeroutput>std::strings</computeroutput> representing all identifier strings in the stored model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return all identifiers in the stored model.</para>
+<para>The annotator requires a model to be set with <ref refid="classlibcellml_1_1Annotator_1a07028637ed7a556f42285e5d6ac2e54a" kindref="member">setModel(const ModelPtr &amp;)</ref> before this method can be called successfully.</para>
+<para><simplesect kind="return"><para>a <computeroutput>std::vector</computeroutput> of <computeroutput>std::strings</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="640" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a5ff67de28d34913892870ed413bf9582" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; libcellml::Annotator::duplicateIds</definition>
+        <argsstring>()</argsstring>
+        <name>duplicateIds</name>
+        <qualifiedname>libcellml::Annotator::duplicateIds</qualifiedname>
+        <briefdescription>
+<para>Return a <computeroutput>std::vector</computeroutput> of <computeroutput>std::strings</computeroutput> representing any duplicated identifier string in the stored model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return all duplicated identifiers in the stored model.</para>
+<para>The annotator requires a model to be set with <ref refid="classlibcellml_1_1Annotator_1a07028637ed7a556f42285e5d6ac2e54a" kindref="member">setModel(const ModelPtr &amp;)</ref> before this method can be called successfully.</para>
+<para><simplesect kind="return"><para>a <computeroutput>std::vector</computeroutput> of <computeroutput>std::string</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="653" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1ad897960acdbe190adbfa993854509181" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Annotator::assignId</definition>
+        <argsstring>(const AnyCellmlElementPtr &amp;item)</argsstring>
+        <name>assignId</name>
+        <qualifiedname>libcellml::Annotator::assignId</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1adfe61184a6b1f01266643d95352af87c" kindref="member">AnyCellmlElementPtr</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Assign an automatically generated, unique identifier to the given <computeroutput>item</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Assign an automatically generated, unique identifier to the given <computeroutput>item</computeroutput>. This method will return the new identifier that has been assigned, or an empty string if the operation failed.</para>
+<para>An identifier will not be assigned if:<itemizedlist>
+<listitem><para>no model has been stored in this annotator;</para>
+</listitem><listitem><para>the given <computeroutput>item</computeroutput> is not a member of the stored model; or</para>
+</listitem><listitem><para>the given <computeroutput>item</computeroutput> is <computeroutput>nullptr</computeroutput>.</para>
+</listitem></itemizedlist>
+</para>
+<para>Refer to <ref refid="classlibcellml_1_1Logger_1a6bb9f053eb4f1b743167b84bbf5e9b34" kindref="member">errorCount()</ref> and/or <ref refid="classlibcellml_1_1Logger_1a5a260a645de3be9ffb844ce3f7584c4f" kindref="member">error(size_t index) const </ref>for any issues that may have been raised.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An <ref refid="classlibcellml_1_1AnyCellmlElement" kindref="compound">AnyCellmlElement</ref> item to which the new identifier will be assigned.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the new identifier string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="673" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a997be3da2e89e5f519e18b4b878af5df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Annotator::assignId</definition>
+        <argsstring>(const ModelPtr &amp;model, CellmlElementType type=CellmlElementType::MODEL)</argsstring>
+        <name>assignId</name>
+        <qualifiedname>libcellml::Annotator::assignId</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref> &amp;</type>
+          <declname>model</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref></type>
+          <declname>type</declname>
+          <defval><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074eda7a03bac2692f8d17e2cda1b0721ffd0e" kindref="member">CellmlElementType::MODEL</ref></defval>
+        </param>
+        <briefdescription>
+<para>Assign an automatically generated, unique identifier to the given <computeroutput>model</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Assign an automatically generated, unique identifier to the given <computeroutput>model</computeroutput>. The default is to assign an identifier to a MODEL item. This method will return the new identifier that has been assigned, or an empty string if the operation failed.</para>
+<para>Only <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074eda7a03bac2692f8d17e2cda1b0721ffd0e" kindref="member">CellmlElementType::MODEL</ref> and <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074edafd13f0fb2a51f37b5400adc084e3f006" kindref="member">CellmlElementType::ENCAPSULATION</ref> are relevant any other <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref> type will not assign an identifier.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Annotator_1ad897960acdbe190adbfa993854509181" kindref="member">assignId(const AnyCellmlElementPtr &amp;item)</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref> model to which the new identifier will be assigned. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref> enumeration.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the new identifier string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="695" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a627c71c110d625c7603c65087dbe28f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Annotator::assignId</definition>
+        <argsstring>(const ComponentPtr &amp;component, CellmlElementType type=CellmlElementType::COMPONENT)</argsstring>
+        <name>assignId</name>
+        <qualifiedname>libcellml::Annotator::assignId</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref> &amp;</type>
+          <declname>component</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref></type>
+          <declname>type</declname>
+          <defval><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074eda7fc67f9f99bcdc7656908ef20801d05b" kindref="member">CellmlElementType::COMPONENT</ref></defval>
+        </param>
+        <briefdescription>
+<para>Assign an automatically generated, unique identifier to the given <computeroutput>component</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Assign an automatically generated, unique identifier to the given <computeroutput>component</computeroutput>. The default is to assign an identifier to a COMPONENT item. This method will return the new identifier that has been assigned, or an empty string if the operation failed.</para>
+<para>Only <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074eda7fc67f9f99bcdc7656908ef20801d05b" kindref="member">CellmlElementType::COMPONENT</ref> and <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074edac418c4d53f4b4355f2ca8477f6cea146" kindref="member">CellmlElementType::COMPONENT_REF</ref> are relevant any other <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref> type will not assign an identifier.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Annotator_1ad897960acdbe190adbfa993854509181" kindref="member">assignId(const AnyCellmlElementPtr &amp;item)</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>component</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref> item. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref> enumeration.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the new identifier string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="717" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a96205d7a74c0265cfb7c2fd2a6861f09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Annotator::assignId</definition>
+        <argsstring>(const ImportSourcePtr &amp;importSource)</argsstring>
+        <name>assignId</name>
+        <qualifiedname>libcellml::Annotator::assignId</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1ac2c4e6d1793d7214616c1548d8a9f502" kindref="member">ImportSourcePtr</ref> &amp;</type>
+          <declname>importSource</declname>
+        </param>
+        <briefdescription>
+<para>Assign an automatically generated, unique identifier to the given <computeroutput>importSource</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Assign an automatically generated, unique identifier to the given <computeroutput>importSource</computeroutput>. This method will return the new identifier that has been assigned, or an empty string if the operation failed.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Annotator_1ad897960acdbe190adbfa993854509181" kindref="member">assignId(const AnyCellmlElementPtr &amp;item)</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>importSource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An <ref refid="namespacelibcellml_1ac2c4e6d1793d7214616c1548d8a9f502" kindref="member">ImportSourcePtr</ref> to which the new identifier will be assigned.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the new identifier string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="734" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a6793cf9186c1833944525cb4d9a5bd6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Annotator::assignId</definition>
+        <argsstring>(const ResetPtr &amp;reset, CellmlElementType type=CellmlElementType::RESET)</argsstring>
+        <name>assignId</name>
+        <qualifiedname>libcellml::Annotator::assignId</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a329055beefacf51332628055453f390a" kindref="member">ResetPtr</ref> &amp;</type>
+          <declname>reset</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref></type>
+          <declname>type</declname>
+          <defval><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074edab5859d8721cfdc0312b2838b9c985bc1" kindref="member">CellmlElementType::RESET</ref></defval>
+        </param>
+        <briefdescription>
+<para>Assign an automatically generated, unique identifier of the associated <computeroutput>type</computeroutput> to the given <computeroutput>reset</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Assign an automatically generated, unique identifier of the associated <computeroutput>type</computeroutput> to the given <computeroutput>reset</computeroutput>. The default is to assign an identifier to a RESET item. This method will return the new identifier that has been assigned, or an empty string if the operation failed.</para>
+<para>Only <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074edab5859d8721cfdc0312b2838b9c985bc1" kindref="member">CellmlElementType::RESET</ref>, <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074eda6020a61a6aa805b4dd2d5e7c65c6a0ec" kindref="member">CellmlElementType::RESET_VALUE</ref>, and <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074eda58d625895eda77c879740a1b858cc5b5" kindref="member">CellmlElementType::TEST_VALUE</ref> are relevant any other <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref> type will not assign an identifier.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Annotator_1ad897960acdbe190adbfa993854509181" kindref="member">assignId(const AnyCellmlElementPtr &amp;item)</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="namespacelibcellml_1a329055beefacf51332628055453f390a" kindref="member">ResetPtr</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref> enumeration.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the new identifier string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="756" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a8b6e871e41a9385f205d55fd2ec44791" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Annotator::assignId</definition>
+        <argsstring>(const UnitsPtr &amp;units)</argsstring>
+        <name>assignId</name>
+        <qualifiedname>libcellml::Annotator::assignId</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a3259debe09f915678b203e98100ea10a" kindref="member">UnitsPtr</ref> &amp;</type>
+          <declname>units</declname>
+        </param>
+        <briefdescription>
+<para>Assign an automatically generated, unique identifier to the given <computeroutput>units</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Assign an automatically generated, unique identifier to the given <computeroutput>units</computeroutput>. This method will return the new identifier that has been assigned, or an empty string if the operation failed.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Annotator_1ad897960acdbe190adbfa993854509181" kindref="member">assignId(const AnyCellmlElementPtr &amp;item)</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>units</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="namespacelibcellml_1a3259debe09f915678b203e98100ea10a" kindref="member">UnitsPtr</ref> item to which the new identifier is assigned.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the new identifier string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="773" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a8364ee740fd3e14f240bf982ac16a5ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Annotator::assignId</definition>
+        <argsstring>(const UnitsItemPtr &amp;unitsItem)</argsstring>
+        <name>assignId</name>
+        <qualifiedname>libcellml::Annotator::assignId</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a29f1c2968e2baea904984ba46c9032b0" kindref="member">UnitsItemPtr</ref> &amp;</type>
+          <declname>unitsItem</declname>
+        </param>
+        <briefdescription>
+<para>Assign an automatically generated, unique identifier to the given <computeroutput>unitsItem</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Assign an automatically generated, unique identifier to the given <computeroutput>unitsItem</computeroutput>. This method will return the new identifier that has been assigned, or an empty string if the operation failed.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Annotator_1ad897960acdbe190adbfa993854509181" kindref="member">assignId(const AnyCellmlElementPtr &amp;item)</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>unitsItem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="classlibcellml_1_1UnitsItem" kindref="compound">UnitsItem</ref> to which the new identifier is assigned.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the new identifier string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="790" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a4df85f0bfa3074ed18aa040013eb15fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Annotator::assignId</definition>
+        <argsstring>(const VariablePtr &amp;variable)</argsstring>
+        <name>assignId</name>
+        <qualifiedname>libcellml::Annotator::assignId</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable</declname>
+        </param>
+        <briefdescription>
+<para>Assign an automatically generated, unique identifier to the given <computeroutput>variable</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Assign an automatically generated, unique identifier to the given <computeroutput>variable</computeroutput>. This method will return the new identifier that has been assigned, or an empty string if the operation failed.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Annotator_1ad897960acdbe190adbfa993854509181" kindref="member">assignId(const AnyCellmlElementPtr &amp;item)</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>variable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref> item to which the new identifier is assigned.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the new identifier string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="807" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a25ab372a7ab0b069755cc289587fe2a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Annotator::assignId</definition>
+        <argsstring>(const VariablePairPtr &amp;pair, CellmlElementType type=CellmlElementType::MAP_VARIABLES)</argsstring>
+        <name>assignId</name>
+        <qualifiedname>libcellml::Annotator::assignId</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a6b568d1251dec59e864e6ea189da9320" kindref="member">VariablePairPtr</ref> &amp;</type>
+          <declname>pair</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref></type>
+          <declname>type</declname>
+          <defval><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074edaa23c1199c2fc87cba82b7303c0ce5e5c" kindref="member">CellmlElementType::MAP_VARIABLES</ref></defval>
+        </param>
+        <briefdescription>
+<para>Assign an automatically generated, unique identifier to the associated <computeroutput>type</computeroutput> for the given <computeroutput>pair</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Assign an automatically generated, unique identifier to the associated <computeroutput>type</computeroutput> for the given <computeroutput>pair</computeroutput>. The default is to assign an identifier to a MAP_VARIABLES item. This method will return the new identifier that has been assigned, or an empty string if the operation failed.</para>
+<para>Only <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074edaa23c1199c2fc87cba82b7303c0ce5e5c" kindref="member">CellmlElementType::MAP_VARIABLES</ref>, and <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074edaf877da16e0c12743466e4059018d0d98" kindref="member">CellmlElementType::CONNECTION</ref> are relevant any other <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref> type will not assign an identifier.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Annotator_1ad897960acdbe190adbfa993854509181" kindref="member">assignId(const AnyCellmlElementPtr &amp;item)</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pair</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="classlibcellml_1_1VariablePair" kindref="compound">VariablePair</ref> item. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref> enumeration.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the new identifier string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="829" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a85843a3b0ca8b895949f1e4ac67efd3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Annotator::assignId</definition>
+        <argsstring>(const VariablePtr &amp;variable1, const VariablePtr &amp;variable2, CellmlElementType type=CellmlElementType::MAP_VARIABLES)</argsstring>
+        <name>assignId</name>
+        <qualifiedname>libcellml::Annotator::assignId</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> &amp;</type>
+          <declname>variable2</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref></type>
+          <declname>type</declname>
+          <defval><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074edaa23c1199c2fc87cba82b7303c0ce5e5c" kindref="member">CellmlElementType::MAP_VARIABLES</ref></defval>
+        </param>
+        <briefdescription>
+<para>Assign an automatically generated, unique identifier to the item of type <computeroutput>type</computeroutput> which exists between <computeroutput>item1</computeroutput> and <computeroutput>item2</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>This method will return the new identifier that has been assigned, or an empty string if the operation failed. The default is to assign an identifier to a MAP_VARIABLES item.</para>
+<para>Only <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074edaa23c1199c2fc87cba82b7303c0ce5e5c" kindref="member">CellmlElementType::MAP_VARIABLES</ref>, and <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074edaf877da16e0c12743466e4059018d0d98" kindref="member">CellmlElementType::CONNECTION</ref> are relevant any other <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref> type will not assign an identifier.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Annotator_1ad897960acdbe190adbfa993854509181" kindref="member">assignId(const AnyCellmlElementPtr &amp;item)</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>variable1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> defining the first variable in an equivalence. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>variable2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref> defining the second variable in an equivalence. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref> enumeration.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the new identifier string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="852" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a4c00a2fc96ab70721ba2e9625a622a39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Annotator::assignId</definition>
+        <argsstring>(const UnitsPtr &amp;units, size_t index)</argsstring>
+        <name>assignId</name>
+        <qualifiedname>libcellml::Annotator::assignId</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a3259debe09f915678b203e98100ea10a" kindref="member">UnitsPtr</ref> &amp;</type>
+          <declname>units</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Assign an automatically generated, unique identifier to the unit item at index <computeroutput>index</computeroutput> within units <computeroutput>units</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</para>
+<para>Assign an automatically generated, unique identifier to the unit item at index <computeroutput>index</computeroutput> within units <computeroutput>units</computeroutput>. This method will return the new identifier that has been assigned, or an empty string if the operation failed.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Annotator_1ad897960acdbe190adbfa993854509181" kindref="member">assignId(const AnyCellmlElementPtr &amp;item)</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>units</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref> containing the child unit item. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index at which the child unit exists within the parent <computeroutput>units</computeroutput> item.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the new identifier string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="872" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1a9ef0f192ed065ea6415c08c11464a022" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::Annotator::itemCount</definition>
+        <argsstring>(const std::string &amp;id)</argsstring>
+        <name>itemCount</name>
+        <qualifiedname>libcellml::Annotator::itemCount</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Get the number of items with the given <computeroutput>id</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the number of items with the given <computeroutput>id</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>std::string</computeroutput> for the identifier to find.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the number of items with the given <computeroutput>id</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="883" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Annotator_1ad783940f1ed34cd5b18d03fd879b2445" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Annotator::hasModel</definition>
+        <argsstring>() const</argsstring>
+        <name>hasModel</name>
+        <qualifiedname>libcellml::Annotator::hasModel</qualifiedname>
+        <briefdescription>
+<para>Test whether the annotator has a stored model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Test whether the annotator has a stored model.</para>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if the annotator has a model, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/annotator.h" line="892" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classlibcellml_1_1Annotator" kindref="compound">Annotator</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classlibcellml_1_1Annotator" kindref="compound">Annotator</ref> class is for representing a CellML <ref refid="classlibcellml_1_1Annotator" kindref="compound">Annotator</ref>. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>libcellml::Annotator</label>
+        <link refid="classlibcellml_1_1Annotator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>libcellml::Logger</label>
+        <link refid="classlibcellml_1_1Logger"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>libcellml::Annotator</label>
+        <link refid="classlibcellml_1_1Annotator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>libcellml::Logger</label>
+        <link refid="classlibcellml_1_1Logger"/>
+      </node>
+    </collaborationgraph>
+    <location file="libcellml/annotator.h" line="32" column="1" bodyfile="libcellml/annotator.h" bodystart="33" bodyend="901"/>
+    <listofallmembers>
+      <member refid="classlibcellml_1_1Annotator_1a55a59dea98dfee045f251e3cd40a6f46" prot="private" virt="non-virtual"><scope>libcellml::Annotator</scope><name>Annotator</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a0ca81c148be7233bd20bb19557300d80" prot="private" virt="non-virtual"><scope>libcellml::Annotator</scope><name>Annotator</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a33d7676783f6f81adbed8a2135921fa2" prot="private" virt="non-virtual"><scope>libcellml::Annotator</scope><name>Annotator</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a5e8e459cab6db01a8dd3508986a667eb" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>assignAllIds</name></member>
+      <member refid="classlibcellml_1_1Annotator_1af3a8265b49e7b6e1dd32d3fcffc1748d" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>assignAllIds</name></member>
+      <member refid="classlibcellml_1_1Annotator_1ad897960acdbe190adbfa993854509181" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>assignId</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a997be3da2e89e5f519e18b4b878af5df" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>assignId</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a627c71c110d625c7603c65087dbe28f8" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>assignId</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a96205d7a74c0265cfb7c2fd2a6861f09" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>assignId</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a6793cf9186c1833944525cb4d9a5bd6c" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>assignId</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a8b6e871e41a9385f205d55fd2ec44791" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>assignId</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a8364ee740fd3e14f240bf982ac16a5ea" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>assignId</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a4df85f0bfa3074ed18aa040013eb15fa" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>assignId</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a25ab372a7ab0b069755cc289587fe2a6" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>assignId</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a85843a3b0ca8b895949f1e4ac67efd3f" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>assignId</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a4c00a2fc96ab70721ba2e9625a622a39" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>assignId</name></member>
+      <member refid="classlibcellml_1_1Annotator_1aea2b3baafbf486f6d6fb15a43060734e" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>assignIds</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a683eb9fe935720841936025f9dcdcc1f" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>clearAllIds</name></member>
+      <member refid="classlibcellml_1_1Annotator_1ad7ec62fb8da9151d6c070ec7ed712e80" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>clearAllIds</name></member>
+      <member refid="classlibcellml_1_1Annotator_1ab18b13332bcb08463615a7f9b6f1830e" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>component</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a798a95bde9e802a21c31373189d5fd9c" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>component</name></member>
+      <member refid="classlibcellml_1_1Annotator_1ae9e682b5598c1329f6d15782dd30497c" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>componentEncapsulation</name></member>
+      <member refid="classlibcellml_1_1Annotator_1af2356316bc1822b158a51e56dfa893ee" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>componentEncapsulation</name></member>
+      <member refid="classlibcellml_1_1Annotator_1ad4481ac795febfabcc51d24547a4d766" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>connection</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a6feb764fc11fce3dc6ba6b69f73b298e" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>connection</name></member>
+      <member refid="classlibcellml_1_1Annotator_1ad6bec1cd4eaddfd27152eda74db6e853" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>create</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a5ff67de28d34913892870ed413bf9582" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>duplicateIds</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a01391411e9ed1ff30d2a0c816b070c30" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>encapsulation</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a9a273d267ed816e57b839d3f1978f244" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>encapsulation</name></member>
+      <member refid="classlibcellml_1_1Logger_1a5a260a645de3be9ffb844ce3f7584c4f" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>error</name></member>
+      <member refid="classlibcellml_1_1Logger_1a6bb9f053eb4f1b743167b84bbf5e9b34" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>errorCount</name></member>
+      <member refid="classlibcellml_1_1Annotator_1ad783940f1ed34cd5b18d03fd879b2445" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>hasModel</name></member>
+      <member refid="classlibcellml_1_1Annotator_1aa023607e8579a929fa6dd1f9530283af" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>ids</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a325e2798614de441a256f8716f8ae684" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>importSource</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a0a8f6cf1829cf663ad5b1810288e2270" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>importSource</name></member>
+      <member refid="classlibcellml_1_1Logger_1a192650ae59ea8747feb6c4f09de6a389" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>issue</name></member>
+      <member refid="classlibcellml_1_1Logger_1a3c078e9502a10748ade938374faef6d9" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>issueCount</name></member>
+      <member refid="classlibcellml_1_1Annotator_1ab943ebd9b9c6c79ed4eb5c49d7444d37" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>isUnique</name></member>
+      <member refid="classlibcellml_1_1Annotator_1af02e7830260850c7f46024690f78031a" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>item</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a6c6e162ebf2ce54c0e77b54d7aa79621" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>item</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a9ef0f192ed065ea6415c08c11464a022" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>itemCount</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a83a86869e393efc48c83d13bce2008f5" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>items</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a62968cc69a09f89028b29e30360e6c68" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>mapVariables</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a6d30c942327c7edc9ce62f579d1cc4f6" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>mapVariables</name></member>
+      <member refid="classlibcellml_1_1Logger_1a866117b4f6589724a2fd01f88e56d66f" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>message</name></member>
+      <member refid="classlibcellml_1_1Logger_1a05e6f7de0ed9a88611d3c9749e3dbd21" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>messageCount</name></member>
+      <member refid="classlibcellml_1_1Annotator_1aec28f90c2593cfd69fec7ab6dcf72ec0" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>model</name></member>
+      <member refid="classlibcellml_1_1Annotator_1ab8363f4efdcabe777ebbdd48ec99e91c" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>model</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a4d48b559128a64ccc349b8bfdc65d95a" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>model</name></member>
+      <member refid="classlibcellml_1_1Annotator_1ab57d0676125b35bc3ab28197cfdf328f" prot="private" virt="non-virtual"><scope>libcellml::Annotator</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a4faec2f8402cec6aa852525d36817c5c" prot="private" virt="non-virtual"><scope>libcellml::Annotator</scope><name>pFunc</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a962caded4a0c943b19281f7d554e0621" prot="private" virt="non-virtual"><scope>libcellml::Annotator</scope><name>pFunc</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a642764f00ac7f0b1b446c54b48bc8fd2" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>reset</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a85f64818bb13f04c826904f24d95a6dd" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>reset</name></member>
+      <member refid="classlibcellml_1_1Annotator_1ac996359845dabb2745608c51e30fe8f8" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>resetValue</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a19ef056ddd383f20dbb57bf67f36df58" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>resetValue</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a07028637ed7a556f42285e5d6ac2e54a" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>setModel</name></member>
+      <member refid="classlibcellml_1_1Annotator_1acf61e51f1dfe594e903d289517fbcadf" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>testValue</name></member>
+      <member refid="classlibcellml_1_1Annotator_1ab1ec981988820d9c3b350aea4c04b928" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>testValue</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a9f6ad7662e9a7755dc0fb409a4cf1fbb" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>units</name></member>
+      <member refid="classlibcellml_1_1Annotator_1aebf1bae9d6682d33d3eb7b981081d27d" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>units</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a31fec2d3b24b81171669b1b30324a01f" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>unitsItem</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a917f5c9d2bf02873a6c08fdb0940c8e3" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>unitsItem</name></member>
+      <member refid="classlibcellml_1_1Annotator_1acb1b0523e3291d988f2a24326d310332" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>variable</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a4410ce2b5842315e1efef1dcbb393871" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>variable</name></member>
+      <member refid="classlibcellml_1_1Logger_1a610d4878881567899c6d47db5e625736" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>warning</name></member>
+      <member refid="classlibcellml_1_1Logger_1a6973054ad6d00d9bb6d2bfb488cdfebd" prot="public" virt="non-virtual"><scope>libcellml::Annotator</scope><name>warningCount</name></member>
+      <member refid="classlibcellml_1_1Annotator_1a37473a58d00d056be8c8fd21e3c030f8" prot="private" virt="non-virtual"><scope>libcellml::Annotator</scope><name>~Annotator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
