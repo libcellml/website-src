@@ -1,0 +1,327 @@
+<document xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/" xmlns:todo="https://www.sphinx-doc.org/" source="/Users/libcellml/BuildbotWorker/Finalise_Release_Builder/src/docs/setup.rst">
+    <target refid="setup"/>
+    <section ids="development-setup setup" names="development\ setup setup">
+        <title>Development setup</title>
+        <paragraph>This section describes how someone wanting to contribute to the libCellML project should set up their <emphasis>working copy</emphasis> for developing libCellML.</paragraph>
+        <section ids="overview" names="overview">
+            <title>Overview</title>
+            <paragraph>The libCellML codebase is hosted on <reference internal="False" refuri="https://github.com/">Github</reference> and therefore <reference internal="False" refuri="https://git-scm.com/">Git</reference> is used to track changes. Before you begin, you will need to have a few pre-requisites satisfied:</paragraph>
+            <container classes="shortlist">
+                <enumerated_list enumtype="arabic" prefix="" suffix=".">
+                    <list_item>
+                        <paragraph><reference internal="False" refuri="https://github.com/">Github</reference> user account (for the rest of this document we will call our user <emphasis>andre</emphasis>);</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph><reference internal="False" refuri="https://git-scm.com/">Git</reference> for tracking changes in code;</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph><reference internal="False" refuri="https://cmake.org/">CMake</reference> to configure the build files;</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Toolchain for building the library (dependent on the operating system);</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph><reference internal="False" refuri="http://xmlsoft.org/">libxml2</reference>, an external library used to parse XML;</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph><reference internal="False" refuri="https://www.zlib.net/">zlib</reference>, an external library used for compression; and</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph><reference internal="False" refuri="http://www.doxygen.nl/">Doxygen</reference> to generate documentation.</paragraph>
+                    </list_item>
+                </enumerated_list>
+            </container>
+            <paragraph>If Python bindings are required, the following packages are also needed:</paragraph>
+            <container classes="shortlist">
+                <enumerated_list enumtype="loweralpha" prefix="" suffix=".">
+                    <list_item>
+                        <paragraph><reference internal="False" refuri="https://www.python.org/">Python</reference> Version 3.5.2 or later is needed for Sphinx (see below)</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph><reference internal="False" refuri="http://swig.org">SWIG</reference> to generate the bindings for Python</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph><reference internal="False" refuri="http://www.sphinx-doc.org/en/master/">Sphinx</reference> to generate documentation for Python bindings</paragraph>
+                    </list_item>
+                </enumerated_list>
+            </container>
+        </section>
+        <section ids="pre-requisite-acquisition" names="pre-requisite\ acquisition">
+            <title>Pre-requisite acquisition</title>
+            <paragraph>In this section, we cover the retrieval and installation of pre-requisites.</paragraph>
+            <target refid="setup-git"/>
+            <section ids="git setup-git" names="git setup_git">
+                <title>Git</title>
+                <paragraph>Creating a <reference internal="False" refuri="https://github.com/">Github</reference> user account is straightforward and can be done on the <reference internal="False" refuri="https://github.com//join">Github sign-up page</reference>.
+                    Installing a Git client is particular to each operating system and some pointers are offered below:</paragraph>
+                <bullet_list bullet="-">
+                    <list_item>
+                        <paragraph><strong>Windows</strong> Git is available from a variety of vendors.
+                            We commonly use <reference name="Git for windows" refuri="http://gitforwindows.org/">Git for windows</reference>, but other popular implementations are:
+                            - <reference name="GitHub Desktop" refuri="https://desktop.github.com/">GitHub Desktop</reference>
+                            - <reference name="GitKracken" refuri="https://www.gitkraken.com/">GitKracken</reference>
+                            - <reference name="Git SCM" refuri="https://git-scm.com/">Git SCM</reference></paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph><strong>Linux</strong> Git can be installed using the package manager with the command <literal classes="code" language="">sudo apt-get install git</literal>.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph><strong>macOS</strong> Git is pre-installed and available from the command line.</paragraph>
+                    </list_item>
+                </bullet_list>
+                <target refid="setup-cmake"/>
+            </section>
+            <section ids="cmake setup-cmake" names="cmake setup_cmake">
+                <title>CMake</title>
+                <paragraph><reference internal="False" refuri="https://cmake.org/">CMake</reference> is the cross-platform family of tools designed to build, test and package software.
+                    CMake is used to control the software compilation process using simple platform and compiler independent configuration files, and to generate native makefiles and workspaces that can be used in the compiler environment of your choice.
+                    Note that CMake version 3.2 or later is required to configure libCellML.</paragraph>
+                <paragraph>Again, installation of CMake is particular to each operating system.</paragraph>
+                <bullet_list bullet="-">
+                    <list_item>
+                        <paragraph><strong>Windows</strong> CMake provides <reference internal="False" refuri="https://cmake.org//download/">installation binaries</reference> .
+                            Choose the binary appropriate for your operating system and follow the installation instructions.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph><strong>Linux</strong> CMake can be installed using the package manager with the command <literal classes="code" language="">sudo apt-get install cmake</literal>.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph><strong>macOS</strong> CMake provides <reference internal="False" refuri="https://cmake.org//download/">installation binaries</reference> .
+                            Choose the binary appropriate for your operating system and follow the installation instructions.</paragraph>
+                    </list_item>
+                </bullet_list>
+                <target refid="setup-toolchain"/>
+            </section>
+            <section ids="toolchain setup-toolchain" names="toolchain setup_toolchain">
+                <title>Toolchain</title>
+                <paragraph>The toolchain specifies the compiler that we will use to build libCellML.
+                    Toolchains are highly dependent on the operating system.
+                    When we test libCellML, we currently use:</paragraph>
+                <bullet_list bullet="-">
+                    <list_item>
+                        <paragraph><strong>Windows</strong> <reference internal="False" refuri="https://visualstudio.microsoft.com">Microsoft Visual Studio</reference> ;</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph><strong>Linux</strong> <reference internal="False" refuri="https://gcc.gnu.org/">GCC</reference> ; and</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph><strong>macOS</strong> <reference internal="False" refuri="https://clang.llvm.org/">Clang</reference> .</paragraph>
+                    </list_item>
+                </bullet_list>
+                <paragraph>We recommend using these compilers on these systems, but feel free to use a different toolchain.
+                    The following sub-sections provide guidance on how to install the recommended toolchain on the major operating systems that libCellML supports.</paragraph>
+                <bullet_list bullet="-">
+                    <list_item>
+                        <paragraph><strong>Windows</strong> Visual Studio is available to download from <reference internal="False" refuri="https://visualstudio.microsoft.com/downloads/">the MSVS download page</reference>.
+                            We currently test with Visual Studio 2015 (version 14), but later versions are known to work.
+                            The <emphasis>Community</emphasis> edition is more than sufficient for the needs of libCellML.
+                            To minimise the size of the installation, you may install only the C++ compiler.
+                            This component (and its requirements) is sufficient for building libCellML.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph><strong>Linux</strong> TODO</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph><strong>macOS</strong> TODO</paragraph>
+                    </list_item>
+                </bullet_list>
+                <target refid="setup-zlib"/>
+            </section>
+            <section ids="zlib setup-zlib" names="zlib setup_zlib">
+                <title>zlib</title>
+                <paragraph><reference internal="False" refuri="https://www.zlib.net/">zlib</reference> is a common compression library.
+                    It is important to use a 64-bit version of the library as the 32-bit is not compatible with libCellML.</paragraph>
+                <bullet_list bullet="-">
+                    <list_item>
+                        <paragraph><strong>Windows</strong> On Windows, it is easiest to install using the packaged version available from the <reference internal="False" refuri="https://github.com/OpenCMISS-Dependencies/zlib/releases">OpenCMISS zlib releases page</reference> on GitHub.
+                            You are welcome to build your own version if you would rather, but please make sure it is a 64-bit implementation.
+                            To build <reference internal="False" refuri="https://www.zlib.net/">zlib</reference> from source refer to the next sub-section.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph><strong>Linux</strong> For Debian-based systems, zlib can be installed using <literal classes="code" language="">sudo apt install zlib1g-dev</literal>.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph><strong>macOS</strong> zlib is already installed on macOS, so no further action is required on that platform.</paragraph>
+                    </list_item>
+                </bullet_list>
+                <section dupnames="building\ from\ source" ids="building-from-source">
+                    <title>Building from source</title>
+                    <paragraph>To create a zlib library suitable for libCellML, we need to download, configure, build, and install it.</paragraph>
+                    <paragraph>To download zlib, clone the repository <reference refuri="https://github.com/OpenCMISS-Dependencies/zlib">https://github.com/OpenCMISS-Dependencies/zlib</reference>:</paragraph>
+                    <literal_block force="False" language="default" linenos="False" xml:space="preserve">git clone https://github.com/OpenCMISS-Dependencies/zlib -b v1.2.3</literal_block>
+                    <paragraph>Create a build directory and change into it:</paragraph>
+                    <literal_block force="False" language="default" linenos="False" xml:space="preserve">mkdir build-zlib
+cd build-zlib</literal_block>
+                    <paragraph>Create the zlib library build instructions using CMake:</paragraph>
+                    <literal_block force="False" language="default" linenos="False" xml:space="preserve">cmake -DCMAKE_INSTALL_PREFIX=&lt;ZLIB_INSTALL_DIR&gt; ..\zlib</literal_block>
+                    <paragraph>Where <literal classes="code" language="">&lt;ZLIB_INSTALL_DIR&gt;</literal> is to be replaced by a path on your computer.
+                        Something like:</paragraph>
+                    <literal_block force="False" language="default" linenos="False" xml:space="preserve">C:\Users\Andre\libcellml\libraries</literal_block>
+                    <paragraph>if your username was <literal classes="code" language="">Andre</literal>.</paragraph>
+                    <paragraph>We can now build the library with the command:</paragraph>
+                    <literal_block force="False" language="default" linenos="False" xml:space="preserve">cmake --build . --config Release</literal_block>
+                    <paragraph>The last thing we do is to install the library with the command:</paragraph>
+                    <literal_block force="False" language="default" linenos="False" xml:space="preserve">cmake --build . --target install --config Release</literal_block>
+                    <target refid="setup-libxml2"/>
+                </section>
+            </section>
+            <section ids="libxml2 setup-libxml2" names="libxml2 setup_libxml2">
+                <title>libxml2</title>
+                <paragraph><reference internal="False" refuri="http://xmlsoft.org/">libxml2</reference> is a parser and toolkit for manipulating XML files and text.
+                    It is important to use a 64-bit version of the library as the 32-bit is not compatible with libCellML.</paragraph>
+                <bullet_list bullet="-">
+                    <list_item>
+                        <paragraph><strong>Windows</strong> On Windows, it is easiest to install using the packaged version available from the <reference internal="False" refuri="https://github.com/OpenCMISS-Dependencies/libxml2/releases">OpenCMISS libxml2 releases page</reference> on GitHub.
+                            You are welcome to build your own version if you would rather, but please make sure it is a 64-bit implementation.
+                            To build <reference internal="False" refuri="http://xmlsoft.org/">libxml2</reference> from source refer to the next sub-section.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph><strong>Linux</strong> For Debian-based systems, libxml2 can be installed using <literal classes="code" language="">sudo apt install libxml2-dev</literal>.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph><strong>macOS</strong> libxml2 is already installed on macOS, so no further action is required on that platform.</paragraph>
+                    </list_item>
+                </bullet_list>
+                <section dupnames="building\ from\ source" ids="id1">
+                    <title>Building from source</title>
+                    <paragraph>To create a libxml2 library suitable for libCellML, we need to download, configure, build, and install it.
+                        libxml2 can be configured to use zlib, so build and install that first before following these instructions.</paragraph>
+                    <paragraph>To download libxml2, clone the repository <reference refuri="https://github.com/OpenCMISS-Dependencies/libxml2">https://github.com/OpenCMISS-Dependencies/libxml2</reference>:</paragraph>
+                    <literal_block force="False" language="default" linenos="False" xml:space="preserve">git clone https://github.com/OpenCMISS-Dependencies/libxml2 -b v2.9.10</literal_block>
+                    <paragraph>Create a build directory and change into it:</paragraph>
+                    <literal_block force="False" language="default" linenos="False" xml:space="preserve">mkdir build-libxml2
+cd build-libxml2</literal_block>
+                    <paragraph>Create the libxml2 library build instructions using CMake:</paragraph>
+                    <literal_block force="False" language="default" linenos="False" xml:space="preserve">cmake -DCMAKE_PREFIX_PATH=&lt;ZLIB_INSTALL_DIR&gt; -DCMAKE_INSTALL_PREFIX=&lt;LIBXML2_INSTALL_DIR&gt; -DLIBXML2_WITH_DEBUG=OFF -DLIBXML2_WITH_DOCB=OFF -DLIBXML2_WITH_FTP=OFF -DLIBXML2_WITH_ICONV=OFF -DLIBXML2_WITH_ICU=OFF -DLIBXML2_WITH_LZMA=OFF -DLIBXML2_WITH_MEM_DEBUG=OFF -DLIBXML2_WITH_PROGRAMS=OFF -DLIBXML2_WITH_PYTHON=OFF -DLIBXML2_WITH_RUN_DEBUG=OFF -DLIBXML2_WITH_SAX1=OFF -DLIBXML2_WITH_TESTS=OFF ..\libxml2</literal_block>
+                    <paragraph>Where <literal classes="code" language="">&lt;ZLIB_INSTALL_DIR&gt;</literal> is to be replaced by the path on your computer where zlib is installed.
+                        <literal classes="code" language="">&lt;LIBXML2_INSTALL_DIR&gt;</literal> also needs to be replaced by a path on your computer.
+                        Using the same directory that the zlib library is installed to is a good idea.
+                        Following this advice we would set <literal classes="code" language="">&lt;LIBXML2_INSTALL_DIR&gt;</literal> to:</paragraph>
+                    <literal_block force="False" language="default" linenos="False" xml:space="preserve">C:\Users\Andre\libcellml\libraries</literal_block>
+                    <paragraph>and <literal classes="code" language="">&lt;ZLIB_INSTALL_DIR&gt;</literal> would be given the same value.
+                        We can now build the library with the command:</paragraph>
+                    <literal_block force="False" language="default" linenos="False" xml:space="preserve">cmake --build . --config Release</literal_block>
+                    <paragraph>The last thing we do is to install the library with the command:</paragraph>
+                    <literal_block force="False" language="default" linenos="False" xml:space="preserve">cmake --build . --target install --config Release</literal_block>
+                    <target refid="setup-doxygen"/>
+                </section>
+            </section>
+            <section ids="doxygen setup-doxygen" names="doxygen setup_doxygen">
+                <title>Doxygen</title>
+                <paragraph><reference internal="False" refuri="http://www.doxygen.nl/">Doxygen</reference> is software which assembles documentation files directly from annotated source code, including the generation of inheritance and dependency tree diagrams for classes.
+                    In order for libCellML to build its documentation you will need to have Doxygen and its dependencies installed.
+                    Note that this does not affect your use of the libCellML library itself.</paragraph>
+                <bullet_list bullet="-">
+                    <list_item>
+                        <paragraph><strong>Windows</strong> Binary distributions are available from the <reference internal="False" refuri="http://www.doxygen.nl//download.html#srcbin">download page of the Doxygen website</reference>.
+                            You may also need to download and install the Graphviz package in order to generate the class hierarchy diagrams.
+                            You can <reference internal="False" refuri="http://graphviz.org/download/">download Graphviz</reference> from their website.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph><strong>Linux</strong> Binary distributions are available from the <reference internal="False" refuri="http://www.doxygen.nl//download.html#srcbin">download page of the Doxygen website</reference>.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph><strong>macOS</strong> Binary distributions are available from the <reference internal="False" refuri="http://www.doxygen.nl//download.html#srcbin">download page of the Doxygen website</reference>.</paragraph>
+                    </list_item>
+                </bullet_list>
+                <target refid="setup-python"/>
+            </section>
+            <section ids="python-optional setup-python" names="python\ (optional) setup_python">
+                <title>Python (optional)</title>
+                <paragraph><reference internal="False" refuri="https://www.python.org/">Python</reference> is an open-source language which is syntactically easier to read than other higher-level languages.
+                    It is commonly used as a scripting language for experimentation, and is included here to allow libCellML to be accessed from Python-based programs.
+                    Note that creation of Python bindings is optional, and can be enabled/disabled at configuration time - there will be instructions for this on the <reference internal="True" refuri="configure_and_build#configure-and-build"><inline classes="std std-ref">Building LibCellML</inline></reference> page.</paragraph>
+                <bullet_list bullet="-">
+                    <list_item>
+                        <paragraph><strong>Windows</strong> Python binaries for Windows can be found on <reference internal="False" refuri="https://www.python.org//downloads/windows/">the Python download page</reference>, or you can build your own from source files if you prefer.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph><strong>Linux</strong> Linux natively includes Python, but depending on the age of your machine and system installation, you may like to upgrade to a more recent version from the <reference internal="False" refuri="https://www.python.org//downloads/source/">Python download page</reference> .</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph><strong>macOS</strong> Python is already installed, though depending on the age of your machine you may like to upgrade it to a <reference internal="False" refuri="https://www.python.org/downloads/mac-osx/">later version from the Python site</reference> .</paragraph>
+                    </list_item>
+                </bullet_list>
+                <target refid="setup-swig"/>
+            </section>
+            <section ids="swig-for-python-bindings-optional setup-swig" names="swig\ for\ python\ bindings\ (optional) setup_swig">
+                <title>SWIG for Python bindings (optional)</title>
+                <paragraph><reference internal="False" refuri="http://swig.org">SWIG</reference> is a tool which acts as a translator between code written in C++ and other languages, including <reference internal="False" refuri="https://www.python.org/">Python</reference>.
+                    Here SWIG is used to generate the optional Python bindings for libCellML.
+                    The current version (0.9) of libCellML uses SWIG 4.0.0.</paragraph>
+                <bullet_list bullet="-">
+                    <list_item>
+                        <paragraph><strong>Windows</strong> SWIG for Windows is available from the <reference internal="False" refuri="https://sourceforge.net/projects/swig/files/swigwin/">Swigwin download page</reference>.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph><strong>Linux</strong> Both Python and SWIG are already included, so no further action is needed.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph><strong>macOS</strong> SWIG for macOS can be accessed using the <reference internal="False" refuri="http://swig.org/download.html">downloads for Unix/Linux sources</reference> and building them locally according to the instructions provided on that page.</paragraph>
+                    </list_item>
+                </bullet_list>
+                <target refid="setup-sphinx"/>
+            </section>
+            <section ids="sphinx-for-python-documentation-optional setup-sphinx" names="sphinx\ for\ python\ documentation\ (optional) setup_sphinx">
+                <title>Sphinx for Python documentation (optional)</title>
+                <paragraph><reference internal="False" refuri="http://www.sphinx-doc.org/en/master/">Sphinx</reference> is an additional documentation tool used here to assemble documentation of the Python bindings.
+                    Instructions for all operating systems can be found on their <reference internal="False" refuri="http://www.sphinx-doc.org/en/master//usage/installation.html">Installation page</reference>.
+                    The current version (2.0.1) needs Python version 3.5.2 or later (note that Python subversions 3.5.0 and 3.5.1 will still raise an <reference internal="False" refuri="https://github.com/rtfd/readthedocs.org/issues/3812">import error</reference> despite being reported fixed since version Sphinx 1.7.2).</paragraph>
+                <target refid="setup-codebase"/>
+            </section>
+        </section>
+        <section ids="setting-up-the-codebase setup-codebase" names="setting\ up\ the\ codebase setup_codebase">
+            <title>Setting up the codebase</title>
+            <paragraph>The remainder of this document assumes that the above pre-requisites have been met, and covers setup from the command line.
+                If you are using a GUI like <reference internal="False" refuri="https://desktop.github.com/">GitHub Desktop</reference> then you will need to adjust the commands accordingly.</paragraph>
+            <paragraph>The goal here is to get a working copy of source code, tests, and documentation onto your computer so that you can begin development.
+                To make this happen, you will need to fork the <reference internal="True" refuri="glossary#term-prime-libCellML-repository"><inline classes="xref std std-term">prime libCellML repository</inline></reference>, make a clone onto your computer, and set up the Git remotes.
+                In <number_reference internal="True" refid="repository-setup" title="Fig. %s"><inline classes="std std-numref">Fig. 11</inline></number_reference>, you can see a pictorial representation of what we are aiming to achieve.</paragraph>
+            <figure align="center" ids="repository-setup" names="repository_setup">
+                <image alt="Setup of Git repositories." candidates="{'*': 'images/libCellMLProcesses-GitHubRepos.png'}" uri="images/libCellMLProcesses-GitHubRepos.png"/>
+                <caption_number>Fig. 11 </caption_number><caption>How the repositories for development are arranged.</caption>
+            </figure>
+            <paragraph>The four steps to getting set up are detailed below.</paragraph>
+            <section ids="forking-your-own-copy" names="forking\ your\ own\ copy">
+                <title>Forking your own copy</title>
+                <paragraph>Login to Github using your credentials and go to <reference refuri="https://github.com/cellml/libCellML">https://github.com/cellml/libCellML</reference>.</paragraph>
+                <paragraph>Use the fork button to create a libCellML repository under your own account, see <number_reference internal="True" refid="forking-a-repo" title="Fig. %s"><inline classes="std std-numref">Fig. 12</inline></number_reference> for locating this button.</paragraph>
+                <figure align="center" ids="forking-a-repo" names="forking_a_repo">
+                    <image alt="Fork button of libCellML repository." candidates="{'*': 'images/libCellMLProcesses-GitHubForkButton.png'}" uri="images/libCellMLProcesses-GitHubForkButton.png"/>
+                    <caption_number>Fig. 12 </caption_number><caption>Fork button for libCellML repository.</caption>
+                </figure>
+            </section>
+            <section ids="clone" names="clone">
+                <title>Clone</title>
+                <paragraph>You now need to clone the libCellML repository to your computer.
+                    You do this by going to your fork (in this example user <emphasis>andre</emphasis>&#8217;s fork) at <reference refuri="https://github.com/andre/libCellML">https://github.com/andre/libCellML</reference>.</paragraph>
+                <container classes="nb">
+                    <paragraph>Do not try and clone this location!
+                        Substitute your Github username for <emphasis>andre</emphasis>.</paragraph>
+                </container>
+                <paragraph>On the right hand side of the webpage, on your fork of the repository, you can get the link for cloning the repository to your computer, in our example:</paragraph>
+                <literal_block force="False" language="default" linenos="False" xml:space="preserve">https://github.com/andre/libCellML.git</literal_block>
+                <paragraph>Now clone the repository:</paragraph>
+                <literal_block force="False" language="default" linenos="False" xml:space="preserve">cd &lt;somewhere/you/keep/development/code&gt;
+git clone https://github.com/andre/libCellML.git</literal_block>
+                <paragraph>Note: again, do not clone this location; substitute your Github username for <emphasis>andre</emphasis>.</paragraph>
+            </section>
+            <section ids="set-git-remotes" names="set\ git\ remotes">
+                <title>Set Git remotes</title>
+                <paragraph>You now need to setup a read-only remote connection to the <reference internal="True" refuri="glossary#term-prime-libCellML-repository"><inline classes="xref std std-term">prime libCellML repository</inline></reference>.
+                    Given that you are still in the directory where you cloned the libCellML repository from, do the following:</paragraph>
+                <literal_block force="False" language="default" linenos="False" xml:space="preserve">cd libCellML
+git remote add prime https://github.com/cellml/libCellML.git
+git config remote.prime.pushurl "You really did not want to do that!"</literal_block>
+                <paragraph>You have now added a new remote named <literal classes="code" language="">prime</literal> and set origin as the default fetch and push location to point at repositories under your control on Github.
+                    Here, <literal classes="code" language="">prime</literal> is a reference to the main definitive repository where releases are made from for the libCellML project.
+                    You have also set the <literal classes="code" language="">prime</literal> repository as read-only by setting an invalid push URL.</paragraph>
+            </section>
+        </section>
+        <section ids="finally" names="finally">
+            <title>Finally</title>
+            <paragraph>You are all done and ready to start development, read <reference internal="True" refuri="configure_and_build#configure-and-build"><inline classes="std std-ref">Building</inline></reference> on how to build libCellML.
+                Then, read <reference internal="True" refuri="contributing#contributing"><inline classes="std std-ref">Contribution</inline></reference> to get your changes into libCellML&#8217;s prime repository.</paragraph>
+        </section>
+    </section>
+</document>
