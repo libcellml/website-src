@@ -95,9 +95,29 @@
         >Creative Commons Attribution 4.0 International License</a
       >.
     </p>
+    <h3>libcellml.js</h3>
+    <p>
+      The version of libcellml.js that this website is using is:
+      {{ libcellmlVersionString }}
+    </p>
   </div>
 </template>
 
 <script setup>
+import { computed, inject, ref } from 'vue'
+
 import GithubContributors from '../GithubContributors.vue'
+
+const libcellml = ref(null)
+libcellml.value = inject('$libcellml')
+
+const libcellmlVersionString = computed(() => {
+  if (libcellml.value.state === 'loading') {
+    return '[loading libcellml ...]'
+  }
+
+  return libcellml.value.module === undefined
+    ? '<unavailable>'
+    : libcellml.value.module.versionString()
+})
 </script>

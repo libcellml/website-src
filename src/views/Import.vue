@@ -85,16 +85,15 @@ import { downloadFile, downloadFileTitle } from '../js/utilities'
 
 const store = useStore()
 
-const libcellml = ref(null)
 const issueData = ref([])
 const modelFile = ref([])
 const parserFoundErrors = ref(false)
 const downloads = ref([])
 
-libcellml.value = inject('$libcellml')
+const libcellml = inject('$libcellml')
 
 const ableToImportModel = computed(() => {
-  return libcellml.value !== null && modelFile.value.length > 0
+  return libcellml.state === 'ready' && modelFile.value.length > 0
     ? undefined
     : true
 })
@@ -104,8 +103,8 @@ function removeMessage(index) {
 }
 
 function importModel(cellmlString) {
-  let parser = new libcellml.value.Parser()
-  let printer = new libcellml.value.Printer()
+  let parser = new libcellml.module.Parser()
+  let printer = new libcellml.module.Printer()
   let model = null
   try {
     model = parser.parseModel(cellmlString, true)
