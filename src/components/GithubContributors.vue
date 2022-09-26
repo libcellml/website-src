@@ -77,7 +77,7 @@ const repos = [
 
 const store = useStore()
 
-const skipUser = '[bot]'
+const skippedUsers = ['dependabot[bot]', 'abi-git-user']
 
 const userData = ref([])
 const status = ref('error')
@@ -100,7 +100,7 @@ onMounted(() => {
             let index = 0
             for (const v of contributorList) {
               for (const u of v) {
-                if (u.login.includes(skipUser)) {
+                if (skippedUsers.includes(u.login)) {
                   continue
                 } else {
                   const indexOfUser = users.findIndex(
