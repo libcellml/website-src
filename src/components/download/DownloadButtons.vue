@@ -116,11 +116,6 @@ checkDownloadAvailability(latest).then((response) => {
     }
   }
 })
-// for (const version of availableVersions) {
-//   console.log('available version: ', version)
-//   const result = checkDownloadAvailability(version)
-//   console.log(result)
-// }
 
 function onWebAssemblyClicked() {
   const url = 'https://www.npmjs.com/package/libcellml.js'
