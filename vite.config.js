@@ -9,7 +9,7 @@ const path = require('path')
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
-    minify: true
+    minify: true,
   },
   plugins: [
     vue(),
@@ -32,11 +32,16 @@ export default defineConfig({
     },
   },
   server: {
-    // fs: {
+    fs: {
+      // If we are using linked packages (usually used when developing using another
+      // local package) with libraries that need to be loaded,
+      // like libcellml.js, we need to add directories to the allow list.
+      // If we are adding extra paths to the allowed list we also need to add the
+      // defalut path, which is what 'searchForWorkspaceRoot(process.cwd())' does.
       // allow: [
-        // searchForWorkspaceRoot(process.cwd()),
+      // searchForWorkspaceRoot(process.cwd()),
       // ],
-    // },
+    },
   },
   /* remove the need to specify .vue files https://vitejs.dev/config/#resolve-extensions
   resolve: {
