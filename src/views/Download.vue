@@ -1,12 +1,16 @@
 <template>
   <div class="download-view">
-    <download-intro />
-    <download-complete />
+    <h1>Download libCellML</h1>
+    <download-buttons />
+    <h2>Dependencies and requirements</h2>
+    <download-blurb />
+    <h1>Previous libCellML releases</h1>
+    <download-historical />
   </div>
 </template>
 
 <script setup>
-import DownloadIntro from '../components/download/DownloadIntro.vue'
-// import DownloadSummary from '../components/download/DownloadSummary.vue'
-import DownloadComplete from '../components/download/DownloadComplete.vue'
+import DownloadBlurb from '@/components/download/DownloadBlurb.vue'
+import DownloadButtons from '@/components/download/DownloadButtons.vue'
+import DownloadHistorical from '@/components/download/DownloadHistorical.vue'
 </script>
