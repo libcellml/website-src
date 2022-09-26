@@ -654,11 +654,6 @@ klona@^2.0.4:
   resolved "https://registry.yarnpkg.com/klona/-/klona-2.0.5.tgz#d166574d90076395d9963aa7a928fabb8d76afbc"
   integrity sha512-pJiBpiXMbt7dkzXe8Ghj/u4FfXOOa98fPW+bihOJ4SjnoijweJrNThJfd3ifXpXhREjpoF2mZVH1GfS9LV3kHQ==
 
-libcellml.js@^0.2.0-dev.24:
-  version "0.2.0-dev.24"
-  resolved "https://registry.yarnpkg.com/libcellml.js/-/libcellml.js-0.2.0-dev.24.tgz#31fbc9b4d2e2c4036a9d3dfb84ac2b3d06a570ca"
-  integrity sha512-YUepk0f2tCmkagEiMNOCxodXzO1kd/K9ozAeT8xulwoS/5dyNAD6GypSPeG536O9jzyFqG+2BwtUC0tw7ZIjEg==
-
 libcellml.js@^0.3.104:
   version "0.3.104"
   resolved "https://registry.yarnpkg.com/libcellml.js/-/libcellml.js-0.3.104.tgz#b715496b5f3fca1ce2fe8b0ba651f0f7cbfc74c1"
@@ -1058,13 +1053,13 @@ vue3-doxygen-xml@^0.1.0-beta.13:
     vue-router "^4.0.15"
     vuex "^4.0.2"
 
-vue3-libcellml.js@^0.1.0-beta.1:
-  version "0.1.0-beta.1"
-  resolved "https://registry.yarnpkg.com/vue3-libcellml.js/-/vue3-libcellml.js-0.1.0-beta.1.tgz#58e983e48dcec4e5edf0ce15d91608cfe9ed74d9"
-  integrity sha512-gKwx79DkNNBibgRM0+B180fAwrCdmz26izMaf6aSQFYH03Kb0b1j4iqSEJaIAQPOIZEwFi86jKFDjaxsJAwP9g==
+vue3-libcellml.js@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/vue3-libcellml.js/-/vue3-libcellml.js-0.2.0.tgz#5365ebe88441cda867388bbad577c56798e24aed"
+  integrity sha512-fkon7h4x2th7y2uc5hcUJkx2iyrv+olFHstnTvRbsjRzfIF2h8S/ExibrEYPL5wUx8ZXbMfrDnDSoh7i0HOYGw==
   dependencies:
     core-js "^3.8.3"
-    libcellml.js "^0.2.0-dev.24"
+    libcellml.js "^0.3.104"
 
 vue3-sphinx-xml@^0.1.0:
   version "0.1.0"
