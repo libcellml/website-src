@@ -21,7 +21,6 @@
 </template>
 
 <script setup>
-import { defineEmits } from 'vue'
 import { onLearnMoreClicked } from '../js/utilities'
 
 const emit = defineEmits(['dismiss'])
