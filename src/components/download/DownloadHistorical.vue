@@ -4,8 +4,6 @@
       <h2 id="windows-available-versions">Windows</h2>
       <h3>Available versions</h3>
       <version-entries :entries="winOSVersions" />
-      <h3>Requirements</h3>
-      <div>TODO Stuff goes here</div>
     </v-col>
   </v-row>
   <v-row>
@@ -13,8 +11,6 @@
       <h2 id="linux-available-versions">Linux</h2>
       <h3>Available versions</h3>
       <version-entries :entries="linuxOSVersions" />
-      <h3>Requirements</h3>
-      <div>TODO Stuff goes here</div>
     </v-col>
   </v-row>
   <v-row>
@@ -22,8 +18,6 @@
       <h2 id="macos-available-versions">macOS</h2>
       <h3>Available versions</h3>
       <version-entries :entries="macOSVersions" />
-      <h3>Requirements</h3>
-      <div>TODO Stuff goes here</div>
     </v-col>
   </v-row>
 </template>
