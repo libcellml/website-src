@@ -1,4 +1,8 @@
 export function useCommon() {
+  function fetchResource(version, resource) {
+    const url = `/generated/${version}/${resource}`
+    return fetch(url)
+  }
   function checkDocumentationAvailability(version, api, user, developer) {
     const url = `/generated/${version}/directories.json`
     return fetch(url).then((response) => {
@@ -16,7 +20,12 @@ export function useCommon() {
       )
     })
   }
+  async function checkDownloadAvailability(version) {
+    const response = await fetchResource(version, 'release_assets.json')
+    return response.json().catch((result) => {})
+  }
   return {
     checkDocumentationAvailability,
+    checkDownloadAvailability,
   }
 }
