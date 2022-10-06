@@ -14,7 +14,7 @@
           <v-icon>mdi-chevron-right</v-icon>
         </template>
 
-        <template v-slot:text="{ item }">
+        <template v-slot:title="{ item }">
           <!-- Dropdown in the breadcrumbs menu: -->
           <template v-if="item.versionChoice">
             <!-- I would prefer this to be a v-select based element but that doesn't behave very well as a breadcrumb item. -->
@@ -138,6 +138,7 @@ function getRouteForVersion(version) {
   ) {
     changedRoute = changeRouteVersion(currentRoute, version)
   }
+
   return changedRoute
 }
 
