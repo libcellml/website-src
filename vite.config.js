@@ -1,6 +1,6 @@
 import { defineConfig, searchForWorkspaceRoot } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import vuetify from '@vuetify/vite-plugin'
+import vuetify from 'vite-plugin-vuetify'
 // Require pluginRewriteAll until https://github.com/vitejs/vite/issues/2415 is fixed.
 import pluginRewriteAll from 'vite-plugin-rewrite-all'
 
@@ -26,7 +26,7 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    exclude: ['libcellml.js'],
+    exclude: ['vue3-libcellml.js'],
     exbuildOptions: {
       target: 'es2020',
     },
