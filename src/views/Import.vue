@@ -47,13 +47,9 @@
                 v-bind="props"
                 @click="downloadFile(item)"
                 :disabled="item.pending"
+                :prepend-icon="item.pending ? 'mdi-loading' : 'mdi-download'"
+                :title="downloadFileTitle(item)"
               >
-                <v-list-item-icon :class="{ loading: item.pending }">
-                  {{ item.pending ? 'mdi-loading' : 'mdi-download' }}
-                </v-list-item-icon>
-                <v-list-item-title
-                  v-text="downloadFileTitle(item)"
-                ></v-list-item-title>
               </v-list-item>
             </template>
             <span>Download</span>
@@ -107,7 +103,7 @@ function importModel(cellmlString) {
   let printer = new libcellml.module.Printer()
   let model = null
   try {
-    model = parser.parseModel(cellmlString, true)
+    model = parser.parseModel(cellmlString)
   } catch (err) {
     parser.delete()
     printer.delete()
@@ -161,6 +157,10 @@ function clearData() {
   issueData.value = []
 }
 
+function clearDownloads() {
+  downloads.value = []
+}
+
 function readFile() {
   clearData()
 
@@ -172,7 +172,9 @@ function readFile() {
     try {
       let results = importModel(evt.target.result)
       issueData.value = results.issues
-      parserFoundErrors.value = results.type === 'parser'
+      parserFoundErrors.value = Boolean(
+        results.type === 'parser' && results.issues.length
+      )
     } catch (err) {
       store.dispatch('notifications/add', {
         type: 'error',

@@ -5,7 +5,11 @@
       This service will accept CellML 1.0/1.1 compliant files and transform them
       into CellML 2.0 compliant files. This service can accept text based files
       or
-      <a href="http://co.mbine.org/specifications/omex.version-1.pdf" target="_blank">COMBINE archives</a>.
+      <a
+        href="http://co.mbine.org/specifications/omex.version-1.pdf"
+        target="_blank"
+        >COMBINE archives</a
+      >.
     </p>
     <v-container>
       <v-file-input
@@ -49,13 +53,9 @@
                 v-bind="props"
                 @click="downloadFile(item)"
                 :disabled="item.pending"
+                :prepend-icon="item.pending ? 'mdi-loading' : 'mdi-download'"
+                :title="downloadFileTitle(item)"
               >
-                <v-list-item-icon :class="{ loading: item.pending }">
-                  {{ item.pending ? 'mdi-loading' : 'mdi-download' }}
-                </v-list-item-icon>
-                <v-list-item-title
-                  v-text="downloadFileTitle(item)"
-                ></v-list-item-title>
               </v-list-item>
             </template>
             <span>Download</span>
