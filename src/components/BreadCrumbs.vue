@@ -13,7 +13,6 @@
         <template v-slot:divider>
           <v-icon>mdi-chevron-right</v-icon>
         </template>
-
         <template v-slot:title="{ item }">
           <!-- Dropdown in the breadcrumbs menu: -->
           <template v-if="item.versionChoice">
