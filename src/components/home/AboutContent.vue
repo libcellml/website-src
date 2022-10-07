@@ -97,7 +97,14 @@
     </p>
     <h3>libcellml.js</h3>
     <p>
-      The version of libcellml.js that this website is using is:
+      The version of
+      <a
+        rel="external"
+        href="https://www.npmjs.com/package/libcellml.js"
+        target="_blank"
+        >libcellml.js</a
+      >
+      that this website is using is:
       {{ libcellmlVersionString }}
     </p>
   </div>
