@@ -184,9 +184,14 @@ function readFile() {
       let results = validate(evt.target.result)
       validatedModel.value = modelFile.value[0].name
       issueData.value = results.issues
-      validatorFoundErrors.value = results.type === 'validator'
-      parserFoundErrors.value = results.type === 'parser'
+      parserFoundErrors.value = Boolean(
+        results.type === 'parser' && results.issues.length
+      )
+      validatorFoundErrors.value = Boolean(
+        results.type === 'validator' && results.issues.length
+      )
     } catch (err) {
+      parserFoundErrors.value = true
       store.dispatch('notifications/add', {
         type: 'error',
         title: `File read error:`,
