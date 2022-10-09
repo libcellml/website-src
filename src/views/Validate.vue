@@ -139,8 +139,6 @@ function validate(cellmlString) {
     parser.delete()
     validator.delete()
     model.delete()
-    console.log('parser errors:')
-    console.log(errors)
 
     return { issues: errors, type: 'parser' }
   }
