@@ -65,6 +65,11 @@ code {
   background-color: var(--pale-transparent-grey);
 }
 
+.v-application pre code {
+  background-color: transparent;
+  padding-left: 0;
+}
+
 .theme--light.v-application code {
   color: var(--code-colour);
   background-color: var(--pale-transparent-grey);
@@ -450,9 +455,9 @@ dl {
 }
 
 /* Turns off old divs that have been emptied with JS */
-.code-tab {
+/* .code-tab {
   display: none;
-}
+} */
 
 /* TODO collapse nicely ... */
 .infospec {
