@@ -65,11 +65,6 @@ code {
   background-color: var(--pale-transparent-grey);
 }
 
-.v-application pre code {
-  background-color: transparent;
-  padding-left: 0;
-}
-
 .theme--light.v-application code {
   color: var(--code-colour);
   background-color: var(--pale-transparent-grey);
@@ -95,10 +90,6 @@ code.xref {
 
 /* Padding for code blocks outside of the text */
 pre > code {
-  padding: 1em;
-}
-
-.hljs {
   padding: 1em;
 }
 
