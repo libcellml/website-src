@@ -37,7 +37,7 @@ export default defineConfig({
       // local package) with libraries that need to be loaded,
       // like libcellml.js, we need to add directories to the allow list.
       // If we are adding extra paths to the allowed list we also need to add the
-      // defalut path, which is what 'searchForWorkspaceRoot(process.cwd())' does.
+      // default path, which is what 'searchForWorkspaceRoot(process.cwd())' does.
       // allow: [
       // searchForWorkspaceRoot(process.cwd()),
       // ],

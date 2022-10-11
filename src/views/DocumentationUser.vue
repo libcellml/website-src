@@ -14,5 +14,3 @@ import { SphinxPage } from 'vue3-sphinx-xml'
 
 const store = useStore()
 </script>
-
-<style src="../css/sphinx.css"></style>
