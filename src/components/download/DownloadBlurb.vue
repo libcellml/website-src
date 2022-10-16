@@ -18,8 +18,8 @@
           install the <strong>libcellml.js</strong> package with yarn.
         </p>
         <p class="mb-4">
-          A complete list of historical versions for each operating system is
-          shown below.
+          A complete list of assets for current and historical versions for each
+          operating system is shown below.
         </p>
       </v-col>
     </v-row>
