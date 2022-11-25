@@ -153,8 +153,8 @@ h3 {
   align-content: center
 }
 
-.v-breadcrumbs .v-text-field input {
-  line-height: 0.9rem;
+.v-breadcrumbs li .v-field__input {
+  font-size: 0.9rem;
 }
 
 .v-select__content .v-list-item-title {
