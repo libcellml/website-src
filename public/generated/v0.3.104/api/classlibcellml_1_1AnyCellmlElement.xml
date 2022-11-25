@@ -1,0 +1,445 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classlibcellml_1_1AnyCellmlElement" kind="class" language="C++" prot="public">
+    <compoundname>libcellml::AnyCellmlElement</compoundname>
+    <includes refid="types_8h" local="no">types.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classlibcellml_1_1AnyCellmlElement_1a8fc045316ed5fb70e4aabbca5f40d8ec" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Analyser</definition>
+        <argsstring></argsstring>
+        <name>Analyser</name>
+        <qualifiedname>libcellml::AnyCellmlElement::Analyser</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="225" column="18" bodyfile="libcellml/types.h" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classlibcellml_1_1AnyCellmlElement_1ada637a00cbf9ba7cee69bccd009b72bc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Annotator</definition>
+        <argsstring></argsstring>
+        <name>Annotator</name>
+        <qualifiedname>libcellml::AnyCellmlElement::Annotator</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Annotator" kindref="compound">Annotator</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="226" column="18" bodyfile="libcellml/types.h" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classlibcellml_1_1AnyCellmlElement_1ad2d8744585dcb094644b1caed04ac9ed" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Importer</definition>
+        <argsstring></argsstring>
+        <name>Importer</name>
+        <qualifiedname>libcellml::AnyCellmlElement::Importer</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Importer" kindref="compound">Importer</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="227" column="18" bodyfile="libcellml/types.h" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classlibcellml_1_1AnyCellmlElement_1ac7b8e8d1ba22b79de014cdaa21ae0617" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Issue</definition>
+        <argsstring></argsstring>
+        <name>Issue</name>
+        <qualifiedname>libcellml::AnyCellmlElement::Issue</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Issue" kindref="compound">Issue</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="228" column="18" bodyfile="libcellml/types.h" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classlibcellml_1_1AnyCellmlElement_1ab80291af9c262f63b83fa9c16f12014d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Parser</definition>
+        <argsstring></argsstring>
+        <name>Parser</name>
+        <qualifiedname>libcellml::AnyCellmlElement::Parser</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Parser" kindref="compound">Parser</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="229" column="18" bodyfile="libcellml/types.h" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classlibcellml_1_1AnyCellmlElement_1acdb73910fe7e6db5af3e0545f4028881" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Printer</definition>
+        <argsstring></argsstring>
+        <name>Printer</name>
+        <qualifiedname>libcellml::AnyCellmlElement::Printer</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Printer" kindref="compound">Printer</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="230" column="18" bodyfile="libcellml/types.h" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classlibcellml_1_1AnyCellmlElement_1a5929181addf27f130c7f8f99eeba3256" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Validator</definition>
+        <argsstring></argsstring>
+        <name>Validator</name>
+        <qualifiedname>libcellml::AnyCellmlElement::Validator</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Validator" kindref="compound">Validator</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="231" column="18" bodyfile="libcellml/types.h" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlibcellml_1_1AnyCellmlElement_1a05788f07d24623cc49335a9dd408634b" prot="private" static="no" mutable="no">
+        <type>AnyCellmlElementImpl *</type>
+        <definition>AnyCellmlElementImpl* libcellml::AnyCellmlElement::mPimpl</definition>
+        <argsstring></argsstring>
+        <name>mPimpl</name>
+        <qualifiedname>libcellml::AnyCellmlElement::mPimpl</qualifiedname>
+        <briefdescription>
+<para>Forward declaration for pImpl idiom. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Private member to implementation pointer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="332" column="26" bodyfile="libcellml/types.h" bodystart="332" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlibcellml_1_1AnyCellmlElement_1a0a11baa99efaa667fa305e4a3f80a8c9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::AnyCellmlElement::~AnyCellmlElement</definition>
+        <argsstring>()</argsstring>
+        <name>~AnyCellmlElement</name>
+        <qualifiedname>libcellml::AnyCellmlElement::~AnyCellmlElement</qualifiedname>
+        <briefdescription>
+<para>Destructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="234" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnyCellmlElement_1a99ad0bf51f6c81b7be91d11aa3696292" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::AnyCellmlElement::AnyCellmlElement</definition>
+        <argsstring>(const AnyCellmlElement &amp;rhs)=delete</argsstring>
+        <name>AnyCellmlElement</name>
+        <qualifiedname>libcellml::AnyCellmlElement::AnyCellmlElement</qualifiedname>
+        <param>
+          <type>const <ref refid="classlibcellml_1_1AnyCellmlElement" kindref="compound">AnyCellmlElement</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="235" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnyCellmlElement_1a94367c058e98c87e937ea47ff1d1555b" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::AnyCellmlElement::AnyCellmlElement</definition>
+        <argsstring>(AnyCellmlElement &amp;&amp;rhs) noexcept=delete</argsstring>
+        <name>AnyCellmlElement</name>
+        <qualifiedname>libcellml::AnyCellmlElement::AnyCellmlElement</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1AnyCellmlElement" kindref="compound">AnyCellmlElement</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="236" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnyCellmlElement_1a04315afcc9cba03f10aec8d5ca4509ec" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1AnyCellmlElement" kindref="compound">AnyCellmlElement</ref> &amp;</type>
+        <definition>AnyCellmlElement &amp; libcellml::AnyCellmlElement::operator=</definition>
+        <argsstring>(AnyCellmlElement rhs)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>libcellml::AnyCellmlElement::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1AnyCellmlElement" kindref="compound">AnyCellmlElement</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="237" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnyCellmlElement_1a140cba288da9ff03fc3e4cf365c4cc6f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::AnyCellmlElement::AnyCellmlElement</definition>
+        <argsstring>()</argsstring>
+        <name>AnyCellmlElement</name>
+        <qualifiedname>libcellml::AnyCellmlElement::AnyCellmlElement</qualifiedname>
+        <briefdescription>
+<para>Constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="329" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlibcellml_1_1AnyCellmlElement_1a85aad39c0463e851f2b8f44702ac489c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref></type>
+        <definition>CellmlElementType libcellml::AnyCellmlElement::type</definition>
+        <argsstring>() const</argsstring>
+        <name>type</name>
+        <qualifiedname>libcellml::AnyCellmlElement::type</qualifiedname>
+        <briefdescription>
+<para>Get the <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref>.</para>
+<para><simplesect kind="return"><para>The type. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="246" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnyCellmlElement_1ab23699d9eac9ae20481343d6eb6ffb38" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref></type>
+        <definition>ComponentPtr libcellml::AnyCellmlElement::component</definition>
+        <argsstring>() const</argsstring>
+        <name>component</name>
+        <qualifiedname>libcellml::AnyCellmlElement::component</qualifiedname>
+        <briefdescription>
+<para>Get the component. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the component.</para>
+<para><simplesect kind="return"><para>The <ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref>, or <computeroutput>nullptr</computeroutput> if the internal type is not <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074eda7fc67f9f99bcdc7656908ef20801d05b" kindref="member">CellmlElementType::COMPONENT</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="256" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnyCellmlElement_1a0faedeb4ebe97c591879028f712e48c6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1ac2c4e6d1793d7214616c1548d8a9f502" kindref="member">ImportSourcePtr</ref></type>
+        <definition>ImportSourcePtr libcellml::AnyCellmlElement::importSource</definition>
+        <argsstring>() const</argsstring>
+        <name>importSource</name>
+        <qualifiedname>libcellml::AnyCellmlElement::importSource</qualifiedname>
+        <briefdescription>
+<para>Get the import source. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the import source.</para>
+<para><simplesect kind="return"><para>The <ref refid="classlibcellml_1_1ImportSource" kindref="compound">ImportSource</ref>, or <computeroutput>nullptr</computeroutput> if the internal type is not <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074edad9c89e6459f4fbd0b03b5bc093e87919" kindref="member">CellmlElementType::IMPORT</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="266" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnyCellmlElement_1a78c1aff999b83f4744fc89fe7161a75b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref></type>
+        <definition>ModelPtr libcellml::AnyCellmlElement::model</definition>
+        <argsstring>() const</argsstring>
+        <name>model</name>
+        <qualifiedname>libcellml::AnyCellmlElement::model</qualifiedname>
+        <briefdescription>
+<para>Get the model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the model.</para>
+<para><simplesect kind="return"><para>The <ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref>, or <computeroutput>nullptr</computeroutput> if the internal type is not <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074eda7a03bac2692f8d17e2cda1b0721ffd0e" kindref="member">CellmlElementType::MODEL</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="276" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnyCellmlElement_1a53542ac64d9a7675b92c705c4f63e879" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a329055beefacf51332628055453f390a" kindref="member">ResetPtr</ref></type>
+        <definition>ResetPtr libcellml::AnyCellmlElement::reset</definition>
+        <argsstring>() const</argsstring>
+        <name>reset</name>
+        <qualifiedname>libcellml::AnyCellmlElement::reset</qualifiedname>
+        <briefdescription>
+<para>Get the reset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the reset.</para>
+<para><simplesect kind="return"><para>The <ref refid="classlibcellml_1_1Reset" kindref="compound">Reset</ref>, or <computeroutput>nullptr</computeroutput> if the internal type is not <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074edab5859d8721cfdc0312b2838b9c985bc1" kindref="member">CellmlElementType::RESET</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="286" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnyCellmlElement_1a944b9ae68b28d9d315d42fb3a2e04708" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a3259debe09f915678b203e98100ea10a" kindref="member">UnitsPtr</ref></type>
+        <definition>UnitsPtr libcellml::AnyCellmlElement::units</definition>
+        <argsstring>() const</argsstring>
+        <name>units</name>
+        <qualifiedname>libcellml::AnyCellmlElement::units</qualifiedname>
+        <briefdescription>
+<para>Get the units. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the units.</para>
+<para><simplesect kind="return"><para>The <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref>, or <computeroutput>nullptr</computeroutput> if the internal type is not <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074eda456d42d0c8fd369eb23335d23fb3856a" kindref="member">CellmlElementType::UNITS</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="296" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnyCellmlElement_1af813e55ff2a14dc056c411bf78595c47" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a29f1c2968e2baea904984ba46c9032b0" kindref="member">UnitsItemPtr</ref></type>
+        <definition>UnitsItemPtr libcellml::AnyCellmlElement::unitsItem</definition>
+        <argsstring>() const</argsstring>
+        <name>unitsItem</name>
+        <qualifiedname>libcellml::AnyCellmlElement::unitsItem</qualifiedname>
+        <briefdescription>
+<para>Get the units item. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the units item.</para>
+<para><simplesect kind="return"><para>The <ref refid="classlibcellml_1_1UnitsItem" kindref="compound">UnitsItem</ref>, or <computeroutput>nullptr</computeroutput> if the internal type is not <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074edaec8fc2c42b9c76effd648a14b311411f" kindref="member">CellmlElementType::UNIT</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="306" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnyCellmlElement_1ae1d99093fc539f72a347886d02cd8451" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref></type>
+        <definition>VariablePtr libcellml::AnyCellmlElement::variable</definition>
+        <argsstring>() const</argsstring>
+        <name>variable</name>
+        <qualifiedname>libcellml::AnyCellmlElement::variable</qualifiedname>
+        <briefdescription>
+<para>Get the variable. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the variable.</para>
+<para><simplesect kind="return"><para>The <ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref>, or <computeroutput>nullptr</computeroutput> if the internal type is not <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074edae61ad9b2553a293b4a3f4d3b4fa5ab31" kindref="member">CellmlElementType::VARIABLE</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="316" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnyCellmlElement_1a85e4951f33fc5411b7f54b4c175607eb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a6b568d1251dec59e864e6ea189da9320" kindref="member">VariablePairPtr</ref></type>
+        <definition>VariablePairPtr libcellml::AnyCellmlElement::variablePair</definition>
+        <argsstring>() const</argsstring>
+        <name>variablePair</name>
+        <qualifiedname>libcellml::AnyCellmlElement::variablePair</qualifiedname>
+        <briefdescription>
+<para>Get the variable pair. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the variable pair.</para>
+<para><simplesect kind="return"><para>The a <ref refid="classlibcellml_1_1VariablePair" kindref="compound">VariablePair</ref>, or <computeroutput>nullptr</computeroutput> if the internal type is not <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074edaf877da16e0c12743466e4059018d0d98" kindref="member">CellmlElementType::CONNECTION</ref> or <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074edaa23c1199c2fc87cba82b7303c0ce5e5c" kindref="member">CellmlElementType::MAP_VARIABLES</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="326" column="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classlibcellml_1_1AnyCellmlElement" kindref="compound">AnyCellmlElement</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classlibcellml_1_1AnyCellmlElement" kindref="compound">AnyCellmlElement</ref> class contains a <ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref>, <ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref>, etc., depending on the <ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref> enum that describes which type is stored. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>libcellml::AnyCellmlElement</label>
+        <link refid="classlibcellml_1_1AnyCellmlElement"/>
+      </node>
+    </collaborationgraph>
+    <location file="libcellml/types.h" line="223" column="1" bodyfile="libcellml/types.h" bodystart="224" bodyend="333"/>
+    <listofallmembers>
+      <member refid="classlibcellml_1_1AnyCellmlElement_1a8fc045316ed5fb70e4aabbca5f40d8ec" prot="private" virt="non-virtual"><scope>libcellml::AnyCellmlElement</scope><name>Analyser</name></member>
+      <member refid="classlibcellml_1_1AnyCellmlElement_1ada637a00cbf9ba7cee69bccd009b72bc" prot="private" virt="non-virtual"><scope>libcellml::AnyCellmlElement</scope><name>Annotator</name></member>
+      <member refid="classlibcellml_1_1AnyCellmlElement_1a99ad0bf51f6c81b7be91d11aa3696292" prot="private" virt="non-virtual"><scope>libcellml::AnyCellmlElement</scope><name>AnyCellmlElement</name></member>
+      <member refid="classlibcellml_1_1AnyCellmlElement_1a94367c058e98c87e937ea47ff1d1555b" prot="private" virt="non-virtual"><scope>libcellml::AnyCellmlElement</scope><name>AnyCellmlElement</name></member>
+      <member refid="classlibcellml_1_1AnyCellmlElement_1a140cba288da9ff03fc3e4cf365c4cc6f" prot="private" virt="non-virtual"><scope>libcellml::AnyCellmlElement</scope><name>AnyCellmlElement</name></member>
+      <member refid="classlibcellml_1_1AnyCellmlElement_1ab23699d9eac9ae20481343d6eb6ffb38" prot="public" virt="non-virtual"><scope>libcellml::AnyCellmlElement</scope><name>component</name></member>
+      <member refid="classlibcellml_1_1AnyCellmlElement_1ad2d8744585dcb094644b1caed04ac9ed" prot="private" virt="non-virtual"><scope>libcellml::AnyCellmlElement</scope><name>Importer</name></member>
+      <member refid="classlibcellml_1_1AnyCellmlElement_1a0faedeb4ebe97c591879028f712e48c6" prot="public" virt="non-virtual"><scope>libcellml::AnyCellmlElement</scope><name>importSource</name></member>
+      <member refid="classlibcellml_1_1AnyCellmlElement_1ac7b8e8d1ba22b79de014cdaa21ae0617" prot="private" virt="non-virtual"><scope>libcellml::AnyCellmlElement</scope><name>Issue</name></member>
+      <member refid="classlibcellml_1_1AnyCellmlElement_1a78c1aff999b83f4744fc89fe7161a75b" prot="public" virt="non-virtual"><scope>libcellml::AnyCellmlElement</scope><name>model</name></member>
+      <member refid="classlibcellml_1_1AnyCellmlElement_1a05788f07d24623cc49335a9dd408634b" prot="private" virt="non-virtual"><scope>libcellml::AnyCellmlElement</scope><name>mPimpl</name></member>
+      <member refid="classlibcellml_1_1AnyCellmlElement_1a04315afcc9cba03f10aec8d5ca4509ec" prot="private" virt="non-virtual"><scope>libcellml::AnyCellmlElement</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1AnyCellmlElement_1ab80291af9c262f63b83fa9c16f12014d" prot="private" virt="non-virtual"><scope>libcellml::AnyCellmlElement</scope><name>Parser</name></member>
+      <member refid="classlibcellml_1_1AnyCellmlElement_1acdb73910fe7e6db5af3e0545f4028881" prot="private" virt="non-virtual"><scope>libcellml::AnyCellmlElement</scope><name>Printer</name></member>
+      <member refid="classlibcellml_1_1AnyCellmlElement_1a53542ac64d9a7675b92c705c4f63e879" prot="public" virt="non-virtual"><scope>libcellml::AnyCellmlElement</scope><name>reset</name></member>
+      <member refid="classlibcellml_1_1AnyCellmlElement_1a85aad39c0463e851f2b8f44702ac489c" prot="public" virt="non-virtual"><scope>libcellml::AnyCellmlElement</scope><name>type</name></member>
+      <member refid="classlibcellml_1_1AnyCellmlElement_1a944b9ae68b28d9d315d42fb3a2e04708" prot="public" virt="non-virtual"><scope>libcellml::AnyCellmlElement</scope><name>units</name></member>
+      <member refid="classlibcellml_1_1AnyCellmlElement_1af813e55ff2a14dc056c411bf78595c47" prot="public" virt="non-virtual"><scope>libcellml::AnyCellmlElement</scope><name>unitsItem</name></member>
+      <member refid="classlibcellml_1_1AnyCellmlElement_1a5929181addf27f130c7f8f99eeba3256" prot="private" virt="non-virtual"><scope>libcellml::AnyCellmlElement</scope><name>Validator</name></member>
+      <member refid="classlibcellml_1_1AnyCellmlElement_1ae1d99093fc539f72a347886d02cd8451" prot="public" virt="non-virtual"><scope>libcellml::AnyCellmlElement</scope><name>variable</name></member>
+      <member refid="classlibcellml_1_1AnyCellmlElement_1a85e4951f33fc5411b7f54b4c175607eb" prot="public" virt="non-virtual"><scope>libcellml::AnyCellmlElement</scope><name>variablePair</name></member>
+      <member refid="classlibcellml_1_1AnyCellmlElement_1a0a11baa99efaa667fa305e4a3f80a8c9" prot="private" virt="non-virtual"><scope>libcellml::AnyCellmlElement</scope><name>~AnyCellmlElement</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

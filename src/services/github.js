@@ -23,7 +23,10 @@ const authConfig = () => {
   const token = authToken()
   let config = {}
   if (token) {
-    config.headers = { Authorization: 'token ' + token }
+    config.headers = {
+      Authorization: 'token ' + token,
+      Accept: 'application/vnd.github+json',
+    }
   }
   return config
 }
@@ -32,12 +35,12 @@ const contributors = async (org, repo) => {
   const config = authConfig()
   const response = await apiClient.get(
     `repos/${org}/${repo}/contributors`,
-    config,
+    config
   )
   return response.data
 }
 
-const user = async login => {
+const user = async (login) => {
   const config = authConfig()
   const response = await apiClient.get(`users/${login}`, config)
   return response.data

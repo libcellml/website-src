@@ -16,12 +16,20 @@
       >
     </v-container>
     <v-container>
+      <v-row v-if="!versionSupports1XImport" justify="center">
+        <v-col>
+          <v-alert type="error"
+            >Importing of CellML 1.0/1.1 models is not supported with this
+            version of libCellML.js</v-alert
+          >
+        </v-col>
+      </v-row>
       <v-row justify="center">
         <v-col class="col-12 col-md-4" id="importButton">
           <v-btn
             block
             :class="'big-button'"
-            :disabled="ableToImportModel"
+            :disabled="!ableToImportModel"
             v-on:click="readFile"
           >
             <v-icon color="white" x-large>mdi-file-import</v-icon><br />
@@ -47,13 +55,9 @@
                 v-bind="props"
                 @click="downloadFile(item)"
                 :disabled="item.pending"
+                :prepend-icon="item.pending ? 'mdi-loading' : 'mdi-download'"
+                :title="downloadFileTitle(item)"
               >
-                <v-list-item-icon :class="{ loading: item.pending }">
-                  {{ item.pending ? 'mdi-loading' : 'mdi-download' }}
-                </v-list-item-icon>
-                <v-list-item-title
-                  v-text="downloadFileTitle(item)"
-                ></v-list-item-title>
               </v-list-item>
             </template>
             <span>Download</span>
@@ -77,6 +81,7 @@
 <script setup>
 import { computed, inject, ref } from 'vue'
 import { useStore } from 'vuex'
+import semver from 'semver'
 
 import IssueHeading from '../components/IssueHeading.vue'
 import IssueCard from '../components/IssueCard.vue'
@@ -85,18 +90,30 @@ import { downloadFile, downloadFileTitle } from '../js/utilities'
 
 const store = useStore()
 
-const libcellml = ref(null)
 const issueData = ref([])
 const modelFile = ref([])
 const parserFoundErrors = ref(false)
 const downloads = ref([])
 
-libcellml.value = inject('$libcellml')
+const libcellml = inject('$libcellml')
+
+const versionSupports1XImport = computed(() => {
+  if (libcellml.state === 'ready') {
+    return semver.gte(libcellml.module.versionString(), '0.4.0')
+  }
+
+  return false
+})
 
 const ableToImportModel = computed(() => {
-  return libcellml.value !== null && modelFile.value.length > 0
-    ? undefined
-    : true
+  if (libcellml.state === 'ready') {
+    if (!versionSupports1XImport.value) {
+      return false
+    }
+    return modelFile.value.length > 0
+  }
+
+  return false
 })
 
 function removeMessage(index) {
@@ -104,11 +121,11 @@ function removeMessage(index) {
 }
 
 function importModel(cellmlString) {
-  let parser = new libcellml.value.Parser()
-  let printer = new libcellml.value.Printer()
+  let parser = new libcellml.module.Parser()
+  let printer = new libcellml.module.Printer()
   let model = null
   try {
-    model = parser.parseModel(cellmlString, true)
+    model = parser.parseModel(cellmlString)
   } catch (err) {
     parser.delete()
     printer.delete()
@@ -162,6 +179,10 @@ function clearData() {
   issueData.value = []
 }
 
+function clearDownloads() {
+  downloads.value = []
+}
+
 function readFile() {
   clearData()
 
@@ -173,7 +194,9 @@ function readFile() {
     try {
       let results = importModel(evt.target.result)
       issueData.value = results.issues
-      parserFoundErrors.value = results.type === 'parser'
+      parserFoundErrors.value = Boolean(
+        results.type === 'parser' && results.issues.length
+      )
     } catch (err) {
       store.dispatch('notifications/add', {
         type: 'error',
@@ -193,7 +216,6 @@ function readFile() {
 }
 </script>
 
-<style src="../css/general.css"></style>
 <style scoped>
 .loading {
   animation: spin 1.5s linear infinite;
