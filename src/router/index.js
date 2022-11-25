@@ -241,7 +241,7 @@ function createBreadcrumb(to, label = undefined, choice = false) {
     exact: false,
     link: false,
     text,
-    to,
+    target: to,
     versionChoice: choice,
   }
 }
