@@ -92,31 +92,6 @@ h3 {
   color: var(--link-colour);
   font-weight: 500;
 }
-
-p a {
-  color: var(--text-link-colour) !important;
-  text-decoration-line: var(--link-decoration-line);
-  text-decoration-style: var(--link-decoration-style);
-  text-decoration-color: var(--link-underline-colour);
-  text-underline-offset: 0.2em;
-}
-
-td a {
-  color: var(--text-link-colour) !important;
-  text-decoration-line: var(--link-decoration-line);
-  text-decoration-style: var(--link-decoration-style);
-  text-decoration-color: var(--link-underline-colour);
-  text-underline-offset: 0.2em;
-}
-
-li a {
-  color: var(--text-link-colour) !important;
-  text-decoration-line: var(--link-decoration-line);
-  text-decoration-style: var(--link-decoration-style);
-  text-decoration-color: var(--link-underline-colour);
-  text-underline-offset: 0.2em;
-}
-
 .v-application a.router-link-active {
   color: var(--text-link-colour);
   text-decoration-line: var(--link-decoration-line);
@@ -133,6 +108,31 @@ li a {
 /* Turn off the Contents blocks on pages as they're in the sidebar. */
 .topic.contents {
   display: none;
+}
+
+
+.v-application p a {
+  color: var(--text-link-colour);
+  text-decoration-line: var(--link-decoration-line);
+  text-decoration-style: var(--link-decoration-style);
+  text-decoration-color: var(--link-underline-colour);
+  text-underline-offset: 0.2em;
+}
+
+.v-application td a {
+  color: var(--text-link-colour);
+  text-decoration-line: var(--link-decoration-line);
+  text-decoration-style: var(--link-decoration-style);
+  text-decoration-color: var(--link-underline-colour);
+  text-underline-offset: 0.2em;
+}
+
+.v-application li a {
+  color: var(--text-link-colour);
+  text-decoration-line: var(--link-decoration-line);
+  text-decoration-style: var(--link-decoration-style);
+  text-decoration-color: var(--link-underline-colour);
+  text-underline-offset: 0.2em;
 }
 
 /* Disconnect the general link colour from the colours in the top menu bar */
@@ -153,13 +153,21 @@ li a {
   align-content: center
 }
 
+.v-breadcrumbs li .v-field__input {
+  font-size: 0.9rem;
+}
+
+.v-select__content .v-list-item-title {
+  font-size: 0.9rem;
+}
+
 /* Move breadcrumbs down a little ... */
-.breadcrumbs {
+.v-breadcrumbs {
   margin-top: 0.3rem;
   white-space: nowrap;
   display: block;
-  direction: rtl; /* This is so that it will collapse from the left on small screens */
-  overflow: hidden;
+  /* direction: rtl; This is so that it will collapse from the left on small screens */
+  /* overflow: hidden; */
   text-overflow: ellipsis;
 }
 
@@ -167,14 +175,14 @@ ul.v-breadcrumbs {
   padding: 0;
 }
 
-.breadcrumbs * {
-  margin: 0;
-  padding: 0;
-  color: var(--menu-link-colour) !important;
+.v-application .v-breadcrumbs li a {
+  /* margin: 0; */
+  /* padding: 0; */
+  color: var(--menu-link-colour);
 }
 
 .v-breadcrumbs {
-  padding: 0;
+  /* padding: 0; */
   flex-wrap: nowrap;
 }
 

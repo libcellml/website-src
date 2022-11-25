@@ -15,50 +15,31 @@
         </template>
         <template v-slot:title="{ item }">
           <!-- Dropdown in the breadcrumbs menu: -->
-          <template v-if="item.versionChoice">
-            <!-- I would prefer this to be a v-select based element but that doesn't behave very well as a breadcrumb item. -->
-            <v-breadcrumbs-item>
-              <v-menu transition="scroll-y-transition">
-                <template v-slot:activator="{ props }">
-                  <v-btn
-                    color="primary"
-                    class="ma-2 text-lowercase"
-                    v-bind="props"
-                    variant="outlined"
-                  >
-                    {{ store.state.current_documentation_version }}
-                    <v-icon end icon="mdi-unfold-more-horizontal"></v-icon>
-                  </v-btn>
-                </template>
-                <v-list>
-                  <v-list-item
-                    v-for="v of alternativeVersions"
-                    :key="v"
-                    :to="v.to"
-                    @click="updateCurrentVersion(v.text)"
-                  >
-                    <v-list-item-title v-text="v.text"></v-list-item-title>
-                  </v-list-item>
-                </v-list>
-              </v-menu>
-            </v-breadcrumbs-item>
-          </template>
-
-          <!-- Normal item, no dropdown, formed from named page: -->
-          <template v-else>
-            <v-breadcrumbs-item
-              :exact="true"
-              :to="item.to"
-              :disabled="item.disabled"
+          <v-breadcrumbs-item v-if="item.versionChoice">
+            <v-select
+              :modelValue="store.state.current_documentation_version"
+              @update:modelValue="updateCurrentVersion($event)"
+              :items="alternativeVersions"
+              item-title="text"
+              item-value="text"
+              label="Select"
+              return-object
+              single-line
+              density="compact"
+              hide-details="true"
+              variant="solo"
             >
-              <template v-if="item.text === 'Home'">
-                <v-icon size="1.3em">mdi-home</v-icon>
-              </template>
-              <template v-else>
-                {{ item.text }}
-              </template>
-            </v-breadcrumbs-item>
-          </template>
+            </v-select>
+          </v-breadcrumbs-item>
+          <!-- Normal item, no dropdown, formed from named page: -->
+          <v-breadcrumbs-item v-else :to="item.target">
+            <template v-if="item.text === 'Home'">
+              <v-icon size="1.3em">mdi-home</v-icon>
+            </template>
+            <template v-else>
+              {{ item.text }}
+            </template>
+          </v-breadcrumbs-item>
         </template>
       </v-breadcrumbs>
     </v-col>
@@ -146,7 +127,7 @@ function onViewLatest() {
 }
 
 function updateCurrentVersion(version) {
-  store.commit('setCurrentDocumentationVersion', version)
+  store.commit('setCurrentDocumentationVersion', version.text)
 }
 </script>
 
