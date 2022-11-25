@@ -15,39 +15,31 @@
         </template>
         <template v-slot:title="{ item }">
           <!-- Dropdown in the breadcrumbs menu: -->
-          <template v-if="item.versionChoice">
-            <v-breadcrumbs-item>
-              <v-select
-                :modelValue="store.state.current_documentation_version"
-                @update:modelValue="updateCurrentVersion($event)"
-                :items="alternativeVersions"
-                item-title="text"
-                item-value="text"
-                label="Select"
-                return-object
-                single-line
-                density="compact"
-                hide-details="true"
-                variant="solo"
-              >
-              </v-select>
-            </v-breadcrumbs-item>
-          </template>
-          <template v-else>
-            <!-- Normal item, no dropdown, formed from named page: -->
-            <v-breadcrumbs-item
-              :exact="true"
-              :to="item.to"
-              :disabled="item.disabled"
+          <v-breadcrumbs-item v-if="item.versionChoice">
+            <v-select
+              :modelValue="store.state.current_documentation_version"
+              @update:modelValue="updateCurrentVersion($event)"
+              :items="alternativeVersions"
+              item-title="text"
+              item-value="text"
+              label="Select"
+              return-object
+              single-line
+              density="compact"
+              hide-details="true"
+              variant="solo"
             >
-              <template v-if="item.text === 'Home'">
-                <v-icon size="1.3em">mdi-home</v-icon>
-              </template>
-              <template v-else>
-                {{ item.text }} - {{ item.text === 'Home' }}
-              </template>
-            </v-breadcrumbs-item>
-          </template>
+            </v-select>
+          </v-breadcrumbs-item>
+          <!-- Normal item, no dropdown, formed from named page: -->
+          <v-breadcrumbs-item v-else :to="item.target">
+            <template v-if="item.text === 'Home'">
+              <v-icon size="1.3em">mdi-home</v-icon>
+            </template>
+            <template v-else>
+              {{ item.text }}
+            </template>
+          </v-breadcrumbs-item>
         </template>
       </v-breadcrumbs>
     </v-col>
