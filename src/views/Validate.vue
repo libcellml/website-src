@@ -44,7 +44,10 @@
       ></issue-card>
     </v-container>
     <v-container v-else-if="validatorFoundErrors">
-      <issue-heading :title="validatedModel" issueSource="Validation"></issue-heading>
+      <issue-heading
+        :title="validatedModel"
+        issueSource="Validation"
+      ></issue-heading>
       <issue-card
         v-for="(issue, j) in issueData"
         :key="'validation_issue_' + j"
@@ -81,7 +84,6 @@ import { onLearnMoreClicked } from '../js/utilities'
 
 const store = useStore()
 
-const libcellml = ref(null)
 const issueData = ref([])
 const modelFile = ref([])
 const validatorFoundErrors = ref(false)
@@ -89,10 +91,10 @@ const errorsFound = ref(false)
 const parserFoundErrors = ref(false)
 const validatedModel = ref('')
 
-libcellml.value = inject('$libcellml')
+const libcellml = inject('$libcellml')
 
 const ableToValidate = computed(() => {
-  return libcellml.value !== null && modelFile.value.length > 0
+  return libcellml.state === 'ready' && modelFile.value.length > 0
     ? undefined
     : true
 })
@@ -102,11 +104,11 @@ function removeMessage(index) {
 }
 
 function validate(cellmlString) {
-  let parser = new libcellml.value.Parser()
-  let validator = new libcellml.value.Validator()
+  let parser = new libcellml.module.Parser()
+  let validator = new libcellml.module.Validator()
   let model = null
   try {
-    model = parser.parseModel(cellmlString, false)
+    model = parser.parseModel(cellmlString)
   } catch (err) {
     parser.delete()
     validator.delete()
@@ -182,9 +184,14 @@ function readFile() {
       let results = validate(evt.target.result)
       validatedModel.value = modelFile.value[0].name
       issueData.value = results.issues
-      validatorFoundErrors.value = results.type === 'validator'
-      parserFoundErrors.value = results.type === 'parser'
+      parserFoundErrors.value = Boolean(
+        results.type === 'parser' && results.issues.length
+      )
+      validatorFoundErrors.value = Boolean(
+        results.type === 'validator' && results.issues.length
+      )
     } catch (err) {
+      parserFoundErrors.value = true
       store.dispatch('notifications/add', {
         type: 'error',
         title: `File read error:`,
@@ -203,7 +210,6 @@ function readFile() {
 }
 </script>
 
-<style src="../css/general.css"></style>
 <style scoped>
 .loading {
   animation: spin 1.5s linear infinite;

@@ -1,121 +1,117 @@
 /* 
  Styles to be used on pages generated from Sphinx.
 */
-@import "./general.css";
+@import './general.css';
 
 /* Extra padding under the breadcrumbs for the sphinx pages.*/
 #breadcrumbs {
-    padding-bottom: 0.3em;
+  padding-bottom: 0.3em;
 }
 
 .container .heading2 {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-top: 1em;
-    padding: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 1em;
+  padding: 0;
 }
 
 .container .heading3 {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-top: 1em;
-    padding: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 1em;
+  padding: 0;
 }
 
 .container .heading4 {
-    font-size: 1.1em;
-    font-weight: 500;
-    margin-top: 1em;
-    padding: 0;
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-top: 1em;
+  padding: 0;
 }
 
 pre {
-    background-color: var(--very-pale-grey);
+  background-color: var(--very-pale-grey);
 }
 
 /* Inline literal code blocks in the Sphinx-based files. */
 .theme--light.v-application code.code {
-    color: var(--deep-blue);
-    padding: 0.1rem 0.3rem 0.2rem 0.3rem;
-    margin: 0;
-    font-size: .95em;
-    font-weight: 500;
-    background-color: var(--transparent-grey);
-    border-radius: 5px;
-    font-family: var(--code-font);
+  color: var(--deep-blue);
+  padding: 0.1rem 0.3rem 0.2rem 0.3rem;
+  margin: 0;
+  font-size: 0.95em;
+  font-weight: 500;
+  background-color: var(--transparent-grey);
+  border-radius: 5px;
+  font-family: var(--code-font);
 }
 
-.v-application code::before, .v-application code::after {
-    display: none;
+.v-application code::before,
+.v-application code::after {
+  display: none;
 }
 
 code {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    padding-top:0.3em;
-    padding-bottom: 0.2em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.3em;
+  padding-bottom: 0.2em;
 }
 
 .v-application code {
-    font-size: 100%;
-    color: var(--code-colour);
-    font-family: var(--code-font);
-    font-weight: 400;
-    background-color: var(--pale-transparent-grey);
+  font-size: 100%;
+  color: var(--code-colour);
+  font-family: var(--code-font);
+  font-weight: 400;
+  background-color: var(--pale-transparent-grey);
 }
 
 .theme--light.v-application code {
-    color: var(--code-colour);
-    background-color: var(--pale-transparent-grey);
+  color: var(--code-colour);
+  background-color: var(--pale-transparent-grey);
 }
 
 code.plaintext {
-    background-color: var(--terminal-color);
-    color: var(--text-color);
-    overflow: scroll;
-    border-radius: 0.2em;
-    width: 100%;
+  background-color: var(--terminal-color);
+  color: var(--text-color);
+  overflow: scroll;
+  border-radius: 0.2em;
+  width: 100%;
 }
 
 code.hljs {
-    padding: 1em;
+  padding: 1em;
 }
 
 code.xref {
-    font-family: var(--text-font);
-    color: var(--deep-red);
-    font-weight: 500;
+  font-family: var(--text-font);
+  color: var(--deep-red);
+  font-weight: 500;
 }
 
 /* Padding for code blocks outside of the text */
 pre > code {
-    padding: 1em;
-}
-
-.hljs {
-    padding: 1em;
+  padding: 1em;
 }
 
 /* Shortlist class. */
 .shortlist p {
-    margin-bottom: 0.2em !important;
+  margin-bottom: 0.2em !important;
 }
-
 
 /* Directory list class */
 .directorylist {
-    /* border-left: solid 5px var(--pale-grey); */
-    padding-left: 2em;
-    background-color: var(--very-pale-grey);
+  /* border-left: solid 5px var(--pale-grey); */
+  padding-left: 2em;
+  background-color: var(--very-pale-grey);
 }
 
 .directorylist p {
-    padding: 0;
-    margin: 0;
- }
+  padding: 0;
+  margin: 0;
+}
 
 .directorylist ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 /*
@@ -196,279 +192,285 @@ pre > code {
 
 /* Formatting from the tutorials readthedocs site. */
 .dothis {
-    padding: .1rem 1.5rem;
-    border-left-width: .5rem;
-    border-left-style: solid;
-    margin: 1rem 0;
+  padding: 0.1rem 1.5rem;
+  border-left-width: 0.5rem;
+  border-left-style: solid;
+  margin: 1rem 0;
 
-    background-color: var(--dothis-background-color);
-    border-color: var(--dothis-border-colour);
-    color: var(--dothis-colour);
-    font-family: var(--text-font);
+  background-color: var(--dothis-background-color);
+  border-color: var(--dothis-border-colour);
+  color: var(--dothis-colour);
+  font-family: var(--text-font);
 }
 
 .dothis > p {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .useful {
-    padding: .5rem 1.5rem;
-    border-left-width: .5rem;
-    border-left-style: solid;
-    margin: 0.5rem 0;
+  padding: 0.5rem 1.5rem;
+  border-left-width: 0.5rem;
+  border-left-style: solid;
+  margin: 0.5rem 0;
 
-    background-color: var(--useful-background-colour);
-    border-color: var(--useful-border-colour);
-    color: var(--useful-colour);
-    font-family: var(--text-font);
+  background-color: var(--useful-background-colour);
+  border-color: var(--useful-border-colour);
+  color: var(--useful-colour);
+  font-family: var(--text-font);
 }
 
 .useful::before {
-    content: "Useful functions";
-    font-weight: 700;
-    font-size: large;
-    color: var(--useful-colour);
+  content: 'Useful functions';
+  font-weight: 700;
+  font-size: large;
+  color: var(--useful-colour);
 }
 
 .useful > * {
-    margin-left: 2rem;
+  margin-left: 2rem;
 }
 .useful a {
-    color: var(--useful-link-colour) !important;
+  color: var(--useful-link-colour) !important;
 }
 
 /* Useful container main text */
 .useful > p {
-    margin-bottom: 0;
-    margin-top: 0.5em;
+  margin-bottom: 0;
+  margin-top: 0.5em;
 }
 /* Useful container list indents */
 .useful > ul {
-    margin-left: 3rem;
-    list-style-type: none;
+  margin-left: 3rem;
+  list-style-type: none;
 }
 .useful > ul > li > p {
-    margin-bottom: 0;
-    /* font-family: var(--mono-font); */
-    /* font-weight: 500; */
+  margin-bottom: 0;
+  /* font-family: var(--mono-font); */
+  /* font-weight: 500; */
 }
 
 .nb {
-    padding: .1rem 1.5rem;
-    border-left-width: .5rem;
-    border-left-style: solid;
-    margin: 1rem 0;
+  padding: 0.1rem 1.5rem;
+  border-left-width: 0.5rem;
+  border-left-style: solid;
+  margin: 1rem 0;
 
-    background-color: var(--nb-background-colour);
-    border-color: var(--nb-border-colour);
-    color: var(--nb-colour);
-    line-height: 1.5em;
-    font-family: var(--text-font);
+  background-color: var(--nb-background-colour);
+  border-color: var(--nb-border-colour);
+  color: var(--nb-colour);
+  line-height: 1.5em;
+  font-family: var(--text-font);
 }
 
-.nb > p, ul, ol, dl {
-    margin-bottom:0;
-    padding: 0.3rem;
+.nb > p,
+ul,
+ol,
+dl {
+  margin-bottom: 0;
+  padding: 0.3rem;
 }
 
 /* Toggles for showing/hiding code. */
 .toggle {
-    margin: 0.3rem 0 0.3rem 0;
-    padding: 0.5rem;
+  margin: 0.3rem 0 0.3rem 0;
+  padding: 0.5rem;
 }
 
 .toggle > * {
-    display: none;
-    padding: 0;
-} 
+  display: none;
+  padding: 0;
+}
 
-.toggle .header, .toggle .header-left {
-    display: block;
-    clear: both;
-    color: var(--text-colour);
+.toggle .header,
+.toggle .header-left {
+  display: block;
+  clear: both;
+  color: var(--text-colour);
 }
 
 .toggle .header {
-    text-align: right;
+  text-align: right;
 }
 
 .toggle .header-left {
-    text-align: left;
+  text-align: left;
 }
 
 .toggle > pre {
-    margin-top: 0.6em;
+  margin-top: 0.6em;
 }
 
-.toggle .header.active p, .toggle .header-left.active p {
-    font-weight: 700;
-    color: var(--mid-red);
-    margin-bottom: 0.2em;
+.toggle .header.active p,
+.toggle .header-left.active p {
+  font-weight: 700;
+  color: var(--mid-red);
+  margin-bottom: 0.2em;
 }
 
 .toggle .header.active p::after,
 .toggle .header-left.active p::after {
-    content: " -"
+  content: ' -';
 }
 
 .toggle .header.inactive p,
-.toggle .header-left.inactive p  {
-    font-weight: 500;
-    color: var(--menu-link-colour);
-    margin-bottom: 0;
+.toggle .header-left.inactive p {
+  font-weight: 500;
+  color: var(--menu-link-colour);
+  margin-bottom: 0;
 }
 
 .toggle .header.inactive p::after,
 .toggle .header-left.inactive p::after {
-    content: " +"
+  content: ' +';
 }
 
 .sphinx-tabs {
-    border: none !important;
+  border: none !important;
 }
 .sphinx-tabs {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
-[role="tablist"] {
-    border-bottom: 1px solid #a0b3bf;
+[role='tablist'] {
+  border-bottom: 1px solid #a0b3bf;
 }
 .sphinx-tabs-tab {
-    position: relative;
-    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
-    color: #1D5C87;
-    line-height: 24px;
-    margin: 0;
-    font-size: 16px;
-    font-weight: 400;
-    background-color: rgba(255, 255, 255, 0);
-    border-radius: 5px 5px 0 0;
-    border: 0;
-    padding: 1rem 1.5rem;
-    margin-bottom: 0;
+  position: relative;
+  font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  color: #1d5c87;
+  line-height: 24px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 5px 5px 0 0;
+  border: 0;
+  padding: 1rem 1.5rem;
+  margin-bottom: 0;
 }
-.sphinx-tabs-tab[aria-selected="true"] {
-    font-weight: 700;
-    border: 1px solid #a0b3bf;
-    border-bottom: 2px solid white;
-    margin: -1px;
-    background-color: white;
+.sphinx-tabs-tab[aria-selected='true'] {
+  font-weight: 700;
+  border: 1px solid #a0b3bf;
+  border-bottom: 2px solid white;
+  margin: -1px;
+  background-color: white;
 }
 .sphinx-tabs-panel {
-    position: relative;
-    padding: 1rem;
-    border: 1px solid #a0b3bf;
-    margin: 0px -1px -1px -1px;
-    border-radius: 0 0 5px 5px;
-    border-top: 0;
-    background: white;
+  position: relative;
+  padding: 1rem;
+  border: 1px solid #a0b3bf;
+  margin: 0px -1px -1px -1px;
+  border-radius: 0 0 5px 5px;
+  border-top: 0;
+  background: white;
 }
 [aria-controls] {
-    cursor: pointer;
+  cursor: pointer;
 }
 [hidden] {
-    display: none;
+  display: none;
 }
 .tab2menu {
-    position: relative;
-    height: 3em; /* 45px; */
-    border-bottom: solid var(--border-colour) 1px;
+  position: relative;
+  height: 3em; /* 45px; */
+  border-bottom: solid var(--border-colour) 1px;
 }
 
 .tab2spacer {
-    display: block;
+  display: block;
 }
 
 .tab2name {
-    float: left;
-    width: auto;
-    height: 2.4em; /*20px;*/
-    color: var(--text-colour);
-    border: solid var(--border-colour) 1px;
-    border-radius: 0.6em; /*10px;*/
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    height: 3em; /*45px;*/
-    padding-left: 1.2em; /*20px;*/
-    padding-right: 1.2em; /*20px;*/
-    padding-top: 0.7em;
+  float: left;
+  width: auto;
+  height: 2.4em; /*20px;*/
+  color: var(--text-colour);
+  border: solid var(--border-colour) 1px;
+  border-radius: 0.6em; /*10px;*/
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  height: 3em; /*45px;*/
+  padding-left: 1.2em; /*20px;*/
+  padding-right: 1.2em; /*20px;*/
+  padding-top: 0.7em;
 }
 
 .tab2name.active {
-    background-color: white;
-    font-weight: 700;
-    color: var(--mid-red);
-    border-bottom: solid white 3px;
+  background-color: white;
+  font-weight: 700;
+  color: var(--mid-red);
+  border-bottom: solid white 3px;
 }
 
 .tab2name.inactive {
-    font-weight: 400;
-    color: var(--text-colour);
-    border-bottom: solid var(--border-colour) 1px;
+  font-weight: 400;
+  color: var(--text-colour);
+  border-bottom: solid var(--border-colour) 1px;
 }
 
 .tab2 * {
-    overflow: auto;
+  overflow: auto;
 }
 
 .tab2 .active > .tab2name {
-    font-weight: 700;
-    color: var(--active-link);
+  font-weight: 700;
+  color: var(--active-link);
 }
 
 .tab2 .inactive > .tab2name {
-    font-weight: 400;
-    color: var(--text-colour);
+  font-weight: 400;
+  color: var(--text-colour);
 }
 
 .tab2.active {
-    display: inline-block;
-    border-left: var(--border-colour) solid 1px;
-    margin-bottom: 0.8em;
-    padding-left: 0.6em;
-    padding-top: 0.5em;
-    padding-bottom: 0;
-    padding-right: 0;
-    width: 100%;
+  display: inline-block;
+  border-left: var(--border-colour) solid 1px;
+  margin-bottom: 0.8em;
+  padding-left: 0.6em;
+  padding-top: 0.5em;
+  padding-bottom: 0;
+  padding-right: 0;
+  width: 100%;
 }
 
 .sphinx-tab {
-    padding: 0 !important;
+  padding: 0 !important;
 }
 
 .tab2.inactive {
-    display: none;
+  display: none;
 }
 
 .active > pre > code {
-    padding: 0.6em;
-    padding-right: 0;
+  padding: 0.6em;
+  padding-right: 0;
 }
 
 /* Turns off old divs that have been emptied with JS */
-.code-tab {
-    display: none;
-}
+/* .code-tab {
+  display: none;
+} */
 
 /* TODO collapse nicely ... */
 .infospec {
-    background: #e1eaf0;
-    color: var(--text-colour);
-    padding: 0.6em;
+  background: #e1eaf0;
+  color: var(--text-colour);
+  padding: 0.6em;
 
-    margin-top: 0;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
 
-    line-height: 1.5em;
-    font-family: "fakt-web", "Lato", "proxima-nova", "Helvetica Neue", "Arial", sans-serif;
+  line-height: 1.5em;
+  font-family: 'fakt-web', 'Lato', 'proxima-nova', 'Helvetica Neue', 'Arial',
+    sans-serif;
 }
 
 /* Anything specified in the Sphinx documents in a container with the type 'quicklinks' shouldn't
    be displayed.  It's intended to provide customisable links in the sidebar. 
 */
 .quicklinks {
-    display: none;
+  display: none;
 }
 
 /*
@@ -479,32 +481,37 @@ pre > code {
 */
 
 dl.glossary dt dt {
-    font-weight: bold;
-    font-size: 1.1em;
+  font-weight: bold;
+  font-size: 1.1em;
 }
 
 dl.glossary > dt > dt {
-    display: none;
+  display: none;
 }
 
 dl.glossary > dt > dt:first-child {
-    display: inherit;
-    font-weight: 500;
-    padding-left: 0;
-    font-style: normal;
-    color: var(--deep-red);
+  display: inherit;
+  font-weight: 500;
+  padding-left: 0;
+  font-style: normal;
+  color: var(--deep-red);
 }
 
 dl.glossary > dt > dd {
-    padding-left: 1em;
+  padding-left: 1em;
 }
 
 .figure-caption {
-    font-size: 90%;
-    text-align: justify;
-    margin: 1em 4em;
+  font-size: 90%;
+  text-align: justify;
+  margin: 1em 4em;
 }
 
 .figure-caption-heading {
-    font-weight: 600;
+  font-weight: 600;
+}
+
+section #contributors img {
+  display: inline;
+  margin-right: 0.5rem;
 }
