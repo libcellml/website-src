@@ -1,7 +1,7 @@
 /* 
  Styles for use with Doxygen-created pages. 
 */
-@import './general.css';
+/* @import './general.css';  Causes doubling up of CSS styles.*/
 
 /* Remove box and shadow from code.  The font and colour is plenty! */
 .v-application pre {

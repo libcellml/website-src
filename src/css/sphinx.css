@@ -1,7 +1,7 @@
 /* 
  Styles to be used on pages generated from Sphinx.
 */
-@import './general.css';
+/* @import './general.css';  Causes doubling up of CSS styles.*/
 
 /* Extra padding under the breadcrumbs for the sphinx pages.*/
 #breadcrumbs {
