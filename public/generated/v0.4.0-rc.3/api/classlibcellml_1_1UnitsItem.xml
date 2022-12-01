@@ -1,0 +1,252 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classlibcellml_1_1UnitsItem" kind="class" language="C++" prot="public">
+    <compoundname>libcellml::UnitsItem</compoundname>
+    <includes refid="types_8h" local="no">types.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlibcellml_1_1UnitsItem_1a4b397a6f8a0fab546169bf4443639e01" prot="private" static="no" mutable="no">
+        <type>UnitsItemImpl *</type>
+        <definition>UnitsItemImpl* libcellml::UnitsItem::mPimpl</definition>
+        <argsstring></argsstring>
+        <name>mPimpl</name>
+        <qualifiedname>libcellml::UnitsItem::mPimpl</qualifiedname>
+        <briefdescription>
+<para>Forward declaration for pImpl idiom,. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Private member to implementation pointer,. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="151" column="19" bodyfile="libcellml/types.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlibcellml_1_1UnitsItem_1a5abf13e28d43df5c3b0cc01f583233e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::UnitsItem::~UnitsItem</definition>
+        <argsstring>()</argsstring>
+        <name>~UnitsItem</name>
+        <qualifiedname>libcellml::UnitsItem::~UnitsItem</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="101" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1UnitsItem_1a0408d84570264514ffc2a310fca6da7a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a3259debe09f915678b203e98100ea10a" kindref="member">UnitsPtr</ref></type>
+        <definition>UnitsPtr libcellml::UnitsItem::units</definition>
+        <argsstring>() const</argsstring>
+        <name>units</name>
+        <qualifiedname>libcellml::UnitsItem::units</qualifiedname>
+        <briefdescription>
+<para>Get the unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the unit in the <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref>.</para>
+<para><simplesect kind="return"><para>The unit. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="126" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1UnitsItem_1aaaadc93c05a16b53fada62ce950217b1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::UnitsItem::index</definition>
+        <argsstring>() const</argsstring>
+        <name>index</name>
+        <qualifiedname>libcellml::UnitsItem::index</qualifiedname>
+        <briefdescription>
+<para>Get the index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the index for the unit in the <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref>.</para>
+<para><simplesect kind="return"><para>The index. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="135" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1UnitsItem_1a13844220df5363126f5052ad125db429" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::UnitsItem::isValid</definition>
+        <argsstring>() const</argsstring>
+        <name>isValid</name>
+        <qualifiedname>libcellml::UnitsItem::isValid</qualifiedname>
+        <briefdescription>
+<para>Test to see if this unit reference is valid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Test to see if the <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref> used in this unit reference exists and has a unit at the given index.</para>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if this unit reference is valid, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="145" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlibcellml_1_1UnitsItem_1a2529dd643a1c2c8d61c34309466ccbe7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::UnitsItem::UnitsItem</definition>
+        <argsstring>()=delete</argsstring>
+        <name>UnitsItem</name>
+        <qualifiedname>libcellml::UnitsItem::UnitsItem</qualifiedname>
+        <briefdescription>
+<para>Constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="102" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1UnitsItem_1a93fd74fb8f164136c4a71b0c3809d26e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::UnitsItem::UnitsItem</definition>
+        <argsstring>(const UnitsItem &amp;rhs)=delete</argsstring>
+        <name>UnitsItem</name>
+        <qualifiedname>libcellml::UnitsItem::UnitsItem</qualifiedname>
+        <param>
+          <type>const <ref refid="classlibcellml_1_1UnitsItem" kindref="compound">UnitsItem</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="103" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1UnitsItem_1a30f1f39f5798ba62f759ab0fa8de945c" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::UnitsItem::UnitsItem</definition>
+        <argsstring>(UnitsItem &amp;&amp;rhs) noexcept=delete</argsstring>
+        <name>UnitsItem</name>
+        <qualifiedname>libcellml::UnitsItem::UnitsItem</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1UnitsItem" kindref="compound">UnitsItem</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="104" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1UnitsItem_1a486ebb52466104d01b80376bde1b8f3e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1UnitsItem" kindref="compound">UnitsItem</ref> &amp;</type>
+        <definition>UnitsItem &amp; libcellml::UnitsItem::operator=</definition>
+        <argsstring>(UnitsItem rhs)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>libcellml::UnitsItem::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1UnitsItem" kindref="compound">UnitsItem</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="105" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1UnitsItem_1ab4ba8bad5b94bac3f024df5285613659" prot="private" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::UnitsItem::UnitsItem</definition>
+        <argsstring>(const UnitsPtr &amp;units, size_t index)</argsstring>
+        <name>UnitsItem</name>
+        <qualifiedname>libcellml::UnitsItem::UnitsItem</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a3259debe09f915678b203e98100ea10a" kindref="member">UnitsPtr</ref> &amp;</type>
+          <declname>units</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Constructor with two variables as parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="148" column="14"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classlibcellml_1_1UnitsItem_1a3b5173b71f2aa912c84716e3d4766e37" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a29f1c2968e2baea904984ba46c9032b0" kindref="member">UnitsItemPtr</ref></type>
+        <definition>static UnitsItemPtr libcellml::UnitsItem::create</definition>
+        <argsstring>(const UnitsPtr &amp;units, size_t index) noexcept</argsstring>
+        <name>create</name>
+        <qualifiedname>libcellml::UnitsItem::create</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a3259debe09f915678b203e98100ea10a" kindref="member">UnitsPtr</ref> &amp;</type>
+          <declname>units</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Create a units item reference object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Factory method to create a <ref refid="namespacelibcellml_1a29f1c2968e2baea904984ba46c9032b0" kindref="member">UnitsItemPtr</ref>. Create a units item with <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref> and index with::</para>
+<para>auto unitsItem = libcellml::UnitsItemPtr::create(units, index);</para>
+<para><simplesect kind="return"><para>A smart pointer to a <ref refid="namespacelibcellml_1a29f1c2968e2baea904984ba46c9032b0" kindref="member">UnitsItemPtr</ref> object. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/types.h" line="117" column="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classlibcellml_1_1UnitsItem" kindref="compound">UnitsItem</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classlibcellml_1_1UnitsItem" kindref="compound">UnitsItem</ref> class contains a <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref> to the parent <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref> item, and the index to the <ref refid="classlibcellml_1_1UnitsItem" kindref="compound">UnitsItem</ref> item within the <ref refid="classlibcellml_1_1Units" kindref="compound">Units</ref>. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>libcellml::UnitsItem</label>
+        <link refid="classlibcellml_1_1UnitsItem"/>
+      </node>
+    </collaborationgraph>
+    <location file="libcellml/types.h" line="98" column="1" bodyfile="libcellml/types.h" bodystart="99" bodyend="152"/>
+    <listofallmembers>
+      <member refid="classlibcellml_1_1UnitsItem_1a3b5173b71f2aa912c84716e3d4766e37" prot="public" virt="non-virtual"><scope>libcellml::UnitsItem</scope><name>create</name></member>
+      <member refid="classlibcellml_1_1UnitsItem_1aaaadc93c05a16b53fada62ce950217b1" prot="public" virt="non-virtual"><scope>libcellml::UnitsItem</scope><name>index</name></member>
+      <member refid="classlibcellml_1_1UnitsItem_1a13844220df5363126f5052ad125db429" prot="public" virt="non-virtual"><scope>libcellml::UnitsItem</scope><name>isValid</name></member>
+      <member refid="classlibcellml_1_1UnitsItem_1a4b397a6f8a0fab546169bf4443639e01" prot="private" virt="non-virtual"><scope>libcellml::UnitsItem</scope><name>mPimpl</name></member>
+      <member refid="classlibcellml_1_1UnitsItem_1a486ebb52466104d01b80376bde1b8f3e" prot="private" virt="non-virtual"><scope>libcellml::UnitsItem</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1UnitsItem_1a0408d84570264514ffc2a310fca6da7a" prot="public" virt="non-virtual"><scope>libcellml::UnitsItem</scope><name>units</name></member>
+      <member refid="classlibcellml_1_1UnitsItem_1a2529dd643a1c2c8d61c34309466ccbe7" prot="private" virt="non-virtual"><scope>libcellml::UnitsItem</scope><name>UnitsItem</name></member>
+      <member refid="classlibcellml_1_1UnitsItem_1a93fd74fb8f164136c4a71b0c3809d26e" prot="private" virt="non-virtual"><scope>libcellml::UnitsItem</scope><name>UnitsItem</name></member>
+      <member refid="classlibcellml_1_1UnitsItem_1a30f1f39f5798ba62f759ab0fa8de945c" prot="private" virt="non-virtual"><scope>libcellml::UnitsItem</scope><name>UnitsItem</name></member>
+      <member refid="classlibcellml_1_1UnitsItem_1ab4ba8bad5b94bac3f024df5285613659" prot="private" virt="non-virtual"><scope>libcellml::UnitsItem</scope><name>UnitsItem</name></member>
+      <member refid="classlibcellml_1_1UnitsItem_1a5abf13e28d43df5c3b0cc01f583233e0" prot="public" virt="non-virtual"><scope>libcellml::UnitsItem</scope><name>~UnitsItem</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

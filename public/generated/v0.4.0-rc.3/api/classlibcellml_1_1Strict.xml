@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classlibcellml_1_1Strict" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>libcellml::Strict</compoundname>
+    <derivedcompoundref refid="classlibcellml_1_1Importer" prot="public" virt="non-virtual">libcellml::Importer</derivedcompoundref>
+    <derivedcompoundref refid="classlibcellml_1_1Parser" prot="public" virt="non-virtual">libcellml::Parser</derivedcompoundref>
+    <includes refid="strict_8h" local="no">strict.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlibcellml_1_1Strict_1ada246ef220149158551a0af89a68123e" prot="private" static="no" mutable="no">
+        <type>StrictImpl *</type>
+        <definition>StrictImpl* libcellml::Strict::mPimpl</definition>
+        <argsstring></argsstring>
+        <name>mPimpl</name>
+        <qualifiedname>libcellml::Strict::mPimpl</qualifiedname>
+        <briefdescription>
+<para>Private member to implementation pointer,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/strict.h" line="87" column="16" bodyfile="libcellml/strict.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlibcellml_1_1Strict_1aa43c85f0c4a9dd2aafe56b5b73279697" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type></type>
+        <definition>virtual libcellml::Strict::~Strict</definition>
+        <argsstring>()=0</argsstring>
+        <name>~Strict</name>
+        <qualifiedname>libcellml::Strict::~Strict</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/strict.h" line="31" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Strict_1a498b0f6f61913b0dd5554fe54c2e6962" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Strict::Strict</definition>
+        <argsstring>(const Strict &amp;rhs)=delete</argsstring>
+        <name>Strict</name>
+        <qualifiedname>libcellml::Strict::Strict</qualifiedname>
+        <param>
+          <type>const <ref refid="classlibcellml_1_1Strict" kindref="compound">Strict</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/strict.h" line="32" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Strict_1ae13c29d406755edf3cb138ab08b94325" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Strict::Strict</definition>
+        <argsstring>(Strict &amp;&amp;rhs) noexcept=delete</argsstring>
+        <name>Strict</name>
+        <qualifiedname>libcellml::Strict::Strict</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Strict" kindref="compound">Strict</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/strict.h" line="33" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Strict_1aecd81422a1c15521c35de5af3ff0d796" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::Strict::setStrict</definition>
+        <argsstring>(bool strict)</argsstring>
+        <name>setStrict</name>
+        <qualifiedname>libcellml::Strict::setStrict</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>strict</declname>
+        </param>
+        <briefdescription>
+<para>Set the strict flag for the object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the strict flag to the value of the <computeroutput>strict</computeroutput> parameter.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Strict_1a56af8a3a4dc0d2d3d022012694281309" kindref="member">isStrict</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>strict</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The boolean value to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/strict.h" line="44" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Strict_1a56af8a3a4dc0d2d3d022012694281309" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::Strict::isStrict</definition>
+        <argsstring>() const</argsstring>
+        <name>isStrict</name>
+        <qualifiedname>libcellml::Strict::isStrict</qualifiedname>
+        <briefdescription>
+<para>Is the object in strict mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if the object has the strict flag set.</para>
+<para><simplesect kind="see"><para><ref refid="classlibcellml_1_1Strict_1aecd81422a1c15521c35de5af3ff0d796" kindref="member">setStrict</ref></para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the object has the strict flag set, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/strict.h" line="55" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlibcellml_1_1Strict_1ae26763b2712f87a44a755308bec26685" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Strict::Strict</definition>
+        <argsstring>()</argsstring>
+        <name>Strict</name>
+        <qualifiedname>libcellml::Strict::Strict</qualifiedname>
+        <briefdescription>
+<para>Forward declaration for pImpl idiom,. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor for derived classes,. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/strict.h" line="60" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Strict_1a3ba04c88d4fb072df7b0c59104abdc64" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>StrictImpl *</type>
+        <definition>StrictImpl * libcellml::Strict::pFunc</definition>
+        <argsstring>()</argsstring>
+        <name>pFunc</name>
+        <qualifiedname>libcellml::Strict::pFunc</qualifiedname>
+        <briefdescription>
+<para>Getter for private implementation pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Getter for private implementation pointer,.</para>
+<para><simplesect kind="return"><para>A pointer to EntityImpl. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/strict.h" line="69" column="16" bodyfile="libcellml/strict.h" bodystart="69" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Strict_1a27ffdf557d34b72795a3072b2a3275aa" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const StrictImpl *</type>
+        <definition>const StrictImpl * libcellml::Strict::pFunc</definition>
+        <argsstring>() const</argsstring>
+        <name>pFunc</name>
+        <qualifiedname>libcellml::Strict::pFunc</qualifiedname>
+        <briefdescription>
+<para>Const getter for private implementation pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Const getter for private implementation pointer,.</para>
+<para><simplesect kind="return"><para>A pointer to const EntityImpl. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/strict.h" line="81" column="22" bodyfile="libcellml/strict.h" bodystart="81" bodyend="84"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classlibcellml_1_1Strict" kindref="compound">Strict</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Base class for all libCellML classes that need to have a strict interface. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>libcellml::Importer</label>
+        <link refid="classlibcellml_1_1Importer"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>libcellml::Parser</label>
+        <link refid="classlibcellml_1_1Parser"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>libcellml::Strict</label>
+        <link refid="classlibcellml_1_1Strict"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>libcellml::Strict</label>
+        <link refid="classlibcellml_1_1Strict"/>
+      </node>
+    </collaborationgraph>
+    <location file="libcellml/strict.h" line="28" column="1" bodyfile="libcellml/strict.h" bodystart="29" bodyend="88"/>
+    <listofallmembers>
+      <member refid="classlibcellml_1_1Strict_1a56af8a3a4dc0d2d3d022012694281309" prot="public" virt="non-virtual"><scope>libcellml::Strict</scope><name>isStrict</name></member>
+      <member refid="classlibcellml_1_1Strict_1ada246ef220149158551a0af89a68123e" prot="private" virt="non-virtual"><scope>libcellml::Strict</scope><name>mPimpl</name></member>
+      <member refid="classlibcellml_1_1Strict_1a3ba04c88d4fb072df7b0c59104abdc64" prot="private" virt="non-virtual"><scope>libcellml::Strict</scope><name>pFunc</name></member>
+      <member refid="classlibcellml_1_1Strict_1a27ffdf557d34b72795a3072b2a3275aa" prot="private" virt="non-virtual"><scope>libcellml::Strict</scope><name>pFunc</name></member>
+      <member refid="classlibcellml_1_1Strict_1aecd81422a1c15521c35de5af3ff0d796" prot="public" virt="non-virtual"><scope>libcellml::Strict</scope><name>setStrict</name></member>
+      <member refid="classlibcellml_1_1Strict_1a498b0f6f61913b0dd5554fe54c2e6962" prot="public" virt="non-virtual"><scope>libcellml::Strict</scope><name>Strict</name></member>
+      <member refid="classlibcellml_1_1Strict_1ae13c29d406755edf3cb138ab08b94325" prot="public" virt="non-virtual"><scope>libcellml::Strict</scope><name>Strict</name></member>
+      <member refid="classlibcellml_1_1Strict_1ae26763b2712f87a44a755308bec26685" prot="private" virt="non-virtual"><scope>libcellml::Strict</scope><name>Strict</name></member>
+      <member refid="classlibcellml_1_1Strict_1aa43c85f0c4a9dd2aafe56b5b73279697" prot="public" virt="pure-virtual"><scope>libcellml::Strict</scope><name>~Strict</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

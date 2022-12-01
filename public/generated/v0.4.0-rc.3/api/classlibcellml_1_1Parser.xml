@@ -1,0 +1,256 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classlibcellml_1_1Parser" kind="class" language="C++" prot="public">
+    <compoundname>libcellml::Parser</compoundname>
+    <basecompoundref refid="classlibcellml_1_1Logger" prot="public" virt="non-virtual">libcellml::Logger</basecompoundref>
+    <basecompoundref refid="classlibcellml_1_1Strict" prot="public" virt="non-virtual">libcellml::Strict</basecompoundref>
+    <includes refid="parser_8h" local="no">parser.h</includes>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlibcellml_1_1Parser_1aaa0f050f797efe0e5bba8012365e5f61" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Parser::~Parser</definition>
+        <argsstring>() override</argsstring>
+        <name>~Parser</name>
+        <qualifiedname>libcellml::Parser::~Parser</qualifiedname>
+        <briefdescription>
+<para>Destructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/parser.h" line="35" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Parser_1a6355eb466ad62937f1e11b95b18dcbf2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Parser::Parser</definition>
+        <argsstring>(const Parser &amp;rhs)=delete</argsstring>
+        <name>Parser</name>
+        <qualifiedname>libcellml::Parser::Parser</qualifiedname>
+        <param>
+          <type>const <ref refid="classlibcellml_1_1Parser" kindref="compound">Parser</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/parser.h" line="36" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Parser_1abef5e7b629ab37add78300099afc6290" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Parser::Parser</definition>
+        <argsstring>(Parser &amp;&amp;rhs) noexcept=delete</argsstring>
+        <name>Parser</name>
+        <qualifiedname>libcellml::Parser::Parser</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Parser" kindref="compound">Parser</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/parser.h" line="37" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Parser_1af561cf532e3de31310a5ffd503c2be0b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1Parser" kindref="compound">Parser</ref> &amp;</type>
+        <definition>Parser &amp; libcellml::Parser::operator=</definition>
+        <argsstring>(Parser rhs)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>libcellml::Parser::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Parser" kindref="compound">Parser</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/parser.h" line="38" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Parser_1aa7615d22f48a204bdc9a767acc03c1cb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Parser::Parser</definition>
+        <argsstring>()</argsstring>
+        <name>Parser</name>
+        <qualifiedname>libcellml::Parser::Parser</qualifiedname>
+        <briefdescription>
+<para>Constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/parser.h" line="84" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Parser_1a5ea08d2c49c6648247a1b2f8e27aa8db" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ParserImpl *</type>
+        <definition>ParserImpl * libcellml::Parser::pFunc</definition>
+        <argsstring>()</argsstring>
+        <name>pFunc</name>
+        <qualifiedname>libcellml::Parser::pFunc</qualifiedname>
+        <briefdescription>
+<para>Forward declaration for pImpl idiom,. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Getter for private implementation pointer,. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/parser.h" line="88" column="16"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classlibcellml_1_1Parser_1ab1660f7a2608e89ecbbe5beb61820be4" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a8b173eeb9712743770c113924ca0c6a4" kindref="member">ParserPtr</ref></type>
+        <definition>static ParserPtr libcellml::Parser::create</definition>
+        <argsstring>(bool strict=true) noexcept</argsstring>
+        <name>create</name>
+        <qualifiedname>libcellml::Parser::create</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>strict</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Create a <computeroutput><ref refid="classlibcellml_1_1Parser" kindref="compound">Parser</ref></computeroutput> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Factory method to create a <computeroutput><ref refid="classlibcellml_1_1Parser" kindref="compound">Parser</ref></computeroutput>. Create a strict parser with:</para>
+<para><programlisting><codeline><highlight class="normal"><ref refid="namespacelibcellml_1a8b173eeb9712743770c113924ca0c6a4" kindref="member">ParserPtr</ref><sp/>parser<sp/>=<sp/><ref refid="classlibcellml_1_1Parser_1ab1660f7a2608e89ecbbe5beb61820be4" kindref="member">libcellml::Parser::create</ref>();</highlight></codeline>
+</programlisting></para>
+<para>Create a parser with the strict flag set to <computeroutput>false</computeroutput> with:</para>
+<para><programlisting><codeline><highlight class="normal"><ref refid="namespacelibcellml_1a8b173eeb9712743770c113924ca0c6a4" kindref="member">ParserPtr</ref><sp/>parser<sp/>=<sp/><ref refid="classlibcellml_1_1Parser_1ab1660f7a2608e89ecbbe5beb61820be4" kindref="member">libcellml::Parser::create</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>strict</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[optional] A boolean value to set the strict flag to.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A smart pointer to a <computeroutput><ref refid="classlibcellml_1_1Parser" kindref="compound">Parser</ref></computeroutput> object. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/parser.h" line="60" column="22"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlibcellml_1_1Parser_1a7b15027b4d3b39ae2c3b675747644d57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref></type>
+        <definition>ModelPtr libcellml::Parser::parseModel</definition>
+        <argsstring>(const std::string &amp;input)</argsstring>
+        <name>parseModel</name>
+        <qualifiedname>libcellml::Parser::parseModel</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>Create and populate a new model from a <computeroutput>std::string</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates and populates a new model pointer by parsing CellML entities and attributes from the <computeroutput>input</computeroutput> <computeroutput>std::string</computeroutput>.</para>
+<para>All existing issues will be removed before the input is parsed.</para>
+<para>Returns a <computeroutput>nullptr</computeroutput> if the <computeroutput>input</computeroutput> is not a <computeroutput>std::string</computeroutput> representation of a CellML model.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to parse into a model.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The new <computeroutput>ModelPtr</computeroutput> deserialised from the input string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/parser.h" line="77" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classlibcellml_1_1Parser" kindref="compound">Parser</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classlibcellml_1_1Parser" kindref="compound">Parser</ref> class is for representing a CellML <ref refid="classlibcellml_1_1Parser" kindref="compound">Parser</ref>. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>libcellml::Logger</label>
+        <link refid="classlibcellml_1_1Logger"/>
+      </node>
+      <node id="1">
+        <label>libcellml::Parser</label>
+        <link refid="classlibcellml_1_1Parser"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>libcellml::Strict</label>
+        <link refid="classlibcellml_1_1Strict"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>libcellml::Logger</label>
+        <link refid="classlibcellml_1_1Logger"/>
+      </node>
+      <node id="1">
+        <label>libcellml::Parser</label>
+        <link refid="classlibcellml_1_1Parser"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>libcellml::Strict</label>
+        <link refid="classlibcellml_1_1Strict"/>
+      </node>
+    </collaborationgraph>
+    <location file="libcellml/parser.h" line="32" column="1" bodyfile="libcellml/parser.h" bodystart="33" bodyend="89"/>
+    <listofallmembers>
+      <member refid="classlibcellml_1_1Parser_1ab1660f7a2608e89ecbbe5beb61820be4" prot="public" virt="non-virtual"><scope>libcellml::Parser</scope><name>create</name></member>
+      <member refid="classlibcellml_1_1Logger_1a5a260a645de3be9ffb844ce3f7584c4f" prot="public" virt="non-virtual"><scope>libcellml::Parser</scope><name>error</name></member>
+      <member refid="classlibcellml_1_1Logger_1a6bb9f053eb4f1b743167b84bbf5e9b34" prot="public" virt="non-virtual"><scope>libcellml::Parser</scope><name>errorCount</name></member>
+      <member refid="classlibcellml_1_1Strict_1a56af8a3a4dc0d2d3d022012694281309" prot="public" virt="non-virtual"><scope>libcellml::Parser</scope><name>isStrict</name></member>
+      <member refid="classlibcellml_1_1Logger_1a192650ae59ea8747feb6c4f09de6a389" prot="public" virt="non-virtual"><scope>libcellml::Parser</scope><name>issue</name></member>
+      <member refid="classlibcellml_1_1Logger_1a3c078e9502a10748ade938374faef6d9" prot="public" virt="non-virtual"><scope>libcellml::Parser</scope><name>issueCount</name></member>
+      <member refid="classlibcellml_1_1Logger_1a866117b4f6589724a2fd01f88e56d66f" prot="public" virt="non-virtual"><scope>libcellml::Parser</scope><name>message</name></member>
+      <member refid="classlibcellml_1_1Logger_1a05e6f7de0ed9a88611d3c9749e3dbd21" prot="public" virt="non-virtual"><scope>libcellml::Parser</scope><name>messageCount</name></member>
+      <member refid="classlibcellml_1_1Parser_1af561cf532e3de31310a5ffd503c2be0b" prot="private" virt="non-virtual"><scope>libcellml::Parser</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1Parser_1a7b15027b4d3b39ae2c3b675747644d57" prot="public" virt="non-virtual"><scope>libcellml::Parser</scope><name>parseModel</name></member>
+      <member refid="classlibcellml_1_1Parser_1a6355eb466ad62937f1e11b95b18dcbf2" prot="private" virt="non-virtual"><scope>libcellml::Parser</scope><name>Parser</name></member>
+      <member refid="classlibcellml_1_1Parser_1abef5e7b629ab37add78300099afc6290" prot="private" virt="non-virtual"><scope>libcellml::Parser</scope><name>Parser</name></member>
+      <member refid="classlibcellml_1_1Parser_1aa7615d22f48a204bdc9a767acc03c1cb" prot="private" virt="non-virtual"><scope>libcellml::Parser</scope><name>Parser</name></member>
+      <member refid="classlibcellml_1_1Parser_1a5ea08d2c49c6648247a1b2f8e27aa8db" prot="private" virt="non-virtual"><scope>libcellml::Parser</scope><name>pFunc</name></member>
+      <member refid="classlibcellml_1_1Strict_1aecd81422a1c15521c35de5af3ff0d796" prot="public" virt="non-virtual"><scope>libcellml::Parser</scope><name>setStrict</name></member>
+      <member refid="classlibcellml_1_1Strict_1a498b0f6f61913b0dd5554fe54c2e6962" prot="public" virt="non-virtual"><scope>libcellml::Parser</scope><name>Strict</name></member>
+      <member refid="classlibcellml_1_1Strict_1ae13c29d406755edf3cb138ab08b94325" prot="public" virt="non-virtual"><scope>libcellml::Parser</scope><name>Strict</name></member>
+      <member refid="classlibcellml_1_1Logger_1a610d4878881567899c6d47db5e625736" prot="public" virt="non-virtual"><scope>libcellml::Parser</scope><name>warning</name></member>
+      <member refid="classlibcellml_1_1Logger_1a6973054ad6d00d9bb6d2bfb488cdfebd" prot="public" virt="non-virtual"><scope>libcellml::Parser</scope><name>warningCount</name></member>
+      <member refid="classlibcellml_1_1Parser_1aaa0f050f797efe0e5bba8012365e5f61" prot="private" virt="non-virtual"><scope>libcellml::Parser</scope><name>~Parser</name></member>
+      <member refid="classlibcellml_1_1Strict_1aa43c85f0c4a9dd2aafe56b5b73279697" prot="public" virt="pure-virtual"><scope>libcellml::Parser</scope><name>~Strict</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classlibcellml_1_1Printer" kind="class" language="C++" prot="public">
+    <compoundname>libcellml::Printer</compoundname>
+    <basecompoundref refid="classlibcellml_1_1Logger" prot="public" virt="non-virtual">libcellml::Logger</basecompoundref>
+    <includes refid="printer_8h" local="no">printer.h</includes>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlibcellml_1_1Printer_1a475817046e4dd45b702145e849e8035c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Printer::~Printer</definition>
+        <argsstring>()</argsstring>
+        <name>~Printer</name>
+        <qualifiedname>libcellml::Printer::~Printer</qualifiedname>
+        <briefdescription>
+<para>Destructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/printer.h" line="35" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Printer_1afe41e754e8a55e0c8a8f9f8358de7382" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Printer::Printer</definition>
+        <argsstring>(const Printer &amp;rhs)=delete</argsstring>
+        <name>Printer</name>
+        <qualifiedname>libcellml::Printer::Printer</qualifiedname>
+        <param>
+          <type>const <ref refid="classlibcellml_1_1Printer" kindref="compound">Printer</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/printer.h" line="36" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Printer_1a8d1a5656e2daba9fe9f470ad04414a6a" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Printer::Printer</definition>
+        <argsstring>(Printer &amp;&amp;rhs) noexcept=delete</argsstring>
+        <name>Printer</name>
+        <qualifiedname>libcellml::Printer::Printer</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Printer" kindref="compound">Printer</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/printer.h" line="37" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Printer_1abecd06b8785e0da728af8a4f65e0acf0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1Printer" kindref="compound">Printer</ref> &amp;</type>
+        <definition>Printer &amp; libcellml::Printer::operator=</definition>
+        <argsstring>(Printer rhs)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>libcellml::Printer::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Printer" kindref="compound">Printer</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/printer.h" line="38" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Printer_1a38d4e60e84d43fc0a5b5bda9b50bdb9d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Printer::Printer</definition>
+        <argsstring>()</argsstring>
+        <name>Printer</name>
+        <qualifiedname>libcellml::Printer::Printer</qualifiedname>
+        <briefdescription>
+<para>Constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/printer.h" line="66" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Printer_1aad32b4bcf7b841d9aa3dfafe203f2951" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PrinterImpl *</type>
+        <definition>PrinterImpl * libcellml::Printer::pFunc</definition>
+        <argsstring>()</argsstring>
+        <name>pFunc</name>
+        <qualifiedname>libcellml::Printer::pFunc</qualifiedname>
+        <briefdescription>
+<para>Forward declaration for pImpl idiom,. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Getter for private implementation pointer,. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/printer.h" line="69" column="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classlibcellml_1_1Printer_1abff684fb9b08a912a52550aaf29ecda2" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a913339cf95fb4f383b7f463c7f89b31f" kindref="member">PrinterPtr</ref></type>
+        <definition>static PrinterPtr libcellml::Printer::create</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>create</name>
+        <qualifiedname>libcellml::Printer::create</qualifiedname>
+        <briefdescription>
+<para>Create a <computeroutput><ref refid="classlibcellml_1_1Printer" kindref="compound">Printer</ref></computeroutput> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Factory method to create a <computeroutput><ref refid="classlibcellml_1_1Printer" kindref="compound">Printer</ref></computeroutput>. Create a printer with::</para>
+<para>PrinterPtr printer = <ref refid="classlibcellml_1_1Printer_1abff684fb9b08a912a52550aaf29ecda2" kindref="member">libcellml::Printer::create()</ref>;</para>
+<para><simplesect kind="return"><para>A smart pointer to a <computeroutput><ref refid="classlibcellml_1_1Printer" kindref="compound">Printer</ref></computeroutput> object. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/printer.h" line="50" column="23"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlibcellml_1_1Printer_1ab25162352967098ae460c45ae2096300" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Printer::printModel</definition>
+        <argsstring>(const ModelPtr &amp;model, bool autoIds=false)</argsstring>
+        <name>printModel</name>
+        <qualifiedname>libcellml::Printer::printModel</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref> &amp;</type>
+          <declname>model</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>autoIds</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Serialise the <ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref> to <computeroutput>std::string</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Serialise the given <computeroutput>model</computeroutput> to a std::string. Has an optional argument to automatically add identifiers to all elements in the resulting document.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref> to serialise. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>autoIds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional argument that when <computeroutput>true</computeroutput> will add identifiers to all elements in the resulting document.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <computeroutput>std::string</computeroutput> representation of the <ref refid="classlibcellml_1_1Model" kindref="compound">Model</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/printer.h" line="63" column="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classlibcellml_1_1Printer" kindref="compound">Printer</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classlibcellml_1_1Printer" kindref="compound">Printer</ref> class is for representing a CellML <ref refid="classlibcellml_1_1Printer" kindref="compound">Printer</ref>. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>libcellml::Logger</label>
+        <link refid="classlibcellml_1_1Logger"/>
+      </node>
+      <node id="1">
+        <label>libcellml::Printer</label>
+        <link refid="classlibcellml_1_1Printer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>libcellml::Logger</label>
+        <link refid="classlibcellml_1_1Logger"/>
+      </node>
+      <node id="1">
+        <label>libcellml::Printer</label>
+        <link refid="classlibcellml_1_1Printer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libcellml/printer.h" line="32" column="1" bodyfile="libcellml/printer.h" bodystart="33" bodyend="70"/>
+    <listofallmembers>
+      <member refid="classlibcellml_1_1Printer_1abff684fb9b08a912a52550aaf29ecda2" prot="public" virt="non-virtual"><scope>libcellml::Printer</scope><name>create</name></member>
+      <member refid="classlibcellml_1_1Logger_1a5a260a645de3be9ffb844ce3f7584c4f" prot="public" virt="non-virtual"><scope>libcellml::Printer</scope><name>error</name></member>
+      <member refid="classlibcellml_1_1Logger_1a6bb9f053eb4f1b743167b84bbf5e9b34" prot="public" virt="non-virtual"><scope>libcellml::Printer</scope><name>errorCount</name></member>
+      <member refid="classlibcellml_1_1Logger_1a192650ae59ea8747feb6c4f09de6a389" prot="public" virt="non-virtual"><scope>libcellml::Printer</scope><name>issue</name></member>
+      <member refid="classlibcellml_1_1Logger_1a3c078e9502a10748ade938374faef6d9" prot="public" virt="non-virtual"><scope>libcellml::Printer</scope><name>issueCount</name></member>
+      <member refid="classlibcellml_1_1Logger_1a866117b4f6589724a2fd01f88e56d66f" prot="public" virt="non-virtual"><scope>libcellml::Printer</scope><name>message</name></member>
+      <member refid="classlibcellml_1_1Logger_1a05e6f7de0ed9a88611d3c9749e3dbd21" prot="public" virt="non-virtual"><scope>libcellml::Printer</scope><name>messageCount</name></member>
+      <member refid="classlibcellml_1_1Printer_1abecd06b8785e0da728af8a4f65e0acf0" prot="private" virt="non-virtual"><scope>libcellml::Printer</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1Printer_1aad32b4bcf7b841d9aa3dfafe203f2951" prot="private" virt="non-virtual"><scope>libcellml::Printer</scope><name>pFunc</name></member>
+      <member refid="classlibcellml_1_1Printer_1afe41e754e8a55e0c8a8f9f8358de7382" prot="private" virt="non-virtual"><scope>libcellml::Printer</scope><name>Printer</name></member>
+      <member refid="classlibcellml_1_1Printer_1a8d1a5656e2daba9fe9f470ad04414a6a" prot="private" virt="non-virtual"><scope>libcellml::Printer</scope><name>Printer</name></member>
+      <member refid="classlibcellml_1_1Printer_1a38d4e60e84d43fc0a5b5bda9b50bdb9d" prot="private" virt="non-virtual"><scope>libcellml::Printer</scope><name>Printer</name></member>
+      <member refid="classlibcellml_1_1Printer_1ab25162352967098ae460c45ae2096300" prot="public" virt="non-virtual"><scope>libcellml::Printer</scope><name>printModel</name></member>
+      <member refid="classlibcellml_1_1Logger_1a610d4878881567899c6d47db5e625736" prot="public" virt="non-virtual"><scope>libcellml::Printer</scope><name>warning</name></member>
+      <member refid="classlibcellml_1_1Logger_1a6973054ad6d00d9bb6d2bfb488cdfebd" prot="public" virt="non-virtual"><scope>libcellml::Printer</scope><name>warningCount</name></member>
+      <member refid="classlibcellml_1_1Printer_1a475817046e4dd45b702145e849e8035c" prot="private" virt="non-virtual"><scope>libcellml::Printer</scope><name>~Printer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
