@@ -6,16 +6,11 @@
     :winOSVersions="curWinOSVersions"
   />
   <h1>Previous libCellML releases</h1>
-  <div v-if="true">
-    <h3>Currently there are no previous releases available.</h3>
-  </div>
-  <div v-else>
-    <download-assets
-      :macOSVersions="prevMacOSVersions"
-      :linuxOSVersions="prevLinuxOSVersions"
-      :winOSVersions="prevWinOSVersions"
-    />
-  </div>
+  <download-assets
+    :macOSVersions="prevMacOSVersions"
+    :linuxOSVersions="prevLinuxOSVersions"
+    :winOSVersions="prevWinOSVersions"
+  />
 </template>
 
 <script setup>
@@ -47,34 +42,31 @@ function addEntry(recipient, assetDetails, version) {
 
 const latestVersion = availableVersions[0]
 for (const version of availableVersions) {
-  if (latestVersion === version) {
-    checkDownloadAvailability(version).then((response) => {
-      if (response) {
-        for (const entry of response.release.releaseAssets.edges) {
-          if (entry.node.name.includes('macos')) {
-            addEntry(curMacOSVersions, entry.node, version)
-          } else if (entry.node.name.includes('windows')) {
-            addEntry(curWinOSVersions, entry.node, version)
-          } else if (entry.node.name.includes('ubuntu')) {
-            addEntry(curLinuxOSVersions, entry.node, version)
-          }
+  const isLatest = latestVersion === version
+  checkDownloadAvailability(version).then((response) => {
+    if (response) {
+      for (const entry of response.release.releaseAssets.edges) {
+        if (entry.node.name.includes('macos')) {
+          addEntry(
+            isLatest ? curMacOSVersions : prevMacOSVersions,
+            entry.node,
+            version
+          )
+        } else if (entry.node.name.includes('windows')) {
+          addEntry(
+            isLatest ? curWinOSVersions : prevWinOSVersions,
+            entry.node,
+            version
+          )
+        } else if (entry.node.name.includes('ubuntu')) {
+          addEntry(
+            isLatest ? curLinuxOSVersions : prevLinuxOSVersions,
+            entry.node,
+            version
+          )
         }
       }
-    })
-  } else {
-    checkDownloadAvailability(version).then((response) => {
-      if (response) {
-        for (const entry of response.release.releaseAssets.edges) {
-          if (entry.node.name.includes('macos')) {
-            addEntry(prevMacOSVersions, entry.node, version)
-          } else if (entry.node.name.includes('windows')) {
-            addEntry(prevWinOSVersions, entry.node, version)
-          } else if (entry.node.name.includes('ubuntu')) {
-            addEntry(prevLinuxOSVersions, entry.node, version)
-          }
-        }
-      }
-    })
-  }
+    }
+  })
 }
 </script>
