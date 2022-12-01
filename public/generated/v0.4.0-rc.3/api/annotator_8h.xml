@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="annotator_8h" kind="file" language="C++">
+    <compoundname>annotator.h</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes refid="logger_8h" local="yes">libcellml/logger.h</includes>
+    <includes refid="types_8h" local="yes">libcellml/types.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>libcellml/annotator.h</label>
+        <link refid="annotator_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>libcellml/enums.h</label>
+        <link refid="enums_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>libcellml/logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>libcellml/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>libcellml/exportdefinitions.h</label>
+      </node>
+      <node id="7">
+        <label>map</label>
+      </node>
+      <node id="8">
+        <label>memory</label>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="9">
+        <label>utility</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classlibcellml_1_1Annotator" prot="public">libcellml::Annotator</innerclass>
+    <innernamespace refid="namespacelibcellml">libcellml</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">Copyright<sp/>libCellML<sp/>Contributors</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment">Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"></highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="logger_8h" kindref="compound">libcellml/logger.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound">libcellml/types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacelibcellml" kindref="compound">libcellml</ref><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="classlibcellml_1_1Annotator" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">LIBCELLML_EXPORT<sp/><ref refid="classlibcellml_1_1Annotator" kindref="compound">Annotator</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1Logger" kindref="compound">Logger</ref></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classlibcellml_1_1Annotator" kindref="compound">~Annotator</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classlibcellml_1_1Annotator" kindref="compound">Annotator</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1Annotator" kindref="compound">Annotator</ref><sp/>&amp;rhs)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classlibcellml_1_1Annotator" kindref="compound">Annotator</ref>(<ref refid="classlibcellml_1_1Annotator" kindref="compound">Annotator</ref><sp/>&amp;&amp;rhs)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classlibcellml_1_1Annotator" kindref="compound">Annotator</ref><sp/>&amp;operator=(<ref refid="classlibcellml_1_1Annotator" kindref="compound">Annotator</ref><sp/>rhs)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="52" refid="classlibcellml_1_1Annotator_1ad6bec1cd4eaddfd27152eda74db6e853" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespacelibcellml_1a06e401be76fde0b91c9b6fe737e1b371" kindref="member">AnnotatorPtr</ref><sp/><ref refid="classlibcellml_1_1Annotator_1ad6bec1cd4eaddfd27152eda74db6e853" kindref="member">create</ref>()<sp/>noexcept;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="classlibcellml_1_1Annotator_1a07028637ed7a556f42285e5d6ac2e54a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setModel(const<sp/><ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref><sp/>&amp;model);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="classlibcellml_1_1Annotator_1aec28f90c2593cfd69fec7ab6dcf72ec0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref><sp/>model()<sp/>const;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="classlibcellml_1_1Annotator_1af02e7830260850c7f46024690f78031a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1adfe61184a6b1f01266643d95352af87c" kindref="member">AnyCellmlElementPtr</ref><sp/>item(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="classlibcellml_1_1Annotator_1a6c6e162ebf2ce54c0e77b54d7aa79621" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1adfe61184a6b1f01266643d95352af87c" kindref="member">AnyCellmlElementPtr</ref><sp/>item(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="classlibcellml_1_1Annotator_1ab18b13332bcb08463615a7f9b6f1830e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref><sp/>component(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155" refid="classlibcellml_1_1Annotator_1a798a95bde9e802a21c31373189d5fd9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref><sp/>component(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172" refid="classlibcellml_1_1Annotator_1ae9e682b5598c1329f6d15782dd30497c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref><sp/>componentEncapsulation(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185" refid="classlibcellml_1_1Annotator_1af2356316bc1822b158a51e56dfa893ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref><sp/>componentEncapsulation(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="classlibcellml_1_1Annotator_1a01391411e9ed1ff30d2a0c816b070c30" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref><sp/>encapsulation(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217" refid="classlibcellml_1_1Annotator_1a9a273d267ed816e57b839d3f1978f244" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref><sp/>encapsulation(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234" refid="classlibcellml_1_1Annotator_1acb1b0523e3291d988f2a24326d310332" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref><sp/>variable(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249" refid="classlibcellml_1_1Annotator_1a4410ce2b5842315e1efef1dcbb393871" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref><sp/>variable(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266" refid="classlibcellml_1_1Annotator_1a642764f00ac7f0b1b446c54b48bc8fd2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1a329055beefacf51332628055453f390a" kindref="member">ResetPtr</ref><sp/>reset(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281" refid="classlibcellml_1_1Annotator_1a85f64818bb13f04c826904f24d95a6dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1a329055beefacf51332628055453f390a" kindref="member">ResetPtr</ref><sp/>reset(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298" refid="classlibcellml_1_1Annotator_1ab8363f4efdcabe777ebbdd48ec99e91c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref><sp/>model(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313" refid="classlibcellml_1_1Annotator_1a4d48b559128a64ccc349b8bfdc65d95a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref><sp/>model(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="330" refid="classlibcellml_1_1Annotator_1a325e2798614de441a256f8716f8ae684" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1ac2c4e6d1793d7214616c1548d8a9f502" kindref="member">ImportSourcePtr</ref><sp/>importSource(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345" refid="classlibcellml_1_1Annotator_1a0a8f6cf1829cf663ad5b1810288e2270" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1ac2c4e6d1793d7214616c1548d8a9f502" kindref="member">ImportSourcePtr</ref><sp/>importSource(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="362" refid="classlibcellml_1_1Annotator_1a9f6ad7662e9a7755dc0fb409a4cf1fbb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1a3259debe09f915678b203e98100ea10a" kindref="member">UnitsPtr</ref><sp/>units(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="377" refid="classlibcellml_1_1Annotator_1aebf1bae9d6682d33d3eb7b981081d27d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1a3259debe09f915678b203e98100ea10a" kindref="member">UnitsPtr</ref><sp/>units(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"></highlight></codeline>
+<codeline lineno="394" refid="classlibcellml_1_1Annotator_1a62968cc69a09f89028b29e30360e6c68" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1a6b568d1251dec59e864e6ea189da9320" kindref="member">VariablePairPtr</ref><sp/>mapVariables(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"></highlight></codeline>
+<codeline lineno="409" refid="classlibcellml_1_1Annotator_1a6d30c942327c7edc9ce62f579d1cc4f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1a6b568d1251dec59e864e6ea189da9320" kindref="member">VariablePairPtr</ref><sp/>mapVariables(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"></highlight></codeline>
+<codeline lineno="426" refid="classlibcellml_1_1Annotator_1ad4481ac795febfabcc51d24547a4d766" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1a6b568d1251dec59e864e6ea189da9320" kindref="member">VariablePairPtr</ref><sp/>connection(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="427"><highlight class="normal"></highlight></codeline>
+<codeline lineno="441" refid="classlibcellml_1_1Annotator_1a6feb764fc11fce3dc6ba6b69f73b298e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1a6b568d1251dec59e864e6ea189da9320" kindref="member">VariablePairPtr</ref><sp/>connection(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"></highlight></codeline>
+<codeline lineno="458" refid="classlibcellml_1_1Annotator_1a31fec2d3b24b81171669b1b30324a01f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1a29f1c2968e2baea904984ba46c9032b0" kindref="member">UnitsItemPtr</ref><sp/>unitsItem(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="459"><highlight class="normal"></highlight></codeline>
+<codeline lineno="473" refid="classlibcellml_1_1Annotator_1a917f5c9d2bf02873a6c08fdb0940c8e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1a29f1c2968e2baea904984ba46c9032b0" kindref="member">UnitsItemPtr</ref><sp/>unitsItem(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="474"><highlight class="normal"></highlight></codeline>
+<codeline lineno="490" refid="classlibcellml_1_1Annotator_1acf61e51f1dfe594e903d289517fbcadf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1a329055beefacf51332628055453f390a" kindref="member">ResetPtr</ref><sp/>testValue(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="491"><highlight class="normal"></highlight></codeline>
+<codeline lineno="505" refid="classlibcellml_1_1Annotator_1ab1ec981988820d9c3b350aea4c04b928" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1a329055beefacf51332628055453f390a" kindref="member">ResetPtr</ref><sp/>testValue(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="506"><highlight class="normal"></highlight></codeline>
+<codeline lineno="522" refid="classlibcellml_1_1Annotator_1ac996359845dabb2745608c51e30fe8f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1a329055beefacf51332628055453f390a" kindref="member">ResetPtr</ref><sp/>resetValue(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="523"><highlight class="normal"></highlight></codeline>
+<codeline lineno="537" refid="classlibcellml_1_1Annotator_1a19ef056ddd383f20dbb57bf67f36df58" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1a329055beefacf51332628055453f390a" kindref="member">ResetPtr</ref><sp/>resetValue(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="538"><highlight class="normal"></highlight></codeline>
+<codeline lineno="552" refid="classlibcellml_1_1Annotator_1a5e8e459cab6db01a8dd3508986a667eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>assignAllIds();</highlight></codeline>
+<codeline lineno="553"><highlight class="normal"></highlight></codeline>
+<codeline lineno="570" refid="classlibcellml_1_1Annotator_1af3a8265b49e7b6e1dd32d3fcffc1748d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>assignAllIds(<ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref><sp/>&amp;model);</highlight></codeline>
+<codeline lineno="571"><highlight class="normal"></highlight></codeline>
+<codeline lineno="584" refid="classlibcellml_1_1Annotator_1aea2b3baafbf486f6d6fb15a43060734e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>assignIds(<ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref><sp/>type);</highlight></codeline>
+<codeline lineno="585"><highlight class="normal"></highlight></codeline>
+<codeline lineno="592" refid="classlibcellml_1_1Annotator_1a683eb9fe935720841936025f9dcdcc1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>clearAllIds();</highlight></codeline>
+<codeline lineno="593"><highlight class="normal"></highlight></codeline>
+<codeline lineno="602" refid="classlibcellml_1_1Annotator_1ad7ec62fb8da9151d6c070ec7ed712e80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>clearAllIds(<ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref><sp/>&amp;model);</highlight></codeline>
+<codeline lineno="603"><highlight class="normal"></highlight></codeline>
+<codeline lineno="613" refid="classlibcellml_1_1Annotator_1ab943ebd9b9c6c79ed4eb5c49d7444d37" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isUnique(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="614"><highlight class="normal"></highlight></codeline>
+<codeline lineno="627" refid="classlibcellml_1_1Annotator_1a83a86869e393efc48c83d13bce2008f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;<ref refid="namespacelibcellml_1adfe61184a6b1f01266643d95352af87c" kindref="member">AnyCellmlElementPtr</ref>&gt;<sp/>items(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="628"><highlight class="normal"></highlight></codeline>
+<codeline lineno="640" refid="classlibcellml_1_1Annotator_1aa023607e8579a929fa6dd1f9530283af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;<sp/>ids();</highlight></codeline>
+<codeline lineno="641"><highlight class="normal"></highlight></codeline>
+<codeline lineno="653" refid="classlibcellml_1_1Annotator_1a5ff67de28d34913892870ed413bf9582" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;<sp/>duplicateIds();</highlight></codeline>
+<codeline lineno="654"><highlight class="normal"></highlight></codeline>
+<codeline lineno="673" refid="classlibcellml_1_1Annotator_1ad897960acdbe190adbfa993854509181" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>assignId(const<sp/><ref refid="namespacelibcellml_1adfe61184a6b1f01266643d95352af87c" kindref="member">AnyCellmlElementPtr</ref><sp/>&amp;item);</highlight></codeline>
+<codeline lineno="674"><highlight class="normal"></highlight></codeline>
+<codeline lineno="695" refid="classlibcellml_1_1Annotator_1a997be3da2e89e5f519e18b4b878af5df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>assignId(const<sp/><ref refid="namespacelibcellml_1a8964f62e8f622cfd511f6a3acd9ce628" kindref="member">ModelPtr</ref><sp/>&amp;model,<sp/><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref><sp/>type<sp/>=<sp/><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref>::MODEL);</highlight></codeline>
+<codeline lineno="696"><highlight class="normal"></highlight></codeline>
+<codeline lineno="717" refid="classlibcellml_1_1Annotator_1a627c71c110d625c7603c65087dbe28f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>assignId(const<sp/><ref refid="namespacelibcellml_1a89d6be0709eeec30793d9587b16dce5b" kindref="member">ComponentPtr</ref><sp/>&amp;component,<sp/><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref><sp/>type<sp/>=<sp/><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref>::COMPONENT);</highlight></codeline>
+<codeline lineno="718"><highlight class="normal"></highlight></codeline>
+<codeline lineno="734" refid="classlibcellml_1_1Annotator_1a96205d7a74c0265cfb7c2fd2a6861f09" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>assignId(const<sp/><ref refid="namespacelibcellml_1ac2c4e6d1793d7214616c1548d8a9f502" kindref="member">ImportSourcePtr</ref><sp/>&amp;importSource);</highlight></codeline>
+<codeline lineno="735"><highlight class="normal"></highlight></codeline>
+<codeline lineno="756" refid="classlibcellml_1_1Annotator_1a6793cf9186c1833944525cb4d9a5bd6c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>assignId(const<sp/><ref refid="namespacelibcellml_1a329055beefacf51332628055453f390a" kindref="member">ResetPtr</ref><sp/>&amp;reset,<sp/><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref><sp/>type<sp/>=<sp/><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref>::RESET);</highlight></codeline>
+<codeline lineno="757"><highlight class="normal"></highlight></codeline>
+<codeline lineno="773" refid="classlibcellml_1_1Annotator_1a8b6e871e41a9385f205d55fd2ec44791" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>assignId(const<sp/><ref refid="namespacelibcellml_1a3259debe09f915678b203e98100ea10a" kindref="member">UnitsPtr</ref><sp/>&amp;units);</highlight></codeline>
+<codeline lineno="774"><highlight class="normal"></highlight></codeline>
+<codeline lineno="790" refid="classlibcellml_1_1Annotator_1a8364ee740fd3e14f240bf982ac16a5ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>assignId(const<sp/><ref refid="namespacelibcellml_1a29f1c2968e2baea904984ba46c9032b0" kindref="member">UnitsItemPtr</ref><sp/>&amp;unitsItem);</highlight></codeline>
+<codeline lineno="791"><highlight class="normal"></highlight></codeline>
+<codeline lineno="807" refid="classlibcellml_1_1Annotator_1a4df85f0bfa3074ed18aa040013eb15fa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>assignId(const<sp/><ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref><sp/>&amp;variable);</highlight></codeline>
+<codeline lineno="808"><highlight class="normal"></highlight></codeline>
+<codeline lineno="829" refid="classlibcellml_1_1Annotator_1a25ab372a7ab0b069755cc289587fe2a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>assignId(const<sp/><ref refid="namespacelibcellml_1a6b568d1251dec59e864e6ea189da9320" kindref="member">VariablePairPtr</ref><sp/>&amp;pair,<sp/><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref><sp/>type<sp/>=<sp/><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref>::MAP_VARIABLES);</highlight></codeline>
+<codeline lineno="830"><highlight class="normal"></highlight></codeline>
+<codeline lineno="852" refid="classlibcellml_1_1Annotator_1a85843a3b0ca8b895949f1e4ac67efd3f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>assignId(const<sp/><ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref><sp/>&amp;variable1,<sp/>const<sp/><ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref><sp/>&amp;variable2,<sp/><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref><sp/>type<sp/>=<sp/><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref>::MAP_VARIABLES);</highlight></codeline>
+<codeline lineno="853"><highlight class="normal"></highlight></codeline>
+<codeline lineno="872" refid="classlibcellml_1_1Annotator_1a4c00a2fc96ab70721ba2e9625a622a39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>assignId(const<sp/><ref refid="namespacelibcellml_1a3259debe09f915678b203e98100ea10a" kindref="member">UnitsPtr</ref><sp/>&amp;units,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="873"><highlight class="normal"></highlight></codeline>
+<codeline lineno="883" refid="classlibcellml_1_1Annotator_1a9ef0f192ed065ea6415c08c11464a022" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>itemCount(const<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="884"><highlight class="normal"></highlight></codeline>
+<codeline lineno="892" refid="classlibcellml_1_1Annotator_1ad783940f1ed34cd5b18d03fd879b2445" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>hasModel()<sp/>const;</highlight></codeline>
+<codeline lineno="893"><highlight class="normal"></highlight></codeline>
+<codeline lineno="894"><highlight class="normal">private:</highlight></codeline>
+<codeline lineno="895"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classlibcellml_1_1Annotator" kindref="compound">Annotator</ref>();<sp/></highlight></codeline>
+<codeline lineno="897"><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>AnnotatorImpl;<sp/></highlight></codeline>
+<codeline lineno="899"><highlight class="normal"><sp/><sp/><sp/><sp/>AnnotatorImpl<sp/>*pFunc();<sp/></highlight></codeline>
+<codeline lineno="900"><highlight class="normal"><sp/><sp/><sp/><sp/>const<sp/>AnnotatorImpl<sp/>*pFunc()<sp/>const;<sp/></highlight></codeline>
+<codeline lineno="901"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="902"><highlight class="normal"></highlight></codeline>
+<codeline lineno="903"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>libcellml</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="libcellml/annotator.h"/>
+  </compounddef>
+</doxygen>
