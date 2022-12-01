@@ -1,0 +1,330 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classlibcellml_1_1AnalyserVariable" kind="class" language="C++" prot="public">
+    <compoundname>libcellml::AnalyserVariable</compoundname>
+    <includes refid="analyservariable_8h" local="no">analyservariable.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classlibcellml_1_1AnalyserVariable_1a989e0a9021b7670189b6274ff074a591" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Type</name>
+        <qualifiedname>libcellml::AnalyserVariable::Type</qualifiedname>
+        <enumvalue id="classlibcellml_1_1AnalyserVariable_1a989e0a9021b7670189b6274ff074a591a0c6f145df3d38249d59e1fb900373da4" prot="public">
+          <name>VARIABLE_OF_INTEGRATION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserVariable_1a989e0a9021b7670189b6274ff074a591a2b848a8cc886d253d21a77c43cd50aae" prot="public">
+          <name>STATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserVariable_1a989e0a9021b7670189b6274ff074a591a8d6b5cada83510220f59e00ce86d4d92" prot="public">
+          <name>CONSTANT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserVariable_1a989e0a9021b7670189b6274ff074a591a2f66fc6a6849237faa1c41a1cc817a09" prot="public">
+          <name>COMPUTED_CONSTANT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserVariable_1a989e0a9021b7670189b6274ff074a591a5c5e440cc3d6aed1fada5b21a045e2fe" prot="public">
+          <name>ALGEBRAIC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserVariable_1a989e0a9021b7670189b6274ff074a591a3932d629fb5e2be9d09b3a4485b3cc9d" prot="public">
+          <name>EXTERNAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The type of a variable. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A variable can be of one of the following types:<itemizedlist>
+<listitem><para>VARIABLE_OF_INTEGRATION: the variable is the variable of integration;</para>
+</listitem><listitem><para>STATE: the variable is a state;</para>
+</listitem><listitem><para>CONSTANT: the variable is a constant (e.g. x = 3);</para>
+</listitem><listitem><para>COMPUTED_CONSTANT: the variable is a computed constant (e.g. x = 3+5, x = 3+z, x = y+z where y and z are constants); or</para>
+</listitem><listitem><para>ALGEBRAIC: the variable is an algebraic variable. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyservariable.h" line="46" column="5" bodyfile="libcellml/analyservariable.h" bodystart="47" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classlibcellml_1_1AnalyserVariable_1a8fc045316ed5fb70e4aabbca5f40d8ec" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Analyser</definition>
+        <argsstring></argsstring>
+        <name>Analyser</name>
+        <qualifiedname>libcellml::AnalyserVariable::Analyser</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyservariable.h" line="32" column="18" bodyfile="libcellml/analyservariable.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlibcellml_1_1AnalyserVariable_1a26b50e11a920ef94bb034913357eeaa6" prot="private" static="no" mutable="no">
+        <type>AnalyserVariableImpl *</type>
+        <definition>AnalyserVariableImpl* libcellml::AnalyserVariable::mPimpl</definition>
+        <argsstring></argsstring>
+        <name>mPimpl</name>
+        <qualifiedname>libcellml::AnalyserVariable::mPimpl</qualifiedname>
+        <briefdescription>
+<para>Private member to implementation pointer,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyservariable.h" line="129" column="26" bodyfile="libcellml/analyservariable.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserVariable_1a8bac4418c789d9b80c6f1fdff9339fbe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::AnalyserVariable::~AnalyserVariable</definition>
+        <argsstring>()</argsstring>
+        <name>~AnalyserVariable</name>
+        <qualifiedname>libcellml::AnalyserVariable::~AnalyserVariable</qualifiedname>
+        <briefdescription>
+<para>Destructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyservariable.h" line="56" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserVariable_1a1bfa0038c8f4d33079df3d723072b242" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::AnalyserVariable::AnalyserVariable</definition>
+        <argsstring>(const AnalyserVariable &amp;rhs)=delete</argsstring>
+        <name>AnalyserVariable</name>
+        <qualifiedname>libcellml::AnalyserVariable::AnalyserVariable</qualifiedname>
+        <param>
+          <type>const <ref refid="classlibcellml_1_1AnalyserVariable" kindref="compound">AnalyserVariable</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyservariable.h" line="57" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserVariable_1a82d12d6bb70832e1a9e32849d0907d98" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::AnalyserVariable::AnalyserVariable</definition>
+        <argsstring>(AnalyserVariable &amp;&amp;rhs) noexcept=delete</argsstring>
+        <name>AnalyserVariable</name>
+        <qualifiedname>libcellml::AnalyserVariable::AnalyserVariable</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1AnalyserVariable" kindref="compound">AnalyserVariable</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyservariable.h" line="58" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserVariable_1afd7a78ff11cf23b71e5b4864a84610c4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1AnalyserVariable" kindref="compound">AnalyserVariable</ref> &amp;</type>
+        <definition>AnalyserVariable &amp; libcellml::AnalyserVariable::operator=</definition>
+        <argsstring>(AnalyserVariable rhs)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>libcellml::AnalyserVariable::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1AnalyserVariable" kindref="compound">AnalyserVariable</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyservariable.h" line="59" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserVariable_1a8109f4a0b079f74942f61988dadda865" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::AnalyserVariable::AnalyserVariable</definition>
+        <argsstring>()</argsstring>
+        <name>AnalyserVariable</name>
+        <qualifiedname>libcellml::AnalyserVariable::AnalyserVariable</qualifiedname>
+        <briefdescription>
+<para>Constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyservariable.h" line="126" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserVariable_1a09745dc0c26720d80763e4cebd8b6845" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1AnalyserVariable_1a989e0a9021b7670189b6274ff074a591" kindref="member">Type</ref></type>
+        <definition>Type libcellml::AnalyserVariable::type</definition>
+        <argsstring>() const</argsstring>
+        <name>type</name>
+        <qualifiedname>libcellml::AnalyserVariable::type</qualifiedname>
+        <briefdescription>
+<para>Get the <computeroutput>Type</computeroutput> of this <computeroutput><ref refid="classlibcellml_1_1AnalyserVariable" kindref="compound">AnalyserVariable</ref></computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the <computeroutput>Type</computeroutput> of this <computeroutput><ref refid="classlibcellml_1_1AnalyserVariable" kindref="compound">AnalyserVariable</ref></computeroutput>.</para>
+<para><simplesect kind="return"><para>The <computeroutput>Type</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyservariable.h" line="68" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserVariable_1a3299bf068000dfa6fb80e9b207b76bc9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::AnalyserVariable::index</definition>
+        <argsstring>() const</argsstring>
+        <name>index</name>
+        <qualifiedname>libcellml::AnalyserVariable::index</qualifiedname>
+        <briefdescription>
+<para>Get the index of this <computeroutput><ref refid="classlibcellml_1_1AnalyserVariable" kindref="compound">AnalyserVariable</ref></computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the index of this <computeroutput><ref refid="classlibcellml_1_1AnalyserVariable" kindref="compound">AnalyserVariable</ref></computeroutput>.</para>
+<para><simplesect kind="return"><para>The index. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyservariable.h" line="77" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserVariable_1a67b1e1e6e2bcbae2bf987889f2b0860a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref></type>
+        <definition>VariablePtr libcellml::AnalyserVariable::initialisingVariable</definition>
+        <argsstring>() const</argsstring>
+        <name>initialisingVariable</name>
+        <qualifiedname>libcellml::AnalyserVariable::initialisingVariable</qualifiedname>
+        <briefdescription>
+<para>Get the initialising <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput> for this <computeroutput><ref refid="classlibcellml_1_1AnalyserVariable" kindref="compound">AnalyserVariable</ref></computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the initialising <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput> for this <computeroutput><ref refid="classlibcellml_1_1AnalyserVariable" kindref="compound">AnalyserVariable</ref></computeroutput>. It is used to retrieve the initial value of the <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput>, if there is one. It may or may not be the same <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput> as the one returned by <simplesect kind="see"><para><ref refid="classlibcellml_1_1AnalyserVariable_1aa0edf2a46f6da02dd5304e0c00c3d37e" kindref="member">variable</ref>. If it is not the same (e.g., a state <ref refid="classlibcellml_1_1AnalyserVariable_1aa0edf2a46f6da02dd5304e0c00c3d37e" kindref="member">variable</ref> is initialised in one component and computed in another) then the initial value retrieved from this <ref refid="classlibcellml_1_1AnalyserVariable_1aa0edf2a46f6da02dd5304e0c00c3d37e" kindref="member">variable</ref> may have to be scaled to account for the variables&apos; units not being equivalent (e.g., a <ref refid="classlibcellml_1_1AnalyserVariable_1aa0edf2a46f6da02dd5304e0c00c3d37e" kindref="member">variable</ref> is expressed in millivolts and its connected <ref refid="classlibcellml_1_1AnalyserVariable_1aa0edf2a46f6da02dd5304e0c00c3d37e" kindref="member">variable</ref> is expressed in volts, so the initial value will have to be multiplied or divided by 1000).</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classlibcellml_1_1AnalyserVariable_1aa0edf2a46f6da02dd5304e0c00c3d37e" kindref="member">variable</ref> </para>
+</simplesect>
+<simplesect kind="see"><para>scalingFactor</para>
+</simplesect>
+<simplesect kind="return"><para>The initialising <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput>, if there is one, or <computeroutput>nullptr</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyservariable.h" line="97" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserVariable_1aa0edf2a46f6da02dd5304e0c00c3d37e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a180b23de8fbe6f7e92890049d6dbdac8" kindref="member">VariablePtr</ref></type>
+        <definition>VariablePtr libcellml::AnalyserVariable::variable</definition>
+        <argsstring>() const</argsstring>
+        <name>variable</name>
+        <qualifiedname>libcellml::AnalyserVariable::variable</qualifiedname>
+        <briefdescription>
+<para>Get the (primary) <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput> for this <computeroutput><ref refid="classlibcellml_1_1AnalyserVariable" kindref="compound">AnalyserVariable</ref></computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the (primary) <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput> for this <computeroutput><ref refid="classlibcellml_1_1AnalyserVariable" kindref="compound">AnalyserVariable</ref></computeroutput>. Its <computeroutput><ref refid="classlibcellml_1_1Component" kindref="compound">Component</ref></computeroutput> is the one in which the <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput> is first defined (in the case of the variable of integration), initialised (in the case of a constant) or computed (in the case of a state, computed constant or algebraic variable). It may or may not be the same <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput> as the one returned by <simplesect kind="see"><para><ref refid="classlibcellml_1_1AnalyserVariable_1a67b1e1e6e2bcbae2bf987889f2b0860a" kindref="member">initialisingVariable</ref> (e.g., a state <ref refid="classlibcellml_1_1AnalyserVariable_1aa0edf2a46f6da02dd5304e0c00c3d37e" kindref="member">variable</ref> is initialised in one component and computed in another).</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classlibcellml_1_1AnalyserVariable_1a67b1e1e6e2bcbae2bf987889f2b0860a" kindref="member">initialisingVariable</ref></para>
+</simplesect>
+<simplesect kind="return"><para>The <computeroutput><ref refid="classlibcellml_1_1Variable" kindref="compound">Variable</ref></computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyservariable.h" line="114" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserVariable_1af52708f4c2fe1263ac6c77febdeba368" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a077e0ba912fc57b70090ab980aba2e25" kindref="member">AnalyserEquationPtr</ref></type>
+        <definition>AnalyserEquationPtr libcellml::AnalyserVariable::equation</definition>
+        <argsstring>() const</argsstring>
+        <name>equation</name>
+        <qualifiedname>libcellml::AnalyserVariable::equation</qualifiedname>
+        <briefdescription>
+<para>Get the <computeroutput><ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref></computeroutput> for this <computeroutput><ref refid="classlibcellml_1_1AnalyserVariable" kindref="compound">AnalyserVariable</ref></computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the <computeroutput><ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref></computeroutput> for this <computeroutput><ref refid="classlibcellml_1_1AnalyserVariable" kindref="compound">AnalyserVariable</ref></computeroutput>.</para>
+<para><simplesect kind="return"><para>The <computeroutput><ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref></computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyservariable.h" line="123" column="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classlibcellml_1_1AnalyserVariable" kindref="compound">AnalyserVariable</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classlibcellml_1_1AnalyserVariable" kindref="compound">AnalyserVariable</ref> class is for representing a variable in the context of a CellML <ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref>, i.e. a constant, a computed constant or an algebraic variable. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>libcellml::AnalyserVariable</label>
+        <link refid="classlibcellml_1_1AnalyserVariable"/>
+      </node>
+    </collaborationgraph>
+    <location file="libcellml/analyservariable.h" line="30" column="1" bodyfile="libcellml/analyservariable.h" bodystart="31" bodyend="130"/>
+    <listofallmembers>
+      <member refid="classlibcellml_1_1AnalyserVariable_1a8fc045316ed5fb70e4aabbca5f40d8ec" prot="private" virt="non-virtual"><scope>libcellml::AnalyserVariable</scope><name>Analyser</name></member>
+      <member refid="classlibcellml_1_1AnalyserVariable_1a1bfa0038c8f4d33079df3d723072b242" prot="private" virt="non-virtual"><scope>libcellml::AnalyserVariable</scope><name>AnalyserVariable</name></member>
+      <member refid="classlibcellml_1_1AnalyserVariable_1a82d12d6bb70832e1a9e32849d0907d98" prot="private" virt="non-virtual"><scope>libcellml::AnalyserVariable</scope><name>AnalyserVariable</name></member>
+      <member refid="classlibcellml_1_1AnalyserVariable_1a8109f4a0b079f74942f61988dadda865" prot="private" virt="non-virtual"><scope>libcellml::AnalyserVariable</scope><name>AnalyserVariable</name></member>
+      <member refid="classlibcellml_1_1AnalyserVariable_1af52708f4c2fe1263ac6c77febdeba368" prot="public" virt="non-virtual"><scope>libcellml::AnalyserVariable</scope><name>equation</name></member>
+      <member refid="classlibcellml_1_1AnalyserVariable_1a3299bf068000dfa6fb80e9b207b76bc9" prot="public" virt="non-virtual"><scope>libcellml::AnalyserVariable</scope><name>index</name></member>
+      <member refid="classlibcellml_1_1AnalyserVariable_1a67b1e1e6e2bcbae2bf987889f2b0860a" prot="public" virt="non-virtual"><scope>libcellml::AnalyserVariable</scope><name>initialisingVariable</name></member>
+      <member refid="classlibcellml_1_1AnalyserVariable_1a26b50e11a920ef94bb034913357eeaa6" prot="private" virt="non-virtual"><scope>libcellml::AnalyserVariable</scope><name>mPimpl</name></member>
+      <member refid="classlibcellml_1_1AnalyserVariable_1afd7a78ff11cf23b71e5b4864a84610c4" prot="private" virt="non-virtual"><scope>libcellml::AnalyserVariable</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1AnalyserVariable_1a09745dc0c26720d80763e4cebd8b6845" prot="public" virt="non-virtual"><scope>libcellml::AnalyserVariable</scope><name>type</name></member>
+      <member refid="classlibcellml_1_1AnalyserVariable_1a989e0a9021b7670189b6274ff074a591" prot="public" virt="non-virtual"><scope>libcellml::AnalyserVariable</scope><name>Type</name></member>
+      <member refid="classlibcellml_1_1AnalyserVariable_1aa0edf2a46f6da02dd5304e0c00c3d37e" prot="public" virt="non-virtual"><scope>libcellml::AnalyserVariable</scope><name>variable</name></member>
+      <member refid="classlibcellml_1_1AnalyserVariable_1a8bac4418c789d9b80c6f1fdff9339fbe" prot="private" virt="non-virtual"><scope>libcellml::AnalyserVariable</scope><name>~AnalyserVariable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
