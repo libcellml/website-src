@@ -1155,10 +1155,10 @@ levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-libcellml.js@^0.3.104:
-  version "0.3.104"
-  resolved "https://registry.yarnpkg.com/libcellml.js/-/libcellml.js-0.3.104.tgz#b715496b5f3fca1ce2fe8b0ba651f0f7cbfc74c1"
-  integrity sha512-A/2XpxGHtxXQQrOEdHpDjnFpBMMb/3x3IMJGnH17ZAbMo2otgPVsN7wBgPq5g9e/2I+HYmyFsK48fF/Ns0bsNA==
+libcellml.js@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/libcellml.js/-/libcellml.js-0.4.0.tgz#bcb291c95cd06855b47bb780e76a3118206622b4"
+  integrity sha512-W+doet8fN9Uj8YACyv3uyTRpGGmJf2YZh6+KV3cgUKvuOIjebYm+InQvB3C0oYFyCFecQjO0NCOrS2DAs/4Ftg==
 
 lie@~3.3.0:
   version "3.3.0"
@@ -1711,13 +1711,13 @@ vue3-doxygen-xml@^0.1.0-beta.13:
     vue-router "^4.0.15"
     vuex "^4.0.2"
 
-vue3-libcellml.js@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/vue3-libcellml.js/-/vue3-libcellml.js-0.2.0.tgz#5365ebe88441cda867388bbad577c56798e24aed"
-  integrity sha512-fkon7h4x2th7y2uc5hcUJkx2iyrv+olFHstnTvRbsjRzfIF2h8S/ExibrEYPL5wUx8ZXbMfrDnDSoh7i0HOYGw==
+vue3-libcellml.js@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/vue3-libcellml.js/-/vue3-libcellml.js-0.4.0.tgz#2aa778cfff64c051b636006c257bed83e387e8f4"
+  integrity sha512-qHF2wiuo6E/jowC8Hm34lpBkFbQqM9/oMkZTXnGqZofsfkdKh3H3A0kCQiK8Hro4HYgsoRGgFCEyfWO/giFZGg==
   dependencies:
     core-js "^3.8.3"
-    libcellml.js "^0.3.104"
+    libcellml.js "^0.4.0"
 
 vue3-sphinx-xml@^0.2.1-rc.2:
   version "0.2.1-rc.2"
