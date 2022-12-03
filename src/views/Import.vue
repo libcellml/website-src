@@ -121,7 +121,7 @@ function removeMessage(index) {
 }
 
 function importModel(cellmlString) {
-  let parser = new libcellml.module.Parser()
+  let parser = new libcellml.module.Parser(false)
   let printer = new libcellml.module.Printer()
   let model = null
   try {
