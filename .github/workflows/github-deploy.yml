@@ -6,6 +6,7 @@ on:
       - staging
 jobs:
   github-deploy:
+    if: github.repository == 'libcellml/website-src'
     name: Deploying website
     runs-on: ubuntu-20.04
     steps:
