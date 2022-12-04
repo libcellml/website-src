@@ -19,7 +19,7 @@ jobs:
         run: echo "$GITHUB_CONTEXT"
       - uses: myrotvorets/set-commit-status-action@master
         with:
-          sha: github.sha
+          sha: ${{ github.sha }}
       - name: Install selenium
         run: |
           which pip3
@@ -38,4 +38,4 @@ jobs:
         if: always()
         with:
           status: "${{ job.status }}"
-          sha: github.sha
+          sha: ${{ github.sha }}
