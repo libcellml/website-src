@@ -2,7 +2,7 @@
   <div>
     <h3>Website version information</h3>
     <p>
-      The build identifier for the website is <strong id="about-website-build-identifier">{{ getWebsiteBuild() }}</strong>.
+      The build identifier for the website is <strong id="about-website-build-identifier">{{ getWebsiteBuild() }}</strong> UTC.
     </p>
     <p>
       The revision this website was created from is <strong id="about-website-build-revision">{{ getWebsiteRevision() }}</strong>.
