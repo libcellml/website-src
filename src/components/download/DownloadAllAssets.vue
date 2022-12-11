@@ -16,7 +16,7 @@
 <script setup>
 import { ref } from 'vue'
 
-import { getDocumentationVersions } from '@/js/versions'
+import { getDocumentationVersions } from '@/js/documentationversions'
 import { useCommon } from '@/composables/common'
 
 import DownloadAssets from '@/components/download/DownloadAssets.vue'

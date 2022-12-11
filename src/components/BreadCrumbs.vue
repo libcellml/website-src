@@ -51,7 +51,7 @@ import { computed } from 'vue'
 import { useStore } from 'vuex'
 import { useRoute } from 'vue-router'
 
-import { getDocumentationVersions } from '../js/versions'
+import { getDocumentationVersions } from '../js/documentationversions'
 import { versionedRoutes, changeRouteVersion } from '../router'
 
 const store = useStore()

@@ -6,7 +6,7 @@ import Home from '@/views/Home.vue'
 import DocumentationHome from '@/views/DocumentationHome.vue'
 import About from '@/views/About.vue'
 
-import { getDocumentationVersions } from '../js/versions'
+import { getDocumentationVersions } from '../js/documentationversions'
 
 const DEFAULT_TITLE = 'libCellML'
 

@@ -1,5 +1,5 @@
 import { createStore } from 'vuex'
-import { getDocumentationVersions } from '@/js/versions'
+import { getDocumentationVersions } from '@/js/documentationversions'
 
 import * as notifications from '@/store/modules/notifications.js'
 
