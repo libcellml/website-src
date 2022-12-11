@@ -85,7 +85,7 @@ import IconWA from '@/assets/icons/IconWA.vue'
 import IconPyPi from '@/assets/icons/IconPyPI.vue'
 import SmallSpacer from '@/components/SmallSpacer.vue'
 
-import { getDocumentationVersions } from '@/js/versions'
+import { getDocumentationVersions } from '@/js/documentationversions'
 import { useCommon } from '@/composables/common'
 
 const { checkDownloadAvailability } = useCommon()

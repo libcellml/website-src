@@ -7,6 +7,7 @@
     </p>
     <v-container>
       <v-file-input
+        id="import-file-input"
         v-model="modelFile"
         show-size
         truncate-length="64"

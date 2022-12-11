@@ -31,6 +31,8 @@ jobs:
         run: |
           python3 tests/selenium/install_driver.py
       - name: Run tests
+        env:
+          LIBCELLML_WEBSITE_SHA: ${{ github.sha }}
         run: |
           python3 --version
           python3 tests/selenium/run_all_tests.py 
