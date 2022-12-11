@@ -1,6 +1,6 @@
 import argparse
 
-from datetime import datetime
+from datetime import datetime, timezone
 
 
 def do_website_version_update(sha):
@@ -8,7 +8,7 @@ def do_website_version_update(sha):
 
 
 def _write_versions_file(sha):
-    dt = datetime.now()
+    dt = datetime.now(timezone.utc)
 
     content = f"""// This file is generated do not edit!
 // Changes made here will be overwritten when a staging or production build is run.
