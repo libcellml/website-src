@@ -4,7 +4,7 @@ from datetime import datetime
 
 
 def do_website_version_update(sha):
-    pass
+    _write_versions_file(sha)
 
 
 def _write_versions_file(sha):
