@@ -1,0 +1,46 @@
+name: Selenium tests
+
+on:
+  workflow_run:
+    workflows: ["Deploy libCellML website"]
+    types:
+      - completed
+
+jobs:
+  Run-Python-Selenium-Tests:
+    env:
+      DISPLAY: :87
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Allow CDN cache time to expire
+        run: |
+          sleep 180
+      - uses: actions/checkout@v3
+      - name: Show GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+      - uses: myrotvorets/set-commit-status-action@master
+        with:
+          sha: ${{ github.sha }}
+      - name: Install selenium
+        run: |
+          which pip3
+          pip3 install selenium webdriver-manager
+      - name: Run Xvfb
+        run: |
+          Xvfb $DISPLAY &
+      - name: Setup selenium with Chrome
+        run: |
+          python3 tests/selenium/install_driver.py
+      - name: Run tests
+        env:
+          LIBCELLML_WEBSITE_SHA: ${{ github.sha }}
+        run: |
+          python3 --version
+          python3 tests/selenium/run_all_tests.py 
+      - uses: myrotvorets/set-commit-status-action@master
+        if: always()
+        with:
+          status: "${{ job.status }}"
+          sha: ${{ github.sha }}

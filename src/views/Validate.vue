@@ -104,7 +104,7 @@ function removeMessage(index) {
 }
 
 function validate(cellmlString) {
-  let parser = new libcellml.module.Parser()
+  let parser = new libcellml.module.Parser(true)
   let validator = new libcellml.module.Validator()
   let model = null
   try {

@@ -3,6 +3,7 @@ import * as fs from 'fs'
 
 ;(async function main() {
   try {
+    console.log('Preparing ...')
     let targetGitBranch = 'main'
     let cname = 'libcellml.org'
     let readmeTitle =
@@ -17,12 +18,16 @@ import * as fs from 'fs'
     }
 
     const deployRepo = `git@github.com:libcellml/${cname}.git`
-    const result = await execa('git', ['branch', '--show-current'])
-    const currentGitBranch = result.stdout
+    const branchResult = await execa('git', ['branch', '--show-current'])
+    const currentGitBranch = branchResult.stdout
+    const shaResult = await execa('git', ['rev-parse', 'HEAD'])
+    const currentGitSha = shaResult.stdout
+    await execa('python3', ['.github/scripts/populate_website_versions.py', currentGitSha])
 
     const workingGitBranch = 'dist'
     await execa('git', ['checkout', '--orphan', workingGitBranch])
     await execa('git', ['remote', 'add', 'deploy', deployRepo])
+    console.log('Preparing ... success.')
     console.log('Building ...')
     await execa('yarn', ['run', 'build'])
     // Understand if it's dist or build folder

@@ -6,6 +6,7 @@ on:
       - staging
 jobs:
   github-deploy:
+    if: github.repository == 'libcellml/website-src'
     name: Deploying website
     runs-on: ubuntu-20.04
     steps:
@@ -15,7 +16,7 @@ jobs:
           node-version: 17.x
 
       - name: Checkout branch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Write SSH keys
         run: |
