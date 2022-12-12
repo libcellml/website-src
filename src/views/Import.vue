@@ -3,7 +3,7 @@
     <h1>Import CellML models</h1>
     <p>
       This service will accept CellML 1.0 or CellML 1.1 files and import them
-      into CellML 2.0.
+      into CellML 2.0 by parsing them using libCellML in non-strict mode.
     </p>
     <v-container>
       <v-file-input
