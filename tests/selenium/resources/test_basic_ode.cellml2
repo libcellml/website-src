@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model xmlns="http://www.cellml.org/cellml/2.0#" name="test_simple_odes" id="test_simple_odes">
+  <units name="ms">
+    <unit prefix="milli" units="second"/>
+  </units>
+  <units name="per_ms">
+    <unit exponent="-1" units="ms"/>
+  </units>
+  <units name="usec">
+    <unit prefix="micro" units="second"/>
+  </units>
+  <units name="mV">
+    <unit prefix="milli" units="volt"/>
+  </units>
+  <units name="per_mV">
+    <unit exponent="-1" prefix="milli" units="volt"/>
+  </units>
+  <units name="uV">
+    <unit prefix="micro" units="volt"/>
+  </units>
+  <units name="mV_per_ms">
+    <unit units="mV"/>
+    <unit exponent="-1" units="ms"/>
+  </units>
+  <units name="mV_per_s">
+    <unit units="mV"/>
+    <unit exponent="-1" units="second"/>
+  </units>
+  <units name="mV_per_usec">
+    <unit units="mV"/>
+    <unit exponent="-1" prefix="micro" units="second"/>
+  </units>
+  <units name="mM">
+    <unit prefix="milli" units="mole"/>
+    <unit exponent="-1" units="litre"/>
+  </units>
+  <units name="mM_per_ms">
+    <unit units="mM"/>
+    <unit exponent="-1" units="ms"/>
+  </units>
+  <component name="environment">
+    <variable name="time" units="ms" interface="public" id="time"/>
+  </component>
+  <component name="single_independent_ode">
+    <variable name="time" units="ms" interface="public"/>
+    <variable name="sv1" units="mV" initial_value="1" id="sv11"/>
+    <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:cellml="http://www.cellml.org/cellml/2.0#">
+      <apply>
+        <eq/>
+        <apply>
+          <diff/>
+          <bvar>
+            <ci>time</ci>
+          </bvar>
+          <ci>sv1</ci>
+        </apply>
+        <cn cellml:units="mV_per_ms">1</cn>
+      </apply>
+    </math>
+  </component>
+  <connection component_1="environment" component_2="single_independent_ode">
+    <map_variables variable_1="time" variable_2="time"/>
+  </connection>
+</model>

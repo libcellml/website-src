@@ -40,7 +40,7 @@
 import { ref } from 'vue'
 
 import { useCommon } from '../composables/common'
-import { getDocumentationVersions } from '../js/versions'
+import { getDocumentationVersions } from '../js/documentationversions'
 
 import SmallSpacer from './SmallSpacer.vue'
 
