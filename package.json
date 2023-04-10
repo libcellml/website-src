@@ -1,6 +1,6 @@
 {
   "name": "libcellml-website",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "serve": "vite preview",
@@ -21,7 +21,7 @@
     "semver": "^7.3.8",
     "vue": "^3.2.47",
     "vue-router": "^4.1.5",
-    "vue3-doxygen-xml": "^0.1.0-beta.13",
+    "vue3-doxygen-xml": "^0.2.0",
     "vue3-libcellml.js": "^0.4.0",
     "vue3-sphinx-xml": "^0.3.0",
     "vuetify": "^3.1.13",
