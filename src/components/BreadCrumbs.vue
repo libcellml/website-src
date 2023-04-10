@@ -17,8 +17,8 @@
           <!-- Dropdown in the breadcrumbs menu: -->
           <v-breadcrumbs-item v-if="item.versionChoice">
             <v-select
-              :modelValue="store.state.current_documentation_version"
-              @update:modelValue="updateCurrentVersion($event)"
+              :model-value="store.state.current_documentation_version"
+              @update:model-value="updateCurrentVersion($event)"
               :items="alternativeVersions"
               item-title="text"
               item-value="text"
@@ -49,13 +49,14 @@
 <script setup>
 import { computed } from 'vue'
 import { useStore } from 'vuex'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 
 import { getDocumentationVersions } from '../js/documentationversions'
 import { versionedRoutes, changeRouteVersion } from '../router'
 
 const store = useStore()
 const route = useRoute()
+const router = useRouter()
 
 const latest = getDocumentationVersions()[0]
 
@@ -96,14 +97,6 @@ const alternativeVersions = computed(() => {
 
   return versionList
 })
-const currentVersion = computed({
-  get() {
-    return store.state.current_documentation_version
-  },
-  set(val) {
-    store.state.current_documentation_version = val
-  },
-})
 
 function getRouteForVersion(version) {
   const currentRoute = route
@@ -123,10 +116,12 @@ function getRouteForVersion(version) {
 }
 
 function onViewLatest() {
+  router.push(getRouteForVersion(latest))
   store.commit('setCurrentDocumentationVersion', latest)
 }
 
 function updateCurrentVersion(version) {
+  router.push(getRouteForVersion(version.text))
   store.commit('setCurrentDocumentationVersion', version.text)
 }
 </script>
