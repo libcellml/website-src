@@ -1,16 +1,16 @@
 <template>
   <div class="doxygen">
-    <doxygen-xml :baseURL="`/generated/${store.state.current_documentation_version}/api`" pageNotFoundName="NotFound"/>
+    <doxygen-xml :baseURL="`/generated/${store.current_documentation_version}/api`" pageNotFoundName="NotFound"/>
   </div>
 </template>
 
 <script setup>
 import '../css/doxygen.css'
 
-import { useStore } from 'vuex'
+import { useSiteStore } from '@/stores/site'
 
 import { DoxygenXml } from 'vue3-doxygen-xml'
 
-const store = useStore()
+const store = useSiteStore()
 
 </script>

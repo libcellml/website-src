@@ -3,7 +3,7 @@
     <h1>Import CellML models</h1>
     <p>
       This service will accept CellML 1.0 or CellML 1.1 files and import them
-      into CellML 2.0 by parsing them using libCellML in non-strict mode.
+      into CellML 2.0 by parsing them using libCellML in permissive mode.
     </p>
     <v-container>
       <v-file-input
@@ -45,6 +45,7 @@
         <v-list rounded>
           <v-list-subheader
             >Imported models<v-spacer /><v-btn
+              class="import-clear-btn"
               :disabled="downloads.length === 0"
               @click="clearDownloads()"
               >clear</v-btn
@@ -81,15 +82,15 @@
 
 <script setup>
 import { computed, inject, ref } from 'vue'
-import { useStore } from 'vuex'
 import semver from 'semver'
 
+import { useNotificationsStore } from '@/stores/notifications'
 import IssueHeading from '../components/IssueHeading.vue'
 import IssueCard from '../components/IssueCard.vue'
 
 import { downloadFile, downloadFileTitle } from '../js/utilities'
 
-const store = useStore()
+const store = useNotificationsStore()
 
 const issueData = ref([])
 const modelFile = ref([])
@@ -199,7 +200,7 @@ function readFile() {
         results.type === 'parser' && results.issues.length
       )
     } catch (err) {
-      store.dispatch('notifications/add', {
+      store.add({
         type: 'error',
         title: `File read error:`,
         message: 'Could not validate file: ' + err.message,
@@ -208,7 +209,7 @@ function readFile() {
   }
 
   reader.onerror = function (evt) {
-    store.dispatch('notifications/add', {
+    store.add({
       type: 'error',
       title: `File read error:`,
       message: modelFile.name,
@@ -229,6 +230,11 @@ function readFile() {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.import-clear-btn {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
 }
 
 .v-card {

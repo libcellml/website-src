@@ -33,8 +33,8 @@
 
 <script setup>
 import { computed, inject } from 'vue'
-import { useStore } from 'vuex'
 
+import { useSiteStore } from './stores/site'
 import BreadCrumbs from './components/BreadCrumbs.vue'
 import BackToTop from './components/BackToTop.vue'
 import FooterContent from './components/FooterContent.vue'
@@ -44,7 +44,7 @@ import NavBarContent from './components/NavBarContent.vue'
 
 import './css/general.css'
 
-const store = useStore()
+const store = useSiteStore()
 
 const sidebarOverlaySizes = ['xs', 'sm', 'md']
 
@@ -53,15 +53,15 @@ const getXOffset = computed(() => {
   if (sidebarOverlaySizes.includes(vuetifyDisplay.name.value)) {
     return '1rem'
   }
-  return store.state.sidebarOpen ? '17rem' : '1rem'
+  return store.sidebarOpen ? '17rem' : '1rem'
 })
 
 const sidebarState = computed({
   get() {
-    return store.state.sidebarOpen
+    return store.sidebarOpen
   },
   set(val) {
-    store.state.sidebarOpen = val
+    store.sidebarOpen = val
   },
 })
 </script>

@@ -25,7 +25,6 @@
     "vue3-libcellml.js": "^0.4.0",
     "vue3-sphinx-xml": "^0.3.0",
     "vuetify": "^3.1.13",
-    "vuex": "^4.0.2",
     "webfontloader": "^1.0.0"
   },
   "devDependencies": {

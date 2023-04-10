@@ -61,8 +61,8 @@
 
 <script setup>
 import { onMounted, ref } from 'vue'
-import { useStore } from 'vuex'
 
+import { useNotificationsStore } from '@/stores/notifications'
 import github from '@/services/github'
 
 const repos = [
@@ -75,7 +75,7 @@ const repos = [
   },
 ]
 
-const store = useStore()
+const store = useNotificationsStore()
 
 const skippedUsers = ['dependabot[bot]', 'abi-git-user']
 
@@ -144,7 +144,7 @@ onMounted(() => {
                   status.value = 'ready'
                 })
                 .catch((error) => {
-                  store.dispatch('notifications/add', {
+                  store.add({
                     type: 'error',
                     title: 'Fetching users failed:',
                     message: error.message,
@@ -155,7 +155,7 @@ onMounted(() => {
             }
           })
           .catch((error) => {
-            store.dispatch('notifications/add', {
+            store.add({
               type: 'error',
               title: 'Fetching contributors failed:',
               message: error.message,
@@ -166,7 +166,7 @@ onMounted(() => {
       }
     })
     .catch((error) => {
-      store.dispatch('notifications/add', {
+      store.add({
         type: 'error',
         title: 'GitHub get rate limit error:',
         message: error.message,

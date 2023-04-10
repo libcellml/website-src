@@ -1,4 +1,4 @@
-import filesize from 'filesize'
+import { filesize } from 'filesize'
 
 export const downloadFileTitle = (item) => {
   let title = item.name

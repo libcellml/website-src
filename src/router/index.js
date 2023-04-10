@@ -1,21 +1,24 @@
 import { createWebHistory, createRouter } from 'vue-router'
 
-import store from '@/store'
+import { useNotificationsStore } from '@/stores/notifications'
+import { useSiteStore } from '@/stores/site'
 
 import Home from '@/views/Home.vue'
 import DocumentationHome from '@/views/DocumentationHome.vue'
-import About from '@/views/About.vue'
 
 import { getDocumentationVersions } from '../js/documentationversions'
 
 const DEFAULT_TITLE = 'libCellML'
 
 function checkDocumentationVersion(to) {
+  const siteStore = useSiteStore()
+  const notificatonsStore = useNotificationsStore()
+
   const routeParams = to.params
   // Check that version exists otherwise redirect to latest version
   const availableVersions = getDocumentationVersions()
   if (availableVersions.includes(routeParams.version)) {
-    store.commit('setCurrentDocumentationVersion', routeParams.version)
+    siteStore.setCurrentDocumentationVersion(routeParams.version)
     return true
   } else if (routeParams.version === '') {
     return {
@@ -28,7 +31,7 @@ function checkDocumentationVersion(to) {
     return changeRouteVersion(to, availableVersions[0])
   }
 
-  store.dispatch('notifications/add', {
+  notificatonsStore.add({
     type: 'error',
     title: `Could not find documentation for version: ${routeParams.version}`,
     message: 'redirecting to `latest` documentation page.',
@@ -68,16 +71,16 @@ const servicesHomeRoute = {
   meta: { title: 'libCellML: Services' },
   component: () => import('@/views/ServicesHome.vue'),
 }
-const baseVersionDocumentationRoute = {
-  path: '/documentation/:version?',
-  name: 'DocumentationHome',
-  meta: { title: 'libCellML: Documentation' },
-  component: DocumentationHome,
-  beforeEnter: (to, from, next) => {
-    const nextTarget = checkDocumentationVersion(to)
-    next(nextTarget)
-  },
-}
+// const baseVersionDocumentationRoute = {
+//   path: '/documentation/:version?',
+//   name: 'DocumentationHome',
+//   meta: { title: 'libCellML: Documentation' },
+//   component: DocumentationHome,
+//   beforeEnter: (to, from, next) => {
+//     const nextTarget = checkDocumentationVersion(to)
+//     next(nextTarget)
+//   },
+// }
 const apiDocumentationRoute = {
   path: '/documentation/:version/api/:pageName?',
   name: 'DocumentationAPI',
@@ -155,7 +158,7 @@ const notFoundRoute = {
   component: () => import('../views/NotFound.vue'),
 }
 const catchEverythingRoute = {
-  path: '/:catchUnknown(.*)',
+  path: '/:catchUnknown(.*)*',
   redirect: (to) => {
     return {
       name: 'NotFound',
@@ -301,7 +304,8 @@ export const calculateBreadcrumbs = (to) => {
 }
 
 router.beforeEach((to, from, next) => {
-  store.commit('setBreadcrumbs', calculateBreadcrumbs(to))
+  const siteStore = useSiteStore()
+  siteStore.setBreadcrumbs(calculateBreadcrumbs(to))
   next()
 })
 
