@@ -1,16 +1,16 @@
 <template>
   <div class="user">
     <sphinx-page
-      :baseURL="`/generated/${store.state.current_documentation_version}/user`"
+      :baseURL="`/generated/${store.current_documentation_version}/user`"
       pageNotFoundName="NotFound"
     />
   </div>
 </template>
 
 <script setup>
-import { useStore } from 'vuex'
+import { useSiteStore } from '@/stores/site'
 
 import { SphinxPage } from 'vue3-sphinx-xml'
 
-const store = useStore()
+const store = useSiteStore()
 </script>

@@ -9,9 +9,10 @@
 
 <script setup>
 import { onMounted, onUnmounted, toRefs } from 'vue'
-import { useStore } from 'vuex'
 
-const store = useStore()
+import { useNotificationsStore } from '@/stores/notifications'
+
+const store = useNotificationsStore()
 
 let timeout = null
 
@@ -26,7 +27,7 @@ const { notification } = toRefs(props)
 
 onMounted(() => {
   timeout = setTimeout(() => {
-    store.dispatch('notifications/remove', notification.value)
+    store.remove(notification.value)
   }, notification.value.type === 'success' ? 1000 : 5000)
 })
 onUnmounted(() => {
