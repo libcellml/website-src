@@ -4,7 +4,7 @@ import { useNotificationsStore } from '@/stores/notifications'
 import { useSiteStore } from '@/stores/site'
 
 import Home from '@/views/Home.vue'
-import DocumentationHome from '@/views/DocumentationHome.vue'
+// import DocumentationHome from '@/views/DocumentationHome.vue'
 
 import { getDocumentationVersions } from '../js/documentationversions'
 
@@ -240,9 +240,6 @@ function createBreadcrumb(to, label = undefined, choice = false) {
     text = to.name
   }
   return {
-    disabled: false,
-    exact: false,
-    link: false,
     text,
     target: to,
     versionChoice: choice,
@@ -254,7 +251,7 @@ export const calculateBreadcrumbs = (to) => {
   // If I wanted to disable the breadcrumb for *Home* when on the home page
   // I would set the *to* parameter to '', but this gives me a differently
   // sized home icon which I dislike more than having the home crumb a link.
-  let crumbs = [createBreadcrumb(to.name === 'Home' ? '/' : '/', 'Home')]
+  let crumbs = [createBreadcrumb({path: '/'}, 'Home')]
   if (to.name !== 'Home') {
     let pages = to.path.split('/')
     pages.shift()
