@@ -69,14 +69,14 @@
 
 <script setup>
 import { ref } from 'vue'
-import { useStore } from 'vuex'
 
-import TranslateLimitations from '../components/TranslateLimitations.vue'
+import { useNotificationsStore } from '@/stores/notifications'
+import TranslateLimitations from '@/components/TranslateLimitations.vue'
 
 import { translate, translateOmex, getXslt } from '@/js/translate'
-import { downloadFile, downloadFileTitle } from '../js/utilities'
+import { downloadFile, downloadFileTitle } from '@/js/utilities'
 
-const store = useStore()
+const store = useNotificationsStore()
 
 const xsl = ref(null)
 const files = ref([])
@@ -120,7 +120,7 @@ function translateFiles() {
                   downloads.value[index].pending = false
                 })
               } catch {
-                store.dispatch('notifications/add', {
+                store.add({
                   type: 'error',
                   title: 'Could not translate file:',
                   message: currentFile.name,
@@ -130,7 +130,7 @@ function translateFiles() {
           }
         }
         reader.onerror = function (evt) {
-          store.dispatch('notifications/add', {
+          store.add({
             type: 'error',
             title: `File read error:`,
             message: currentFile.name,
@@ -148,7 +148,7 @@ function translateFiles() {
               pending: false,
             })
           } catch {
-            store.dispatch('notifications/add', {
+            store.add({
               type: 'error',
               title: `Could not translate file:`,
               message: `'${currentFile.name}' of type '${currentFile.type}'.`,
@@ -156,7 +156,7 @@ function translateFiles() {
           }
         }
       } else {
-        store.dispatch('notifications/add', {
+        store.add({
           type: 'error',
           title: `Could not translate file:`,
           message: `'${currentFile.name}' of type '${currentFile.type}'.`,

@@ -166,9 +166,9 @@
 
 <script setup>
 import { computed, ref } from 'vue'
-import { useStore } from 'vuex'
+import { useSiteStore } from '@/stores/site'
 
-const store = useStore()
+const store = useSiteStore()
 
 const validationProvenance = ref(defaultValidationProvenance())
 
@@ -186,7 +186,7 @@ const database_ref = computed(() => {
 })
 
 const neverTrue = computed(() => {
-  const url = `/generated/${store.state.current_documentation_version}/user/validation_provenance.json`
+  const url = `/generated/${store.current_documentation_version}/user/validation_provenance.json`
   fetch(url).then((response) => {
     response.json().then(
       (content) => {
@@ -208,7 +208,7 @@ const validationProvenanceIsKnown = computed(() => {
 })
 
 function getToPath(subpath) {
-  return `/documentation/${store.state.current_documentation_version}/user/${subpath}/index`
+  return `/documentation/${store.current_documentation_version}/user/${subpath}/index`
 }
 
 function defaultValidationProvenance() {

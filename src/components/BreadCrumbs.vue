@@ -9,7 +9,7 @@
   </v-row>
   <v-row class="flex float-left breadcrumb-bar">
     <v-col>
-      <v-breadcrumbs :items="store.getters.getBreadcrumbs">
+      <v-breadcrumbs :items="store.breadcrumbs">
         <template v-slot:divider>
           <v-icon>mdi-chevron-right</v-icon>
         </template>
@@ -17,8 +17,8 @@
           <!-- Dropdown in the breadcrumbs menu: -->
           <v-breadcrumbs-item v-if="item.versionChoice">
             <v-select
-              :modelValue="store.state.current_documentation_version"
-              @update:modelValue="updateCurrentVersion($event)"
+              :model-value="store.current_documentation_version"
+              @update:model-value="updateCurrentVersion($event)"
               :items="alternativeVersions"
               item-title="text"
               item-value="text"
@@ -48,21 +48,22 @@
 
 <script setup>
 import { computed } from 'vue'
-import { useStore } from 'vuex'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 
-import { getDocumentationVersions } from '../js/documentationversions'
-import { versionedRoutes, changeRouteVersion } from '../router'
+import { useSiteStore } from '@/stores/site'
+import { getDocumentationVersions } from '@/js/documentationversions'
+import { versionedRoutes, changeRouteVersion } from '@/router'
 
-const store = useStore()
+const store = useSiteStore()
 const route = useRoute()
+const router = useRouter()
 
 const latest = getDocumentationVersions()[0]
 
 const viewingOldDocumentation = computed(() => {
   if (
     versionedRoutes.includes(route.name) &&
-    store.state.current_documentation_version !== latest
+    store.current_documentation_version !== latest
   ) {
     return true
   }
@@ -80,7 +81,7 @@ const getRouteToLatestVersion = computed(() => {
 const alternativeVersions = computed(() => {
   let versionList = []
   for (const version of getDocumentationVersions()) {
-    if (version !== store.state.current_documentation_version) {
+    if (version !== store.current_documentation_version) {
       versionList.push({
         to: getRouteForVersion(version),
         text: version,
@@ -95,14 +96,6 @@ const alternativeVersions = computed(() => {
   }
 
   return versionList
-})
-const currentVersion = computed({
-  get() {
-    return store.state.current_documentation_version
-  },
-  set(val) {
-    store.state.current_documentation_version = val
-  },
 })
 
 function getRouteForVersion(version) {
@@ -123,11 +116,13 @@ function getRouteForVersion(version) {
 }
 
 function onViewLatest() {
-  store.commit('setCurrentDocumentationVersion', latest)
+  router.push(getRouteForVersion(latest))
+  store.setCurrentDocumentationVersion(latest)
 }
 
 function updateCurrentVersion(version) {
-  store.commit('setCurrentDocumentationVersion', version.text)
+  router.push(getRouteForVersion(version.text))
+  store.setCurrentDocumentationVersion(version.text)
 }
 </script>
 
