@@ -2,7 +2,7 @@
   <v-row>
     <v-col>
       <h1>Oops!</h1>
-      <BrokenLink />
+      <broken-link />
       <br />
       <router-link to="/">Back to the home page</router-link>
     </v-col>
