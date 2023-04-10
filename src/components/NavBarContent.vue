@@ -13,14 +13,14 @@
 
 <script setup>
 import { computed } from 'vue'
-import { useStore } from 'vuex'
 
+import { useSiteStore } from '@/stores/site'
 import BugButton from './BugButton.vue'
 
-const store = useStore()
+const store = useSiteStore()
 
 const hash = computed(() => {
-  return store.getters.getBreadcrumbs.length < 2
+  return store.breadcrumbs.length < 2
 })
 
 const links = [
@@ -36,6 +36,6 @@ const links = [
 ]
 
 function onSidebarButtonClicked() {
-  store.commit('toggleSidebar')
+  store.toggleSidebar()
 }
 </script>

@@ -9,7 +9,7 @@
   </v-row>
   <v-row class="flex float-left breadcrumb-bar">
     <v-col>
-      <v-breadcrumbs :items="store.getters.getBreadcrumbs">
+      <v-breadcrumbs :items="store.breadcrumbs">
         <template v-slot:divider>
           <v-icon>mdi-chevron-right</v-icon>
         </template>
@@ -17,7 +17,7 @@
           <!-- Dropdown in the breadcrumbs menu: -->
           <v-breadcrumbs-item v-if="item.versionChoice">
             <v-select
-              :model-value="store.state.current_documentation_version"
+              :model-value="store.current_documentation_version"
               @update:model-value="updateCurrentVersion($event)"
               :items="alternativeVersions"
               item-title="text"
@@ -48,13 +48,13 @@
 
 <script setup>
 import { computed } from 'vue'
-import { useStore } from 'vuex'
 import { useRoute, useRouter } from 'vue-router'
 
+import { useSiteStore } from '../stores/site'
 import { getDocumentationVersions } from '../js/documentationversions'
 import { versionedRoutes, changeRouteVersion } from '../router'
 
-const store = useStore()
+const store = useSiteStore()
 const route = useRoute()
 const router = useRouter()
 
@@ -63,7 +63,7 @@ const latest = getDocumentationVersions()[0]
 const viewingOldDocumentation = computed(() => {
   if (
     versionedRoutes.includes(route.name) &&
-    store.state.current_documentation_version !== latest
+    store.current_documentation_version !== latest
   ) {
     return true
   }
@@ -81,7 +81,7 @@ const getRouteToLatestVersion = computed(() => {
 const alternativeVersions = computed(() => {
   let versionList = []
   for (const version of getDocumentationVersions()) {
-    if (version !== store.state.current_documentation_version) {
+    if (version !== store.current_documentation_version) {
       versionList.push({
         to: getRouteForVersion(version),
         text: version,
@@ -117,12 +117,12 @@ function getRouteForVersion(version) {
 
 function onViewLatest() {
   router.push(getRouteForVersion(latest))
-  store.commit('setCurrentDocumentationVersion', latest)
+  store.setCurrentDocumentationVersion(latest)
 }
 
 function updateCurrentVersion(version) {
   router.push(getRouteForVersion(version.text))
-  store.commit('setCurrentDocumentationVersion', version.text)
+  store.setCurrentDocumentationVersion(version.text)
 }
 </script>
 

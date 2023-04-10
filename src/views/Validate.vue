@@ -75,14 +75,12 @@
 
 <script setup>
 import { computed, inject, ref } from 'vue'
-import { useStore } from 'vuex'
 
-import IssueCard from '../components/IssueCard.vue'
-import IssueHeading from '../components/IssueHeading.vue'
+import { useNotificationsStore } from '@/stores/notifications'
+import IssueCard from '@/components/IssueCard.vue'
+import IssueHeading from '@/components/IssueHeading.vue'
 
-import { onLearnMoreClicked } from '../js/utilities'
-
-const store = useStore()
+const store = useNotificationsStore()
 
 const issueData = ref([])
 const modelFile = ref([])
@@ -192,7 +190,7 @@ function readFile() {
       )
     } catch (err) {
       parserFoundErrors.value = true
-      store.dispatch('notifications/add', {
+      store.add({
         type: 'error',
         title: `File read error:`,
         message: 'Could not validate file: ' + err.message,
@@ -201,7 +199,7 @@ function readFile() {
   }
 
   reader.onerror = function (evt) {
-    store.dispatch('notifications/add', {
+    store.add({
       type: 'error',
       title: `File read error:`,
       message: modelFile.name,
