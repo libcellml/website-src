@@ -18,7 +18,7 @@
     "katex": "^0.16.4",
     "pinia": "^2.0.34",
     "roboto-fontface": "*",
-    "semver": "^7.3.8",
+    "semver": "^7.5.2",
     "vue": "^3.2.47",
     "vue-router": "^4.1.5",
     "vue3-doxygen-xml": "^0.2.0",
