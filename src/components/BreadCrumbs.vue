@@ -32,7 +32,7 @@
             </v-select>
           </v-breadcrumbs-item>
           <!-- Normal item, no dropdown, formed from named page: -->
-          <v-breadcrumbs-item v-else :to="item.target">
+          <v-breadcrumbs-item v-else :to="defineBreadcrumbTarget(item.target)">
             <template v-if="item.text === 'Home'">
               <v-icon size="1.3em">mdi-home</v-icon>
             </template>
@@ -97,6 +97,13 @@ const alternativeVersions = computed(() => {
 
   return versionList
 })
+
+function defineBreadcrumbTarget(target) {
+  if (target === '') {
+    return {}
+  }
+  return target
+}
 
 function getRouteForVersion(version) {
   const currentRoute = route
