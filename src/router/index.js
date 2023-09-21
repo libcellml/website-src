@@ -206,14 +206,30 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
   scrollBehavior(to, from, savedPosition) {
+    const header = document.querySelector('#app-header')
     if (to.name === homeRoute.name && to.hash) {
-      let location = document.querySelector(to.hash)
+      const location = document.querySelector(to.hash)
       if (location) {
         return window.scrollTo({
-          top: location.offsetTop,
+          top: location.offsetTop - header.offsetHeight,
           behavior: 'smooth',
         })
       }
+    } else if (to.hash) {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          const location = document.querySelector(to.hash)
+          if (location) {
+            resolve(
+              window.scrollTo({
+                top: location.offsetTop - header.offsetHeight,
+                behavior: 'smooth',
+              }),
+            )
+          }
+          resolve({ left: 0, top: header.offsetHeight })
+        }, 500)
+      })
     }
   },
 })
@@ -251,7 +267,7 @@ export const calculateBreadcrumbs = (to) => {
   // If I wanted to disable the breadcrumb for *Home* when on the home page
   // I would set the *to* parameter to '', but this gives me a differently
   // sized home icon which I dislike more than having the home crumb a link.
-  let crumbs = [createBreadcrumb({path: '/'}, 'Home')]
+  let crumbs = [createBreadcrumb({ path: '/' }, 'Home')]
   if (to.name !== 'Home') {
     let pages = to.path.split('/')
     pages.shift()
