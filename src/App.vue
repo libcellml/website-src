@@ -1,6 +1,6 @@
 <template>
   <v-app id="top">
-    <v-app-bar app clipped-left>
+    <v-app-bar app clipped-left id="app-header">
       <nav-bar-content />
     </v-app-bar>
     <v-navigation-drawer
