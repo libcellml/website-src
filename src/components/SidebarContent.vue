@@ -64,10 +64,8 @@
 
 <script setup>
 import { computed, onMounted, ref } from 'vue'
-import { useStore } from 'vuex'
 import { useRoute } from 'vue-router'
 
-const store = useStore()
 const route = useRoute()
 
 const quickLinks = ref([])
