@@ -1,15 +1,15 @@
 <template>
   <div class="developer">
     <sphinx-page
-      :baseURL="`/generated/${store.state.current_documentation_version}/developer`"
+      :baseURL="`/generated/${store.current_documentation_version}/developer`"
     />
   </div>
 </template>
 
 <script setup>
-import { useStore } from 'vuex'
+import { useSiteStore } from '@/stores/site'
 
 import { SphinxPage } from 'vue3-sphinx-xml'
 
-const store = useStore()
+const store = useSiteStore()
 </script>
