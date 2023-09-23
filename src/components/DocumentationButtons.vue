@@ -15,11 +15,11 @@
       <v-btn
         block
         :class="'big-button'"
-        :to="`/documentation/${latest}/user`"
+        :to="`/documentation/${latest}/tutorials`"
       >
         <v-icon color="white" x-large>mdi-account-group</v-icon>
         <small-spacer />
-        Users' Guides
+        Tutorials
       </v-btn>
     </v-col>
     <v-col v-if="haveDeveloperDocumentation" col="12" md="4" id="developer">
@@ -30,7 +30,7 @@
       >
         <v-icon color="white" x-large>mdi-cogs</v-icon>
         <small-spacer />
-        Developers' Guides
+        Developer Notes
       </v-btn>
     </v-col>
   </v-row>
