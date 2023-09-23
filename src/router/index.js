@@ -17,10 +17,15 @@ function checkDocumentationVersion(to) {
   const routeParams = to.params
   // Check that version exists otherwise redirect to latest version
   const availableVersions = getDocumentationVersions()
+  console.log("check documentation version:")
+  console.log(routeParams)
+  console.log(routeParams.version)
   if (availableVersions.includes(routeParams.version)) {
     siteStore.setCurrentDocumentationVersion(routeParams.version)
+    console.log("set from site.")
     return true
   } else if (routeParams.version === '') {
+    console.log("set from empty")
     return {
       name: 'Documentation',
       params: {
@@ -28,9 +33,11 @@ function checkDocumentationVersion(to) {
       },
     }
   } else if (routeParams.version === 'latest') {
+    console.log("setting to latest.")
     return changeRouteVersion(to, availableVersions[0])
   }
 
+  console.log("notifications")
   notificatonsStore.add({
     type: 'error',
     title: `Could not find documentation for version: ${routeParams.version}`,
@@ -101,21 +108,21 @@ const developerDocumentationRoute = {
     next(nextTarget)
   },
 }
-const userDocumentationHomeRoute = {
-  path: '/documentation/:version/user',
-  name: 'DocumentationUserHome',
-  meta: { title: 'libCellML: User Guides' },
-  component: () => import('@/views/DocumentationUserHome.vue'),
+const tutorialsDocumentationHomeRoute = {
+  path: '/documentation/:version/tutorials',
+  name: 'DocumentationTutorialsHome',
+  meta: { title: 'libCellML: Tutorials' },
+  component: () => import('@/views/DocumentationTutorialsHome.vue'),
   beforeEnter: (to, from, next) => {
     const nextTarget = checkDocumentationVersion(to)
     next(nextTarget)
   },
 }
-const userDocumentationRoute = {
-  path: '/documentation/:version/user/:pageName+',
-  name: 'DocumentationUser',
-  meta: { title: 'libCellML: User Guides' },
-  component: () => import('@/views/DocumentationUser.vue'),
+const tutorialsDocumentationRoute = {
+  path: '/documentation/:version/tutorials/:pageName*',
+  name: 'DocumentationTutorials',
+  meta: { title: 'libCellML: Tutorials' },
+  component: () => import('@/views/DocumentationTutorials.vue'),
   beforeEnter: (to, from, next) => {
     const nextTarget = checkDocumentationVersion(to)
     next(nextTarget)
@@ -159,14 +166,9 @@ const notFoundRoute = {
 }
 const catchEverythingRoute = {
   path: '/:catchUnknown(.*)*',
-  redirect: (to) => {
-    return {
-      name: 'NotFound',
-      query: {
-        path: '/' + to.params.catchUnknown,
-      },
-    }
-  },
+  name: 'NotFound',
+  meta: { title: 'libCellML: Not Found' },
+  component: () => import('@/views/NotFound.vue'),
 }
 
 const routes = [
@@ -174,8 +176,8 @@ const routes = [
   aboutRoute,
   apiDocumentationRoute,
   developerDocumentationRoute,
-  userDocumentationHomeRoute,
-  userDocumentationRoute,
+  // tutorialsDocumentationHomeRoute,
+  tutorialsDocumentationRoute,
   // baseVersionDocumentationRoute,
   baseDocumentationRoute,
   servicesHomeRoute,
@@ -183,7 +185,7 @@ const routes = [
   validateRoute,
   downloadRoute,
   importRoute,
-  notFoundRoute,
+  // notFoundRoute,
   catchEverythingRoute,
 ]
 
@@ -196,7 +198,7 @@ export const versionedRoutes = [
 const onePathDeepRoutes = [downloadRoute.name, notFoundRoute.name]
 
 const sphinxRoutes = [
-  userDocumentationRoute.name,
+  tutorialsDocumentationRoute.name,
   developerDocumentationRoute.name,
 ]
 
