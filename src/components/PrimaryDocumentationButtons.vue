@@ -3,6 +3,7 @@
     <template v-for="d in level1Documentation">
       <v-col v-if="haveDocumentation(d)">
         <big-button
+          :id="d"
           :label="documentationInfoMap[d].label"
           :icon-name="documentationInfoMap[d].iconName"
           :target="`/documentation/${latest}/${d}`"
