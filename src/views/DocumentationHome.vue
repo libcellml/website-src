@@ -20,7 +20,9 @@
   </v-row>
   <br />
   <h2>Version specific documentation</h2>
-  <p>Documentation for <strong>{{ latest }}</strong> of libCellML.</p>
+  <p>
+    Documentation for <strong>{{ latest }}</strong> of libCellML.
+  </p>
   <br />
   <primary-documentation-buttons />
   <br />
@@ -28,6 +30,7 @@
     <template v-for="i of documentationKeys" :key="'secondary_button_' + i">
       <v-col v-if="documentationInfoMap[i].level === 2 && allVersions[0][i]">
         <big-button
+          :id="i"
           :label="documentationInfoMap[i].label"
           :icon-name="documentationInfoMap[i].iconName"
           :target="`/documentation/${allVersions[0].version}/${i}`"
@@ -36,7 +39,10 @@
     </template>
   </v-row>
   <h3>Previous versions of the documentation</h3>
-  <p>Previous versions listed in reverse semantic versioning order. Only the most recent patch release for each version is available.</p>
+  <p>
+    Previous versions listed in reverse semantic versioning order. Only the most
+    recent patch release for each version is available.
+  </p>
   <div v-for="v of allVersions" :key="'older_' + v.version">
     <template v-if="v.version !== latest">
       <h4>{{ v.version }}</h4>
