@@ -50,19 +50,6 @@
       </v-col>
       <v-col md="4">
         <v-card>
-          <v-card-title>Web Assembly</v-card-title>
-          <v-card-subtitle>yarn add libcellml.js</v-card-subtitle>
-          <v-card-text>
-            <v-btn block :class="'big-button'" @click="onWebAssemblyClicked">
-              <icon-w-a />
-              <small-spacer />
-              Web assembly
-            </v-btn>
-          </v-card-text>
-        </v-card>
-      </v-col>
-      <v-col md="4">
-        <v-card>
           <v-card-title>Python</v-card-title>
           <v-card-subtitle>pip install libcellml</v-card-subtitle>
           <v-card-text>
@@ -70,6 +57,19 @@
               <icon-py-pi />
               <small-spacer />
               Python
+            </v-btn>
+          </v-card-text>
+        </v-card>
+      </v-col>
+      <v-col md="4">
+        <v-card>
+          <v-card-title>Web Assembly</v-card-title>
+          <v-card-subtitle>yarn add libcellml.js</v-card-subtitle>
+          <v-card-text>
+            <v-btn block :class="'big-button'" @click="onWebAssemblyClicked">
+              <icon-w-a />
+              <small-spacer />
+              Web assembly
             </v-btn>
           </v-card-text>
         </v-card>

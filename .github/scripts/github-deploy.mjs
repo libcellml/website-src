@@ -8,8 +8,10 @@ import * as fs from 'fs'
     let cname = 'libcellml.org'
     let readmeTitle =
       'Production version of libCellML website\n=======================================\n\n'
+    let ga_token = process.argv[2]
     if (process.argv[2] === 'staging') {
       console.log('Staging run.')
+      ga_token = process.argv[3]
       cname = 'staging.libcellml.org'
       readmeTitle =
         'Staging version of libCellML website\n====================================\n\n'
@@ -29,6 +31,7 @@ import * as fs from 'fs'
     await execa('git', ['remote', 'add', 'deploy', deployRepo])
     console.log('Preparing ... success.')
     console.log('Building ...')
+    await fs.promises.writeFile('.env', `VITE_GA_MEASUREMENT_ID=${ga_token}`)
     await execa('yarn', ['run', 'build'])
     // Understand if it's dist or build folder
     const folderName = fs.existsSync('dist') ? 'dist' : 'build'

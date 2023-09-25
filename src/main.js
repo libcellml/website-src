@@ -4,6 +4,7 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 import vuetify from './plugins/vuetify'
+import VueGtag from 'vue-gtag'
 
 import { loadFonts } from './plugins/webfontloader'
 
@@ -26,6 +27,14 @@ const pinia = createPinia()
 createApp(App)
   .use(pinia)
   .use(router)
+  .use(
+    VueGtag,
+    {
+      pageTrackerUseFullPath: true,
+      config: { id: import.meta.env.VITE_GA_MEASUREMENT_ID },
+    },
+    router,
+  )
   .use(vuetify)
   .use(installVue3DoxygenXml)
   .use(installVue3SphinxXml)
