@@ -4,7 +4,7 @@ import { useNotificationsStore } from '@/stores/notifications'
 import { useSiteStore } from '@/stores/site'
 
 import Home from '@/views/Home.vue'
-// import DocumentationHome from '@/views/DocumentationHome.vue'
+// import { pageview } from 'vue-gtag'
 
 import { getDocumentationVersions } from '../js/documentationversions'
 
@@ -17,15 +17,15 @@ function checkDocumentationVersion(to) {
   const routeParams = to.params
   // Check that version exists otherwise redirect to latest version
   const availableVersions = getDocumentationVersions()
-  console.log("check documentation version:")
+  console.log('check documentation version:')
   console.log(routeParams)
   console.log(routeParams.version)
   if (availableVersions.includes(routeParams.version)) {
     siteStore.setCurrentDocumentationVersion(routeParams.version)
-    console.log("set from site.")
+    console.log('set from site.')
     return true
   } else if (routeParams.version === '') {
-    console.log("set from empty")
+    console.log('set from empty')
     return {
       name: 'Documentation',
       params: {
@@ -33,11 +33,11 @@ function checkDocumentationVersion(to) {
       },
     }
   } else if (routeParams.version === 'latest') {
-    console.log("setting to latest.")
+    console.log('setting to latest.')
     return changeRouteVersion(to, availableVersions[0])
   }
 
-  console.log("notifications")
+  console.log('notifications')
   notificatonsStore.add({
     type: 'error',
     title: `Could not find documentation for version: ${routeParams.version}`,
@@ -347,6 +347,7 @@ export const calculateBreadcrumbs = (to) => {
 router.beforeEach((to, from, next) => {
   const siteStore = useSiteStore()
   siteStore.setBreadcrumbs(calculateBreadcrumbs(to))
+  // pageview(to.path)
   next()
 })
 
