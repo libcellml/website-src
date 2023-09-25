@@ -11,7 +11,7 @@
         API Documentation
       </v-btn>
     </v-col>
-    <v-col v-if="haveUserDocumentation" col="12" md="4" id="guides">
+    <v-col v-if="haveTutorialsDocumentation" col="12" md="4" id="tutorials">
       <v-btn
         block
         :class="'big-button'"
@@ -50,12 +50,11 @@ const latest = getDocumentationVersions()[0]
 
 const haveAPIDocumentation = ref(false)
 const haveUserDocumentation = ref(false)
+const haveTutorialsDocumentation = ref(false)
 const haveDeveloperDocumentation = ref(false)
 
-checkDocumentationAvailability(
-  latest,
-  haveAPIDocumentation,
-  haveUserDocumentation,
-  haveDeveloperDocumentation
-)
+checkDocumentationAvailability(haveAPIDocumentation, latest, 'api')
+checkDocumentationAvailability(haveUserDocumentation, latest, 'user')
+checkDocumentationAvailability(haveTutorialsDocumentation, latest, 'tutorials')
+checkDocumentationAvailability(haveDeveloperDocumentation, latest, 'developer')
 </script>

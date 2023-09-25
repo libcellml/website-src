@@ -3,19 +3,15 @@ export function useCommon() {
     const url = `/generated/${version}/${resource}`
     return fetch(url)
   }
-  function checkDocumentationAvailability(version, api, user, developer) {
+  function checkDocumentationAvailability(variable, version, name) {
     const url = `/generated/${version}/directories.json`
     return fetch(url).then((response) => {
       response.json().then(
         (content) => {
-          api.value = content.includes('api')
-          user.value = content.includes('user')
-          developer.value = content.includes('developer')
+          variable.value = content.includes(name)
         },
         () => {
-          api.value = false
-          user.value = false
-          developer.value = false
+          variable.value = false
         }
       )
     })
