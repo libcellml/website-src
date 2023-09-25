@@ -108,21 +108,43 @@ const developerDocumentationRoute = {
     next(nextTarget)
   },
 }
-const tutorialsDocumentationHomeRoute = {
-  path: '/documentation/:version/tutorials',
-  name: 'DocumentationTutorialsHome',
-  meta: { title: 'libCellML: Tutorials' },
-  component: () => import('@/views/DocumentationTutorialsHome.vue'),
-  beforeEnter: (to, from, next) => {
-    const nextTarget = checkDocumentationVersion(to)
-    next(nextTarget)
-  },
-}
 const tutorialsDocumentationRoute = {
   path: '/documentation/:version/tutorials/:pageName*',
   name: 'DocumentationTutorials',
   meta: { title: 'libCellML: Tutorials' },
   component: () => import('@/views/DocumentationTutorials.vue'),
+  beforeEnter: (to, from, next) => {
+    const nextTarget = checkDocumentationVersion(to)
+    next(nextTarget)
+  },
+}
+const theoryDocumentationRoute = {
+  path: '/documentation/theory/:pageName*',
+  name: 'DocumentationTheory',
+  meta: { title: 'libCellML: Theory' },
+  component: () => import('@/views/DocumentationTheory.vue'),
+}
+const installationDocumentationRoute = {
+  path: '/documentation/installation/:pageName*',
+  name: 'DocumentationInstallation',
+  meta: { title: 'libCellML: Installation' },
+  component: () => import('@/views/DocumentationInstallation.vue'),
+}
+const userDocumentationHomeRoute = {
+  path: '/documentation/:version/user',
+  name: 'DocumentationUserHome',
+  meta: { title: 'libCellML: User Guides' },
+  component: () => import('@/views/DocumentationUserHome.vue'),
+  beforeEnter: (to, from, next) => {
+    const nextTarget = checkDocumentationVersion(to)
+    next(nextTarget)
+  },
+}
+const userDocumentationRoute = {
+  path: '/documentation/:version/user/:pageName+',
+  name: 'DocumentationUser',
+  meta: { title: 'libCellML: User Guides' },
+  component: () => import('@/views/DocumentationUser.vue'),
   beforeEnter: (to, from, next) => {
     const nextTarget = checkDocumentationVersion(to)
     next(nextTarget)
@@ -174,11 +196,15 @@ const catchEverythingRoute = {
 const routes = [
   homeRoute,
   aboutRoute,
+  theoryDocumentationRoute,
+  installationDocumentationRoute,
   apiDocumentationRoute,
   developerDocumentationRoute,
   // tutorialsDocumentationHomeRoute,
   tutorialsDocumentationRoute,
   // baseVersionDocumentationRoute,
+  userDocumentationHomeRoute,
+  userDocumentationRoute,
   baseDocumentationRoute,
   servicesHomeRoute,
   translateRoute,
