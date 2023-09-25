@@ -30,7 +30,7 @@
     <template v-for="i of documentationKeys" :key="'secondary_button_' + i">
       <v-col v-if="documentationInfoMap[i].level === 2 && allVersions[0][i]">
         <big-button
-          :in="i"
+          :id="i"
           :label="documentationInfoMap[i].label"
           :icon-name="documentationInfoMap[i].iconName"
           :target="`/documentation/${allVersions[0].version}/${i}`"
