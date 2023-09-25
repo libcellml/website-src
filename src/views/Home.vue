@@ -8,7 +8,7 @@
     </v-col>
     <v-col cols="12" id="documentation" class="home-section">
       <h1>Documentation</h1>
-      <documentation-buttons />
+      <primary-documentation-buttons />
       <documentation-blurb />
     </v-col>
     <v-col cols="12" id="services" class="home-section">
@@ -26,7 +26,7 @@
 import IntroContent from '../components/home/IntroContent.vue'
 import AboutContent from '../components/home/AboutContent.vue'
 import DownloadContent from '../components/home/DownloadContent.vue'
-import DocumentationButtons from '../components/DocumentationButtons.vue'
+import PrimaryDocumentationButtons from '../components/PrimaryDocumentationButtons.vue'
 import DocumentationBlurb from '../components/DocumentationBlurb.vue'
 import ServicesButtons from '../components/ServicesButtons.vue'
 import ServicesBlurb from '../components/ServicesBlurb.vue'
