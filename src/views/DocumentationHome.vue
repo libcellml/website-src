@@ -14,6 +14,11 @@
           >API Documentation</router-link
         >
       </li>
+      <li v-if="v.haveTutorials">
+        <router-link :to="`/documentation/${v.version}/tutorials`"
+          >Users' Guides Documentation</router-link
+        >
+      </li>
       <li v-if="v.haveUser">
         <router-link :to="`/documentation/${v.version}/user`"
           >Users' Guides Documentation</router-link
@@ -50,14 +55,13 @@ for (const version of availableVersions) {
       version,
       haveAPI: ref(false),
       haveUser: ref(false),
+      haveTutorials: ref(false),
       haveDeveloper: ref(false),
     }
-    checkDocumentationAvailability(
-      version,
-      info.haveAPI,
-      info.haveUser,
-      info.haveDeveloper,
-    )
+    checkDocumentationAvailability(info.haveAPI, version, 'api')
+    checkDocumentationAvailability(info.haveUser, version, 'user')
+    checkDocumentationAvailability(info.haveTutorials, version, 'tutorials')
+    checkDocumentationAvailability(info.haveDeveloper, version, 'developer')
     olderVersions.value.push(info)
   }
 }
