@@ -4,7 +4,7 @@ import { useNotificationsStore } from '@/stores/notifications'
 import { useSiteStore } from '@/stores/site'
 
 import Home from '@/views/Home.vue'
-// import DocumentationHome from '@/views/DocumentationHome.vue'
+// import { pageview } from 'vue-gtag'
 
 import { getDocumentationVersions } from '../js/documentationversions'
 
@@ -101,6 +101,28 @@ const developerDocumentationRoute = {
     next(nextTarget)
   },
 }
+const tutorialsDocumentationRoute = {
+  path: '/documentation/:version/tutorials/:pageName*',
+  name: 'DocumentationTutorials',
+  meta: { title: 'libCellML: Tutorials' },
+  component: () => import('@/views/DocumentationTutorials.vue'),
+  beforeEnter: (to, from, next) => {
+    const nextTarget = checkDocumentationVersion(to)
+    next(nextTarget)
+  },
+}
+const theoryDocumentationRoute = {
+  path: '/documentation/theory/:pageName*',
+  name: 'DocumentationTheory',
+  meta: { title: 'libCellML: Theory' },
+  component: () => import('@/views/DocumentationTheory.vue'),
+}
+const installationDocumentationRoute = {
+  path: '/documentation/installation/:pageName*',
+  name: 'DocumentationInstallation',
+  meta: { title: 'libCellML: Installation' },
+  component: () => import('@/views/DocumentationInstallation.vue'),
+}
 const userDocumentationHomeRoute = {
   path: '/documentation/:version/user',
   name: 'DocumentationUserHome',
@@ -159,31 +181,30 @@ const notFoundRoute = {
 }
 const catchEverythingRoute = {
   path: '/:catchUnknown(.*)*',
-  redirect: (to) => {
-    return {
-      name: 'NotFound',
-      query: {
-        path: '/' + to.params.catchUnknown,
-      },
-    }
-  },
+  name: 'NotFound',
+  meta: { title: 'libCellML: Not Found' },
+  component: () => import('@/views/NotFound.vue'),
 }
 
 const routes = [
   homeRoute,
   aboutRoute,
+  theoryDocumentationRoute,
+  installationDocumentationRoute,
   apiDocumentationRoute,
   developerDocumentationRoute,
+  // tutorialsDocumentationHomeRoute,
+  tutorialsDocumentationRoute,
+  // baseVersionDocumentationRoute,
   userDocumentationHomeRoute,
   userDocumentationRoute,
-  // baseVersionDocumentationRoute,
   baseDocumentationRoute,
   servicesHomeRoute,
   translateRoute,
   validateRoute,
   downloadRoute,
   importRoute,
-  notFoundRoute,
+  // notFoundRoute,
   catchEverythingRoute,
 ]
 
@@ -196,7 +217,7 @@ export const versionedRoutes = [
 const onePathDeepRoutes = [downloadRoute.name, notFoundRoute.name]
 
 const sphinxRoutes = [
-  userDocumentationRoute.name,
+  tutorialsDocumentationRoute.name,
   developerDocumentationRoute.name,
 ]
 
@@ -319,6 +340,7 @@ export const calculateBreadcrumbs = (to) => {
 router.beforeEach((to, from, next) => {
   const siteStore = useSiteStore()
   siteStore.setBreadcrumbs(calculateBreadcrumbs(to))
+  // pageview(to.path)
   next()
 })
 

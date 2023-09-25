@@ -16,20 +16,20 @@
     "filesize": "^10.0.7",
     "jszip": "^3.10.1",
     "katex": "^0.16.4",
-    "pinia": "^2.0.34",
+    "pinia": "^2.1.6",
     "roboto-fontface": "*",
     "semver": "^7.5.2",
     "vue": "^3.2.47",
-    "vue-router": "^4.1.5",
+    "vue-gtag": "^2.0.1",
+    "vue-router": "^4.2.5",
     "vue3-doxygen-xml": "^0.2.0",
     "vue3-libcellml.js": "^0.4.0",
-    "vue3-sphinx-xml": "^0.4.0",
+    "vue3-sphinx-xml": "^0.4.1",
     "vuetify": "^3.3.17",
     "webfontloader": "^1.0.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",
-    "@vue/cli-plugin-vuex": "~5.0.8",
     "eslint": "^8.49.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-vue": "^9.17.0",
@@ -39,7 +39,6 @@
     "vite": "^4.4.9",
     "vite-plugin-rewrite-all": "^1.0.1",
     "vite-plugin-vuetify": "^1.0.2",
-    "vue-cli-plugin-vuetify": "~2.5.8",
-    "vuetify-loader": "^2.0.0-alpha.0"
+    "vue-cli-plugin-vuetify": "^2.5.8"
   }
 }
