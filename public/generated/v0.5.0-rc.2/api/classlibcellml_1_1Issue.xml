@@ -1,0 +1,1211 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="classlibcellml_1_1Issue" kind="class" language="C++" prot="public">
+    <compoundname>libcellml::Issue</compoundname>
+    <includes refid="issue_8h" local="no">issue.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classlibcellml_1_1Issue_1ac8f132565a3d24626c1cec90ce5c1958" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Level</name>
+        <qualifiedname>libcellml::Issue::Level</qualifiedname>
+        <enumvalue id="classlibcellml_1_1Issue_1ac8f132565a3d24626c1cec90ce5c1958abb1ca97ec761fc37101737ba0aa2e7c5" prot="public">
+          <name>ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1ac8f132565a3d24626c1cec90ce5c1958a059e9861e0400dfbe05c98a841f3f96b" prot="public">
+          <name>WARNING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1ac8f132565a3d24626c1cec90ce5c1958a90791ed805bd5b00d78527d39d9ef7e4" prot="public">
+          <name>MESSAGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The issue Level enum class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Enum to describe the level of severity that a given issue has. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="55" column="5" bodyfile="libcellml/issue.h" bodystart="56" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="enum" id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125f" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>ReferenceRule</name>
+        <qualifiedname>libcellml::Issue::ReferenceRule</qualifiedname>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa0db45d2a4141101bdfe48e3314cfbca3" prot="public">
+          <name>UNDEFINED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa3501bb093d363810b671059b9cfed3f8" prot="public">
+          <name>XML</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa68f3488d1be8155521af49fbffddc39a" prot="public">
+          <name>XML_ID_ATTRIBUTE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa369a2510d81bd69e44b6e26fe8685e0b" prot="public">
+          <name>DATA_REPR_IDENTIFIER_UNICODE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa7f91a79a8cbb062779c96d65eb14ce49" prot="public">
+          <name>DATA_REPR_IDENTIFIER_LATIN_ALPHANUM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa6d4921689652f229dd8ce8ab37714d9e" prot="public">
+          <name>DATA_REPR_IDENTIFIER_AT_LEAST_ONE_ALPHANUM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa1c4866492e09cdf1c89b8d24bedc0faa" prot="public">
+          <name>DATA_REPR_IDENTIFIER_BEGIN_EURO_NUM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa75c2ea27397e7f307bbeb9666443d019" prot="public">
+          <name>DATA_REPR_IDENTIFIER_IDENTICAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125faba3a33dd818410b9bd4a0b826ce44c7e" prot="public">
+          <name>DATA_REPR_INT_BASE10</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa8e7f3ec1908644bfd9524b7cf8454375" prot="public">
+          <name>DATA_REPR_INT_SIGN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa8212cdd2d6872922b92822b3d53f0b70" prot="public">
+          <name>DATA_REPR_INT_DIGIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa130d8ab8d5cdbf19e2f1348afebb6e8c" prot="public">
+          <name>DATA_REPR_BASIC_REAL_BASE10</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa2ce4ac140b8d9857562377c86b483455" prot="public">
+          <name>DATA_REPR_BASIC_REAL_SIGN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa74644e624e1941afcd911cc541b8d7f7" prot="public">
+          <name>DATA_REPR_BASIC_REAL_DECIMAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa1e915fb093749934d9fef4705a005807" prot="public">
+          <name>DATA_REPR_BASIC_REAL_DIGIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa5191bdc8ef455f7cf6783f8ffc3cf502" prot="public">
+          <name>DATA_REPR_REAL_BASE10</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fae3b1aff69e4b18586f75e5bd29a8e84c" prot="public">
+          <name>DATA_REPR_REAL_SIGNIFICAND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fafc28fea4323034123a25a54f8e43ccd9" prot="public">
+          <name>DATA_REPR_REAL_EXPONENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa248bffc0e789d6d7b2a6e04440ece7b4" prot="public">
+          <name>MODEL_ELEMENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fab6b4dc1892720787c580df6ac3b99188" prot="public">
+          <name>MODEL_NAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa712ee949ac7b3354210e65e0d7f43f72" prot="public">
+          <name>MODEL_CHILD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa5cf4ceececf58028b1b8029f6bc85952" prot="public">
+          <name>MODEL_MORE_THAN_ONE_ENCAPSULATION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa72d1ebe7d777ff1acdf87d2fc4a0f00e" prot="public">
+          <name>IMPORT_ATTRIBUTE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa5057c7f7be3292312282f2ee41951dae" prot="public">
+          <name>IMPORT_HREF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa3ffd7fc9009c4fff92b99db23a6a543c" prot="public">
+          <name>IMPORT_CHILD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fac60034fbe195941db606e17900be2dd3" prot="public">
+          <name>IMPORT_EQUIVALENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa74d3cf08c828d0b00658f5090992c4fe" prot="public">
+          <name>IMPORT_UNITS_NAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa4d9750ec9e1b95fe0dadfca301cc2d53" prot="public">
+          <name>IMPORT_UNITS_NAME_UNIQUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa62b38a9ffc1f3c2ac12d368a056a0cd3" prot="public">
+          <name>IMPORT_UNITS_REF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa8e05ff0afb4083e36ff0bdf3204fb97c" prot="public">
+          <name>IMPORT_COMPONENT_NAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fac3e08b233a33e8c5f6358ee62d5502f7" prot="public">
+          <name>IMPORT_COMPONENT_NAME_UNIQUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa79809495ebc917919466b2332980734e" prot="public">
+          <name>IMPORT_COMPONENT_COMPONENT_REF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa4d1178dcc752981db491f5fc39790316" prot="public">
+          <name>UNITS_ATTRIBUTE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa1c51ea844ce93b1f14802433e51adaba" prot="public">
+          <name>UNITS_NAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa031e56313982a50325ada2175e2a5e2e" prot="public">
+          <name>UNITS_NAME_UNIQUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa45d4bd01107a88d8eff94f3edb170632" prot="public">
+          <name>UNITS_STANDARD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fafddd12a78cb84c20afcc5649e1f80916" prot="public">
+          <name>UNITS_CHILD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fafb9c0a334365f998c7f81a948225014e" prot="public">
+          <name>UNIT_ATTRIBUTE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa5289088b3c2bd72dbe6d73e629f95374" prot="public">
+          <name>UNIT_UNITS_REF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125facdf860555a6392309a96091cc1ba1f68" prot="public">
+          <name>UNIT_CIRCULAR_REF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fabb76dc11d97ef21784af9e474a2f6a4a" prot="public">
+          <name>UNIT_OPTIONAL_ATTRIBUTE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125facb0d604962b360a4a58c2655539f6920" prot="public">
+          <name>UNIT_PREFIX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125faff8429700d94646d5d65e65b8f72f826" prot="public">
+          <name>UNIT_MULTIPLIER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa79c32597c55af7290f83a0b93cdb51f3" prot="public">
+          <name>UNIT_EXPONENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa7fd7cbd66237330ba96f2184c4588aab" prot="public">
+          <name>COMPONENT_ATTRIBUTE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa73bb5242dcfd72f0db37b52bfae56fac" prot="public">
+          <name>COMPONENT_NAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fab0db32fed14635e911ad8366cf0b6543" prot="public">
+          <name>COMPONENT_NAME_UNIQUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa5853868385b7f9bdce48e0dfb81a025f" prot="public">
+          <name>COMPONENT_CHILD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125faff3eadc859d6216c346a4e29d945bd3e" prot="public">
+          <name>VARIABLE_ATTRIBUTE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125faf2bcfa038ed9034eb38b2ceab88f9d9c" prot="public">
+          <name>VARIABLE_CHILD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125faac36973a62ee56349610649d6c388f9a" prot="public">
+          <name>VARIABLE_NAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa4f710d0baa4c8252cfde0d514929dd74" prot="public">
+          <name>VARIABLE_NAME_UNIQUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fac69619446f6efe82e2cc9cbdf799402a" prot="public">
+          <name>VARIABLE_UNITS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa18af33b271bf6d960ce7b330af12d703" prot="public">
+          <name>VARIABLE_INTERFACE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa8e087e10bed0759936fe5b21dc53e7d8" prot="public">
+          <name>VARIABLE_INITIAL_VALUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fac5e820177c673eaea53a47305e2f30bd" prot="public">
+          <name>RESET_ATTRIBUTE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa573c5dc7063931f8d04ec9b53fba8253" prot="public">
+          <name>RESET_VARIABLE_REF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fac344ee9d39b73655772c099c930c7392" prot="public">
+          <name>RESET_TEST_VARIABLE_REF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa23117eff6415b1f7e91bc932e3e3302f" prot="public">
+          <name>RESET_ORDER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa5404c12c4f1ded4aab5add6c15f94349" prot="public">
+          <name>RESET_CHILD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fafe97c9af176cfaae80f753c7d3b1ce07" prot="public">
+          <name>RESET_TEST_VALUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fac72ae5bb758d0551da415b6528bdedb3" prot="public">
+          <name>RESET_RESET_VALUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa06395818b5f651325947d2997db51ed1" prot="public">
+          <name>MATH_MATHML</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125faeff33591c1eea036bba0c99063488592" prot="public">
+          <name>MATH_CHILD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fab881bf643878a5be75cfccc9c80eb2cd" prot="public">
+          <name>MATH_CI_VARIABLE_REF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa3769f20a96ab5e81d1dad0677c72954c" prot="public">
+          <name>MATH_CN_UNITS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa0e35478a2ad57a406769f7c5131ee942" prot="public">
+          <name>MATH_CN_BASE10</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fadea7cbe30ba2ab0c97407ddd4a5e1852" prot="public">
+          <name>MATH_CN_FORMAT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa14f44e9a48bef32daa20c09a13443b33" prot="public">
+          <name>ENCAPSULATION_ATTRIBUTE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa6dec5022a7d5984196c24d6c72a1c527" prot="public">
+          <name>ENCAPSULATION_CHILD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125faa50c2f27356c15450540f747203fbfb6" prot="public">
+          <name>COMPONENT_REF_COMPONENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa83469c44c5522e7778add2eb6fd51ee0" prot="public">
+          <name>COMPONENT_REF_CHILD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa771eba69bb5a1f8fdf1f78b137233950" prot="public">
+          <name>CONNECTION_ATTRIBUTE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125faead5c58bd02a0aec181169867a4c619b" prot="public">
+          <name>CONNECTION_COMPONENT1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125faa769dd3ed9f0f49a7de7575d19485dac" prot="public">
+          <name>CONNECTION_COMPONENT2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fabae07926254cbdd92718e633dfd3a791" prot="public">
+          <name>CONNECTION_EXCLUDE_SELF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa34e5242a615ec80306c423074095f59d" prot="public">
+          <name>CONNECTION_UNIQUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fad9043cbc4335cd58f978fb77df266845" prot="public">
+          <name>CONNECTION_CHILD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa1c87c6fad2b51c3d95abd95e46160e7b" prot="public">
+          <name>MAP_VARIABLES_ATTRIBUTE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa9eeefd0f8cefd62e07b0d82e80009330" prot="public">
+          <name>MAP_VARIABLES_VARIABLE1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa8a388b7c6ad527fa45710b34458b10d7" prot="public">
+          <name>MAP_VARIABLES_VARIABLE2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa94eb344828c99c068f5bffc8873170e5" prot="public">
+          <name>MAP_VARIABLES_UNIQUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa83f5d2c593cfb59f21db1c42af296a7a" prot="public">
+          <name>MAP_VARIABLES_AVAILABLE_INTERFACE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa7e30330f2716896f539daa77b8cf54de" prot="public">
+          <name>MAP_VARIABLES_IDENTICAL_UNIT_REDUCTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125faf295a0c3e37c94f078e1c5476479132d" prot="public">
+          <name>INVALID_ARGUMENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa85e016f24b6e9106378ba155a1a9c89f" prot="public">
+          <name>IMPORTER_ERROR_IMPORTING_UNITS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fad1f284a71d537ecf18bac47156d74df8" prot="public">
+          <name>IMPORTER_MISSING_FILE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa98ae9922982b21f8dda98acd580caac1" prot="public">
+          <name>IMPORTER_MISSING_COMPONENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa171820b7a35e55de667101a7516a9bf3" prot="public">
+          <name>IMPORTER_MISSING_UNITS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa978e3c4bcdb6c4e468e3768cfeda96a2" prot="public">
+          <name>IMPORTER_NULL_MODEL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa2cf7c15bfe870bcbab7954a7f9c0f296" prot="public">
+          <name>IMPORTER_UNDEFINED_MODEL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fae619209da5a0d839283862b1b20c9034" prot="public">
+          <name>IMPORTER_UNRESOLVED_IMPORTS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa0b748483ecf4100fb9b7036673b5961d" prot="public">
+          <name>ANALYSER_EQUATION_NOT_EQUALITY_STATEMENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa7fc5823b4d0663511f02ebb90a38b439" prot="public">
+          <name>ANALYSER_UNITS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fab6b49bdaae137ab0821e0acdf5229498" prot="public">
+          <name>ANALYSER_UNLINKED_UNITS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa925ffaec6dab7af958f17282c83ad146" prot="public">
+          <name>ANALYSER_VARIABLE_INITIALISED_MORE_THAN_ONCE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fac5422527c6f3cf2bf996d0188219cdb2" prot="public">
+          <name>ANALYSER_VARIABLE_NON_CONSTANT_INITIALISATION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa647f2e339d1a6ad5a133cad5abd74303" prot="public">
+          <name>ANALYSER_VOI_INITIALISED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125faa49b50f7502a8c8ba4a3198d5c9501c4" prot="public">
+          <name>ANALYSER_VOI_SEVERAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa19093334dcf95795aee5763caeeeb478" prot="public">
+          <name>ANALYSER_ODE_NOT_FIRST_ORDER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa4c614d5b0b6debf66ab06b71d8129ed4" prot="public">
+          <name>ANALYSER_VARIABLE_UNUSED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fab5a2c57b26d79e162e24471efbce44a7" prot="public">
+          <name>ANALYSER_STATE_NOT_INITIALISED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa4bcb14918e59e7390809730ca51003d6" prot="public">
+          <name>ANALYSER_STATE_RATE_AS_ALGEBRAIC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa4281caa0e16bb2e8926d2fcef7b6a33e" prot="public">
+          <name>ANALYSER_VARIABLE_COMPUTED_MORE_THAN_ONCE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa2c280ad7b970537f15b28fa811becb2c" prot="public">
+          <name>ANALYSER_EXTERNAL_VARIABLE_DIFFERENT_MODEL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa860e9dcbe60686795df059bcbdda24df" prot="public">
+          <name>ANALYSER_EXTERNAL_VARIABLE_VOI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fab6b875ee88f6095c0949cc1930941746" prot="public">
+          <name>ANALYSER_EXTERNAL_VARIABLE_USE_PRIMARY_VARIABLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fafbaf61c0e65b00461558c0cc95777d95" prot="public">
+          <name>ANNOTATOR_ID_NOT_FOUND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa055ae2c2c34af5df897f22df3a22d02d" prot="public">
+          <name>ANNOTATOR_ID_NOT_UNIQUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125faa0955820c8d134248e321538bc8f3a4c" prot="public">
+          <name>ANNOTATOR_NO_MODEL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa624cd8b215e0349b8e25a94369dcfeff" prot="public">
+          <name>ANNOTATOR_INCONSISTENT_TYPE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa9448ea4a603dab7efd5bcda85308f422" prot="public">
+          <name>ANNOTATOR_NULL_MODEL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa1c04cc3823d476c3017238679a0fdf52" prot="public">
+          <name>UNSPECIFIED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The issue Reference enum class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Enum to describe the rule which the issue addresses. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="67" column="5" bodyfile="libcellml/issue.h" bodystart="68" bodyend="194"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classlibcellml_1_1Issue_1a8fc045316ed5fb70e4aabbca5f40d8ec" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Analyser</definition>
+        <argsstring></argsstring>
+        <name>Analyser</name>
+        <qualifiedname>libcellml::Issue::Analyser</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="37" column="18" bodyfile="libcellml/issue.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classlibcellml_1_1Issue_1ada637a00cbf9ba7cee69bccd009b72bc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Annotator</definition>
+        <argsstring></argsstring>
+        <name>Annotator</name>
+        <qualifiedname>libcellml::Issue::Annotator</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Annotator" kindref="compound">Annotator</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="38" column="18" bodyfile="libcellml/issue.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classlibcellml_1_1Issue_1ad2d8744585dcb094644b1caed04ac9ed" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Importer</definition>
+        <argsstring></argsstring>
+        <name>Importer</name>
+        <qualifiedname>libcellml::Issue::Importer</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Importer" kindref="compound">Importer</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="39" column="18" bodyfile="libcellml/issue.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classlibcellml_1_1Issue_1ab80291af9c262f63b83fa9c16f12014d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Parser</definition>
+        <argsstring></argsstring>
+        <name>Parser</name>
+        <qualifiedname>libcellml::Issue::Parser</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Parser" kindref="compound">Parser</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="40" column="18" bodyfile="libcellml/issue.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classlibcellml_1_1Issue_1acdb73910fe7e6db5af3e0545f4028881" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Printer</definition>
+        <argsstring></argsstring>
+        <name>Printer</name>
+        <qualifiedname>libcellml::Issue::Printer</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Printer" kindref="compound">Printer</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="41" column="18" bodyfile="libcellml/issue.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classlibcellml_1_1Issue_1a5929181addf27f130c7f8f99eeba3256" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Validator</definition>
+        <argsstring></argsstring>
+        <name>Validator</name>
+        <qualifiedname>libcellml::Issue::Validator</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Validator" kindref="compound">Validator</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="42" column="18" bodyfile="libcellml/issue.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlibcellml_1_1Issue_1a8984294b8e77cd0351a0a156c62ff044" prot="private" static="no" mutable="no">
+        <type>IssueImpl *</type>
+        <definition>IssueImpl* libcellml::Issue::mPimpl</definition>
+        <argsstring></argsstring>
+        <name>mPimpl</name>
+        <qualifiedname>libcellml::Issue::mPimpl</qualifiedname>
+        <briefdescription>
+<para>Forward declaration for pImpl idiom,. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Private member to implementation pointer,. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="257" column="15" bodyfile="libcellml/issue.h" bodystart="257" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1ac0d6dd8709dd91b503bdf6abbc562fae" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual libcellml::Issue::~Issue</definition>
+        <argsstring>()</argsstring>
+        <name>~Issue</name>
+        <qualifiedname>libcellml::Issue::~Issue</qualifiedname>
+        <briefdescription>
+<para>Destructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="45" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1a1aa5ccd9eec1238e4cc7aec87d96a0fb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Issue::Issue</definition>
+        <argsstring>(const Issue &amp;rhs)=delete</argsstring>
+        <name>Issue</name>
+        <qualifiedname>libcellml::Issue::Issue</qualifiedname>
+        <param>
+          <type>const <ref refid="classlibcellml_1_1Issue" kindref="compound">Issue</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="46" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1ac3f8c73a8e70b9b78d6070409466ac29" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Issue::Issue</definition>
+        <argsstring>(Issue &amp;&amp;rhs) noexcept=delete</argsstring>
+        <name>Issue</name>
+        <qualifiedname>libcellml::Issue::Issue</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Issue" kindref="compound">Issue</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="47" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1a9519a592a4e76b1ae42680bd7d5fb930" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1Issue" kindref="compound">Issue</ref> &amp;</type>
+        <definition>Issue &amp; libcellml::Issue::operator=</definition>
+        <argsstring>(Issue rhs)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>libcellml::Issue::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Issue" kindref="compound">Issue</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="48" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1ab16c28b2454fc24d4870864237226b44" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Issue::Issue</definition>
+        <argsstring>()</argsstring>
+        <name>Issue</name>
+        <qualifiedname>libcellml::Issue::Issue</qualifiedname>
+        <briefdescription>
+<para>Constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="254" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1aa6a0563d2c18de3b4bae8125f7e24c03" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Issue::description</definition>
+        <argsstring>() const</argsstring>
+        <name>description</name>
+        <qualifiedname>libcellml::Issue::description</qualifiedname>
+        <briefdescription>
+<para>Get the description for this issue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the <computeroutput>std::string</computeroutput> description for why this issue was raised.</para>
+<para><simplesect kind="return"><para>The <computeroutput>std::string</computeroutput> description of the issue. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="203" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1a04f69c031667b3db4913ec3efec7d377" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1Issue_1ac8f132565a3d24626c1cec90ce5c1958" kindref="member">Level</ref></type>
+        <definition>Level libcellml::Issue::level</definition>
+        <argsstring>() const</argsstring>
+        <name>level</name>
+        <qualifiedname>libcellml::Issue::level</qualifiedname>
+        <briefdescription>
+<para>Get the level of this issue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the <computeroutput><ref refid="classlibcellml_1_1Issue_1ac8f132565a3d24626c1cec90ce5c1958" kindref="member">Issue::Level</ref></computeroutput> of this issue. If no level has been set for this issue, will return <ref refid="classlibcellml_1_1Issue_1ac8f132565a3d24626c1cec90ce5c1958abb1ca97ec761fc37101737ba0aa2e7c5" kindref="member">Level::ERROR</ref>.</para>
+<para><simplesect kind="return"><para>The <computeroutput><ref refid="classlibcellml_1_1Issue_1ac8f132565a3d24626c1cec90ce5c1958" kindref="member">Issue::Level</ref></computeroutput> set for this issue. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="213" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1aebda0e12d4af026f9a3514173bbef287" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125f" kindref="member">ReferenceRule</ref></type>
+        <definition>ReferenceRule libcellml::Issue::referenceRule</definition>
+        <argsstring>() const</argsstring>
+        <name>referenceRule</name>
+        <qualifiedname>libcellml::Issue::referenceRule</qualifiedname>
+        <briefdescription>
+<para>Get the <computeroutput>enum</computeroutput> ReferenceRule of this issue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the <computeroutput>enum</computeroutput> <computeroutput>ReferenceRule</computeroutput> value of this issue. If no reference rule has been set for this issue, return <ref refid="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125fa0db45d2a4141101bdfe48e3314cfbca3" kindref="member">ReferenceRule::UNDEFINED</ref>.</para>
+<para><simplesect kind="return"><para>The <computeroutput>ReferenceRule</computeroutput> for this issue. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="223" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1a2dc1a296f02c4dc29ae2171c53a90bcf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1adfe61184a6b1f01266643d95352af87c" kindref="member">AnyCellmlElementPtr</ref></type>
+        <definition>AnyCellmlElementPtr libcellml::Issue::item</definition>
+        <argsstring>() const</argsstring>
+        <name>item</name>
+        <qualifiedname>libcellml::Issue::item</qualifiedname>
+        <briefdescription>
+<para>Get the item for this issue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the item for this issue as an <ref refid="namespacelibcellml_1adfe61184a6b1f01266643d95352af87c" kindref="member">AnyCellmlElementPtr</ref>.</para>
+<para><simplesect kind="return"><para>The <ref refid="namespacelibcellml_1adfe61184a6b1f01266643d95352af87c" kindref="member">AnyCellmlElementPtr</ref> for this issue. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="232" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1afef4493750664b1eb53dc34bf363ce18" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Issue::url</definition>
+        <argsstring>() const</argsstring>
+        <name>url</name>
+        <qualifiedname>libcellml::Issue::url</qualifiedname>
+        <briefdescription>
+<para>Get the <computeroutput>url</computeroutput> of this issue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the <computeroutput>url</computeroutput> to which the user should refer for more information on this issue.</para>
+<para><simplesect kind="return"><para>The <computeroutput>url</computeroutput> for this issue. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="241" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Issue_1a1694c93c4f368b0d2084403e5eab143e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Issue::referenceHeading</definition>
+        <argsstring>() const</argsstring>
+        <name>referenceHeading</name>
+        <qualifiedname>libcellml::Issue::referenceHeading</qualifiedname>
+        <briefdescription>
+<para>Get the <computeroutput>std::string</computeroutput> heading associated with the <computeroutput>enum</computeroutput> ReferenceRule for this issue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the <computeroutput>std::string</computeroutput> libCellML Reference heading associated with the <computeroutput>enum</computeroutput> ReferenceRule for this issue. If no rule has been set for this issue, will return an empty string.</para>
+<para><simplesect kind="return"><para>The <computeroutput>std::string</computeroutput> libCellML Reference heading relevant to this issue. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/issue.h" line="251" column="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classlibcellml_1_1Issue" kindref="compound">Issue</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Base class for issues used with logger derived classes. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>libcellml::Issue</label>
+        <link refid="classlibcellml_1_1Issue"/>
+      </node>
+    </collaborationgraph>
+    <location file="libcellml/issue.h" line="35" column="1" bodyfile="libcellml/issue.h" bodystart="36" bodyend="258"/>
+    <listofallmembers>
+      <member refid="classlibcellml_1_1Issue_1a8fc045316ed5fb70e4aabbca5f40d8ec" prot="private" virt="non-virtual"><scope>libcellml::Issue</scope><name>Analyser</name></member>
+      <member refid="classlibcellml_1_1Issue_1ada637a00cbf9ba7cee69bccd009b72bc" prot="private" virt="non-virtual"><scope>libcellml::Issue</scope><name>Annotator</name></member>
+      <member refid="classlibcellml_1_1Issue_1aa6a0563d2c18de3b4bae8125f7e24c03" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>description</name></member>
+      <member refid="classlibcellml_1_1Issue_1ad2d8744585dcb094644b1caed04ac9ed" prot="private" virt="non-virtual"><scope>libcellml::Issue</scope><name>Importer</name></member>
+      <member refid="classlibcellml_1_1Issue_1a1aa5ccd9eec1238e4cc7aec87d96a0fb" prot="private" virt="non-virtual"><scope>libcellml::Issue</scope><name>Issue</name></member>
+      <member refid="classlibcellml_1_1Issue_1ac3f8c73a8e70b9b78d6070409466ac29" prot="private" virt="non-virtual"><scope>libcellml::Issue</scope><name>Issue</name></member>
+      <member refid="classlibcellml_1_1Issue_1ab16c28b2454fc24d4870864237226b44" prot="private" virt="non-virtual"><scope>libcellml::Issue</scope><name>Issue</name></member>
+      <member refid="classlibcellml_1_1Issue_1a2dc1a296f02c4dc29ae2171c53a90bcf" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>item</name></member>
+      <member refid="classlibcellml_1_1Issue_1ac8f132565a3d24626c1cec90ce5c1958" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>Level</name></member>
+      <member refid="classlibcellml_1_1Issue_1a04f69c031667b3db4913ec3efec7d377" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>level</name></member>
+      <member refid="classlibcellml_1_1Issue_1a8984294b8e77cd0351a0a156c62ff044" prot="private" virt="non-virtual"><scope>libcellml::Issue</scope><name>mPimpl</name></member>
+      <member refid="classlibcellml_1_1Issue_1a9519a592a4e76b1ae42680bd7d5fb930" prot="private" virt="non-virtual"><scope>libcellml::Issue</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1Issue_1ab80291af9c262f63b83fa9c16f12014d" prot="private" virt="non-virtual"><scope>libcellml::Issue</scope><name>Parser</name></member>
+      <member refid="classlibcellml_1_1Issue_1acdb73910fe7e6db5af3e0545f4028881" prot="private" virt="non-virtual"><scope>libcellml::Issue</scope><name>Printer</name></member>
+      <member refid="classlibcellml_1_1Issue_1a1694c93c4f368b0d2084403e5eab143e" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>referenceHeading</name></member>
+      <member refid="classlibcellml_1_1Issue_1aebda0e12d4af026f9a3514173bbef287" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>referenceRule</name></member>
+      <member refid="classlibcellml_1_1Issue_1a2bbfd0054cfad6cda628a78de762125f" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>ReferenceRule</name></member>
+      <member refid="classlibcellml_1_1Issue_1afef4493750664b1eb53dc34bf363ce18" prot="public" virt="non-virtual"><scope>libcellml::Issue</scope><name>url</name></member>
+      <member refid="classlibcellml_1_1Issue_1a5929181addf27f130c7f8f99eeba3256" prot="private" virt="non-virtual"><scope>libcellml::Issue</scope><name>Validator</name></member>
+      <member refid="classlibcellml_1_1Issue_1ac0d6dd8709dd91b503bdf6abbc562fae" prot="private" virt="virtual"><scope>libcellml::Issue</scope><name>~Issue</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
