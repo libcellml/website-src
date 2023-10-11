@@ -34,10 +34,6 @@ function checkDocumentationVersion(to) {
     return changeRouteVersion(to, availableVersions[0])
   }
 
-  console.log("===========")
-  console.log(to.name)
-  console.log(to.match)
-  console.log(to.params)
   notificatonsStore.add({
     type: 'error',
     title: `Could not find documentation for version: ${routeParams.version}`,
