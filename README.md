@@ -18,8 +18,24 @@ When a pull request is merged into either _staging_ or _production_ GitHub actio
 All external pull requests should use _staging_ as the base.
 Pull requests targetting _staging_ are only given a light review, this is only really to check for malicious intent.
 Once a _staging_ pull request has been merged care needs to be taken to test the website for breakages.
-At this time, we do not have any formalised testing of the website.
-Because of this, we need to manually check the functionality of the website for breakages before promotion to _production_.
+
+### Testing
+
+We have started adding tests using [Selenium](https://www.selenium.dev/).
+The tests are run through Python using the Python package _unittest_.
+To run the tests create a Python virtual environment and execute the following commands:
+
+```
+  pip3 install selenium webdriver-manager
+  python3 tests/selenium/install_driver.py
+  python3 tests/selenium/run_all_tests.py
+```
+
+These commands assume the virtual environment is active, and that the commands are being executed from the root directory of the website source.
+
+The tests do not cover all the functionality of the website, at this time.
+It is unlikely that the tests will pick up regressions in the website.
+Because of this, we should manually check the functionality of the website for breakages before promotion to _production_ after the tests have run.
 
 ## About
 
