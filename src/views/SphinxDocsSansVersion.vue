@@ -12,7 +12,4 @@ import { useRoute } from 'vue-router'
 import { SphinxPage } from 'vue3-sphinx-xml'
 
 const route = useRoute()
-console.log('000000000')
-console.log(route.name)
-console.log(route)
 </script>
