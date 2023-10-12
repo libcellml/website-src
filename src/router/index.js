@@ -7,6 +7,9 @@ import Home from '@/views/Home.vue'
 // import { pageview } from 'vue-gtag'
 
 import { getDocumentationVersions } from '../js/documentationversions'
+import { useCommon } from '@/composables/common'
+
+const { documentationInfoMap } = useCommon()
 
 const DEFAULT_TITLE = 'libCellML'
 
@@ -71,57 +74,53 @@ const servicesHomeRoute = {
   meta: { title: 'libCellML: Services' },
   component: () => import('@/views/ServicesHome.vue'),
 }
-// const baseVersionDocumentationRoute = {
-//   path: '/documentation/:version?',
-//   name: 'DocumentationHome',
-//   meta: { title: 'libCellML: Documentation' },
-//   component: DocumentationHome,
-//   beforeEnter: (to, from, next) => {
-//     const nextTarget = checkDocumentationVersion(to)
-//     next(nextTarget)
-//   },
-// }
-const apiDocumentationRoute = {
-  path: '/documentation/:version/api/:pageName?',
-  name: 'DocumentationAPI',
-  meta: { title: 'libCellML: API' },
-  component: () => import('@/views/DocumentationAPI.vue'),
+
+export let versionedRouteNames = ['DocumentationUser']
+let versionedRoutes = [{
+  path: '/documentation/:version/user/:pageName+',
+  name: 'DocumentationUser',
+  meta: { title: 'libCellML: User Guides' },
+  component: () => import('@/views/DocumentationUser.vue'),
   beforeEnter: (to, from, next) => {
     const nextTarget = checkDocumentationVersion(to)
     next(nextTarget)
   },
-}
-const developerDocumentationRoute = {
-  path: '/documentation/:version/developer/:pageName*',
-  name: 'DocumentationDeveloper',
-  meta: { title: 'libCellML: Developer' },
-  component: () => import('@/views/DocumentationDeveloper.vue'),
-  beforeEnter: (to, from, next) => {
-    const nextTarget = checkDocumentationVersion(to)
-    next(nextTarget)
-  },
-}
-const tutorialsDocumentationRoute = {
-  path: '/documentation/:version/tutorials/:pageName*',
-  name: 'DocumentationTutorials',
-  meta: { title: 'libCellML: Tutorials' },
-  component: () => import('@/views/DocumentationTutorials.vue'),
-  beforeEnter: (to, from, next) => {
-    const nextTarget = checkDocumentationVersion(to)
-    next(nextTarget)
-  },
-}
-const theoryDocumentationRoute = {
-  path: '/documentation/theory/:pageName*',
-  name: 'DocumentationTheory',
-  meta: { title: 'libCellML: Theory' },
-  component: () => import('@/views/DocumentationTheory.vue'),
-}
-const installationDocumentationRoute = {
-  path: '/documentation/installation/:pageName*',
-  name: 'DocumentationInstallation',
-  meta: { title: 'libCellML: Installation' },
-  component: () => import('@/views/DocumentationInstallation.vue'),
+}]
+let sphinxRoutes = ['DocumentationUser']
+let doxygenRoutes = []
+for (let key in documentationInfoMap) {
+  if (key !== 'user') {
+    // The old 'user' documentation is a special case and requires its own handling.
+    const routeName = `Documentation${documentationInfoMap[key].name}`
+    versionedRouteNames.push(routeName)
+    if (key === 'api') {
+      // The 'api' documentation is rendered with vue3-doxygen-xml, which is different
+      // from the other versioned documentation.  They use vue3-sphinx-xml.
+      doxygenRoutes.push(routeName)
+      versionedRoutes.push({
+        path: '/documentation/:version/api/:pageName?',
+        name: routeName,
+        meta: { title: `libCellML: ${documentationInfoMap[key].name}` },
+        component: () => import('@/views/DoxygenAPI.vue'),
+        beforeEnter: (to, from, next) => {
+          const nextTarget = checkDocumentationVersion(to)
+          next(nextTarget)
+        },
+      })
+    } else {
+      sphinxRoutes.push(routeName)
+      versionedRoutes.push({
+        path: `/documentation/:version/:subDoc/:pageName*`,
+        name: routeName,
+        meta: { title: `libCellML: ${documentationInfoMap[key].name}` },
+        component: () => import('@/views/SphinxDocsWithVersion.vue'),
+        beforeEnter: (to, from, next) => {
+          const nextTarget = checkDocumentationVersion(to)
+          next(nextTarget)
+        },
+      })
+    }
+  }
 }
 const userDocumentationHomeRoute = {
   path: '/documentation/:version/user',
@@ -133,15 +132,17 @@ const userDocumentationHomeRoute = {
     next(nextTarget)
   },
 }
-const userDocumentationRoute = {
-  path: '/documentation/:version/user/:pageName+',
-  name: 'DocumentationUser',
-  meta: { title: 'libCellML: User Guides' },
-  component: () => import('@/views/DocumentationUser.vue'),
-  beforeEnter: (to, from, next) => {
-    const nextTarget = checkDocumentationVersion(to)
-    next(nextTarget)
-  },
+const theoryDocumentationRoute = {
+  path: '/documentation/theory/:pageName*',
+  name: 'DocumentationTheory',
+  meta: { title: 'libCellML: Theory', subDoc: 'theory' },
+  component: () => import('@/views/SphinxDocsSansVersion.vue'),
+}
+const installationDocumentationRoute = {
+  path: '/documentation/installation/:pageName*',
+  name: 'DocumentationInstallation',
+  meta: { title: 'libCellML: Installation', subDoc: 'installation' },
+  component: () => import('@/views/SphinxDocsSansVersion.vue'),
 }
 const validateRoute = {
   path: '/services/validate',
@@ -191,13 +192,8 @@ const routes = [
   aboutRoute,
   theoryDocumentationRoute,
   installationDocumentationRoute,
-  apiDocumentationRoute,
-  developerDocumentationRoute,
-  // tutorialsDocumentationHomeRoute,
-  tutorialsDocumentationRoute,
-  // baseVersionDocumentationRoute,
+  ...versionedRoutes,
   userDocumentationHomeRoute,
-  userDocumentationRoute,
   baseDocumentationRoute,
   servicesHomeRoute,
   translateRoute,
@@ -207,21 +203,6 @@ const routes = [
   // notFoundRoute,
   catchEverythingRoute,
 ]
-
-export const versionedRoutes = [
-  'DocumentationAPI',
-  'DocumentationDeveloper',
-  'DocumentationUser',
-]
-
-const onePathDeepRoutes = [downloadRoute.name, notFoundRoute.name]
-
-const sphinxRoutes = [
-  tutorialsDocumentationRoute.name,
-  developerDocumentationRoute.name,
-]
-
-const doxygenRoutes = [apiDocumentationRoute.name]
 
 const router = createRouter({
   history: createWebHistory(),
@@ -308,10 +289,7 @@ export const calculateBreadcrumbs = (to) => {
 
         crumbs.push(createBreadcrumb(route, readableText))
       } else if (sphinxRoutes.includes(to.name)) {
-        let subPath = 'user'
-        if (to.name === developerDocumentationRoute.name) {
-          subPath = 'developer'
-        }
+        const subPath = to.params.subDoc
         let route = { path }
         if (el !== subPath && path.includes(subPath)) {
           route = { path: path + '/index' }

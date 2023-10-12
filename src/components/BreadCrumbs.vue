@@ -52,7 +52,7 @@ import { useRoute, useRouter } from 'vue-router'
 
 import { useSiteStore } from '@/stores/site'
 import { getDocumentationVersions } from '@/js/documentationversions'
-import { versionedRoutes, changeRouteVersion } from '@/router'
+import { versionedRouteNames, changeRouteVersion } from '@/router'
 
 const store = useSiteStore()
 const route = useRoute()
@@ -62,7 +62,7 @@ const latest = getDocumentationVersions()[0]
 
 const viewingOldDocumentation = computed(() => {
   if (
-    versionedRoutes.includes(route.name) &&
+    versionedRouteNames.includes(route.name) &&
     store.current_documentation_version !== latest
   ) {
     return true
