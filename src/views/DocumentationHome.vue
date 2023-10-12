@@ -22,6 +22,7 @@
   <h2>Version specific documentation</h2>
   <p>
     Documentation for <strong>{{ latest }}</strong> of libCellML.
+    <validation-provenance :version="latest" />
   </p>
   <br />
   <primary-documentation-buttons />
@@ -55,6 +56,7 @@
           </li>
         </template>
       </ul>
+      <p><validation-provenance :version="v.version" /></p>
     </template>
     <br />
   </div>
@@ -64,10 +66,12 @@
 import { ref } from 'vue'
 
 import { useCommon } from '../composables/common'
+
 import { getDocumentationVersions } from '../js/documentationversions'
 
 import PrimaryDocumentationButtons from '../components/PrimaryDocumentationButtons.vue'
 import BigButton from '../components/BigButton.vue'
+import ValidationProvenance from '../components/ValidationProvenance.vue'
 
 const { checkDocumentationAvailability, documentationInfoMap } = useCommon()
 
@@ -75,28 +79,6 @@ const availableVersions = getDocumentationVersions()
 const latest = availableVersions[0]
 
 const allVersions = ref([])
-// const documentationInfoMap = {
-//   api: { label: 'API Documentation', level: 1 },
-//   user: { label: "Users' Guides", level: 1 },
-//   tutorials: { label: 'Tutorials', level: 1 },
-//   developer: { label: 'Developers Documentation', level: 1 },
-//   howto: {
-//     label: 'How to',
-//     level: 2,
-//     iconName: 'mdi-account-box-multiple-outline',
-//   },
-//   runtimecodes: {
-//     label: 'Runtime Codes',
-//     level: 2,
-//     iconName: 'mdi-clipboard-text-play',
-//   },
-//   aside: {
-//     label: 'Asides',
-//     level: 2,
-//     iconName: 'mdi-information',
-//   },
-// }
-
 const documentationKeys = Object.keys(documentationInfoMap)
 
 for (const version of availableVersions) {
