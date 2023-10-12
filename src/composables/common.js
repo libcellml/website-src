@@ -36,7 +36,7 @@ export function useCommon() {
       level: 2,
       iconName: 'mdi-clipboard-text-play',
     },
-    aside: {
+    asides: {
       name: 'Asides',
       label: 'Asides',
       level: 2,
