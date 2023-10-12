@@ -1,36 +1,43 @@
 export function useCommon() {
   const documentationInfoMap = {
     api: {
+      name: 'API',
       label: 'API Documentation',
       level: 1,
       iconName: 'mdi-book-open-page-variant',
     },
     user: {
+      name: 'Users',
       label: "Users' Guides",
       level: 1,
       iconName: 'mdi-account-group',
     },
     tutorials: {
+      name: 'Tutorials',
       label: 'Tutorials',
       level: 1,
       iconName: 'mdi-account-group',
     },
     developer: {
+      name: 'Developer',
       label: 'Developers Documentation',
       level: 1,
       iconName: 'mdi-cogs',
     },
     howto: {
+      name: 'HowTo',
       label: 'How to',
       level: 2,
       iconName: 'mdi-account-box-multiple-outline',
     },
     runtimecodes: {
+      name: 'Runtime',
       label: 'Runtime Codes',
       level: 2,
       iconName: 'mdi-clipboard-text-play',
     },
     aside: {
+      name: 'Asides',
       label: 'Asides',
       level: 2,
       iconName: 'mdi-information',
