@@ -15,7 +15,7 @@
     "crypto-js": "^4.2.0",
     "filesize": "^10.0.7",
     "jszip": "^3.10.1",
-    "katex": "^0.16.4",
+    "katex": "^0.16.10",
     "pinia": "^2.1.6",
     "roboto-fontface": "*",
     "semver": "^7.5.2",
