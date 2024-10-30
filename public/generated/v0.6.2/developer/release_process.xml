@@ -1,0 +1,143 @@
+<document xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/" xmlns:todo="https://www.sphinx-doc.org/" source="/Users/libcellml/BuildbotWorker/Finalise_Release_Builder/src/docs/release_process.rst">
+    <target refid="release-process"/>
+    <section ids="release-process-for-libcellml release-process" names="release\ process\ for\ libcellml release_process">
+        <title>Release process for <emphasis>libCellML</emphasis></title>
+        <paragraph>The target audience of this document are the developers of <emphasis>libCellML</emphasis>, who have write authority to the <reference name="cellml/libcellml" refuri="https://github.com/cellml/libcellml">cellml/libcellml</reference> repository.
+            Releases are made using builders from the Buildbot Continuous Integration (CI).
+            There are four steps in making a release.</paragraph>
+        <enumerated_list enumtype="arabic" prefix="" suffix=".">
+            <list_item>
+                <paragraph><reference name="Step 1 - Setting the version number" refid="step-1-setting-the-version-number">Step 1 - Setting the version number</reference></paragraph>
+            </list_item>
+            <list_item>
+                <paragraph><reference name="Step 2 - Preparing the release" refid="step-2-preparing-the-release">Step 2 - Preparing the release</reference></paragraph>
+            </list_item>
+            <list_item>
+                <paragraph><reference name="Step 3 - Creating the release" refid="step-3-creating-the-release">Step 3 - Creating the release</reference></paragraph>
+            </list_item>
+            <list_item>
+                <paragraph><reference name="Step 4 - Finalising the Release" refid="step-4-finalising-the-release">Step 4 - Finalising the Release</reference></paragraph>
+            </list_item>
+        </enumerated_list>
+        <paragraph>Each section has further details on what actions are required for a particular step.
+            Each step must be done in order from step 1 through to step 4.</paragraph>
+        <paragraph>For all the steps in creating a release, you must be logged in to the Buildbot CI and be in the <emphasis>admin</emphasis> group.</paragraph>
+        <note>
+            <paragraph>Merging in pull requests when a release is under way is not recommended and more importantly has not been tested.
+                To determine if a release is under way check the repository for the presence of a branch named <emphasis>version_change</emphasis> or <emphasis>release_staging_&lt;version number&gt;</emphasis>.</paragraph>
+        </note>
+        <section ids="step-1-setting-the-version-number" names="step\ 1\ -\ setting\ the\ version\ number">
+            <title>Step 1 - Setting the version number</title>
+            <paragraph>The version number for the project can be set using the <emphasis>Set Version Builder</emphasis> (<number_reference internal="True" refid="libcellml-release-process-set-version-builder" title="Fig. %s"><inline classes="std std-numref">Fig. 11</inline></number_reference>).
+                The <emphasis>Set Version Builder</emphasis> sets the version that is entered into the interface, it does not increment the version.
+                The version that you set in the interface will be applied as is to the codebase.</paragraph>
+            <figure align="center" ids="libcellml-release-process-set-version-builder" names="libcellml_release_process_set_version_builder">
+                <image alt="Buildbot set version builder." candidates="{'*': 'images/release_process/set_version_builder.png'}" uri="images/release_process/set_version_builder.png"/>
+                <caption><emphasis>Set Version Builder</emphasis> on Buildbot.</caption>
+            </figure>
+            <paragraph>libCellML uses semantic versioning as a versioning system, see <reference name="Semantic versioning" refuri="https://semver.org/">Semantic versioning</reference><target ids="semantic-versioning" names="semantic\ versioning" refuri="https://semver.org/"/> for further information.
+                As such, each part of the version number carries a specific meaning and when setting a version number you need to make sure you are following semantic versioning rules.
+                There are no checks to determine if semantic versioning is being followed.
+                The version number is split into two parts: the core version, made up of the major, minor, and patch version identifiers; and the developer version.
+                An official release is created by leaving the developer version input empty.
+                The main difference between an official release and a developer release is the assets built by the developer release process are not uploaded or published to public registries or attached to an associated GitHub release.</paragraph>
+            <figure align="center" ids="libcellml-release-process-set-version-builder-interface" names="libcellml_release_process_set_version_builder_interface">
+                <image alt="Buildbot set version builder interface." candidates="{'*': 'images/release_process/set_version_builder_interface.png'}" uri="images/release_process/set_version_builder_interface.png"/>
+                <caption_number>Fig. 12 </caption_number><caption><emphasis>Set Version Builder</emphasis> interface.</caption>
+            </figure>
+            <paragraph>When the <emphasis>Start Build</emphasis> button is pressed (<number_reference internal="True" refid="libcellml-release-process-set-version-builder-interface" title="Fig. %s"><inline classes="std std-numref">Fig. 12</inline></number_reference>) Buildbot will create an internal pull request on the <reference name="cellml/libcellml" refuri="https://github.com/cellml/libcellml">cellml/libcellml</reference> GitHub repository.
+                The pull request will be made from the <emphasis>version_change</emphasis> branch to the <emphasis>main</emphasis> branch.
+                The creation of the pull request will trigger a CI build, wait for the CI to finish its checks before merging the pull request.
+                If, for some reason, the CI checks fail changes may be required.
+                Changes can be made directly to the <emphasis>vesion_change</emphasis> branch but quite likely any such changes will need to be propagated to the CI for a permanent fix.
+                How changes are propagated to the CI is outside the scope of this document.
+                When merging the pull request the <emphasis>version_change</emphasis> branch will be automatically deleted.</paragraph>
+            <note>
+                <paragraph>The merging of a <emphasis>version_change</emphasis> pull request created by the CI system is exempt from the &#8216;two reviews&#8217; required rule.</paragraph>
+            </note>
+            <paragraph>When the version number has been set in the <emphasis>main</emphasis> branch the preparation of the release can start.</paragraph>
+        </section>
+        <section ids="step-2-preparing-the-release" names="step\ 2\ -\ preparing\ the\ release">
+            <title>Step 2 - Preparing the release</title>
+            <paragraph>A release is prepared using the <emphasis>Prepare Release Builder</emphasis> (<number_reference internal="True" refid="libcellml-release-process-prepare-release" title="Fig. %s"><inline classes="std std-numref">Fig. 13</inline></number_reference>).
+                The <emphasis>Prepare Release Builder</emphasis> will create a new branch named <emphasis>release_staging_&lt;version number&gt;</emphasis> (where &lt;version number&gt; is an actual semantic version number set in the first step) and generate a changelog.</paragraph>
+            <figure align="center" ids="libcellml-release-process-prepare-release" names="libcellml_release_process_prepare_release">
+                <image alt="Buildbot prepare release builder interface." candidates="{'*': 'images/release_process/prepare_release_builder.png'}" uri="images/release_process/prepare_release_builder.png"/>
+                <caption><emphasis>Prepare Release Builder</emphasis> on Buildbot.</caption>
+            </figure>
+            <paragraph>The changelog for a release is generated from information found in merged pull requests between the current release under preparation and the previous release.</paragraph>
+            <note>
+                <paragraph>The changelog creation is unlikely to be accurate when creating a bug fix/hot fix release on a previously released official version.
+                    At this time, that means some manual editing of the changelog will need to happen when creating a bug fix/hot fix release.</paragraph>
+            </note>
+            <figure align="center" ids="libcellml-release-process-prepare-release-builder-interface" names="libcellml_release_process_prepare_release_builder_interface">
+                <image alt="Buildbot prepare release interface." candidates="{'*': 'images/release_process/prepare_release_builder_interface.png'}" uri="images/release_process/prepare_release_builder_interface.png"/>
+                <caption_number>Fig. 14 </caption_number><caption><emphasis>Prepare Release Builder</emphasis> interface.</caption>
+            </figure>
+            <paragraph>There are no options for the <emphasis>Prepare Release Builder</emphasis>, there is only one place you can prepare a release from, there is only one place a release is going to be created.
+                The only thing you can do is start a build, (<number_reference internal="True" refid="libcellml-release-process-prepare-release-builder-interface" title="Fig. %s"><inline classes="std std-numref">Fig. 14</inline></number_reference>).</paragraph>
+            <paragraph>The <emphasis>Prepare Release Builder</emphasis> will kick off a round of unit tests as part of the preparation process.</paragraph>
+            <paragraph>When the release has been prepared the <emphasis>release_staging_&lt;version number&gt;</emphasis> branch will have been created and a changelog and table of contents entries for the changelog will have been created.
+                Manual changes to the generated changelog can be made at this point in the release process.
+                The changes made for the new changelog should be the only changes from the current <emphasis>main</emphasis> branch.</paragraph>
+        </section>
+        <section ids="step-3-creating-the-release" names="step\ 3\ -\ creating\ the\ release">
+            <title>Step 3 - Creating the release</title>
+            <paragraph>A release is created using the <emphasis>Create Release Builder</emphasis> (<number_reference internal="True" refid="libcellml-release-process-create-release" title="Fig. %s"><inline classes="std std-numref">Fig. 15</inline></number_reference>).</paragraph>
+            <figure align="center" ids="libcellml-release-process-create-release" names="libcellml_release_process_create_release">
+                <image alt="Buildbot create release builder interface." candidates="{'*': 'images/release_process/create_release_builder.png'}" uri="images/release_process/create_release_builder.png"/>
+                <caption><emphasis>Create Release Builder</emphasis> on Buildbot.</caption>
+            </figure>
+            <paragraph>A release can only be created from a <emphasis>release_staging_&lt;version number&gt;</emphasis> branch.
+                The <emphasis>Create Release Builder</emphasis> interface interrogates <reference name="cellml/libcellml" refuri="https://github.com/cellml/libcellml">cellml/libcellml</reference> for potential release branches.
+                Select the release preparation branch (there should only ever be one), to create the release from, and start the build with the <emphasis>Start Build</emphasis> button, <number_reference internal="True" refid="libcellml-release-process-create-release-builder-interface" title="Fig. %s"><inline classes="std std-numref">Fig. 16</inline></number_reference>.</paragraph>
+            <figure align="center" ids="libcellml-release-process-create-release-builder-interface" names="libcellml_release_process_create_release_builder_interface">
+                <image alt="Buildbot create release interface." candidates="{'*': 'images/release_process/create_release_builder_interface.png'}" uri="images/release_process/create_release_builder_interface.png"/>
+                <caption_number>Fig. 16 </caption_number><caption><emphasis>Create Release Builder</emphasis> interface showing the branch a release can be created from.</caption>
+            </figure>
+            <paragraph>The <emphasis>Create Release Builder</emphasis> creates a release on GitHub and adds tags to identify where the release was created from.
+                The current status for the <emphasis>release_staging_&lt;version number&gt;</emphasis> branch will be applied to the <emphasis>release</emphasis> branch.
+                The tagged <emphasis>release</emphasis> branch is where the GitHub release will be created from.
+                When the release is created GitHub actions will take over to build all the assets.
+                The assets here are the binaries: installers and archives from Windows, macOS, and Ubuntu; Python wheels; and, the Javascript package.</paragraph>
+            <note>
+                <paragraph><strong>Do not</strong> start the <emphasis>Finalise Release Builder</emphasis> until the deploy libCellML GitHub action has finished.
+                    The GitHub action for deploying libCellML is currently taking between 11 and 15 minutes to complete.</paragraph>
+            </note>
+        </section>
+        <section ids="step-4-finalising-the-release" names="step\ 4\ -\ finalising\ the\ release">
+            <title>Step 4 - Finalising the Release</title>
+            <paragraph>The release is finalised using the <emphasis>Finalise Release Builder</emphasis> (<number_reference internal="True" refid="libcellml-release-process-finalise-release" title="Fig. %s"><inline classes="std std-numref">Fig. 17</inline></number_reference>).</paragraph>
+            <figure align="center" ids="libcellml-release-process-finalise-release" names="libcellml_release_process_finalise_release">
+                <image alt="Buildbot finalise release builder interface." candidates="{'*': 'images/release_process/finalise_release_builder.png'}" uri="images/release_process/finalise_release_builder.png"/>
+                <caption><emphasis>Finalise Release Builder</emphasis> on Buildbot.</caption>
+            </figure>
+            <paragraph>The <emphasis>Finalise Release Builder</emphasis> interface interrogates <reference name="cellml/libcellml" refuri="https://github.com/cellml/libcellml">cellml/libcellml</reference> for release branches, and <reference name="end-to-end testing framework" refuri="https://github.com/libcellml/end-to-end-testing">end-to-end testing framework</reference>, and <reference name="end-to-end testing database" refuri="https://github.com/libcellml/end-to-end-test-database">end-to-end testing database</reference> for tags.
+                Choose the values for finalising the release in the finalise release interface, <number_reference internal="True" refid="libcellml-release-process-finalise-release-builder-interface" title="Fig. %s"><inline classes="std std-numref">Fig. 18</inline></number_reference>.
+                The branch input in the interface should be set to the <emphasis>release_staging_&lt;version number&gt;</emphasis> branch (again, there should be only one), <number_reference internal="True" refid="libcellml-release-process-release-branch-chooser-example" title="Fig. %s"><inline classes="std std-numref">Fig. 19</inline></number_reference>.
+                The end-to-end testing tag is the tag that specifies the version of the testing framework to use for running the tests, <number_reference internal="True" refid="libcellml-release-process-end-to-end-framework-tag-chooser-example" title="Fig. %s"><inline classes="std std-numref">Fig. 20</inline></number_reference>.
+                The end-to-end testing database is the tag that specifies the version of the database that describes the tests to run, <number_reference internal="True" refid="libcellml-release-process-end-to-end-database-tag-chooser-example" title="Fig. %s"><inline classes="std std-numref">Fig. 21</inline></number_reference>.</paragraph>
+            <figure align="center" ids="libcellml-release-process-finalise-release-builder-interface" names="libcellml_release_process_finalise_release_builder_interface">
+                <image alt="Buildbot finalise release interface." candidates="{'*': 'images/release_process/finalise_release_builder_interface.png'}" uri="images/release_process/finalise_release_builder_interface.png"/>
+                <caption_number>Fig. 18 </caption_number><caption><emphasis>Finalise Release Builder</emphasis> interface.</caption>
+            </figure>
+            <figure align="center" ids="libcellml-release-process-release-branch-chooser-example" names="libcellml_release_process_release_branch_chooser_example">
+                <image alt="Buildbot finalise release interface showing example of choosing an available branch." candidates="{'*': 'images/release_process/release_branch_chooser_example.png'}" uri="images/release_process/release_branch_chooser_example.png" width="50%"/>
+                <caption_number>Fig. 19 </caption_number><caption>Example of choosing a release branch.</caption>
+            </figure>
+            <figure align="center" ids="libcellml-release-process-end-to-end-framework-tag-chooser-example" names="libcellml_release_process_end_to_end_framework_tag_chooser_example">
+                <image alt="Buildbot finalise release interface showing example of choosing an end-to-end testing tag." candidates="{'*': 'images/release_process/end_to_end_framework_tag_chooser_example.png'}" uri="images/release_process/end_to_end_framework_tag_chooser_example.png" width="50%"/>
+                <caption_number>Fig. 20 </caption_number><caption>Example of choosing a tag for the end-to-end testing framework.</caption>
+            </figure>
+            <figure align="center" ids="libcellml-release-process-end-to-end-database-tag-chooser-example" names="libcellml_release_process_end_to_end_database_tag_chooser_example">
+                <image alt="Buildbot finalise release interface showing example of choosing an end-to-end database tag." candidates="{'*': 'images/release_process/end_to_end_database_tag_chooser_example.png'}" uri="images/release_process/end_to_end_database_tag_chooser_example.png" width="50%"/>
+                <caption_number>Fig. 21 </caption_number><caption>Example of choosing a tag for the end-to-end testing database.</caption>
+            </figure>
+            <paragraph>The <emphasis>Finalise Release Builder</emphasis> will update the libCellML staging website with the API documentation and the developer documentation.
+                The user documentation will only be updated for the release, if the end-to-end testing passes.
+                To this end, it is important to choose the appropriate end-to-end testing tag and end-to-end testing database tag.
+                If the end-to-end testing passes, the specifics of the versions that the release was tested with will be saved and surfaced on the website.</paragraph>
+            <paragraph>The last thing that the <emphasis>Finalise Release Builder</emphasis> does is the merging of the <emphasis>release_staging_&lt;version number&gt;</emphasis> into the <emphasis>main</emphasis> branch and the deletion of the <emphasis>release_staging_&lt;version number&gt;</emphasis> branch.</paragraph>
+        </section>
+    </section>
+</document>
