@@ -11,12 +11,12 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Setup Node.js for use with actions
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 18.x
 
       - name: Checkout branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Write SSH keys
         run: |
