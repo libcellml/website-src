@@ -2,7 +2,7 @@ name: Selenium tests
 
 on:
   workflow_run:
-    workflows: ["Deploy libCellML website"]
+    workflows: ['Deploy libCellML website']
     types:
       - completed
 
@@ -16,7 +16,7 @@ jobs:
       - name: Allow CDN cache time to expire
         run: |
           sleep 180
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Show GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
@@ -39,9 +39,9 @@ jobs:
           LIBCELLML_WEBSITE_SHA: ${{ github.sha }}
         run: |
           python3 --version
-          python3 tests/selenium/run_all_tests.py 
+          python3 tests/selenium/run_all_tests.py
       - uses: myrotvorets/set-commit-status-action@master
         if: always()
         with:
-          status: "${{ job.status }}"
+          status: '${{ job.status }}'
           sha: ${{ github.sha }}
