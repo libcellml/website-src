@@ -1,10 +1,7 @@
 import { defineConfig, searchForWorkspaceRoot } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vuetify from 'vite-plugin-vuetify'
-// Require pluginRewriteAll until https://github.com/vitejs/vite/issues/2415 is fixed.
-import pluginRewriteAll from 'vite-plugin-rewrite-all'
-
-const path = require('path')
+import { resolve } from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,12 +13,11 @@ export default defineConfig({
     vuetify({
       autoImport: true,
     }),
-    pluginRewriteAll(),
   ],
   define: { 'process.env': {} },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src'),
+      '@': resolve(__dirname, 'src'),
     },
   },
   optimizeDeps: {

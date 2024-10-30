@@ -23,7 +23,7 @@
 </template>
 
 <script setup>
-import { defineProps, toRefs } from 'vue'
+import { toRefs } from 'vue'
 
 import VersionEntries from './VersionEntries.vue'
 

@@ -14,7 +14,7 @@
  </template>
 
 <script setup>
-import { computed, defineProps, toRefs, ref } from 'vue'
+import { computed, toRefs, ref } from 'vue'
 
 const props = defineProps({
   version: String,
