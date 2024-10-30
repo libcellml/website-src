@@ -1,0 +1,273 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="enums_8h" kind="file" language="C++">
+    <compoundname>enums.h</compoundname>
+    <includes local="no">string</includes>
+    <includes local="yes">libcellml/exportdefinitions.h</includes>
+    <includedby refid="types_8h" local="yes">libcellml/types.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>libcellml/enums.h</label>
+        <link refid="enums_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>libcellml/exportdefinitions.h</label>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="21">
+        <label>libcellml/analyser.h</label>
+        <link refid="analyser_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>libcellml/analyserequation.h</label>
+        <link refid="analyserequation_8h"/>
+      </node>
+      <node id="23">
+        <label>libcellml/analyserequationast.h</label>
+        <link refid="analyserequationast_8h"/>
+      </node>
+      <node id="3">
+        <label>libcellml/analyserexternalvariable.h</label>
+        <link refid="analyserexternalvariable_8h"/>
+      </node>
+      <node id="24">
+        <label>libcellml/analysermodel.h</label>
+        <link refid="analysermodel_8h"/>
+      </node>
+      <node id="25">
+        <label>libcellml/analyservariable.h</label>
+        <link refid="analyservariable_8h"/>
+      </node>
+      <node id="4">
+        <label>libcellml/annotator.h</label>
+        <link refid="annotator_8h"/>
+      </node>
+      <node id="6">
+        <label>libcellml/component.h</label>
+        <link refid="component_8h"/>
+      </node>
+      <node id="5">
+        <label>libcellml/componententity.h</label>
+        <link refid="componententity_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>libcellml/entity.h</label>
+        <link refid="entity_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>libcellml/enums.h</label>
+        <link refid="enums_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>libcellml/generator.h</label>
+        <link refid="generator_8h"/>
+      </node>
+      <node id="16">
+        <label>libcellml/generatorprofile.h</label>
+        <link refid="generatorprofile_8h"/>
+      </node>
+      <node id="17">
+        <label>libcellml/importedentity.h</label>
+        <link refid="importedentity_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>libcellml/importer.h</label>
+        <link refid="importer_8h"/>
+      </node>
+      <node id="9">
+        <label>libcellml/importsource.h</label>
+        <link refid="importsource_8h"/>
+      </node>
+      <node id="19">
+        <label>libcellml/issue.h</label>
+        <link refid="issue_8h"/>
+      </node>
+      <node id="20">
+        <label>libcellml/logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>libcellml/model.h</label>
+        <link refid="model_8h"/>
+      </node>
+      <node id="11">
+        <label>libcellml/namedentity.h</label>
+        <link refid="namedentity_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>libcellml/parentedentity.h</label>
+        <link refid="parentedentity_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>libcellml/parser.h</label>
+        <link refid="parser_8h"/>
+      </node>
+      <node id="27">
+        <label>libcellml/printer.h</label>
+        <link refid="printer_8h"/>
+      </node>
+      <node id="14">
+        <label>libcellml/reset.h</label>
+        <link refid="reset_8h"/>
+      </node>
+      <node id="2">
+        <label>libcellml/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>libcellml/units.h</label>
+        <link refid="units_8h"/>
+      </node>
+      <node id="28">
+        <label>libcellml/validator.h</label>
+        <link refid="validator_8h"/>
+      </node>
+      <node id="13">
+        <label>libcellml/variable.h</label>
+        <link refid="variable_8h"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacelibcellml">libcellml</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">Copyright<sp/>libCellML<sp/>Contributors</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment">Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"></highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;libcellml/exportdefinitions.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacelibcellml" kindref="compound">libcellml</ref><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074eda7fc67f9f99bcdc7656908ef20801d05b" kindref="member">COMPONENT</ref>,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074edac418c4d53f4b4355f2ca8477f6cea146" kindref="member">COMPONENT_REF</ref>,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074edaf877da16e0c12743466e4059018d0d98" kindref="member">CONNECTION</ref>,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074edafd13f0fb2a51f37b5400adc084e3f006" kindref="member">ENCAPSULATION</ref>,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074edad9c89e6459f4fbd0b03b5bc093e87919" kindref="member">IMPORT</ref>,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074edaa23c1199c2fc87cba82b7303c0ce5e5c" kindref="member">MAP_VARIABLES</ref>,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074eda65571aa0536447fb1cf47a2b5a98954b" kindref="member">MATH</ref>,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074eda7a03bac2692f8d17e2cda1b0721ffd0e" kindref="member">MODEL</ref>,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074edab5859d8721cfdc0312b2838b9c985bc1" kindref="member">RESET</ref>,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074eda6020a61a6aa805b4dd2d5e7c65c6a0ec" kindref="member">RESET_VALUE</ref>,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074eda58d625895eda77c879740a1b858cc5b5" kindref="member">TEST_VALUE</ref>,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074eda0db45d2a4141101bdfe48e3314cfbca3" kindref="member">UNDEFINED</ref>,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074edaec8fc2c42b9c76effd648a14b311411f" kindref="member">UNIT</ref>,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074eda456d42d0c8fd369eb23335d23fb3856a" kindref="member">UNITS</ref>,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074edae61ad9b2553a293b4a3f4d3b4fa5ab31" kindref="member">VARIABLE</ref>,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="namespacelibcellml_1a1751a249210707446f9ece94004da82c" refkind="member"><highlight class="normal">LIBCELLML_EXPORT<sp/>std::string<sp/><ref refid="namespacelibcellml_1a1751a249210707446f9ece94004da82c" kindref="member">cellmlElementTypeAsString</ref>(<ref refid="namespacelibcellml_1ad5433a94832c31c8c9bf1f650c3074ed" kindref="member">CellmlElementType</ref><sp/>value);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>libcellml</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="libcellml/enums.h"/>
+  </compounddef>
+</doxygen>
