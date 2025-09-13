@@ -11,7 +11,7 @@ jobs:
     if: github.repository == 'libcellml/website-src'
     env:
       DISPLAY: :87
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - name: Allow CDN cache time to expire
         run: |
