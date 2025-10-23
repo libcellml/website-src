@@ -45,11 +45,12 @@ import NavBarContent from './components/NavBarContent.vue'
 import './css/general.css'
 
 const store = useSiteStore()
+const vuetifyDisplay = inject(Symbol.for('vuetify:display'))
 
 const sidebarOverlaySizes = ['xs', 'sm', 'md']
 
 const getXOffset = computed(() => {
-  const vuetifyDisplay = inject(Symbol.for('vuetify:display'))
+  
   if (sidebarOverlaySizes.includes(vuetifyDisplay.name.value)) {
     return '1rem'
   }
