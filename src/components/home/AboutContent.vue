@@ -111,20 +111,19 @@
 </template>
 
 <script setup>
-import { computed, inject, ref } from 'vue'
+import { computed, inject } from 'vue'
 
 import GithubContributors from '../GithubContributors.vue'
 
-const libcellml = ref(null)
-libcellml.value = inject('$libcellml')
+const libcellml = inject('$libcellml')
 
 const libcellmlVersionString = computed(() => {
-  if (libcellml.value.state === 'loading') {
+  if (libcellml.state === 'loading') {
     return '[loading libcellml ...]'
   }
 
-  return libcellml.value.module === undefined
+  return libcellml.library === null
     ? '<unavailable>'
-    : libcellml.value.module.versionString()
+    : libcellml.library.versionString()
 })
 </script>
