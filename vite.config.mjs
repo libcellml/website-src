@@ -24,7 +24,7 @@ export default defineConfig({
     exclude: ['vue3-libcellml.js'],
     exbuildOptions: {
       target: 'es2020',
-    },
+    },vi
   },
   server: {
     fs: {
