@@ -101,7 +101,7 @@ const libcellml = inject('$libcellml')
 
 const versionSupports1XImport = computed(() => {
   if (libcellml.state === 'ready') {
-    return semver.gte(libcellml.module.versionString(), '0.4.0')
+    return semver.gte(libcellml.library.versionString(), '0.4.0')
   }
 
   return false
@@ -123,8 +123,8 @@ function removeMessage(index) {
 }
 
 function importModel(cellmlString) {
-  let parser = new libcellml.module.Parser(false)
-  let printer = new libcellml.module.Printer()
+  let parser = new libcellml.library.Parser(false)
+  let printer = new libcellml.library.Printer()
   let model = null
   try {
     model = parser.parseModel(cellmlString)
@@ -197,7 +197,7 @@ function readFile() {
       let results = importModel(evt.target.result)
       issueData.value = results.issues
       parserFoundErrors.value = Boolean(
-        results.type === 'parser' && results.issues.length
+        results.type === 'parser' && results.issues.length,
       )
     } catch (err) {
       store.add({
