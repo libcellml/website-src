@@ -69,7 +69,7 @@
     </v-container>
 
     <v-container v-if="parserFoundErrors">
-      <issue-heading :title="modelFile[0].name"></issue-heading>
+      <issue-heading :title="modelFile.name"></issue-heading>
       <issue-card
         v-for="(issue, j) in issueData"
         :key="j"
@@ -100,7 +100,7 @@ const downloads = ref([])
 const libcellml = inject('$libcellml')
 
 const versionSupports1XImport = computed(() => {
-  if (libcellml.state === 'ready') {
+  if (libcellml.status === 'ready') {
     return semver.gte(libcellml.library.versionString(), '0.4.0')
   }
 
@@ -108,11 +108,11 @@ const versionSupports1XImport = computed(() => {
 })
 
 const ableToImportModel = computed(() => {
-  if (libcellml.state === 'ready') {
+  if (libcellml.status === 'ready') {
     if (!versionSupports1XImport.value) {
       return false
     }
-    return modelFile.value.length > 0
+    return modelFile.value.size > 0
   }
 
   return false
@@ -164,7 +164,7 @@ function importModel(cellmlString) {
   const printedModel = printer.printModel(model, false)
 
   downloads.value.push({
-    name: modelFile.value[0].name,
+    name: modelFile.value.name,
     data: printedModel,
     type: 'text/xml',
     pending: false,
@@ -190,7 +190,7 @@ function readFile() {
 
   const reader = new FileReader()
 
-  reader.readAsText(modelFile.value[0], 'UTF-8')
+  reader.readAsText(modelFile.value, 'UTF-8')
 
   reader.onload = function (evt) {
     try {
