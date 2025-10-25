@@ -2,18 +2,21 @@
   "name": "libcellml-website",
   "version": "0.2.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "serve": "vite preview",
     "build": "vite build",
     "dev": "vite",
     "preview": "vite preview",
-    "github-deploy": "node .github/scripts/github-deploy.mjs"
+    "github-deploy": "node .github/scripts/github-deploy.mjs",
+    "build-search-index": "node src/scripts/build-search-index.js"
   },
   "dependencies": {
     "@mdi/font": "7.4.47",
     "axios": "^1.12.0",
     "crypto-js": "^4.1.1",
     "filesize": "^10.0.7",
+    "fuse.js": "^7.1.0",
     "jszip": "^3.10.1",
     "katex": "^0.16.21",
     "pinia": "^2.1.6",
@@ -33,6 +36,8 @@
     "eslint": "^9.13.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-vue": "^9.17.0",
+    "fast-xml-parser": "^5.3.0",
+    "glob": "^11.0.3",
     "prettier": "^3.0.3",
     "sass": "^1.80.5",
     "sass-loader": "^16.0.2",
