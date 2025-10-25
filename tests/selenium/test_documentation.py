@@ -6,7 +6,7 @@ from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
-# from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support import expected_conditions as exp_cond
 from selenium.webdriver.support.wait import WebDriverWait
 # from selenium.webdriver.common.keys import Keys
 # from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
@@ -44,7 +44,9 @@ class TestBrowseAPIDocumentation(unittest.TestCase):
         # 7 | click | css=#api .v-btn__content |
         self.driver.find_element(By.CSS_SELECTOR, "#api .v-btn__content").click()
         # 8 | click | linkText=libcellml::Parser |
-        el = WebDriverWait(self.driver, timeout=3).until(lambda d: d.find_element(By.LINK_TEXT, "libcellml::Parser"))
+        el = WebDriverWait(self.driver, timeout=3).until(exp_cond.presence_of_element_located((By.LINK_TEXT, "libcellml::Parser")))
+        self.driver.execute_script("arguments[0].scrollIntoView(true);", el)
+        el = WebDriverWait(self.driver, timeout=5).until(exp_cond.element_to_be_clickable((By.LINK_TEXT, "libcellml::Parser")))
         el.click()
         sleep(1)
         # 9 | click | css=.v-field__append-inner |

@@ -118,7 +118,7 @@ import GithubContributors from '../GithubContributors.vue'
 const libcellml = inject('$libcellml')
 
 const libcellmlVersionString = computed(() => {
-  if (libcellml.state === 'loading') {
+  if (libcellml.status === 'loading') {
     return '[loading libcellml ...]'
   }
 
