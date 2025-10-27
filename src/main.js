@@ -12,7 +12,7 @@ import { installVue3DoxygenXml } from 'vue3-doxygen-xml'
 import 'vue3-doxygen-xml/dist/style.css'
 
 import { installVue3SphinxXml } from 'vue3-sphinx-xml'
-import 'vue3-sphinx-xml/dist/style.css'
+import 'vue3-sphinx-xml/dist/vue3-sphinx-xml.css'
 // Set the style of code blocks highlighting from highlight.js.
 import 'highlight.js/styles/qtcreator-light.css'
 
