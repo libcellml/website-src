@@ -76,16 +76,15 @@ const servicesHomeRoute = {
 }
 
 export let versionedRouteNames = ['DocumentationUser']
-let versionedRoutes = [{
-  path: '/documentation/:version/user/:pageName+',
-  name: 'DocumentationUser',
-  meta: { title: 'libCellML: User Guides' },
-  component: () => import('@/views/DocumentationUser.vue'),
-  beforeEnter: (to, from, next) => {
-    const nextTarget = checkDocumentationVersion(to)
-    next(nextTarget)
+let versionedRoutes = [
+  {
+    path: '/documentation/:version/user/:pageName?(.+)',
+    name: 'DocumentationUser',
+    meta: { title: 'libCellML: User Guides' },
+    component: () => import('@/views/DocumentationUser.vue'),
+    beforeEnter: checkDocumentationVersion,
   },
-}]
+]
 let sphinxRoutes = ['DocumentationUser']
 let doxygenRoutes = []
 for (let key in documentationInfoMap) {
@@ -102,10 +101,7 @@ for (let key in documentationInfoMap) {
         name: routeName,
         meta: { title: `libCellML: ${documentationInfoMap[key].name}` },
         component: () => import('@/views/DoxygenAPI.vue'),
-        beforeEnter: (to, from, next) => {
-          const nextTarget = checkDocumentationVersion(to)
-          next(nextTarget)
-        },
+        beforeEnter: checkDocumentationVersion,
       })
     } else {
       sphinxRoutes.push(routeName)
@@ -114,10 +110,7 @@ for (let key in documentationInfoMap) {
         name: routeName,
         meta: { title: `libCellML: ${documentationInfoMap[key].name}` },
         component: () => import('@/views/SphinxDocsWithVersion.vue'),
-        beforeEnter: (to, from, next) => {
-          const nextTarget = checkDocumentationVersion(to)
-          next(nextTarget)
-        },
+        beforeEnter: checkDocumentationVersion,
       })
     }
   }
@@ -127,16 +120,21 @@ const userDocumentationHomeRoute = {
   name: 'DocumentationUserHome',
   meta: { title: 'libCellML: User Guides' },
   component: () => import('@/views/DocumentationUserHome.vue'),
-  beforeEnter: (to, from, next) => {
-    const nextTarget = checkDocumentationVersion(to)
-    next(nextTarget)
-  },
+  beforeEnter: checkDocumentationVersion,
+}
+const theoryRedirectRoute = {
+  path: '/documentation/theory',
+  redirect: '/documentation/theory/',
 }
 const theoryDocumentationRoute = {
   path: '/documentation/theory/:pageName*',
   name: 'DocumentationTheory',
   meta: { title: 'libCellML: Theory', subDoc: 'theory' },
   component: () => import('@/views/SphinxDocsSansVersion.vue'),
+}
+const installationRedirectRoute = {
+  path: '/documentation/installation',
+  redirect: '/documentation/installation/',
 }
 const installationDocumentationRoute = {
   path: '/documentation/installation/:pageName*',
@@ -181,7 +179,7 @@ const notFoundRoute = {
   component: () => import('../views/NotFound.vue'),
 }
 const catchEverythingRoute = {
-  path: '/:catchUnknown(.*)*',
+  path: '/:catchUnknown(.*)',
   name: 'NotFound',
   meta: { title: 'libCellML: Not Found' },
   component: () => import('@/views/NotFound.vue'),
@@ -190,7 +188,9 @@ const catchEverythingRoute = {
 const routes = [
   homeRoute,
   aboutRoute,
+  // theoryRedirectRoute,
   theoryDocumentationRoute,
+  // installationRedirectRoute,
   installationDocumentationRoute,
   ...versionedRoutes,
   userDocumentationHomeRoute,
@@ -343,18 +343,10 @@ const keepKeys = [
 ]
 
 export const changeRouteVersion = (route, version) => {
-  let clone = {}
-  for (const key of keepKeys) {
-    if (route[key] !== undefined) {
-      clone[key] = JSON.parse(JSON.stringify(route[key]))
-    }
+  return {
+    name: route.name,
+    params: { ...route.params, version: version },
+    query: route.query,
+    hash: route.hash,
   }
-  if (clone.href !== undefined) {
-    clone.href = clone.href.replace(route.params.version, version)
-  }
-  clone.fullPath = clone.fullPath.replace(route.params.version, version)
-  clone.path = clone.path.replace(route.params.version, version)
-  clone.params.version = version
-
-  return clone
 }
