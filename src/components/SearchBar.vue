@@ -111,5 +111,6 @@ watch(selectedItem, (selection) => {
 .search-bar {
   max-width: 400px;
   margin: 0 1rem;
+  margin-left: auto;
 }
 </style>
