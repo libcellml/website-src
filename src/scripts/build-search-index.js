@@ -168,7 +168,6 @@ async function buildIndex() {
     let title = 'Untitled'
     let content = ''
     let href = ''
-    let orig = ''
 
     // Normalize file path for consistent URL generation
     const normalizedFile = path.normalize(file)
@@ -190,7 +189,6 @@ async function buildIndex() {
 
         // Exclude noisy tags like code blocks and toctrees
         content = extractText(sphinxDoc, ['literal_block', 'toctree'])
-        orig = normalizedFile
 
         // Use normalized path separators (forward slashes) for URLs
         href =
@@ -219,7 +217,6 @@ async function buildIndex() {
 
         // Title is the correct compound name from the map
         title = compoundInfo.name
-        orig = normalizedFile
 
         // HREF is based on the refid/filename
         href =
@@ -241,7 +238,6 @@ async function buildIndex() {
 
       documents.push({
         href: href,
-        orig: orig,
         title: title.trim(),
         // Clean up whitespace in content
         content: content.replace(/\s+/g, ' ').trim(),

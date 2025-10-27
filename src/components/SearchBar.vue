@@ -23,25 +23,19 @@
 <script setup>
 import { ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
-import Fuse from 'fuse.js'
+import { useNotificationsStore } from '@/stores/notifications'
+import lunr from 'lunr'
+
+const store = useNotificationsStore()
 
 const searchQuery = ref('') // The text the user types
 const selectedItem = ref(null) // The item the user clicks
 const searchResults = ref([]) // The list of results from Fuse.js
 const isLoading = ref(false) // For the loading spinner
-const fuseInstance = ref(null)
+const lunrIndex = ref(null)
+const docMap = new Map()
 let indexLoaded = false
 const router = useRouter()
-
-// Fuse.js options
-const options = {
-  includeScore: true,
-  keys: [
-    { name: 'title', weight: 2 }, // Give title more weight
-    { name: 'content', weight: 1 },
-  ],
-  threshold: 0.4, // Adjust for fuzziness
-}
 
 // 1. Load the index (only once)
 const loadIndex = async () => {
@@ -51,37 +45,61 @@ const loadIndex = async () => {
   try {
     const response = await fetch('/search-index.json')
     const documents = await response.json()
-    fuseInstance.value = new Fuse(documents, options)
+
+    // 1. Lunr needs a map to get the original doc back from an ID
+    documents.forEach((doc) => {
+      docMap.set(doc.href, doc)
+    })
+
+    lunrIndex.value = lunr(function () {
+      // Define the fields
+      this.field('title', { boost: 10 }) // Boost title
+      this.field('content')
+      this.ref('href') // Use href as the unique ID
+
+      // Add documents to the index
+      documents.forEach((doc) => {
+        this.add(doc)
+      })
+    })
+
     indexLoaded = true
-    console.log('Search index loaded.')
   } catch (e) {
-    console.error('Failed to load search index:', e)
+    store.add({
+      type: 'error',
+      title: 'Failed to load search index:',
+      message: e.message,
+    })
   }
   isLoading.value = false
 }
 
 // 2. Watch the search query text
 watch(searchQuery, (newQuery) => {
-  // This guard is correct
-  if (!newQuery || !fuseInstance.value) {
+  if (!newQuery || !lunrIndex.value) {
     searchResults.value = []
     return
   }
 
-  // This is all correct
-  const results = fuseInstance.value.search(newQuery)
-  console.log(`Found ${results.length} results for query "${newQuery}"`)
-  searchResults.value = results.slice(0, 10).map((r) => r.item)
-  console.log('Search results:', searchResults.value)
+  try {
+    const results = lunrIndex.value.search(`${newQuery} ${newQuery}*`)
+    searchResults.value = results.slice(0, 10).map((r) => docMap.get(r.ref))
+  } catch (e) {
+    // Lunr can throw errors for malformed queries (e.g., trailing colon)
+    store.add({
+      type: 'error',
+      title: 'Search error:',
+      message: e.message,
+    })
+    searchResults.value = []
+  }
 })
 
 // 3. Watch for when the user selects an item
 watch(selectedItem, (selection) => {
-  // v-combobox can return the raw object on selection
   if (selection && typeof selection === 'object') {
     router.push(selection.href) // Navigate to the page
 
-    // Clear the search
     selectedItem.value = null
     searchQuery.value = '' // Manually clear the search text
     searchResults.value = []
@@ -91,7 +109,6 @@ watch(selectedItem, (selection) => {
 
 <style scoped>
 .search-bar {
-  /* You might want to give it a max-width */
   max-width: 400px;
   margin: 0 1rem;
 }
