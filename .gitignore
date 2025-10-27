@@ -27,3 +27,5 @@ dist-ssr
 
 __pycache__
 
+# Search index (generated file)
+public/search-index.json
