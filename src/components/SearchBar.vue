@@ -1,5 +1,6 @@
 <template>
   <v-combobox
+    ref="searchInput"
     v-model="selectedItem"
     v-model:search="searchQuery"
     :items="searchResults"
@@ -7,7 +8,7 @@
     :no-filter="true"
     item-title="title"
     item-value="href"
-    label="Search documentation..."
+    label="Type '/' to search documentation ..."
     variant="solo-filled"
     density="compact"
     hide-details
@@ -21,21 +22,22 @@
 </template>
 
 <script setup>
-import { ref, watch } from 'vue'
+import { onMounted, onUnmounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { useNotificationsStore } from '@/stores/notifications'
 import lunr from 'lunr'
 
 const store = useNotificationsStore()
+const router = useRouter()
 
 const searchQuery = ref('') // The text the user types
 const selectedItem = ref(null) // The item the user clicks
 const searchResults = ref([]) // The list of results from Fuse.js
+const searchInput = ref(null)
 const isLoading = ref(false) // For the loading spinner
 const lunrIndex = ref(null)
 const docMap = new Map()
 let indexLoaded = false
-const router = useRouter()
 
 // 1. Load the index (only once)
 const loadIndex = async () => {
@@ -146,6 +148,34 @@ watch(selectedItem, (selection) => {
     searchQuery.value = '' // Manually clear the search text
     searchResults.value = []
   }
+})
+
+const handleKeydown = (event) => {
+  // Guard: Don't trigger if the user is already typing
+  // in an input, textarea, or contenteditable element.
+  const activeEl = document.activeElement
+  if (activeEl && (['INPUT', 'TEXTAREA', 'SELECT'].includes(activeEl.tagName) || activeEl.isContentEditable)) {
+    return
+  }
+  
+  // Check for the '/' key
+  if (event.key === '/') {
+    event.preventDefault() // Stop '/' from being typed
+    
+    // Focus the combobox (if it exists)
+    if (searchInput.value) {
+      searchInput.value.focus()
+    }
+  }
+}
+
+onMounted(() => {
+  document.addEventListener('keydown', handleKeydown)
+})
+
+// Clean up the listener when the component is unmounted
+onUnmounted(() => {
+  document.removeEventListener('keydown', handleKeydown)
 })
 </script>
 
