@@ -74,15 +74,57 @@ const loadIndex = async () => {
   isLoading.value = false
 }
 
+/**
+ * Modifies a raw search query for Lunr.js.
+ *
+ * If the query is "simple" (no special operators), it enhances each
+ * term to search for both the exact term and a prefix-matched term.
+ * e.g., "spec allo" -> "spec spec* allo allo*"
+ *
+ * If the query is "advanced" (contains *, ~, ^, +, -, or :),
+ * it returns the query as-is for Lunr to parse.
+ *
+ * @param {string} rawQuery The user-typed search string
+ * @returns {string} A Lunr-compatible query string
+ */
+function buildLunrQuery(rawQuery) {
+  // Regex to detect Lunr special chars: *, ~, ^, +, -, or field:
+  const specialCharRegex = /[*~^+:-]|\w:/
+  const trimmedQuery = rawQuery.trim()
+
+  // If query is empty or just whitespace, return empty.
+  if (!trimmedQuery) {
+    return ''
+  }
+
+  // Check if the user has already typed a special query
+  const isSimpleQuery = !specialCharRegex.test(trimmedQuery)
+
+  if (isSimpleQuery) {
+    // It's a simple query.
+    // Split into words, remove empty strings, and build the new query.
+    // "search query" becomes "search search* query query*"
+    return trimmedQuery
+      .split(/\s+/) // Split on one or more spaces
+      .map((term) => `${term} ${term}*`) // Add the term AND the wildcard term
+      .join(' ')
+  } else {
+    // It's an advanced query. Return it as-is.
+    return trimmedQuery
+  }
+}
+
 // 2. Watch the search query text
 watch(searchQuery, (newQuery) => {
-  if (!newQuery || !lunrIndex.value) {
+  const lunrQuery = buildLunrQuery(newQuery)
+
+  if (!lunrQuery || !lunrIndex.value) {
     searchResults.value = []
     return
   }
 
   try {
-    const results = lunrIndex.value.search(`${newQuery} ${newQuery}*`)
+    const results = lunrIndex.value.search(lunrQuery)
     searchResults.value = results.slice(0, 10).map((r) => docMap.get(r.ref))
   } catch (e) {
     // Lunr can throw errors for malformed queries (e.g., trailing colon)
