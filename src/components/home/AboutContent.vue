@@ -53,7 +53,7 @@
         this website</a
       >, and
       <a
-        href="https://github.com/kerimoyle/libcellml-tutorials/graphs/contributors"
+        href="https://github.com/libcellml/tutorials/graphs/contributors"
         target="_blank"
       >
         our documentation</a
