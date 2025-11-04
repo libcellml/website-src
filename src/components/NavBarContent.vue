@@ -8,6 +8,7 @@
       <v-btn text> {{ link.label }} </v-btn>
     </router-link>
   </template>
+  <search-bar></search-bar>
   <bug-button></bug-button>
 </template>
 
@@ -16,6 +17,7 @@ import { computed } from 'vue'
 
 import { useSiteStore } from '@/stores/site'
 import BugButton from './BugButton.vue'
+import SearchBar from './SearchBar.vue'
 
 const store = useSiteStore()
 

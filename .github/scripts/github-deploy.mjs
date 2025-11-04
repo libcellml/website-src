@@ -32,6 +32,7 @@ import * as fs from 'fs'
     console.log('Preparing ... success.')
     console.log('Building ...')
     await fs.promises.writeFile('.env', `VITE_GA_MEASUREMENT_ID=${ga_token}`)
+    await execa('yarn', ['run', 'build-search-index'])
     await execa('yarn', ['run', 'build'])
     // Understand if it's dist or build folder
     const folderName = fs.existsSync('dist') ? 'dist' : 'build'
