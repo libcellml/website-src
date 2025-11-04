@@ -92,7 +92,7 @@ const validatedModel = ref('')
 const libcellml = inject('$libcellml')
 
 const ableToValidate = computed(() => {
-  return libcellml.state === 'ready' && modelFile.value.length > 0
+  return libcellml.status === 'ready' && modelFile.value.size > 0
     ? undefined
     : true
 })
@@ -102,8 +102,8 @@ function removeMessage(index) {
 }
 
 function validate(cellmlString) {
-  let parser = new libcellml.module.Parser(true)
-  let validator = new libcellml.module.Validator()
+  let parser = new libcellml.library.Parser(true)
+  let validator = new libcellml.library.Validator()
   let model = null
   try {
     model = parser.parseModel(cellmlString)
@@ -175,12 +175,12 @@ function readFile() {
 
   const reader = new FileReader()
 
-  reader.readAsText(modelFile.value[0], 'UTF-8')
+  reader.readAsText(modelFile.value, 'UTF-8')
 
   reader.onload = function (evt) {
     try {
       let results = validate(evt.target.result)
-      validatedModel.value = modelFile.value[0].name
+      validatedModel.value = modelFile.value.name
       issueData.value = results.issues
       parserFoundErrors.value = Boolean(
         results.type === 'parser' && results.issues.length

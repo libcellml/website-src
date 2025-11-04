@@ -17,14 +17,6 @@
       >
     </v-container>
     <v-container>
-      <v-row v-if="!versionSupports1XImport" justify="center">
-        <v-col>
-          <v-alert type="error"
-            >Importing of CellML 1.0/1.1 models is not supported with this
-            version of libCellML.js</v-alert
-          >
-        </v-col>
-      </v-row>
       <v-row justify="center">
         <v-col class="col-12 col-md-4" id="importButton">
           <v-btn
@@ -69,7 +61,7 @@
     </v-container>
 
     <v-container v-if="parserFoundErrors">
-      <issue-heading :title="modelFile[0].name"></issue-heading>
+      <issue-heading :title="modelFile.name"></issue-heading>
       <issue-card
         v-for="(issue, j) in issueData"
         :key="j"
@@ -82,7 +74,6 @@
 
 <script setup>
 import { computed, inject, ref } from 'vue'
-import semver from 'semver'
 
 import { useNotificationsStore } from '@/stores/notifications'
 import IssueHeading from '../components/IssueHeading.vue'
@@ -99,23 +90,8 @@ const downloads = ref([])
 
 const libcellml = inject('$libcellml')
 
-const versionSupports1XImport = computed(() => {
-  if (libcellml.state === 'ready') {
-    return semver.gte(libcellml.module.versionString(), '0.4.0')
-  }
-
-  return false
-})
-
 const ableToImportModel = computed(() => {
-  if (libcellml.state === 'ready') {
-    if (!versionSupports1XImport.value) {
-      return false
-    }
-    return modelFile.value.length > 0
-  }
-
-  return false
+  return libcellml.status === 'ready' ? modelFile.value.size > 0 : false
 })
 
 function removeMessage(index) {
@@ -123,8 +99,8 @@ function removeMessage(index) {
 }
 
 function importModel(cellmlString) {
-  let parser = new libcellml.module.Parser(false)
-  let printer = new libcellml.module.Printer()
+  let parser = new libcellml.library.Parser(false)
+  let printer = new libcellml.library.Printer()
   let model = null
   try {
     model = parser.parseModel(cellmlString)
@@ -164,7 +140,7 @@ function importModel(cellmlString) {
   const printedModel = printer.printModel(model, false)
 
   downloads.value.push({
-    name: modelFile.value[0].name,
+    name: modelFile.value.name,
     data: printedModel,
     type: 'text/xml',
     pending: false,
@@ -190,14 +166,14 @@ function readFile() {
 
   const reader = new FileReader()
 
-  reader.readAsText(modelFile.value[0], 'UTF-8')
+  reader.readAsText(modelFile.value, 'UTF-8')
 
   reader.onload = function (evt) {
     try {
       let results = importModel(evt.target.result)
       issueData.value = results.issues
       parserFoundErrors.value = Boolean(
-        results.type === 'parser' && results.issues.length
+        results.type === 'parser' && results.issues.length,
       )
     } catch (err) {
       store.add({

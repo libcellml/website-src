@@ -55,7 +55,8 @@ class TestServices(unittest.TestCase):
             lambda d: d.find_element(By.CSS_SELECTOR, "input[type=\"file\"]"))
         el.send_keys(os.path.join(RESOURCE_PATH, "test_basic_ode.cellml2"))
         # 10 | click | css=.v-btn--block > .v-btn__content |
-        self.driver.find_element(By.CSS_SELECTOR, ".v-btn--block > .v-btn__content").click()
+        el = self.driver.find_element(By.ID, "validateButton")
+        el.click()
         # 11 | click | css=.v-card-title |
         el = WebDriverWait(self.driver, timeout=3).until(
             lambda d: d.find_element(By.CSS_SELECTOR, ".v-card-title"))

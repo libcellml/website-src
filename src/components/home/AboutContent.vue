@@ -53,7 +53,7 @@
         this website</a
       >, and
       <a
-        href="https://github.com/kerimoyle/libcellml-tutorials/graphs/contributors"
+        href="https://github.com/libcellml/tutorials/graphs/contributors"
         target="_blank"
       >
         our documentation</a
@@ -111,20 +111,19 @@
 </template>
 
 <script setup>
-import { computed, inject, ref } from 'vue'
+import { computed, inject } from 'vue'
 
 import GithubContributors from '../GithubContributors.vue'
 
-const libcellml = ref(null)
-libcellml.value = inject('$libcellml')
+const libcellml = inject('$libcellml')
 
 const libcellmlVersionString = computed(() => {
-  if (libcellml.value.state === 'loading') {
+  if (libcellml.status === 'loading') {
     return '[loading libcellml ...]'
   }
 
-  return libcellml.value.module === undefined
+  return libcellml.library === null
     ? '<unavailable>'
-    : libcellml.value.module.versionString()
+    : libcellml.library.versionString()
 })
 </script>
