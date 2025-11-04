@@ -50,7 +50,6 @@ const vuetifyDisplay = inject(Symbol.for('vuetify:display'))
 const sidebarOverlaySizes = ['xs', 'sm', 'md']
 
 const getXOffset = computed(() => {
-  
   if (sidebarOverlaySizes.includes(vuetifyDisplay.name.value)) {
     return '1rem'
   }
