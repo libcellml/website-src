@@ -50,8 +50,8 @@ class TestBrowseAPIDocumentation(unittest.TestCase):
         el.click()
         sleep(1)
         # 9 | click | css=.v-field__append-inner |
-        el = WebDriverWait(self.driver, timeout=3).until(
-            lambda d: d.find_element(By.CSS_SELECTOR, ".v-field__append-inner"))
+        btn_selector = '[data-testid="breadcrumb-version-combobox"] .v-field__append-inner'
+        el = WebDriverWait(self.driver, timeout=3).until(exp_cond.element_to_be_clickable((By.CSS_SELECTOR, btn_selector)))
         el.click()
         sleep(1)
         # 10 | click | css=.v-list-item:nth-child(2) .v-list-item-title |

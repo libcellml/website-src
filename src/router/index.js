@@ -82,7 +82,6 @@ let versionedRoutes = [
     name: 'DocumentationUser',
     meta: { title: 'libCellML: User Guides' },
     component: () => import('@/views/DocumentationUser.vue'),
-    beforeEnter: checkDocumentationVersion,
   },
 ]
 let sphinxRoutes = ['DocumentationUser']
@@ -317,8 +316,21 @@ export const calculateBreadcrumbs = (to) => {
 
 router.beforeEach((to, from, next) => {
   const siteStore = useSiteStore()
+
+  if (to.params.version) {
+    // If it returns 'true', the version is valid and store is updated.
+    // If it returns an object, it is a redirect command.
+    const versionCheck = checkDocumentationVersion(to)
+
+    if (typeof versionCheck === 'object') {
+      // It's a redirect (e.g. 'latest' or invalid version)
+      next(versionCheck)
+      return
+    }
+  }
+
   siteStore.setBreadcrumbs(calculateBreadcrumbs(to))
-  // pageview(to.path)
+
   next()
 })
 

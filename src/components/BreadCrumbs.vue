@@ -28,6 +28,7 @@
               density="compact"
               hide-details="true"
               variant="solo"
+              data-testid="breadcrumb-version-combobox"
             >
             </v-select>
           </v-breadcrumbs-item>
