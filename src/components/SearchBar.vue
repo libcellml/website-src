@@ -8,7 +8,7 @@
     :no-filter="true"
     item-title="title"
     item-value="href"
-    :label="isFocused ? 'Enter your search text' : `Type '/' to search documentation ...`"
+    :label="isFocused ? 'Enter your search text' : `Type '/' to search documentation...`"
     variant="solo-filled"
     density="compact"
     hide-details
