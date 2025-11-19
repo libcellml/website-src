@@ -12,13 +12,14 @@
     density="compact"
     hide-details
     @focus="handleFocus"
-    @blur="isFocused = false"
+    @blur="handleBlur"
     class="search-bar"
   >
     <template v-slot:label>
       <span v-if="isFocused">Enter your search text</span>
       <span v-else class="d-flex align-center">
-        Type <kbd class="search-key ml-1 mr-1">/</kbd> to search documentation...
+        Type <kbd class="search-key ml-1 mr-1">/</kbd> to search
+        documentation...
       </span>
     </template>
     <template v-slot:item="{ props, item }">
@@ -49,6 +50,13 @@ let indexLoaded = false
 const handleFocus = () => {
   isFocused.value = true
   loadIndex()
+}
+
+const handleBlur = () => {
+  isFocused.value = false
+  selectedItem.value = null
+  searchQuery.value = '' // Manually clear the search text
+  searchResults.value = []
 }
 
 const onEnter = () => {
@@ -158,10 +166,6 @@ watch(searchQuery, (newQuery) => {
 watch(selectedItem, (selection) => {
   if (selection && typeof selection === 'object') {
     router.push(selection.href) // Navigate to the page
-
-    selectedItem.value = null
-    searchQuery.value = '' // Manually clear the search text
-    searchResults.value = []
     searchInput.value.blur()
   }
 })
@@ -207,12 +211,15 @@ onUnmounted(() => {
 }
 
 .search-key {
-  background-color: rgba(var(--v-theme-on-surface), 0.08); /* Subtle background */
-  border: 1px solid rgba(var(--v-theme-on-surface), 0.2);   /* Subtle border */
-  border-radius: 6px;       /* Rounded corners */
-  padding: 2px 4px;         /* Spacing inside the box */
-  font-family: monospace;   /* Monospace font for the slash */
-  font-size: 0.85em;        /* Slightly smaller than text */
+  background-color: rgba(
+    var(--v-theme-on-surface),
+    0.08
+  ); /* Subtle background */
+  border: 1px solid rgba(var(--v-theme-on-surface), 0.2); /* Subtle border */
+  border-radius: 6px; /* Rounded corners */
+  padding: 2px 4px; /* Spacing inside the box */
+  font-family: monospace; /* Monospace font for the slash */
+  font-size: 0.85em; /* Slightly smaller than text */
   font-weight: bold;
   line-height: 1;
   min-width: 20px;
