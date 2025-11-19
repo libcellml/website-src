@@ -18,7 +18,7 @@
     <template v-slot:label>
       <span v-if="isFocused">Enter your search text</span>
       <span v-else class="d-flex align-center">
-        Type <kbd class="search-key ml-1 mr-1">/</kbd> to search
+        <v-icon class="search-icon">mdi-magnify</v-icon> Type <kbd class="search-key ml-1 mr-1">/</kbd> to search
         documentation...
       </span>
     </template>
@@ -208,6 +208,10 @@ onUnmounted(() => {
   max-width: 400px;
   margin: 0 1rem;
   margin-left: auto;
+}
+
+.search-icon {
+  margin-right: 1rem;
 }
 
 .search-key {
