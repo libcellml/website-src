@@ -8,18 +8,19 @@
     :no-filter="true"
     item-title="title"
     item-value="href"
-    :label="
-      isFocused
-        ? 'Enter your search text'
-        : `Type '/' to search documentation...`
-    "
     variant="solo-filled"
     density="compact"
     hide-details
     @focus="handleFocus"
-    @blur="handleBlur"
+    @blur="isFocused = false"
     class="search-bar"
   >
+    <template v-slot:label>
+      <span v-if="isFocused">Enter your search text</span>
+      <span v-else class="d-flex align-center">
+        Type <kbd class="search-key ml-1 mr-1">/</kbd> to search documentation...
+      </span>
+    </template>
     <template v-slot:item="{ props, item }">
       <v-list-item v-bind="props" :title="item.raw.title" />
     </template>
@@ -48,10 +49,6 @@ let indexLoaded = false
 const handleFocus = () => {
   isFocused.value = true
   loadIndex()
-}
-
-const handleBlur = () => {
-  isFocused.value = false
 }
 
 const onEnter = () => {
@@ -207,5 +204,19 @@ onUnmounted(() => {
   max-width: 400px;
   margin: 0 1rem;
   margin-left: auto;
+}
+
+.search-key {
+  background-color: rgba(var(--v-theme-on-surface), 0.08); /* Subtle background */
+  border: 1px solid rgba(var(--v-theme-on-surface), 0.2);   /* Subtle border */
+  border-radius: 6px;       /* Rounded corners */
+  padding: 2px 4px;         /* Spacing inside the box */
+  font-family: monospace;   /* Monospace font for the slash */
+  font-size: 0.85em;        /* Slightly smaller than text */
+  font-weight: bold;
+  line-height: 1;
+  min-width: 20px;
+  text-align: center;
+  display: inline-block;
 }
 </style>
