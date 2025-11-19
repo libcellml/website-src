@@ -13,6 +13,7 @@
     hide-details
     @focus="handleFocus"
     @blur="handleBlur"
+    @keydown.enter="onEnter"
     class="search-bar"
   >
     <template v-slot:label>
@@ -60,7 +61,16 @@ const handleBlur = () => {
 }
 
 const onEnter = () => {
-  // To be handled later.
+  // If an item is selected, v-model watcher handles navigation.
+  if (searchQuery.value) {
+    router.push({ 
+      path: '/search', 
+      query: { q: searchQuery.value } // Pass query in URL
+    })
+    
+    // Close the dropdown
+    searchInput.value.blur() 
+  }
 }
 
 const loadIndex = async () => {
