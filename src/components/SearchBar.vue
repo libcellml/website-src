@@ -3,8 +3,8 @@
     ref="searchInput"
     v-model="selectedItem"
     v-model:search="searchQuery"
-    :items="searchResults"
-    :loading="isLoading"
+    :items="searchStore.results"
+    :loading="searchStore.isLoading"
     :no-filter="true"
     item-title="title"
     item-value="href"
@@ -19,8 +19,8 @@
     <template v-slot:label>
       <span v-if="isFocused">Enter your search text</span>
       <span v-else class="d-flex align-center">
-        <v-icon class="search-icon">mdi-magnify</v-icon> Type <kbd class="search-key ml-1 mr-1">/</kbd> to search
-        documentation...
+        <v-icon class="search-icon">mdi-magnify</v-icon> Type
+        <kbd class="search-key ml-1 mr-1">/</kbd> to search documentation...
       </span>
     </template>
     <template v-slot:item="{ props, item }">
@@ -32,25 +32,21 @@
 <script setup>
 import { onMounted, onUnmounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
-import { useNotificationsStore } from '@/stores/notifications'
-import lunr from 'lunr'
+import { useSearchStore } from '@/stores/search'
 
-const store = useNotificationsStore()
 const router = useRouter()
+const searchStore = useSearchStore()
 
 const searchQuery = ref('')
 const selectedItem = ref(null)
 const searchResults = ref([])
 const searchInput = ref(null)
-const isLoading = ref(false)
-const lunrIndex = ref(null)
 const isFocused = ref(false)
-const docMap = new Map()
-let indexLoaded = false
+let debounceTimeout = null
 
 const handleFocus = () => {
   isFocused.value = true
-  loadIndex()
+  searchStore.loadIndex()
 }
 
 const handleBlur = () => {
@@ -63,119 +59,39 @@ const handleBlur = () => {
 const onEnter = () => {
   // If an item is selected, v-model watcher handles navigation.
   if (searchQuery.value) {
-    router.push({ 
-      path: '/search', 
-      query: { q: searchQuery.value } // Pass query in URL
+    router.push({
+      path: '/search',
+      query: { q: searchQuery.value }, // Pass query in URL
     })
-    
+
     // Close the dropdown
-    searchInput.value.blur() 
-  }
-}
-
-const loadIndex = async () => {
-  if (indexLoaded) return
-
-  isLoading.value = true
-  try {
-    const response = await fetch('/search-index.json')
-    const documents = await response.json()
-
-    // 1. Lunr needs a map to get the original doc back from an ID
-    documents.forEach((doc) => {
-      docMap.set(doc.href, doc)
-    })
-
-    lunrIndex.value = lunr(function () {
-      // Define the fields
-      this.field('title', { boost: 10 }) // Boost title
-      this.field('content')
-      this.ref('href') // Use href as the unique ID
-
-      // Add documents to the index
-      documents.forEach((doc) => {
-        this.add(doc)
-      })
-    })
-
-    indexLoaded = true
-  } catch (e) {
-    store.add({
-      type: 'error',
-      title: 'Failed to load search index:',
-      message: e.message,
-    })
-  }
-  isLoading.value = false
-}
-
-/**
- * Modifies a raw search query for Lunr.js.
- *
- * If the query is "simple" (no special operators), it enhances each
- * term to search for both the exact term and a prefix-matched term.
- * e.g., "spec allo" -> "spec spec* allo allo*"
- *
- * If the query is "advanced" (contains *, ~, ^, +, -, or :),
- * it returns the query as-is for Lunr to parse.
- *
- * @param {string} rawQuery The user-typed search string
- * @returns {string} A Lunr-compatible query string
- */
-function buildLunrQuery(rawQuery) {
-  // Regex to detect Lunr special chars: *, ~, ^, +, -, or field:
-  const specialCharRegex = /[*~^+:-]|\w:/
-  const trimmedQuery = rawQuery.trim()
-
-  // If query is empty or just whitespace, return empty.
-  if (!trimmedQuery) {
-    return ''
-  }
-
-  // Check if the user has already typed a special query
-  const isSimpleQuery = !specialCharRegex.test(trimmedQuery)
-
-  if (isSimpleQuery) {
-    // It's a simple query.
-    // Split into words, remove empty strings, and build the new query.
-    // "search query" becomes "search search* query query*"
-    return trimmedQuery
-      .split(/\s+/) // Split on one or more spaces
-      .map((term) => `${term} ${term}*`) // Add the term AND the wildcard term
-      .join(' ')
-  } else {
-    // It's an advanced query. Return it as-is.
-    return trimmedQuery
+    searchInput.value.blur()
   }
 }
 
 // Watch the search query text
 watch(searchQuery, (newQuery) => {
-  const lunrQuery = buildLunrQuery(newQuery)
+  // If the combobox clears the query (which happens on select), ignore
+  if (debounceTimeout) {
+    clearTimeout(debounceTimeout)
+  }
 
-  if (!lunrQuery || !lunrIndex.value) {
-    searchResults.value = []
+  if (!newQuery) {
+    searchStore.results = [] // Optional: clear dropdown results
     return
   }
-
-  try {
-    const results = lunrIndex.value.search(lunrQuery)
-    searchResults.value = results.slice(0, 10).map((r) => docMap.get(r.ref))
-  } catch (e) {
-    // Lunr can throw errors for malformed queries (e.g., trailing colon)
-    store.add({
-      type: 'error',
-      title: 'Search error:',
-      message: e.message,
-    })
-    searchResults.value = []
-  }
+  debounceTimeout = setTimeout(() => {
+    searchStore.search(newQuery)
+  }, 300)
 })
 
-// 3. Watch for when the user selects an item
 watch(selectedItem, (selection) => {
-  if (selection && typeof selection === 'object') {
-    router.push(selection.href) // Navigate to the page
+  // v-combobox can sometimes set the model to the string text if no item matches.
+  // We only want to navigate if it's an actual result object.
+  if (selection && typeof selection === 'object' && selection.href) {
+    router.push(selection.href)
+
+    // Reset UI
     searchInput.value.blur()
   }
 })

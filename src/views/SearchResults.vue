@@ -104,11 +104,10 @@
 
             <v-card
               v-for="(result, i) in results"
-              :key="i"
+              :key="`search_result_${i}`"
               :to="result.href"
               class="mb-4 result-card"
               variant="flat"
-              border
             >
               <v-card-item>
                 <template v-slot:title>
@@ -132,7 +131,6 @@
             type="info"
             variant="tonal"
             icon="mdi-magnify-remove-outline"
-            border="start"
           >
             No results found for <strong>"{{ currentQuery }}"</strong>. Try
             adjusting your search terms or check the search tips above.
@@ -160,14 +158,12 @@ const results = computed(() => searchStore.results)
 const currentQuery = computed(() => route.query.q || '')
 const hasSearched = computed(() => !!currentQuery.value)
 
-// Helper: Truncate long content for preview
 const truncateText = (text, length) => {
   if (!text) return ''
   if (text.length <= length) return text
   return text.substring(0, length) + '...'
 }
 
-// 1. Trigger navigation when user hits Enter on the input
 const updateSearch = () => {
   if (!localQuery.value.trim()) return
 
@@ -177,14 +173,12 @@ const updateSearch = () => {
   })
 }
 
-// 2. Handle clearing the input
 const clearSearch = () => {
   localQuery.value = ''
   router.push({ name: 'Search' }) // Clear query param
-  searchStore.results = [] // Clear results in store manually if preferred
+  searchStore.results = []
 }
 
-// 3. The Core Logic: Sync URL -> Store
 const runSearchFromUrl = async () => {
   const query = route.query.q
 
@@ -205,7 +199,6 @@ const runSearchFromUrl = async () => {
   searchStore.search(query)
 }
 
-// Lifecycle
 onMounted(() => {
   runSearchFromUrl()
 })
@@ -229,6 +222,6 @@ watch(
   background-color: rgba(
     var(--v-theme-surface),
     1
-  ); /* slight lift effect if needed */
+  );
 }
 </style>
