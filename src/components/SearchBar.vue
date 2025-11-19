@@ -8,11 +8,11 @@
     :no-filter="true"
     item-title="title"
     item-value="href"
-    label="Type '/' to search documentation ..."
+    :label="isFocused ? 'Enter your search text' : `Type '/' to search documentation ...`"
     variant="solo-filled"
     density="compact"
     hide-details
-    @focus="loadIndex"
+    @focus="handleFocus"
     class="search-bar"
   >
     <template v-slot:item="{ props, item }">
@@ -36,10 +36,15 @@ const searchResults = ref([]) // The list of results from Fuse.js
 const searchInput = ref(null)
 const isLoading = ref(false) // For the loading spinner
 const lunrIndex = ref(null)
+const isFocused = ref(false)
 const docMap = new Map()
 let indexLoaded = false
 
-// 1. Load the index (only once)
+const handleFocus = () => {
+  isFocused.value = true
+  loadIndex() 
+}
+
 const loadIndex = async () => {
   if (indexLoaded) return
 
