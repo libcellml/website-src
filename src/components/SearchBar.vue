@@ -8,12 +8,16 @@
     :no-filter="true"
     item-title="title"
     item-value="href"
-    :label="isFocused ? 'Enter your search text' : `Type '/' to search documentation ...`"
+    :label="
+      isFocused
+        ? 'Enter your search text'
+        : `Type '/' to search documentation...`
+    "
     variant="solo-filled"
     density="compact"
     hide-details
     @focus="handleFocus"
-    @keydown.enter="onEnter"
+    @blur="handleBlur"
     class="search-bar"
   >
     <template v-slot:item="{ props, item }">
@@ -41,28 +45,17 @@ const isFocused = ref(false)
 const docMap = new Map()
 let indexLoaded = false
 
-const handleFocus = (state) => {
+const handleFocus = () => {
   isFocused.value = true
-  loadIndex() 
+  loadIndex()
+}
+
+const handleBlur = () => {
+  isFocused.value = false
 }
 
 const onEnter = () => {
-  if (searchResults.value.length > 0) {
-    const firstResult = searchResults.value[0]
-    router.push(firstResult.href)
-    // Clear search
-    searchQuery.value = '' 
-    searchResults.value = []
-    selectedItem.value = null
-    // Remove focus to close keyboard/menu
-    if (searchInput.value) {
-      searchInput.value.blur()
-      isFocused.value = false
-    }
-  } else if (searchQuery.value.length > 0) {
-      // Optional: If no results found, maybe go to a "No results" page?
-      console.log("No results found")
-  }
+  // To be handled later.
 }
 
 const loadIndex = async () => {
@@ -172,6 +165,7 @@ watch(selectedItem, (selection) => {
     selectedItem.value = null
     searchQuery.value = '' // Manually clear the search text
     searchResults.value = []
+    searchInput.value.blur()
   }
 })
 
@@ -179,14 +173,18 @@ const handleKeydown = (event) => {
   // Guard: Don't trigger if the user is already typing
   // in an input, textarea, or contenteditable element.
   const activeEl = document.activeElement
-  if (activeEl && (['INPUT', 'TEXTAREA', 'SELECT'].includes(activeEl.tagName) || activeEl.isContentEditable)) {
+  if (
+    activeEl &&
+    (['INPUT', 'TEXTAREA', 'SELECT'].includes(activeEl.tagName) ||
+      activeEl.isContentEditable)
+  ) {
     return
   }
-  
+
   // Check for the '/' key
   if (event.key === '/') {
     event.preventDefault() // Stop '/' from being typed
-    
+
     // Focus the combobox (if it exists)
     if (searchInput.value) {
       searchInput.value.focus()
