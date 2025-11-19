@@ -8,11 +8,12 @@
     :no-filter="true"
     item-title="title"
     item-value="href"
-    label="Type '/' to search documentation ..."
+    :label="isFocused ? 'Enter your search text' : `Type '/' to search documentation ...`"
     variant="solo-filled"
     density="compact"
     hide-details
-    @focus="loadIndex"
+    @focus="handleFocus"
+    @keydown.enter="onEnter"
     class="search-bar"
   >
     <template v-slot:item="{ props, item }">
@@ -30,16 +31,40 @@ import lunr from 'lunr'
 const store = useNotificationsStore()
 const router = useRouter()
 
-const searchQuery = ref('') // The text the user types
-const selectedItem = ref(null) // The item the user clicks
-const searchResults = ref([]) // The list of results from Fuse.js
+const searchQuery = ref('')
+const selectedItem = ref(null)
+const searchResults = ref([])
 const searchInput = ref(null)
-const isLoading = ref(false) // For the loading spinner
+const isLoading = ref(false)
 const lunrIndex = ref(null)
+const isFocused = ref(false)
 const docMap = new Map()
 let indexLoaded = false
 
-// 1. Load the index (only once)
+const handleFocus = (state) => {
+  isFocused.value = true
+  loadIndex() 
+}
+
+const onEnter = () => {
+  if (searchResults.value.length > 0) {
+    const firstResult = searchResults.value[0]
+    router.push(firstResult.href)
+    // Clear search
+    searchQuery.value = '' 
+    searchResults.value = []
+    selectedItem.value = null
+    // Remove focus to close keyboard/menu
+    if (searchInput.value) {
+      searchInput.value.blur()
+      isFocused.value = false
+    }
+  } else if (searchQuery.value.length > 0) {
+      // Optional: If no results found, maybe go to a "No results" page?
+      console.log("No results found")
+  }
+}
+
 const loadIndex = async () => {
   if (indexLoaded) return
 
@@ -116,7 +141,7 @@ function buildLunrQuery(rawQuery) {
   }
 }
 
-// 2. Watch the search query text
+// Watch the search query text
 watch(searchQuery, (newQuery) => {
   const lunrQuery = buildLunrQuery(newQuery)
 
