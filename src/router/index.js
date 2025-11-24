@@ -159,6 +159,12 @@ const downloadRoute = {
   meta: { title: 'libCellML: Download' },
   component: () => import('@/views/Download.vue'),
 }
+const searchRoute = {
+  path: '/search',
+  name: 'Search',
+  meta: { title: 'libCellML: Search Results' },
+  component: () => import('@/views/SearchResults.vue'), 
+}
 const aboutRoute = {
   path: '/about',
   name: 'About',
@@ -198,6 +204,7 @@ const routes = [
   translateRoute,
   validateRoute,
   downloadRoute,
+  searchRoute,
   importRoute,
   // notFoundRoute,
   catchEverythingRoute,
