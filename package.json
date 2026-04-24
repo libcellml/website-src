@@ -35,7 +35,7 @@
     "eslint": "^9.13.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-vue": "^9.17.0",
-    "fast-xml-parser": "^5.5.7",
+    "fast-xml-parser": "^5.7.0",
     "glob": "^11.1.0",
     "prettier": "^3.0.3",
     "sass": "^1.80.5",
