@@ -1,4 +1,4 @@
-name: Selenium tests
+name: Playwright tests
 
 on:
   workflow_run:
@@ -7,7 +7,7 @@ on:
       - completed
 
 jobs:
-  Run-Python-Selenium-Tests:
+  Run-Python-Playwright-Tests:
     if: github.repository == 'libcellml/website-src'
     env:
       DISPLAY: :87
@@ -24,22 +24,22 @@ jobs:
       - uses: myrotvorets/set-commit-status-action@master
         with:
           sha: ${{ github.sha }}
-      - name: Install selenium
+      - uses: actions/setup-python@v6
+        with:
+          python-version: 3.14
+      - name: Install Playwright
         run: |
-          which pip3
-          pip3 install selenium webdriver-manager
-      - name: Run Xvfb
+          python -m pip install --upgrade pip
+          pip install playwright
+      - name: Setup Playwright with Chromium
         run: |
-          Xvfb $DISPLAY &
-      - name: Setup selenium with Chrome
-        run: |
-          python3 tests/selenium/install_driver.py
+          playwright install --with-deps chromium
       - name: Run tests
         env:
           LIBCELLML_WEBSITE_SHA: ${{ github.sha }}
+          LIBCELLML_BASE_URL: ${{ github.base_ref == 'staging' && 'https://staging.libcellml.org' || 'https://libcellml.org' }}
         run: |
-          python3 --version
-          python3 tests/selenium/run_all_tests.py
+          python tests/playwright/run_all_tests.py
       - uses: myrotvorets/set-commit-status-action@master
         if: always()
         with:
