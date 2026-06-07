@@ -1,7 +1,6 @@
 name: Playwright tests
 
 on:
-  push:
   workflow_run:
     workflows: ['Deploy libCellML website']
     types:
@@ -9,7 +8,7 @@ on:
 
 jobs:
   Run-Python-Playwright-Tests:
-    if: github.repository == 'hsorby/website-src'
+    if: github.repository == 'libcellml/website-src'
     env:
       DISPLAY: :87
     runs-on: ubuntu-24.04
