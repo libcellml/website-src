@@ -37,7 +37,7 @@ jobs:
       - name: Run tests
         env:
           LIBCELLML_WEBSITE_SHA: ${{ github.sha }}
-          LIBCELLML_BASE_URL: ${{ github.base_ref == 'staging' && 'https://staging.libcellml.org' || 'https://libcellml.org' }}
+          LIBCELLML_BASE_URL: ${{ github.ref_name == 'staging' && 'https://staging.libcellml.org' || 'https://libcellml.org' }}
         run: |
           python tests/playwright/run_all_tests.py
       - uses: myrotvorets/set-commit-status-action@master
