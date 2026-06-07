@@ -1,3 +1,4 @@
+import os
 import re
 import unittest
 
@@ -12,6 +13,8 @@ except ImportError:
 class TestVersionInformation(unittest.TestCase):
 
     def test_version(self):
+        sha = os.environ.get("LIBCELLML_WEBSITE_SHA", "stuvwxyz")
+
         with sync_playwright() as playwright:
             browser = playwright.chromium.launch(headless=HEADLESS_MODE)
             context = browser.new_context()
@@ -29,7 +32,10 @@ class TestVersionInformation(unittest.TestCase):
             page.get_by_role("button", name="About").click()
             expect(page.locator("#pageMainContent")).to_match_aria_snapshot("- heading \"Website version information\" [level=3]")
             expect(page.locator("#pageMainContent")).to_match_aria_snapshot("- paragraph:\n  - text: The build identifier for the website is\n  - strong: /\\d+-\\d+-\\d+-\\d+-\\d+-\\d+/\n  - text: UTC.")
-            expect(page.locator("#pageMainContent")).to_match_aria_snapshot("- paragraph:\n  - text: The revision this website was created from is\n  - strong: /[a-z0-9]{8,8}/\n  - text: .")
+            if sha != "stuvwxyz":
+              expect(page.locator("#pageMainContent")).to_match_aria_snapshot(f"- paragraph:\n  - text: The revision this website was created from is\n  - strong: {sha[:8]}\n  - text: .")
+            else:
+              expect(page.locator("#pageMainContent")).to_match_aria_snapshot("- paragraph:\n  - text: The revision this website was created from is\n  - strong: /[a-z0-9]{8,8}/\n  - text: .")
             page.get_by_role("button", name="Home").click()
             expect(page.locator("#introContent")).to_match_aria_snapshot("- heading \"libCellML is an easy-to-use library for developers of CellML applications.\" [level=3]")
 
