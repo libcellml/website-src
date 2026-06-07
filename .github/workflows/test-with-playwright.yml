@@ -1,0 +1,49 @@
+name: Playwright tests
+
+on:
+  push:
+  workflow_run:
+    workflows: ['Deploy libCellML website']
+    types:
+      - completed
+
+jobs:
+  Run-Python-Playwright-Tests:
+    if: github.repository == 'hsorby/website-src'
+    env:
+      DISPLAY: :87
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Allow CDN cache time to expire
+        run: |
+          sleep 180
+      - uses: actions/checkout@v6
+      - name: Show GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+      - uses: myrotvorets/set-commit-status-action@master
+        with:
+          sha: ${{ github.sha }}
+      - uses: actions/setup-python@v6
+        with:
+          python-version: 3.14
+      - name: Install Playwright
+        run: |
+          which pip
+          python -m pip install --upgrade pip
+          pip install playwright
+          playwright install --with-deps chromium
+      - name: Setup Playwright with Chromium
+        run: |
+          playwright install --with-deps chromium
+      - name: Run tests
+        env:
+          LIBCELLML_WEBSITE_SHA: ${{ github.sha }}
+        run: |
+          python tests/playwright/run_all_tests.py
+      - uses: myrotvorets/set-commit-status-action@master
+        if: always()
+        with:
+          status: '${{ job.status }}'
+          sha: ${{ github.sha }}
