@@ -30,10 +30,8 @@ jobs:
           python-version: 3.14
       - name: Install Playwright
         run: |
-          which pip
           python -m pip install --upgrade pip
           pip install playwright
-          playwright install --with-deps chromium
       - name: Setup Playwright with Chromium
         run: |
           playwright install --with-deps chromium
