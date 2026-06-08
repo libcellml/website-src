@@ -1,2 +1,2 @@
-selenium
-webdriver-manager
+playwright
+# Then 'playwright install --with-deps chromium' to install the browser and its dependencies.
