@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="generator_8h" kind="file" language="C++">
+    <compoundname>generator.h</compoundname>
+    <includes refid="generatorprofile_8h" local="yes">libcellml/generatorprofile.h</includes>
+    <includes refid="logger_8h" local="yes">libcellml/logger.h</includes>
+    <incdepgraph>
+      <node id="7">
+        <label>libcellml/enums.h</label>
+        <link refid="enums_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>libcellml/generator.h</label>
+        <link refid="generator_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>libcellml/generatorprofile.h</label>
+        <link refid="generatorprofile_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>libcellml/logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>libcellml/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>libcellml/exportdefinitions.h</label>
+      </node>
+      <node id="6">
+        <label>memory</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classlibcellml_1_1Generator" prot="public">libcellml::Generator</innerclass>
+    <innernamespace refid="namespacelibcellml">libcellml</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">Copyright<sp/>libCellML<sp/>Contributors</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment">Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"></highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="generatorprofile_8h" kindref="compound">libcellml/generatorprofile.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="logger_8h" kindref="compound">libcellml/logger.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacelibcellml" kindref="compound">libcellml</ref><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classlibcellml_1_1Generator" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">LIBCELLML_EXPORT<sp/><ref refid="classlibcellml_1_1Generator" kindref="compound">Generator</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1Logger" kindref="compound">Logger</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classlibcellml_1_1Generator" kindref="compound">~Generator</ref>();<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classlibcellml_1_1Generator" kindref="compound">Generator</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classlibcellml_1_1Generator" kindref="compound">Generator</ref><sp/>&amp;rhs)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classlibcellml_1_1Generator" kindref="compound">Generator</ref>(<ref refid="classlibcellml_1_1Generator" kindref="compound">Generator</ref><sp/>&amp;&amp;rhs)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classlibcellml_1_1Generator" kindref="compound">Generator</ref><sp/>&amp;operator=(<ref refid="classlibcellml_1_1Generator" kindref="compound">Generator</ref><sp/>rhs)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="48" refid="classlibcellml_1_1Generator_1afff1cff58e786791bf3a002f52c4edeb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespacelibcellml_1a0f78fdeb24d2bd8779351c5d02c050e2" kindref="member">GeneratorPtr</ref><sp/><ref refid="classlibcellml_1_1Generator_1afff1cff58e786791bf3a002f52c4edeb" kindref="member">create</ref>()<sp/>noexcept;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="classlibcellml_1_1Generator_1a45c379c32513f5562fcdf04a14892179" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>interfaceCode(const<sp/><ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref><sp/>&amp;analyserModel,<sp/>const<sp/><ref refid="namespacelibcellml_1aea4687d4be74e5654468ad4b60b314a7" kindref="member">GeneratorProfilePtr</ref><sp/>&amp;generatorProfile,<sp/>const<sp/><ref refid="namespacelibcellml_1a340f68ee547f099dba7b2484bd457a35" kindref="member">GeneratorVariableTrackerPtr</ref><sp/>&amp;generatorVariableTracker);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="classlibcellml_1_1Generator_1a49f2f4e313314dfef5abcd7d9bc98b4c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>interfaceCode(const<sp/><ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref><sp/>&amp;analyserModel,<sp/>const<sp/><ref refid="namespacelibcellml_1aea4687d4be74e5654468ad4b60b314a7" kindref="member">GeneratorProfilePtr</ref><sp/>&amp;generatorProfile);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="classlibcellml_1_1Generator_1a4a78d75017f7af02cc5353c40b7da3e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>interfaceCode(const<sp/><ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref><sp/>&amp;analyserModel,<sp/><ref refid="classlibcellml_1_1GeneratorProfile" kindref="compound">GeneratorProfile</ref>::Profile<sp/>profile);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="classlibcellml_1_1Generator_1a9ff313f8b0da13cff663948e3f314968" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>interfaceCode(const<sp/><ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref><sp/>&amp;analyserModel,<sp/>const<sp/><ref refid="namespacelibcellml_1a340f68ee547f099dba7b2484bd457a35" kindref="member">GeneratorVariableTrackerPtr</ref><sp/>&amp;generatorVariableTracker);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="classlibcellml_1_1Generator_1a9ecbcdc8bc247b2f5b357bf7ca20ea88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>interfaceCode(const<sp/><ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref><sp/>&amp;analyserModel);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="classlibcellml_1_1Generator_1a0bbaa15c5e608438946e711681804ce1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>implementationCode(const<sp/><ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref><sp/>&amp;analyserModel,<sp/>const<sp/><ref refid="namespacelibcellml_1aea4687d4be74e5654468ad4b60b314a7" kindref="member">GeneratorProfilePtr</ref><sp/>&amp;generatorProfile,<sp/>const<sp/><ref refid="namespacelibcellml_1a340f68ee547f099dba7b2484bd457a35" kindref="member">GeneratorVariableTrackerPtr</ref><sp/>&amp;generatorVariableTracker);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="classlibcellml_1_1Generator_1a7db24514e125c37201d20cd1a800b165" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>implementationCode(const<sp/><ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref><sp/>&amp;analyserModel,<sp/>const<sp/><ref refid="namespacelibcellml_1aea4687d4be74e5654468ad4b60b314a7" kindref="member">GeneratorProfilePtr</ref><sp/>&amp;generatorProfile);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164" refid="classlibcellml_1_1Generator_1a846263d545dd780fb6e05bc20f796a7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>implementationCode(const<sp/><ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref><sp/>&amp;analyserModel,<sp/><ref refid="classlibcellml_1_1GeneratorProfile" kindref="compound">GeneratorProfile</ref>::Profile<sp/>profile);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179" refid="classlibcellml_1_1Generator_1a1487086552ca16721d34154b43feddff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>implementationCode(const<sp/><ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref><sp/>&amp;analyserModel,<sp/>const<sp/><ref refid="namespacelibcellml_1a340f68ee547f099dba7b2484bd457a35" kindref="member">GeneratorVariableTrackerPtr</ref><sp/>&amp;generatorVariableTracker);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192" refid="classlibcellml_1_1Generator_1aca1f8c79c69ea996f83f345d66fd974e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>implementationCode(const<sp/><ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref><sp/>&amp;analyserModel);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207" refid="classlibcellml_1_1Generator_1acb4eb2d6718c76b73140cb34a57d9597" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>static<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>equationCode(const<sp/><ref refid="namespacelibcellml_1ac0baf0fbed265d4ccb07118569060148" kindref="member">AnalyserEquationAstPtr</ref><sp/>&amp;ast,</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/><ref refid="namespacelibcellml_1aea4687d4be74e5654468ad4b60b314a7" kindref="member">GeneratorProfilePtr</ref><sp/>&amp;generatorProfile);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221" refid="classlibcellml_1_1Generator_1a17043c420c394cca286e6fcac99a8383" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>static<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>equationCode(const<sp/><ref refid="namespacelibcellml_1ac0baf0fbed265d4ccb07118569060148" kindref="member">AnalyserEquationAstPtr</ref><sp/>&amp;ast);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal">private:</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classlibcellml_1_1Generator" kindref="compound">Generator</ref>();<sp/></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>struct<sp/>GeneratorImpl;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>GeneratorImpl<sp/>*pFunc();<sp/></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>const<sp/>GeneratorImpl<sp/>*pFunc()<sp/>const;<sp/></highlight></codeline>
+<codeline lineno="230"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>libcellml</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="libcellml/generator.h"/>
+  </compounddef>
+</doxygen>
