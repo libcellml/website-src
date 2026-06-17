@@ -939,7 +939,7 @@ __metadata:
     follow-redirects: "npm:^1.15.11"
     form-data: "npm:^4.0.5"
     proxy-from-env: "npm:^2.1.0"
-  checksum: 10c0/4eeae0feeaa7fdc1ef24f81f8b378fdadedf4aebdd6bf224484675160f8744cf17b9b0d1c215279979940f7e8ce463beffa2f713099612e428eac238515c81d5
+  checksum: e7d208b751959c7c6936417b870d6286979e0dff17784ae230d3988e754b6322682cb136e25669b534072b6f44c08715801ab961227eb8cc075323d9fda8ad43
   languageName: node
   linkType: hard
 
@@ -1158,14 +1158,14 @@ __metadata:
   linkType: hard
 
 "dompurify@npm:^3.2.5":
-  version: 3.4.0
-  resolution: "dompurify@npm:3.4.0"
+  version: 3.4.10
+  resolution: "dompurify@npm:3.4.10"
   dependencies:
-    "@types/trusted-types": "npm:^2.0.7"
+    "@types/trusted-types": ^2.0.7
   dependenciesMeta:
     "@types/trusted-types":
       optional: true
-  checksum: 8c4286d3d379c6133ff2951d73d946974ef079f5d651d66cf90c1a6e57d8d2d304e7bc18280d27c38835200bbe03877fd93fb22f9f1fb9e086d68ffcd2d5dd16
+  checksum: 6a9ef22d8e7f0ceafdf2ca3ceceafecdc90f0cbb3780fb904ca3a0001d9b61d0d7b93b09db0ddaa9fb9a7da5a57fb2f8f0065d85c94bf027575b2000b90180fe
   languageName: node
   linkType: hard
 
@@ -1615,7 +1615,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:^1.16.0":
+"follow-redirects@npm:^1.15.11, follow-redirects@npm:^1.16.0":
   version: 1.16.0
   resolution: "follow-redirects@npm:1.16.0"
   peerDependenciesMeta:
@@ -1958,34 +1958,34 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "libcellml-website@workspace:."
   dependencies:
-    "@mdi/font": "npm:7.4.47"
-    "@vitejs/plugin-vue": "npm:^5.2.4"
-    axios: "npm:^1.17.0"
-    crypto-js: "npm:^4.2.0"
-    eslint: "npm:^9.39.4"
-    eslint-config-prettier: "npm:^9.1.2"
-    eslint-plugin-vue: "npm:^9.33.0"
-    fast-xml-parser: "npm:^5.8.0"
-    filesize: "npm:^10.1.6"
-    glob: "npm:^13.0.6"
-    jszip: "npm:^3.10.1"
-    katex: "npm:^0.17.0"
-    lunr: "npm:^2.3.9"
-    pinia: "npm:^2.3.1"
-    prettier: "npm:^3.8.3"
-    roboto-fontface: "npm:^0.10.0"
-    sass: "npm:^1.100.0"
-    sass-loader: "npm:^16.0.8"
-    vite: "npm:^6.4.3"
-    vite-plugin-vuetify: "npm:^2.1.3"
-    vue: "npm:^3.5.35"
-    vue-gtag: "npm:^2.1.2"
-    vue-router: "npm:4.6.4"
-    vue3-doxygen-xml: "npm:^0.4.0"
-    vue3-libcellml.js: "npm:^0.6.3"
-    vue3-sphinx-xml: "npm:^0.6.3"
-    vuetify: "npm:^4.1.0"
-    webfontloader: "npm:^1.6.28"
+    "@mdi/font": 7.4.47
+    "@vitejs/plugin-vue": ^5.2.4
+    axios: ^1.17.0
+    crypto-js: ^4.2.0
+    eslint: ^9.39.4
+    eslint-config-prettier: ^9.1.2
+    eslint-plugin-vue: ^9.33.0
+    fast-xml-parser: ^5.8.0
+    filesize: ^10.1.6
+    glob: ^13.0.6
+    jszip: ^3.10.1
+    katex: ^0.17.0
+    lunr: ^2.3.9
+    pinia: ^2.3.1
+    prettier: ^3.8.3
+    roboto-fontface: ^0.10.0
+    sass: ^1.100.0
+    sass-loader: ^16.0.8
+    vite: ^6.4.3
+    vite-plugin-vuetify: ^2.1.3
+    vue: ^3.5.35
+    vue-gtag: ^2.1.2
+    vue-router: 4.6.4
+    vue3-doxygen-xml: ^0.4.0
+    vue3-libcellml.js: ^0.6.3
+    vue3-sphinx-xml: ^0.6.3
+    vuetify: ^4.1.0
+    webfontloader: ^1.6.28
   languageName: unknown
   linkType: soft
 
@@ -2895,7 +2895,7 @@ __metadata:
   peerDependencies:
     katex: ^0.17.0
     vue: ^3.2.22
-  checksum: 10c0/d6016643357807f3dfbdbe2e6915a9c0fff21df5c008a31e8cc589fdec219f7e550819bff16e39a5423a81fd18b6ace7a4ae4a7c9ee43b6413c21914abcb73f8
+  checksum: eaf2a8b5d38a4bbd6ad96e42a1d60bfa50070c7be5d2baf302186244418d4f5d9dbcf763f85a334e3a81c5d6a86db81421c765374a9a006de4f05497f42a99bc
   languageName: node
   linkType: hard
 
@@ -2922,7 +2922,7 @@ __metadata:
     pinia: ^2.0.0 || ^3.0.0
     vue: ^3.2.0
     vue-router: ^4.0.0
-  checksum: 10c0/11e961ffb6ca5e4c68af57a6afd99f44bec918c4f9255b72cf54ef02fd60b3962d269f8436373f37f902794924492188bf8e5f25d2ec4dae7c15cd972080cc6f
+  checksum: 34cc65511897a24d2c386dd2ee48fb3497dc733cb8104eaa6b067e8b94bc94440cdb2ec2553bc1b5598ca01c2fe52c4bd101a3edda61bae0d81859f032a89b68
   languageName: node
   linkType: hard
 
