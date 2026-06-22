@@ -1,0 +1,810 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classlibcellml_1_1AnalyserEquation" kind="class" language="C++" prot="public">
+    <compoundname>libcellml::AnalyserEquation</compoundname>
+    <includes refid="analyserequation_8h" local="no">analyserequation.h</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classlibcellml_1_1AnalyserEquation_1ac9db03968826b12d9cf9130f95b8edc3" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Type</name>
+        <qualifiedname>libcellml::AnalyserEquation::Type</qualifiedname>
+        <enumvalue id="classlibcellml_1_1AnalyserEquation_1ac9db03968826b12d9cf9130f95b8edc3a8d6b5cada83510220f59e00ce86d4d92" prot="public">
+          <name>CONSTANT</name>
+          <briefdescription>
+<para>An equation that computes a (true) constant (e.g., x = 3). </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquation_1ac9db03968826b12d9cf9130f95b8edc3a2f66fc6a6849237faa1c41a1cc817a09" prot="public">
+          <name>COMPUTED_CONSTANT</name>
+          <briefdescription>
+<para>An equation that computes a computed constant (e.g., x = 3+5, x = 3+z, x = y+z where y and z are (true or computed) constants). </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquation_1ac9db03968826b12d9cf9130f95b8edc3a96f459e16830e7d7620bdbd8cfe660b7" prot="public">
+          <name>ODE</name>
+          <briefdescription>
+<para>An equation that computes an ordinary differential equation (e.g., d(y)/dt = f(t, x)). </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquation_1ac9db03968826b12d9cf9130f95b8edc3a6cabb83d4a0a16b0ab0f536d81220bac" prot="public">
+          <name>NLA</name>
+          <briefdescription>
+<para>An equation that computes one or several algebraic variables (e.g., x+y = f(z) where x and y are known, but not z). </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquation_1ac9db03968826b12d9cf9130f95b8edc3a5c5e440cc3d6aed1fada5b21a045e2fe" prot="public">
+          <name>ALGEBRAIC</name>
+          <briefdescription>
+<para>An equation that computes an algebraic variable (e.g., y = f(x)). </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classlibcellml_1_1AnalyserEquation_1ac9db03968826b12d9cf9130f95b8edc3a3932d629fb5e2be9d09b3a4485b3cc9d" prot="public">
+          <name>EXTERNAL</name>
+          <briefdescription>
+<para>A placeholder equation that captures the dependency of the model on an external variable. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The type of an equation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The type of an equation, i.e. whether it is used to compute a (true) constant, a computed constant, a rate, an algebraic variable, or whether it is a placeholder for an external variable. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="45" column="5" bodyfile="libcellml/analyserequation.h" bodystart="46" bodyend="53"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classlibcellml_1_1AnalyserEquation_1a8fc045316ed5fb70e4aabbca5f40d8ec" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Analyser</definition>
+        <argsstring></argsstring>
+        <name>Analyser</name>
+        <qualifiedname>libcellml::AnalyserEquation::Analyser</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="34" column="18" bodyfile="libcellml/analyserequation.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classlibcellml_1_1AnalyserEquation_1a366b7823e659ab78d952a7d79662a4d6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Generator</definition>
+        <argsstring></argsstring>
+        <name>Generator</name>
+        <qualifiedname>libcellml::AnalyserEquation::Generator</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Generator" kindref="compound">Generator</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="35" column="18" bodyfile="libcellml/analyserequation.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classlibcellml_1_1AnalyserEquation_1a84c3fd64a0c4f65484ea16277539fce8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class GeneratorVariableTracker</definition>
+        <argsstring></argsstring>
+        <name>GeneratorVariableTracker</name>
+        <qualifiedname>libcellml::AnalyserEquation::GeneratorVariableTracker</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1GeneratorVariableTracker" kindref="compound">GeneratorVariableTracker</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="36" column="18" bodyfile="libcellml/analyserequation.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classlibcellml_1_1AnalyserEquation_1ac8eaf366f631dc8f97059fd3b2b04cbf" prot="private" static="no" mutable="no">
+        <type>AnalyserEquationImpl *</type>
+        <definition>AnalyserEquationImpl* libcellml::AnalyserEquation::mPimpl</definition>
+        <argsstring></argsstring>
+        <name>mPimpl</name>
+        <qualifiedname>libcellml::AnalyserEquation::mPimpl</qualifiedname>
+        <briefdescription>
+<para>Private member to implementation pointer,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="292" column="26" bodyfile="libcellml/analyserequation.h" bodystart="292" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquation_1a9352b7e8219481b101f2b9c9d69593ca" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::AnalyserEquation::~AnalyserEquation</definition>
+        <argsstring>()</argsstring>
+        <name>~AnalyserEquation</name>
+        <qualifiedname>libcellml::AnalyserEquation::~AnalyserEquation</qualifiedname>
+        <briefdescription>
+<para>Destructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="55" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquation_1a0a08557704d85eff8467d6660b90f574" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::AnalyserEquation::AnalyserEquation</definition>
+        <argsstring>(const AnalyserEquation &amp;rhs)=delete</argsstring>
+        <name>AnalyserEquation</name>
+        <qualifiedname>libcellml::AnalyserEquation::AnalyserEquation</qualifiedname>
+        <param>
+          <type>const <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="56" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquation_1a37dec8235a4b676e882bab81a74db973" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::AnalyserEquation::AnalyserEquation</definition>
+        <argsstring>(AnalyserEquation &amp;&amp;rhs) noexcept=delete</argsstring>
+        <name>AnalyserEquation</name>
+        <qualifiedname>libcellml::AnalyserEquation::AnalyserEquation</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="57" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquation_1ad71fb060026d4a2aef2f0b046f878976" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref> &amp;</type>
+        <definition>AnalyserEquation &amp; libcellml::AnalyserEquation::operator=</definition>
+        <argsstring>(AnalyserEquation rhs)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>libcellml::AnalyserEquation::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="58" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquation_1af4b960a77b5435be063c2b1af39e7db7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::AnalyserEquation::AnalyserEquation</definition>
+        <argsstring>()</argsstring>
+        <name>AnalyserEquation</name>
+        <qualifiedname>libcellml::AnalyserEquation::AnalyserEquation</qualifiedname>
+        <briefdescription>
+<para>Constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="289" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquation_1abab0c917b46d6f12181833d36ba4bc06" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1AnalyserEquation_1ac9db03968826b12d9cf9130f95b8edc3" kindref="member">Type</ref></type>
+        <definition>Type libcellml::AnalyserEquation::type</definition>
+        <argsstring>() const</argsstring>
+        <name>type</name>
+        <qualifiedname>libcellml::AnalyserEquation::type</qualifiedname>
+        <briefdescription>
+<para>Get the <ref refid="classlibcellml_1_1AnalyserEquation_1ac9db03968826b12d9cf9130f95b8edc3" kindref="member">Type</ref> of this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the <ref refid="classlibcellml_1_1AnalyserEquation_1ac9db03968826b12d9cf9130f95b8edc3" kindref="member">Type</ref> of this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>.</para>
+<para><simplesect kind="return"><para>The <ref refid="classlibcellml_1_1AnalyserEquation_1ac9db03968826b12d9cf9130f95b8edc3" kindref="member">Type</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="67" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquation_1a9f6bbbcc3d024238463f72085e0ba338" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1ac0baf0fbed265d4ccb07118569060148" kindref="member">AnalyserEquationAstPtr</ref></type>
+        <definition>AnalyserEquationAstPtr libcellml::AnalyserEquation::ast</definition>
+        <argsstring>() const</argsstring>
+        <name>ast</name>
+        <qualifiedname>libcellml::AnalyserEquation::ast</qualifiedname>
+        <briefdescription>
+<para>Get the <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref> for this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref> for this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>.</para>
+<para><simplesect kind="return"><para>The <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="87" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquation_1af8bd6fa91b4c4cdae351c4819ef07a4d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::AnalyserEquation::dependencyCount</definition>
+        <argsstring>() const</argsstring>
+        <name>dependencyCount</name>
+        <qualifiedname>libcellml::AnalyserEquation::dependencyCount</qualifiedname>
+        <briefdescription>
+<para>Get the number of dependencies for this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the number of dependencies for this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>.</para>
+<para><simplesect kind="return"><para>The number of dependencies for this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="96" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquation_1a695e5c0102277c82d1498a9e9d300d5d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="namespacelibcellml_1a077e0ba912fc57b70090ab980aba2e25" kindref="member">AnalyserEquationPtr</ref> &gt;</type>
+        <definition>std::vector&lt; AnalyserEquationPtr &gt; libcellml::AnalyserEquation::dependencies</definition>
+        <argsstring>() const</argsstring>
+        <name>dependencies</name>
+        <qualifiedname>libcellml::AnalyserEquation::dependencies</qualifiedname>
+        <briefdescription>
+<para>Get the list of <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref> dependencies. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the list of <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref> items which correspond to the equations on which this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref> depends.</para>
+<para><simplesect kind="return"><para>The dependencies as a <computeroutput>std::vector</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="106" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquation_1afe6917439f199b8b9b8aa5b250b2caca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a077e0ba912fc57b70090ab980aba2e25" kindref="member">AnalyserEquationPtr</ref></type>
+        <definition>AnalyserEquationPtr libcellml::AnalyserEquation::dependency</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>dependency</name>
+        <qualifiedname>libcellml::AnalyserEquation::dependency</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Get the dependency, at <computeroutput>index</computeroutput>, for this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the dependency, at <computeroutput>index</computeroutput>, for this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the dependency to return.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The dependency, at <computeroutput>index</computeroutput>, on success, <computeroutput>nullptr</computeroutput> on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="117" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquation_1af29a1524a6ef14ab15f378b18842b80c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::AnalyserEquation::nlaSystemIndex</definition>
+        <argsstring>() const</argsstring>
+        <name>nlaSystemIndex</name>
+        <qualifiedname>libcellml::AnalyserEquation::nlaSystemIndex</qualifiedname>
+        <briefdescription>
+<para>Get the index of the NLA system of this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the index of the NLA system where this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref> is used. A value of MAX_SIZE_T indicates that this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref> is not used in an NLA system.</para>
+<para><simplesect kind="return"><para>The index of the NLA system. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="128" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquation_1aa7c1a8f5a865d5fd6a3a29d14b039c23" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::AnalyserEquation::nlaSiblingCount</definition>
+        <argsstring>() const</argsstring>
+        <name>nlaSiblingCount</name>
+        <qualifiedname>libcellml::AnalyserEquation::nlaSiblingCount</qualifiedname>
+        <briefdescription>
+<para>Get the number of NLA siblings for this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the number of NLA siblings for this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>.</para>
+<para><simplesect kind="return"><para>The number of NLA siblings for this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="137" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquation_1aa700ee1f09bdb21eb5616c8c227aa5f8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="namespacelibcellml_1a077e0ba912fc57b70090ab980aba2e25" kindref="member">AnalyserEquationPtr</ref> &gt;</type>
+        <definition>std::vector&lt; AnalyserEquationPtr &gt; libcellml::AnalyserEquation::nlaSiblings</definition>
+        <argsstring>() const</argsstring>
+        <name>nlaSiblings</name>
+        <qualifiedname>libcellml::AnalyserEquation::nlaSiblings</qualifiedname>
+        <briefdescription>
+<para>Get the list of <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref> NLA siblings. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the list of <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref> items which are NLA siblings of this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>.</para>
+<para><simplesect kind="return"><para>The NLA siblings as a <computeroutput>std::vector</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="147" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquation_1a4b8e40bcf4e830bc78a9389a0e500dff" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a077e0ba912fc57b70090ab980aba2e25" kindref="member">AnalyserEquationPtr</ref></type>
+        <definition>AnalyserEquationPtr libcellml::AnalyserEquation::nlaSibling</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>nlaSibling</name>
+        <qualifiedname>libcellml::AnalyserEquation::nlaSibling</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Get the NLA sibling, at <computeroutput>index</computeroutput>, for this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the NLA sibling, at <computeroutput>index</computeroutput>, for this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the NLA sibling to return.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The NLA sibling, at <computeroutput>index</computeroutput>, on success, <computeroutput>nullptr</computeroutput> on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="158" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquation_1a02408bc59683ad03ad5815b37843815a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::AnalyserEquation::isStateRateBased</definition>
+        <argsstring>() const</argsstring>
+        <name>isStateRateBased</name>
+        <qualifiedname>libcellml::AnalyserEquation::isStateRateBased</qualifiedname>
+        <briefdescription>
+<para>Test to determine if this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref> relies on states and/or rates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Test to determine if this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref> relies on states and/or rates, return <computeroutput>true</computeroutput> if it does and <computeroutput>false</computeroutput> otherwise.</para>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref> relies on states and/or rates, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="170" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquation_1ad5b5cc9ce5a9055aa0b23256c8bb0071" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::AnalyserEquation::stateCount</definition>
+        <argsstring>() const</argsstring>
+        <name>stateCount</name>
+        <qualifiedname>libcellml::AnalyserEquation::stateCount</qualifiedname>
+        <briefdescription>
+<para>Get the number of states computed by this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the number of states computed by this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>.</para>
+<para><simplesect kind="return"><para>The number of states. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="179" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquation_1a431782c59c743102f5c693581da1550c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="namespacelibcellml_1acfd2932a24a4fe8b5e9147ccf0a23a11" kindref="member">AnalyserVariablePtr</ref> &gt;</type>
+        <definition>std::vector&lt; AnalyserVariablePtr &gt; libcellml::AnalyserEquation::states</definition>
+        <argsstring>() const</argsstring>
+        <name>states</name>
+        <qualifiedname>libcellml::AnalyserEquation::states</qualifiedname>
+        <briefdescription>
+<para>Get the states computed by this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the states computed by this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>.</para>
+<para><simplesect kind="return"><para>The states as a <computeroutput>std::vector</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="188" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquation_1ab50ccd92abaeb7ef2090fff549287d0d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1acfd2932a24a4fe8b5e9147ccf0a23a11" kindref="member">AnalyserVariablePtr</ref></type>
+        <definition>AnalyserVariablePtr libcellml::AnalyserEquation::state</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>state</name>
+        <qualifiedname>libcellml::AnalyserEquation::state</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Get the state, at <computeroutput>index</computeroutput>, computed by this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the state, at <computeroutput>index</computeroutput>, computed by this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the state to return.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The state, at <computeroutput>index</computeroutput>, on success, <computeroutput>nullptr</computeroutput> on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="199" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquation_1a8750c27e241a6eb1f09a76e9d29079b1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::AnalyserEquation::computedConstantCount</definition>
+        <argsstring>() const</argsstring>
+        <name>computedConstantCount</name>
+        <qualifiedname>libcellml::AnalyserEquation::computedConstantCount</qualifiedname>
+        <briefdescription>
+<para>Get the number of computed constants computed by this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the number of computed constants computed by this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>.</para>
+<para><simplesect kind="return"><para>The number of computed constants. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="208" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquation_1a8a685a13ac5598adfe2eb61ae159c05d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="namespacelibcellml_1acfd2932a24a4fe8b5e9147ccf0a23a11" kindref="member">AnalyserVariablePtr</ref> &gt;</type>
+        <definition>std::vector&lt; AnalyserVariablePtr &gt; libcellml::AnalyserEquation::computedConstants</definition>
+        <argsstring>() const</argsstring>
+        <name>computedConstants</name>
+        <qualifiedname>libcellml::AnalyserEquation::computedConstants</qualifiedname>
+        <briefdescription>
+<para>Get the computed constants computed by this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the computed constants computed by this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>.</para>
+<para><simplesect kind="return"><para>The computed constants as a <computeroutput>std::vector</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="217" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquation_1aca1da298dfe7804b25614fd1480b901b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1acfd2932a24a4fe8b5e9147ccf0a23a11" kindref="member">AnalyserVariablePtr</ref></type>
+        <definition>AnalyserVariablePtr libcellml::AnalyserEquation::computedConstant</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>computedConstant</name>
+        <qualifiedname>libcellml::AnalyserEquation::computedConstant</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Get the computed constant, at <computeroutput>index</computeroutput>, computed by this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the computed constant, at <computeroutput>index</computeroutput>, computed by this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the computed constant to return.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The computed constant, at <computeroutput>index</computeroutput>, on success, <computeroutput>nullptr</computeroutput> on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="228" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquation_1abb099191e79fc0898aa4ae59638d64b5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::AnalyserEquation::algebraicVariableCount</definition>
+        <argsstring>() const</argsstring>
+        <name>algebraicVariableCount</name>
+        <qualifiedname>libcellml::AnalyserEquation::algebraicVariableCount</qualifiedname>
+        <briefdescription>
+<para>Get the number of algebraic variables computed by this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the number of algebraic variables computed by this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>.</para>
+<para><simplesect kind="return"><para>The number of algebraic variables. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="237" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquation_1a34c4564cab0c54ac8ab78a181f2b42be" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="namespacelibcellml_1acfd2932a24a4fe8b5e9147ccf0a23a11" kindref="member">AnalyserVariablePtr</ref> &gt;</type>
+        <definition>std::vector&lt; AnalyserVariablePtr &gt; libcellml::AnalyserEquation::algebraicVariables</definition>
+        <argsstring>() const</argsstring>
+        <name>algebraicVariables</name>
+        <qualifiedname>libcellml::AnalyserEquation::algebraicVariables</qualifiedname>
+        <briefdescription>
+<para>Get the algebraic variables computed by this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the algebraic variables computed by this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>.</para>
+<para><simplesect kind="return"><para>The algebraic variables as a <computeroutput>std::vector</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="246" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquation_1ac53e1aed3ab4c1311b24899bafb0de8d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1acfd2932a24a4fe8b5e9147ccf0a23a11" kindref="member">AnalyserVariablePtr</ref></type>
+        <definition>AnalyserVariablePtr libcellml::AnalyserEquation::algebraicVariable</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>algebraicVariable</name>
+        <qualifiedname>libcellml::AnalyserEquation::algebraicVariable</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Get the algebraic variable, at <computeroutput>index</computeroutput>, computed by this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the algebraic variable, at <computeroutput>index</computeroutput>, computed by this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the algebraic variable to return.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The algebraic variable, at <computeroutput>index</computeroutput>, on success, <computeroutput>nullptr</computeroutput> on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="257" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquation_1aead12a5b023cb4f568261d031dca7eb9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::AnalyserEquation::externalVariableCount</definition>
+        <argsstring>() const</argsstring>
+        <name>externalVariableCount</name>
+        <qualifiedname>libcellml::AnalyserEquation::externalVariableCount</qualifiedname>
+        <briefdescription>
+<para>Get the number of external variables computed by this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the number of external variables computed by this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>.</para>
+<para><simplesect kind="return"><para>The number of external variables. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="266" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquation_1a0219447619a511853ef31f96a39bd209" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="namespacelibcellml_1acfd2932a24a4fe8b5e9147ccf0a23a11" kindref="member">AnalyserVariablePtr</ref> &gt;</type>
+        <definition>std::vector&lt; AnalyserVariablePtr &gt; libcellml::AnalyserEquation::externalVariables</definition>
+        <argsstring>() const</argsstring>
+        <name>externalVariables</name>
+        <qualifiedname>libcellml::AnalyserEquation::externalVariables</qualifiedname>
+        <briefdescription>
+<para>Get the external variables computed by this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the external variables computed by this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>.</para>
+<para><simplesect kind="return"><para>The external variables as a <computeroutput>std::vector</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="275" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquation_1a75d73b5340699ced7a00a6e2b1294f08" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1acfd2932a24a4fe8b5e9147ccf0a23a11" kindref="member">AnalyserVariablePtr</ref></type>
+        <definition>AnalyserVariablePtr libcellml::AnalyserEquation::externalVariable</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>externalVariable</name>
+        <qualifiedname>libcellml::AnalyserEquation::externalVariable</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Get the external variable, at <computeroutput>index</computeroutput>, computed by this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the external variable, at <computeroutput>index</computeroutput>, computed by this <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the external variable to return.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The external variable, at <computeroutput>index</computeroutput>, on success, <computeroutput>nullptr</computeroutput> on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="286" column="25"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classlibcellml_1_1AnalyserEquation_1a06351cd4796ea6a99f0b1fe595f54a78" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string libcellml::AnalyserEquation::typeAsString</definition>
+        <argsstring>(Type type)</argsstring>
+        <name>typeAsString</name>
+        <qualifiedname>libcellml::AnalyserEquation::typeAsString</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1AnalyserEquation_1ac9db03968826b12d9cf9130f95b8edc3" kindref="member">Type</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Get the string version of a <ref refid="classlibcellml_1_1AnalyserEquation_1ac9db03968826b12d9cf9130f95b8edc3" kindref="member">Type</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the string version of a <ref refid="classlibcellml_1_1AnalyserEquation_1ac9db03968826b12d9cf9130f95b8edc3" kindref="member">Type</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type for which we want the string version.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The string version of the <ref refid="classlibcellml_1_1AnalyserEquation_1ac9db03968826b12d9cf9130f95b8edc3" kindref="member">Type</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/analyserequation.h" line="78" column="24"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classlibcellml_1_1AnalyserEquation" kindref="compound">AnalyserEquation</ref> class is for representing an equation in the context of a CellML <ref refid="classlibcellml_1_1Analyser" kindref="compound">Analyser</ref>. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>libcellml::AnalyserEquation</label>
+        <link refid="classlibcellml_1_1AnalyserEquation"/>
+      </node>
+    </collaborationgraph>
+    <location file="libcellml/analyserequation.h" line="32" column="1" bodyfile="libcellml/analyserequation.h" bodystart="33" bodyend="293"/>
+    <listofallmembers>
+      <member refid="classlibcellml_1_1AnalyserEquation_1ac53e1aed3ab4c1311b24899bafb0de8d" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>algebraicVariable</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1abb099191e79fc0898aa4ae59638d64b5" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>algebraicVariableCount</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1a34c4564cab0c54ac8ab78a181f2b42be" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>algebraicVariables</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1a8fc045316ed5fb70e4aabbca5f40d8ec" prot="private" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>Analyser</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1a0a08557704d85eff8467d6660b90f574" prot="private" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>AnalyserEquation</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1a37dec8235a4b676e882bab81a74db973" prot="private" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>AnalyserEquation</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1af4b960a77b5435be063c2b1af39e7db7" prot="private" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>AnalyserEquation</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1a9f6bbbcc3d024238463f72085e0ba338" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>ast</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1aca1da298dfe7804b25614fd1480b901b" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>computedConstant</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1a8750c27e241a6eb1f09a76e9d29079b1" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>computedConstantCount</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1a8a685a13ac5598adfe2eb61ae159c05d" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>computedConstants</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1a695e5c0102277c82d1498a9e9d300d5d" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>dependencies</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1afe6917439f199b8b9b8aa5b250b2caca" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>dependency</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1af8bd6fa91b4c4cdae351c4819ef07a4d" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>dependencyCount</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1a75d73b5340699ced7a00a6e2b1294f08" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>externalVariable</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1aead12a5b023cb4f568261d031dca7eb9" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>externalVariableCount</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1a0219447619a511853ef31f96a39bd209" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>externalVariables</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1a366b7823e659ab78d952a7d79662a4d6" prot="private" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>Generator</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1a84c3fd64a0c4f65484ea16277539fce8" prot="private" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>GeneratorVariableTracker</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1a02408bc59683ad03ad5815b37843815a" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>isStateRateBased</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1ac8eaf366f631dc8f97059fd3b2b04cbf" prot="private" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>mPimpl</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1a4b8e40bcf4e830bc78a9389a0e500dff" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>nlaSibling</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1aa7c1a8f5a865d5fd6a3a29d14b039c23" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>nlaSiblingCount</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1aa700ee1f09bdb21eb5616c8c227aa5f8" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>nlaSiblings</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1af29a1524a6ef14ab15f378b18842b80c" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>nlaSystemIndex</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1ad71fb060026d4a2aef2f0b046f878976" prot="private" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1ab50ccd92abaeb7ef2090fff549287d0d" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>state</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1ad5b5cc9ce5a9055aa0b23256c8bb0071" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>stateCount</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1a431782c59c743102f5c693581da1550c" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>states</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1ac9db03968826b12d9cf9130f95b8edc3" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>Type</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1abab0c917b46d6f12181833d36ba4bc06" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>type</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1a06351cd4796ea6a99f0b1fe595f54a78" prot="public" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>typeAsString</name></member>
+      <member refid="classlibcellml_1_1AnalyserEquation_1a9352b7e8219481b101f2b9c9d69593ca" prot="private" virt="non-virtual"><scope>libcellml::AnalyserEquation</scope><name>~AnalyserEquation</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
