@@ -1,0 +1,505 @@
+<document xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/" xmlns:todo="https://www.sphinx-doc.org/" source="/home/runner/work/libcellml/libcellml/libcellml/docs/release_process.rst" translation_progress="{'total': 0, 'translated': 0}">
+    <target refid="release-process"/>
+    <section ids="release-process-for-libcellml release-process" names="release\ process\ for\ libcellml release_process">
+        <title>Release process for <emphasis>libCellML</emphasis></title>
+        <paragraph>The purpose of this document is to describe the process for preparing, reviewing, creating, and finalising releases of <emphasis>libCellML</emphasis> using GitHub Actions Continuous Integration (CI).</paragraph>
+        <paragraph>The target audience of this document are the developers of <emphasis>libCellML</emphasis> who have write authority to the <reference name="cellml/libcellml" refuri="https://github.com/cellml/libcellml">cellml/libcellml</reference><target ids="cellml-libcellml" names="cellml/libcellml" refuri="https://github.com/cellml/libcellml"/> repository.</paragraph>
+        <paragraph>Releases are made using GitHub Actions CI and consist of four steps:</paragraph>
+        <enumerated_list enumtype="arabic" prefix="" suffix=".">
+            <list_item>
+                <paragraph><reference name="Step 1 - Preparing the release" refid="step-1-preparing-the-release">Step 1 - Preparing the release</reference></paragraph>
+            </list_item>
+            <list_item>
+                <paragraph><reference name="Step 2 - Checking the release" refid="step-2-checking-the-release">Step 2 - Checking the release</reference></paragraph>
+            </list_item>
+            <list_item>
+                <paragraph><reference name="Step 3 - Make the release" refid="step-3-make-the-release">Step 3 - Make the release</reference></paragraph>
+            </list_item>
+            <list_item>
+                <paragraph><reference name="Step 4 - Finalising the release" refid="step-4-finalising-the-release">Step 4 - Finalising the release</reference></paragraph>
+            </list_item>
+        </enumerated_list>
+        <paragraph>Each step must be performed in order. Later steps assume that all previous steps have completed successfully.</paragraph>
+        <section ids="prerequisites" names="prerequisites">
+            <title>Prerequisites</title>
+            <paragraph>For all steps in the release process, you must:</paragraph>
+            <bullet_list bullet="-">
+                <list_item>
+                    <paragraph>Be a maintainer (have write access) of the <emphasis>cellml/libcellml</emphasis> GitHub repository.</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>Be familiar with semantic versioning.</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>Ensure that no other release is currently in progress.</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>Choose the <strong>main</strong> branch as the branch to run the workflow from.</paragraph>
+                </list_item>
+            </bullet_list>
+            <figure align="center" ids="libcellml-release-process-workflow-branch-chooser" names="libcellml_release_process_workflow_branch_chooser">
+                <image alt="GitHub Actions run workflow branch chooser." candidates="{'*': 'images/release_process/workflow_branch_chooser.png'}" original_uri="./images/release_process/workflow_branch_chooser.png" uri="images/release_process/workflow_branch_chooser.png" width="25%"/>
+                <caption_number>Fig. 11 </caption_number><caption>Run workflow from branch chooser interface on GitHub.</caption>
+            </figure>
+            <note>
+                <paragraph>Merging pull requests while a release is under way is not recommended and has not been tested.
+                    Before starting a new release, check the repository for the presence of a branch named <emphasis>release-staging-v&lt;version number&gt;</emphasis>.
+                    The presence of such a branch indicates that a release is already in progress.</paragraph>
+            </note>
+        </section>
+        <section ids="branch-model-overview" names="branch\ model\ overview">
+            <title>Branch model overview</title>
+            <paragraph>The <emphasis>main</emphasis> branch is the primary development branch where normal feature development occurs.
+                The <emphasis>release</emphasis> branch represents the base for all released versions of <emphasis>libCellML</emphasis>.
+                Release staging branches, named <emphasis>release-staging-v&lt;version number&gt;</emphasis>, are temporary branches used to assemble, review, and validate a candidate release before it is finalised.</paragraph>
+        </section>
+        <section ids="step-1-preparing-the-release" names="step\ 1\ -\ preparing\ the\ release">
+            <title>Step 1 - Preparing the release</title>
+            <paragraph>The <emphasis>Prepare Release</emphasis> GitHub Actions workflow creates a staged release candidate
+                based on a specified source branch and version number.</paragraph>
+            <paragraph>This workflow assembles all changes intended for the release into a dedicated
+                staging branch and prepares them for review before validation and publication.</paragraph>
+            <figure align="center" ids="libcellml-release-process-prepare-release-interface" names="libcellml_release_process_prepare_release_interface">
+                <image alt="GitHub Actions prepare release workflow interface." candidates="{'*': 'images/release_process/prepare_release_interface.png'}" original_uri="./images/release_process/prepare_release_interface.png" uri="images/release_process/prepare_release_interface.png"/>
+                <caption_number>Fig. 12 </caption_number><caption><emphasis>Prepare Release</emphasis> interface on GitHub.</caption>
+            </figure>
+            <paragraph>The workflow is manually triggered from the <emphasis>Actions</emphasis> tab of the
+                <reference name="cellml/libcellml" refuri="https://github.com/cellml/libcellml/actions/workflows/release-prepare.yml">cellml/libcellml</reference>
+                repository.</paragraph>
+            <section dupnames="procedure" ids="procedure">
+                <title>Procedure</title>
+                <enumerated_list enumtype="arabic" prefix="" suffix=".">
+                    <list_item>
+                        <paragraph>Navigate to the <emphasis>Prepare Release</emphasis> workflow in the GitHub Actions tab of the
+                            <reference name="cellml/libcellml" refuri="https://github.com/cellml/libcellml">cellml/libcellml</reference><target dupnames="cellml/libcellml" ids="id1" refuri="https://github.com/cellml/libcellml"/> repository.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Enter the version number for the release.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>(Optional) Specify a source branch if different from the default <emphasis>main</emphasis> branch.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Manually trigger the workflow.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Monitor the workflow run for completion and check for any failures.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Review the pull request created from the staging branch into the <emphasis>release</emphasis> branch.</paragraph>
+                    </list_item>
+                </enumerated_list>
+            </section>
+            <section dupnames="tasks\ performed" ids="tasks-performed">
+                <title>Tasks performed</title>
+                <paragraph>The workflow performs the following tasks:</paragraph>
+                <bullet_list bullet="-">
+                    <list_item>
+                        <paragraph>Collects all changes for the release from the specified source branch.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Generates a changelog summarising the pull requests included in the release.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Updates version numbers throughout the codebase.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Organises these changes into multiple commits to simplify review.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Creates a release staging branch named <emphasis>release-staging-v&lt;version number&gt;</emphasis>.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Opens a pull request from the staging branch to the <emphasis>release</emphasis> branch.</paragraph>
+                    </list_item>
+                </bullet_list>
+            </section>
+            <section ids="versioning" names="versioning">
+                <title>Versioning</title>
+                <paragraph>Version numbers must follow semantic versioning rules. See
+                    <reference name="Semantic Versioning" refuri="https://semver.org/">Semantic Versioning</reference><target ids="semantic-versioning" names="semantic\ versioning" refuri="https://semver.org/"/> for further information.</paragraph>
+                <paragraph>Examples of valid version numbers include:</paragraph>
+                <bullet_list bullet="-">
+                    <list_item>
+                        <paragraph>1.0.0</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>1.0.0-alpha</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>1.0.0-alpha.1</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>1.0.0-beta</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>1.0.0-beta.2</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>1.0.0-rc.1</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>1.0.0-rc.1+build.1</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>1.0.0-post.1</paragraph>
+                    </list_item>
+                </bullet_list>
+                <paragraph>The version number consists of:</paragraph>
+                <bullet_list bullet="-">
+                    <list_item>
+                        <paragraph>A core version (major, minor, patch).</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>An optional suffix indicating a development or pre-release.</paragraph>
+                    </list_item>
+                </bullet_list>
+                <paragraph>An official release is created without a suffix. Developer releases include a suffix
+                    and differ in that artifacts are not published to public registries or GitHub releases.</paragraph>
+                <paragraph>There are no strict validation checks beyond parsing; however, invalid semantic version
+                    strings will cause the workflow to fail.</paragraph>
+            </section>
+            <section dupnames="results" ids="results">
+                <title>Results</title>
+                <paragraph>On successful completion:</paragraph>
+                <bullet_list bullet="-">
+                    <list_item>
+                        <paragraph>A staging branch (<emphasis>release-staging-v&lt;version number&gt;</emphasis>) is created.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>A pull request targeting the <emphasis>release</emphasis> branch is opened for review.</paragraph>
+                    </list_item>
+                </bullet_list>
+            </section>
+            <section dupnames="failure\ handling" ids="failure-handling">
+                <title>Failure handling</title>
+                <paragraph>If the workflow fails:</paragraph>
+                <bullet_list bullet="-">
+                    <list_item>
+                        <paragraph>The pull request will not be created.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>The staging branch may still exist depending on when the failure occurred.</paragraph>
+                    </list_item>
+                </bullet_list>
+                <paragraph>Recommended actions:</paragraph>
+                <bullet_list bullet="-">
+                    <list_item>
+                        <paragraph>Review the workflow logs to identify the failure.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Delete or reuse the staging branch as appropriate.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Apply fixes to the source branch.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Re-run the workflow once the issue has been resolved.</paragraph>
+                    </list_item>
+                </bullet_list>
+            </section>
+            <section dupnames="next\ step" ids="next-step">
+                <title>Next step</title>
+                <paragraph>Once the staging pull request has been created and is ready for validation, proceed to <reference name="Step 2 - Checking the release" refid="step-2-checking-the-release">Step 2 - Checking the release</reference>.</paragraph>
+            </section>
+        </section>
+        <section ids="step-2-checking-the-release" names="step\ 2\ -\ checking\ the\ release">
+            <title>Step 2 - Checking the release</title>
+            <paragraph>The <emphasis>Check Release</emphasis> GitHub Actions workflow validates the staged release candidate created in <reference name="Step 1 - Preparing the release" refid="step-1-preparing-the-release">Step 1 - Preparing the release</reference>.
+                It ensures that the code builds correctly and that automated tests have been executed before proceeding with the release.</paragraph>
+            <section dupnames="procedure" ids="id2">
+                <title>Procedure</title>
+                <enumerated_list enumtype="arabic" prefix="" suffix=".">
+                    <list_item>
+                        <paragraph>Navigate to the <emphasis>Check Release</emphasis> workflow in the GitHub Actions tab of the <reference name="cellml/libcellml" refuri="https://github.com/cellml/libcellml">cellml/libcellml</reference><target dupnames="cellml/libcellml" ids="id3" refuri="https://github.com/cellml/libcellml"/> repository.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Optionally adjust the configuration parameters for the end-to-end tests using the GitHub Actions interface.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Manually trigger the workflow.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Review the results published as comments on the staging pull request.</paragraph>
+                    </list_item>
+                </enumerated_list>
+                <figure align="center" ids="libcellml-release-process-check-release-interface" names="libcellml_release_process_check_release_interface">
+                    <image alt="GitHub Action check release manual trigger interface." candidates="{'*': 'images/release_process/check_release_interface.png'}" original_uri="./images/release_process/check_release_interface.png" uri="images/release_process/check_release_interface.png" width="25%"/>
+                    <caption_number>Fig. 13 </caption_number><caption><emphasis>Check Release</emphasis> workflow interface from GitHub Action.</caption>
+                </figure>
+            </section>
+            <section dupnames="tasks\ performed" ids="id4">
+                <title>Tasks performed</title>
+                <paragraph>The workflow performs the following tasks on the staged release code:</paragraph>
+                <bullet_list bullet="-">
+                    <list_item>
+                        <paragraph>Builds the codebase.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Runs all unit tests.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Reports on status of unit tests.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Runs end-to-end tests.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Reports on status of end-to-end tests along with the metadata used for running the tests.</paragraph>
+                    </list_item>
+                </bullet_list>
+            </section>
+            <section dupnames="results" ids="id5">
+                <title>Results</title>
+                <paragraph>Results from the workflow are published as comments on the staging pull request:</paragraph>
+                <bullet_list bullet="-">
+                    <list_item>
+                        <paragraph><strong>Unit test results</strong>: A summary indicating whether all tests passed.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph><strong>End-to-end test results</strong>: A summary of the outcome along with the metadata used during test execution.</paragraph>
+                    </list_item>
+                </bullet_list>
+                <figure align="center" ids="libcellml-release-process-check-release-unit-test-comment" names="libcellml_release_process_check_release_unit_test_comment">
+                    <image alt="GitHub Action check release unit test passing comment." candidates="{'*': 'images/release_process/check_release_unit_test_comment.png'}" original_uri="./images/release_process/check_release_unit_test_comment.png" uri="images/release_process/check_release_unit_test_comment.png" width="67%"/>
+                    <caption_number>Fig. 14 </caption_number><caption>Example of the comment left by the <emphasis>Check Release Builder</emphasis> showing the unit tests have passed.</caption>
+                </figure>
+                <figure align="center" ids="libcellml-release-process-check-release-end-to-end-comment" names="libcellml_release_process_check_release_end_to_end_comment">
+                    <image alt="GitHub Action check release end-to-end passing comment." candidates="{'*': 'images/release_process/check_release_end_to_end_comment.png'}" original_uri="./images/release_process/check_release_end_to_end_comment.png" uri="images/release_process/check_release_end_to_end_comment.png" width="67%"/>
+                    <caption_number>Fig. 15 </caption_number><caption>Example of the comment left by the <emphasis>Check Release Builder</emphasis> showing the unit tests have passed.</caption>
+                </figure>
+                <paragraph>These comments must be reviewed before proceeding to the next step.</paragraph>
+            </section>
+            <section ids="success-criteria" names="success\ criteria">
+                <title>Success criteria</title>
+                <paragraph>A release candidate is considered valid when:</paragraph>
+                <bullet_list bullet="-">
+                    <list_item>
+                        <paragraph>&#9989; All unit tests pass (<strong>required</strong>).</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>&#9888;&#65039; End-to-end tests may fail, but this has consequences.</paragraph>
+                    </list_item>
+                </bullet_list>
+                <paragraph>If end-to-end tests fail:</paragraph>
+                <bullet_list bullet="-">
+                    <list_item>
+                        <paragraph>The release <strong>may still proceed</strong>, however:</paragraph>
+                        <bullet_list bullet="-">
+                            <list_item>
+                                <paragraph>The user documentation will <strong>not</strong> be updated as part of the release process.</paragraph>
+                            </list_item>
+                            <list_item>
+                                <paragraph>The metadata recorded in the workflow comment will be used by subsequent workflows to finalise documentation updates on the libcellml.org website.</paragraph>
+                            </list_item>
+                        </bullet_list>
+                    </list_item>
+                </bullet_list>
+            </section>
+            <section dupnames="failure\ handling" ids="id6">
+                <title>Failure handling</title>
+                <bullet_list bullet="-">
+                    <list_item>
+                        <paragraph>If <strong>unit tests fail</strong>:</paragraph>
+                        <bullet_list bullet="-">
+                            <list_item>
+                                <paragraph>The release <strong>must not proceed</strong>.</paragraph>
+                            </list_item>
+                            <list_item>
+                                <paragraph>The staged release should be removed and fixes applied to the source branch before starting the release process again.</paragraph>
+                            </list_item>
+                        </bullet_list>
+                    </list_item>
+                    <list_item>
+                        <paragraph>If <strong>end-to-end tests fail</strong>, either:</paragraph>
+                        <bullet_list bullet="-">
+                            <list_item>
+                                <paragraph>Continue with the release, understanding that the user documentation will not be updated.</paragraph>
+                            </list_item>
+                            <list_item>
+                                <paragraph>Or, fix the issues stemming from the end-to-end testing and re-run the workflow.</paragraph>
+                            </list_item>
+                        </bullet_list>
+                    </list_item>
+                </bullet_list>
+            </section>
+            <section dupnames="next\ step" ids="id7">
+                <title>Next step</title>
+                <paragraph>Once all required checks have passed and the results have been reviewed, the release process can continue with <reference name="Step 3 - Make the release" refid="step-3-make-the-release">Step 3 - Make the release</reference>.</paragraph>
+            </section>
+        </section>
+        <section ids="step-3-make-the-release" names="step\ 3\ -\ make\ the\ release">
+            <title>Step 3 - Make the release</title>
+            <paragraph>The <emphasis>Make Release</emphasis> GitHub Actions workflow creates a release on GitHub and builds all the release assets.</paragraph>
+            <figure align="center" ids="libcellml-release-process-make-release" names="libcellml_release_process_make_release">
+                <image alt="GitHub Action make release manual trigger interface." candidates="{'*': 'images/release_process/make_release_interface.png'}" original_uri="./images/release_process/make_release_interface.png" uri="images/release_process/make_release_interface.png" width="25%"/>
+                <caption_number>Fig. 16 </caption_number><caption><emphasis>Make Release</emphasis> workflow interface from GitHub Action.</caption>
+            </figure>
+            <paragraph>This workflow behaves differently depending on the type of release:</paragraph>
+            <bullet_list bullet="-">
+                <list_item>
+                    <paragraph>For official releases, it publishes binaries to GitHub and external registries.</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>For developer (pre-)releases, it produces build artifacts only.</paragraph>
+                </list_item>
+            </bullet_list>
+            <paragraph>In addition, the workflow creates a pull request to the Julia packaging repository, <reference name="Yggdrasil" refuri="https://github.com/JuliaPackaging/Yggdrasil">Yggdrasil</reference><target ids="yggdrasil" names="yggdrasil" refuri="https://github.com/JuliaPackaging/Yggdrasil"/>, to updating the <emphasis>libCellML</emphasis> package.
+                The pull request to Yggdrasil must be manually managed.
+                Historically, the Julia package maintainers have been very good at approving and merging pull requests in a timely manner.</paragraph>
+            <paragraph>The <emphasis>Make Release</emphasis> workflow makes use of a classic personal access token with write access and pull request access to the <reference name="cellml/Yggdrasil" refuri="https://github.com/cellml/yggdrasil">cellml/Yggdrasil</reference><target ids="cellml-yggdrasil" names="cellml/yggdrasil" refuri="https://github.com/cellml/yggdrasil"/> repository so that it can create a pull request to update the Julia package.
+                This classic personal access token is stored as a secret (<emphasis>YGGDRASIL_PR_PAT</emphasis>) in the <reference name="cellml/libcellml" refuri="https://github.com/cellml/libcellml">cellml/libcellml</reference><target dupnames="cellml/libcellml" ids="id8" refuri="https://github.com/cellml/libcellml"/> repository and is used by the workflow to create the pull request to Yggdrasil.
+                It needs to be updated with a new token if the old token is revoked or expires.
+                The current expiry date for the current token is 2026-06-23.
+                Any maintainer of the <reference name="cellml/libcellml" refuri="https://github.com/cellml/libcellml">cellml/libcellml</reference><target dupnames="cellml/libcellml" ids="id9" refuri="https://github.com/cellml/libcellml"/> repository can create a new token and update the secret if necessary.</paragraph>
+            <section dupnames="procedure" ids="id10">
+                <title>Procedure</title>
+                <enumerated_list enumtype="arabic" prefix="" suffix=".">
+                    <list_item>
+                        <paragraph>Navigate to the <emphasis>Make Release</emphasis> workflow in the GitHub Actions tab of the <reference name="cellml/libcellml" refuri="https://github.com/cellml/libcellml">cellml/libcellml</reference><target dupnames="cellml/libcellml" ids="id11" refuri="https://github.com/cellml/libcellml"/> repository.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Manually trigger the workflow (this workflow may take up to 20 minutes to run).</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Check the workflow run for any failures.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Monitor the pull request created on the <reference name="Yggdrasil" refuri="https://github.com/JuliaPackaging/Yggdrasil">Yggdrasil</reference><target dupnames="yggdrasil" ids="id12" refuri="https://github.com/JuliaPackaging/Yggdrasil"/> repository.</paragraph>
+                    </list_item>
+                </enumerated_list>
+            </section>
+            <section dupnames="tasks\ performed" ids="id13">
+                <title>Tasks performed</title>
+                <paragraph>The workflow performs the following tasks</paragraph>
+                <bullet_list bullet="-">
+                    <list_item>
+                        <paragraph>Moves the staged code to the release branch.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Creates a release on GitHub using information from the staging branch.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Builds release assets including:</paragraph>
+                        <bullet_list bullet="-">
+                            <list_item>
+                                <paragraph>Binaries</paragraph>
+                            </list_item>
+                            <list_item>
+                                <paragraph>Python wheels</paragraph>
+                            </list_item>
+                            <list_item>
+                                <paragraph>Javascript package</paragraph>
+                            </list_item>
+                            <list_item>
+                                <paragraph>Julia packaging update (pull request), and</paragraph>
+                            </list_item>
+                            <list_item>
+                                <paragraph>source code</paragraph>
+                            </list_item>
+                        </bullet_list>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Publishes release assets to GitHub and public registries (for official releases only).</paragraph>
+                    </list_item>
+                </bullet_list>
+            </section>
+            <section dupnames="failure\ handling" ids="id14">
+                <title>Failure handling</title>
+                <paragraph>If there is a failure in the workflow that release will be incomplete, but should not be considered a failed release.
+                    The only solution is to fix the problems through the normal channels and start the release process again.</paragraph>
+            </section>
+            <section dupnames="next\ step" ids="id15">
+                <title>Next step</title>
+                <paragraph>Once the release has been made and the assets have been published, the release process can continue with <reference name="Step 4 - Finalising the release" refid="step-4-finalising-the-release">Step 4 - Finalising the release</reference>.</paragraph>
+            </section>
+        </section>
+        <section ids="step-4-finalising-the-release" names="step\ 4\ -\ finalising\ the\ release">
+            <title>Step 4 - Finalising the release</title>
+            <paragraph>The <emphasis>Finalise Release</emphasis> GitHub Actions workflow completes the release process by updating the libcellml.org website, integrating release changes back into the main development branch, and cleaning up release staging artefacts.</paragraph>
+            <figure align="center" ids="libcellml-release-process-finalise-release" names="libcellml_release_process_finalise_release">
+                <image alt="GitHub Action finalise release manual trigger interface." candidates="{'*': 'images/release_process/finalise_release_interface.png'}" original_uri="./images/release_process/finalise_release_interface.png" uri="images/release_process/finalise_release_interface.png" width="25%"/>
+                <caption_number>Fig. 17 </caption_number><caption><emphasis>Finalise Release</emphasis> workflow interface from GitHub Action.</caption>
+            </figure>
+            <paragraph>This workflow is the final step in the release process and performs post-release housekeeping tasks.
+                The API and developer documentation will be updated and any user documentation that passed the end-to-end testing will be updated on the website.</paragraph>
+            <paragraph>If the release is considered a successful release:</paragraph>
+            <bullet_list bullet="-">
+                <list_item>
+                    <paragraph>The libcellml.org website will be updated with the latest applicable documentation.</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>The release staging branch will be merged back into the main development branch.</paragraph>
+                </list_item>
+            </bullet_list>
+            <paragraph>Regardless of the release outcome:</paragraph>
+            <bullet_list bullet="-">
+                <list_item>
+                    <paragraph>The release staging branch will be deleted.</paragraph>
+                </list_item>
+                <list_item>
+                    <paragraph>The associated pull request will be closed.</paragraph>
+                </list_item>
+            </bullet_list>
+            <section dupnames="procedure" ids="id16">
+                <title>Procedure</title>
+                <enumerated_list enumtype="arabic" prefix="" suffix=".">
+                    <list_item>
+                        <paragraph>Navigate to the Finalise Release workflow in the GitHub Actions tab of the <reference name="cellml/libcellml" refuri="https://github.com/cellml/libcellml">cellml/libcellml</reference><target dupnames="cellml/libcellml" ids="id17" refuri="https://github.com/cellml/libcellml"/> repository.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Manually trigger the workflow.</paragraph>
+                        <bullet_list bullet="-">
+                            <list_item>
+                                <paragraph>If the release was successful, enable the option to update the website and merge changes back into the main development branch.</paragraph>
+                            </list_item>
+                        </bullet_list>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Monitor the workflow run for completion and check for any failures.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Review the pull request created against the production branch of the <reference name="libcellml.org website" refuri="https://github.com/libcellml/website-src">libcellml.org website</reference><target ids="libcellml-org-website" names="libcellml.org\ website" refuri="https://github.com/libcellml/website-src"/> repository, and merge it if the updates are correct.</paragraph>
+                    </list_item>
+                </enumerated_list>
+            </section>
+            <section dupnames="tasks\ performed" ids="id18">
+                <title>Tasks performed</title>
+                <paragraph>The workflow performs the following tasks:</paragraph>
+                <bullet_list bullet="-">
+                    <list_item>
+                        <paragraph>Generates API and developer documentation for the release and creates a pull request to update the website.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Generates user documentation for components that passed end-to-end testing and updates the existing website update pull request.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Updates the project version by appending a .post suffix.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Merges the release staging branch back into the main development branch.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Deletes the release staging branch and closes the associated draft pull request.</paragraph>
+                    </list_item>
+                </bullet_list>
+            </section>
+            <section dupnames="failure\ handling" ids="id19">
+                <title>Failure handling</title>
+                <paragraph>If a failure occurs during this workflow, manual intervention may be required to resolve any issues.
+                    Recommended actions:</paragraph>
+                <bullet_list bullet="-">
+                    <list_item>
+                        <paragraph>Review the workflow logs to identify the source of the failure.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Fix any issues in the staging or documentation repositories.</paragraph>
+                    </list_item>
+                    <list_item>
+                        <paragraph>Re-run the workflow once the problem has been resolved.</paragraph>
+                    </list_item>
+                </bullet_list>
+            </section>
+        </section>
+    </section>
+</document>
