@@ -1614,7 +1614,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:^1.16.0":
+"follow-redirects@npm:^1.15.11, follow-redirects@npm:^1.16.0":
   version: 1.16.0
   resolution: "follow-redirects@npm:1.16.0"
   peerDependenciesMeta:
@@ -2883,7 +2883,7 @@ __metadata:
   peerDependencies:
     katex: ^0.17.0
     vue: ^3.2.22
-  checksum: 10c0/d6016643357807f3dfbdbe2e6915a9c0fff21df5c008a31e8cc589fdec219f7e550819bff16e39a5423a81fd18b6ace7a4ae4a7c9ee43b6413c21914abcb73f8
+  checksum: 10/026f39e9d3a08da22e19d30b1a756d83b1e9670877ca12ccf0d648a5fb4ae4f022d859c3544f2ebb168eeaf452c55d89705f5c34eb7eb0eebb17620a6310f266
   languageName: node
   linkType: hard
 
@@ -2910,7 +2910,7 @@ __metadata:
     pinia: ^2.0.0 || ^3.0.0
     vue: ^3.2.0
     vue-router: ^4.0.0
-  checksum: 10c0/11e961ffb6ca5e4c68af57a6afd99f44bec918c4f9255b72cf54ef02fd60b3962d269f8436373f37f902794924492188bf8e5f25d2ec4dae7c15cd972080cc6f
+  checksum: 10/a8d610411cce10fc36003635bf0c020d934bcc1bf86b1742bedc7c1a8f363a2e3c2d84aca816edff19e77b9d861aed412b82e78006710c1de09f31c7d333ff92
   languageName: node
   linkType: hard
 
