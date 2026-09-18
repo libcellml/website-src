@@ -1,0 +1,739 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classlibcellml_1_1Generator" kind="class" language="C++" prot="public">
+    <compoundname>libcellml::Generator</compoundname>
+    <basecompoundref refid="classlibcellml_1_1Logger" prot="public" virt="non-virtual">libcellml::Logger</basecompoundref>
+    <includes refid="generator_8h" local="no">generator.h</includes>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlibcellml_1_1Generator_1a283b251528a5a09dc37163734f6e0d4e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Generator::~Generator</definition>
+        <argsstring>()</argsstring>
+        <name>~Generator</name>
+        <qualifiedname>libcellml::Generator::~Generator</qualifiedname>
+        <briefdescription>
+<para>Destructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="32" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Generator_1a598a8d10840214db710e6e311f982826" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Generator::Generator</definition>
+        <argsstring>(const Generator &amp;rhs)=delete</argsstring>
+        <name>Generator</name>
+        <qualifiedname>libcellml::Generator::Generator</qualifiedname>
+        <param>
+          <type>const <ref refid="classlibcellml_1_1Generator" kindref="compound">Generator</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="33" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Generator_1a7919358aaa9d759de702abf99fd10060" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Generator::Generator</definition>
+        <argsstring>(Generator &amp;&amp;rhs) noexcept=delete</argsstring>
+        <name>Generator</name>
+        <qualifiedname>libcellml::Generator::Generator</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Generator" kindref="compound">Generator</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="34" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Generator_1a98d7e6789276133a2e62f7b951ab8448" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1Generator" kindref="compound">Generator</ref> &amp;</type>
+        <definition>Generator &amp; libcellml::Generator::operator=</definition>
+        <argsstring>(Generator rhs)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>libcellml::Generator::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1Generator" kindref="compound">Generator</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="35" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Generator_1a053b66c39349bf6767e8c7524e9cd8c2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::Generator::Generator</definition>
+        <argsstring>()</argsstring>
+        <name>Generator</name>
+        <qualifiedname>libcellml::Generator::Generator</qualifiedname>
+        <briefdescription>
+<para>Constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="224" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Generator_1aa0b48fb91b184ab74599bb5990e13eac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GeneratorImpl *</type>
+        <definition>GeneratorImpl * libcellml::Generator::pFunc</definition>
+        <argsstring>()</argsstring>
+        <name>pFunc</name>
+        <qualifiedname>libcellml::Generator::pFunc</qualifiedname>
+        <briefdescription>
+<para>Getter for private implementation pointer,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="228" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Generator_1a829ff57e8f7e8d1cd9d1fe07759cdfa2" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const GeneratorImpl *</type>
+        <definition>const GeneratorImpl * libcellml::Generator::pFunc</definition>
+        <argsstring>() const</argsstring>
+        <name>pFunc</name>
+        <qualifiedname>libcellml::Generator::pFunc</qualifiedname>
+        <briefdescription>
+<para>Const getter for private implementation pointer,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="229" column="25"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classlibcellml_1_1Generator_1afff1cff58e786791bf3a002f52c4edeb" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a0f78fdeb24d2bd8779351c5d02c050e2" kindref="member">GeneratorPtr</ref></type>
+        <definition>static GeneratorPtr libcellml::Generator::create</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>create</name>
+        <qualifiedname>libcellml::Generator::create</qualifiedname>
+        <briefdescription>
+<para>Create a <ref refid="classlibcellml_1_1Generator" kindref="compound">Generator</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Factory method to create a <ref refid="classlibcellml_1_1Generator" kindref="compound">Generator</ref>. Create a generator with::</para>
+<para><programlisting><codeline><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>generator<sp/>=<sp/><ref refid="classlibcellml_1_1Generator_1afff1cff58e786791bf3a002f52c4edeb" kindref="member">libcellml::Generator::create</ref>();</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>A smart pointer to a <ref refid="classlibcellml_1_1Generator" kindref="compound">Generator</ref> object. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="48" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Generator_1acb4eb2d6718c76b73140cb34a57d9597" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string libcellml::Generator::equationCode</definition>
+        <argsstring>(const AnalyserEquationAstPtr &amp;ast, const GeneratorProfilePtr &amp;generatorProfile)</argsstring>
+        <name>equationCode</name>
+        <qualifiedname>libcellml::Generator::equationCode</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1ac0baf0fbed265d4ccb07118569060148" kindref="member">AnalyserEquationAstPtr</ref> &amp;</type>
+          <declname>ast</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1aea4687d4be74e5654468ad4b60b314a7" kindref="member">GeneratorProfilePtr</ref> &amp;</type>
+          <declname>generatorProfile</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the equation code for the given <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref>.</para>
+<para>Return the equation code for the given <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref> using <ref refid="classlibcellml_1_1GeneratorProfile" kindref="compound">GeneratorProfile</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ast</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref> for which we want to generate the equation code. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>generatorProfile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1GeneratorProfile" kindref="compound">GeneratorProfile</ref>, if any, to use to generate the equation code. If no <ref refid="classlibcellml_1_1GeneratorProfile" kindref="compound">GeneratorProfile</ref> is provided then the default <ref refid="classlibcellml_1_1GeneratorProfile" kindref="compound">GeneratorProfile</ref> is used.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The equation code as a <computeroutput>std::string</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="207" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Generator_1a17043c420c394cca286e6fcac99a8383" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string libcellml::Generator::equationCode</definition>
+        <argsstring>(const AnalyserEquationAstPtr &amp;ast)</argsstring>
+        <name>equationCode</name>
+        <qualifiedname>libcellml::Generator::equationCode</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1ac0baf0fbed265d4ccb07118569060148" kindref="member">AnalyserEquationAstPtr</ref> &amp;</type>
+          <declname>ast</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the equation code for the given <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref> using a default <ref refid="classlibcellml_1_1GeneratorProfile" kindref="compound">GeneratorProfile</ref>.</para>
+<para>Return the equation code for the given <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref> using a default <ref refid="classlibcellml_1_1GeneratorProfile" kindref="compound">GeneratorProfile</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ast</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1AnalyserEquationAst" kindref="compound">AnalyserEquationAst</ref> for which we want to generate the equation code.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The equation code as a <computeroutput>std::string</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="221" column="24"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlibcellml_1_1Generator_1a45c379c32513f5562fcdf04a14892179" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Generator::interfaceCode</definition>
+        <argsstring>(const AnalyserModelPtr &amp;analyserModel, const GeneratorProfilePtr &amp;generatorProfile, const GeneratorVariableTrackerPtr &amp;generatorVariableTracker)</argsstring>
+        <name>interfaceCode</name>
+        <qualifiedname>libcellml::Generator::interfaceCode</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref> &amp;</type>
+          <declname>analyserModel</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1aea4687d4be74e5654468ad4b60b314a7" kindref="member">GeneratorProfilePtr</ref> &amp;</type>
+          <declname>generatorProfile</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a340f68ee547f099dba7b2484bd457a35" kindref="member">GeneratorVariableTrackerPtr</ref> &amp;</type>
+          <declname>generatorVariableTracker</declname>
+        </param>
+        <briefdescription>
+<para>Get the interface code for the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the interface code for the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref>, using the <ref refid="classlibcellml_1_1GeneratorProfile" kindref="compound">GeneratorProfile</ref> and the <ref refid="classlibcellml_1_1GeneratorVariableTracker" kindref="compound">GeneratorVariableTracker</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analyserModel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref> for which we want to generate some interface code. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>generatorProfile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1GeneratorProfile" kindref="compound">GeneratorProfile</ref> to use to generate the interface code. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>generatorVariableTracker</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1GeneratorVariableTracker" kindref="compound">GeneratorVariableTracker</ref> to use to generate the interface code</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The interface code as a <computeroutput>std::string</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="62" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Generator_1a49f2f4e313314dfef5abcd7d9bc98b4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Generator::interfaceCode</definition>
+        <argsstring>(const AnalyserModelPtr &amp;analyserModel, const GeneratorProfilePtr &amp;generatorProfile)</argsstring>
+        <name>interfaceCode</name>
+        <qualifiedname>libcellml::Generator::interfaceCode</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref> &amp;</type>
+          <declname>analyserModel</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1aea4687d4be74e5654468ad4b60b314a7" kindref="member">GeneratorProfilePtr</ref> &amp;</type>
+          <declname>generatorProfile</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the interface code for the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref>.</para>
+<para>Return the interface code for the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref>, using the <ref refid="classlibcellml_1_1GeneratorProfile" kindref="compound">GeneratorProfile</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analyserModel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref> for which we want to generate some interface code. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>generatorProfile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1GeneratorProfile" kindref="compound">GeneratorProfile</ref> to use to generate the interface code.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The interface code as a <computeroutput>std::string</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="77" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Generator_1a4a78d75017f7af02cc5353c40b7da3e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Generator::interfaceCode</definition>
+        <argsstring>(const AnalyserModelPtr &amp;analyserModel, GeneratorProfile::Profile profile)</argsstring>
+        <name>interfaceCode</name>
+        <qualifiedname>libcellml::Generator::interfaceCode</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref> &amp;</type>
+          <declname>analyserModel</declname>
+        </param>
+        <param>
+          <type><ref refid="classlibcellml_1_1GeneratorProfile_1afcb812ce769f207661f0161ac17191ad" kindref="member">GeneratorProfile::Profile</ref></type>
+          <declname>profile</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the interface code for the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref>.</para>
+<para>Return the interface code for the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref>, using the <ref refid="classlibcellml_1_1GeneratorProfile" kindref="compound">GeneratorProfile</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analyserModel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref> for which we want to generate some interface code. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>profile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1GeneratorProfile" kindref="compound">GeneratorProfile</ref> to use to generate the interface code.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The interface code as a <computeroutput>std::string</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="92" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Generator_1a9ff313f8b0da13cff663948e3f314968" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Generator::interfaceCode</definition>
+        <argsstring>(const AnalyserModelPtr &amp;analyserModel, const GeneratorVariableTrackerPtr &amp;generatorVariableTracker)</argsstring>
+        <name>interfaceCode</name>
+        <qualifiedname>libcellml::Generator::interfaceCode</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref> &amp;</type>
+          <declname>analyserModel</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a340f68ee547f099dba7b2484bd457a35" kindref="member">GeneratorVariableTrackerPtr</ref> &amp;</type>
+          <declname>generatorVariableTracker</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the interface code for the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref>.</para>
+<para>Return the interface code for the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref>, using the <ref refid="classlibcellml_1_1GeneratorVariableTracker" kindref="compound">GeneratorVariableTracker</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analyserModel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref> for which we want to generate some interface code. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>generatorVariableTracker</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1GeneratorVariableTracker" kindref="compound">GeneratorVariableTracker</ref> to use to generate the interface code</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The interface code as a <computeroutput>std::string</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="107" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Generator_1a9ecbcdc8bc247b2f5b357bf7ca20ea88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Generator::interfaceCode</definition>
+        <argsstring>(const AnalyserModelPtr &amp;analyserModel)</argsstring>
+        <name>interfaceCode</name>
+        <qualifiedname>libcellml::Generator::interfaceCode</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref> &amp;</type>
+          <declname>analyserModel</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the interface code for the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref>.</para>
+<para>Return the interface code for the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref>, using the <ref refid="classlibcellml_1_1GeneratorProfile" kindref="compound">GeneratorProfile</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analyserModel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref> for which we want to generate some interface code.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The interface code as a <computeroutput>std::string</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="120" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Generator_1a0bbaa15c5e608438946e711681804ce1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Generator::implementationCode</definition>
+        <argsstring>(const AnalyserModelPtr &amp;analyserModel, const GeneratorProfilePtr &amp;generatorProfile, const GeneratorVariableTrackerPtr &amp;generatorVariableTracker)</argsstring>
+        <name>implementationCode</name>
+        <qualifiedname>libcellml::Generator::implementationCode</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref> &amp;</type>
+          <declname>analyserModel</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1aea4687d4be74e5654468ad4b60b314a7" kindref="member">GeneratorProfilePtr</ref> &amp;</type>
+          <declname>generatorProfile</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a340f68ee547f099dba7b2484bd457a35" kindref="member">GeneratorVariableTrackerPtr</ref> &amp;</type>
+          <declname>generatorVariableTracker</declname>
+        </param>
+        <briefdescription>
+<para>Get the implementation code for the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the implementation code for the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref>, using the <ref refid="classlibcellml_1_1GeneratorProfile" kindref="compound">GeneratorProfile</ref> and the <ref refid="classlibcellml_1_1GeneratorVariableTracker" kindref="compound">GeneratorVariableTracker</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analyserModel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref> for which we want to generate some implementation code. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>generatorProfile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1GeneratorProfile" kindref="compound">GeneratorProfile</ref> to use to generate the implementation code. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>generatorVariableTracker</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1GeneratorVariableTracker" kindref="compound">GeneratorVariableTracker</ref> to use to generate the implementation code</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The implementation code as a <computeroutput>std::string</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="134" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Generator_1a7db24514e125c37201d20cd1a800b165" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Generator::implementationCode</definition>
+        <argsstring>(const AnalyserModelPtr &amp;analyserModel, const GeneratorProfilePtr &amp;generatorProfile)</argsstring>
+        <name>implementationCode</name>
+        <qualifiedname>libcellml::Generator::implementationCode</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref> &amp;</type>
+          <declname>analyserModel</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1aea4687d4be74e5654468ad4b60b314a7" kindref="member">GeneratorProfilePtr</ref> &amp;</type>
+          <declname>generatorProfile</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the implementation code for the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref>.</para>
+<para>Return the implementation code for the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref>, using the <ref refid="classlibcellml_1_1GeneratorProfile" kindref="compound">GeneratorProfile</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analyserModel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref> for which we want to generate some implementation code. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>generatorProfile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1GeneratorProfile" kindref="compound">GeneratorProfile</ref> to use to generate the implementation code.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The implementation code as a <computeroutput>std::string</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="149" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Generator_1a846263d545dd780fb6e05bc20f796a7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Generator::implementationCode</definition>
+        <argsstring>(const AnalyserModelPtr &amp;analyserModel, GeneratorProfile::Profile profile)</argsstring>
+        <name>implementationCode</name>
+        <qualifiedname>libcellml::Generator::implementationCode</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref> &amp;</type>
+          <declname>analyserModel</declname>
+        </param>
+        <param>
+          <type><ref refid="classlibcellml_1_1GeneratorProfile_1afcb812ce769f207661f0161ac17191ad" kindref="member">GeneratorProfile::Profile</ref></type>
+          <declname>profile</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the implementation code for the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref>.</para>
+<para>Return the implementation code for the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref>, using the <ref refid="classlibcellml_1_1GeneratorProfile_1afcb812ce769f207661f0161ac17191ad" kindref="member">GeneratorProfile::Profile</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analyserModel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref> for which we want to generate some implementation code. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>profile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1GeneratorProfile_1afcb812ce769f207661f0161ac17191ad" kindref="member">GeneratorProfile::Profile</ref> type to use to generate the implementation code.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The implementation code as a <computeroutput>std::string</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="164" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Generator_1a1487086552ca16721d34154b43feddff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Generator::implementationCode</definition>
+        <argsstring>(const AnalyserModelPtr &amp;analyserModel, const GeneratorVariableTrackerPtr &amp;generatorVariableTracker)</argsstring>
+        <name>implementationCode</name>
+        <qualifiedname>libcellml::Generator::implementationCode</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref> &amp;</type>
+          <declname>analyserModel</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a340f68ee547f099dba7b2484bd457a35" kindref="member">GeneratorVariableTrackerPtr</ref> &amp;</type>
+          <declname>generatorVariableTracker</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the implementation code for the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref>.</para>
+<para>Return the implementation code for the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref>, using the <ref refid="classlibcellml_1_1GeneratorVariableTracker" kindref="compound">GeneratorVariableTracker</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analyserModel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref> for which we want to generate some implementation code. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>generatorVariableTracker</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1GeneratorVariableTracker" kindref="compound">GeneratorVariableTracker</ref> to use to generate the implementation code</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The implementation code as a <computeroutput>std::string</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="179" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1Generator_1aca1f8c79c69ea996f83f345d66fd974e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string libcellml::Generator::implementationCode</definition>
+        <argsstring>(const AnalyserModelPtr &amp;analyserModel)</argsstring>
+        <name>implementationCode</name>
+        <qualifiedname>libcellml::Generator::implementationCode</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref> &amp;</type>
+          <declname>analyserModel</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the implementation code for the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref>.</para>
+<para>Return the implementation code for the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref>, using the <ref refid="classlibcellml_1_1GeneratorProfile" kindref="compound">GeneratorProfile</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analyserModel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref> for which we want to generate some implementation code.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The implementation code as a <computeroutput>std::string</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generator.h" line="192" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classlibcellml_1_1Generator" kindref="compound">Generator</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classlibcellml_1_1Generator" kindref="compound">Generator</ref> class is for representing a CellML <ref refid="classlibcellml_1_1Generator" kindref="compound">Generator</ref>. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>libcellml::Generator</label>
+        <link refid="classlibcellml_1_1Generator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>libcellml::Logger</label>
+        <link refid="classlibcellml_1_1Logger"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>libcellml::Generator</label>
+        <link refid="classlibcellml_1_1Generator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>libcellml::Logger</label>
+        <link refid="classlibcellml_1_1Logger"/>
+      </node>
+    </collaborationgraph>
+    <location file="libcellml/generator.h" line="29" column="1" bodyfile="libcellml/generator.h" bodystart="30" bodyend="230"/>
+    <listofallmembers>
+      <member refid="classlibcellml_1_1Generator_1afff1cff58e786791bf3a002f52c4edeb" prot="public" virt="non-virtual"><scope>libcellml::Generator</scope><name>create</name></member>
+      <member refid="classlibcellml_1_1Generator_1acb4eb2d6718c76b73140cb34a57d9597" prot="public" virt="non-virtual"><scope>libcellml::Generator</scope><name>equationCode</name></member>
+      <member refid="classlibcellml_1_1Generator_1a17043c420c394cca286e6fcac99a8383" prot="public" virt="non-virtual"><scope>libcellml::Generator</scope><name>equationCode</name></member>
+      <member refid="classlibcellml_1_1Logger_1a5a260a645de3be9ffb844ce3f7584c4f" prot="public" virt="non-virtual"><scope>libcellml::Generator</scope><name>error</name></member>
+      <member refid="classlibcellml_1_1Logger_1a6bb9f053eb4f1b743167b84bbf5e9b34" prot="public" virt="non-virtual"><scope>libcellml::Generator</scope><name>errorCount</name></member>
+      <member refid="classlibcellml_1_1Generator_1a598a8d10840214db710e6e311f982826" prot="private" virt="non-virtual"><scope>libcellml::Generator</scope><name>Generator</name></member>
+      <member refid="classlibcellml_1_1Generator_1a7919358aaa9d759de702abf99fd10060" prot="private" virt="non-virtual"><scope>libcellml::Generator</scope><name>Generator</name></member>
+      <member refid="classlibcellml_1_1Generator_1a053b66c39349bf6767e8c7524e9cd8c2" prot="private" virt="non-virtual"><scope>libcellml::Generator</scope><name>Generator</name></member>
+      <member refid="classlibcellml_1_1Generator_1a0bbaa15c5e608438946e711681804ce1" prot="public" virt="non-virtual"><scope>libcellml::Generator</scope><name>implementationCode</name></member>
+      <member refid="classlibcellml_1_1Generator_1a7db24514e125c37201d20cd1a800b165" prot="public" virt="non-virtual"><scope>libcellml::Generator</scope><name>implementationCode</name></member>
+      <member refid="classlibcellml_1_1Generator_1a846263d545dd780fb6e05bc20f796a7b" prot="public" virt="non-virtual"><scope>libcellml::Generator</scope><name>implementationCode</name></member>
+      <member refid="classlibcellml_1_1Generator_1a1487086552ca16721d34154b43feddff" prot="public" virt="non-virtual"><scope>libcellml::Generator</scope><name>implementationCode</name></member>
+      <member refid="classlibcellml_1_1Generator_1aca1f8c79c69ea996f83f345d66fd974e" prot="public" virt="non-virtual"><scope>libcellml::Generator</scope><name>implementationCode</name></member>
+      <member refid="classlibcellml_1_1Generator_1a45c379c32513f5562fcdf04a14892179" prot="public" virt="non-virtual"><scope>libcellml::Generator</scope><name>interfaceCode</name></member>
+      <member refid="classlibcellml_1_1Generator_1a49f2f4e313314dfef5abcd7d9bc98b4c" prot="public" virt="non-virtual"><scope>libcellml::Generator</scope><name>interfaceCode</name></member>
+      <member refid="classlibcellml_1_1Generator_1a4a78d75017f7af02cc5353c40b7da3e6" prot="public" virt="non-virtual"><scope>libcellml::Generator</scope><name>interfaceCode</name></member>
+      <member refid="classlibcellml_1_1Generator_1a9ff313f8b0da13cff663948e3f314968" prot="public" virt="non-virtual"><scope>libcellml::Generator</scope><name>interfaceCode</name></member>
+      <member refid="classlibcellml_1_1Generator_1a9ecbcdc8bc247b2f5b357bf7ca20ea88" prot="public" virt="non-virtual"><scope>libcellml::Generator</scope><name>interfaceCode</name></member>
+      <member refid="classlibcellml_1_1Logger_1a192650ae59ea8747feb6c4f09de6a389" prot="public" virt="non-virtual"><scope>libcellml::Generator</scope><name>issue</name></member>
+      <member refid="classlibcellml_1_1Logger_1a3c078e9502a10748ade938374faef6d9" prot="public" virt="non-virtual"><scope>libcellml::Generator</scope><name>issueCount</name></member>
+      <member refid="classlibcellml_1_1Logger_1a866117b4f6589724a2fd01f88e56d66f" prot="public" virt="non-virtual"><scope>libcellml::Generator</scope><name>message</name></member>
+      <member refid="classlibcellml_1_1Logger_1a05e6f7de0ed9a88611d3c9749e3dbd21" prot="public" virt="non-virtual"><scope>libcellml::Generator</scope><name>messageCount</name></member>
+      <member refid="classlibcellml_1_1Generator_1a98d7e6789276133a2e62f7b951ab8448" prot="private" virt="non-virtual"><scope>libcellml::Generator</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1Generator_1aa0b48fb91b184ab74599bb5990e13eac" prot="private" virt="non-virtual"><scope>libcellml::Generator</scope><name>pFunc</name></member>
+      <member refid="classlibcellml_1_1Generator_1a829ff57e8f7e8d1cd9d1fe07759cdfa2" prot="private" virt="non-virtual"><scope>libcellml::Generator</scope><name>pFunc</name></member>
+      <member refid="classlibcellml_1_1Logger_1a610d4878881567899c6d47db5e625736" prot="public" virt="non-virtual"><scope>libcellml::Generator</scope><name>warning</name></member>
+      <member refid="classlibcellml_1_1Logger_1a6973054ad6d00d9bb6d2bfb488cdfebd" prot="public" virt="non-virtual"><scope>libcellml::Generator</scope><name>warningCount</name></member>
+      <member refid="classlibcellml_1_1Generator_1a283b251528a5a09dc37163734f6e0d4e" prot="private" virt="non-virtual"><scope>libcellml::Generator</scope><name>~Generator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

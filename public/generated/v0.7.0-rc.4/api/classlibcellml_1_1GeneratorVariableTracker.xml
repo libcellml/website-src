@@ -1,0 +1,841 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classlibcellml_1_1GeneratorVariableTracker" kind="class" language="C++" prot="public">
+    <compoundname>libcellml::GeneratorVariableTracker</compoundname>
+    <basecompoundref refid="classlibcellml_1_1Logger" prot="public" virt="non-virtual">libcellml::Logger</basecompoundref>
+    <includes refid="generatorvariabletracker_8h" local="no">generatorvariabletracker.h</includes>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariableTracker_1ae05c556d479133364df3baa23fc1f7be" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::GeneratorVariableTracker::~GeneratorVariableTracker</definition>
+        <argsstring>()</argsstring>
+        <name>~GeneratorVariableTracker</name>
+        <qualifiedname>libcellml::GeneratorVariableTracker::~GeneratorVariableTracker</qualifiedname>
+        <briefdescription>
+<para>Destructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generatorvariabletracker.h" line="31" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariableTracker_1a8c6945e6022e520cd5c9e087376f9d36" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::GeneratorVariableTracker::GeneratorVariableTracker</definition>
+        <argsstring>(const GeneratorVariableTracker &amp;rhs)=delete</argsstring>
+        <name>GeneratorVariableTracker</name>
+        <qualifiedname>libcellml::GeneratorVariableTracker::GeneratorVariableTracker</qualifiedname>
+        <param>
+          <type>const <ref refid="classlibcellml_1_1GeneratorVariableTracker" kindref="compound">GeneratorVariableTracker</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generatorvariabletracker.h" line="32" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariableTracker_1ae9b743d7c128eed034565abd10884c97" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::GeneratorVariableTracker::GeneratorVariableTracker</definition>
+        <argsstring>(GeneratorVariableTracker &amp;&amp;rhs) noexcept=delete</argsstring>
+        <name>GeneratorVariableTracker</name>
+        <qualifiedname>libcellml::GeneratorVariableTracker::GeneratorVariableTracker</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1GeneratorVariableTracker" kindref="compound">GeneratorVariableTracker</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generatorvariabletracker.h" line="33" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariableTracker_1af0a1b81cd7c6cd9df30975a0ff2ddd3b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classlibcellml_1_1GeneratorVariableTracker" kindref="compound">GeneratorVariableTracker</ref> &amp;</type>
+        <definition>GeneratorVariableTracker &amp; libcellml::GeneratorVariableTracker::operator=</definition>
+        <argsstring>(GeneratorVariableTracker rhs)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>libcellml::GeneratorVariableTracker::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classlibcellml_1_1GeneratorVariableTracker" kindref="compound">GeneratorVariableTracker</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generatorvariabletracker.h" line="34" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariableTracker_1a5532b345f7afe4db350c2754b9121efb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>libcellml::GeneratorVariableTracker::GeneratorVariableTracker</definition>
+        <argsstring>()</argsstring>
+        <name>GeneratorVariableTracker</name>
+        <qualifiedname>libcellml::GeneratorVariableTracker::GeneratorVariableTracker</qualifiedname>
+        <briefdescription>
+<para>Constructor,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generatorvariabletracker.h" line="262" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariableTracker_1a91e3844c7fa95481b3dd2dab963d4b33" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GeneratorVariableTrackerImpl *</type>
+        <definition>GeneratorVariableTrackerImpl * libcellml::GeneratorVariableTracker::pFunc</definition>
+        <argsstring>()</argsstring>
+        <name>pFunc</name>
+        <qualifiedname>libcellml::GeneratorVariableTracker::pFunc</qualifiedname>
+        <briefdescription>
+<para>Getter for private implementation pointer,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generatorvariabletracker.h" line="266" column="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariableTracker_1a49d942abeeedadd1e5a507d01a13603a" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const GeneratorVariableTrackerImpl *</type>
+        <definition>const GeneratorVariableTrackerImpl * libcellml::GeneratorVariableTracker::pFunc</definition>
+        <argsstring>() const</argsstring>
+        <name>pFunc</name>
+        <qualifiedname>libcellml::GeneratorVariableTracker::pFunc</qualifiedname>
+        <briefdescription>
+<para>Const getter for private implementation pointer,. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generatorvariabletracker.h" line="267" column="40"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariableTracker_1a2237cfbf985af12a591dd167d5b7f204" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacelibcellml_1a340f68ee547f099dba7b2484bd457a35" kindref="member">GeneratorVariableTrackerPtr</ref></type>
+        <definition>static GeneratorVariableTrackerPtr libcellml::GeneratorVariableTracker::create</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>create</name>
+        <qualifiedname>libcellml::GeneratorVariableTracker::create</qualifiedname>
+        <briefdescription>
+<para>Create a <ref refid="classlibcellml_1_1GeneratorVariableTracker" kindref="compound">GeneratorVariableTracker</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Factory method to create a <ref refid="classlibcellml_1_1GeneratorVariableTracker" kindref="compound">GeneratorVariableTracker</ref>. Create a <ref refid="classlibcellml_1_1GeneratorVariableTracker" kindref="compound">GeneratorVariableTracker</ref> with::</para>
+<para><programlisting><codeline><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>GeneratorVariableTracker<sp/>=<sp/><ref refid="classlibcellml_1_1GeneratorVariableTracker_1a2237cfbf985af12a591dd167d5b7f204" kindref="member">libcellml::GeneratorVariableTracker::create</ref>();</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para>A smart pointer to a <ref refid="classlibcellml_1_1GeneratorVariableTracker" kindref="compound">GeneratorVariableTracker</ref> object. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generatorvariabletracker.h" line="47" column="40"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariableTracker_1a51f62124dac3de4eba04b686332dd06b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::GeneratorVariableTracker::isTrackedVariable</definition>
+        <argsstring>(const AnalyserVariablePtr &amp;analyserVariable)</argsstring>
+        <name>isTrackedVariable</name>
+        <qualifiedname>libcellml::GeneratorVariableTracker::isTrackedVariable</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1acfd2932a24a4fe8b5e9147ccf0a23a11" kindref="member">AnalyserVariablePtr</ref> &amp;</type>
+          <declname>analyserVariable</declname>
+        </param>
+        <briefdescription>
+<para>Test if the given <computeroutput>analyserVariable</computeroutput> is tracked. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if the given <computeroutput>analyserVariable</computeroutput> is tracked.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analyserVariable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the <ref refid="classlibcellml_1_1AnalyserVariable" kindref="compound">AnalyserVariable</ref> to test.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the analyser variable is tracked, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generatorvariabletracker.h" line="58" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariableTracker_1a1701ea7a1af0a83d73d6b13201de8464" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool libcellml::GeneratorVariableTracker::isUntrackedVariable</definition>
+        <argsstring>(const AnalyserVariablePtr &amp;analyserVariable)</argsstring>
+        <name>isUntrackedVariable</name>
+        <qualifiedname>libcellml::GeneratorVariableTracker::isUntrackedVariable</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1acfd2932a24a4fe8b5e9147ccf0a23a11" kindref="member">AnalyserVariablePtr</ref> &amp;</type>
+          <declname>analyserVariable</declname>
+        </param>
+        <briefdescription>
+<para>Test if the given <computeroutput>analyserVariable</computeroutput> is untracked. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if the given <computeroutput>analyserVariable</computeroutput> is untracked.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analyserVariable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the <ref refid="classlibcellml_1_1AnalyserVariable" kindref="compound">AnalyserVariable</ref> to test.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the analyser variable is untracked, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generatorvariabletracker.h" line="69" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariableTracker_1a1cb403a1a0d1597079ae821121c6648a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::GeneratorVariableTracker::trackVariable</definition>
+        <argsstring>(const AnalyserVariablePtr &amp;analyserVariable)</argsstring>
+        <name>trackVariable</name>
+        <qualifiedname>libcellml::GeneratorVariableTracker::trackVariable</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1acfd2932a24a4fe8b5e9147ccf0a23a11" kindref="member">AnalyserVariablePtr</ref> &amp;</type>
+          <declname>analyserVariable</declname>
+        </param>
+        <briefdescription>
+<para>Track the given <computeroutput>analyserVariable</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Track the given <computeroutput>analyserVariable</computeroutput>. This will add the analyser variable to the list of tracked variables.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analyserVariable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the <ref refid="classlibcellml_1_1AnalyserVariable" kindref="compound">AnalyserVariable</ref> to track. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generatorvariabletracker.h" line="78" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariableTracker_1acf396822157977e63e656ab90f7e46c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::GeneratorVariableTracker::untrackVariable</definition>
+        <argsstring>(const AnalyserVariablePtr &amp;analyserVariable)</argsstring>
+        <name>untrackVariable</name>
+        <qualifiedname>libcellml::GeneratorVariableTracker::untrackVariable</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1acfd2932a24a4fe8b5e9147ccf0a23a11" kindref="member">AnalyserVariablePtr</ref> &amp;</type>
+          <declname>analyserVariable</declname>
+        </param>
+        <briefdescription>
+<para>Untrack the given <computeroutput>analyserVariable</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Untrack the given <computeroutput>analyserVariable</computeroutput>. This will remove the analyser variable from the list of tracked variables.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analyserVariable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the <ref refid="classlibcellml_1_1AnalyserVariable" kindref="compound">AnalyserVariable</ref> to untrack. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generatorvariabletracker.h" line="87" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariableTracker_1a09e7945a147f42731b9b8e852423645f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::GeneratorVariableTracker::trackAllConstants</definition>
+        <argsstring>(const AnalyserModelPtr &amp;analyserModel)</argsstring>
+        <name>trackAllConstants</name>
+        <qualifiedname>libcellml::GeneratorVariableTracker::trackAllConstants</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref> &amp;</type>
+          <declname>analyserModel</declname>
+        </param>
+        <briefdescription>
+<para>Track all the constants in the given <computeroutput>analyserModel</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Track all the constants in the given <computeroutput>analyserModel</computeroutput>. This will add all the constants in the analyser model to the list of tracked variables.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analyserModel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref> which all the constants are to be tracked. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generatorvariabletracker.h" line="97" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariableTracker_1ade26c53c1577f17e2c6df7831bb15e94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::GeneratorVariableTracker::untrackAllConstants</definition>
+        <argsstring>(const AnalyserModelPtr &amp;analyserModel)</argsstring>
+        <name>untrackAllConstants</name>
+        <qualifiedname>libcellml::GeneratorVariableTracker::untrackAllConstants</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref> &amp;</type>
+          <declname>analyserModel</declname>
+        </param>
+        <briefdescription>
+<para>Untrack all the constants in the given <computeroutput>analyserModel</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Untrack all the constants in the given <computeroutput>analyserModel</computeroutput>. This will remove all the constants in the analyser model from the list of tracked variables.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analyserModel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref> which all the constants are to be untracked. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generatorvariabletracker.h" line="107" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariableTracker_1ab5803d24f5121acf1f7fe34286ba65df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::GeneratorVariableTracker::trackAllComputedConstants</definition>
+        <argsstring>(const AnalyserModelPtr &amp;analyserModel)</argsstring>
+        <name>trackAllComputedConstants</name>
+        <qualifiedname>libcellml::GeneratorVariableTracker::trackAllComputedConstants</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref> &amp;</type>
+          <declname>analyserModel</declname>
+        </param>
+        <briefdescription>
+<para>Track all the computed constants in the given <computeroutput>analyserModel</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Track all the computed constants in the given <computeroutput>analyserModel</computeroutput>. This will add all the computed constants in the analyser model to the list of tracked variables.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analyserModel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref> which all the computed constants are to be tracked. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generatorvariabletracker.h" line="117" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariableTracker_1adc47259dd0eef489002edf6d033a607d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::GeneratorVariableTracker::untrackAllComputedConstants</definition>
+        <argsstring>(const AnalyserModelPtr &amp;analyserModel)</argsstring>
+        <name>untrackAllComputedConstants</name>
+        <qualifiedname>libcellml::GeneratorVariableTracker::untrackAllComputedConstants</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref> &amp;</type>
+          <declname>analyserModel</declname>
+        </param>
+        <briefdescription>
+<para>Untrack all the computed constants in the given <computeroutput>analyserModel</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Untrack all the computed constants in the given <computeroutput>analyserModel</computeroutput>. This will remove all the computed constants in the analyser model from the list of tracked variables.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analyserModel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref> which all the computed constants are to be untracked. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generatorvariabletracker.h" line="127" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariableTracker_1af9a18f5e01c9f18e4564cfbf7992563d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::GeneratorVariableTracker::trackAllAlgebraicVariables</definition>
+        <argsstring>(const AnalyserModelPtr &amp;analyserModel)</argsstring>
+        <name>trackAllAlgebraicVariables</name>
+        <qualifiedname>libcellml::GeneratorVariableTracker::trackAllAlgebraicVariables</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref> &amp;</type>
+          <declname>analyserModel</declname>
+        </param>
+        <briefdescription>
+<para>Track all the algebraic variables in the given <computeroutput>analyserModel</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Track all the algebraic variables in the given <computeroutput>analyserModel</computeroutput>. This will add all the algebraic variables in the analyser model to the list of tracked variables.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analyserModel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref> which all the algebraic variables are to be tracked. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generatorvariabletracker.h" line="137" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariableTracker_1a71ba3ddf1028a32375e9f2a6313da0f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::GeneratorVariableTracker::untrackAllAlgebraicVariables</definition>
+        <argsstring>(const AnalyserModelPtr &amp;analyserModel)</argsstring>
+        <name>untrackAllAlgebraicVariables</name>
+        <qualifiedname>libcellml::GeneratorVariableTracker::untrackAllAlgebraicVariables</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref> &amp;</type>
+          <declname>analyserModel</declname>
+        </param>
+        <briefdescription>
+<para>Untrack all the algebraic variables in the given <computeroutput>analyserModel</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Untrack all the algebraic variables in the given <computeroutput>analyserModel</computeroutput>. This will remove all the algebraic variables in the analyser model from the list of tracked variables.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analyserModel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref> which all the algebraic variables are to be untracked. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generatorvariabletracker.h" line="147" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariableTracker_1ab9951fcaaac906f23154b9bcdfa9b834" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::GeneratorVariableTracker::trackAllVariables</definition>
+        <argsstring>(const AnalyserModelPtr &amp;analyserModel)</argsstring>
+        <name>trackAllVariables</name>
+        <qualifiedname>libcellml::GeneratorVariableTracker::trackAllVariables</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref> &amp;</type>
+          <declname>analyserModel</declname>
+        </param>
+        <briefdescription>
+<para>Track all the variables in the given <computeroutput>analyserModel</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Track all the variables in the given <computeroutput>analyserModel</computeroutput>. This will add all the variables in the analyser model to the list of tracked variables. This includes all the constants, computed constants, and algebraic variables.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analyserModel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref> which all the variables are to be tracked. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generatorvariabletracker.h" line="157" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariableTracker_1a08ccfd623b61161a8c615aba963cd526" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libcellml::GeneratorVariableTracker::untrackAllVariables</definition>
+        <argsstring>(const AnalyserModelPtr &amp;analyserModel)</argsstring>
+        <name>untrackAllVariables</name>
+        <qualifiedname>libcellml::GeneratorVariableTracker::untrackAllVariables</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref> &amp;</type>
+          <declname>analyserModel</declname>
+        </param>
+        <briefdescription>
+<para>Untrack all the variables in the given <computeroutput>analyserModel</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Untrack all the variables in the given <computeroutput>analyserModel</computeroutput>. This will remove all the variables in the analyser model from the list of tracked variables. This includes all the constants, computed constants, and algebraic variables.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analyserModel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref> which all the variables are to be untracked. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generatorvariabletracker.h" line="167" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariableTracker_1a0bf313e8efe61e83f974ca34b9ac5890" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::GeneratorVariableTracker::trackedConstantCount</definition>
+        <argsstring>(const AnalyserModelPtr &amp;analyserModel)</argsstring>
+        <name>trackedConstantCount</name>
+        <qualifiedname>libcellml::GeneratorVariableTracker::trackedConstantCount</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref> &amp;</type>
+          <declname>analyserModel</declname>
+        </param>
+        <briefdescription>
+<para>Get the number of tracked constants in the given <computeroutput>analyserModel</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the number of tracked constants in the given <computeroutput>analyserModel</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analyserModel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref> for which to get the number of tracked constants.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of tracked constants in the analyser model. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generatorvariabletracker.h" line="178" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariableTracker_1ac5a53e5e05e17ff167509833210947ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::GeneratorVariableTracker::untrackedConstantCount</definition>
+        <argsstring>(const AnalyserModelPtr &amp;analyserModel)</argsstring>
+        <name>untrackedConstantCount</name>
+        <qualifiedname>libcellml::GeneratorVariableTracker::untrackedConstantCount</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref> &amp;</type>
+          <declname>analyserModel</declname>
+        </param>
+        <briefdescription>
+<para>Get the number of untracked constants in the given <computeroutput>analyserModel</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the number of untracked constants in the given <computeroutput>analyserModel</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analyserModel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref> for which to get the number of untracked constants.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of untracked constants in the analyser model. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generatorvariabletracker.h" line="189" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariableTracker_1a48a9f2f554aed2d0a1ac3157207138f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::GeneratorVariableTracker::trackedComputedConstantCount</definition>
+        <argsstring>(const AnalyserModelPtr &amp;analyserModel)</argsstring>
+        <name>trackedComputedConstantCount</name>
+        <qualifiedname>libcellml::GeneratorVariableTracker::trackedComputedConstantCount</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref> &amp;</type>
+          <declname>analyserModel</declname>
+        </param>
+        <briefdescription>
+<para>Get the number of tracked computed constants in the given <computeroutput>analyserModel</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the number of tracked computed constants in the given <computeroutput>analyserModel</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analyserModel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref> for which to get the number of tracked computed constants.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of tracked computed constants in the analyser model. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generatorvariabletracker.h" line="201" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariableTracker_1a04e5f197c2f2784fc9650a361b2cff64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::GeneratorVariableTracker::untrackedComputedConstantCount</definition>
+        <argsstring>(const AnalyserModelPtr &amp;analyserModel)</argsstring>
+        <name>untrackedComputedConstantCount</name>
+        <qualifiedname>libcellml::GeneratorVariableTracker::untrackedComputedConstantCount</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref> &amp;</type>
+          <declname>analyserModel</declname>
+        </param>
+        <briefdescription>
+<para>Get the number of untracked computed constants in the given <computeroutput>analyserModel</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the number of untracked computed constants in the given <computeroutput>analyserModel</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analyserModel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref> for which to get the number of untracked computed constants.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of untracked computed constants in the analyser model. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generatorvariabletracker.h" line="213" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariableTracker_1a95a5e4d7f7d21afadba4553427c6e10d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::GeneratorVariableTracker::trackedAlgebraicVariableCount</definition>
+        <argsstring>(const AnalyserModelPtr &amp;analyserModel)</argsstring>
+        <name>trackedAlgebraicVariableCount</name>
+        <qualifiedname>libcellml::GeneratorVariableTracker::trackedAlgebraicVariableCount</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref> &amp;</type>
+          <declname>analyserModel</declname>
+        </param>
+        <briefdescription>
+<para>Get the number of tracked algebraic variables in the given <computeroutput>analyserModel</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the number of tracked algebraic variables in the given <computeroutput>analyserModel</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analyserModel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref> for which to get the number of tracked algebraic variables.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of tracked algebraic variables in the analyser model. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generatorvariabletracker.h" line="225" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariableTracker_1a472c5b4c69e22743fa2f0190bba846d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::GeneratorVariableTracker::untrackedAlgebraicVariableCount</definition>
+        <argsstring>(const AnalyserModelPtr &amp;analyserModel)</argsstring>
+        <name>untrackedAlgebraicVariableCount</name>
+        <qualifiedname>libcellml::GeneratorVariableTracker::untrackedAlgebraicVariableCount</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref> &amp;</type>
+          <declname>analyserModel</declname>
+        </param>
+        <briefdescription>
+<para>Get the number of untracked algebraic variables in the given <computeroutput>analyserModel</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the number of untracked algebraic variables in the given <computeroutput>analyserModel</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analyserModel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref> for which to get the number of untracked algebraic variables.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of untracked algebraic variables in the analyser model. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generatorvariabletracker.h" line="237" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariableTracker_1a5fdf1455bc4ce6905f4cc7d3558fa00b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::GeneratorVariableTracker::trackedVariableCount</definition>
+        <argsstring>(const AnalyserModelPtr &amp;analyserModel)</argsstring>
+        <name>trackedVariableCount</name>
+        <qualifiedname>libcellml::GeneratorVariableTracker::trackedVariableCount</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref> &amp;</type>
+          <declname>analyserModel</declname>
+        </param>
+        <briefdescription>
+<para>Get the number of tracked variables in the given <computeroutput>analyserModel</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the number of tracked variables in the given <computeroutput>analyserModel</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analyserModel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref> for which to get the number of tracked variables.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of tracked variables in the analyser model. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generatorvariabletracker.h" line="248" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classlibcellml_1_1GeneratorVariableTracker_1aa627cf71bfe2d988c594f5c9cbe58668" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t libcellml::GeneratorVariableTracker::untrackedVariableCount</definition>
+        <argsstring>(const AnalyserModelPtr &amp;analyserModel)</argsstring>
+        <name>untrackedVariableCount</name>
+        <qualifiedname>libcellml::GeneratorVariableTracker::untrackedVariableCount</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacelibcellml_1a2d74d1df13afaafcab24b9230827e442" kindref="member">AnalyserModelPtr</ref> &amp;</type>
+          <declname>analyserModel</declname>
+        </param>
+        <briefdescription>
+<para>Get the number of untracked variables in the given <computeroutput>analyserModel</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the number of untracked variables in the given <computeroutput>analyserModel</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analyserModel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the <ref refid="classlibcellml_1_1AnalyserModel" kindref="compound">AnalyserModel</ref> for which to get the number of untracked variables.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of untracked variables in the analyser model. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libcellml/generatorvariabletracker.h" line="259" column="12"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classlibcellml_1_1GeneratorVariableTracker" kindref="compound">GeneratorVariableTracker</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classlibcellml_1_1GeneratorVariableTracker" kindref="compound">GeneratorVariableTracker</ref> class is for representing a CellML <ref refid="classlibcellml_1_1GeneratorVariableTracker" kindref="compound">GeneratorVariableTracker</ref>. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>libcellml::GeneratorVariableTracker</label>
+        <link refid="classlibcellml_1_1GeneratorVariableTracker"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>libcellml::Logger</label>
+        <link refid="classlibcellml_1_1Logger"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>libcellml::GeneratorVariableTracker</label>
+        <link refid="classlibcellml_1_1GeneratorVariableTracker"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>libcellml::Logger</label>
+        <link refid="classlibcellml_1_1Logger"/>
+      </node>
+    </collaborationgraph>
+    <location file="libcellml/generatorvariabletracker.h" line="28" column="1" bodyfile="libcellml/generatorvariabletracker.h" bodystart="29" bodyend="268"/>
+    <listofallmembers>
+      <member refid="classlibcellml_1_1GeneratorVariableTracker_1a2237cfbf985af12a591dd167d5b7f204" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>create</name></member>
+      <member refid="classlibcellml_1_1Logger_1a5a260a645de3be9ffb844ce3f7584c4f" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>error</name></member>
+      <member refid="classlibcellml_1_1Logger_1a6bb9f053eb4f1b743167b84bbf5e9b34" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>errorCount</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariableTracker_1a8c6945e6022e520cd5c9e087376f9d36" prot="private" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>GeneratorVariableTracker</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariableTracker_1ae9b743d7c128eed034565abd10884c97" prot="private" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>GeneratorVariableTracker</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariableTracker_1a5532b345f7afe4db350c2754b9121efb" prot="private" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>GeneratorVariableTracker</name></member>
+      <member refid="classlibcellml_1_1Logger_1a192650ae59ea8747feb6c4f09de6a389" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>issue</name></member>
+      <member refid="classlibcellml_1_1Logger_1a3c078e9502a10748ade938374faef6d9" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>issueCount</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariableTracker_1a51f62124dac3de4eba04b686332dd06b" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>isTrackedVariable</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariableTracker_1a1701ea7a1af0a83d73d6b13201de8464" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>isUntrackedVariable</name></member>
+      <member refid="classlibcellml_1_1Logger_1a866117b4f6589724a2fd01f88e56d66f" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>message</name></member>
+      <member refid="classlibcellml_1_1Logger_1a05e6f7de0ed9a88611d3c9749e3dbd21" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>messageCount</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariableTracker_1af0a1b81cd7c6cd9df30975a0ff2ddd3b" prot="private" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>operator=</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariableTracker_1a91e3844c7fa95481b3dd2dab963d4b33" prot="private" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>pFunc</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariableTracker_1a49d942abeeedadd1e5a507d01a13603a" prot="private" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>pFunc</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariableTracker_1af9a18f5e01c9f18e4564cfbf7992563d" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>trackAllAlgebraicVariables</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariableTracker_1ab5803d24f5121acf1f7fe34286ba65df" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>trackAllComputedConstants</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariableTracker_1a09e7945a147f42731b9b8e852423645f" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>trackAllConstants</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariableTracker_1ab9951fcaaac906f23154b9bcdfa9b834" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>trackAllVariables</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariableTracker_1a95a5e4d7f7d21afadba4553427c6e10d" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>trackedAlgebraicVariableCount</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariableTracker_1a48a9f2f554aed2d0a1ac3157207138f1" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>trackedComputedConstantCount</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariableTracker_1a0bf313e8efe61e83f974ca34b9ac5890" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>trackedConstantCount</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariableTracker_1a5fdf1455bc4ce6905f4cc7d3558fa00b" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>trackedVariableCount</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariableTracker_1a1cb403a1a0d1597079ae821121c6648a" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>trackVariable</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariableTracker_1a71ba3ddf1028a32375e9f2a6313da0f9" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>untrackAllAlgebraicVariables</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariableTracker_1adc47259dd0eef489002edf6d033a607d" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>untrackAllComputedConstants</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariableTracker_1ade26c53c1577f17e2c6df7831bb15e94" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>untrackAllConstants</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariableTracker_1a08ccfd623b61161a8c615aba963cd526" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>untrackAllVariables</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariableTracker_1a472c5b4c69e22743fa2f0190bba846d2" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>untrackedAlgebraicVariableCount</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariableTracker_1a04e5f197c2f2784fc9650a361b2cff64" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>untrackedComputedConstantCount</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariableTracker_1ac5a53e5e05e17ff167509833210947ab" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>untrackedConstantCount</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariableTracker_1aa627cf71bfe2d988c594f5c9cbe58668" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>untrackedVariableCount</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariableTracker_1acf396822157977e63e656ab90f7e46c7" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>untrackVariable</name></member>
+      <member refid="classlibcellml_1_1Logger_1a610d4878881567899c6d47db5e625736" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>warning</name></member>
+      <member refid="classlibcellml_1_1Logger_1a6973054ad6d00d9bb6d2bfb488cdfebd" prot="public" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>warningCount</name></member>
+      <member refid="classlibcellml_1_1GeneratorVariableTracker_1ae05c556d479133364df3baa23fc1f7be" prot="private" virt="non-virtual"><scope>libcellml::GeneratorVariableTracker</scope><name>~GeneratorVariableTracker</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
