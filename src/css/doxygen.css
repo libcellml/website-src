@@ -19,7 +19,7 @@
     display:none;
 }
 
-.theme--light.v-application code {
+.v-theme--light .v-application code {
     color: var(--code-colour);
     font-size: 100%;
 }
@@ -74,7 +74,7 @@ dl[name="simplesect"], dl[name="parameterlist"] {
 section[id^="classlibcellml"]
 > section[id^="public_"]
 > table {
-    color: black;
+    color: var(--text-colour);
     font-family: var(--code-font);
 }
 
@@ -88,4 +88,12 @@ section[id^="classlibcellml"]
 /* Spacing out the sections better. */
 section {
     padding-top: 1rem;
+}
+
+/*
+   Doxygen dark-mode additions.
+*/
+.v-theme--dark .v-theme--light .v-application code {
+  color: var(--code-colour);
+  background-color: var(--pale-transparent-grey);
 }

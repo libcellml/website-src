@@ -365,3 +365,97 @@ This is needed to remove it.
 .issue > p {
   margin-left: 2em;
 }
+
+/*
+  Dark mode overrides.
+  Vuetify 4 adds .v-theme--dark to .v-application when the
+  dark theme is active.  Tweaking these values for the dark
+  theme to be more libCellML-esque.
+*/
+
+.v-theme--dark {
+  /* Core greys */
+  --mid-grey: #aaaaaa;
+  --pale-grey: #3a3a3a;
+  --very-pale-grey: #1e1e1e;
+  --transparent-grey: rgba(200, 200, 200, 0.06);
+  --pale-transparent-grey: rgba(180, 180, 180, 0.10);
+
+  /* Brand reds (slightly lightened for dark backgrounds) */
+  --bright-red: #d45c63;
+  --mid-red: #c04850;
+  --deep-red: #e07078;
+  --bright-red-transparent: #d45c6325;
+
+  /* Blues */
+  --deep-blue: #7aa0c4;
+  --deep-blue-grey: #3d5a6680;
+  --bright-blue: #4d9ee6;
+
+  /* Greens (do-this / tip boxes) */
+  --very-pale-green: #1a2817;
+  --mid-green: rgb(120, 175, 40);
+  --dark-green: #8ec868;
+
+  /* Yellows (note boxes) */
+  --very-pale-yellow: rgba(200, 165, 0, 0.15);
+  --mid-yellow: #c8a800;
+  --dark-yellow: #d4af37;
+
+  /* Semantic box colours derived from above */
+  --dothis-background-color: var(--very-pale-green);
+  --dothis-border-colour: var(--mid-green);
+  --dothis-colour: var(--dark-green);
+
+  --useful-background-colour: #182030;
+  --useful-border-colour: #4d9ee6;
+  --useful-colour: #8cb8e0;
+  --useful-link-colour: var(--bright-blue);
+
+  --nb-background-colour: var(--very-pale-yellow);
+  --nb-border-colour: var(--mid-yellow);
+  --nb-colour: var(--dark-yellow);
+
+  /* Text & links */
+  --text-colour: #dddddd;
+  --menu-link-colour: #bbbbbb;
+  --link-colour: #bbbbbb;
+  --active-link: var(--deep-red);
+  --text-link-colour: var(--bright-red);
+  --link-underline-colour: #555555;
+
+  /* Warnings */
+  --warning-background: rgba(100, 20, 20, 0.30);
+  --warning-text: var(--bright-red);
+
+  /* Code & borders */
+  --terminal-colour: #3a3a3a !important;
+  --border-colour: #3a3a3a;
+  --code-colour: var(--deep-blue);
+}
+
+/* Active route link in dark mode */
+.v-theme--dark .v-application a.router-link-active {
+  text-decoration-color: #555555;
+}
+
+/* Active nav button highlight in dark mode */
+.v-theme--dark .v-btn--active {
+  background-color: #2a2a2a;
+}
+
+/* Big buttons in dark mode */
+.v-theme--dark .big-button {
+  background-color: #2d4046 !important;
+}
+.v-theme--dark .big-button:hover {
+  background-color: var(--deep-red) !important;
+}
+
+/* Table borders in dark mode */
+.v-theme--dark td {
+  border-bottom-color: var(--pale-grey);
+}
+.v-theme--dark th {
+  border-bottom-color: #555555;
+}

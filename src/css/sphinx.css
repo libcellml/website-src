@@ -34,7 +34,7 @@ pre {
 }
 
 /* Inline literal code blocks in the Sphinx-based files. */
-.theme--light.v-application code.code {
+.v-theme--light .v-application code.code {
   color: var(--deep-blue);
   padding: 0.1rem 0.3rem 0.2rem 0.3rem;
   margin: 0;
@@ -65,7 +65,7 @@ code {
   background-color: var(--pale-transparent-grey);
 }
 
-.theme--light.v-application code {
+.v-theme--light .v-application code {
   color: var(--code-colour);
   background-color: var(--pale-transparent-grey);
 }
@@ -514,4 +514,45 @@ dl.glossary > dt > dd {
 section #contributors img {
   display: inline;
   margin-right: 0.5rem;
+}
+
+
+/* =========================================================
+   Sphinx dark-mode additions
+   ========================================================= */
+
+/* pre / code backgrounds inherit --very-pale-grey which is
+   already re-mapped in general.css for .v-theme--dark */
+
+/* Sphinx tab panels */
+.v-theme--dark .sphinx-tabs-tab {
+  color: #7aa0c4;
+  background-color: transparent;
+}
+.v-theme--dark .sphinx-tabs-tab[aria-selected='true'] {
+  background-color: #1e1e1e;
+  border-color: #3a3a3a;
+  border-bottom-color: #1e1e1e;
+}
+.v-theme--dark .sphinx-tabs-panel {
+  background: #1e1e1e;
+  border-color: #3a3a3a;
+}
+.v-theme--dark [role='tablist'] {
+  border-bottom-color: #3a3a3a;
+}
+
+/* tab2 (custom tab system in Sphinx docs) */
+.v-theme--dark .tab2name.active {
+  background-color: #1e1e1e;
+  border-bottom-color: #1e1e1e;
+}
+.v-theme--dark .tab2name.inactive {
+  border-bottom-color: #3a3a3a;
+}
+
+/* Inline info spec boxes */
+.v-theme--dark .infospec {
+  background: #1a2530;
+  color: var(--text-colour);
 }
