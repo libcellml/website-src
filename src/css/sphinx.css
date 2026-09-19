@@ -331,12 +331,12 @@ dl {
   margin-bottom: 1rem;
 }
 [role='tablist'] {
-  border-bottom: 1px solid #a0b3bf;
+  border-bottom: 1px solid var(--border-colour);
 }
 .sphinx-tabs-tab {
   position: relative;
   font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  color: #1d5c87;
+  color: var(--useful-colour, #1d5c87);
   line-height: 24px;
   margin: 0;
   font-size: 16px;
@@ -349,19 +349,19 @@ dl {
 }
 .sphinx-tabs-tab[aria-selected='true'] {
   font-weight: 700;
-  border: 1px solid #a0b3bf;
-  border-bottom: 2px solid white;
+  border: 1px solid var(--border-colour);
+  border-bottom: 2px solid var(--very-pale-grey);
   margin: -1px;
-  background-color: white;
+  background-color: var(--very-pale-grey);
 }
 .sphinx-tabs-panel {
   position: relative;
   padding: 1rem;
-  border: 1px solid #a0b3bf;
+  border: 1px solid var(--border-colour);
   margin: 0px -1px -1px -1px;
   border-radius: 0 0 5px 5px;
   border-top: 0;
-  background: white;
+  background: var(--very-pale-grey);
 }
 [aria-controls] {
   cursor: pointer;
@@ -395,10 +395,10 @@ dl {
 }
 
 .tab2name.active {
-  background-color: white;
+  background-color: var(--very-pale-grey);
   font-weight: 700;
   color: var(--mid-red);
-  border-bottom: solid white 3px;
+  border-bottom: solid var(--very-pale-grey) 3px;
 }
 
 .tab2name.inactive {
@@ -452,7 +452,7 @@ dl {
 
 /* TODO collapse nicely ... */
 .infospec {
-  background: #e1eaf0;
+  background: var(--infospec-bg);
   color: var(--text-colour);
   padding: 0.6em;
 

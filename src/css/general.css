@@ -4,7 +4,7 @@
 
 :root {
   --bright-red: #af3c42;
-  --mid-red: #862e32;
+  --mid-red:  #862e33;
   --deep-red: #4e0202;
   --bright-red-transparent: #af3c4225;
 
@@ -62,6 +62,7 @@
   --text-font: 'Lato', 'proxima-nova', 'Helvetica Neue', 'Arial', sans-serif;
   --heading-font: Verdana, Geneva, Tahoma, sans-serif;
   --code-font: monospace;
+  --infospec-bg: #e1eaf0;
   --mono-font: monospace;
 }
 
@@ -73,7 +74,7 @@ h1 {
 }
 
 h2 {
-  color: #333333;
+  color: var(--text-colour);
   margin-bottom: 0.5em;
   margin-top: 1em;
   border-bottom: solid 0.05rem var(--terminal-colour);
@@ -141,7 +142,7 @@ h3 {
 }
 
 .v-btn--active {
-  background-color: rgb(255, 255, 255);
+  background-color: var(--surface, #ffffff);
 }
 
 .v-btn::before .v-btn--active {
@@ -432,6 +433,7 @@ This is needed to remove it.
   --terminal-colour: #3a3a3a !important;
   --border-colour: #3a3a3a;
   --code-colour: var(--deep-blue);
+  --infospec-bg: #1a2530;
 }
 
 /* Active route link in dark mode */
