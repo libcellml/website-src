@@ -34,7 +34,7 @@ pre {
 }
 
 /* Inline literal code blocks in the Sphinx-based files. */
-.theme--light.v-application code.code {
+.v-theme--light .v-application code.code {
   color: var(--deep-blue);
   padding: 0.1rem 0.3rem 0.2rem 0.3rem;
   margin: 0;
@@ -65,7 +65,7 @@ code {
   background-color: var(--pale-transparent-grey);
 }
 
-.theme--light.v-application code {
+.v-theme--light .v-application code {
   color: var(--code-colour);
   background-color: var(--pale-transparent-grey);
 }
@@ -331,12 +331,12 @@ dl {
   margin-bottom: 1rem;
 }
 [role='tablist'] {
-  border-bottom: 1px solid #a0b3bf;
+  border-bottom: 1px solid var(--border-colour);
 }
 .sphinx-tabs-tab {
   position: relative;
   font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  color: #1d5c87;
+  color: var(--useful-colour, #1d5c87);
   line-height: 24px;
   margin: 0;
   font-size: 16px;
@@ -349,19 +349,19 @@ dl {
 }
 .sphinx-tabs-tab[aria-selected='true'] {
   font-weight: 700;
-  border: 1px solid #a0b3bf;
-  border-bottom: 2px solid white;
+  border: 1px solid var(--border-colour);
+  border-bottom: 2px solid var(--very-pale-grey);
   margin: -1px;
-  background-color: white;
+  background-color: var(--very-pale-grey);
 }
 .sphinx-tabs-panel {
   position: relative;
   padding: 1rem;
-  border: 1px solid #a0b3bf;
+  border: 1px solid var(--border-colour);
   margin: 0px -1px -1px -1px;
   border-radius: 0 0 5px 5px;
   border-top: 0;
-  background: white;
+  background: var(--very-pale-grey);
 }
 [aria-controls] {
   cursor: pointer;
@@ -395,10 +395,10 @@ dl {
 }
 
 .tab2name.active {
-  background-color: white;
+  background-color: var(--very-pale-grey);
   font-weight: 700;
   color: var(--mid-red);
-  border-bottom: solid white 3px;
+  border-bottom: solid var(--very-pale-grey) 3px;
 }
 
 .tab2name.inactive {
@@ -452,7 +452,7 @@ dl {
 
 /* TODO collapse nicely ... */
 .infospec {
-  background: #e1eaf0;
+  background: var(--infospec-bg);
   color: var(--text-colour);
   padding: 0.6em;
 
@@ -514,4 +514,45 @@ dl.glossary > dt > dd {
 section #contributors img {
   display: inline;
   margin-right: 0.5rem;
+}
+
+
+/* =========================================================
+   Sphinx dark-mode additions
+   ========================================================= */
+
+/* pre / code backgrounds inherit --very-pale-grey which is
+   already re-mapped in general.css for .v-theme--dark */
+
+/* Sphinx tab panels */
+.v-theme--dark .sphinx-tabs-tab {
+  color: #7aa0c4;
+  background-color: transparent;
+}
+.v-theme--dark .sphinx-tabs-tab[aria-selected='true'] {
+  background-color: #1e1e1e;
+  border-color: #3a3a3a;
+  border-bottom-color: #1e1e1e;
+}
+.v-theme--dark .sphinx-tabs-panel {
+  background: #1e1e1e;
+  border-color: #3a3a3a;
+}
+.v-theme--dark [role='tablist'] {
+  border-bottom-color: #3a3a3a;
+}
+
+/* tab2 (custom tab system in Sphinx docs) */
+.v-theme--dark .tab2name.active {
+  background-color: #1e1e1e;
+  border-bottom-color: #1e1e1e;
+}
+.v-theme--dark .tab2name.inactive {
+  border-bottom-color: #3a3a3a;
+}
+
+/* Inline info spec boxes */
+.v-theme--dark .infospec {
+  background: #1a2530;
+  color: var(--text-colour);
 }
