@@ -9,6 +9,14 @@
     </router-link>
   </template>
   <search-bar></search-bar>
+  <v-btn
+    icon
+    :title="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
+    @click="toggle"
+    aria-label="Toggle colour scheme"
+  >
+    <v-icon>{{ isDark ? 'mdi-weather-sunny' : 'mdi-weather-night' }}</v-icon>
+  </v-btn>
   <bug-button></bug-button>
 </template>
 
@@ -16,10 +24,12 @@
 import { computed } from 'vue'
 
 import { useSiteStore } from '@/stores/site'
+import { useColorScheme } from '@/composables/useColorScheme'
 import BugButton from './BugButton.vue'
 import SearchBar from './SearchBar.vue'
 
 const store = useSiteStore()
+const { isDark, toggle } = useColorScheme()
 
 const hash = computed(() => {
   return store.breadcrumbs.length < 2

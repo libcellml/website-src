@@ -40,10 +40,6 @@ function onLeave() {
 </script>
 
 <style scoped>
-.bug-button {
-  margin-left: auto;
-}
-
 .buggy {
   /* margin-left: 3em; */
   font-size: 2.3em !important;
