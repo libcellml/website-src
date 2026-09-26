@@ -33,6 +33,7 @@
 import { onMounted, onUnmounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { useSearchStore } from '@/stores/search'
+import { EVENTS, trackEvent } from '@/js/analytics'
 
 const router = useRouter()
 const searchStore = useSearchStore()
@@ -89,6 +90,12 @@ watch(selectedItem, (selection) => {
   // v-combobox can sometimes set the model to the string text if no item matches.
   // We only want to navigate if it's an actual result object.
   if (selection && typeof selection === 'object' && selection.href) {
+    trackEvent(EVENTS.SELECT_SEARCH_RESULT, {
+      search_term: searchQuery.value,
+      search_source: 'typeahead',
+      position: searchStore.results.indexOf(selection) + 1,
+      result_count: searchStore.results.length,
+    })
     router.push(selection.href)
 
     // Reset UI

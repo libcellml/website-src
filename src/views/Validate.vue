@@ -79,6 +79,7 @@ import { computed, inject, ref } from 'vue'
 import { useNotificationsStore } from '@/stores/notifications'
 import IssueCard from '@/components/IssueCard.vue'
 import IssueHeading from '@/components/IssueHeading.vue'
+import { EVENTS, trackEvent } from '@/js/analytics'
 
 const store = useNotificationsStore()
 
@@ -188,8 +189,19 @@ function readFile() {
       validatorFoundErrors.value = Boolean(
         results.type === 'validator' && results.issues.length
       )
+      let result = 'valid'
+      if (parserFoundErrors.value) {
+        result = 'parser_errors'
+      } else if (validatorFoundErrors.value) {
+        result = 'validator_errors'
+      }
+      trackEvent(EVENTS.VALIDATE_MODEL, {
+        result,
+        issue_count: results.issues.length,
+      })
     } catch (err) {
       parserFoundErrors.value = true
+      trackEvent(EVENTS.VALIDATE_MODEL, { result: 'read_error' })
       store.add({
         type: 'error',
         title: `File read error:`,
@@ -199,6 +211,7 @@ function readFile() {
   }
 
   reader.onerror = function (evt) {
+    trackEvent(EVENTS.VALIDATE_MODEL, { result: 'read_error' })
     store.add({
       type: 'error',
       title: `File read error:`,

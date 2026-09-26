@@ -8,6 +8,7 @@
         target="_blank"
         class="bug-button"
         @mouseover="onEnter"
+        @click="onClick"
         @mouseleave="onLeave"
       >
         <v-icon class="buggy">mdi-bug</v-icon>
@@ -26,11 +27,16 @@
 
 <script setup>
 import { ref } from 'vue'
+import { EVENTS, trackEvent } from '@/js/analytics'
 
 const hover = ref(false)
 
 function onEnter() {
   hover.value = true
+}
+
+function onClick() {
+  trackEvent(EVENTS.REPORT_ISSUE_CLICK)
 }
 
 function onLeave() {

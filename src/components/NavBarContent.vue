@@ -12,7 +12,7 @@
   <v-btn
     icon
     :title="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
-    @click="toggle"
+    @click="onToggleTheme"
     aria-label="Toggle colour scheme"
   >
     <v-icon>{{ isDark ? 'mdi-weather-sunny' : 'mdi-weather-night' }}</v-icon>
@@ -27,6 +27,7 @@ import { useSiteStore } from '@/stores/site'
 import { useColorScheme } from '@/composables/useColorScheme'
 import BugButton from './BugButton.vue'
 import SearchBar from './SearchBar.vue'
+import { EVENTS, trackEvent } from '@/js/analytics'
 
 const store = useSiteStore()
 const { isDark, toggle } = useColorScheme()
@@ -46,6 +47,11 @@ const links = [
   { label: 'Services', location: '/services', hashLocation: '/#services' },
   { label: 'About', location: '/about', hashLocation: '/#about' },
 ]
+
+function onToggleTheme() {
+  toggle()
+  trackEvent(EVENTS.THEME_CHANGE, { theme: isDark.value ? 'dark' : 'light' })
+}
 
 function onSidebarButtonClicked() {
   store.toggleSidebar()

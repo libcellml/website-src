@@ -36,6 +36,14 @@ import * as fs from 'fs'
     await execa('yarn', ['run', 'build'])
     // Understand if it's dist or build folder
     const folderName = fs.existsSync('dist') ? 'dist' : 'build'
+    // Give every known route its own HTML page so deep links return 200 rather
+    // than GitHub Pages' 404 redirect (fixes search indexing and analytics
+    // referrers). Only production gets a sitemap.
+    const routePagesArgs = ['.github/scripts/generate-route-pages.mjs', folderName]
+    if (cname === 'libcellml.org') {
+      routePagesArgs.push(`https://${cname}`)
+    }
+    await execa('node', routePagesArgs)
     // Write out README.rst
     const content = `${readmeTitle}Do **not** make changes to this repository. It is generated from a source repository. See the source repository https://github.com/libcellml/website-src for instructions on how to build and deploy this website.`
     await fs.promises.writeFile(`${folderName}/README.rst`, content)

@@ -9,7 +9,8 @@
     "dev": "vite",
     "preview": "vite preview",
     "github-deploy": "node .github/scripts/github-deploy.mjs",
-    "build-search-index": "node src/scripts/build-search-index.js"
+    "build-search-index": "node src/scripts/build-search-index.js",
+    "build-route-pages": "node .github/scripts/generate-route-pages.mjs dist"
   },
   "dependencies": {
     "@mdi/font": "7.4.47",

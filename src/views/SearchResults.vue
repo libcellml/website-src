@@ -106,6 +106,7 @@
               v-for="(result, i) in results"
               :key="`search_result_${i}`"
               :to="result.href"
+              @click="onResultClicked(i)"
               class="mb-4 result-card"
               variant="flat"
             >
@@ -145,6 +146,7 @@
 import { ref, computed, onMounted, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useSearchStore } from '@/stores/search'
+import { EVENTS, trackEvent } from '@/js/analytics'
 
 const route = useRoute()
 const router = useRouter()
@@ -179,6 +181,15 @@ const clearSearch = () => {
   searchStore.results = []
 }
 
+const onResultClicked = (index) => {
+  trackEvent(EVENTS.SELECT_SEARCH_RESULT, {
+    search_term: String(currentQuery.value).substring(0, 100),
+    search_source: 'results_page',
+    position: index + 1,
+    result_count: results.value.length,
+  })
+}
+
 const runSearchFromUrl = async () => {
   const query = route.query.q
 
@@ -197,6 +208,11 @@ const runSearchFromUrl = async () => {
 
   // Execute Search
   searchStore.search(query)
+
+  trackEvent(EVENTS.SEARCH, {
+    search_term: String(query).substring(0, 100),
+    result_count: searchStore.results.length,
+  })
 }
 
 onMounted(() => {

@@ -54,6 +54,7 @@ import { useRoute, useRouter } from 'vue-router'
 import { useSiteStore } from '@/stores/site'
 import { getDocumentationVersions } from '@/js/documentationversions'
 import { versionedRouteNames, changeRouteVersion } from '@/router'
+import { EVENTS, trackEvent, docSetForRoute } from '@/js/analytics'
 
 const store = useSiteStore()
 const route = useRoute()
@@ -123,12 +124,23 @@ function getRouteForVersion(version) {
   return changedRoute
 }
 
+function trackVersionChange(toVersion, trigger) {
+  trackEvent(EVENTS.DOCS_VERSION_CHANGE, {
+    from_version: store.current_documentation_version,
+    to_version: toVersion,
+    doc_set: docSetForRoute(route),
+    trigger,
+  })
+}
+
 function onViewLatest() {
+  trackVersionChange(latest, 'old_version_banner')
   router.push(getRouteForVersion(latest))
   store.setCurrentDocumentationVersion(latest)
 }
 
 function updateCurrentVersion(version) {
+  trackVersionChange(version.text, 'version_picker')
   router.push(getRouteForVersion(version.text))
   store.setCurrentDocumentationVersion(version.text)
 }

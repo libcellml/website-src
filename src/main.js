@@ -5,6 +5,7 @@ import App from './App.vue'
 import router from './router'
 import vuetify from './plugins/vuetify'
 import VueGtag from 'vue-gtag'
+import { analyticsEnabled, pageViewTemplate } from './js/analytics'
 
 import { loadFonts } from './plugins/webfontloader'
 
@@ -22,17 +23,29 @@ loadFonts()
 
 const pinia = createPinia()
 
-createApp(App)
-  .use(pinia)
-  .use(router)
-  .use(
+const app = createApp(App).use(pinia).use(router)
+
+// Only load Google Analytics when a measurement ID has been provided
+// (set at deploy time), so local development sends nothing.
+if (analyticsEnabled) {
+  app.use(
     VueGtag,
     {
-      pageTrackerUseFullPath: true,
-      config: { id: import.meta.env.VITE_GA_MEASUREMENT_ID },
+      pageTrackerTemplate: pageViewTemplate,
+      config: {
+        id: import.meta.env.VITE_GA_MEASUREMENT_ID,
+        params: {
+          // We don't run ads, so don't collect advertising signals.
+          allow_google_signals: false,
+          allow_ad_personalization_signals: false,
+        },
+      },
     },
     router,
   )
+}
+
+app
   .use(vuetify)
   .use(installVue3DoxygenXml)
   .use(installVue3SphinxXml)

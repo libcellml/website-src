@@ -8,6 +8,10 @@
       // Thank you internet explorer for requiring such awesome workarounds in order to work properly
       // ====================================================================================================================
       sessionStorage.redirect = location.href
+      // Keep the original referrer so analytics can attribute the visit correctly.
+      if (document.referrer) {
+        sessionStorage.redirectReferrer = document.referrer
+      }
     </script>
     <meta http-equiv="refresh" content="0;URL='/'" />
   </head>
