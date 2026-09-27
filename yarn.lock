@@ -1403,10 +1403,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"filesize@npm:^11.0.24":
-  version: 11.0.24
-  resolution: "filesize@npm:11.0.24"
-  checksum: 10/63bfa0017868fddcb03870cde5d27c0a64bd7cf9e31bb098928b01aad282e37f45758cfd2a56dd21586e4cd0586dfa7652d4eedc319fe2da69752b2e8867ca46
+"filesize@npm:^11.0.25":
+  version: 11.0.25
+  resolution: "filesize@npm:11.0.25"
+  checksum: 10/23ab096c37c035314069ab6e84f1127177f1ca4d5ecdc3dfed325148888da4e623e92fcdda28d03075e298581a89c59ca0e0fa3eb9dd9fe413bba171be761a6a
   languageName: node
   linkType: hard
 
@@ -1793,7 +1793,7 @@ __metadata:
     eslint-config-prettier: "npm:^10.1.8"
     eslint-plugin-vue: "npm:^10.11.1"
     fast-xml-parser: "npm:^5.11.1"
-    filesize: "npm:^11.0.24"
+    filesize: "npm:^11.0.25"
     glob: "npm:^13.0.6"
     jszip: "npm:^3.10.2"
     katex: "npm:^0.18.9"
@@ -1808,9 +1808,9 @@ __metadata:
     vue: "npm:^3.5.43"
     vue-gtag: "npm:^3.7.1"
     vue-router: "npm:5.3.1"
-    vue3-doxygen-xml: "npm:0.5.0-0"
+    vue3-doxygen-xml: "npm:0.5.0"
     vue3-libcellml.js: "npm:^0.7.1"
-    vue3-sphinx-xml: "npm:0.7.0-0"
+    vue3-sphinx-xml: "npm:0.7.0"
     vuetify: "npm:^4.2.2"
     webfontloader: "npm:^1.6.28"
   languageName: unknown
@@ -2886,27 +2886,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue3-doxygen-xml@npm:0.5.0-0":
-  version: 0.5.0-0
-  resolution: "vue3-doxygen-xml@npm:0.5.0-0"
+"vue3-doxygen-xml@npm:0.5.0":
+  version: 0.5.0
+  resolution: "vue3-doxygen-xml@npm:0.5.0"
   dependencies:
     axios: "npm:^1.3.5"
   peerDependencies:
     vue: ^3.2.0
     vue-router: ^4.0.0
-  checksum: 10/f18cf3f366f98da1b50486e013a2c3d51a850377ce5763ae23df8817299113c1441ee1a3a6f754c8b89ebecadb7302558a906b9c5995628dd186e613c74d2c02
+  checksum: 10/266dd38282a61fa3cc55e38f1e24afb448de56a2b21a1cd833afdfe58ff1815515f94ef22ec8895146794e4714d34f002304276ae9c42d685aac52d3903ce94a
   languageName: node
   linkType: hard
 
-"vue3-katex@npm:0.9.0-3":
-  version: 0.9.0-3
-  resolution: "vue3-katex@npm:0.9.0-3"
+"vue3-katex@npm:^0.9.0":
+  version: 0.9.0
+  resolution: "vue3-katex@npm:0.9.0"
   dependencies:
     deepmerge: "npm:^4.3.1"
   peerDependencies:
     katex: ^0.17.0 || ^0.18.0
     vue: ^3.2.22
-  checksum: 10/9d080f7aa5eea31081807af9533b14891d6f9742d49adf00c8f1367d845cf822409a161306747feb2001d757ef3172fd9c5a52673c4036aa83b43ed54a36c7ba
+  checksum: 10/22549a3f1e15f623aef8b61e7c296ed6a29791f03431ed984b14625a3fdd60747c9a0bd96abb0ff1baa93d4ecd3c9db77fccf863647f32389a58e64368803563
   languageName: node
   linkType: hard
 
@@ -2921,18 +2921,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue3-sphinx-xml@npm:0.7.0-0":
-  version: 0.7.0-0
-  resolution: "vue3-sphinx-xml@npm:0.7.0-0"
+"vue3-sphinx-xml@npm:0.7.0":
+  version: 0.7.0
+  resolution: "vue3-sphinx-xml@npm:0.7.0"
   dependencies:
     "@hsorby/vue3-highlightjs": "npm:^1.1.0"
     axios: "npm:^1.20.0"
-    vue3-katex: "npm:0.9.0-3"
+    vue3-katex: "npm:^0.9.0"
   peerDependencies:
     katex: ^0.17.0 || ^0.18.0
     vue: ^3.2.0
     vue-router: ^4.0.0 || ^5.0.0
-  checksum: 10/30724f275c72d54c8331a46ddb9a33b070ac417100114b9f8eb8cf027f979a0e5dc92fe116674ec4520c66d690500903c10a0df9754ef9688ee0d54571be4c89
+  checksum: 10/f68d96a9ce362995cb9833f7b03f66a6e0775b67b3c1022e5b6ef1a60d4463015abf0bdba6aa918301b1b4cc46d024a3e620f10858a3a7006766c55fcc60d758
   languageName: node
   linkType: hard
 
