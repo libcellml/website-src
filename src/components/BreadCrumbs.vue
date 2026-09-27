@@ -36,6 +36,7 @@
           <v-breadcrumbs-item v-else :to="defineBreadcrumbTarget(item.target)">
             <template v-if="item.text === 'Home'">
               <v-icon size="1.3em">mdi-home</v-icon>
+              <span class="d-sr-only">Home</span>
             </template>
             <template v-else>
               {{ item.text }}

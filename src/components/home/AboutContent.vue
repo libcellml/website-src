@@ -69,19 +69,28 @@
     <v-container class="image-box">
       <v-row>
         <v-col class="col-12 col-sm-6 col-md-4">
-          <img src="../../assets/logo_medtech_core.png" />
+          <img src="../../assets/logo_medtech_core.png" alt="MedTech CoRE" />
         </v-col>
         <v-col class="col-12 col-sm-6 col-md-4">
-          <img src="../../assets/logo_maurice_wilkins.png" />
+          <img
+            src="../../assets/logo_maurice_wilkins.png"
+            alt="Maurice Wilkins Centre for Molecular Biodiscovery"
+          />
         </v-col>
         <v-col class="col-12 col-sm-6 col-md-4">
-          <img src="../../assets/logo_vpr.png" />
+          <img
+            src="../../assets/logo_vpr.png"
+            alt="The Virtual Physiological Rat Project"
+          />
         </v-col>
         <v-col class="col-12 col-sm-6 col-md-4">
-          <img src="../../assets/logo_abi.png" />
+          <img
+            src="../../assets/logo_abi.png"
+            alt="The University of Auckland and Auckland Bioengineering Institute"
+          />
         </v-col>
         <v-col class="col-12 col-sm-6 col-md-4">
-          <img src="../../assets/logo_aotearoa.png" />
+          <img src="../../assets/logo_aotearoa.png" alt="Aotearoa Foundation" />
         </v-col>
       </v-row>
     </v-container>

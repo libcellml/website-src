@@ -1,8 +1,11 @@
 <template>
   <v-col cols="1">
-    <img src="../assets/logo.svg" width="40" height="40" />
+    <img src="../assets/logo.svg" width="40" height="40" alt="libCellML" />
   </v-col>
-  <v-app-bar-nav-icon @click="onSidebarButtonClicked" />
+  <v-app-bar-nav-icon
+    aria-label="Toggle navigation menu"
+    @click="onSidebarButtonClicked"
+  />
   <template v-for="link in links" :key="link.label">
     <router-link :to="hash ? link.hashLocation : link.location">
       <v-btn text> {{ link.label }} </v-btn>

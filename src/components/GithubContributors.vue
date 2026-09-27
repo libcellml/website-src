@@ -16,7 +16,7 @@
                   <img
                     class="avatar_img"
                     :src="person.avatar_url"
-                    :alt="person.name"
+                    alt=""
                   />
                 </v-col>
                 <v-col class="avatar_name">{{
