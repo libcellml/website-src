@@ -47,7 +47,12 @@
               >clear</v-btn
             ></v-list-subheader
           >
-          <v-tooltip bottom v-for="(item, i) in downloads" :key="i">
+          <v-tooltip
+            bottom
+            v-for="(item, i) in downloads"
+            :key="i"
+            aria-label="Download"
+          >
             <template v-slot:activator="{ props }">
               <v-list-item
                 v-bind="props"

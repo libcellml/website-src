@@ -8,7 +8,7 @@
         sm="6"
         md="3"
       >
-        <v-tooltip anchor="bottom">
+        <v-tooltip anchor="bottom" :aria-label="contributionSummary(person)">
           <template v-slot:activator="{ props }">
             <a v-bind="props" :href="person.url" target="_blank">
               <v-row no-gutters>
@@ -17,6 +17,10 @@
                     class="avatar_img"
                     :src="person.avatar_url"
                     alt=""
+                    width="64"
+                    height="64"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </v-col>
                 <v-col class="avatar_name">{{
@@ -130,7 +134,7 @@ onMounted(() => {
                     tmpUserData.push({
                       name: u.name,
                       login: u.login,
-                      avatar_url: u.avatar_url,
+                      avatar_url: avatarUrl(u.avatar_url),
                       url: u.html_url,
                       repos: users[indexOfUser].repos,
                       index: Math.random(), // Used for getting a random display order
@@ -173,6 +177,19 @@ onMounted(() => {
       })
     })
 })
+// GitHub serves 460px avatars by default; ask for 128px, enough for the
+// 64px display size on high-density screens.
+function avatarUrl(url) {
+  const avatar = new URL(url)
+  avatar.searchParams.set('s', '128')
+  return avatar.toString()
+}
+
+function contributionSummary(person) {
+  const repoNames = person.repos.map((repo) => repo.name).join(', ')
+  return `${person.name || person.login} contributed to: ${repoNames}`
+}
+
 function serviceOveruse(reset) {
   const d = new Date(reset * 1000)
   const time = Intl.DateTimeFormat('en', {
@@ -188,6 +205,7 @@ function serviceOveruse(reset) {
 <style scoped>
 .avatar_img {
   max-width: 4em;
+  height: auto;
   border-radius: 50%;
 }
 .avatar_name {

@@ -1,5 +1,9 @@
 <template>
-  <v-tooltip anchor="bottom" :disabled="hintOpen">
+  <v-tooltip
+    anchor="bottom"
+    :disabled="hintOpen"
+    aria-label="Report a problem"
+  >
     <template #activator="{ props }">
       <v-btn
         id="bug-button"

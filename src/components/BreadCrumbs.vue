@@ -13,7 +13,8 @@
         <template v-slot:divider>
           <v-icon>mdi-chevron-right</v-icon>
         </template>
-        <template v-slot:title="{ item }">
+        <!-- The item slot replaces Vuetify's own <li>, so ours is not nested inside it. -->
+        <template v-slot:item="{ item, index }">
           <!-- Dropdown in the breadcrumbs menu: -->
           <v-breadcrumbs-item v-if="item.versionChoice">
             <v-select
@@ -33,7 +34,11 @@
             </v-select>
           </v-breadcrumbs-item>
           <!-- Normal item, no dropdown, formed from named page: -->
-          <v-breadcrumbs-item v-else :to="defineBreadcrumbTarget(item.target)">
+          <v-breadcrumbs-item
+            v-else
+            :to="defineBreadcrumbTarget(item.target)"
+            :disabled="index === store.breadcrumbs.length - 1"
+          >
             <template v-if="item.text === 'Home'">
               <v-icon size="1.3em">mdi-home</v-icon>
               <span class="d-sr-only">Home</span>

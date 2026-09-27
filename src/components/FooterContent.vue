@@ -12,7 +12,7 @@
           ><img
             alt="Creative Commons Attribution 4.0 International License"
             style="border-width: 0"
-            src="https://i.creativecommons.org/l/by/4.0/88x31.png"
+            src="../assets/cc-by.svg"
         /></a>
       </span>
     </v-col>
