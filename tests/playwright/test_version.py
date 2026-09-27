@@ -5,8 +5,10 @@ import unittest
 from playwright.sync_api import sync_playwright, expect
 
 try:
+    from .helpers import expect_home_page
     from .config import BASE_URL, HEADLESS_MODE
 except ImportError:
+    from helpers import expect_home_page
     from config import BASE_URL, HEADLESS_MODE
 
 
@@ -46,7 +48,7 @@ class TestVersionInformation(unittest.TestCase):
             expect(revision.locator("xpath=..")).to_have_text(
                 re.compile(r"^\s*The revision this website was created from is [0-9a-f]{8}\.\s*$"))
             page.get_by_role("button", name="Home").click()
-            expect(page.locator("#introContent")).to_match_aria_snapshot("- heading \"libCellML is an easy-to-use library for developers of CellML applications.\" [level=3]")
+            expect_home_page(page)
 
             # ---------------------
             context.close()
