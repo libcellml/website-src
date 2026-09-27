@@ -73,9 +73,10 @@
 </template>
 
 <script setup>
-import { computed, inject, ref } from 'vue'
+import { computed, ref } from 'vue'
 
 import { useNotificationsStore } from '@/stores/notifications'
+import { useLibcellml } from '@/composables/useLibcellml'
 import IssueHeading from '../components/IssueHeading.vue'
 import IssueCard from '../components/IssueCard.vue'
 
@@ -89,7 +90,7 @@ const modelFile = ref([])
 const parserFoundErrors = ref(false)
 const downloads = ref([])
 
-const libcellml = inject('$libcellml')
+const libcellml = useLibcellml()
 
 const ableToImportModel = computed(() => {
   return libcellml.status === 'ready' ? modelFile.value.size > 0 : false

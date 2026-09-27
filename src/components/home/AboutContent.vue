@@ -111,19 +111,10 @@
 </template>
 
 <script setup>
-import { computed, inject } from 'vue'
+// Read the version at build time rather than loading the ~2.2 MB libcellml
+// WebAssembly module just to call versionString(). libcellml.js releases share
+// the libcellml version number, so the two are the same.
+import { version as libcellmlVersionString } from 'libcellml.js/package.json'
 
 import GithubContributors from '../GithubContributors.vue'
-
-const libcellml = inject('$libcellml')
-
-const libcellmlVersionString = computed(() => {
-  if (libcellml.status === 'loading') {
-    return '[loading libcellml ...]'
-  }
-
-  return libcellml.library === null
-    ? '<unavailable>'
-    : libcellml.library.versionString()
-})
 </script>
