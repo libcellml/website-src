@@ -8,7 +8,7 @@
   --deep-red: #4e0202;
   --bright-red-transparent: #af3c4225;
 
-  --mid-grey: #777777;
+  --mid-grey: #6f6f6f; /* 5.0:1 on white, 4.65:1 on --very-pale-grey */
   --pale-grey: #dddddd;
   --very-pale-grey: #f6f6f6;
 
@@ -16,7 +16,7 @@
   --pale-transparent-grey: rgba(62, 72, 82, 0.05);
   --deep-blue: #476582;
   --deep-blue-grey: #2d4046c7;
-  --bright-blue: #1f76be;
+  --bright-blue: #1e72b8; /* 4.6:1 on --useful-background-colour */
 
   --very-pale-green: #fbfff6;
   --mid-green: rgb(80, 121, 0);
@@ -382,13 +382,13 @@ This is needed to remove it.
   --pale-transparent-grey: rgba(180, 180, 180, 0.10);
 
   /* Brand reds (slightly lightened for dark backgrounds) */
-  --bright-red: #d45c63;
+  --bright-red: #d66269; /* 4.6:1 on #1e1e1e */
   --mid-red: #c04850;
   --deep-red: #e07078;
-  --bright-red-transparent: #d45c6325;
+  --bright-red-transparent: #d6626925;
 
   /* Blues */
-  --deep-blue: #7aa0c4;
+  --deep-blue: #7fa4c6; /* 4.6:1 on the dark note box background */
   --deep-blue-grey: #3d5a6680;
   --bright-blue: #4d9ee6;
 

@@ -27,7 +27,7 @@
 
         <v-expansion-panels class="mb-8">
           <v-expansion-panel>
-            <v-expansion-panel-title class="text-caption text-grey-darken-1">
+            <v-expansion-panel-title class="text-caption text-medium-emphasis">
               <v-icon start icon="mdi-help-circle-outline" size="small" />
               Search Syntax & Tips
             </v-expansion-panel-title>
@@ -112,12 +112,12 @@
             >
               <v-card-item>
                 <template v-slot:title>
-                  <span class="text-primary font-weight-bold">{{
+                  <span class="result-title font-weight-bold">{{
                     result.title
                   }}</span>
                 </template>
                 <template v-slot:subtitle>
-                  <span class="text-caption">{{ result.href }}</span>
+                  <span class="text-caption result-href">{{ result.href }}</span>
                 </template>
               </v-card-item>
 
@@ -229,6 +229,17 @@ watch(
 </script>
 
 <style scoped>
+/* The theme's primary grey and the card subtitle's default fade are too
+   light to read comfortably, so use the site grey at full strength. */
+.result-title,
+.result-href {
+  color: var(--mid-grey);
+}
+
+.result-card :deep(.v-card-subtitle) {
+  opacity: 1;
+}
+
 .search-results-page {
   min-height: 60vh; /* Ensure footer stays down if few results */
 }

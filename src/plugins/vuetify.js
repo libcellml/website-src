@@ -25,6 +25,11 @@ export default createVuetify({
           background: '#ffffff',
           surface: '#ffffff',
         },
+        variables: {
+          // Vuetify's light default (0.60) leaves field labels and other
+          // secondary text below WCAG AA contrast; 0.70 matches the dark theme.
+          'medium-emphasis-opacity': 0.7,
+        },
       },
       dark: {
         dark: true,

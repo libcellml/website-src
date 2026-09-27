@@ -525,7 +525,7 @@ section #contributors img {
 
 /* Sphinx tab panels */
 .v-theme--dark .sphinx-tabs-tab {
-  color: #7aa0c4;
+  color: var(--deep-blue);
   background-color: transparent;
 }
 .v-theme--dark .sphinx-tabs-tab[aria-selected='true'] {
@@ -554,4 +554,36 @@ section #contributors img {
 .v-theme--dark .infospec {
   background: #1a2530;
   color: var(--text-colour);
+}
+
+/* =========================================================
+   highlight.js light theme contrast
+   ========================================================= */
+
+/* The qtcreator-light theme's olive (#808000) and green (#008000) fall short
+   of the 4.5:1 contrast WCAG AA asks for on our code background, so darken
+   them just enough. The dark theme already passes. */
+.v-theme--light .hljs-keyword,
+.v-theme--light .hljs-selector-tag,
+.v-theme--light .hljs-function,
+.v-theme--light .hljs-section,
+.v-theme--light .hljs-symbol,
+.v-theme--light .hljs-name {
+  color: #6e6e00;
+}
+
+.v-theme--light .hljs-string,
+.v-theme--light .hljs-selector-id,
+.v-theme--light .hljs-selector-attr,
+.v-theme--light .hljs-selector-pseudo,
+.v-theme--light .hljs-type,
+.v-theme--light .hljs-built_in,
+.v-theme--light .hljs-template-tag,
+.v-theme--light .hljs-template-variable,
+.v-theme--light .hljs-addition,
+.v-theme--light .hljs-link,
+.v-theme--light .hljs-comment,
+.v-theme--light .hljs-meta,
+.v-theme--light .hljs-deletion {
+  color: #007c00;
 }
