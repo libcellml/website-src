@@ -3,6 +3,11 @@ import vue from '@vitejs/plugin-vue'
 import vuetify from 'vite-plugin-vuetify'
 import { resolve } from 'path'
 
+import { DEFAULT_DESCRIPTION } from './src/js/pageDescriptions.js'
+
+const escapeAttribute = (text) =>
+  text.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;')
+
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
@@ -14,6 +19,12 @@ export default defineConfig({
       /\.(woff2?|ttf|otf|eot)$/.test(filePath) ? false : undefined,
   },
   plugins: [
+    {
+      // Put the site-wide description into index.html.
+      name: 'page-description',
+      transformIndexHtml: (html) =>
+        html.replace('%PAGE_DESCRIPTION%', escapeAttribute(DEFAULT_DESCRIPTION)),
+    },
     vue(),
     vuetify({
       autoImport: true,

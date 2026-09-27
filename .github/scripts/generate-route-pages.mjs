@@ -20,6 +20,7 @@ import * as path from 'path'
 
 import { getDocumentationVersions } from '../../src/js/documentationversions.js'
 import { useCommon } from '../../src/composables/common.js'
+import { descriptionForPath } from '../../src/js/pageDescriptions.js'
 
 const distDir = path.resolve(process.argv[2] || 'dist')
 const siteUrl = process.argv[3] ? process.argv[3].replace(/\/$/, '') : null
@@ -121,7 +122,11 @@ for (const version of versions) {
 
 const indexHtml = fs.readFileSync(path.join(distDir, 'index.html'), 'utf-8')
 const escapeHtml = (text) =>
-  text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+  text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
 
 let written = 0
 let skipped = 0
@@ -132,10 +137,12 @@ for (const [route, { title }] of routes) {
     continue
   }
   fs.mkdirSync(path.dirname(target), { recursive: true })
-  const html = indexHtml.replace(
-    /<title>[^<]*<\/title>/,
-    `<title>${escapeHtml(title)}</title>`,
-  )
+  const html = indexHtml
+    .replace(/<title>[^<]*<\/title>/, `<title>${escapeHtml(title)}</title>`)
+    .replace(
+      /(<meta name="description" content=")[^"]*(")/,
+      `$1${escapeHtml(descriptionForPath(route))}$2`,
+    )
   fs.writeFileSync(target, html)
   written += 1
 }

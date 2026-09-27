@@ -7,6 +7,7 @@ import Home from '@/views/Home.vue'
 // import { pageview } from 'vue-gtag'
 
 import { getDocumentationVersions } from '../js/documentationversions'
+import { descriptionForPath } from '../js/pageDescriptions'
 import { useCommon } from '@/composables/common'
 
 const { documentationInfoMap } = useCommon()
@@ -339,6 +340,9 @@ router.beforeEach((to) => {
 router.afterEach((to, from) => {
   setTimeout(() => {
     document.title = to.meta.title || DEFAULT_TITLE
+    document
+      .querySelector('meta[name="description"]')
+      ?.setAttribute('content', descriptionForPath(to.path))
   }, 0)
 })
 
