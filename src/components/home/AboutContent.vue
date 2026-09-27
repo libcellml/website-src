@@ -1,7 +1,7 @@
 <template>
   <div id="aboutContent" class="about">
     <h1>About libCellML</h1>
-    <h3>Questions and comments</h3>
+    <h2>Questions and comments</h2>
     <p>
       The library is designed to be used for working with CellML models. For
       questions, feature requests, and bug reports about the libCellML library,
@@ -17,7 +17,7 @@
       >.
     </p>
 
-    <h3>Citing libCellML</h3>
+    <h2>Citing libCellML</h2>
     <p>
       Until we have a formal paper to cite, please link to the official
       libCellML website
