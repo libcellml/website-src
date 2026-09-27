@@ -4,7 +4,7 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 import vuetify from './plugins/vuetify'
-import VueGtag from 'vue-gtag'
+import { createGtag } from 'vue-gtag'
 import { analyticsEnabled, pageViewTemplate } from './js/analytics'
 
 import { loadFonts } from './plugins/webfontloader'
@@ -29,19 +29,18 @@ const app = createApp(App).use(pinia).use(router)
 // (set at deploy time), so local development sends nothing.
 if (analyticsEnabled) {
   app.use(
-    VueGtag,
-    {
-      pageTrackerTemplate: pageViewTemplate,
+    createGtag({
+      tagId: import.meta.env.VITE_GA_MEASUREMENT_ID,
       config: {
-        id: import.meta.env.VITE_GA_MEASUREMENT_ID,
-        params: {
-          // We don't run ads, so don't collect advertising signals.
-          allow_google_signals: false,
-          allow_ad_personalization_signals: false,
-        },
+        // We don't run ads, so don't collect advertising signals.
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
       },
-    },
-    router,
+      pageTracker: {
+        router,
+        template: pageViewTemplate,
+      },
+    }),
   )
 }
 

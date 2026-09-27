@@ -58,7 +58,7 @@
       >
         our documentation</a
       >
-      are shown below (in an actively randomised order):
+      are shown below (randomised order every page load):
     </p>
 
     <github-contributors />

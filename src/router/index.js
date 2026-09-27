@@ -52,13 +52,11 @@ const homeRoute = {
   name: 'Home',
   meta: { title: 'libCellML: Home' },
   component: Home,
-  beforeEnter: (to, from, next) => {
+  beforeEnter: (to, from) => {
     if (sessionStorage.getItem('redirect') !== null) {
       const redirect = sessionStorage.redirect
       delete sessionStorage.redirect
-      next(redirect)
-    } else {
-      next()
+      return redirect
     }
   },
 }
@@ -321,7 +319,7 @@ export const calculateBreadcrumbs = (to) => {
   return crumbs
 }
 
-router.beforeEach((to, from, next) => {
+router.beforeEach((to) => {
   const siteStore = useSiteStore()
 
   if (to.params.version) {
@@ -331,14 +329,11 @@ router.beforeEach((to, from, next) => {
 
     if (typeof versionCheck === 'object') {
       // It's a redirect (e.g. 'latest' or invalid version)
-      next(versionCheck)
-      return
+      return versionCheck
     }
   }
 
   siteStore.setBreadcrumbs(calculateBreadcrumbs(to))
-
-  next()
 })
 
 router.afterEach((to, from) => {

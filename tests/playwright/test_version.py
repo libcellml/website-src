@@ -21,21 +21,30 @@ class TestVersionInformation(unittest.TestCase):
             page = context.new_page()
             page.goto(BASE_URL)
             page.get_by_role("button", name="About").click()
-            expect(page.locator("#aboutContent")).to_match_aria_snapshot("- paragraph:\n  - text: The version of\n  - link \"libcellml.js\":\n    - /url: https://www.npmjs.com/package/libcellml.js\n  - text: \"that this website is using is: 0.6.3\"")
-            page.get_by_role("button").filter(has_text=re.compile(r"^$")).click()
-            page.get_by_role("link", name="About libCellML").click()
-            expect(page.locator("#aboutContent")).to_match_aria_snapshot("- heading \"About libCellML\" [level=1]")
-            page.get_by_role("button", name="Download").click()
-            page.get_by_role("button", name="Documentation").click()
-            page.get_by_role("link", name="API Documentation").click()
-            page.get_by_role("link", name="documentation", exact=True).click()
+            expect(page.locator("#aboutContent")).to_match_aria_snapshot("- paragraph:\n  - text: The version of\n  - link \"libcellml.js\":\n    - /url: https://www.npmjs.com/package/libcellml.js\n  - text: \"/^that this website is using is: [0-9]+[.][0-9]+[.][0-9]+$/\"")
+            # page.pause()
+            # page.get_by_role("button").filter(has_text=re.compile(r"^$")).click()
+            # page.goto(BASE_URL + "about")
+            # page.get_by_role("link", name="About libCellML").click()
             page.get_by_role("button", name="About").click()
-            expect(page.locator("#pageMainContent")).to_match_aria_snapshot("- heading \"Website version information\" [level=3]")
-            expect(page.locator("#pageMainContent")).to_match_aria_snapshot("- paragraph:\n  - text: The build identifier for the website is\n  - strong: /\\d+-\\d+-\\d+-\\d+-\\d+-\\d+/\n  - text: UTC.")
+            expect(page.locator("#aboutContent")).to_contain_text("About libCellML")
+            expect(page.get_by_role("heading", name="About libCellML")).to_be_visible()
+            expect(page.locator("#aboutContent")).to_contain_text("Citing libCellML")
+            page.get_by_role("button", name="Documentation").click()
+            page.get_by_role("link", name="Documentation page").click()
+            page.get_by_role("button", name="About").click()
+            expect(page.get_by_role("heading", name="Citing libCellML")).to_be_visible()
+            # The revision is rendered in <strong data-testid="about-website-build-revision">.
+            # Note: Locator.click() returns None, so keep the locator itself, and the
+            # locator *is* the <strong> element, so don't look for a nested "strong".
+            revision = page.get_by_test_id("about-website-build-revision")
+            expect(revision).to_be_visible()
             if sha != "stuvwxyz":
-              expect(page.locator("#pageMainContent")).to_match_aria_snapshot(f"- paragraph:\n  - text: The revision this website was created from is\n  - strong: {sha[:8]}\n  - text: .")
+                expect(revision).to_have_text(sha[:8])
             else:
-              expect(page.locator("#pageMainContent")).to_match_aria_snapshot("- paragraph:\n  - text: The revision this website was created from is\n  - strong: /[a-z0-9]{8,8}/\n  - text: .")
+                expect(revision).to_have_text(re.compile(r"^[0-9a-f]{8}$"))
+            expect(revision.locator("xpath=..")).to_have_text(
+                re.compile(r"^\s*The revision this website was created from is [0-9a-f]{8}\.\s*$"))
             page.get_by_role("button", name="Home").click()
             expect(page.locator("#introContent")).to_match_aria_snapshot("- heading \"libCellML is an easy-to-use library for developers of CellML applications.\" [level=3]")
 

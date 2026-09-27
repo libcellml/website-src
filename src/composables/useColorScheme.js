@@ -24,7 +24,7 @@ export function useColorScheme() {
   const isDark = computed(() => store.darkMode)
 
   function applyTheme(dark) {
-    theme.global.name.value = dark ? 'dark' : 'light'
+    theme.change(dark ? 'dark' : 'light')
   }
 
   function toggle() {
