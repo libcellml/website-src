@@ -17,14 +17,11 @@ export default defineConfig({
   define: { 'process.env': {} },
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src'),
+      '@': resolve(import.meta.dirname, 'src'),
     },
   },
   optimizeDeps: {
     exclude: ['vue3-libcellml.js'],
-    exbuildOptions: {
-      target: 'es2020',
-    },
   },
   server: {
     fs: {

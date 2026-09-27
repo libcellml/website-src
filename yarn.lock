@@ -2,7 +2,7 @@
 # Manual changes might be lost - proceed with caution!
 
 __metadata:
-  version: 8
+  version: 10
   cacheKey: 10
 
 "@babel/helper-string-parser@npm:^7.29.7":
@@ -573,13 +573,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/trusted-types@npm:^2.0.7":
-  version: 2.0.7
-  resolution: "@types/trusted-types@npm:2.0.7"
-  checksum: 10/8e4202766a65877efcf5d5a41b7dd458480b36195e580a3b1085ad21e948bc417d55d6f8af1fd2a7ad008015d4117d5fdfe432731157da3c68678487174e4ba3
-  languageName: node
-  linkType: hard
-
 "@vitejs/plugin-vue@npm:^6.0.9":
   version: 6.0.9
   resolution: "@vitejs/plugin-vue@npm:6.0.9"
@@ -867,18 +860,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.17.0, axios@npm:^1.3.5":
-  version: 1.18.1
-  resolution: "axios@npm:1.18.1"
-  dependencies:
-    follow-redirects: "npm:^1.16.0"
-    form-data: "npm:^4.0.5"
-    https-proxy-agent: "npm:^5.0.1"
-    proxy-from-env: "npm:^2.1.0"
-  checksum: 10/c4cdced3ee0a9bf7dcae189fbc74a124aa079d4f04dbd995e602d39c1419476e8d021f87ee39ac8d8398e5a55e6d0b986238b3645f0d9177ac80de87c2a73f18
-  languageName: node
-  linkType: hard
-
 "axios@npm:^1.20.0":
   version: 1.20.0
   resolution: "axios@npm:1.20.0"
@@ -888,6 +869,18 @@ __metadata:
     https-proxy-agent: "npm:^5.0.1"
     proxy-from-env: "npm:^2.1.0"
   checksum: 10/0376b6178baecbe0f5d36088f5b5f6c21362ce301e0731f77172f9c89be740bdee20d8ae6ab186340d7cb752020c6a4f1381290e5a5cd10f6f9003941615ac77
+  languageName: node
+  linkType: hard
+
+"axios@npm:^1.3.5":
+  version: 1.18.1
+  resolution: "axios@npm:1.18.1"
+  dependencies:
+    follow-redirects: "npm:^1.16.0"
+    form-data: "npm:^4.0.5"
+    https-proxy-agent: "npm:^5.0.1"
+    proxy-from-env: "npm:^2.1.0"
+  checksum: 10/c4cdced3ee0a9bf7dcae189fbc74a124aa079d4f04dbd995e602d39c1419476e8d021f87ee39ac8d8398e5a55e6d0b986238b3645f0d9177ac80de87c2a73f18
   languageName: node
   linkType: hard
 
@@ -1102,18 +1095,6 @@ __metadata:
   version: 2.1.2
   resolution: "detect-libc@npm:2.1.2"
   checksum: 10/b736c8d97d5d46164c0d1bed53eb4e6a3b1d8530d460211e2d52f1c552875e706c58a5376854e4e54f8b828c9cada58c855288c968522eb93ac7696d65970766
-  languageName: node
-  linkType: hard
-
-"dompurify@npm:^3.2.5":
-  version: 3.4.13
-  resolution: "dompurify@npm:3.4.13"
-  dependencies:
-    "@types/trusted-types": "npm:^2.0.7"
-  dependenciesMeta:
-    "@types/trusted-types":
-      optional: true
-  checksum: 10/0db0a309a868a38aca042f606b37446977c35ee4501850a8c1bf2781337d79871daf1f4344bbf5b545f2a8c62e4d4e192c8fd6f1ff49ecec7c865c55a0aefee3
   languageName: node
   linkType: hard
 
@@ -1827,9 +1808,9 @@ __metadata:
     vue: "npm:^3.5.43"
     vue-gtag: "npm:^3.7.1"
     vue-router: "npm:5.3.1"
-    vue3-doxygen-xml: "npm:^0.4.0"
+    vue3-doxygen-xml: "npm:0.5.0-0"
     vue3-libcellml.js: "npm:^0.7.1"
-    vue3-sphinx-xml: "npm:^0.6.4"
+    vue3-sphinx-xml: "npm:0.7.0-0"
     vuetify: "npm:^4.2.2"
     webfontloader: "npm:^1.6.28"
   languageName: unknown
@@ -2853,17 +2834,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue-dompurify-html@npm:^5.3.0":
-  version: 5.3.0
-  resolution: "vue-dompurify-html@npm:5.3.0"
-  dependencies:
-    dompurify: "npm:^3.2.5"
-  peerDependencies:
-    vue: ^3.4.36
-  checksum: 10/fe97c471dc81643e2c1296113e3e515e7c8d0061b5a820a4c6ba5e07c3a32dbe9b9f352f323826e29df99fa16125c1b6a805a25ff55b53552eb57efe4b8c1c54
-  languageName: node
-  linkType: hard
-
 "vue-gtag@npm:^3.7.1":
   version: 3.7.1
   resolution: "vue-gtag@npm:3.7.1"
@@ -2916,29 +2886,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue3-doxygen-xml@npm:^0.4.0":
-  version: 0.4.0
-  resolution: "vue3-doxygen-xml@npm:0.4.0"
+"vue3-doxygen-xml@npm:0.5.0-0":
+  version: 0.5.0-0
+  resolution: "vue3-doxygen-xml@npm:0.5.0-0"
   dependencies:
     axios: "npm:^1.3.5"
   peerDependencies:
-    pinia: ^2.0.0 || ^3.0.0
     vue: ^3.2.0
     vue-router: ^4.0.0
-  checksum: 10/a2078a2f3244f9d1c3201783021240921a9f3085f8670e1ae90f772abc5e7aed9bdea92ed6123792daf5c7daa3267a22178e675b5f2a656042460392683939e8
+  checksum: 10/f18cf3f366f98da1b50486e013a2c3d51a850377ce5763ae23df8817299113c1441ee1a3a6f754c8b89ebecadb7302558a906b9c5995628dd186e613c74d2c02
   languageName: node
   linkType: hard
 
-"vue3-katex@npm:^0.8.1":
-  version: 0.8.1
-  resolution: "vue3-katex@npm:0.8.1"
+"vue3-katex@npm:0.9.0-3":
+  version: 0.9.0-3
+  resolution: "vue3-katex@npm:0.9.0-3"
   dependencies:
     deepmerge: "npm:^4.3.1"
-    vue-dompurify-html: "npm:^5.3.0"
   peerDependencies:
-    katex: ^0.17.0
+    katex: ^0.17.0 || ^0.18.0
     vue: ^3.2.22
-  checksum: 10/026f39e9d3a08da22e19d30b1a756d83b1e9670877ca12ccf0d648a5fb4ae4f022d859c3544f2ebb168eeaf452c55d89705f5c34eb7eb0eebb17620a6310f266
+  checksum: 10/9d080f7aa5eea31081807af9533b14891d6f9742d49adf00c8f1367d845cf822409a161306747feb2001d757ef3172fd9c5a52673c4036aa83b43ed54a36c7ba
   languageName: node
   linkType: hard
 
@@ -2953,19 +2921,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue3-sphinx-xml@npm:^0.6.4":
-  version: 0.6.4
-  resolution: "vue3-sphinx-xml@npm:0.6.4"
+"vue3-sphinx-xml@npm:0.7.0-0":
+  version: 0.7.0-0
+  resolution: "vue3-sphinx-xml@npm:0.7.0-0"
   dependencies:
     "@hsorby/vue3-highlightjs": "npm:^1.1.0"
-    axios: "npm:^1.17.0"
-    vue3-katex: "npm:^0.8.1"
+    axios: "npm:^1.20.0"
+    vue3-katex: "npm:0.9.0-3"
   peerDependencies:
-    katex: ^0.17.0
-    pinia: ^2.0.0 || ^3.0.0
+    katex: ^0.17.0 || ^0.18.0
     vue: ^3.2.0
-    vue-router: ^4.0.0
-  checksum: 10/9802a2ab6832e92547fbf101c30c2d8864b141808357403c297c66b1746a3f3009e490b9e37795a54194862c10e21b1317eae2b389c4f6d3e7f3ffcbb884cbce
+    vue-router: ^4.0.0 || ^5.0.0
+  checksum: 10/30724f275c72d54c8331a46ddb9a33b070ac417100114b9f8eb8cf027f979a0e5dc92fe116674ec4520c66d690500903c10a0df9754ef9688ee0d54571be4c89
   languageName: node
   linkType: hard
 
