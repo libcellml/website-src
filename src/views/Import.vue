@@ -43,11 +43,16 @@
               >clear</v-btn
             ></v-list-subheader
           >
-          <v-tooltip bottom v-for="(item, i) in downloads" :key="i">
+          <v-tooltip
+            bottom
+            v-for="(item, i) in downloads"
+            :key="i"
+            aria-label="Download"
+          >
             <template v-slot:activator="{ props }">
               <v-list-item
                 v-bind="props"
-                @click="downloadFile(item)"
+                @click="downloadFile(item, 'import')"
                 :disabled="item.pending"
                 :prepend-icon="item.pending ? 'mdi-loading' : 'mdi-download'"
                 :title="downloadFileTitle(item)"
@@ -73,13 +78,15 @@
 </template>
 
 <script setup>
-import { computed, inject, ref } from 'vue'
+import { computed, ref } from 'vue'
 
 import { useNotificationsStore } from '@/stores/notifications'
+import { useLibcellml } from '@/composables/useLibcellml'
 import IssueHeading from '../components/IssueHeading.vue'
 import IssueCard from '../components/IssueCard.vue'
 
 import { downloadFile, downloadFileTitle } from '../js/utilities'
+import { EVENTS, trackEvent } from '@/js/analytics'
 
 const store = useNotificationsStore()
 
@@ -88,7 +95,7 @@ const modelFile = ref([])
 const parserFoundErrors = ref(false)
 const downloads = ref([])
 
-const libcellml = inject('$libcellml')
+const libcellml = useLibcellml()
 
 const ableToImportModel = computed(() => {
   return libcellml.status === 'ready' ? modelFile.value.size > 0 : false
@@ -175,7 +182,12 @@ function readFile() {
       parserFoundErrors.value = Boolean(
         results.type === 'parser' && results.issues.length,
       )
+      trackEvent(EVENTS.IMPORT_MODEL, {
+        result: parserFoundErrors.value ? 'parser_errors' : 'success',
+        issue_count: results.issues.length,
+      })
     } catch (err) {
+      trackEvent(EVENTS.IMPORT_MODEL, { result: 'read_error' })
       store.add({
         type: 'error',
         title: `File read error:`,
@@ -185,6 +197,7 @@ function readFile() {
   }
 
   reader.onerror = function (evt) {
+    trackEvent(EVENTS.IMPORT_MODEL, { result: 'read_error' })
     store.add({
       type: 'error',
       title: `File read error:`,

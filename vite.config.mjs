@@ -3,12 +3,28 @@ import vue from '@vitejs/plugin-vue'
 import vuetify from 'vite-plugin-vuetify'
 import { resolve } from 'path'
 
+import { DEFAULT_DESCRIPTION } from './src/js/pageDescriptions.js'
+
+const escapeAttribute = (text) =>
+  text.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;')
+
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
     minify: true,
+    // Never inline font files as base64 data URIs. Small font subsets would
+    // otherwise be embedded in the CSS, and every visitor would download them
+    // whether or not the page needs those characters.
+    assetsInlineLimit: (filePath) =>
+      /\.(woff2?|ttf|otf|eot)$/.test(filePath) ? false : undefined,
   },
   plugins: [
+    {
+      // Put the site-wide description into index.html.
+      name: 'page-description',
+      transformIndexHtml: (html) =>
+        html.replace('%PAGE_DESCRIPTION%', escapeAttribute(DEFAULT_DESCRIPTION)),
+    },
     vue(),
     vuetify({
       autoImport: true,
@@ -17,14 +33,11 @@ export default defineConfig({
   define: { 'process.env': {} },
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src'),
+      '@': resolve(import.meta.dirname, 'src'),
     },
   },
   optimizeDeps: {
     exclude: ['vue3-libcellml.js'],
-    exbuildOptions: {
-      target: 'es2020',
-    },
   },
   server: {
     fs: {

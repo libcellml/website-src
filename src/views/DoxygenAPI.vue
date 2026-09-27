@@ -9,7 +9,11 @@ import '../css/doxygen.css'
 
 import { useSiteStore } from '@/stores/site'
 
-import { DoxygenXml } from 'vue3-doxygen-xml'
+import { DoxygenXml, installVue3DoxygenXml } from 'vue3-doxygen-xml'
+import 'vue3-doxygen-xml/dist/vue3-doxygen-xml.css'
+import { useAppPlugin } from '@/composables/useAppPlugin'
+
+useAppPlugin(installVue3DoxygenXml)
 
 const store = useSiteStore()
 

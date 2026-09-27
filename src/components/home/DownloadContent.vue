@@ -2,7 +2,7 @@
   <div id="downloadContent">
     <h1>Download libCellML</h1>
     <download-buttons />
-    <h3>Further information</h3>
+    <h2>Further information</h2>
     <p>
       For further information on downloads please visit the
       <router-link to="/download">Download page</router-link>. If you are

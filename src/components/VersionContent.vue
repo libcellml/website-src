@@ -5,7 +5,7 @@
       The build identifier for the website is <strong id="about-website-build-identifier">{{ getWebsiteBuild() }}</strong> UTC.
     </p>
     <p>
-      The revision this website was created from is <strong id="about-website-build-revision">{{ getWebsiteRevision() }}</strong>.
+      The revision this website was created from is <strong id="about-website-build-revision" data-testid="about-website-build-revision">{{ getWebsiteRevision() }}</strong>.
     </p>
   </div>
 </template>

@@ -1,4 +1,4 @@
-[![Selenium tests](https://github.com/libcellml/website-src/actions/workflows/test-with-selenium.yml/badge.svg)](https://github.com/libcellml/website-src/actions/workflows/test-with-selenium.yml)
+[![Playwright tests](https://github.com/libcellml/website-src/actions/workflows/test-with-playwright.yml/badge.svg)](https://github.com/libcellml/website-src/actions/workflows/test-with-playwright.yml)
 
 # libCellML Website Source
 

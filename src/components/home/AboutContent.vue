@@ -1,7 +1,7 @@
 <template>
   <div id="aboutContent" class="about">
     <h1>About libCellML</h1>
-    <h3>Questions and comments</h3>
+    <h2>Questions and comments</h2>
     <p>
       The library is designed to be used for working with CellML models. For
       questions, feature requests, and bug reports about the libCellML library,
@@ -17,7 +17,7 @@
       >.
     </p>
 
-    <h3>Citing libCellML</h3>
+    <h2>Citing libCellML</h2>
     <p>
       Until we have a formal paper to cite, please link to the official
       libCellML website
@@ -58,7 +58,7 @@
       >
         our documentation</a
       >
-      are shown below (in an actively randomised order):
+      are shown below (randomised order every page load):
     </p>
 
     <github-contributors />
@@ -69,19 +69,28 @@
     <v-container class="image-box">
       <v-row>
         <v-col class="col-12 col-sm-6 col-md-4">
-          <img src="../../assets/logo_medtech_core.png" />
+          <img src="../../assets/logo_medtech_core.png" alt="MedTech CoRE" />
         </v-col>
         <v-col class="col-12 col-sm-6 col-md-4">
-          <img src="../../assets/logo_maurice_wilkins.png" />
+          <img
+            src="../../assets/logo_maurice_wilkins.png"
+            alt="Maurice Wilkins Centre for Molecular Biodiscovery"
+          />
         </v-col>
         <v-col class="col-12 col-sm-6 col-md-4">
-          <img src="../../assets/logo_vpr.png" />
+          <img
+            src="../../assets/logo_vpr.png"
+            alt="The Virtual Physiological Rat Project"
+          />
         </v-col>
         <v-col class="col-12 col-sm-6 col-md-4">
-          <img src="../../assets/logo_abi.png" />
+          <img
+            src="../../assets/logo_abi.png"
+            alt="The University of Auckland and Auckland Bioengineering Institute"
+          />
         </v-col>
         <v-col class="col-12 col-sm-6 col-md-4">
-          <img src="../../assets/logo_aotearoa.png" />
+          <img src="../../assets/logo_aotearoa.png" alt="Aotearoa Foundation" />
         </v-col>
       </v-row>
     </v-container>
@@ -111,19 +120,10 @@
 </template>
 
 <script setup>
-import { computed, inject } from 'vue'
+// Read the version at build time rather than loading the ~2.2 MB libcellml
+// WebAssembly module just to call versionString(). libcellml.js releases share
+// the libcellml version number, so the two are the same.
+import { version as libcellmlVersionString } from 'libcellml.js/package.json'
 
 import GithubContributors from '../GithubContributors.vue'
-
-const libcellml = inject('$libcellml')
-
-const libcellmlVersionString = computed(() => {
-  if (libcellml.status === 'loading') {
-    return '[loading libcellml ...]'
-  }
-
-  return libcellml.library === null
-    ? '<unavailable>'
-    : libcellml.library.versionString()
-})
 </script>

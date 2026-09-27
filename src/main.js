@@ -4,39 +4,35 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 import vuetify from './plugins/vuetify'
-import VueGtag from 'vue-gtag'
-
-import { loadFonts } from './plugins/webfontloader'
-
-import { installVue3DoxygenXml } from 'vue3-doxygen-xml'
-import 'vue3-doxygen-xml/dist/vue3-doxygen-xml.css'
-
-import { installVue3SphinxXml } from 'vue3-sphinx-xml'
-import 'vue3-sphinx-xml/dist/vue3-sphinx-xml.css'
-// Set the style of code blocks highlighting from highlight.js.
-import 'highlight.js/styles/qtcreator-light.css'
-
-import Vue3LibCellML from 'vue3-libcellml.js'
+import { createGtag } from 'vue-gtag'
+import { analyticsEnabled, pageViewTemplate } from './js/analytics'
 
 import './css/sphinx.css'
 
-loadFonts()
-
 const pinia = createPinia()
 
-createApp(App)
-  .use(pinia)
-  .use(router)
-  .use(
-    VueGtag,
-    {
-      pageTrackerUseFullPath: true,
-      config: { id: import.meta.env.VITE_GA_MEASUREMENT_ID },
-    },
-    router,
+const app = createApp(App).use(pinia).use(router)
+
+// Only load Google Analytics when a measurement ID has been provided
+// (set at deploy time), so local development sends nothing.
+if (analyticsEnabled) {
+  app.use(
+    createGtag({
+      tagId: import.meta.env.VITE_GA_MEASUREMENT_ID,
+      config: {
+        // We don't run ads, so don't collect advertising signals.
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+      },
+      pageTracker: {
+        router,
+        template: pageViewTemplate,
+      },
+    }),
   )
-  .use(vuetify)
-  .use(installVue3DoxygenXml)
-  .use(installVue3SphinxXml)
-  .use(Vue3LibCellML)
-  .mount('#app')
+}
+
+// The documentation renderers (vue3-sphinx-xml, vue3-doxygen-xml) and
+// libcellml.js are installed by the views that use them, see
+// composables/useAppPlugin.js, so they are only downloaded when needed.
+app.use(vuetify).mount('#app')

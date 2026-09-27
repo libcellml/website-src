@@ -5,8 +5,10 @@ import unittest
 from playwright.sync_api import sync_playwright, expect
 
 try:
+    from .helpers import expect_home_page
     from .config import BASE_URL, HEADLESS_MODE, RESOURCE_PATH
 except ImportError:
+    from helpers import expect_home_page
     from config import BASE_URL, HEADLESS_MODE, RESOURCE_PATH
 
 
@@ -33,7 +35,7 @@ class ServicesTestCase(unittest.TestCase):
             expect(page.locator("#pageMainContent")).to_match_aria_snapshot("- text: test_basic_ode.cellml2:The model is valid!")
             expect(page.locator("#pageMainContent")).to_match_aria_snapshot("- text: test_basic_ode.cellml2 (1.9 kB)")
             page.get_by_role("button", name="Home").click()
-            expect(page.locator("#introContent")).to_match_aria_snapshot("- heading \"libCellML is an easy-to-use library for developers of CellML applications.\" [level=3]")
+            expect_home_page(page)
 
             # ---------------------
             context.close()
@@ -54,7 +56,7 @@ class ServicesTestCase(unittest.TestCase):
             page.get_by_role("button", name="Translate to CellML").click()
             expect(page.locator("#pageMainContent")).to_match_aria_snapshot("- text: /test_basic_ode\\.cellml \\(\\d+\\.\\d+ kB\\)/")
             page.get_by_role("button", name="Home").click()
-            expect(page.locator("#introContent")).to_match_aria_snapshot("- heading \"libCellML is an easy-to-use library for developers of CellML applications.\" [level=3]")
+            expect_home_page(page)
 
             # ---------------------
             context.close()
@@ -80,7 +82,7 @@ class ServicesTestCase(unittest.TestCase):
             page.locator('input[type="file"]').set_input_files(os.path.join(RESOURCE_PATH, "test_basic_ode.cellml2"))
             page.get_by_role("button", name="Import CellML 1.0/1.1 model").click()
             page.get_by_role("button", name="Home").click()
-            expect(page.locator("#introContent")).to_match_aria_snapshot("- heading \"libCellML is an easy-to-use library for developers of CellML applications.\" [level=3]")
+            expect_home_page(page)
 
             # ---------------------
             context.close()

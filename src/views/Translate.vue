@@ -47,11 +47,16 @@
               >clear</v-btn
             ></v-list-subheader
           >
-          <v-tooltip bottom v-for="(item, i) in downloads" :key="i">
+          <v-tooltip
+            bottom
+            v-for="(item, i) in downloads"
+            :key="i"
+            aria-label="Download"
+          >
             <template v-slot:activator="{ props }">
               <v-list-item
                 v-bind="props"
-                @click="downloadFile(item)"
+                @click="downloadFile(item, 'translate')"
                 :disabled="item.pending"
                 :prepend-icon="item.pending ? 'mdi-loading' : 'mdi-download'"
                 :title="downloadFileTitle(item)"
@@ -75,6 +80,11 @@ import TranslateLimitations from '@/components/TranslateLimitations.vue'
 
 import { translate, translateOmex, getXslt } from '@/js/translate'
 import { downloadFile, downloadFileTitle } from '@/js/utilities'
+import { EVENTS, trackEvent } from '@/js/analytics'
+
+function trackTranslate(fileKind, result) {
+  trackEvent(EVENTS.TRANSLATE_MODEL, { file_kind: fileKind, result })
+}
 
 const store = useNotificationsStore()
 
@@ -98,6 +108,7 @@ function translateFiles() {
               type: 'text/xml',
               pending: false,
             })
+            trackTranslate('cellml', 'success')
           } catch {
             // Ok so not straight up text then.
             reader.readAsDataURL(currentFile)
@@ -118,8 +129,10 @@ function translateFiles() {
                 translatedFile.then((result) => {
                   downloads.value[index].data = result
                   downloads.value[index].pending = false
+                  trackTranslate('omex', 'success')
                 })
               } catch {
+                trackTranslate('unknown', 'failure')
                 store.add({
                   type: 'error',
                   title: 'Could not translate file:',
@@ -130,6 +143,7 @@ function translateFiles() {
           }
         }
         reader.onerror = function (evt) {
+          trackTranslate('unknown', 'read_error')
           store.add({
             type: 'error',
             title: `File read error:`,
@@ -147,7 +161,9 @@ function translateFiles() {
               type: 'text/xml',
               pending: false,
             })
+            trackTranslate('cellml', 'success')
           } catch {
+            trackTranslate('cellml', 'failure')
             store.add({
               type: 'error',
               title: `Could not translate file:`,
@@ -156,6 +172,7 @@ function translateFiles() {
           }
         }
       } else {
+        trackTranslate('unsupported', 'failure')
         store.add({
           type: 'error',
           title: `Could not translate file:`,
