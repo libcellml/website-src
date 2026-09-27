@@ -22,6 +22,8 @@ export const EVENTS = {
   DOCS_VERSION_CHANGE: 'docs_version_change',
   PAGE_NOT_FOUND: 'page_not_found',
   REPORT_ISSUE_CLICK: 'report_issue_click',
+  REPORT_ISSUE_HINT_SHOWN: 'report_issue_hint_shown',
+  REPORT_ISSUE_HINT_DISMISSED: 'report_issue_hint_dismissed',
   THEME_CHANGE: 'theme_change',
 }
 

@@ -1,0 +1,41 @@
+name: Website problem
+description: Something broken, odd or unclear on the libCellML website.
+title: 'Problem on '
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to tell us! A sentence or two is plenty.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you see? Screenshots are very welcome.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: false
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: The address of the page where you saw the problem.
+    validations:
+      required: false
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and window size
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: Website version
+    validations:
+      required: false
