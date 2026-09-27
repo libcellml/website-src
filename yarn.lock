@@ -137,14 +137,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hsorby/vue3-highlightjs@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "@hsorby/vue3-highlightjs@npm:1.1.0"
+"@hsorby/vue3-highlightjs@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@hsorby/vue3-highlightjs@npm:2.0.0"
   dependencies:
     highlight.js: "npm:^11.11.1"
   peerDependencies:
     vue: ^3.0.0
-  checksum: 10/80cfd8e73700d40d2fa3620443500495af3a8e91b343b1723e3716fa3ab3073f06154a6bcbaa5b9461ad4e59e77c7234f781c0dbaf761deab45ceba09253ec4b
+  checksum: 10/23c151a4746ea48729457d0aa2f4d3ad1424247b6033e9df7438ca0ec35aa210df7c797ee3739618e902b4055fdead7b062e779a6156616b022e4bb01f294485
   languageName: node
   linkType: hard
 
@@ -1892,7 +1892,7 @@ __metadata:
     vue-router: "npm:5.3.1"
     vue3-doxygen-xml: "npm:0.5.0"
     vue3-libcellml.js: "npm:^0.7.1"
-    vue3-sphinx-xml: "npm:0.7.0"
+    vue3-sphinx-xml: "npm:^0.7.1"
     vuetify: "npm:^4.2.2"
     webfontloader: "npm:^1.6.28"
   languageName: unknown
@@ -3057,18 +3057,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue3-sphinx-xml@npm:0.7.0":
-  version: 0.7.0
-  resolution: "vue3-sphinx-xml@npm:0.7.0"
+"vue3-sphinx-xml@npm:^0.7.1":
+  version: 0.7.1
+  resolution: "vue3-sphinx-xml@npm:0.7.1"
   dependencies:
-    "@hsorby/vue3-highlightjs": "npm:^1.1.0"
+    "@hsorby/vue3-highlightjs": "npm:^2.0.0"
     axios: "npm:^1.20.0"
     vue3-katex: "npm:^0.9.0"
   peerDependencies:
     katex: ^0.17.0 || ^0.18.0
     vue: ^3.2.0
     vue-router: ^4.0.0 || ^5.0.0
-  checksum: 10/f68d96a9ce362995cb9833f7b03f66a6e0775b67b3c1022e5b6ef1a60d4463015abf0bdba6aa918301b1b4cc46d024a3e620f10858a3a7006766c55fcc60d758
+  checksum: 10/07cdfa03251745ec182a24b874a23c2d97d16df3d7d834332e6c672857ce5b3d460867808335511d4b3478a5814e352bf1c23b577689cf972ce53d797f24b75f
   languageName: node
   linkType: hard
 
