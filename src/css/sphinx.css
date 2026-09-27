@@ -335,7 +335,7 @@ dl {
 }
 .sphinx-tabs-tab {
   position: relative;
-  font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: var(--text-font);
   color: var(--useful-colour, #1d5c87);
   line-height: 24px;
   margin: 0;
@@ -462,8 +462,7 @@ dl {
   margin-right: 0;
 
   line-height: 1.5em;
-  font-family: 'fakt-web', 'Lato', 'proxima-nova', 'Helvetica Neue', 'Arial',
-    sans-serif;
+  font-family: var(--text-font);
 }
 
 /* Anything specified in the Sphinx documents in a container with the type 'quicklinks' shouldn't

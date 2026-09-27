@@ -59,7 +59,7 @@
   --border-colour: var(--pale-grey);
   --code-colour: var(--deep-blue);
 
-  --text-font: 'proxima-nova', 'Helvetica Neue', 'Arial', sans-serif;
+  --text-font: 'Helvetica Neue', Arial, sans-serif;
   /* Make Vuetify components (tooltips, buttons, etc.) use the site font
      instead of Vuetify's default of Roboto, which the site doesn't load. */
   --v-font-body: var(--text-font);
