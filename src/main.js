@@ -7,8 +7,6 @@ import vuetify from './plugins/vuetify'
 import { createGtag } from 'vue-gtag'
 import { analyticsEnabled, pageViewTemplate } from './js/analytics'
 
-import { loadFonts } from './plugins/webfontloader'
-
 import { installVue3DoxygenXml } from 'vue3-doxygen-xml'
 import 'vue3-doxygen-xml/dist/vue3-doxygen-xml.css'
 
@@ -18,8 +16,6 @@ import 'vue3-sphinx-xml/dist/vue3-sphinx-xml.css'
 import Vue3LibCellML from 'vue3-libcellml.js'
 
 import './css/sphinx.css'
-
-loadFonts()
 
 const pinia = createPinia()
 

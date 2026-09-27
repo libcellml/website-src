@@ -268,10 +268,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdi/font@npm:7.4.47":
+"@mdi/js@npm:7.4.47":
   version: 7.4.47
-  resolution: "@mdi/font@npm:7.4.47"
-  checksum: 10/ecef7fd514f1970bb257272283dc609800c9e2f86c8388aa10d9e900a29c57a4146f766c7a0775603714799ed715a0a4515aaec6b2c7d28610bea2e95c1fc1a2
+  resolution: "@mdi/js@npm:7.4.47"
+  checksum: 10/c1a8fc82f23030bccc0cf324b13b73a0034d06140e79f8bc7b0e4e59275624c470e5ca6524d6141ad8c4fe3ad0f314c7af99afb3e38df163eb50d3b13b9eab17
   languageName: node
   linkType: hard
 
@@ -1866,7 +1866,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "libcellml-website@workspace:."
   dependencies:
-    "@mdi/font": "npm:7.4.47"
+    "@mdi/js": "npm:7.4.47"
     "@vitejs/plugin-vue": "npm:^6.0.9"
     axios: "npm:^1.20.0"
     crypto-js: "npm:^4.2.0"

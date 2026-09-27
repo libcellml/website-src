@@ -7,6 +7,11 @@ import { resolve } from 'path'
 export default defineConfig({
   build: {
     minify: true,
+    // Never inline font files as base64 data URIs. Small font subsets would
+    // otherwise be embedded in the CSS, and every visitor would download them
+    // whether or not the page needs those characters.
+    assetsInlineLimit: (filePath) =>
+      /\.(woff2?|ttf|otf|eot)$/.test(filePath) ? false : undefined,
   },
   plugins: [
     vue(),
