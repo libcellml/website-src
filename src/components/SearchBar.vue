@@ -3,6 +3,7 @@
     ref="searchInput"
     v-model="selectedItem"
     v-model:search="searchQuery"
+    v-model:menu="menuOpen"
     :items="searchStore.results"
     :loading="searchStore.isLoading"
     :no-filter="true"
@@ -11,6 +12,7 @@
     variant="solo-filled"
     density="compact"
     hide-details
+    :menu-props="{ contentClass: 'search-bar-menu' }"
     @focus="handleFocus"
     @blur="handleBlur"
     @keydown.enter="onEnter"
@@ -24,13 +26,13 @@
       </span>
     </template>
     <template v-slot:item="{ props, item }">
-      <v-list-item v-bind="props" :title="item.raw.title" />
+      <v-list-item v-bind="props" :title="item.title" />
     </template>
   </v-combobox>
 </template>
 
 <script setup>
-import { onMounted, onUnmounted, ref, watch } from 'vue'
+import { nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { useSearchStore } from '@/stores/search'
 import { EVENTS, trackEvent } from '@/js/analytics'
@@ -43,6 +45,7 @@ const selectedItem = ref(null)
 const searchResults = ref([])
 const searchInput = ref(null)
 const isFocused = ref(false)
+const menuOpen = ref(false)
 let debounceTimeout = null
 
 const handleFocus = () => {
@@ -50,11 +53,37 @@ const handleFocus = () => {
   searchStore.loadIndex()
 }
 
-const handleBlur = () => {
+const resetSearch = () => {
   isFocused.value = false
   selectedItem.value = null
   searchQuery.value = '' // Manually clear the search text
   searchResults.value = []
+}
+
+const handleBlur = (event) => {
+  // Moving focus into the results popup (e.g. with the arrow keys) is not
+  // leaving the search, so keep the query and results.
+  if (event?.relatedTarget?.closest('.search-bar-menu')) return
+  resetSearch()
+}
+
+// If focus left from inside the results popup, the input's blur was skipped,
+// so reset once the popup closes.
+watch(menuOpen, (open) => {
+  if (!open && !searchInput.value?.$el.contains(document.activeElement)) {
+    resetSearch()
+  }
+})
+
+const closeSearch = async () => {
+  // Let Vuetify finish handling the key press first (its Enter handler
+  // re-opens the menu).
+  await nextTick()
+  // Close the menu before blurring. Vuetify hands focus back to the input
+  // when its menu closes, which would re-open the popup after a blur.
+  menuOpen.value = false
+  await nextTick()
+  searchInput.value?.blur()
 }
 
 const onEnter = () => {
@@ -65,8 +94,7 @@ const onEnter = () => {
       query: { q: searchQuery.value }, // Pass query in URL
     })
 
-    // Close the dropdown
-    searchInput.value.blur()
+    closeSearch()
   }
 }
 
@@ -99,7 +127,7 @@ watch(selectedItem, (selection) => {
     router.push(selection.href)
 
     // Reset UI
-    searchInput.value.blur()
+    closeSearch()
   }
 })
 
