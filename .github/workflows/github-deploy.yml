@@ -26,10 +26,9 @@ jobs:
           hosts="$(dig +short "$host" | grep -v '\.$' | sed -z 's|\n|,|g')$host"
           ssh-keyscan -H "$hosts" > ~/.ssh/known_hosts
 
-      - name: Clean install dependencies
+      - name: Prepare yarn
         run: |
-          yarn
-          yarn add --dev execa
+          corepack enable
 
       - name: Run deploy script
         env:
