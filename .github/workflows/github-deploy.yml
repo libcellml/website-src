@@ -11,12 +11,12 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Setup Node.js for use with actions
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v7
         with:
           node-version: 24.x
 
       - name: Checkout branch
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Write SSH keys
         run: |
@@ -26,10 +26,13 @@ jobs:
           hosts="$(dig +short "$host" | grep -v '\.$' | sed -z 's|\n|,|g')$host"
           ssh-keyscan -H "$hosts" > ~/.ssh/known_hosts
 
-      - name: Clean install dependencies
+      - name: Prepare yarn
         run: |
-          yarn
-          yarn add --dev execa
+          corepack enable
+
+      - name: Install dependencies
+        run: |
+          yarn install --immutable
 
       - name: Run deploy script
         env:
@@ -37,8 +40,8 @@ jobs:
         run: |
           git config user.name libcellml-bot && git config user.email abi.git.user+libcellml.bot@gmail.com
           if [ "${{ github.ref }}" = "refs/heads/production" ]; then
-            npm run github-deploy -- ${{ secrets.PRODUCTION_VITE_GA_MEASUREMENT_ID}}
+            yarn github-deploy ${{ secrets.PRODUCTION_VITE_GA_MEASUREMENT_ID}}
           else
             # If it isn't a production deployment then it must be a staging deployment.
-            npm run github-deploy -- staging ${{ secrets.STAGING_VITE_GA_MEASUREMENT_ID}}
+            yarn github-deploy staging ${{ secrets.STAGING_VITE_GA_MEASUREMENT_ID}}
           fi

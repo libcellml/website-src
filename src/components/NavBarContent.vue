@@ -1,14 +1,25 @@
 <template>
   <v-col cols="1">
-    <img src="../assets/logo.svg" width="40" height="40" />
+    <img src="../assets/logo.svg" width="40" height="40" alt="libCellML" />
   </v-col>
-  <v-app-bar-nav-icon @click="onSidebarButtonClicked" />
+  <v-app-bar-nav-icon
+    aria-label="Toggle navigation menu"
+    @click="onSidebarButtonClicked"
+  />
   <template v-for="link in links" :key="link.label">
     <router-link :to="hash ? link.hashLocation : link.location">
       <v-btn text> {{ link.label }} </v-btn>
     </router-link>
   </template>
   <search-bar></search-bar>
+  <v-btn
+    icon
+    :title="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
+    @click="onToggleTheme"
+    aria-label="Toggle colour scheme"
+  >
+    <v-icon>{{ isDark ? 'mdi-weather-sunny' : 'mdi-weather-night' }}</v-icon>
+  </v-btn>
   <bug-button></bug-button>
 </template>
 
@@ -16,10 +27,13 @@
 import { computed } from 'vue'
 
 import { useSiteStore } from '@/stores/site'
+import { useColorScheme } from '@/composables/useColorScheme'
 import BugButton from './BugButton.vue'
 import SearchBar from './SearchBar.vue'
+import { EVENTS, trackEvent } from '@/js/analytics'
 
 const store = useSiteStore()
+const { isDark, toggle } = useColorScheme()
 
 const hash = computed(() => {
   return store.breadcrumbs.length < 2
@@ -36,6 +50,11 @@ const links = [
   { label: 'Services', location: '/services', hashLocation: '/#services' },
   { label: 'About', location: '/about', hashLocation: '/#about' },
 ]
+
+function onToggleTheme() {
+  toggle()
+  trackEvent(EVENTS.THEME_CHANGE, { theme: isDark.value ? 'dark' : 'light' })
+}
 
 function onSidebarButtonClicked() {
   store.toggleSidebar()

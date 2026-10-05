@@ -12,6 +12,7 @@
               :class="'big-button'"
               download
               :href="winDownloadHref"
+              @click="onInstallerClicked(winAssetName)"
               :disabled="winDownloadDisabled"
             >
               <v-icon color="white" x-large>mdi-microsoft-windows</v-icon>
@@ -25,6 +26,7 @@
               :class="'big-button'"
               download
               :href="linuxDownloadHref"
+              @click="onInstallerClicked(linuxAssetName)"
               :disabled="linuxDownloadDisabled"
             >
               <v-icon color="white" x-large>mdi-linux</v-icon>
@@ -39,6 +41,7 @@
               :class="'big-button'"
               download
               :href="macOSDownloadHref"
+              @click="onInstallerClicked(macOSAssetName)"
               :disabled="macOSDownloadDisabled"
             >
               <v-icon color="white" x-large>mdi-apple</v-icon>
@@ -80,6 +83,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useRoute } from 'vue-router'
 
 import IconWA from '@/assets/icons/IconWA.vue'
 import IconPyPi from '@/assets/icons/IconPyPI.vue'
@@ -87,6 +91,7 @@ import SmallSpacer from '@/components/SmallSpacer.vue'
 
 import { getDocumentationVersions } from '@/js/documentationversions'
 import { useCommon } from '@/composables/common'
+import { EVENTS, trackEvent, trackInstallerDownload } from '@/js/analytics'
 
 const { checkDownloadAvailability } = useCommon()
 const availableVersions = getDocumentationVersions()
@@ -97,6 +102,10 @@ const winDownloadDisabled = ref(true)
 const winDownloadHref = ref('')
 const linuxDownloadDisabled = ref(true)
 const linuxDownloadHref = ref('')
+const macOSAssetName = ref('')
+const winAssetName = ref('')
+const linuxAssetName = ref('')
+const route = useRoute()
 
 const latest = availableVersions[0]
 
@@ -105,23 +114,37 @@ checkDownloadAvailability(latest).then((response) => {
     for (const entry of response.release.releaseAssets.edges) {
       if (entry.node.name.includes('universal-macos.pkg')) {
         macOSDownloadHref.value = entry.node.downloadUrl
+        macOSAssetName.value = entry.node.name
         macOSDownloadDisabled.value = false
       } else if (entry.node.name.includes('x64-windows.exe')) {
         winDownloadHref.value = entry.node.downloadUrl
+        winAssetName.value = entry.node.name
         winDownloadDisabled.value = false
       } else if (entry.node.name.includes('ubuntu-runtime.deb')) {
         linuxDownloadHref.value = entry.node.downloadUrl
+        linuxAssetName.value = entry.node.name
         linuxDownloadDisabled.value = false
       }
     }
   }
 })
 
+function onInstallerClicked(assetName) {
+  trackInstallerDownload(
+    assetName,
+    latest,
+    true,
+    route.name === 'Home' ? 'home_page' : 'download_page',
+  )
+}
+
 function onWebAssemblyClicked() {
+  trackEvent(EVENTS.PACKAGE_LINK_CLICK, { ecosystem: 'npm' })
   const url = 'https://www.npmjs.com/package/libcellml.js'
   window.open(url, '_blank')
 }
 function onPythonClicked() {
+  trackEvent(EVENTS.PACKAGE_LINK_CLICK, { ecosystem: 'pypi' })
   const url = 'https://pypi.org/project/libcellml/'
   window.open(url, '_blank')
 }

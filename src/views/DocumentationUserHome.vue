@@ -6,7 +6,11 @@
   </v-row>
   <v-row>
     <v-col col="12" md="4" id="install">
-      <v-tooltip anchor="bottom" open-delay="200">
+      <v-tooltip
+        anchor="bottom"
+        open-delay="200"
+        :aria-label="tooltips.installation"
+      >
         <template v-slot:activator="{ props }">
           <v-btn
             block
@@ -18,14 +22,16 @@
             INSTALLATION
           </v-btn>
         </template>
-        <span>
-          Information on installing libCellML, and testing your installation.
-        </span>
+        <span>{{ tooltips.installation }}</span>
       </v-tooltip>
     </v-col>
 
     <v-col col="12" md="4" id="tutorials">
-      <v-tooltip anchor="bottom" open-delay="200">
+      <v-tooltip
+        anchor="bottom"
+        open-delay="200"
+        :aria-label="tooltips.tutorials"
+      >
         <template v-slot:activator="{ props }">
           <v-btn
             block
@@ -37,15 +43,16 @@
             TUTORIALS
           </v-btn>
         </template>
-        <span>
-          A collection of tutorials demonstrating in context how libCellML can
-          be used to create, manipulate, validate, and solve CellML models.
-        </span>
+        <span>{{ tooltips.tutorials }}</span>
       </v-tooltip>
     </v-col>
 
     <v-col col="12" md="4" id="howto">
-      <v-tooltip anchor="bottom" open-delay="200">
+      <v-tooltip
+        anchor="bottom"
+        open-delay="200"
+        :aria-label="tooltips.howto"
+      >
         <template v-slot:activator="{ props }">
           <v-btn
             block
@@ -60,12 +67,16 @@
             HOW TO
           </v-btn>
         </template>
-        <span> A list of useful code examples showing specific actions. </span>
+        <span>{{ tooltips.howto }}</span>
       </v-tooltip>
     </v-col>
 
     <v-col col="12" md="4" id="profiles">
-      <v-tooltip anchor="bottom" open-delay="200">
+      <v-tooltip
+        anchor="bottom"
+        open-delay="200"
+        :aria-label="tooltips.common_users"
+      >
         <template v-slot:activator="{ props }">
           <v-btn
             block
@@ -77,15 +88,16 @@
             USAGE SCENARIOS
           </v-btn>
         </template>
-        <span>
-          A collection of code snippets arranged according to the requirements
-          of different user groups.
-        </span>
+        <span>{{ tooltips.common_users }}</span>
       </v-tooltip>
     </v-col>
 
     <v-col col="12" md="4" id="issues">
-      <v-tooltip anchor="bottom" open-delay="200">
+      <v-tooltip
+        anchor="bottom"
+        open-delay="200"
+        :aria-label="tooltips.runtime_codes"
+      >
         <template v-slot:activator="{ props }">
           <v-btn
             block
@@ -97,15 +109,16 @@
             RUN-TIME CODES
           </v-btn>
         </template>
-        <span>
-          A collection of codes returned during run-time and their
-          interpretation.
-        </span>
+        <span>{{ tooltips.runtime_codes }}</span>
       </v-tooltip>
     </v-col>
 
     <v-col col="12" md="4" id="asides">
-      <v-tooltip anchor="bottom" open-delay="200">
+      <v-tooltip
+        anchor="bottom"
+        open-delay="200"
+        :aria-label="tooltips.asides"
+      >
         <template v-slot:activator="{ props }">
           <v-btn
             block
@@ -117,9 +130,7 @@
             GENERAL INFORMATION
           </v-btn>
         </template>
-        <span>
-          General information about special functionality and best practice.
-        </span>
+        <span>{{ tooltips.asides }}</span>
       </v-tooltip>
     </v-col>
   </v-row>
@@ -169,6 +180,23 @@ import { computed, ref } from 'vue'
 import { useSiteStore } from '@/stores/site'
 
 const store = useSiteStore()
+
+// Shown in each button's tooltip, and also given to the tooltip as its
+// accessible name.
+const tooltips = {
+  installation:
+    'Information on installing libCellML, and testing your installation.',
+  tutorials:
+    'A collection of tutorials demonstrating in context how libCellML can be used to create, manipulate, validate, and solve CellML models.',
+  howto:
+    'A list of useful code examples showing specific actions.',
+  common_users:
+    'A collection of code snippets arranged according to the requirements of different user groups.',
+  runtime_codes:
+    'A collection of codes returned during run-time and their interpretation.',
+  asides:
+    'General information about special functionality and best practice.',
+}
 
 const validationProvenance = ref(defaultValidationProvenance())
 

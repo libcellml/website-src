@@ -13,7 +13,8 @@
         <template v-slot:divider>
           <v-icon>mdi-chevron-right</v-icon>
         </template>
-        <template v-slot:title="{ item }">
+        <!-- The item slot replaces Vuetify's own <li>, so ours is not nested inside it. -->
+        <template v-slot:item="{ item, index }">
           <!-- Dropdown in the breadcrumbs menu: -->
           <v-breadcrumbs-item v-if="item.versionChoice">
             <v-select
@@ -33,9 +34,14 @@
             </v-select>
           </v-breadcrumbs-item>
           <!-- Normal item, no dropdown, formed from named page: -->
-          <v-breadcrumbs-item v-else :to="defineBreadcrumbTarget(item.target)">
+          <v-breadcrumbs-item
+            v-else
+            :to="defineBreadcrumbTarget(item.target)"
+            :disabled="index === store.breadcrumbs.length - 1"
+          >
             <template v-if="item.text === 'Home'">
               <v-icon size="1.3em">mdi-home</v-icon>
+              <span class="d-sr-only">Home</span>
             </template>
             <template v-else>
               {{ item.text }}
@@ -54,6 +60,7 @@ import { useRoute, useRouter } from 'vue-router'
 import { useSiteStore } from '@/stores/site'
 import { getDocumentationVersions } from '@/js/documentationversions'
 import { versionedRouteNames, changeRouteVersion } from '@/router'
+import { EVENTS, trackEvent, docSetForRoute } from '@/js/analytics'
 
 const store = useSiteStore()
 const route = useRoute()
@@ -123,12 +130,23 @@ function getRouteForVersion(version) {
   return changedRoute
 }
 
+function trackVersionChange(toVersion, trigger) {
+  trackEvent(EVENTS.DOCS_VERSION_CHANGE, {
+    from_version: store.current_documentation_version,
+    to_version: toVersion,
+    doc_set: docSetForRoute(route),
+    trigger,
+  })
+}
+
 function onViewLatest() {
+  trackVersionChange(latest, 'old_version_banner')
   router.push(getRouteForVersion(latest))
   store.setCurrentDocumentationVersion(latest)
 }
 
 function updateCurrentVersion(version) {
+  trackVersionChange(version.text, 'version_picker')
   router.push(getRouteForVersion(version.text))
   store.setCurrentDocumentationVersion(version.text)
 }

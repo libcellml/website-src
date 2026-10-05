@@ -21,8 +21,9 @@ class TestBrowseAPIDocumentation(unittest.TestCase):
             page.get_by_role("button", name="Documentation").click()
             page.get_by_role("link", name="API Documentation").click()
             page.get_by_role("link", name="libcellml::Generator", exact=True).click()
-            page.locator(".mdi-menu-down").click()
-            page.get_by_text("v0.4.0").click()
+            # Pick an older documentation version from the breadcrumb version menu.
+            page.get_by_test_id("breadcrumb-version-combobox").click()
+            page.get_by_role("option", name="v0.4.0").click()
             page.get_by_role("link", name="model", exact=True).click()
             page.get_by_role("link", name="AnalyserModelPtr").first.click()
             page.get_by_role("button", name="Scroll to top").click()

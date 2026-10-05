@@ -27,7 +27,7 @@
 
         <v-expansion-panels class="mb-8">
           <v-expansion-panel>
-            <v-expansion-panel-title class="text-caption text-grey-darken-1">
+            <v-expansion-panel-title class="text-caption text-medium-emphasis">
               <v-icon start icon="mdi-help-circle-outline" size="small" />
               Search Syntax & Tips
             </v-expansion-panel-title>
@@ -106,17 +106,18 @@
               v-for="(result, i) in results"
               :key="`search_result_${i}`"
               :to="result.href"
+              @click="onResultClicked(i)"
               class="mb-4 result-card"
               variant="flat"
             >
               <v-card-item>
                 <template v-slot:title>
-                  <span class="text-primary font-weight-bold">{{
+                  <span class="result-title font-weight-bold">{{
                     result.title
                   }}</span>
                 </template>
                 <template v-slot:subtitle>
-                  <span class="text-caption">{{ result.href }}</span>
+                  <span class="text-caption result-href">{{ result.href }}</span>
                 </template>
               </v-card-item>
 
@@ -145,6 +146,7 @@
 import { ref, computed, onMounted, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useSearchStore } from '@/stores/search'
+import { EVENTS, trackEvent } from '@/js/analytics'
 
 const route = useRoute()
 const router = useRouter()
@@ -179,6 +181,15 @@ const clearSearch = () => {
   searchStore.results = []
 }
 
+const onResultClicked = (index) => {
+  trackEvent(EVENTS.SELECT_SEARCH_RESULT, {
+    search_term: String(currentQuery.value).substring(0, 100),
+    search_source: 'results_page',
+    position: index + 1,
+    result_count: results.value.length,
+  })
+}
+
 const runSearchFromUrl = async () => {
   const query = route.query.q
 
@@ -197,6 +208,11 @@ const runSearchFromUrl = async () => {
 
   // Execute Search
   searchStore.search(query)
+
+  trackEvent(EVENTS.SEARCH, {
+    search_term: String(query).substring(0, 100),
+    result_count: searchStore.results.length,
+  })
 }
 
 onMounted(() => {
@@ -213,6 +229,17 @@ watch(
 </script>
 
 <style scoped>
+/* The theme's primary grey and the card subtitle's default fade are too
+   light to read comfortably, so use the site grey at full strength. */
+.result-title,
+.result-href {
+  color: var(--mid-grey);
+}
+
+.result-card :deep(.v-card-subtitle) {
+  opacity: 1;
+}
+
 .search-results-page {
   min-height: 60vh; /* Ensure footer stays down if few results */
 }

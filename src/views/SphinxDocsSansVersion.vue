@@ -10,6 +10,9 @@
 <script setup>
 import { useRoute } from 'vue-router'
 import { SphinxPage } from 'vue3-sphinx-xml'
+import { useSphinxXml } from '@/composables/useSphinxXml'
+
+useSphinxXml()
 
 const route = useRoute()
 </script>

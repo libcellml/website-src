@@ -2,6 +2,7 @@
   <v-btn
     id="backToTopButton"
     title="Scroll to top"
+    aria-label="Scroll to top"
     v-scroll="onScroll"
     v-show="showButton"
     :style="{ left: xOffset, bottom: '0.675rem', position: 'fixed', zIndex: '1005' }"

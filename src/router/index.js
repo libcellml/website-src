@@ -7,6 +7,7 @@ import Home from '@/views/Home.vue'
 // import { pageview } from 'vue-gtag'
 
 import { getDocumentationVersions } from '../js/documentationversions'
+import { descriptionForPath } from '../js/pageDescriptions'
 import { useCommon } from '@/composables/common'
 
 const { documentationInfoMap } = useCommon()
@@ -52,13 +53,11 @@ const homeRoute = {
   name: 'Home',
   meta: { title: 'libCellML: Home' },
   component: Home,
-  beforeEnter: (to, from, next) => {
+  beforeEnter: (to, from) => {
     if (sessionStorage.getItem('redirect') !== null) {
       const redirect = sessionStorage.redirect
       delete sessionStorage.redirect
-      next(redirect)
-    } else {
-      next()
+      return redirect
     }
   },
 }
@@ -163,7 +162,7 @@ const searchRoute = {
   path: '/search',
   name: 'Search',
   meta: { title: 'libCellML: Search Results' },
-  component: () => import('@/views/SearchResults.vue'), 
+  component: () => import('@/views/SearchResults.vue'),
 }
 const aboutRoute = {
   path: '/about',
@@ -214,31 +213,31 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
   scrollBehavior(to, from, savedPosition) {
-    const header = document.querySelector('#app-header')
-    if (to.name === homeRoute.name && to.hash) {
-      const location = document.querySelector(to.hash)
-      if (location) {
-        return window.scrollTo({
-          top: location.offsetTop - header.offsetHeight,
-          behavior: 'smooth',
-        })
-      }
-    } else if (to.hash) {
-      return new Promise((resolve, reject) => {
-        setTimeout(() => {
-          const location = document.querySelector(to.hash)
-          if (location) {
-            resolve(
-              window.scrollTo({
-                top: location.offsetTop - header.offsetHeight,
-                behavior: 'smooth',
-              }),
-            )
-          }
-          resolve({ left: 0, top: header.offsetHeight })
-        }, 500)
+    // Back/forward: restore where the user was
+    if (savedPosition) {
+      return savedPosition
+    }
+
+    // Hash link: scroll to the element, clear of the fixed app bar
+    if (to.hash) {
+      const header = document.querySelector('#app-header')
+      const top = header ? header.offsetHeight : 0
+      const delay = to.name === homeRoute.name ? 0 : 500
+      return new Promise((resolve) => {
+        setTimeout(
+          () => resolve({ el: to.hash, top, behavior: 'smooth' }),
+          delay,
+        )
       })
     }
+
+    // Same page, only the query changed: don't jump
+    if (to.path === from.path) {
+      return false
+    }
+
+    // Any other navigation: start at the top
+    return { top: 0 }
   },
 })
 
@@ -321,7 +320,7 @@ export const calculateBreadcrumbs = (to) => {
   return crumbs
 }
 
-router.beforeEach((to, from, next) => {
+router.beforeEach((to) => {
   const siteStore = useSiteStore()
 
   if (to.params.version) {
@@ -331,19 +330,19 @@ router.beforeEach((to, from, next) => {
 
     if (typeof versionCheck === 'object') {
       // It's a redirect (e.g. 'latest' or invalid version)
-      next(versionCheck)
-      return
+      return versionCheck
     }
   }
 
   siteStore.setBreadcrumbs(calculateBreadcrumbs(to))
-
-  next()
 })
 
 router.afterEach((to, from) => {
   setTimeout(() => {
     document.title = to.meta.title || DEFAULT_TITLE
+    document
+      .querySelector('meta[name="description"]')
+      ?.setAttribute('content', descriptionForPath(to.path))
   }, 0)
 })
 

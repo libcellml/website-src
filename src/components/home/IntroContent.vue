@@ -1,10 +1,10 @@
 <template>
   <div  id="introContent" class="intro">
     <h1>libCellML</h1>
-    <h3>
+    <strong>
       libCellML is an easy-to-use library for developers of
       CellML applications.
-    </h3>
+    </strong>
     <p>
       The purpose of libCellML is to provide
       a software library for tool developers to support CellML in their applications.

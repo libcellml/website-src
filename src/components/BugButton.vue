@@ -1,74 +1,167 @@
 <template>
-  <v-tooltip anchor="bottom">
-    <template v-slot:activator="{ props }">
+  <v-tooltip
+    anchor="bottom"
+    :disabled="hintOpen"
+    aria-label="Report a problem"
+  >
+    <template #activator="{ props }">
       <v-btn
-        plain
+        id="bug-button"
         v-bind="props"
-        href="https://github.com/libcellml/website-src/issues/new"
+        icon
+        variant="text"
+        :href="issueUrl"
         target="_blank"
+        rel="noopener"
+        aria-label="Report a problem with this website"
         class="bug-button"
-        @mouseover="onEnter"
-        @mouseleave="onLeave"
+        @click="onClick"
       >
-        <v-icon class="buggy">mdi-bug</v-icon>
-        <span :class="{ 'bug-text': true, hover }"></span>
+        <v-icon :class="{ buggy: true, pulse: hintOpen }">mdi-bug</v-icon>
       </v-btn>
     </template>
-    <span
-      >This website is a work in progress. Some parts have bugs <br />and others
-      have outright infestations. We are working to fix these<br />
-      issues but feel free to add an issue at <br />
-      https://github.com/libcellml/website-src.<br /><br />
-      <strong>Click me!</strong> if you want to add an issue right now!</span
-    >
+    <span>Report a problem</span>
   </v-tooltip>
+
+  <v-menu
+    v-model="hintOpen"
+    activator="#bug-button"
+    location="bottom end"
+    offset="8"
+    :open-on-click="false"
+    :close-on-content-click="false"
+  >
+    <v-card max-width="300" class="bug-hint" role="dialog" aria-live="polite">
+      <v-card-text>
+        <strong>Spotted a bug or something odd?</strong><br />
+        Click the bug to tell us about it. We read every report.
+      </v-card-text>
+      <v-card-actions>
+        <v-spacer />
+        <v-btn variant="text" @click="dismissHint('got_it')">Got it</v-btn>
+      </v-card-actions>
+    </v-card>
+  </v-menu>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
 
-const hover = ref(false)
+import { version as siteVersion } from '../../package.json'
+import { EVENTS, trackEvent } from '@/js/analytics'
 
-function onEnter() {
-  hover.value = true
+const ISSUES_URL = 'https://github.com/libcellml/website-src/issues/new'
+const ISSUE_TEMPLATE = 'bug_report.yml'
+const HINT_STORAGE_KEY = 'libcellml-bug-hint-seen'
+const HINT_DELAY_MS = 5000
+
+const route = useRoute()
+
+// Pre-fill the GitHub issue form (.github/ISSUE_TEMPLATE/bug_report.yml)
+// so the reporter only has to describe what went wrong. The query
+// parameter names must match the field ids in the template.
+const issueUrl = computed(() => {
+  const params = new URLSearchParams({
+    template: ISSUE_TEMPLATE,
+    title: `Problem on ${route.path}`,
+    page: window.location.origin + route.fullPath,
+    browser: `${navigator.userAgent} (${window.innerWidth}x${window.innerHeight})`,
+    version: siteVersion,
+  })
+  return `${ISSUES_URL}?${params.toString()}`
+})
+
+// First-visit hint ---------------------------------------------------------
+
+const hintOpen = ref(false)
+let dismissMethod = 'outside'
+let hintTimer = null
+
+function hintAlreadySeen() {
+  try {
+    return localStorage.getItem(HINT_STORAGE_KEY) !== null
+  } catch {
+    // Storage unavailable (private mode, blocked cookies): don't nag.
+    return true
+  }
 }
 
-function onLeave() {
-  hover.value = false
+function markHintSeen() {
+  try {
+    localStorage.setItem(HINT_STORAGE_KEY, new Date().toISOString())
+  } catch {
+    // Ignore; worst case the hint shows again next visit.
+  }
 }
 
+function dismissHint(method) {
+  dismissMethod = method
+  hintOpen.value = false
+}
+
+// Any way of closing the hint (button, click outside, Esc, clicking the bug)
+// counts as having seen it.
+watch(hintOpen, (open, wasOpen) => {
+  if (open) {
+    trackEvent(EVENTS.REPORT_ISSUE_HINT_SHOWN, { page_path: route.path })
+  } else if (wasOpen) {
+    markHintSeen()
+    trackEvent(EVENTS.REPORT_ISSUE_HINT_DISMISSED, { method: dismissMethod })
+    dismissMethod = 'outside'
+  }
+})
+
+onMounted(() => {
+  if (!hintAlreadySeen()) {
+    hintTimer = setTimeout(() => {
+      hintOpen.value = true
+    }, HINT_DELAY_MS)
+  }
+})
+
+onBeforeUnmount(() => {
+  clearTimeout(hintTimer)
+})
+
+function onClick() {
+  trackEvent(EVENTS.REPORT_ISSUE_CLICK, {
+    page_path: route.path,
+    from_hint: hintOpen.value ? 'yes' : 'no',
+  })
+  if (hintOpen.value) {
+    dismissHint('bug_click')
+  } else {
+    // Clicked before the hint appeared: no need to show it any more.
+    clearTimeout(hintTimer)
+    markHintSeen()
+  }
+}
 </script>
 
 <style scoped>
-.bug-button {
-  margin-left: auto;
-}
-
 .buggy {
-  /* margin-left: 3em; */
   font-size: 2.3em !important;
   color: yellowgreen !important;
 }
 
-.v-btn__content {
-  opacity: 1 !important;
+.pulse {
+  animation: bug-pulse 1s ease-in-out 2;
 }
 
-span.bug-text {
-  font-size: 0em;
-  min-width: 7em;
+@keyframes bug-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
 }
 
-span.bug-text {
-  font-size: 1.3em;
-  min-width: 7em;
-}
-
-span.bug-text::after {
-  content: 'Hover me!';
-}
-
-span.bug-text.hover::after {
-  content: 'Click me!';
+@media (prefers-reduced-motion: reduce) {
+  .pulse {
+    animation: none;
+  }
 }
 </style>
